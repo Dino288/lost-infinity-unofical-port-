@@ -15,6 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.block.LostDimensionPortalBlock;
 
 public final class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, LostInfinity.MODID);
@@ -31,6 +32,10 @@ public final class ModBlocks {
 
     private static Block defaultBlock(String name) {
         BlockBehaviour.Properties properties = propertiesFor(name);
+        String targetDimension = targetDimensionFor(name);
+        if (targetDimension != null) {
+            return new LostDimensionPortalBlock(properties.noOcclusion().lightLevel(state -> 11), targetDimension);
+        }
         if (name.contains("slab")) {
             return new SlabBlock(properties);
         }
@@ -65,6 +70,34 @@ public final class ModBlocks {
             properties = properties.strength(3.0F, 6.0F).requiresCorrectToolForDrops();
         }
         return properties;
+    }
+
+    private static String targetDimensionFor(String name) {
+        if (name.equals("dimensionalizer") || name.equals("portal_nexus") || name.equals("portal_node")) {
+            return "nonexistence";
+        }
+        if (name.contains("shadow") || name.contains("sea")) {
+            return name.contains("portal") || name.contains("teleporter") ? "shadowsea" : null;
+        }
+        if (name.contains("celestial")) {
+            return name.contains("portal") || name.contains("teleporter") ? "celestialvoid" : null;
+        }
+        if (name.contains("labyrinth_portal_green")) {
+            return "cartographerrealmmid";
+        }
+        if (name.contains("labyrinth_portal_red")) {
+            return "cartographerrealmbot";
+        }
+        if (name.contains("timeline_stabilizer_portal")) {
+            return "cartographerrealmtop";
+        }
+        if (name.contains("starforge_teleporter")) {
+            return "grandmasteroutpost";
+        }
+        if (name.contains("galaxy_portal") || name.contains("trialgate")) {
+            return "nonexistence";
+        }
+        return null;
     }
 
     public static final RegistryObject<Block> ACID_LANTERN = registerBlock("acid_lantern", () -> defaultBlock("acid_lantern"));

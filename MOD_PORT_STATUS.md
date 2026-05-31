@@ -98,6 +98,18 @@ What was done:
   - renders placeholder mobs as textured billboards instead of a generic item
   - this is not a full 3D entity model/animation port yet
 - Added `/lostinfinity dimension <id>` commands for the 8 recovered dimension keys.
+- Added a shared 1.20.1 dimension teleporter helper:
+  - commands now land players at a safer height in target dimensions
+  - portal-like blocks can reuse the same dimension transfer logic
+- Added first-pass portal block behavior:
+  - dimensionalizer, portal nexus/node, galaxy portals, labyrinth portals, timeline stabilizer portal, starforge teleporter, and trialgate infer target dimensions on right-click
+- Added first-pass runtime dimension effects based on recovered legacy behavior:
+  - `celestialvoid` requires Celestial Headguard/lost armor and gives slow falling
+  - `nonexistence` applies toxic fume effects unless wearing filtration/lost armor
+  - cartographer realms apply destabilizing effects unless holding a synchronizer
+  - `grandmasteroutpost` keeps hunger filled
+  - `infinitemurk` applies darkness/slowness
+  - `shadowsea` grants water breathing/dolphin movement
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -118,7 +130,7 @@ Current main blockers:
 - Many items now have broad vanilla-like item classes, but original right-click powers, cooldowns, projectiles, energy systems, status effects, and custom equipment effects still need manual per-item ports.
 - Ranged utility items now have generic damaging projectile behavior, but the original per-item effects, damage types, ammo/energy systems, particles, and sounds are not fully reconstructed yet.
 - Placeholder mob textures now use recovered mob PNGs where possible, but original 3D models/animations/render layers are not restored yet.
-- The generated dimension JSONs create valid dimension keys, but they reuse simple Overworld-style noise settings and a fixed plains biome. Original custom biomes, structures, terrain, and portals still need manual porting.
+- The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects, but they still reuse simple Overworld-style noise settings and a fixed plains biome. Original custom biomes, structures, terrain, and exact portal rituals still need manual porting.
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
 - Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.
