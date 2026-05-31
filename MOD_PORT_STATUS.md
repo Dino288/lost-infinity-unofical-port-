@@ -133,6 +133,10 @@ What was done:
   - `infinitemurk` applies darkness/slowness
   - `shadowsea` grants water breathing/dolphin movement
 - Rewired all 8 dimension JSONs to use Lost Infinity biome IDs instead of `minecraft:plains`.
+- Ported the first original dimension structure slice:
+  - copied recovered original labyrinth NBT templates into modern `data/lostinfinity/structures/labyrinth`
+  - added 1.20.1 chunk-load placement for Cartographer Realm top/mid/bottom rooms
+  - room selection follows the legacy `ICartographerRealm` rules for tele rooms, gate rooms, connectors, crosses, game rooms, stairs, portals, and bottom-floor puzzle master origin rooms
 - Added first-pass Lost Infinity ore worldgen:
   - 28 legacy Nonexistence resource ores generate in the `nonexistence` biome from Y 80 to 146
   - `darksteel_ore`, `multiversite_overworld`, `lucient_ore`, and `atomite_ore` generate in `infinitemurk`
