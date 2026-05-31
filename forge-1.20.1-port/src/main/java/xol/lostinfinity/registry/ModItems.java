@@ -65,7 +65,7 @@ public final class ModItems {
             return new ShieldItem(properties.durability(672));
         }
         if (isRangedUtility(name)) {
-            return new LostRangedItem(properties.durability(512), name.contains("bomb") ? 1.0F : 1.8F, name.contains("bomb") ? 30 : 14);
+            return new LostRangedItem(properties.durability(512), name.contains("bomb") ? 1.0F : 1.8F, name.contains("bomb") ? 30 : 14, rangedDamage(name));
         }
         if (name.contains("sword") || name.contains("blade") || name.contains("saber") || name.contains("sabre") || name.contains("claw")) {
             return new SwordItem(ModToolTiers.LOST_INFINITY, 6, -2.4F, properties);
@@ -77,6 +77,19 @@ public final class ModItems {
         return name.contains("gun") || name.contains("rifle") || name.contains("cannon") || name.contains("zapper")
                 || name.contains("wand") || name.contains("staff") || name.contains("launcher") || name.contains("slinger")
                 || name.contains("blaster") || name.contains("trident") || name.contains("bomb");
+    }
+
+    private static float rangedDamage(String name) {
+        if (name.contains("bomb") || name.contains("cannon") || name.contains("launcher")) {
+            return 10.0F;
+        }
+        if (name.contains("rifle") || name.contains("trident") || name.contains("blaster")) {
+            return 8.0F;
+        }
+        if (name.contains("gun") || name.contains("zapper")) {
+            return 6.0F;
+        }
+        return 5.0F;
     }
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<? extends Block> block) {
