@@ -1,0 +1,20 @@
+﻿{
+    "minecraft":  {
+                      "version":  "1.20.1",
+                      "modLoaders":  [
+                                         {
+                                             "id":  "forge-47.4.10",
+                                             "primary":  true
+                                         }
+                                     ]
+                  },
+    "manifestType":  "minecraftModpack",
+    "manifestVersion":  1,
+    "name":  "Lost Infinity 1.20.1 Port",
+    "version":  "1.20.1-port.0",
+    "author":  "Dino288 / unofficial port scaffold",
+    "files":  [
+
+              ],
+    "overrides":  "overrides"
+}
