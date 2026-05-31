@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "x x",
+        "yay",
+        "y y"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:masterenthralled_emerald"
+        },
+        "y":
+        {
+            "item": "lostinfinity:superheatedingot"
+        },
+        "x":
+        {
+            "item": "lostinfinity:smoldering_ghasttear"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:celestialheadguard"
+    }
+}

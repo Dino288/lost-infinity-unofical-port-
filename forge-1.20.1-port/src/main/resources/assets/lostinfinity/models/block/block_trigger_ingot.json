@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "lostinfinity:blocks/block_trigger_ingot"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:deviant_wing"
+		},
+		{
+			"item": "lostinfinity:spectral_ingot"
+		},
+		{
+			"item": "lostinfinity:ultralight_dust"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:ethercut_metal"
+	}
+}

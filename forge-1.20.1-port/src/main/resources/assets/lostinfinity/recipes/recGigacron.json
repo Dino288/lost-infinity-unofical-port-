@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xax",
+        "mzm",
+        "xmx"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:sonic_shield"
+        },
+        "m":
+        {
+            "item": "lostinfinity:hard_crystal"
+        },
+       	"x":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "z":
+        {
+            "item": "lostinfinity:gem_ambition"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:gigacron"
+    }
+}

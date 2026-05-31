@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom,variant=default": { "model": "lostinfinity:murkplank_half" },
+        "half=top,variant=default": { "model": "lostinfinity:murkplank_upper" }
+    }
+}

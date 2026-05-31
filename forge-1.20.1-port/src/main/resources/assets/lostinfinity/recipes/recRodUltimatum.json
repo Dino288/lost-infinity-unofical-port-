@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "myx",
+        " ay",
+        "a k"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "y":
+        {
+            "item": "lostinfinity:crystal_plating"
+        },
+        "m":
+        {
+            "item": "lostinfinity:supermutationrod"
+        },
+        "k":
+        {
+            "item": "lostinfinity:rodofdeviation"
+        },
+        "x":
+        {
+            "item": "lostinfinity:ultimatum_analyzer_full"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:rod_of_ultimatum"
+    }
+}

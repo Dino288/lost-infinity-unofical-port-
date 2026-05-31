@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:rockweeds", "weight": 100 },
+        { "model": "lostinfinity:rockweeds2", "weight": 100 },
+        { "model": "lostinfinity:rockweeds3", "weight": 100 },
+        { "model": "lostinfinity:rockweeds4", "weight": 100 }
+        ]
+    }
+}

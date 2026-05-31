@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "aaa",
+        "x x",
+        "xxx"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "minecraft:string"
+        },
+        "x":
+        {
+            "item": "lostinfinity:perfectpearl"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:elarasnecklace"
+    }
+}

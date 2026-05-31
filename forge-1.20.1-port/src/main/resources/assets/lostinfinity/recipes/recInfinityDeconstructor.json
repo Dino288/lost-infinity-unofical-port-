@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xax",
+        "aea",
+        "mmm"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:electrolytic_rod"
+        },
+        "a":
+        {
+            "item": "lostinfinity:overcharged_cell"
+        },
+        "e":
+        {
+            "item": "lostinfinity:ether_chamber"
+        },
+        "m":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:deconstructor"
+    }
+}

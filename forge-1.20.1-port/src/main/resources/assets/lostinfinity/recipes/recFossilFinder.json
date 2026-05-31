@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xx ",
+        "xmv",
+        "  x"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:sunder_log"
+        },
+        "v":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        },
+        "m":
+        {
+            "item": "lostinfinity:annealed_glass"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:fossil_finder"
+    }
+}

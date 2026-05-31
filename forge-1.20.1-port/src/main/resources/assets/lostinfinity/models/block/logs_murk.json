@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+    	"particle": "lostinfinity:blocks/logs_murk",
+        "down": "lostinfinity:blocks/logs_murk_top",
+        "up": "lostinfinity:blocks/logs_murk_top",
+        "north": "lostinfinity:blocks/logs_murk",
+        "east": "lostinfinity:blocks/logs_murk",
+        "south": "lostinfinity:blocks/logs_murk",
+        "west": "lostinfinity:blocks/logs_murk"
+    }
+}

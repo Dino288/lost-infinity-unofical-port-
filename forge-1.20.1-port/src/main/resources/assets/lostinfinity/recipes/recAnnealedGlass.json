@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:biocrystal_sample"
+		},
+		{
+			"item": "lostinfinity:biocrystal_sample"
+		},
+		{
+			"item": "lostinfinity:biocrystal_sample"
+		},
+		{
+			"item": "lostinfinity:serrated_tooth"
+		},
+		{
+			"item": "lostinfinity:serrated_tooth"
+		},
+		{
+			"item": "lostinfinity:interlocking_spine"
+		},
+		{
+			"item": "lostinfinity:interlocking_spine"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:annealed_glass"
+	}
+}

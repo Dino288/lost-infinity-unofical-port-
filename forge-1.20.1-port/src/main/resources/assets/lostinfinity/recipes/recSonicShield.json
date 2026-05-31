@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xax",
+        "aza",
+        "xax"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:reinforced_glass"
+        },
+       	"x":
+        {
+            "item": "lostinfinity:shimmering_gloss"
+        },
+        "z":
+        {
+            "item": "lostinfinity:voidcut_metal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:sonic_shield"
+    }
+}

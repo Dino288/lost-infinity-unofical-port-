@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "mdk",
+        "ava",
+        " a "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "v":
+        {
+            "item": "lostinfinity:stone_of_rebirth"
+        },
+        "m":
+        {
+            "item": "lostinfinity:superstimulant"
+        },
+        "d":
+        {
+            "item": "lostinfinity:gem_imposition"
+        },
+        "k":
+        {
+            "item": "lostinfinity:scorchedpipe"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:ironheart_elixir"
+    }
+}

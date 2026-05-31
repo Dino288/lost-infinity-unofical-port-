@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "vyv",
+        "yxy",
+        "vyv"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:supermutated_skull"
+        },
+        "v":
+        {
+            "item": "lostinfinity:deviant_iron"
+        },
+        "y":
+        {
+            "item": "lostinfinity:incandescite_ingot"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:nicronium"
+    }
+}

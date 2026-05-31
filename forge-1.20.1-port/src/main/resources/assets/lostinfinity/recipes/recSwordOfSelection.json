@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yy",
+        "zvy",
+        "az "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:starcut_metal"
+        },
+        "y":
+        {
+            "item": "lostinfinity:bone_blocks"
+        },
+        "z":
+        {
+            "item": "lostinfinity:dimensional_capacitor"
+        },
+        "v":
+        {
+            "item": "lostinfinity:minor_multiversal_device"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:sword_of_selection"
+    }
+}

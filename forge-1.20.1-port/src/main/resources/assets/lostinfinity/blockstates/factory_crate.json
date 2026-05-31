@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:factory_crate", "weight": 100 },
+		{ "model": "lostinfinity:factory_crate2", "weight": 100 },
+		{ "model": "lostinfinity:factory_crate3", "weight": 100 },
+		{ "model": "lostinfinity:factory_crate4", "weight": 100 },
+		{ "model": "lostinfinity:factory_crate5", "weight": 100 },
+		{ "model": "lostinfinity:factory_crate6", "weight": 100 },
+		{ "model": "lostinfinity:factory_crate7", "weight": 100 }
+		]
+	}
+}

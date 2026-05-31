@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " ax",
+        "aaa",
+        "va "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:ethercut_metal"
+        },
+        "v":
+        {
+            "item": "lostinfinity:crystal_plating"
+        },
+        "x":
+        {
+            "item": "lostinfinity:dual_power_assembly"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:scramble_device"
+    }
+}

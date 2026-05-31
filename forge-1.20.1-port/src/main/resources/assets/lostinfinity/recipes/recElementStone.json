@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xvz",
+        "xvz",
+        "xvz"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:positive_magnecronite"
+        },
+        "v":
+        {
+            "item": "lostinfinity:slimed_bedrock"
+        },
+        "z":
+        {
+            "item": "lostinfinity:negative_magnecronite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:element_stone_unpowered"
+    }
+}

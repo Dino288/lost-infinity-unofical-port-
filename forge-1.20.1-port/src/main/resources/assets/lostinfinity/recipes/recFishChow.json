@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "caa",
+        "aba",
+        "aac"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:supermutated_wheat"
+        },
+        "b":
+        {
+            "item": "lostinfinity:supermutated_flesh"
+        },
+        "c":
+        {
+            "item": "lostinfinity:supermutated_egg"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:fish_chow"
+    }
+}

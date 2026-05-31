@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"facing=north": {
+		"model": "lostinfinity:light_emitter_north"
+	},
+		"facing=east": {
+		"model": "lostinfinity:light_emitter_east"
+	},
+		"facing=south": {
+		"model": "lostinfinity:light_emitter_south"
+	},
+		"facing=west": {
+		"model": "lostinfinity:light_emitter_west"
+	}
+	}
+}

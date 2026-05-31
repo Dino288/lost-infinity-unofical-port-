@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:carbonic_acid"
+		},
+		{
+			"item": "lostinfinity:mysterious_gloop"
+		},
+		{
+			"item": "lostinfinity:corrupted_solution"
+		},
+		{
+			"item": "lostinfinity:corrupted_solution"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:biocorruption_powder"
+	}
+}

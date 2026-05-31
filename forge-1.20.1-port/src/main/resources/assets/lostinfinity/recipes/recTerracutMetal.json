@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:slimed_bedrock"
+		},
+		{
+			"item": "lostinfinity:slippery_ingot"
+		},
+		{
+			"item": "lostinfinity:envenomed_diamond"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:terracut_metal"
+	}
+}

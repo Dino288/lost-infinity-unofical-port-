@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "vav",
+        "yvy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:signal_receiver"
+        },
+        "v":
+        {
+            "item": "lostinfinity:ion_cell"
+        },
+        "y":
+        {
+            "item": "lostinfinity:shockwave_generator"
+        },
+        "a":
+        {
+            "item": "lostinfinity:combustion_chamber"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:ion_bomb_receiver"
+    }
+}

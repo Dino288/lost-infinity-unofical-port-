@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "aza",
+        "xyx",
+        "axa"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:spectral_ingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:gem_vengeance"
+        },
+        "z":
+        {
+            "item": "lostinfinity:axiomavorum"
+        },
+        "x":
+        {
+            "item": "lostinfinity:electrified_quartz"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:axiom_celestarium"
+    }
+}

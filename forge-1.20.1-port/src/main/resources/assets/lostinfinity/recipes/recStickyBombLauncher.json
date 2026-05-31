@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "aav",
+        "amk",
+        " yk"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:crystallized_alloy"
+        },
+        "m":
+        {
+            "item": "lostinfinity:launch_drive"
+        },
+        "k":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "y":
+        {
+            "item": "lostinfinity:electron_recycler"
+        },
+        "v":
+        {
+            "item": "lostinfinity:advanced_signal_receiver"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:sticky_bomb_launcher"
+    }
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:plated_bone"
+		},
+		{
+			"item": "lostinfinity:plated_bone"
+		},
+		{
+			"item": "lostinfinity:metal_branch"
+		},
+		{
+			"item": "lostinfinity:unpoweredblade"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:reinforced_blade"
+	}
+}

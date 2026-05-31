@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:deviant_weeds", "weight": 100 },
+        { "model": "lostinfinity:deviant_weeds2", "weight": 100 },
+        { "model": "lostinfinity:deviant_weeds3", "weight": 100 },
+        { "model": "lostinfinity:deviant_weeds4", "weight": 100 }
+        ]
+    }
+}

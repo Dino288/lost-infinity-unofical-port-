@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		},
+		{
+			"item": "lostinfinity:catatonite_shard"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:catatonite_ingot"
+	}
+}

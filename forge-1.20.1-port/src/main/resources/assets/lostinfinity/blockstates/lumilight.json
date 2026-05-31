@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:lumilight", "weight": 100 },
+        { "model": "lostinfinity:lumilight2", "weight": 100 },
+        { "model": "lostinfinity:lumilight3", "weight": 100 },
+        { "model": "lostinfinity:lumilight4", "weight": 100 },
+        { "model": "lostinfinity:lumilight5", "weight": 100 },
+        { "model": "lostinfinity:lumilight6", "weight": 100 },
+        { "model": "lostinfinity:lumilight7", "weight": 100 },
+        { "model": "lostinfinity:lumilight8", "weight": 100 },
+        { "model": "lostinfinity:lumilight9", "weight": 100 }
+        ]
+    }
+}

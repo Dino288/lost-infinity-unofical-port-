@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+    "textures": {
+        "particle": "lostinfinity:blocks/fusion_table_top",
+        "down": "lostinfinity:blocks/fusion_table_bottom",
+        "up": "lostinfinity:blocks/fusion_table_top",
+        "north": "lostinfinity:blocks/fusion_table_side",
+        "east": "lostinfinity:blocks/fusion_table_side",
+        "south": "lostinfinity:blocks/fusion_table_side",
+        "west": "lostinfinity:blocks/fusion_table_side"
+    }
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"particle": "lostinfinity:blocks/rainfall_generator_side_active",
+        "down": "lostinfinity:blocks/rainfall_generator_side_active",
+        "up": "lostinfinity:blocks/rainfall_generator_top_active",
+        "north": "lostinfinity:blocks/rainfall_generator_side_active",
+        "east": "lostinfinity:blocks/rainfall_generator_side_active",
+        "south": "lostinfinity:blocks/rainfall_generator_side_active",
+        "west": "lostinfinity:blocks/rainfall_generator_side_active"
+	}
+}

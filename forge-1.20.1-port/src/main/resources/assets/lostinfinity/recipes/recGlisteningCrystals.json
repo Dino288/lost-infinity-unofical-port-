@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "lostinfinity:mysterious_gloop"
+        },
+        {
+            "item": "lostinfinity:mysterious_gloop"
+        },
+        {
+            "item": "lostinfinity:mysterious_gloop"
+        },
+        {
+            "item": "lostinfinity:masterfaceted_quartz"
+        }
+    ],
+    "result":
+    {
+        "item": "lostinfinity:glistening_crystals"
+    }
+}

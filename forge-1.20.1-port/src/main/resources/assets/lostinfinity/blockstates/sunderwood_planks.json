@@ -1,0 +1,8 @@
+{
+    "variants": {
+    	"facing=south": { "model": "lostinfinity:sunderwood_planks" },
+        "facing=west": { "model": "lostinfinity:sunderwood_planks", "y": 90 },
+        "facing=north": { "model": "lostinfinity:sunderwood_planks", "y": 180 },
+        "facing=east": { "model": "lostinfinity:sunderwood_planks", "y": 270 }
+    }
+}

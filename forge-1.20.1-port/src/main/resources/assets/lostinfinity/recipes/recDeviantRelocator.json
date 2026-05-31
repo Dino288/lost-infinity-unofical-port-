@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        "zay",
+        "az "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:deviantbone"
+        },
+        "y":
+        {
+            "item": "lostinfinity:shimmering_gloss"
+        },
+        "z":
+        {
+            "item": "lostinfinity:sticky_hide"
+        },
+        "x":
+        {
+            "item": "lostinfinity:starcrystal_capacitor"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:deviantrelocator"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "lostinfinity:blocks/arena_brick_blue",
+        "top": "lostinfinity:blocks/arena_brick_blue",
+        "side": "lostinfinity:blocks/arena_brick_blue"
+    }
+}

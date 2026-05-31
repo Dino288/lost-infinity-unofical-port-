@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "vvv",
+        "xax",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "a":
+        {
+            "item": "lostinfinity:bioluminescent_power_supply"
+        },
+        "v":
+        {
+            "item": "lostinfinity:crystallized_alloy"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:augmentor"
+    }
+}

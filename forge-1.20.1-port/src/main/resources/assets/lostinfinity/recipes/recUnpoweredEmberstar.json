@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yxy",
+        "xax",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:masterfaceted_quartz"
+        },
+        "y":
+        {
+            "item": "lostinfinity:dimensional_capacitor"
+        },
+        "a":
+        {
+            "item": "lostinfinity:deviant_star"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:unpowered_emberstar"
+    }
+}

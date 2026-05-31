@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+        "particle": "lostinfinity:blocks/nicronium_infuser_top",
+        "down": "lostinfinity:blocks/nicronium_infuser_bottom",
+        "up": "lostinfinity:blocks/nicronium_infuser_top",
+        "north": "lostinfinity:blocks/nicronium_infuser",
+        "east": "lostinfinity:blocks/nicronium_infuser",
+        "south": "lostinfinity:blocks/nicronium_infuser",
+        "west": "lostinfinity:blocks/nicronium_infuser"
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:burning_sap"
+		},
+		{
+			"item": "lostinfinity:myrite_chunk"
+		},
+		{
+			"item": "lostinfinity:hivenite"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:biocut_metal"
+	}
+}

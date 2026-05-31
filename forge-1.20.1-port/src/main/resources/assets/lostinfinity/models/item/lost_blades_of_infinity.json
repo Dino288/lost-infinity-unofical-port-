@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/lost_blades_of_infinity"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ -75, -90, -35 ],
+			"translation": [ 0, 8, 3],
+			"scale": [ 1.5, 1.5, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 75, 90, -115 ],
+			"translation": [ 0, 8, 3],
+			"scale": [ 1.5, 1.5, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [ -170, -63, -90 ],
+			"translation": [ 2, 5.5, 2.25],
+			"scale": [ 1.5, 1.5, 1.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ -170, 117, 90 ],
+			"translation": [ 2, 5.5, 2.25],
+			"scale": [ 1.5, 1.5, 1.5]
+		}
+	}
+}

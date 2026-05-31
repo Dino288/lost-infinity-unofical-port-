@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:blazingstar"
+		},
+		{
+			"item": "lostinfinity:masterforged_ingot"
+		},
+		{
+			"item": "lostinfinity:supermutated_flame"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:starcut_metal"
+	}
+}

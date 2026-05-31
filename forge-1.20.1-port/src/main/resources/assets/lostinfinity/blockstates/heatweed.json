@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"active=true":[
+		{ "model": "lostinfinity:heatweed_bulbs", "weight": 100 },
+		{ "model": "lostinfinity:heatweed_bulbs2", "weight": 100 },
+		{ "model": "lostinfinity:heatweed_bulbs3", "weight": 100 },
+		{ "model": "lostinfinity:heatweed_bulbs4", "weight": 100 }
+		],
+		"active=false":[
+		{ "model": "lostinfinity:heatweed", "weight": 100 },
+		{ "model": "lostinfinity:heatweed2", "weight": 100 },
+		{ "model": "lostinfinity:heatweed3", "weight": 100 },
+		{ "model": "lostinfinity:heatweed4", "weight": 100 }
+		]
+	}
+}

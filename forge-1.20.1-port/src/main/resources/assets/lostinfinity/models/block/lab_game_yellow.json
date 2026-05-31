@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "lostinfinity:blocks/lab_game_starter_yellow"
+    }
+}

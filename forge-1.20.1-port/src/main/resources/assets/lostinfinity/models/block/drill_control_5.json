@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "lostinfinity:blocks/drill_control_5"
+	}
+}

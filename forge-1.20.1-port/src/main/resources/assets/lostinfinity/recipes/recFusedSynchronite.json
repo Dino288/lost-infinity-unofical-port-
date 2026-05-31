@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "aab",
+        "d b",
+        "dcc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:synchronite_typea"
+        },
+        "b":
+        {
+            "item": "lostinfinity:synchronite_typeb"
+        },
+        "c":
+        {
+            "item": "lostinfinity:synchronite_typec"
+        },
+        "d":
+        {
+            "item": "lostinfinity:synchronite_typed"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:fused_synchronite"
+    }
+}

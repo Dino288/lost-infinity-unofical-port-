@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "yxy",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:sunder_log"
+        },
+        "y":
+        {
+            "item": "lostinfinity:frozen_ingot"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:frosted_log"
+    }
+}

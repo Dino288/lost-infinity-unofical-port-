@@ -1,0 +1,10 @@
+{
+  "variants": {
+      "active=true": {
+      "model": "lostinfinity:radion_ore_active"
+  },
+      "active=false": {
+      "model": "lostinfinity:radion_ore_inactive"
+  }
+  }
+}

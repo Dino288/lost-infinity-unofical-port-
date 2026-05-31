@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "x y",
+        "yyy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:envenomed_diamond"
+        },
+        "y":
+        {
+            "item": "lostinfinity:celestialdiamond"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:mastercut_diamond"
+    }
+}

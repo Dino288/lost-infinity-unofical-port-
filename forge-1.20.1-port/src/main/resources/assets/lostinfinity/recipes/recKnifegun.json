@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " aa",
+        " cd",
+        "b  "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "b":
+        {
+            "item": "lostinfinity:spark_chamber"
+        },
+        "c":
+        {
+            "item": "lostinfinity:cluster_knives"
+        },
+        "d":
+        {
+            "item": "lostinfinity:ktek"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:knifegun"
+    }
+}

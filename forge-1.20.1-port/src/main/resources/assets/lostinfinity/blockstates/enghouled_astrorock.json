@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:enghouled_astrorock", "weight": 100 },
+        { "model": "lostinfinity:enghouled_astrorock2", "weight": 100 },
+        { "model": "lostinfinity:enghouled_astrorock3", "weight": 100 },
+        { "model": "lostinfinity:enghouled_astrorock4", "weight": 100 },
+        { "model": "lostinfinity:enghouled_astrorock5", "weight": 100 },
+        { "model": "lostinfinity:enghouled_astrorock6", "weight": 100 },
+        { "model": "lostinfinity:enghouled_astrorock7", "weight": 100 },
+        { "model": "lostinfinity:enghouled_astrorock8", "weight": 100 }
+        
+        ]
+    }
+}

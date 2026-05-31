@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xax",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "a":
+        {
+            "item": "lostinfinity:powerchip_ripper"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:item_ripper"
+    }
+}

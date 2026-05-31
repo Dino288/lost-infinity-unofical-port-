@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "acb",
+        " d ",
+        " de"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:dryads_grip"
+        },
+        "b":
+        {
+            "item": "lostinfinity:plasma_quake"
+        },
+        "c":
+        {
+            "item": "lostinfinity:astral_organ"
+        },
+        "d":
+        {
+            "item": "lostinfinity:polyionite"
+        },
+        "e":
+        {
+            "item": "lostinfinity:energy_splitter"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:fracture_of_the_cosmos"
+    }
+}
+

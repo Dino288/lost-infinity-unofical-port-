@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "cbc",
+        "aca",
+        "aca"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:welded_atomite"
+        },
+        "b":
+        {
+            "item": "lostinfinity:polyionite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:organic_shadow_matter"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:nebulous_beacon"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ka ",
+        "k a",
+        "ka "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:element_stone"
+        },
+        "k":
+        {
+            "item": "lostinfinity:supermutated_string"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:elementium_bow_mk1"
+    }
+}

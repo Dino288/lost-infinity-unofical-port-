@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:firelilly", "weight": 100 },
+        { "model": "lostinfinity:firelilly2", "weight": 100 },
+        { "model": "lostinfinity:firelilly3", "weight": 100 }
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "vxv",
+        " v "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "minecraft:dirt",
+      		"data": 0
+        },
+        "v":
+        {
+            "item": "lostinfinity:glowblood_solution"
+        },
+        "y":
+        {
+            "item": "lostinfinity:crystallized_alloy"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:crystallized_soil_unpowered"
+    }
+}

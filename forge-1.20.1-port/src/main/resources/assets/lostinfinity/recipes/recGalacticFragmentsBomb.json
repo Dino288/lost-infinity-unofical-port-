@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:starfire_bomb"
+		},
+		{
+			"item": "lostinfinity:aurorus_bomb"
+		},
+		{
+			"item": "lostinfinity:novacron_bomb"
+		},
+		{
+			"item": "lostinfinity:moonglow_bomb"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:galactic_fragments"
+	}
+}

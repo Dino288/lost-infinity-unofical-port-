@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:blightlumgrass", "weight": 100 },
+        { "model": "lostinfinity:blightlumgrass2", "weight": 100 },
+        { "model": "lostinfinity:blightlumgrass3", "weight": 100 },
+        { "model": "lostinfinity:blightlumgrass4", "weight": 100 },
+        { "model": "lostinfinity:blightlumgrass5", "weight": 100 },
+        { "model": "lostinfinity:blightlumgrass6", "weight": 100 },
+        { "model": "lostinfinity:blightlumgrass7", "weight": 100 },
+        { "model": "lostinfinity:blightlumgrass8", "weight": 100 }
+        ]
+    }
+}

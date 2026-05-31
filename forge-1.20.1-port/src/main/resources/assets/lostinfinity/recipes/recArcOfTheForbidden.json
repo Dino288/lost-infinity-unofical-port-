@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bcd",
+        " a ",
+        " e "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:arc_blaster"
+        },
+        "b":
+        {
+            "item": "lostinfinity:dual_defender"
+        },
+        "c":
+        {
+            "item": "lostinfinity:axiom_celestarium"
+        },
+        "e":
+        {
+            "item": "lostinfinity:gem_resolve"
+        },
+        "d":
+        {
+            "item": "lostinfinity:sonic_shield"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:arc_of_the_forbidden"
+    }
+}

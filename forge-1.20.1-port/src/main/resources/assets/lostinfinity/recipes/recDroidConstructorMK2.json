@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+		{
+			"item": "lostinfinity:droidconstructor"
+		},
+		{
+			"item": "lostinfinity:droid_upgrade_mk2"
+		}
+	],
+    "result":
+    {
+        "item": "lostinfinity:droidconstructor_mk2"
+    }
+}

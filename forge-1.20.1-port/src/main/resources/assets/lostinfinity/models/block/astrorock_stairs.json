@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "lostinfinity:blocks/astrorock",
+        "top": "lostinfinity:blocks/astrorock",
+        "side": "lostinfinity:blocks/astrorock"
+    }
+}

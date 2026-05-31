@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/laser_gun"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 1, -8],
+			"scale": [2, 2, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 1, -8],
+			"scale": [2, 2, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [43.77, -82.43, 21.89],
+			"translation": [3.5, 4, -3],
+			"scale": [2, 2, 1.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [43.77, 97.57, -21.89],
+			"translation": [3.5, 4, -3],
+			"scale": [2, 2, 1.5]
+		}
+	}
+}

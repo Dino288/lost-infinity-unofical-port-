@@ -1,0 +1,3001 @@
+item.potion_of_panic.name=Potion Of Panic
+item.ionic_chakram.name=Ionic Chakram
+item.plasma_emitter.name=Plasma Emitter
+item.plasma_receiver.name=Plasma Receiver
+item.power_puncher.name=Power Puncher
+item.dose_of_deception.name=Dose of Deception
+item.laser_gun.name=SMU Laser Gun
+item.champion_dodgeball.name=Champion Dodgeball
+item.space_zapper.name=Space Zapper
+item.laser_zapper.name=Laser Zapper
+item.gem_corruption.name=Contained Gem of Corruption
+item.gem_duality.name=Contained Gem of Duality
+item.gem_aspiration.name=Contained Gem of Aspiration
+item.gem_misdirection.name=Contained Gem of Misdirection
+item.gem_dread.name=Contained Gem of Dread
+item.gem_imposition.name=Contained Gem of Imposition
+item.gem_retrospection.name=Contained Gem of Retrospection
+item.gem_anxiety.name=Contained Gem of Anxiety
+item.gem_anticipation.name=Contained Gem of Anticipation
+item.gem_resolve.name=Contained Gem of Resolve
+item.gem_cruelty.name=Contained Gem of Cruelty
+item.plasma_quake.name=Plasma Quake
+item.elastic_thread.name=Elastic Thread
+item.ball_of_contained_quarks.name=Ball of Contained Quarks
+item.ball_of_contained_gluons.name=Ball of Contained Gluons
+item.acidic_concoction.name=Acidic Concoction
+item.matter_recombiner.name=Matter Recombiner
+item.power_fuel.name=Power Fuel
+item.fracture_of_the_cosmos.name=Fracture of the Cosmos
+item.energetic_heart.name=Energetic Heart
+item.deployable_cluster_cannon.name=Deployable Cluster Cannon
+item.navigation_mechanism.name=Navigation Mechanism
+item.gas_filled_balloon.name=Gas-Filled Balloon
+item.sticky_shell.name=Sticky Shell
+item.synthesized_astrometal.name=Synthesized Astrometal
+item.spark_plug.name=Spark Plug
+item.sunstone.name=Sunstone
+item.sunstone_dust.name=Sunstone Dust
+item.eterno_cell.name=Eterno Cell
+item.entangled_heart.name=Entangled Heart
+item.unpowered_cell.name=Unpowered Cell
+
+item.etherstock_seeds.name=Etherstock Seeds
+item.x_screacher.name=X-Screacher
+item.etherflower.name=Etherflower
+item.magic_biopowder.name=Magic Biopowder
+item.astrometal_amalgamator_glue.name=Astrometal Amalgamation Glue
+item.metamorphosis_core.name=Metamorphosis Core
+item.rapid_illuminator.name=Rapid Illuminator
+item.bumble_blossom.name=Bumble Blossom
+item.deviant_wool.name=Deviant Wool
+item.deviant_saddle.name=Deviant Saddle
+item.supermutated_wool.name=Super-mutated Wool
+item.supermutated_saddle.name=Super-mutated Saddle
+item.zirconia_mythic.name=Mythic Zirconia
+item.complex_gyroscope.name=Complex Gyroscope
+item.spacebound_altimeter.name=Spacebound Altimeter
+item.totem_of_corruption.name=Totem of Corruption
+
+item.organic_spores.name=Organic Spores
+item.reactive_mushroom.name=Reactive Mushroom
+item.strange_mushroom.name=Strange Mushroom
+item.super_cell.name=Super Cell
+item.constricting_vines.name=Constricting Vines
+item.azure_leaf.name=Azure Leaf
+item.lucient_ingot.name=Lucient Ingot
+
+item.box_of_life.name=Box of Life
+
+item.solarum_vial.name=Vial of Solarum
+item.negametric_isotope.name=Negametric Isotope
+item.radiochronic_isotope.name=Radiochronic Isotope
+item.ink_pen.name=Ink Pen
+item.chrome_alum_vial.name=Vial of Chrome Alum
+
+item.jet_pack.name=Rocket Glider
+item.unstable_balloon.name=Unstable Balloon
+item.dark_gift.name=Dark Gift
+item.flexible_exobone.name=Flexible Exobone
+item.pulse_charge.name=Pulse Charge
+item.giant_heart.name=Giant Heart 
+item.life_synchronizer.name=Life Synchronizer 
+item.linked_bone.name=Linked Bone 
+item.eidolon.name=Eidolon
+item.luminous_guardian.name=Luminous Guardian
+item.potion_polarizer.name=Potion Polarizer
+
+item.mechanical_sextant.name=Mechanical Sextant
+item.basic_sextant.name=Basic Sextant
+item.contained_lifeforce.name=Containted Life-Force
+item.puzzle_key.name=Puzzle Key
+item.interspace_transmitter.name=Interspace Transmitter
+item.beacon_key.name=Beacon Key
+
+item.super_charged_injection.name=Super-Charged Injection
+item.wormhole_rifle.name=Wormhole Rifle
+item.effigy_doll.name=Effigy Doll
+item.biosynced_clock.name=Bio-Synced Clock
+item.plasmatic_cranium.name=Plasmatic Cranium
+item.clay_support_base.name=Clay Support Base
+item.clay_support_cap.name=Clay Support Cap
+item.clay_reinforcement.name=Clay Support Reinforcement
+
+item.ink_gun.name=Ink Gun
+item.ink_shotgun.name=Ink Shotgun
+item.ink_bomb.name=Ink Bomb
+item.astral_generator.name=Astral Generator
+item.audio_synchronized_disc.name=Synchronized Audio Disc
+item.rapid_tunneling_device.name=Rapid Tunneling Device
+item.void_altered_spine.name=Void Altered Spine
+
+item.call_of_the_cosmos.name=Call Of The Cosmos
+item.astral_organ.name=Astral Organ
+item.energy_splitter.name=Energy Splitter
+item.scroll_of_redirection.name=Scroll of Redirection
+item.dangerous_accelerant.name=Dangerous Accelerant
+item.laraxium_catenation_pouch.name=Catenation Pouch (Laraxium)
+item.laraxium.name=Laraxium
+
+item.pearl_igneous.name=Igneous Pearl
+item.pearl_bioluminescent.name=Bioluminescent Pearl
+item.pearl_twilight.name=Twilight Pearl
+item.monomer_collector.name=Monomer Collector
+item.red_monomer_sample.name=Red Monomer Sample
+item.blue_monomer_sample.name=Blue Monomer Sample
+item.purple_monomer_sample.name=Purple Monomer Sample
+item.yellow_monomer_sample.name=Yellow Monomer Sample
+item.green_monomer_sample.name=Green Monomer Sample
+item.astral_bastion.name=Astral Bastion
+item.endless_army.name=Endless Army
+item.holo_point.name=Holo-Point
+item.abyssal_curse.name=Abyssal Curse
+item.kingslayer.name=The Kingslayer
+
+item.infinity_trident.name=Infinity Trident
+item.realm_cracker.name=Realm Cracker
+item.titan_ring.name=Titan Rings
+
+item.rainfall_collector_full.name=Rainfall Collector (Full)
+item.bag_of_magic_crystals.name=Bag of Magic Crystals
+item.velocitized_femur.name=Velocitized Femur
+item.organic_shadow_matter.name=Organic Shadow Matter
+item.deviant_ink.name=Deviant Ink
+item.supermutated_ink.name=Super-mutated Ink
+item.seabound_compass.name=Seabound Compass
+item.sticky_darksteel.name=Sticky Darksteel
+item.toothy_tendril.name=Toothy Tendril
+
+item.power_clamp.name=Power Clamp
+item.power_control_disc.name=Power Control Disc
+item.module_container.name=Module Container
+item.module_biocalibration.name=Module (Bio-Calibration)
+item.module_acceleration.name=Module (Acceleration)
+item.module_conversion.name=Module (Conversion)
+item.module_transmitting.name=Module (Transmitting)
+item.module_power.name=Module (Power)
+item.module_range.name=Module (Range)
+item.module_restoration.name=Module (Restoration)
+item.blank_optical_disc.name=Blank Optical Disc
+item.charge_cell.name=Charge Cell
+item.malicium_condensed.name=Condensed Malicium
+item.malicium_ingot.name=Malicium Ingot
+
+item.infinity_trident_mk2.name=Infinity Trident MKII
+item.polarium_condensed.name=Condensed Polarium
+item.polarium_ingot.name=Polarium Ingot
+
+item.pickle_portal.name=Pickle Portaler 9000
+item.everlasting_warlord.name=Everlasting Warlord
+item.the_timekeeper.name=The Timekeeper
+item.the_selector.name=The Selector
+
+item.magic_conch.name=Magic Conch
+
+item.echo_bomb.name=Echo Bomb
+item.phoroxium_catenation_pouch.name=Catenation Pouch (Phoroxium)
+item.phoroxium.name=Phoroxium
+item.ionite_bar.name=Ionite Bar
+item.ionite.name=Ionite
+
+item.darkworld_remote.name=Darkworld Remote
+item.prime_elementium_bow.name=Prime Elementium Bow
+item.knifegun.name=Knife-Gun
+item.flask_of_the_corrupted.name=Flask of the Corrupted
+
+item.aligned_disc.name=Dimensionally Aligned Disc
+item.lightbinder.name=Lightbinder
+item.heart_of_light.name=Heart of Light
+item.jar_of_murky_syrup.name=Jar of Murky Syrup
+item.gravity_core.name=Gravity Core
+item.face_tendrils.name=Face Tendrils
+item.murky_ash.name=Murky Ash
+item.murky_log.name=Murky Log
+item.catatonite_ingot.name=Catatonite Ingot
+item.catatonite_shard.name=Catatonite Shard
+item.murky_clay.name=Murky Clay
+item.zirconia_midnight.name=Zirconia (Midnight)
+item.zirconia_ivory.name=Zirconia (Ivory)
+item.zirconia_musky.name=Zirconia (Musky)
+item.zirconia_aubergine.name=Zirconia (Aubergine)
+item.rgb_illuminator.name=RGB Illuminator
+item.laser_pointer.name=Laser Pointer
+
+item.rocket_strapped_explosive.name=Rocket Strapped Explosive
+item.astral_bow.name=Astral Bow
+item.rift_walker.name=Rift-Walker
+item.razor_of_infinity.name=Razor of Infinity
+item.map_corruption.name=Ancient Celestial Map
+item.map_duality.name=Ancient Celestial Map
+item.map_aspiration.name=Ancient Celestial Map
+item.map_misdirection.name=Ancient Celestial Map
+item.map_dread.name=Ancient Celestial Map
+item.map_imposition.name=Ancient Celestial Map
+item.map_retrospection.name=Ancient Celestial Map
+item.map_anxiety.name=Ancient Celestial Map
+item.map_cruelty.name=Advanced Celestial Map
+item.map_resolve.name=Advanced Celestial Map
+
+item.cure_sample_blue.name=(Blue) Compound Blocks
+item.cure_sample_pink.name=(Pink) Compound Blocks
+item.cure_sample_yellow.name=(Yellow) Compound Blocks
+item.cure_sample_green.name=(Green) Compound Blocks
+item.cure_sample_orange.name=(Orange) Compound Blocks
+item.biocorruption_powder.name=Bio-Corruption Powder
+item.mutant_fungus.name=Mutant Fungus
+item.debt_collector.name=The Debt Collector
+item.deployable_mortar_cannon.name=Deployable Mortar Cannon
+
+item.entanglement_tuner.name=Entanglement Tuner
+item.sabre_of_the_pickle_lord.name=Sabre of the Pickle Lord
+item.world_splitter.name=World Splitter
+item.tentacle_remote.name=Tentacle Remote
+
+item.voidsplit_bone.name=Void-Split Bone
+item.reaction_chamber.name=Reaction Chamber
+item.fused_synchronite.name=Fused Synchronite
+item.synchronite_typea.name=Synchronite (Type-A)
+item.synchronite_typeb.name=Synchronite (Type-B)
+item.synchronite_typec.name=Synchronite (Type-C)
+item.synchronite_typed.name=Synchronite (Type-D)
+
+item.slippery_tendril.name=Slippery Tendril
+item.tesla_core.name=Tesla Core
+item.thermosaw.name=Thermosaw
+item.branch_of_energy.name=Branch of Energy
+item.darksteel_shards.name=Darksteel Shards
+item.darksteel_sheets.name=Darksteel Sheets
+item.explosive_strapped_firework.name=Explosive-Strapped Firework
+item.flexible_husk.name=Flexible Husk
+
+item.lucient.name=Pure Lucient
+item.advanced_relay.name=Advanced Relay
+item.super_inductor.name=Super-Inductor
+item.colixium.name=Colixium
+item.colixium_catenation_pouch.name=Catenation Pouch (Colixium)
+item.supermutated_pelt.name=Super-mutated Pelt
+item.deviant_pelt.name=Deviant Pelt
+item.anthocite.name=Anthocite
+item.biosynthium_ingot.name=Biosynthium Ingot
+item.biosynthium_condensed.name=Condensed Biosynthium
+
+item.polyswitch.name=Polyswitch
+item.spark_chamber.name=Spark Chamber
+item.space_dial_blueprint.name=Space-Alignment Dial Blueprint
+
+item.galactic_challenge_emblem.name=Galactic Challenge Emblem
+item.multigalactic_power_crystal.name=Multi-Galactic Power Crystal
+item.elite_contender_pass.name=Elite Contender Pass
+
+item.dueling_sword_dull.name=Dull Dueling Sword
+item.dueling_sword_sharp.name=Sharp Dueling Sword
+item.dueling_sword_razor_edged.name=Razor-Edged Dueling Sword
+
+item.veggi_relocator.name=Veggi Relocator
+item.pickle_seeds.name=Space Pickle Seeds
+item.moonflower_seeds.name=Moon Flower Seeds
+item.carnivorous_seeds.name=Carnivorous Seeds
+item.pickle.name=Space Pickle
+
+item.storm_bauble.name=Storm Bauble
+item.iron_tower.name=Iron Tower
+
+item.toxic_spore_sample.name=Toxic Spore Sample
+item.chlorodivergent_solution.name=Chloro-divergent Solution
+item.astral_plane_analyzer.name=Astral Plane Analyzer
+item.holotron_disc.name=Holotron Disc
+item.astralbeamer_blueprint.name=Astral-Beamer Blueprint
+
+item.flurry_of_the_forbidden.name=Flurry of the Forbidden
+item.brand_of_the_forbidden.name=Brand of the Forbidden
+item.ktek.name=K-Tek
+item.arc_of_the_forbidden.name=Arc of the Forbidden
+item.flask_of_the_forbidden.name=Flask of the Forbidden
+item.veggi_enigmatic.name=Veggi-Enigmatic 9000
+item.blade_of_the_forbidden.name=Blade of the Forbidden
+item.elementium_bow_mk3.name=Elementium Bow MKIII
+
+item.deviant_shard.name=Deviant Shard
+item.supermutated_crystals.name=Super-mutated Crystals
+item.electrolytic_rod.name=Electrolytic Rod
+item.electrolysis_solution.name=Electrolysis Solution
+
+item.unstable_nitrous_bottle.name=Bottle of Unstable Nitrous
+item.rift_maker.name=Rift Maker
+item.arc_blaster.name=Arc Blaster
+item.solar_spear.name=Solar Spear
+
+item.ultraviolet_bomb.name=Ultraviolet Bomb
+item.spacetime_trigger.name=Space-time Trigger
+item.georedirection_orb.name=Geo-redirection Orb
+item.microstorage_power_cluster.name=Microstorage Power Cluster
+
+item.staff_of_servitude.name=Staff of Servitude
+item.glowing_organ.name=Glowing Organ
+item.deviant_skull.name=Deviant Skull
+item.supermutated_skull.name=Super-mutated Skull
+
+item.sniper_of_selection.name=Sniper of Selection
+item.ender_jumper.name=Ender Jumper
+item.the_star_soldier.name=The Star Soldier
+item.ring_of_illusions.name=Ring of Illusions
+
+item.photochromic_husk.name=Photochromic Husk
+item.plant_tooth.name=Plant Tooth
+item.elastic_tissue.name=Elastic Tissue
+
+item.security_pass_3.name=Security Pass (Level Three)
+item.security_pass_4.name=Security Pass (Level Four)
+item.security_pass_5.name=Security Pass (Level Five)
+item.security_pass_6.name=Security Pass (Level Six)
+item.eye_battery.name=Eye Battery
+item.gloominessence_cubes.name=Gloominessence Cubes
+item.gloom_bulb.name=Gloom Bulb
+item.neverwatching_eye.name=Neverwatching Eye
+item.vile_sac.name=Vile Sac
+item.everwatching_eye.name=Everwatching Eye
+item.organic_plate.name=Organic Plate
+item.corrupted_root.name=Corrupted Root
+item.gloomshadow_stone.name=Gloom-shadow Stone
+item.gloominessence.name=Gloominessence
+
+item.incandescite.name=Incandescite
+item.incandescite_ingot.name=Incandescite Ingot
+item.auradine.name=Auradine
+item.auradine_disc.name=Auradine Disc
+item.phototenzyte.name=Phototenzyte
+item.phototenzyte_ingot.name=Phototenzyte Ingot
+item.clovinite_rod.name=Clovinite Rod
+item.serpentine_bar.name=Serpentine Bar
+
+item.fury_of_the_feared.name=Fury of the Feared
+item.hypercron.name=Hypercron
+item.rapier_of_revenge.name=Rapier of Revenge
+item.guardian_elixir.name=Guardian Elixir
+
+item.hyper_knuckle.name=Hyper Knuckle
+item.serpentine_shield.name=Serpentine Shield
+item.super_shocker.name=Super Shocker
+item.ray_of_selection.name=Ray of Selection
+
+
+item.vacuum_container.name=Vacuum Container
+item.advanced_synchronizer.name=Advanced Synchronizer
+item.multi_timeline_data_chip.name=Multi-Timeline Data Chip
+item.ghostly_husk.name=Ghostly Husk
+item.inverse_magnecronite.name=Inverse Magnecronite
+item.solar_globe.name=Solar Globe
+item.dimensional_building_blocks_blue.name=Dimensional Building Blocks
+item.dimensional_building_blocks_red.name=Dimensional Building Blocks
+item.dimensional_building_blocks_purple.name=Dimensional Building Blocks
+
+item.token_ozor.name=Arena Token
+item.pendant_of_the_storm.name=Pendant of the Storm
+
+item.nightglazed_crystal.name=Nightglazed Crystal
+item.gigacron.name=Gigacron
+item.moonshaker.name=Moonshaker
+item.pylon_protector.name=Pylon Protector
+item.dominator.name=The Dominator
+item.relic_of_the_mirage.name=Relic of the Infinite Mirages
+item.makeshifttrinket.name=Makeshift Trinket
+item.livingslime.name=Living Slime
+item.map_ingenuity.name=Ancient Celestial Map
+item.token_velo.name=Arena Token
+item.superheatedingot.name=Superheated Ingot
+item.unbreakablechain.name=Unbreakable Chain
+item.starlitglobe.name=Starlit Globe
+item.deviantstring.name=Deviant String
+item.gem_ingenuity.name=Contained Gem of Ingenuity
+item.cube_ingenuity.name=Lost Stone of Ingenuity
+item.cube_resolve.name=Lost Stone of Resolve
+item.cube_cruelty.name=Lost Stone of Cruelty
+item.myrite_chunk.name=Myrite Chunk
+item.synthetic_flight_apparatus.name=Synthetic Flight Apparatus
+
+item.gem_of_illusion.name=Gem of Thundering Illusions
+item.incarnation_of_the_knife.name=Incarnation of the Knife
+item.sensory_antennas.name=Sensory Antennas
+item.rock_shell.name=Rock Shell
+item.hot_pod.name=Hot Pod
+item.extremely_hot_pod.name=Extremely Hot Pod
+item.chemical_synchronizer.name=Chemical Synchronizer
+item.biocut_metal.name=Biocut Metal
+item.hivenite.name=Hivenite
+
+
+item.emp.name=E.M.P.
+item.contagionater.name=Contagionater
+item.phantom_blade.name=Phantom Blade
+item.the_apex.name=The Apex
+item.cluster_knives.name=Cluster Knives
+
+item.heat_resistant_glass.name=Heat Resistant Glass
+item.time_trigger.name=Time Trigger
+item.fresh_data_chip.name=Fresh Data Chip
+item.basic_storage_chip.name=Basic Storage Chip
+item.holoscreen.name=Holoscreen
+item.security_pass_2.name=Security Pass (Level Two)
+item.cellular_crystal.name=Cellular Crystal
+item.rockfeed.name=Rockfeed
+
+item.the_black_hole.name=The Black Hole
+
+item.tnt_strapper.name=TNT Strapper
+item.dual_defender.name=Dual Defender
+item.skycrab_controller.name=Skycrab Controller
+item.elementium_bow_mk2.name=Elementium Bow MKII
+
+item.citrine_supercharger.name=Citrine Supercharger
+item.citrine_thyratron.name=Citrine Thyratron
+item.incarnation_of_the_bomb.name=Incarnation of the Bomb
+item.prismosis_shards.name=Prismosis Shards
+item.lightcut_metal.name=Lightcut Metal
+item.supermutated_batwing.name=Super-mutated Bat Wing
+item.deviant_batwing.name=Deviant Bat Wing
+item.glowing_pustules.name=Glowing Pustules
+item.prismosis_rod.name=Prismosis Rod
+item.overcharged_cell.name=Overcharged Cell
+item.rewired_ion_cell.name=Re-Wired Ion Cell
+
+item.bomb_deployer.name=Bag of Bombs
+item.last_breath.name=Last Breath
+
+item.rainfall_collector.name=Rainfall Collector
+item.map_ambition.name=Advanced Celestial Map
+item.map_perception.name=Advanced Celestial Map
+item.map_anticipation.name=Advanced Celestial Map
+item.rampage_injection.name=Rampage Injection
+item.myrite.name=Myrite
+item.webbed_idol.name=Webbed Idol
+item.maze_token.name=Maze Token
+item.token_vycellia.name=Arena Token
+item.dimensionalizer_blueprint.name=Dimensionalizer Blueprint
+
+item.glow_bomb.name=Glow Bomb
+item.gem_ambition.name=Contained Gem of Ambition
+item.cube_ambition.name=Lost Stone of Ambition
+
+item.gem_perception.name=Contained Gem of Perception
+item.cube_perception.name=Lost Stone of Perception
+item.cube_anticipation.name=Lost Stone of Anticipation
+
+item.mortality_solution.name=Mortality Solution
+
+item.fluxlantern.name=Flux Lantern
+item.scramble_device.name=Scramble Device
+
+item.laser_blade.name=Laser Blade
+item.reinforced_blade.name=Reinforced Blade
+item.fractured_ingot.name=Fractured Ingot
+item.toxin_coated_fangs.name=Toxin-Coated Fangs
+item.elastic_fibre.name=Elastic Fibre
+item.iron_hide.name=Iron Hide
+item.advanced_signal_receiver.name=Advanced Signal Receiver
+
+item.saber_claw.name=Saber Claw
+item.arc_zapper.name=Arc Zapper
+item.dark_zapper.name=Dark Zapper
+item.infinite_fracture.name=Infinite Fracture
+item.sticky_bomb_launcher.name=Sticky Bomb Launcher
+item.orb_of_plagues.name=Orb of Plagues
+
+item.geocorrelator.name=Geo-Correlator
+item.synchronizer.name=Synchronizer
+item.clovinite_power_hub.name=Clovinite Power Hub
+item.deviant_spidereye.name=Deviant Spider Eye
+item.supermutated_spidereye.name=Super-mutated Spider Eye
+item.warped_disc.name=Dimensionally Warped Disc
+item.external_clovinite_battery.name=External Clovinite Battery
+item.clovinite_power_bank.name=Clovinite Power Bank
+item.clovinite.name=Clovinite
+item.electron_recycler.name=Electron Recycler
+item.high_tolerance_wire.name=High Tolerance Wire
+item.spiked_tendril.name=Spiked Tendril
+item.biotoxin.name=Biotoxin
+
+item.essence_possessor.name=Essence Possessor
+item.player_essence.name=Player Essence
+
+item.deviant_gold.name=Deviant Gold
+item.supermutated_gold.name=Super-mutated Gold
+item.omni_crystal.name=Omni Crystal
+item.galactic_fragments.name=Galactic Fragments
+item.incarnation_of_the_sword.name=Incarnation of the Sword
+item.security_pass_1.name=Security Pass (Level One)
+
+item.murky_mirror.name=Murky Mirror
+item.scroll_of_dark_incantation.name=Scroll of Dark Incantation
+item.nightmare_pickaxe.name=Nightmare Pickaxe
+item.multiversite_plates.name=Multiversite Plates
+item.magical_book.name=Magical Book
+item.fractured_multiversite.name=Fractured Multiversite
+item.chewed_skull.name=Chewed Skull
+item.dark_magic_powder.name=Dark Magic Powder
+item.book_of_translation.name=Book of Translation
+
+item.mirror_shield.name=Mirror Shield
+item.ironheart_elixir.name=Ironheart Elixir
+item.hexbreaker.name=Hexbreaker
+item.comet_cannon.name=Comet Cannon
+
+item.ion_cell.name=Ion Cell
+
+item.crystal_of_curses.name=Crystal of Curses
+item.gaze_of_nightmares.name=Gaze of Nightmares
+item.haunted_ingot.name=Haunted Ingot
+
+item.stone_of_rebirth.name=Stone of Rebirth
+item.reflective_plating.name=Reflective Plating
+item.explosive_goo_sample.name=Explosive Goo Sample
+item.volatile_gloop.name=Volatile Gloop
+item.combustion_chamber.name=Combustion Chamber
+
+item.blade_of_the_conqueror.name=Blade of the Conqueror
+item.attractor_beam.name=Attractor Beam / Repeller Beam
+item.weak_polarcronite.name=Weak Polarcronite
+item.potent_polarcronite.name=Potent Polarcronite
+item.powerful_polarcronite.name=Powerful Polarcronite
+
+item.elementium_bow_mk1.name=Elementium Bow
+item.branch_of_life.name=Branch of Life
+
+item.deviant_star.name=Deviant Star
+
+item.forgefire_axe.name=Forgefire Axe
+item.ultimatum_analyzer_full.name=Ultimatum Analyzer (Charged)
+item.ultimatum_analyzer_empty.name=Ultimatum Analyzer
+
+item.eternal_emberstar_generator.name=Eternal Emberstar Generator
+item.positive_magnecronite.name=Positive Magnecronite
+item.negative_magnecronite.name=Negative Magnecronite
+item.rod_of_ultimatum.name=Rod of Ultimatum
+item.sunder_log.name=Sunder Log
+
+item.ultragrowth_crystal_gel.name=Ultragrowth Crystallized Gel
+item.crystal_diode.name=Crystal Diode
+item.crystal_fins.name=Crystal Fins
+item.heavy_crystal.name=Heavy Crystal
+item.razor_edged_crystal.name=Razor Edged Crystal
+
+item.element_stone.name=Element Stone
+item.element_stone_unpowered.name=Unpowered Element Stone
+
+item.radioactive_isotopes.name=Radioactive Isotopes
+item.unpowered_emberstar.name=Unpowered Emberstar
+
+item.gravitator.name=Gravitator
+item.fluxocron.name=Fluxocron
+item.cloaking_device.name=Cloaking Device
+
+item.movement_sensor.name=Movement Sensor
+item.anti_radar_chip.name=Anti-Radar Chip
+item.malachite_inclinometer.name=Malachite Inclinometer
+item.crystalized_bone.name=Crystallized Bone
+item.geodimensional_tunnel.name=Geo-Dimensional Tunnel
+
+item.quantum_shield.name=Quantum Shield
+
+item.power_pulse.name=Power Pulse
+item.synthetic_fibre.name=Synthetic Fibre
+
+item.sword_of_selection.name=Sword of Selection
+item.plasma_materializer.name=Plasma Materializer
+item.ethercut_metal.name=Ethercut Metal
+item.starcut_metal.name=Starcut Metal
+
+item.spacecut_metal.name=Spacecut Metal
+item.terracut_metal.name=Terracut Metal
+item.mirror_of_consumption.name=Mirror of Consumption
+
+item.razor_fangs.name=Razor Fangs
+item.prismatic_calcium.name=Prismatic Calcium
+
+item.bone_blocks.name=Bone Blocks
+item.minor_multiversal_device.name=Minor Multiversal Device
+
+item.container_of_collection_full.name=Container of Collection (Full)
+item.container_of_collection_empty.name=Container of Collection
+item.digital_panel.name=Digital Panel
+
+item.configuration_cell_color.name=Configuration Cell (Color)
+item.configuration_cell_shape.name=Configuration Cell (Shape)
+item.launch_drive.name=Launch Drive
+item.dual_weapon_convertor.name=Dual Weapon Convertor
+item.direct_weapon_convertor.name=Direct Weapon Convertor
+item.ultrapowered_capacitor.name=Ultrapowered Capacitor
+item.life_reconfigurator.name=Life Reconfigurator
+
+item.mysterious_gloop.name=Mysterious Gloop
+item.glistening_crystals.name=Glistening Crystals
+item.weightless_gem.name=Weightless Gem
+
+item.wand_of_self_reflection.name=Wand of Self Reflection
+item.cane_of_venoms.name=Cane of Venoms
+item.bane_of_venoms.name=Bane of Venoms
+item.sword_of_reverberance.name=Sword of Reverberance
+
+item.powerchip_shockwave.name=Shockwave Generator Powerchip
+item.powerchip_tether.name=Tether Creator Powerchip
+item.powerchip_strike.name=Sky Striker Powerchip
+item.powerchip_ripper.name=Item Ripper Powerchip
+
+item.deviant_globe.name=Deviant Globe
+item.supermutated_map.name=Super-mutated Map
+item.unpowered_starcrystal.name=Unpowered Starcrystal
+item.starcrystal_capacitor.name=Starcrystal Capacitor
+item.geolocation_orb.name=Geolocation Orb
+item.geocoordinated_orb.name=Geo-Coordinated Orb
+
+
+item.blade_of_the_dead.name=Blade of the Dead
+item.head_collector.name=Head Collector
+
+item.portable_beacon.name=Portable Beacon
+item.life_destabilizer.name=Life Destabilizer
+item.comet_shower.name=Comet Shower
+
+item.filtrationmask.name=Filtration Mask
+item.conductive_bar.name=Conductive Bar
+
+item.cube_misdirection.name=Lost Stone of Misdirection
+item.token_rikarus.name=Arena Token
+item.token_barul.name=Arena Token
+item.token_cryonus.name=Arena Token
+item.token_thundyron.name=Arena Token
+
+item.giant_dusker_eggs.name=Giant Dusker Eggs
+item.simple_microcontroller.name=Simple Microcontroller
+item.elliptical_projector.name=Elliptical Projector
+item.giant_tentacle.name=Giant Tentacle
+item.crushed_bones.name=Crushed Bones
+item.jar_of_blood.name=Jar of Blood
+item.frosted_log.name=Frosted Log
+item.electrical_accelerator.name=Electrical Accelerator
+item.polyamplification_solution.name=Poly-Amplification Solution
+item.wired_ring.name=Wired Ring
+
+item.axiom_celestarium.name=Axiom Celestarium
+
+item.starfire_blade.name=Starfire Blade
+item.starfire_bomb.name=Starfire Bomb
+item.starfire_throwingknife.name=Starfire Throwing Knife
+item.starfire_wand.name=Starfire Wand
+
+item.aurorus_blade.name=Aurorus Blade
+item.aurorus_bomb.name=Aurorus Bomb
+item.aurorus_throwingknife.name=Aurorus Throwing Knife
+item.aurorus_wand.name=Aurorus Wand
+
+item.novacron_blade.name=Novacron Blade
+item.novacron_bomb.name=Novacron Bomb
+item.novacron_throwingknife.name=Novacron Throwing Knife
+item.novacron_wand.name=Novacron Wand
+
+item.moonglow_blade.name=Moonglow Blade
+item.moonglow_bomb.name=Moonglow Bomb
+item.moonglow_throwingknife.name=Moonglow Throwing Knife
+item.moonglow_wand.name=Moonglow Wand
+
+item.powercrystal_blue.name=Power Crystal
+item.powercrystal_yellow.name=Power Crystal
+item.powercrystal_green.name=Power Crystal
+item.powercrystal_purple.name=Power Crystal
+
+item.powersphere_blue.name=Power Sphere
+item.powersphere_yellow.name=Power Sphere
+item.powersphere_green.name=Power Sphere
+item.powersphere_purple.name=Power Sphere
+
+item.deviantenderpearl.name=Deviant Ender Pearl
+item.deviantegg.name=Deviant Egg
+item.deviantmilk.name=Deviant Milk
+item.deviantbeef.name=Deviant Beef
+item.theskyverge.name=The Skyverge
+item.elarasnecklace.name=Elara's Necklace
+item.perfectpearl.name=Perfect Pearl
+item.cube_duality.name=Lost Stone of Duality
+item.bladesofduality.name=Blades of Duality
+item.bladesofconvergence.name=Blades of Convergence
+item.deviantrelocator.name=Deviant Relocator
+
+item.celestialdiamond.name=Celestial Diamond
+item.deviantbearhide.name=Deviant Bear Hide
+item.deviantghasttear.name=Deviant Ghast Tear
+item.deviantshulkershell.name=Deviant Shulker Shell
+item.skywormtooth.name=Skyworm Tooth
+item.unpoweredblade.name=Unpowered Blade
+item.cube_aspiration.name=Lost Stone of Aspiration
+
+item.celestialminerspickaxe.name=Celestial Miner's Pickaxe
+item.droidconstructor.name=Droid Constructor
+item.droidrelocator.name=Droid Relocator
+item.droidrelocator_storage.name=Droid Relocator (Storage Module)
+
+item.deviantbone.name=Deviant Bone
+item.deviantgunpowder.name=Deviant Gunpowder
+item.token_urogo.name=Arena Token
+item.arenacard.name=Arena Exit Pass
+item.cube_corruption.name=Lost Stone of Corruption
+
+item.datadrive.name=Empty Data Drive
+item.datadrive_speed.name=Data Drive (Speed)
+item.datadrive_power.name=Data Drive (Power)
+item.datadrive_defense.name=Data Drive (Defense)
+item.datadrive_dash.name=Data Drive (Hyperdash)
+
+item.datadrive_spacewarp.name=Data Drive (Spacewarp)
+item.datadrive_laser.name=Data Drive (Laser Generator)
+item.datadrive_gravityfield.name=Data Drive (Gravity Field)
+item.datadrive_timethief.name=Data Drive (Time Thief)
+
+item.droid_upgrade_mk2.name=Droid Upgrade Kit MKII
+item.droid_upgrade_mk3.name=Droid Upgrade Kit MKIII
+item.slippery_ingot.name=Slippery Ingot
+item.unstable_ingot.name=Unstable Ingot
+item.salivated_crystals.name=Salivated Crystals
+item.crystal_plating.name=Crystal Plating
+item.nightmare_solution.name=Nightmare Solution
+item.cyclone_dust.name=Cyclone Dust
+item.ultraflight_wing.name=Ultraflight Wing
+item.ultralight_dust.name=Ultralight Dust
+item.volatility_solution.name=Volatility Solution
+item.dimensional_capacitor.name=Dimensional Capacitor
+item.gigacharge_solutions.name=Gigacharge Solutions
+
+item.zirconia_cerulean.name=Zirconia (Cerulean)
+item.zirconia_celadon.name=Zirconia (Celadon)
+item.zirconia_aquamarine.name=Zirconia (Aquamarine)
+item.zirconia_crimson.name=Zirconia (Crimson)
+item.zirconia_citrine.name=Zirconia (Citrine)
+item.zirconia_violet.name=Zirconia (Violet)
+item.zirconia_malachite.name=Zirconia (Malachite)
+item.zirconia_oyster.name=Zirconia (Oyster)
+item.zirconia_rosewood.name=Zirconia (Rosewood)
+
+item.mystery_box.name=Mystery Box
+item.power_plug.name=Power Plug
+item.power_funnel.name=Power Funnel
+item.cerulean_lens.name=Cerulean Lens
+item.crimson_transducer.name=Crimson Transducer
+item.deviant_fragment_tr.name=Tablet Fragment
+item.deviant_fragment_br.name=Tablet Fragment
+item.deviant_fragment_tl.name=Tablet Fragment
+item.deviant_fragment_bl.name=Tablet Fragment
+item.broach_of_deviancy.name=Broach of Deviancy
+item.deviant_tablet.name=Deviant Homeworld Tablet
+item.lifestrain_enigma.name=Lifestrain Enigma
+
+item.droidconstructor_mk2.name=Droid Constructor MKII
+item.droidrelocator_mk2.name=Droid Relocator MKII
+
+item.droidconstructor_mk3.name=Droid Constructor/Relocator MKIII
+
+item.variantanalyzerempty.name=DNA Analyzer
+item.variantanalyzerfull.name=DNA Analyzer (Charged)
+
+item.droidlocationdata_o.name=Droid Location Data
+item.droidlocationdata_n.name=Droid Location Data
+item.droidlocationdata_e.name=Droid Location Data
+item.droidlocationdata_d.name=Droid Location Data
+item.jeweledskulltrophy.name=Jeweled Skull Trophy
+item.mechanicalpowercell.name=Mechanical Power Cell
+item.celestialemerald.name=Celestial Emerald
+item.rodofdeviation.name=Rod of Deviation
+
+item.deviationanalyzerempty.name=Deviation Analyzer
+item.deviationanalyzerfull.name=Deviation Analyzer (Charged)
+
+item.supermutated_powder.name=Super-mutated Powder
+item.supermutated_pearl.name=Super-mutated Pearl
+item.supermutated_bone.name=Super-mutated Bone
+item.supermutated_shell.name=Super-mutated Shell
+item.supermutated_tooth.name=Super-mutated Tooth
+item.supermutated_milk.name=Super-mutated Milk
+item.supermutated_egg.name=Super-mutated Egg
+item.supermutated_string.name=Super-mutated String
+item.supermutated_gel.name=Super-mutated Gel
+item.supermutated_brew.name=Super-mutated Brew
+item.supermutated_hide.name=Super-mutated Hide
+
+item.supermutationrod.name=Rod of Super Mutation
+
+item.brew_of_forbidden_arts.name=Brew of Forbidden Arts
+
+item.bagofslime.name=Bag of Slime
+item.concentratedvenom.name=Concentrated Venom
+item.superstimulant.name=Super Stimulant
+item.darkconcoction.name=Dark Concoction
+item.imbuedcrystal.name=Imbued Crystal
+item.moltendiamond.name=Molten Diamond
+item.lifeboundemerald.name=Lifebound Emerald
+
+item.celestialquartz.name=Celestial Quartz
+item.celestialredstone.name=Celestial Redstone
+
+item.galaxybeacon.name=Galaxy Beacon
+item.chargedgalaxycrystal.name=Charged Galaxy Crystal
+
+item.blazingstar.name=Blazing Star
+item.cursedemerald.name=Cursed Emerald
+item.superchargedcell.name=Supercharged Cell
+
+item.lifevessel.name=Life Vessel
+item.contenderpass.name=Contender Pass
+item.holosaber.name=Holo Saber
+item.holobow.name=Holo Bow
+item.holonade.name=Holo 'Nade
+
+item.etherealmirror.name=Ethereal Mirror
+item.deviantbottle.name=Deviant Bottle
+item.reflectiveshard.name=Reflective Shard
+item.smoldering_ghasttear.name=Smoldering Ghast Tear
+
+item.crystalizedgel.name=Crystalized Gel
+item.scorchedpipe.name=Scorched Pipe
+
+item.celestialheadguard.name=Celestial Headguard
+
+item.vampyreon_helmet.name=Vampyreon Helmet
+item.vampyreon_chestplate.name=Vampyreon Chestplate
+item.vampyreon_leggings.name=Vampyreon Leggings
+item.vampyreon_boots.name=Vampyreon Boots
+
+item.vampyreon_prime_helmet.name=Vampyreon Prime Helmet
+item.vampyreon_prime_chestplate.name=Vampyreon Prime Chestplate
+item.vampyreon_prime_leggings.name=Vampyreon Prime Leggings
+item.vampyreon_prime_boots.name=Vampyreon Prime Boots
+
+item.graviterium_helmet.name=Graviterium Helmet
+item.graviterium_chestplate.name=Graviterium Chestplate
+item.graviterium_leggings.name=Graviterium Leggings
+item.graviterium_boots.name=Graviterium Boots
+
+item.spectros_helmet.name=Spectros Helmet
+item.spectros_chestplate.name=Spectros Chestplate
+item.spectros_leggings.name=Spectros Leggings
+item.spectros_boots.name=Spectros Boots
+
+item.bionic_veggitron_helmet.name=Bionic-Veggitron Helmet
+item.bionic_veggitron_chestplate.name=Bionic-Veggitron Chestplate
+item.bionic_veggitron_leggings.name=Bionic-Veggitron Leggings
+item.bionic_veggitron_boots.name=Bionic-Veggitron Boots
+
+item.blightcyst_helmet.name=Blightcyst Helmet
+item.blightcyst_chestplate.name=Blightcyst Chestplate
+item.blightcyst_leggings.name=Blightcyst Leggings
+item.blightcyst_boots.name=Blightcyst Boots
+
+item.blightcyst_prime_helmet.name=Blightcyst Prime Helmet
+item.blightcyst_prime_chestplate.name=Blightcyst Prime Chestplate
+item.blightcyst_prime_leggings.name=Blightcyst Prime Leggings
+item.blightcyst_prime_boots.name=Blightcyst Prime Boots
+
+item.plasmythic_helmet.name=Plasmythic Helmet
+item.plasmythic_chestplate.name=Plasmythic Chestplate
+item.plasmythic_leggings.name=Plasmythic Leggings
+item.plasmythic_boots.name=Plasmythic Boots
+
+item.vitraliton_helmet.name=Vitraliton Helmet
+item.vitraliton_chestplate.name=Vitraliton Chestplate
+item.vitraliton_leggings.name=Vitraliton Leggings
+item.vitraliton_boots.name=Vitraliton Boots
+
+item.vitraliton_prime_helmet.name=Vitraliton Prime Helmet
+item.vitraliton_prime_chestplate.name=Vitraliton Prime Chestplate
+item.vitraliton_prime_leggings.name=Vitraliton Prime Leggings
+item.vitraliton_prime_boots.name=Vitraliton Prime Boots
+
+item.emberium.name=Emberium
+item.emberium_ingot.name=Emberium Ingot
+item.hextorium.name=Hextorium
+item.hextorium_ingot.name=Hextorium Ingot
+item.crystonium.name=Crystonium
+item.crystonium_ingot.name=Crystonium Ingot
+item.astrallium.name=Astrallium
+item.astrallium_ingot.name=Astrallium Ingot
+item.kylaxium.name=Kylaxium
+item.kylaxium_ingot.name=Kylaxium Ingot
+item.vellorium.name=Vellorium
+item.vellorium_ingot.name=Vellorium Ingot
+item.incadium.name=Incadium
+item.incadium_ingot.name=Incadium Ingot
+item.noxerium.name=Noxerium
+item.noxerium_ingot.name=Noxerium Ingot
+item.olysium.name=Olysium
+item.olysium_ingot.name=Olysium Ingot
+item.detherium.name=Detherium
+item.detherium_ingot.name=Detherium Ingot
+
+item.emberium_condensed.name=Condensed Emberium
+item.hextorium_condensed.name=Condensed Hextorium
+item.crystonium_condensed.name=Condensed Crystonium
+item.astrallium_condensed.name=Condensed Astrallium
+item.kylaxium_condensed.name=Condensed Kylaxium
+item.vellorium_condensed.name=Condensed Vellorium
+item.incadium_condensed.name=Condensed Incadium
+item.noxerium_condensed.name=Condensed Noxerium
+item.olysium_condensed.name=Condensed Olysium
+item.detherium_condensed.name=Condensed Detherium
+
+item.kyvorium_ingot.name=Kyvorium Ingot
+item.kyvorium_condensed.name=Condensed Kyvorium
+
+item.reactive_crystal_olysium.name=Reactive Crystal (Olysium)
+item.reactive_crystal_hextorium.name=Reactive Crystal (Hextorium)
+item.reactive_crystal_emberium.name=Reactive Crystal (Emberium)
+item.reactive_crystal_crystonium.name=Reactive Crystal (Crystonium)
+item.reactive_crystal_astrallium.name=Reactive Crystal (Astrallium)
+item.reactive_crystal_kylaxium.name=Reactive Crystal (Kylaxium)
+item.reactive_crystal_vellorium.name=Reactive Crystal (Vellorium)
+item.reactive_crystal_incadium.name=Reactive Crystal (Incadium)
+item.reactive_crystal_noxerium.name=Reactive Crystal (Noxerium)
+item.reactive_crystal_detherium.name=Reactive Crystal (Detherium)
+
+item.xerovium_condensed.name=Condensed Xerovium
+item.xerovium.name=Xerovium
+item.xerovium_ingot.name=Xerovium Ingot
+item.reactive_crystal_xerovium.name=Reactive Crystal (Xerovium)
+
+item.phytrosium_condensed.name=Condensed Phytrosium
+item.phytrosium.name=Phytrosium
+item.phytrosium_ingot.name=Phytrosium Ingot
+item.reactive_crystal_phytrosium.name=Reactive Crystal (Phytrosium)
+
+
+item.forgefirepickaxe.name=Forgefire Pickaxe
+
+item.twigoftrickery.name=Twig of Trickery
+item.spaceslinger.name=Space Slinger
+item.thunderbauble.name=Thunder Bauble
+item.axiomavorum.name=Axiom Avorum
+item.starstorm.name=Star Storm
+item.witchspike.name=Bane of Venoms
+item.vitalitus.name=Vitalitus
+item.ghosthunter.name=Ghost Hunter
+
+item.deviantgel.name=Deviant Gel
+
+item.neosteel_material.name=Neosteel
+item.neosteel_ingot.name=Neosteel Ingot
+item.sunderash.name=Sunder Ash
+item.acidicooze.name=Acidic Ooze
+
+item.trialblaze.name=Trial of the Blaze
+item.trialskeleton.name=Trial of the Skeleton
+item.trialspider.name=Trial of the Spider
+
+item.trialstray.name=Trial of the Stray
+item.trialenderman.name=Trial of the Enderman
+item.trialcreeper.name=Trial of the Creeper
+item.trialllama.name=Trial of the Llama
+item.trialpigman.name=Trial of the Pigman
+item.trialvex.name=Trial of the Vex
+item.trialshulker.name=Trial of the Shulker
+item.trialzombie.name=Trial of the Zombie
+item.trialmagmacube.name=Trial of the Magma Cube
+
+
+item.deviant_blazerod.name=Deviant Blazerod
+item.supermutated_flame.name=Super-mutated Flame
+item.electrified_quartz.name=Electrified Quartz
+item.envenomed_diamond.name=Envenomed Diamond
+item.ghostly_redstone.name=Ghostly Redstone
+item.masterforged_ingot.name=Master-Forged Ingot
+item.mastercut_diamond.name=Master-Cut Diamond
+item.masterfaceted_quartz.name=Master-Faceted Quartz
+item.masterenthralled_emerald.name=Master-Enthralled Emerald
+item.mastercharged_redstone.name=Master-Charged Redstone
+item.mastercrafted_alloy.name=Master Crafted Alloy
+item.voidcut_metal.name=Voidcut Metal
+item.toxin_filter.name=Toxin Filter
+item.celestialiron.name=Celestial Iron
+
+item.supermutated_wing.name=Super-mutated Wing
+item.supermutated_wheat.name=Super-mutated Wheat
+item.supermutated_magmacream.name=Super-mutated Magma Cream
+item.supermutated_porkchop.name=Super-mutated Porkchop
+item.supermutated_bonemeal.name=Super-mutated Bonemeal
+
+item.deviant_wing.name=Deviant Wing
+item.deviant_wheat.name=Deviant Wheat
+item.deviant_magmacream.name=Deviant Magma Cream
+item.deviant_porkchop.name=Deviant Porkchop
+item.deviant_bonemeal.name=Deviant Bonemeal
+
+
+item.firefeather.name=Firefeather
+item.hard_bone.name=Hard Bone
+item.hypnotic_eye.name=Hypnotic Eye
+item.rockspine.name=Rockspine
+item.purple_tendril.name=Purple Tendril
+item.giant_tooth.name=Giant Tooth
+item.magic_stone.name=Magic Stone
+item.gravity_dust.name=Gravity Dust
+item.sonic_shield.name=Sonic Shield
+
+item.organic_calcium.name=Organic Calcium
+item.reinforced_glass.name=Reinforced Glass
+item.shimmering_gloss.name=Shimmering Gloss
+item.heat_resistant_tongs.name=Heat Resistant Tongs
+
+item.twinned_jewel.name=Twinned Jewel
+item.gem_vengeance.name=Contained Gem of Vengeance
+item.cube_vengeance.name=Lost Stone of Vengeance
+item.map_vengeance.name=Ancient Celestial Map
+item.token_nuxuro.name=Arena Token
+item.deviant_snowball.name=Deviant Snowball
+item.supermutated_snowball.name=Super-mutated Snowball
+item.spectral_ingot.name=Spectral Ingot
+item.frozen_ingot.name=Frozen Ingot
+
+item.explosive_sack.name=Explosive Sac
+item.acidic_tongue.name=Acidic Tongue
+item.dusker_eggs.name=Dusker Eggs
+item.nightmare_powder.name=Nightmare Powder
+item.volatile_blood.name=Volatile Blood
+item.hard_crystal.name=Hard Crystal
+item.sticky_hide.name=Sticky Hide
+item.durable_husk.name=Durable Husk
+item.fireblood_solution.name=Fireblood Solution
+item.acidblood_solution.name=Acidblood Solution
+item.polycharge_solution.name=Polycharge Solution
+item.corrosive_mix.name=Corrosive Mix
+item.carbonic_acid.name=Carbonic Acid
+item.ion_crystal.name=Ion Crystal
+item.fabrication_power_core.name=Fabrication Power Core
+item.pure_venom.name=Pure Venom
+
+item.portable_beacon.name=Portable Beacon
+
+item.token_dario.name=Arena Token
+item.token_atlasspire.name=Arena Token
+item.token_alestria.name=Arena Token
+item.token_arash.name=Arena Token
+item.slimed_bedrock.name=Slimed Bedrock
+item.catalyzing_cell.name=Catalyzing Cell
+item.organic_power_cell.name=Organic Power Cell
+item.mix_of_dominance.name=Mix Of Dominance
+item.unstable_solution.name=Unstable Solution
+item.frosted_star.name=Frosted Star
+item.corrupted_solution.name=Corrupted Solution
+item.mounted_crystal.name=Mounted Crystal
+item.plucked_eye.name=Plucked Eye
+item.engulfed_eye.name=Engulfed Eye
+item.dual_power_assembly.name=Dual Power Assembly
+item.atlas_beacon.name=Atlas Beacon
+item.power_drive.name=Power Drive
+item.plated_bone.name=Plated Bone
+
+item.cube_dread.name=Lost Stone of Dread
+item.cube_imposition.name=Lost Stone of Imposition
+item.cube_retrospection.name=Lost Stone of Retrospection
+item.cube_anxiety.name=Lost Stone of Anxiety
+
+item.deviant_flesh.name=Deviant Flesh
+item.deviant_mushroom.name=Deviant Mushroom
+item.deviant_slimeball.name=Deviant Slimeball
+item.supermutated_slimeball.name=Super-mutated Slimeball
+item.supermutated_mushroom.name=Super-mutated Mushroom
+item.supermutated_gel.name=Super-mutated Gel
+item.supermutated_flesh.name=Super-mutated Flesh
+
+item.luminessence.name=Lumin-Essence
+item.glowblood_solution.name=Glowblood Solution
+item.crystal_pickaxe.name=Crystal Pickaxe
+
+item.glowing_sac.name=Glowing Sac
+item.luminescent_cubes.name=Luminescent Cubes
+item.glowing_seeds.name=Glowing Seeds
+item.glow_bulb.name=Glow Bulb
+item.organic_fuse.name=Organic Fuse
+item.luminescent_stingers.name=Luminescent Stingers
+item.blank_chargestone.name=Blank Chargestone
+item.illumination_stone.name=Illumination Stone
+item.voidstone.name=Hollow Voidstone
+item.crystallized_alloy.name=Crystallized Alloy
+item.blank_augment_slide.name=Blank Augment Slide
+item.bioluminescent_power_supply.name=Bioluminescent Power Supply
+item.matter_condenser.name=Matter Condenser
+item.spaceward_gyroscope.name=Spaceward Gyroscope
+item.ether_chamber.name=Ether Chamber
+
+item.exothermite.name=Exothermite
+item.molten_exothermite.name=Exothermite (Molten)
+item.impure_exothermite.name=Impure Exothermite
+item.ion_bomb_receiver.name=Ion Bomb Receiver
+item.metallicized_rock.name=Metallicized Rock
+item.deviant_iron.name=Deviant Iron
+item.supermutated_iron.name=Super-mutated Iron
+
+item.metal_branch.name=Metal Branch
+item.drink_of_duality.name=Drink of Duality
+item.glowing_globes.name=Glowing Globes
+item.signal_receiver.name=Signal Receiver
+item.shadow_hide.name=Shadow Hide
+
+item.augment_slide_dash.name=Augment Slide
+item.augment_slide_slam.name=Augment Slide
+item.augment_slide_invisibility.name=Augment Slide
+item.augment_slide_forcefield.name=Augment Slide
+
+item.augment_slide_heal.name=Augment Slide
+item.augment_slide_hurt.name=Augment Slide
+item.augment_slide_teleport.name=Augment Slide
+item.augment_slide_summon.name=Augment Slide
+
+item.augment_slide_blight.name=Augment Slide
+item.augment_slide_plague.name=Augment Slide
+item.augment_slide_emp.name=Augment Slide
+item.augment_slide_shatter.name=Augment Slide
+item.augment_slide_tether.name=Augment Slide
+item.augment_slide_unleash.name=Augment Slide
+item.augment_slide_gravity.name=Augment Slide
+item.augment_slide_nightmares.name=Augment Slide
+item.augment_slide_explosive.name=Augment Slide
+item.augment_slide_trailing.name=Augment Slide
+item.augment_slide_destructive.name=Augment Slide
+item.augment_slide_regenerative.name=Augment Slide
+
+item.stick_shell.name=Sticky Shell
+
+item.augmenticon_box.name=Augmenticon Box
+
+item.emberleaf_seeds.name=Emberleaf Seeds
+item.biofuel_battery.name=Biofuel Battery
+item.ember_pods.name=Ember Pods
+item.burning_sap.name=Burning Sap
+item.stone_of_resurgence.name=Stone of Resurgence
+
+item.watchful_eye_pink.name=Pink Watchful Eye
+item.watchful_eye_blue.name=Blue Watchful Eye
+item.watchful_eye_purple.name=Purple Watchful Eye
+item.spike_ball.name=Spike Ball
+item.glo_rod_uncharged.name=Glo Rod (Uncharged)
+item.glo_rod.name=Glo Rod
+item.honey_jar.name=Honey Jar
+item.honey_jar_empty.name=Honey Jar (Empty)
+item.amber.name=Amber
+item.serpentine_crystal.name=Serpentine Crystal
+item.ultraviolet_solution.name=Ultraviolet Solution
+item.chain_of_venoms.name=Chain of Venoms
+
+item.high_speed_wire.name=High Speed Wire
+item.split_power_cell.name=Split Power Cell
+item.quickflame_solution.name=Quickflame Solution
+item.rapid_growth_solution.name=Rapid Growth Solution
+item.heart_of_darkness.name=Heart of Darkness
+item.interlocking_spine.name=Interlocking Spine
+item.ember_sac.name=Ember Sac
+item.suction_pad.name=Suction Pad
+item.serrated_tooth.name=Serrated Tooth
+item.atomic_cell.name=Atomic Cell
+item.biocrystal_sample.name=Biocrystal Sample
+item.beacon_of_light.name=Beacon of Light
+item.beacon_of_darkness.name=Beacon of Darkness
+item.dryads_grip.name=Dryad's Grip
+item.power_override_device.name=Power Override Device
+item.ball_of_webs.name=Ball of Webs
+
+item.darkbinder.name=Darkbinder
+item.nanofluoric_acid.name=Nanofluoric Acid
+item.florocite.name=Florocite
+item.bio_energizer.name=Bio-Energizer
+item.annealed_glass.name=Annealed Glass
+item.adhesive_fibre.name=Adhesive Fibre
+item.encrypted_power_blueprints.name=Encrypted Power Blueprints
+item.power_analyzer.name=Power Analyzer
+item.blighted_capacitor.name=Blighted Capacitor
+
+item.fossil_finder.name=Fossil Finder
+item.ring_of_the_unknown.name=Ring of the Unknown
+item.electrical_ring.name=Electrical Ring
+item.darkworld_data_chip.name=Darkworld Data Chip
+item.organic_wire.name=Organic Wire
+item.bioreactive_solution.name=Bioreactive Solution
+item.blight_cure.name=Blight Cure
+item.jar_of_syrup.name=Jar of Sunder Syrup
+item.jar_of_sap.name=Jar of Sap
+item.pyre_log.name=Pyre Log
+item.power_blade.name=Power Blade
+item.nicronium.name=Nicronium
+item.infused_nicronium.name=Infused Nicronium
+item.timeline_monitor.name=Timeline Monitor
+
+item.super_booster.name=Super Booster
+item.void_box.name=Void Box
+item.spectros_prime_leggings.name=Spectros Prime Leggings
+item.spectros_prime_helmet.name=Spectros Prime Helmet
+item.spectros_prime_chestplate.name=Spectros Prime Chestplate
+item.spectros_prime_boots.name=Spectros Prime Boots
+item.module_weight.name=Module (Weight)
+item.module_hexing.name=Module (Hexing)
+item.module_durability.name=Module (Durability)
+item.etherium_ingot.name=Etherium Ingot
+item.etherium_condensed.name=Condensed Etherium
+item.electrical_blubber.name=Electrical Blubber
+item.reconfigured_matter.name=Reconfigured Matter
+
+item.scroll_of_dark_reconstruction.name=Scroll of Reconstruction
+
+item.atomite_fragments.name=Atomite Fragments
+item.welded_atomite.name=Welded Atomite
+item.polyionite.name=Polyionite
+
+item.micro_remote.name=Micro Remote
+item.radion_ore.name=Radion Ore
+item.radion_pillar.name=Radion Pillar
+item.radion_fragment.name=Radion Fragment
+item.radion_ingot.name=Radion Ingot
+
+item.dimensional_polymer.name=Dimensional Polymer
+item.avenger.name=Avenger
+
+item.fossil_ribbed_tail.name=Fossil (Ribbed-Tail)
+item.fossil_small_ribs.name=Fossil (Small Ribs)
+item.fossil_eel_topjaw.name=Fossil (Upper Jaw)
+item.fossil_eel_botjaw.name=Fossil (Lower Jaw)
+item.remains_pelican_eel.name=Fossilized Pelican Eel
+
+item.silver_token.name=Silver Token
+item.gold_token.name=Gold Token
+item.amazonite_token.name=Amazonite Token
+item.hypersonic_drive_chamber.name=Hypersonic Drive Chamber
+
+item.multiversal_blade.name=Multiversal Blade
+
+item.dusk_of_eternity.name=Dusk of Eternity
+item.dawn_of_eternity.name=Dawn of Eternity
+
+item.rise_of_phantoms.name=Rise of Phantoms
+item.puppet_master.name=Puppet Master
+item.soundwave.name=Soundwave
+item.ethereal_grasp.name=Ethereal Grasp
+item.abyssal_lantern.name=Abyssal Lantern
+
+item.dev_nadir.name=[DEV] Nadir
+
+item.clay_terraformer.name=Clay Terraformer
+item.galaxy_dragon.name=Galaxy Dragon
+
+item.song_of_invigoration.name=Song of Invigoration
+item.whirlpool.name=Whirlpool
+
+item.head_hunter.name=Head Hunter
+item.lost_blades_of_infinity.name=Lost Blades of Infinity
+item.nuclear_receiver.name=Nuclear Receiver
+item.tesla_towers.name=Scythe of Creation
+
+item.death_mark.name=The Death Mark
+item.aura_of_allegiance.name=Aura of Allegiance
+
+item.shipment_box.name=Shipment Box
+
+item.deviant_sand.name=Deviant Sandstone
+item.supermutated_sand.name=Supermutated Sandstone
+item.deviant_fang.name=Deviant Fang
+item.supermutated_fang.name=Supermutated Fang
+
+item.replica_infinity_gauntlet.name=Replica Infinity Gauntlet
+
+item.andromeda.name=Andromeda
+item.creeping_vine.name=Creeping Vine
+item.emberstorm.name=Emberstorm
+item.bomb_delivery_drone.name=Bomb Delivery Drone
+
+item.sword_of_insanity.name=Sword of Insanity
+
+item.cthulhu_spear.name=Spear of Endless Power
+item.cthulhu_sword_of_balance.name=Sword of Force (CODE: BALANCE)
+item.cthulhu_sword_of_war.name=Sword of Force (CODE: WAR)
+item.cthulhu_sword_of_peace.name=Sword of Force (CODE: PEACE)
+item.cthulhu_sword_of_uncertainty.name=Sword of Force (CODE: ENTANGLEMENT)
+
+tile.cthulhu_spawner.name=Inter-dimensional Rift Generator
+tile.champion_carpet_parkour.name=Champion Carpet
+tile.champion_carpet_dodgeball.name=Champion Carpet
+tile.champion_carpet_dodgeball_cut.name=Champion Carpet
+tile.champion_carpet_parkour_cut.name=Champion Carpet
+tile.screen_parkour.name=Screen (Parkour)
+tile.screen_dodgeball.name=Screen (Trampoline Dodgeball)
+tile.champion_glowing_tile.name=Champion Glowing Tile
+
+tile.fungal_astromud_blue.name=Fungal Astromud
+tile.fungal_astromud_teal.name=Fungal Astromud
+tile.azure_root.name=Azure Root
+
+tile.etherstock.name=Etherstock
+tile.glowvine.name=Glowvine
+tile.darkvine.name=Darkvine
+tile.strangelash.name=Strangelash
+
+tile.puzzle_key_block.name=Puzzle Key
+
+tile.cell_charger.name=Cell Charger
+tile.sunstone_ore.name=Sunstone Ore
+tile.boss_gate.name=Gate of Containment
+tile.blighted_core.name=Blighted Power Core
+
+tile.screen_obstaclealley.name=Screen (Obstacle Alley)
+tile.champion_carpet_obstaclealley.name=Champion Carpet
+tile.champion_carpet_obstaclealley_cut.name=Champion Carpet
+tile.fall_bridge.name=Fall Bridge
+
+tile.screen_inkwars.name=Screen (Ink Wars)
+tile.champion_carpet_inkwars.name=Champion Carpet
+tile.champion_carpet_inkwars_cut.name=Champion Carpet
+
+tile.puzzle_key_block.name=Puzzle
+tile.puzzle_master_turret.name=Puzzle Turret
+tile.puzzle_arena_floor.name=Puzzle Tile
+tile.separated_matter.name=Separated Matter
+
+tile.heatsand.name=Heat Sand
+tile.molten_seastone.name=Molten Seastone
+tile.igneous_seastone.name=Igneous Seastone
+tile.moltrock.name=Molt Rock
+tile.heatweed.name=Heatweeds
+tile.smokeweed.name=Smokeweed
+tile.emberkelp.name=Ember Kelp
+tile.selection_preview.name=Selection Preview
+
+tile.melody_button.name=Melody Button
+tile.melodic_sequencer.name=Melodic Sequencer
+tile.cosmic_fracture.name=Cosmic Fracture
+tile.module_creator.name=Module Creator
+tile.ionite_ore.name=Ionite Ore
+tile.crusher_button.name=Crusher Button
+tile.puff_spore.name=Puff Spore
+tile.mushweed.name=Mushweed
+tile.fungal_astromud.name=Fungal Astromud
+tile.fungal_astrorock.name=Fungal Astrorock
+tile.neoshocker.name=Neoshocker
+tile.space_pickle.name=Space Pickle
+tile.moon_flower.name=Moon Flower
+tile.tentacle_synthesizer.name=Tentacle Synthesizer
+tile.leavesLumio.name=Lumio Leaves
+tile.bumblefruit.name=Bumble Fruit
+tile.darkworld_converter.name=Darkworld Converter
+tile.acidic_concoction_gel.name=Acidic Concoction Gel
+
+tile.puzzle_lava.name=Damage Zone
+tile.smooth_coral.name=Smooth Coral
+tile.rough_coral.name=Rough Coral
+tile.dark_rough_coral.name=Rough Coral (Dark)
+tile.light_smooth_coral.name=Smooth Coral (Light)
+tile.super_rough_coral.name=Super Rough Coral
+tile.patterned_smooth_coral.name=Smooth Coral (Patterened)
+
+tile.kelp.name=Kelp
+tile.dense_kelp.name=Kelp (Dense)
+tile.seabush.name=Sea Bush
+tile.searock.name=Sea Rock
+tile.wiggleweed.name=Wiggleweed
+
+tile.seastone.name=Seastone
+tile.sandy_seastone.name=Sandy Seastone
+tile.seasand.name=Seasand
+
+tile.labyrinth_portal_green.name=Labyrinth Portal (Lower)
+tile.labyrinth_portal_red.name=Labyrinth Portal (Middle)
+tile.labyrinth_lamp_green.name=Labyrinth Lamp
+tile.labyrinth_glass_green.name=Labyrinth Glass
+tile.labyrinth_floor_purple.name=Labyrinth Floor
+tile.labyrinth_metal_purple.name=Labyrinth Metal
+
+tile.spawner_oribter.name=Orbiter Spawner
+tile.spawner_nat.name=Nat Spawner
+tile.spawner_sentry.name=Sentry Spawner
+tile.spawner_lurcher.name=Lurcher Spawner
+tile.spawner_dusker.name=Dusker Spawner
+tile.spawner_tentaclon.name=Tentaclon Spawner
+tile.spawner_fungfly.name=Fungfly Spawner
+tile.spawner_mushmerra.name=Mushmerra Spawner
+tile.spawner_shroomite.name=Shroomite Spawner
+
+tile.synchronite_ore.name=Synchronite Ore
+tile.synchronite_signal.name=Synchronite Signal
+
+tile.monomer_deposit.name=Monomer Deposit
+tile.monomer_cube.name=Monomer Cube
+tile.polymerization_device.name=Polymerization Device
+tile.battle_snake.name=Battle Snake
+tile.battle_snake_head.name=Battle Snake Head
+tile.battle_snake_powerup.name=Battle Snake Powerup
+tile.snake_guide_left.name=Snake Guide (Left)
+tile.snake_guide_right.name=Snake Guide (Right)
+tile.fungal_blockage.name=Fungal Blockage
+tile.forgeshroom_purple.name=Forgeshroom
+tile.forgeshroom_green.name=Forgeshroom
+tile.forgeshroom_red.name=Forgeshroom
+tile.forgeshroom_blue.name=Forgeshroom
+tile.forgeshroom_yellow.name=Forgeshroom
+tile.forgeshroom_stem.name=Forgeshroom Stem
+
+tile.navigation_nodule.name=Navigation Nodule
+tile.navigation_device.name=Navigation Device
+tile.void_flower.name=Void Flower
+tile.leaves_celestial_purple.name=Celestial Leaves
+tile.logs_celestial_purple.name=Celestial Logs
+tile.ancient_symbol.name=Ancient Symbol
+tile.ancient_symbol_interpreter.name=Ancient Symbol Interpreter
+
+tile.igneous_pearl_ore.name=Igneous Pearl Ore
+tile.timeline_stabilizer_console.name=Timeline Stabilizer Console
+tile.timeline_stabilizer_arrow.name=Timeline Stabilizer Arrow
+tile.timeline_stabilizer_portal.name=Timeline Stabilizer Portal
+tile.timeline_stabilizer_goal.name=Timeline Stabilizer Goal
+tile.timeline_stabilizer_capsule.name=Timeline Stabilizer Capsule
+tile.terror_glow.name=Terrorglow
+tile.light_bridge.name=Light Bridge
+tile.crystal_deposit.name=Crystal Deposit
+tile.rhythm_game.name=Space-Time Synchronizer
+tile.rhythm_button.name=Synchronizer Button
+tile.rhythm_tile.name=Synchronizer Tile
+tile.target.name=Contest Target
+tile.cell_container_3.name=Power Cell Container (3)
+tile.cell_container_5.name=Power Cell Container (5)
+tile.cell_container_7.name=Power Cell Container (7)
+tile.cell_container_9.name=Power Cell Container (9)
+tile.cell_game.name=Power Condenser
+tile.main_power_terminal.name=Main Power Terminal
+tile.power_generator.name=Power Generator
+tile.logs_nitro.name=Nitro Logs
+tile.leaves_nitro.name=Nitro Leaves
+tile.pipe_cross.name=Cross Pipe
+tile.pipe_elbow.name=Elbow Pipe
+tile.pipe_t.name=T-Section Pipe
+tile.pipe_l.name=Line Pipe
+tile.pipe_cross_lit.name=Cross Pipe Lit
+tile.pipe_elbow_lit.name=Elbow Pipe Lit
+tile.pipe_t_lit.name=T-Section Pipe Lit
+tile.pipe_l_lit.name=Line Pipe Lit
+tile.pipe_none.name=Pipe None
+tile.pipe_game.name=Pipe System Terminal
+tile.rotatable_tile.name=Directional Tile
+tile.rotatable_tile_game.name=Redirection Chamber
+tile.leaves_darkborn.name=Darkborn Leaves
+tile.nicronium_infuser.name=Nicronium Infuser
+tile.portal_node.name=Portal Node
+tile.portal_nexus.name=Portal Nexus
+tile.light_emitter.name=Light Emitter
+tile.light_reflector.name=Light Reflector
+tile.light_receiver.name=Light Receiver
+tile.galaxy_gate.name=Galaxy Gate
+tile.row_slide_game.name=Astral Alignment Device
+tile.row_slide_tile.name=Astral Alignment Tile
+tile.row_slide_button.name=Astral Alignment Button
+tile.row_toggle_tile.name=Electrolytic Tile
+tile.row_toggle_button.name=Electrolysis Button
+tile.row_toggle_game.name=Electrolysis Chamber
+tile.galactic_challenge.name=Galactic Challenge Terminal
+
+tile.auradine_ore.name=Auradine Ore
+tile.phototenzyte_ore.name=Phototenzyte Ore
+tile.incandescite_ore.name=Incandescite Ore
+
+tile.lucient_ore.name=Lucient Ore
+tile.drill_shaft.name=Drill Shaft
+tile.drill_head.name=Drill Head
+tile.drill_beam.name=Drill Beam
+tile.rainfall_generator.name=Rainfall Generator
+tile.void_vacuum.name=Void Vacuum
+tile.equivine.name=Equivine
+tile.spawner_terrorfly.name=Terrorfly Spawner
+tile.strangleweed.name=Strangleweed
+tile.shiverglow.name=Shiverglow
+tile.acid_pocket.name=Acid Pocket
+tile.spawner_titanopod.name=Titanopod Spawner
+tile.spawner_flashfly.name=Flash Fly Spawner
+tile.spawner_snapper.name=Snapper Spawner
+tile.spawner_leer.name=Leer Spawner
+
+tile.blight_idol_summoner.name=Idol of the Blight
+tile.weaver_web.name=Weaver Web
+tile.blight_eye.name=Blight Eye Battery
+tile.blight_eye_empty.name=Blighted Eye Socket
+tile.blight_mouth.name=Mouth of the Blight
+
+tile.alignment_tile.name=Alignment Tile
+tile.alignment_dial_game.name=Alignment Dial Game
+
+tile.gloominessence_ore.name=Gloominessence Ore
+tile.gloominessence_ore_empty.name=Gloominessence Ore
+
+tile.serpentine_ore.name=Serpentine Ore
+
+tile.containment_gate.name=Containment Gate
+tile.archlumio_gate_pass.name=Disabled Gate
+
+tile.mutant_bloom.name=Mutant Bloom
+tile.leaves_archlum.name=Archlum Leaves
+tile.logs_archlum.name=Archlum Logs
+tile.viral_growth.name=Viral Growth
+
+tile.chip_formatter.name=Chip Formatter
+tile.chip_formatter_power.name=Chip Formatter (Power)
+tile.factory_lantern.name=Factory Lantern
+tile.factory_chain.name=Factory Chain
+tile.factory_platform_half.name=Factory Platform
+tile.factory_platform_double.name=Factory Platform
+tile.factory_crate.name=Factory Crate
+
+tile.circuit_calibrator.name=Circuit Calibrator
+tile.circuit_monitor.name=Circuit Monitor
+tile.hivenite_ore.name=Hivenite
+tile.hivenite_empty.name=Hivenite (Dug Out)
+tile.bee_hive.name=Bee Hive
+tile.honey_gel_empty.name=Honey Gel (Dug Out)
+tile.honey_gel.name=Honey Gel
+
+tile.factory_floor.name=Factory Floor
+tile.factory_scaffold.name=Factory Scaffold
+
+tile.striped_steel_yellow.name=Striped Steel
+tile.neosteel_power_beam.name=Neosteel Power Beam
+tile.cellular_ore.name=Cellular Ore
+
+tile.champion_strobe_sync1.name=Champion Strobe (Sync 1)
+tile.champion_strobe_sync2.name=Champion Strobe (Sync 2)
+tile.champion_strobe_sync3.name=Champion Strobe (Sync 3)
+tile.champion_strobe_sync4.name=Champion Strobe (Sync 4)
+tile.champion_strobe_sync5.name=Champion Strobe (Sync 5)
+
+tile.slide_puzzle_alien_0.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_1.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_2.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_3.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_4.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_5.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_6.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_7.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_8.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_9.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_10.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_11.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_12.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_13.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_14.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_15.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_16.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_17.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_18.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_19.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_20.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_21.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_22.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_23.name=Alien Puzzle Slide
+tile.slide_puzzle_alien_24.name=Alien Puzzle Slide
+
+tile.blightvine_root.name=Blightvine Root
+tile.archvine_root.name=Archvine Root
+
+tile.killer_vine.name=Killer Vine
+tile.fish_chow.name=Fish Chow
+tile.blightgrass.name=Blightgrass
+tile.blightvine.name=Blightvine
+tile.blightlumgrass.name=Blighted Lumgrass
+tile.archbloom_stem.name=Archbloom Stem
+tile.blightbloom_stem.name=Blightbloom Stem
+tile.archbloom.name=Archbloom
+tile.blightbloom.name=Blightbloom
+tile.logs_archlum_wrapped.name=Archlum Logs (Wrapped)
+
+tile.blightlumio_rock.name=Archlumio Rock (Blighted)
+tile.blightcubes.name=Lumcubes (Blighted)
+tile.lumcubes.name=Lumcubes
+tile.logs_archblighted.name=Archlum Logs (Blighted)
+
+tile.parkour_platform.name=Parkour Platform
+tile.parkour_platform_slippery.name=Parkour Platform
+tile.bombers_powerup_size.name=Bombers Powerup (Size)
+tile.bombers_powerup_speed.name=Bombers Powerup (Speed)
+tile.bombers_powerup_shield.name=Bombers Powerup (Shield)
+tile.bombers_powerup_cooldown.name=Bombers Powerup (Cooldown)
+tile.bombers_powerup_closed.name=Bombers Powerup (Closed)
+
+tile.screen_battlesnakes.name=Battle Snakes Screen
+tile.champion_carpet_battlesnakes.name=Champion Carpet
+tile.champion_carpet_battlesnakes_cut.name=Champion Carpet
+
+tile.gearbox.name=Gearbox
+tile.combustion_engine.name=Combustion Engine
+tile.grinder.name=Grinder
+tile.seperated_matter.name=Seperated Matter
+tile.screen_duel.name=Duel Arena Screen
+tile.champion_launcher.name=Champion Launcher
+tile.champion_fountain_trap.name=Champion Fountain Trap
+tile.champion_heat_trap.name=Champion Heat Trap
+tile.champion_carpet_duel.name=Champion Carpet
+tile.champion_carpet_duel_cut.name=Champion Carpet
+
+tile.champion_carpet_lightbridge.name=Champion Carpet
+tile.champion_carpet_lightbridge_cut.name=Champion Carpet
+tile.screen_lightbridge.name=The Lightbridge Screen
+
+tile.power_collider.name=Power Collider
+tile.power_collider_track.name=Power Collider Track
+tile.snarlvine.name=Snarlvine
+tile.leaves_snarl.name=Snarlleaves
+tile.champion_carpet_laserwarz.name=Champion Carpet
+tile.champion_carpet_laserwarz_cut.name=Champion Carpet
+tile.screen_laserwarz.name=Laser Warz Screen
+tile.catatonite_ore.name=Catatonite ore
+tile.neon_bricks_red.name=Neon Bricks
+tile.neon_bricks_purple.name=Neon Bricks
+tile.neon_bricks_pink.name=Neon Bricks
+tile.neon_bricks_blue.name=Neon Bricks
+tile.neon_bricks_aqua.name=Neon Bricks
+tile.neon_bricks_orange.name=Neon Bricks
+tile.neon_bricks_green.name=Neon Bricks
+tile.neon_bricks_yellow.name=Neon Bricks
+
+tile.rift_entangled_tile.name=Rift Entangled Tile
+tile.screen_bombers.name=Bombers Screen
+tile.champion_carpet_bombers_cut.name=Champion Carpet
+tile.champion_carpet_bombers.name=Champion Carpet
+
+tile.ring_game.name=Wire Threader
+tile.ring_tile.name=Power Tile
+tile.ring_slide_button.name=Energy Transference Button
+tile.screen_targets.name=Target Time Screen
+tile.champion_carpet_targets_cut.name=Champion Carpet
+tile.champion_carpet_targets.name=Champion Carpet
+tile.row_increment_button.name=Photon Alignment Button
+tile.row_increment_game.name=Photon Chamber
+tile.row_increment_tile.name=Photon Container
+
+tile.bomber_wall_hard.name=Bomber Wall (Hard)
+tile.bomber_wall_soft.name=Bomber Wall (Soft)
+tile.bomber_wall_floor.name=Bomber Floor
+
+tile.emberleaf.name=Emberleaf
+tile.sunderwood_sap.name=Sunder Sap Deposit
+tile.sunderwood_sap_empty.name=Empty Sunder Sap Deposit
+
+tile.prismosis_ore.name=Prismosis Ore
+tile.light_tile_dark.name=Light Tile
+tile.light_tile_lit.name=Light Tile
+tile.high_powered_charger.name=High Powered Charger
+tile.light_tile_randomizer.name=Light Tile Randomizer
+
+tile.fossil_combiner.name=Fossil Combiner
+tile.light_switch_on.name=Light Switch
+tile.light_switch_off.name=Light Switch
+
+tile.light_switch_game.name=Light Switch Game
+tile.switchable_light_on.name=Switchable Light
+tile.switchable_light_off.name=Switchable Light
+
+tile.tentacle_eye_empty_pink.name=Pink Tentacle Eye Empty
+tile.tentacle_eye_empty_blue.name=Blue Tentacle Eye Empty
+tile.tentacle_eye_empty_purple.name=Purple Tentacle Eye Empty
+
+tile.myrite_ore.name=Myrite Ore
+tile.myrite_ore_dark.name=Myrite Ore (Dark)
+
+tile.dimensionalizer.name=Dimensionalizer
+tile.power_connector.name=Power Connector
+
+tile.item_challenge_blank.name=Item Supply Challenge
+tile.item_challenge_collector.name=Item Supply Challenge
+tile.item_challenge_crate.name=Item Crate
+tile.item_challenge_tongue.name=Item Supply Challenge
+tile.item_challenge_feather.name=Item Supply Challenge
+tile.item_challenge_eye.name=Item Supply Challenge
+tile.item_challenge_nightmare.name=Item Supply Challenge
+tile.item_challenge_sticky.name=Item Supply Challenge
+tile.item_challenge_gloop.name=Item Supply Challenge
+tile.item_challenge_bulb.name=Item Supply Challenge
+tile.item_challenge_branch.name=Item Supply Challenge
+tile.item_challenge_shadhide.name=Item Supply Challenge
+tile.item_challenge_heavycrys.name=Item Supply Challenge
+tile.item_challenge_dusker.name=Item Supply Challenge
+tile.item_challenge_explosac.name=Item Supply Challenge
+tile.item_challenge_bone.name=Item Supply Challenge
+tile.item_challenge_magstone.name=Item Supply Challenge
+tile.item_challenge_slime.name=Item Supply Challenge
+tile.item_challenge_reflective.name=Item Supply Challenge
+tile.item_challenge_spine.name=Item Supply Challenge
+tile.item_challenge_fangs.name=Item Supply Challenge
+tile.item_challenge_polar.name=Item Supply Challenge
+tile.item_challenge_fuse.name=Item Supply Challenge
+
+tile.drill_control.name=Drill Control
+tile.drill_console.name=Drill Console
+tile.nightvines.name=Nightvines
+tile.nightvines_flower.name=Nightvines (Flower)
+
+tile.block_track.name=Block Track
+tile.block_trigger_creeper.name=Block Trigger
+tile.block_trigger_skeleton.name=Block Trigger
+tile.block_trigger_stray.name=Block Trigger
+tile.block_trigger_piglin.name=Block Trigger
+tile.block_trigger_enderman.name=Block Trigger
+tile.block_trigger_spider.name=Block Trigger
+tile.block_trigger_blaze.name=Block Trigger
+tile.block_trigger_dimtrader.name=Block Trigger
+tile.block_trigger_mystery.name=Block Trigger
+tile.block_trigger_ingot.name=Block Trigger
+
+tile.block_track_used.name=Used Block Track
+tile.block_track_win.name=Block Track Goal
+
+tile.guide_block.name=Guide Block
+tile.guide_start.name=Guide Start
+tile.guide_button.name=Guide Button
+tile.track_wall.name=Track Wall
+
+tile.celestial_armor_pink.name=Celestial Armor
+tile.celestial_trim_pink.name=Celestial Armor Trim
+tile.celestial_outer_navy.name=Celestial Outer Body
+tile.celestial_core_blue.name=Celestial Core
+tile.celestial_body_blue.name=Celestial Body
+tile.celestial_eye_pink.name=Celestial Eye
+
+tile.lab_game_starter_orange.name=Labyrinth Game
+
+tile.omni_power_block.name=Omni Power Block
+
+tile.leaves_blight.name=Blighted Leaves
+tile.leaves_radiant.name=Radiant Leaves
+tile.blightstocks.name=Blightstocks
+tile.blightstocks_top.name=Blightstocks Spores
+
+tile.lumio_idol_summoner.name=Idol of Luminescence
+tile.augmenticon_creator.name=Augmenticon Creator
+tile.trialgate.name=Trial Gate
+tile.lumgrass.name=Lumgrass
+tile.archlumgrass.name=Archlumgrass
+tile.lumio_rock.name=Lumio Rock
+tile.lumilight.name=Lumilight
+tile.lumglow.name=Lumglow
+tile.skyloom.name=Skyloom
+tile.embergrass.name=Embergrass
+
+tile.archlumio_rock.name=ArchLumio Rock
+tile.archlumilight.name=ArchLumilight
+
+tile.archgrass.name=Archgrass
+tile.archvine.name=Archvine
+
+tile.clovinite_ore.name=Clovinite Ore
+tile.labyrinth_metal_red.name=Labyrinth Metal
+tile.labyrinth_lamp_blue.name=Labyrinth Lamp
+tile.labyrinth_floor_red.name=Labyrinth Floor
+
+tile.hyper_melder_powered.name=Hyper Melder
+tile.hyper_generator_powered.name=Hyper Generator
+tile.hyper_melder_unpowered.name=Hyper Melder
+tile.hyper_generator_unpowered.name=Hyper Generator
+
+tile.lumio_ore.name=Luminescent Ore
+tile.lumio_ore_empty.name=Luminescent Ore
+
+tile.archlumio_gate.name=Gate of Arch Luminescence
+
+tile.galaxy_spore_blue.name=Galaxy Vine Spore
+tile.galaxy_vine_blue.name=Galaxy Vine
+
+tile.galaxy_spore_pink.name=Galaxy Vine Spore
+tile.galaxy_vine_pink.name=Galaxy Vine
+
+tile.galaxy_spore_yellow.name=Galaxy Vine Spore
+tile.galaxy_vine_yellow.name=Galaxy Vine
+
+tile.galaxy_spore_green.name=Galaxy Vine Spore
+tile.galaxy_vine_green.name=Galaxy Vine
+
+tile.security_gate_1.name=Security Clearance Gate (Level 1)
+tile.security_gate_2.name=Security Clearance Gate (Level 2)
+tile.security_gate_3.name=Security Clearance Gate (Level 3)
+tile.security_gate_4.name=Security Clearance Gate (Level 4)
+tile.security_gate_5.name=Security Clearance Gate (Level 5)
+tile.security_gate_6.name=Security Clearance Gate (Level 6)
+
+tile.galaxy_portal_home.name=Galaxy Portal
+tile.galaxy_portal_manu.name=Galaxy Portal
+tile.galaxy_portal_lumin.name=Galaxy Portal
+tile.galaxy_portal_blight.name=Galaxy Portal
+tile.galaxy_portal_molten.name=Galaxy Portal
+
+tile.neo_laserfield_1.name=Neo-Laser-Field (Level 1)
+tile.neo_laserfield_2.name=Neo-Laser-Field (Level 2)
+tile.neo_laserfield_3.name=Neo-Laser-Field (Level 3)
+tile.neo_laserfield_4.name=Neo-Laser-Field (Level 4)
+tile.neo_laserfield_5.name=Neo-Laser-Field (Level 5)
+
+tile.atomite_ore.name=Atomite Ore
+tile.astrorock_crystal_pink.name=Astrorock Crystal (Pink)
+tile.astrorock_crystal_blue.name=Astrorock Crystal (Blue)
+tile.tentacle_blue.name=Blue Tentacle
+tile.tentacle_purple.name=Purple Tentacle
+tile.tentacle_pink.name=Pink Tentacle
+tile.tentacle_blue_eye.name=Blue Tentacle Eye
+tile.tentacle_pink_eye.name=Pink Tentacle Eye
+tile.tentacle_purple_eye.name=Purple Tentacle Eye
+tile.watcherweeds.name=Watcherweeds
+tile.watcherweeds_top.name=Watcherweeds Top
+tile.blisterbulb.name=Blisterbulb
+tile.doomglow.name=Doomglow
+tile.spawner_crawker.name=Crawker Spawner
+tile.spawner_rockslug.name=Rockslug Spawner
+tile.spawner_giant_rockslug.name=Giant Rockslug Spawner
+tile.spawner_nightshyre.name=Nightshyre Spawner
+tile.spawner_glomite.name=Glomite Spawner
+tile.spawner_giantflapper.name=Giant Flapper Spawner
+tile.crystal_lily.name=Crystal Lily
+tile.spawner_giantfyreweed.name=Giant Fyreweed Spawner
+tile.spawner_tetherbug.name=Tetherbug Spawner
+
+tile.present.name=Neatly Wrapped Present
+tile.meta_materializer.name=Meta Materializer
+tile.spawner_weaver.name=Weaver Spawner
+tile.spawner_vilebulb.name=Vilebulb Spawner
+tile.spawner_sightwalker.name=Sightwalker Spawner
+tile.spawner_grubber.name=Grubber Spawner
+tile.spawner_blisterweed.name=Blisterweed Spawner
+tile.spawner_doomdog.name=Doomdog Spawner
+
+tile.murksoil.name=Murksoil
+tile.murkdirt.name=Murkdirt
+tile.murkstone.name=Murkstone
+tile.logs_murk.name=Murklogs
+tile.leaves_murk.name=Murkleaves
+tile.murkglass.name=Murkglass
+
+tile.murkice.name=Murk Ice
+tile.murkcore.name=Murkcore
+tile.murkplanks.name=Murkplanks
+tile.murkbricks.name=Murkbricks
+tile.igneous_murkstone.name=Igneous Murkstone
+tile.glowing_igneous_murkstone.name=Igneous Murkstone
+
+tile.multiversite_murk.name=Multiversite Ore
+tile.multiversite_overworld.name=Multiversite Ore
+
+tile.murkbrick_stairs.name=Murkbrick Stairs
+tile.murkplank_stairs.name=Murkplank Stairs
+
+tile.murkplank_half.name=Murkplank Slab
+tile.murkbrick_half.name=Murkbrick Slab
+
+tile.leaves_rebirth.name=Leaves of Rebirth
+tile.emberslag_deposit.name=Emberslag Deposit
+tile.emberslag.name=Emberslag
+tile.darksteel_ore.name=Darksteel Ore
+tile.fabric_reformulator.name=Fabric Reformulator
+tile.exothermite_ore.name=Exothermite Ore
+
+tile.spawner_vectosect.name=Vectosect Spawner
+tile.spawner_stickler.name=Stickler Spawner
+tile.spawner_ravager.name=Ravager Spawner
+
+tile.spawner_gorger.name=Gorger Spawner
+tile.spawner_doublejaw.name=Doublejaw Spawner
+tile.spawner_minimite.name=Minimite Spawner
+tile.spawner_drippler.name=Drippler Spawner
+tile.spawner_clusterweed.name=Clusterweed Spawner
+tile.spawner_wisp.name=Wisp Spawner
+tile.spawner_crusher.name=Crusher Spawner
+
+tile.inkable_floor.name=Inkable Floor
+tile.leaves_metalloid.name=Metalloid Leaves
+tile.logs_metalloid.name=Metalloid Logs
+
+tile.astrorock_hardened.name=Hardened Astrorock
+tile.cavecrystal_red.name=Red Cave Crystal
+
+tile.ion_bomb.name=Ion Bomb
+tile.gloglobes.name=Gloglobes
+
+tile.crystallized_soil_powered.name=Crystallized Soil
+tile.crystallized_soil_unpowered.name=Crystallized Soil (Unpowered)
+
+tile.spawner_globro.name=Globro Spawner
+tile.spawner_globoon.name=Globoon Spawner
+tile.spawner_glangler.name=Glangler Spawner
+tile.spawner_glochipper.name=Glochipper Spawner
+
+tile.spawner_gloopmother.name=Gloop Mother Spawner
+tile.spawner_cyclos.name=Cyclos Spawner
+tile.spawner_clinger.name=Clinger Spawner
+
+tile.labyrinth_geolocator_core.name=Geolocator Core
+tile.labyrinth_geolocator_blue.name=Geolocator
+tile.labyrinth_geolocator_red.name=Geolocator
+tile.labyrinth_geolocator_green.name=Geolocator
+tile.labyrinth_geolocator_yellow.name=Geolocator
+
+tile.labyrinth_charger_core.name=Starcrystal Core
+tile.labyrinth_eternal_core.name=Emberstar Core
+tile.labyrinth_charger_lit.name=Starfuel Charger
+tile.labyrinth_charger_unpowered.name=Starfuel Charger
+
+tile.sky_striker.name=Sky Striker
+tile.tether_creator.name=Tether Creator
+tile.item_ripper.name=Item Ripper
+
+tile.blazing_dahila_top.name=Blazing Dahila
+tile.blazing_dahila_stem.name=Blazing Dahila
+
+tile.astromolt.name=Astromolt
+tile.astromolt_bubble.name=Astromolt (Bubble)
+
+tile.neocraft_green.name=Neocraft
+tile.neocraft_pink.name=Neocraft
+tile.neocraft_yellow.name=Neocraft
+tile.neocraft_orange.name=Neocraft
+tile.neocraft_blue.name=Neocraft
+tile.neocraft_unpowered.name=Neocraft
+
+tile.neocraft_goal_empty.name=Neocraft
+tile.neocraft_goal_green.name=Neocraft
+tile.neocraft_goal_blue.name=Neocraft
+tile.neocraft_goal_yellow.name=Neocraft
+tile.neocraft_goal_pink.name=Neocraft
+tile.neocraft_goal_orange.name=Neocraft
+
+tile.arena_brick_blue.name=Arena Bricks
+tile.arena_brick_red.name=Arena Bricks
+tile.arena_brick_yellow.name=Arena Bricks
+tile.arena_brick_black.name=Arena Bricks
+
+tile.arena_brick_blue_stairs.name=Arena Brick Stairs
+tile.arena_brick_red_stairs.name=Arena Brick Stairs
+tile.arena_brick_yellow_stairs.name=Arena Brick Stairs
+tile.arena_brick_black_stairs.name=Arena Brick Stairs
+
+tile.arena_pillar_blue.name=Arena Pillar
+tile.arena_pillar_sea.name=Arena Pillar
+tile.arena_pillar_yellow.name=Arena Pillar
+
+tile.arena_slabs_blue.name=Arena Slabs
+tile.arena_slabs_sea.name=Arena Slabs
+
+tile.arena_ani_slabs_blue.name=Arena Slabs (Animated)
+tile.arena_ani_slabs_sea.name=Arena Slabs (Animated)
+
+tile.arena_glass_orange.name=Arena Glass
+tile.arena_glass_yellow.name=Arena Glass
+tile.arena_glass_sea.name=Arena Glass
+
+tile.arena_lamp_blue.name=Arena Lamp
+tile.arena_lamp_sea.name=Arena Lamp
+
+tile.arena_lamprazor_blue.name=Arena Razor Lamp
+tile.arena_lamprazor_red.name=Arena Razor Lamp
+tile.arena_lamprazor_yellow.name=Arena Razor Lamp
+
+tile.arena_glass_blue.name=Arena Glass
+
+tile.celestial_outer_maroon.name=Celestial (Outer) Body
+tile.celestial_outer_purple.name=Celestial (Outer) Body
+tile.celestial_outer_blue.name=Celestial (Outer) Body
+
+tile.celestial_body_red.name=Celestial Body
+tile.celestial_body_violet.name=Celestial Body
+tile.celestial_body_yellow.name=Celestial Body
+
+tile.celestial_core_orange.name=Celestial (Core) Body
+tile.celestial_core_green.name=Celestial (Core) Body
+tile.celestial_core_Yellow.name=Celestial (Core) Body
+
+tile.celestial_eye_yellow.name=Celestial Eye
+tile.celestial_eye_lime.name=Celestial Eye
+tile.celestial_eye_blue.name=Celestial Eye
+
+tile.celestial_armor_navy.name=Celestial Armor
+tile.celestial_trim_navy.name=Celestial Armor Trim
+
+tile.celestial_armor_purple.name=Celestial Armor
+tile.celestial_trim_purple.name=Celestial Armor Trim
+
+tile.celestial_armor_teal.name=Celestial Armor
+tile.celestial_trim_teal.name=Celestial Armor Trim
+
+tile.deviation_field.name=Deviation Field
+tile.arena_barrier.name=Arena Barrier
+tile.arena_summoner.name=Arena Teleporter
+tile.arena_steel_black.name=Arena Steel
+tile.arena_steel_blue.name=Arena Steel
+tile.arena_lamp_dark.name=Arena Lamp
+tile.celestial_barrier.name=Celestial Barrier
+
+tile.power_key_block.name=Power Key Block
+tile.astrorock_glass.name=Astroglass
+
+
+tile.spawner_lab_wizard.name=Labyrinth (Wiz) Spawner
+tile.spawner_lab_warrior.name=Labyrinth (War) Spawner
+
+tile.neocrafting_station.name=Neocrafting Station
+tile.arena_lamp_red.name=Arena Lamp
+tile.lab_game_blue.name=Labyrinth Game
+tile.lab_game_yellow.name=Labyrinth Game
+tile.lab_game_purple.name=Labyrinth Game
+tile.lab_gate.name=Labyrinth Gateway
+tile.lab_relocator.name=Labyrinth Teleporter
+
+tile.depleted_ore.name=Depleted Ore
+tile.emberium_ore.name=Emberium Ore
+tile.hextorium_ore.name=Hextorium Ore
+tile.crystonium_ore.name=Crystonium Ore
+tile.astrallium_ore.name=Astrallium Ore
+tile.kylaxium_ore.name=Kylaxium Ore
+tile.vellorium_ore.name=Vellorium Ore
+tile.incadium_ore.name=Incadium Ore
+tile.noxerium_ore.name=Noxerium Ore
+tile.olysium_ore.name=Olysium Ore
+tile.detherium_ore.name=Detherium Ore
+tile.xerovium_ore.name=Xerovium Ore
+tile.phytrosium_ore.name=Phytrosium Ore
+
+tile.acidbulbs.name=Acid Bulbs
+tile.acidbulbs_stem.name=Acid Bulbs Stem
+tile.firelilly.name=Fire Lilly
+tile.cavevine.name=Cave Vine
+tile.deviant_weeds.name=Deviant Weeds
+tile.glowingweeds.name=Glowing Weeds
+tile.rockweeds.name=Rock Weeds
+tile.crystalblossoms.name=Crystal Blossoms
+tile.crystalblossoms_stem.name=Crystal Blossoms Stem
+
+tile.labyrinth_floor.name=Labyrinth Floor
+tile.labyrinth_glass_blue.name=Labyrinth Glass (Blue)
+tile.labyrinth_glass_red.name=Labyrinth Glass (Red)
+tile.labyrinth_lamp.name=Labyrinth Lamp
+tile.labyrinth_metal_blue.name=Labyrinth Metal (Blue)
+tile.labyrinth_metal_black.name=Labyrinth Metal (Black)
+
+tile.fabrication_battery.name=Fabrication Battery
+tile.modulation_battery.name=Modulation Battery
+tile.unpowered_fabrication_battery.name=Fabrication Battery
+tile.unpowered_modulation_battery.name=Modulation Battery
+
+tile.cavecrystal_blue.name=Blue Cave Crystal
+tile.cavecrystal_pink.name=Pink Cave Crystal
+tile.pyrevines.name=Pyrevines
+tile.starforge_mineralinput.name=Starforge Mineral Input
+tile.starforge_declogger.name=Starforge Declogger
+tile.fabrication_table.name=Fabrication Table
+tile.modulator.name=Modulator
+tile.compressiontable.name=Compression Table
+tile.pickchargingtable.name=Pickaxe Charging Table
+
+tile.augmentor.name=Augmentor
+
+tile.power_nodule.name=Power Nodule
+tile.power_conduit.name=Power Conduit
+tile.forgerock.name=Forgerock
+tile.forge_stalactite.name=Forge Stalactite
+
+tile.logs_celestial.name=Celestial Logs
+tile.logs_celestial_red.name=Celestial Logs
+tile.leaves_celestial_blue.name=Celestial Leaves
+tile.leaves_celestial_sea.name=Celestial Leaves
+tile.leaves_celestial_red.name=Celestial Leaves
+
+tile.astrorock.name=Astrorock
+tile.astrosteel.name=Astrosteel
+
+tile.astrorock_blue.name=Astrorock
+tile.astrorock_green.name=Astrorock
+tile.astrorock_yellow.name=Astrorock
+tile.astrorock_purple.name=Astrorock
+
+tile.astrobarrier_blue.name=Astrobarrier
+tile.astrobarrier_green.name=Astrobarrier
+tile.astrobarrier_yellow.name=Astrobarrier
+tile.astrobarrier_purple.name=Astrobarrier
+
+tile.treadmill_track.name=Treadmill Track
+tile.spawner_galaxy_beast.name=Galaxy Beast Spawner
+tile.spawner_galaxy_gladiator.name=Galaxy Gladiator Spawner
+tile.spawner_galaxy_sorcerer.name=Galaxy Sorcerer Spawner
+tile.spawner_galaxy_gulper.name=Galaxy Gulper Spawner
+
+tile.spawner_rockworm.name=Rock Worm Spawner
+tile.spawner_chomper.name=Chomper Spawner
+tile.spawner_eye_slug.name=Eye Slug Spawner
+tile.spawner_flutterfyre.name=Flutterfyre Spawner
+tile.spawner_flutterbee.name=Flutterbee Spawner
+tile.spawner_gnawer.name=Gnawer Spawner
+tile.spawner_gravhead.name=Gravhead Spawner
+tile.spawner_hanger.name=Hanger Spawner
+tile.spawner_hypnosaur.name=Hypnosaur Spawner
+tile.spawner_reflectal.name=Reflectal Spawner
+tile.spawner_ribrex.name=Ribrex Spawner
+tile.spawner_rockpest.name=Rockpest Spawner
+tile.spawner_screacher.name=Screacher Spawner
+tile.spawner_spinovern.name=Spinovern Spawner
+tile.spawner_clyster.name=Clyster Spawner
+tile.spawner_grappler.name=Grappler Spawner
+tile.spawner_spyker.name=Spyker Spawner
+tile.spawner_explosect.name=Explosect Spawner
+tile.spawner_fyreweed.name=Fyreweed Spawner
+tile.spawner_shimmer.name=Shimmer Spawner
+tile.spawner_flapper.name=Flapper Spawner
+tile.spawner_hurler.name=Hurler Spawner
+tile.spawner_flurky.name=Flurky Spawner
+tile.spawner_phaser.name=Phaser Spawner
+tile.spawner_acidback.name=Acidback Spawner
+
+
+tile.launch_pad.name=Launch Pad
+tile.launch_pad_unpowered.name=Unpowered Launch Pad
+tile.launch_core.name=Launch Core
+
+tile.launch_coordinator_empty.name=Launch Coordinator
+
+tile.launch_coordinator_blue_1.name=Launch Coordinator
+tile.launch_coordinator_blue_3.name=Launch Coordinator
+tile.launch_coordinator_blue_4.name=Launch Coordinator
+tile.launch_coordinator_blue_5.name=Launch Coordinator
+
+tile.launch_coordinator_purple_1.name=Launch Coordinator
+tile.launch_coordinator_purple_3.name=Launch Coordinator
+tile.launch_coordinator_purple_4.name=Launch Coordinator
+tile.launch_coordinator_purple_5.name=Launch Coordinator
+
+tile.launch_coordinator_green_1.name=Launch Coordinator
+tile.launch_coordinator_green_3.name=Launch Coordinator
+tile.launch_coordinator_green_4.name=Launch Coordinator
+tile.launch_coordinator_green_5.name=Launch Coordinator
+
+tile.launch_coordinator_red_1.name=Launch Coordinator
+tile.launch_coordinator_red_3.name=Launch Coordinator
+tile.launch_coordinator_red_4.name=Launch Coordinator
+tile.launch_coordinator_red_5.name=Launch Coordinator
+
+tile.champion_carpet_holodeck.name=Champion's Carpet
+tile.champion_carpet_cut.name=Champion's Carpet
+tile.champion_carpet_waitingzone.name=Champion's Carpet
+tile.champion_steel.name=Champion's Steel
+tile.champion_steel_floor.name=Champion's Steel
+tile.champion_wall.name=Champion's Wall
+tile.champion_steel_beam.name=Champion's Steel
+tile.champion_steel_wiring.name=Champion's Steel
+tile.champion_glass.name=Champion's Glass
+tile.champion_glass_dark.name=Champion's Glass (Dark)
+tile.champion_light.name=Champion's Light
+tile.champion_bay.name=Champion's Bay
+tile.champion_reinforcement.name=Champion's Reinforcement
+tile.champion_gate.name=Champion's Gate
+
+tile.champion_dungeon_brick.name=Champion's Dungeon Brick
+tile.champion_dungeon_plating.name=Champion's Dungeon Plating
+tile.champion_dungeon_window.name=Champion's Dungeon Window
+tile.champion_dungeon_selector.name=Champion's Dungeon Selector
+tile.champion_carpet_hunters.name=Champion's Carpet
+
+tile.champion_steel_stairs.name=Champion's Steel Stairs
+
+tile.champion_platform.name=Champion's Platform
+tile.champion_temperedglass.name=Tempered Glass
+
+tile.champion_platform_highlighted.name=Champion's Platform
+tile.champion_temperedglass_highlighted.name=Tempered Glass
+
+tile.champion_carpet_holodeck_cut.name=Champion's Carpet
+tile.champion_carpet_hunters_cut.name=Champion's Carpet
+tile.champion_carpet_redlight_cut.name=Champion's Carpet
+
+tile.champion_carpet_redlight.name=Champion's Carpet
+tile.champion_dungeon_box.name=Champion Dungeon Box
+tile.champion_bay_light.name=Champion Bay Light
+
+tile.champion_signal_green.name=Champion Signal
+tile.champion_signal_red.name=Champion Signal
+tile.champion_door_closed.name=Champion Door
+tile.champion_door_ajar.name=Champion Door
+tile.champion_door_open.name=Champion Door
+tile.champion_logo_gold.name=Champion Logo
+tile.champion_logo_purple.name=Champion Logo
+tile.champion_logo_core.name=Champion Logo
+tile.champion_eliminator.name=Champion Eliminator
+
+tile.screen_redlight.name=Redlight Greenbridge Screen
+tile.screen_lobbychanger.name=Lobby Change Screen
+
+tile.screen_hunterkiller.name=Hunters Screen
+tile.screen_holodeck.name=Holodeck Screen
+tile.screen_blackmarket.name=Black Market Screen
+tile.screen_archeologist.name=Archeologist Screen
+tile.screen_chemist.name=Chemist Screen
+
+tile.power_block_blue.name=Power Block
+tile.power_block_green.name=Power Block
+tile.power_block_yellow.name=Power Block
+tile.power_block_purple.name=Power Block
+
+tile.astrorock_lamp_blue.name=Astrorock Lamp
+tile.astrorock_lamp_green.name=Astrorock Lamp
+tile.astrorock_lamp_yellow.name=Astrorock Lamp
+tile.astrorock_lamp_purple.name=Astrorock Lamp
+
+tile.shockwave_generator.name=Shockwave Generator
+tile.range_module.name=Range Module Block
+tile.efficiency_module.name=Efficiency Module Block
+tile.power_module.name=Power Module Block
+tile.depth_module.name=Depth Module Block
+
+tile.galdungeonreward1.name=Dungeon Reward
+tile.galdungeonreward2.name=Dungeon Reward
+tile.galdungeonreward3.name=Dungeon Reward
+tile.galdungeonreward4.name=Dungeon Reward
+tile.galdungeontarget.name=Target
+
+tile.starblock.name=Starblock
+
+tile.slagdeposit.name=Slag Deposit
+tile.enghouled_astrorock.name=Enghouled Astrorock
+tile.neosteel.name=Neosteel
+tile.neosteel_black.name=Neosteel
+tile.neosteel_beam.name=Neosteel Beam
+tile.neosteel_stairs.name=Neosteel Stairs
+tile.sunderwood.name=Sunderwood
+tile.sunderwood_planks.name=Sunderwood Planks
+tile.sunderleaves.name=Sunderleaves
+tile.plasterglass.name=Plasterglass
+tile.forgefire_lantern.name=Forgefire Lantern
+tile.acid_lantern.name=Acid Lantern
+
+tile.astrorock_stairs.name=Astrorock Stairs
+tile.acidicgel.name=Acidic Gel
+
+tile.forgebloom.name=Forgebloom
+tile.withergrass.name=Withergrass
+tile.mossy_astrorock.name=Mossy Astrorock
+tile.astromud.name=Astromud
+
+tile.fossil_track.name=Fossil Track
+tile.whack_block_unpowered.name=Ion Battery (Off)
+tile.whack_block_lit.name=Ion Battery (Lit)
+tile.whack_game.name=Ion Convertor
+tile.sap_evaporator.name=Sap Evaporator
+tile.connect_block.name=Connect Block
+tile.connect_button.name=Connect Button
+tile.connect_block_yellow.name=Yellow Connect Block
+tile.connect_block_red.name=Red Connect Block
+tile.connect_game.name=Connect Game
+tile.chroma_tile.name=Chroma Tile
+tile.chroma_game.name=Chroma Game
+
+tile.welding_chamber.name=Welding Chamber
+tile.fusion_table.name=Fusion Table
+tile.micro_rocket.name=Micro Rocket
+tile.radion_ore.name=Radion Ore
+tile.radion_pillar.name=Radion Pillar
+tile.nebulous_beacon.name=Nebulous Beacon
+tile.sea_clay.name=Sea Clay
+tile.molded_sea_clay.name=Molded Sea Clay
+tile.nuclear_bomb.name=Nuclear Bomb
+
+tile.chemistry_table.name=Chemistry Table
+tile.tesla_tower.name=Tesla Tower
+tile.eternal_beacon.name=Eternal Beacon
+
+tile.shipment_filler.name=Shipment Filler
+
+tile.deconstructor.name=Infinity De-Constructor
+
+entity.lostinfinity.treadmillobstacle.name=Treadmill Obstacle
+entity.lostinfinity.treadmillobstaclejumpable.name=Treadmill Obstacle (Jumpable)
+entity.lostinfinity.fungfly.name=Fungfly
+entity.lostinfinity.jet_mount.name=Jet Pack
+entity.lostinfinity.sandattack.name=Sand Cube 
+entity.lostinfinity.course_ring.name=Course Ring
+entity.lostinfinity.nebulaspell.name=Nebulous Magic
+entity.lostinfinity.pearlcollector.name=Treasure Hunter (Pearls)
+entity.lostinfinity.plasmaslicer.name=Plasma Slicer
+entity.lostinfinity.avenger.name=The Avenger
+entity.lostinfinity.archeologist.name=Archeologist
+entity.lostinfinity.chemist.name=Chemist
+entity.lostinfinity.screamerblast.name=Scream Blast
+entity.lostinfinity.blightbomb.name=Blighted Bomb
+entity.lostinfinity.energyburst.name=Energy Burst
+entity.lostinfinity.ghostcopy.name=Ghost Copy
+entity.lostinfinity.multiverseghost.name=Multiversal Ghost
+entity.lostinfinity.risingphantom.name=Rising Phantom
+entity.lostinfinity.portaleffect.name=Portal
+entity.lostinfinity.bossportaleffect.name=Portal
+entity.lostinfinity.rhythmgamemerchant.name=Interdimensional Merchant
+entity.lostinfinity.cellgamemerchant.name=Interdimensional Merchant
+entity.lostinfinity.nitroexplosion.name=Nitro Explosion
+entity.lostinfinity.ultracrystalgel.name=Ultragrowth Crystal Gel
+entity.lostinfinity.particletrojan.name=Particle Trojan
+entity.lostinfinity.plasmaexplosion.name=Plasma Explosion
+entity.lostinfinity.lightpuzzlemerchant.name=Light Puzzle Merchant
+entity.lostinfinity.selectionlaser.name=Ray of Selection
+entity.lostinfinity.spikeball.name=Ball of Spikes
+entity.lostinfinity.exothermite.name=Exothermite
+entity.lostinfinity.deviantguardian.name=Deviant Guardian
+entity.lostinfinity.deviantwolf.name=Deviant Wolf
+entity.lostinfinity.deviantocelote.name=Deviant Ocelot
+entity.lostinfinity.galacticterror.name=Galactic Terror
+entity.lostinfinity.pickleman.name=Pickle Man
+entity.lostinfinity.strappedfirework.name=Explosive-Strapped Firework
+entity.lostinfinity.lurcher.name=Lurcher
+entity.lostinfinity.rift.name=Rift
+entity.lostinfinity.unstable_rift.name=Unstable Rift
+entity.lostinfinity.scorpwing.name=Scorpwing
+entity.lostinfinity.orbiter.name=Orbiter
+entity.lostinfinity.ballofquarks.name=Ball of Contained Quarks
+entity.lostinfinity.ballofgluons.name=Ball of Contained Gluons
+entity.lostinfinity.titanring.name=Titan Ring
+entity.lostinfinity.deviantfang.name=Deviant Evoker
+entity.lostinfinity.deviantevoker.name=Deviant Evoker
+entity.lostinfinity.deviantevokervex.name=Deviant Vex
+
+entity.lostinfinity.asteroid.name=Asteroid
+entity.lostinfinity.meteor.name=Meteor
+entity.lostinfinity.doomsday.name=Doomsday
+entity.lostinfinity.skyre.name=Skyre
+
+entity.lostinfinity.launched_knife.name=Launched Knife
+entity.lostinfinity.elementiumprime.name=Prime Elementium
+
+entity.lostinfinity.totemsplitter.name=World Splitter
+entity.lostinfinity.tentacletrap.name=Tentacle Trap
+
+entity.lostinfinity.torpedon.name=Torpedon
+entity.lostinfinity.whisper.name=Whisper
+entity.lostinfinity.caveterror.name=Cave Terror
+
+entity.lostinfinity.nat.name=Nat
+entity.lostinfinity.sentry.name=Sentry
+
+entity.lostinfinity.mortarcannon.name=Mortar Cannon
+entity.lostinfinity.clustercannon.name=Cluster Cannon
+
+entity.lostinfinity.zenon.name=Prime Deviant Zenon
+entity.lostinfinity.trident.name=Infinity Trident
+entity.lostinfinity.tridentmk2.name=Infinity Trident
+entity.lostinfinity.temptentacle.name=Temp Tentacle Boss
+entity.lostinfinity.arcblast.name=Arc Blast
+entity.lostinfinity.tekbullet.name=Tek Bullet
+entity.lostinfinity.forbiddenbrand.name=Forbidden Brand
+
+entity.lostinfinity.ionicchakram.name=Ionic Chakram
+entity.lostinfinity.minichakram.name=Ionic Chakram
+entity.lostinfinity.terrorfly.name=Terror Fly
+entity.lostinfinity.tentaclon.name=Tentaclon
+entity.lostinfinity.starblast.name=Star Blast
+entity.lostinfinity.doomblast.name=Doom Blast
+entity.lostinfinity.gravityecho.name=Echo of Gravity
+
+entity.lostinfinity.dodgeball.name=Dodgeball
+entity.lostinfinity.plasma_bomb.name=Plasma Bomb
+entity.lostinfinity.flashfly.name=Flash Fly
+entity.lostinfinity.titanopod.name=Titanopod
+entity.lostinfinity.snapper.name=Snapper
+entity.lostinfinity.leer.name=Leer
+entity.lostinfinity.deviantwitherskeleton.name=Deviant Wither Skeleton
+entity.lostinfinity.deviantsquid.name=Deviant Squid
+
+entity.lostinfinity.x_screacher.name=X-Screacher
+entity.lostinfinity.x_sonicattack.name=X-Screacher
+entity.lostinfinity.vilebulb.name=Vile Bulb
+entity.lostinfinity.sightwalker.name=Sightwalker
+entity.lostinfinity.weaver.name=Weaver
+entity.lostinfinity.doomdog.name=Doom Dog
+entity.lostinfinity.blisterweed.name=Blisterweed
+entity.lostinfinity.grubber.name=Grubber
+
+entity.lostinfinity.fearbomb.name=Explosive Fear
+entity.lostinfinity.blightpellet.name=Blighted Pellet
+
+entity.lostinfinity.player_phantom.name=Player Phantom
+entity.lostinfinity.tetherbug.name=Tetherbug
+entity.lostinfinity.crusher.name=Crusher
+entity.lostinfinity.drippler.name=Drippler
+entity.lostinfinity.gorger.name=Gorger
+entity.lostinfinity.doublejaw.name=Double Jaw
+entity.lostinfinity.minimite.name=Minimite
+entity.lostinfinity.clusterweed.name=Clusterweed
+entity.lostinfinity.wisp.name=Wisp
+
+entity.lostinfinity.puzzle_arrow.name=Puzzle Master
+entity.lostinfinity.puzzlemaster.name=Puzzle Master
+entity.lostinfinity.clusterblast.name=Clusterblast
+entity.lostinfinity.tetherball.name=Ball of Webs
+entity.lostinfinity.firepellet.name=Pellet of Fire
+entity.lostinfinity.fountainpellet.name=Fountain Pellet
+
+entity.lostinfinity.luminousguardian.name=Luminous Guardian
+entity.lostinfinity.thunderbomb.name=Thunder Bomb
+entity.lostinfinity.stormbomb.name=Storm Bomb
+entity.lostinfinity.thundyron.name=Thundyron
+entity.lostinfinity.cryonus.name=Cryonus
+entity.lostinfinity.cryobeam.name=Cryo Beam
+entity.lostinfinity.cryobolt.name=Cryo Bolt
+
+entity.lostinfinity.cellularrock.name=Cellular Rock
+entity.lostinfinity.sunstonerock.name=Sunstone Rock
+entity.lostinfinity.rockslug.name=Rock Slug
+entity.lostinfinity.giant_rockslug.name=Giant Rock Slug
+entity.lostinfinity.skycrabattack.name=Skycrab Attack
+entity.lostinfinity.laserblast.name=Laser Bolt
+entity.lostinfinity.mortarshot.name=Mortar Shot
+
+entity.lostinfinity.beeattack.name=Bee Blast
+entity.lostinfinity.piercingshot.name=Piercing Crystal
+
+entity.lostinfinity.wormholeshot.name=Wormhole Rifle
+entity.lostinfinity.wormholeportal.name=Wormhole
+entity.lostinfinity.rocket_strapped_explosive.name=Rocket Strapped Explosive
+entity.lostinfinity.totemmoon.name=Totem of the Moon
+entity.lostinfinity.totempylon.name=Pylon of Protection
+
+entity.lostinfinity.tntstrapper.name=TNT Zombie Deployer
+entity.lostinfinity.elementiumshadow.name=Element of Shadows
+
+entity.lostinfinity.pickleportal.name=Pickle Portal
+entity.lostinfinity.recursor.name=Razor of Infinity
+entity.lostinfinity.glomite.name=Glomite
+entity.lostinfinity.tntzombie.name=TNT Zombie
+entity.lostinfinity.deviantbat.name=Deviant Bat
+
+entity.lostinfinity.ink_shot.name=Ink Shot
+entity.lostinfinity.ink_bomb.name=Ink Bomb
+entity.lostinfinity.operator_ink_battle.name=Operator (Ink Battle)
+entity.lostinfinity.controller_ink_battle.name=Controller (Ink Battle)
+entity.lostinfinity.contrader_ink_battle.name=Store Clerk (Ink Battle)
+entity.lostinfinity.operator_treadmill.name=Operator (Treadmill)
+entity.lostinfinity.controller_treadmill.name=Controller (Treadmill)
+entity.lostinfinity.contrader_treadmill.name=Store Clerk (Treadmill)
+entity.lostinfinity.operator_duelarena.name=Operator (Duel Arena)
+entity.lostinfinity.operator_lightbridge.name=Operator (Light Bridge)
+entity.lostinfinity.controller_lightbridge.name=Controller (Light Bridge)
+entity.lostinfinity.controller_targets.name=Controller (Target Time)
+entity.lostinfinity.operator_targets.name=Operator (Target Time)
+entity.lostinfinity.operator_bombers.name=Operator (Bombers)
+entity.lostinfinity.controller_bombers.name=Controller (Bombers)
+entity.lostinfinity.contrader_bombers.name=Store Clerk (Bombers)
+entity.lostinfinity.operator_laser_tag.name=Operator (Laser Tag)
+entity.lostinfinity.controller_laser_tag.name=Controller (Laser Tag)
+entity.lostinfinity.contrader_laser_tag.name=Store Clerk (Laser Tag)
+entity.lostinfinity.operator_trampoline_dodgeball.name=Operator (Trampoline Dodgeball)
+entity.lostinfinity.controller_trampoline_dodgeball.name=Controller (Trampoline Dodgeball)
+entity.lostinfinity.contrader_trampoline_dodgeball.name=Store Clerk (Trampoline Dodgeball)
+entity.lostinfinity.contrader_targets.name=Store Clerk (Target Time)
+entity.lostinfinity.contrader_lightbridge.name=Store Clerk (The Lightbridge)
+entity.lostinfinity.contrader_parkour.name=Store Clerk (Parkour)
+entity.lostinfinity.controller_parkour.name=Controller (Parkour)
+entity.lostinfinity.operator_parkour.name=Operator (Parkour)
+
+entity.lostinfinity.skycrab.name=Sky Crab
+entity.lostinfinity.bomberbomb.name=Bomb
+
+entity.lostinfinity.luminousguardianlaser.name=Luminous Guardian
+entity.lostinfinity.giantfyreweed.name=Giant Fyreweed
+entity.lostinfinity.spiderblast.name=Spider Blast
+entity.lostinfinity.gloomspell.name=Gloom Spell
+
+entity.lostinfinity.galaxylaser.name=Galaxy Laser
+entity.lostinfinity.echoblast.name=Echo Blast
+
+entity.lostinfinity.ozor.name=Ozor
+entity.lostinfinity.ozordecoy.name=Ozor
+
+entity.lostinfinity.vycellia.name=Spider Queen Vycellia
+entity.lostinfinity.nightshyre.name=Nightshyre
+
+entity.lostinfinity.astralshot.name=Astral Shot
+entity.lostinfinity.stickybomb.name=Sticky Bomb
+entity.lostinfinity.vectosect.name=Vectosect
+entity.lostinfinity.stickler.name=Stickler
+entity.lostinfinity.unstablemerchant.name=Unstable Merchant
+entity.lostinfinity.feralmerchant.name=Feral Merchant
+entity.lostinfinity.deviantcavespider.name=Deviant Cave Spider
+entity.lostinfinity.tornindividual.name=Dimensionally Torn Individual
+entity.lostinfinity.ravager.name=Ravager
+
+entity.lostinfinity.deviantgolem.name=Deviant Golem
+entity.lostinfinity.deviantgolem.name=Deviant Golem
+entity.lostinfinity.ionexplosion.name=Ion Explosion
+entity.lostinfinity.giantflapper.name=Giant Mutated Flapper
+entity.lostinfinity.debtcollector.name=Debt Scythe
+
+entity.lostinfinity.galaxygulper.name=Galaxy Gulper
+entity.lostinfinity.laserspire.name=Laser Spire
+
+entity.lostinfinity.unstableballoon.name=Unstable Balloon
+entity.lostinfinity.lasergunbeam.name=Laser Gun Beam
+entity.lostinfinity.glangler.name=Glangler
+entity.lostinfinity.glochipper.name=Glochipper
+entity.lostinfinity.globoon.name=Globoon
+entity.lostinfinity.essencedweller.name=Essence Dweller
+entity.lostinfinity.essenceidol.name=Essence Idol
+entity.lostinfinity.globro.name=Globro
+entity.lostinfinity.augmenticon.name=Augmenticon
+
+entity.lostinfinity.labwizard.name=Labyrinth Wizard
+entity.lostinfinity.labwarrior.name=Labyrinth Warrior
+
+entity.lostinfinity.plagueblast.name=Plague Blast
+entity.lostinfinity.genericbomb.name=Explosive
+entity.lostinfinity.stickyprojectile.name=Sticky Projectile
+entity.lostinfinity.fracturebomb.name=Fracture Bomb
+entity.lostinfinity.nicroniuminfuser.name=Nicronium Infuser Effect
+
+entity.lostinfinity.eidolonmist.name=Eidolon
+entity.lostinfinity.raindrop.name=Rain
+entity.lostinfinity.acidraindrop.name=Acid Rain
+entity.lostinfinity.galaxysorcerer.name=Galaxy Sorcerer
+entity.lostinfinity.galaxygladiator.name=Galaxy Gladiator
+entity.lostinfinity.galaxyspire.name=Galaxy Spire
+entity.lostinfinity.deviantamalgam.name=Deviant Amalgam
+
+entity.lostinfinity.deviantsnowman.name=Deviant Snowman
+entity.lostinfinity.deviantsnowball.name=Deviant Snowball
+entity.lostinfinity.celestialfire.name=Celestial Fire
+entity.lostinfinity.nuxuro.name=Nuxuro
+
+entity.lostinfinity.skybooster.name=Sky Booster
+entity.lostinfinity.spectre.name=Spectre
+
+entity.lostinfinity.screamerportaleffect.name=Dimensional Portal
+entity.lostinfinity.rikarus.name=Rikarus
+entity.lostinfinity.restorationcrystal.name=Restoration Crystal
+entity.lostinfinity.deviantwitch.name=Deviant Witch
+entity.lostinfinity.mirrorzombie.name=Mirror Zombie
+
+entity.lostinfinity.deviantslimestrider.name=Deviant Slime Strider
+entity.lostinfinity.carrierprojectile.name=Carrier Projectile
+entity.lostinfinity.fallingstar.name=Falling Star
+
+entity.lostinfinity.stunattack.name=Spinechillers
+entity.lostinfinity.darkspell.name=Dark Magic
+entity.lostinfinity.crystalshard.name=Crystal Shard
+entity.lostinfinity.droidlaser.name=Droid Lasers
+entity.lostinfinity.explosivegoo.name=Explosive Goo
+
+entity.lostinfinity.elementiumwater.name=Element of Water
+entity.lostinfinity.elementiumair.name=Element of Air
+entity.lostinfinity.elementiumfire.name=Element of Fire
+entity.lostinfinity.elementiumearth.name=Element of Earth
+entity.lostinfinity.elementiumblight.name=Element of Blight
+entity.lostinfinity.elementiumplague.name=Element of Plague
+entity.lostinfinity.witherbomb.name=Wither Bomb
+
+entity.lostinfinity.destabilizer.name=Destabilizer
+entity.lostinfinity.comet.name=Comet
+entity.lostinfinity.mobcomet.name=Comet
+entity.lostinfinity.blightedcomet.name=Comet
+entity.lostinfinity.tentacleseed.name=Tentacle Seed
+entity.lostinfinity.homingblight.name=Homing Blight
+entity.lostinfinity.tormentorchain.name=Tormentor Chain
+entity.lostinfinity.atlasattack.name=Atlas Spire
+
+entity.lostinfinity.deviantmooshroom.name=Deviant Mooshroom
+entity.lostinfinity.deviantzombie.name=Deviant Zombie
+entity.lostinfinity.deviantslime.name=Deviant Slime
+
+entity.lostinfinity.deviantpiglin.name=Deviant Piglin
+entity.lostinfinity.deviantvex.name=Deviant Vex
+entity.lostinfinity.deviantstray.name=Deviant Stray
+entity.lostinfinity.deviantllama.name=Deviant Llama
+entity.lostinfinity.deviantmagmacube.name=Deviant Magma Cube
+
+entity.lostinfinity.deviantspit.name=Vile Spit
+
+entity.lostinfinity.arash.name=Arash
+entity.lostinfinity.alestria.name=Alestria
+entity.lostinfinity.atlasspire.name=Atlas Spire
+entity.lostinfinity.darrio.name=Darrio
+entity.lostinfinity.barul.name=Barul
+entity.lostinfinity.barulchain.name=Barul Chain
+
+entity.lostinfinity.atlascrystal.name=Atlas Crystal
+entity.lostinfinity.sentrycrystal.name=Sentry Crystal
+entity.lostinfinity.deviantcrystal.name=Deviant Crystal
+
+entity.lostinfinity.reflectal.name=Reflectal
+entity.lostinfinity.hanger.name=Hanger
+entity.lostinfinity.acidback.name=Acidback
+entity.lostinfinity.gravhead.name=Gravhead
+entity.lostinfinity.rockpest.name=Rockpest
+entity.lostinfinity.spinovern.name=Spinovern
+entity.lostinfinity.hypnosaur.name=Hypnosaur
+entity.lostinfinity.chomper.name=Chomper
+entity.lostinfinity.ribrex.name=Ribrex
+entity.lostinfinity.gnawer.name=Gnawer
+entity.lostinfinity.screacher.name=Screacher
+entity.lostinfinity.eyeslug.name=Eye Slug
+entity.lostinfinity.flutterfyre.name=Flutterfyre
+entity.lostinfinity.flutterbee.name=Flutterbee
+
+entity.lostinfinity.sonicattack.name=Loud Noises
+entity.lostinfinity.rockshot.name=Flying Rock
+entity.lostinfinity.voidlaser.name=Void Energy Blast
+
+entity.lostinfinity.trialobserver.name=Trial Observer
+entity.lostinfinity.duskerqueen.name=Dusker Queen
+entity.lostinfinity.duskerqueenweb.name=Dusker Queen Web
+
+entity.lostinfinity.acidicconcoction.name=Acidic Concoction
+entity.lostinfinity.poisonousbubble.name=Poisonous Bubble
+entity.lostinfinity.clyster.name=Clyster
+entity.lostinfinity.crawker.name=Crawker
+entity.lostinfinity.dusker.name=Dusker
+entity.lostinfinity.explosect.name=Explosect
+entity.lostinfinity.flapper.name=Flapper
+entity.lostinfinity.flurky.name=Flurky
+entity.lostinfinity.fyreweed.name=Fyreweed
+entity.lostinfinity.grappler.name=Grappler
+entity.lostinfinity.hurler.name=Hurler
+entity.lostinfinity.phaser.name=Phaser
+entity.lostinfinity.shimmer.name=Shimmer
+entity.lostinfinity.spyker.name=Spyker
+
+entity.lostinfinity.glowfish.name=Glowfish
+entity.lostinfinity.pipegamemerchant.name=Interdimensional Merchant
+entity.lostinfinity.mempuzzlemerchant.name=Interdimensional Merchant
+entity.lostinfinity.dimensionalmerchant.name=Interdimensional Merchant
+entity.lostinfinity.deviantbear.name=Deviant Bear
+entity.lostinfinity.deviantghast.name=Deviant Ghast
+entity.lostinfinity.deviantcow.name=Deviant Cow
+entity.lostinfinity.deviantsheep.name=Deviant Sheep
+entity.lostinfinity.deviantpig.name=Deviant Pig
+entity.lostinfinity.devianthorse.name=Deviant Horse
+entity.lostinfinity.deviantenderman.name=Deviant Enderman
+entity.lostinfinity.deviantchicken.name=Deviant Chicken
+entity.lostinfinity.elara.name=Elara
+entity.lostinfinity.deviantshulker.name=Deviant Shulker
+entity.lostinfinity.deviantskyworm.name=Deviant Skyworm
+entity.lostinfinity.infinitystone.name=Infinity Stone
+entity.lostinfinity.deviantcreeper.name=Deviant Creeper
+entity.lostinfinity.deviantskeleton.name=Deviant Skeleton
+entity.lostinfinity.urogo.name=Urogo, The Destroyer
+entity.lostinfinity.droid.name=Droid
+entity.lostinfinity.droidboss.name=Familiar Droid
+
+entity.lostinfinity.deviantshulkerbullet.name=Deviant Shulker Bullet
+entity.lostinfinity.livoraxbullet.name=Livorax Bullet
+entity.lostinfinity.deviantblaze.name=Deviant Blaze
+
+entity.lostinfinity.titanshulker.name=Deviant Shulker Titan
+entity.lostinfinity.titanblaze.name=Deviant Blaze Titan
+entity.lostinfinity.titanspider.name=Deviant Spider Titan
+entity.lostinfinity.titanskeleton.name=Deviant Skeleton Titan
+
+entity.lostinfinity.titanenderman.name=Deviant Enderman Titan
+entity.lostinfinity.titancreeper.name=Deviant Creeper Titan
+entity.lostinfinity.titanzombie.name=Deviant Zombie Titan
+
+entity.lostinfinity.titanvex.name=Deviant Vex Titan
+entity.lostinfinity.titanstray.name=Deviant Stray Titan
+entity.lostinfinity.titanpiglin.name=Deviant Piglin Titan
+
+entity.lostinfinity.titanllama.name=Deviant Llama Titan
+entity.lostinfinity.titanmagmacube.name=Deviant Magma Cube Titan
+
+entity.lostinfinity.mark_of_despair.name=Pit of Despair
+entity.lostinfinity.elarashot.name=Elara's Magic
+entity.lostinfinity.skullshot.name=Cursed Skull
+entity.lostinfinity.doomshot.name=Doom Shot
+entity.lostinfinity.droidball.name=Droid in a Ball
+entity.lostinfinity.droidzapper.name=Electric Zap
+entity.lostinfinity.droidsucker.name=Eletric Zap
+entity.lostinfinity.wizardblast.name=Space Magic
+entity.lostinfinity.velomagic.name=Otherworldly Magic
+entity.lostinfinity.gravitywarp.name=Condensed Gravity
+entity.lostinfinity.skystrike.name=Supercharged Comet
+entity.lostinfinity.fluxball.name=Flux Magic
+entity.lostinfinity.galaxyblast.name=Galaxy Blast
+entity.lostinfinity.galaxyspell.name=Space Magic
+entity.lostinfinity.galaxybomb.name=Galaxy Bomb
+entity.lostinfinity.galaxyknife.name=Galaxy Knife
+
+entity.lostinfinity.kalikos.name=Prime Deviant Kalikos
+entity.lostinfinity.rockworm.name=Rock Worm
+
+entity.lostinfinity.venomblast.name=Venom
+entity.lostinfinity.projectilekiller.name=Pure Revenge
+
+entity.lostinfinity.effigyshot.name=Effigy Doll
+entity.lostinfinity.effigyeffect.name=Effigy Doll
+entity.lostinfinity.deviantspider.name=Deviant Spider
+entity.lostinfinity.aspect.name=Elemental Aspect
+entity.lostinfinity.slimestrider.name=Slime Strider
+entity.lostinfinity.velo.name=Velo, The Realmwarper
+
+entity.lostinfinity.cyclos.name=Cyclos
+entity.lostinfinity.clinger.name=Clinger
+entity.lostinfinity.gloop.name=Gloop Cell
+entity.lostinfinity.gloopmother.name=Gloop Mother
+
+entity.lostinfinity.bloodhunterblast.name=Bloodhunter Blast
+entity.lostinfinity.powerpulse.name=Power Pulse
+
+entity.lostinfinity.deviantdimtrader.name=Deviant Dimensional Merchant
+
+entity.lostinfinity.lostdeviant.name=Lost Deviant
+entity.lostinfinity.arenaevent.name=Arena Event
+
+entity.lostinfinity.galaxybeast.name=Galaxy Beast
+
+entity.lostinfinity.starfiend.name=Starfiend
+entity.lostinfinity.deviantsucker.name=Deviant Detector
+entity.lostinfinity.deviantdeployer.name=Ball of Deviants
+
+entity.lostinfinity.avengerlightning.name=The Avenger
+entity.lostinfinity.contest_hologram.name=The Grandmaster
+
+entity.lostinfinity.controller_holodeck.name=Grandmaster
+entity.lostinfinity.controller_hunters.name=Grandmaster
+entity.lostinfinity.controller_battle_snakes.name=Grandmaster
+
+entity.lostinfinity.operator_battle_snakes.name=Operator (Battle Snakes)
+entity.lostinfinity.operator_holodeck.name=Operator (Holodeck)
+entity.lostinfinity.operator_hunters.name=Operator (Hunters)
+
+entity.lostinfinity.contrader_battle_snakes.name=Store Clerk (Battle Snakes)
+entity.lostinfinity.contrader_holodeck.name=Store Clerk (Holodeck)
+entity.lostinfinity.contrader_hunters.name=Store Clerk (Hunters)
+entity.lostinfinity.contrader_market.name=Black Market Merchant
+
+entity.lostinfinity.controller_redlight.name=Grandmaster
+entity.lostinfinity.operator_redlight.name=Operator (Redlight)
+entity.lostinfinity.contrader_redlight.name=Store Clerk (Redlight)
+
+entity.lostinfinity.bloodhunter.name=Bloodhunter
+entity.lostinfinity.azross.name=Prime Deviant Azross
+entity.lostinfinity.livorax.name=Prime Deviant Livorax
+
+entity.lostinfinity.deviant_wither.name=Deviant Wither
+entity.lostinfinity.wither_skullling.name=Wither Skull-ling
+entity.lostinfinity.whackgamemerchant.name=Interdimensional Merchant
+entity.lostinfinity.connectgamemerchant.name=Interdimensional Merchant
+
+entity.lostinfinity.doublerang.name=Doublerang
+entity.lostinfinity.longfin.name=Longfin
+entity.lostinfinity.octobrella.name=Octobrella
+entity.lostinfinity.rayfish.name=Rayfish
+entity.lostinfinity.underfin.name=Underfin
+entity.lostinfinity.eelshark.name=Eel-Shark
+entity.lostinfinity.crabulon.name=Crabulon
+entity.lostinfinity.ribshark.name=Ribshark
+
+entity.lostinfinity.screamer.name=Screamer
+entity.lostinfinity.micro_rocket.name=Micro Rocket
+entity.lostinfinity.nebula_grunt.name=Nebula Grunt
+entity.lostinfinity.nebula_wizard.name=Nebula Wizard
+entity.lostinfinity.nebula_giant.name=Nebula Giant
+
+entity.lostinfinity.soundwave_bullet.name=Soundwave
+entity.lostinfinity.tentaclelantern.name=Abyssal Crabulon
+
+entity.lostinfinity.dev_sacredblade.name=Sacred Blade
+
+entity.lostinfinity.leviathan.name=Leviathan
+entity.lostinfinity.leviathan_tracer.name=Leviathan Tracer
+entity.lostinfinity.leviathan_tesla_orb.name=Leviathan Tesla Orb
+entity.lostinfinity.leviathan_breath.name=Leviathan Breath
+entity.lostinfinity.sea_serpent.name=Sea Serpent
+
+entity.lostinfinity.galaxy_dragon.name=Galaxy Dragon
+entity.lostinfinity.cosmic_fireball.name=Cosmic Fireball
+
+entity.lostinfinity.whirlpool.name=Whirlpool
+entity.lostinfinity.nuclear_explosion.name=Nuclear Explosion
+
+entity.lostinfinity.mushmerra.name=Mushmerra
+entity.lostinfinity.mushmerra_clone.name=Mushmerra Clone
+entity.lostinfinity.shroomite.name=Shroomite
+
+entity.lostinfinity.death_shot.name=Death Shot
+entity.lostinfinity.deviantevokershot.name=Deviant Evoker
+entity.lostinfinity.deviantevokerbomb.name=Deviant Evoker
+entity.lostinfinity.aura_of_allegiance.name=Aura Of Allegiance
+
+entity.lostinfinity.supply_trader.name=Supply Trader
+
+entity.lostinfinity.deviant_wolf.name=Deviant Wolf
+entity.lostinfinity.deviant_husk.name=Deviant Husk
+
+entity.lostinfinity.andromeda.name=Andromeda
+entity.lostinfinity.andromeda_chaser.name=Andromeda Chaser
+entity.lostinfinity.embershot.name=Ember Shot
+entity.lostinfinity.creeping_vine_arrow.name=Creeping Vine Arrow
+entity.lostinfinity.creeping_vine_pod.name=Creeping Vine Pod
+entity.lostinfinity.bomb_drone.name=Bomb Drone
+
+entity.lostinfinity.cthulhu.name=TT
+entity.lostinfinity.cthulhu_turret.name=Quasar Turret
+entity.lostinfinity.cthulhu_cloud.name=Cloud of Poison
+entity.lostinfinity.cthulhu_tentacle.name=Tentacle
+entity.lostinfinity.cthulhu_tentacle_persist.name=Tentacle
+entity.lostinfinity.cthulhu_beam.name=Galactic Laser Beam
+entity.lostinfinity.cthulhu_black_hole.name=Black Hole
+entity.lostinfinity.cthulhu_rift.name=Twisted Rift
+entity.lostinfinity.cthulhu_healing_orb.name=Corrupted Healing Crystal
+
+entity.lostinfinity.cthulhu_turret_bullet.name=Quasar Orb
+entity.lostinfinity.cthulhu_missile.name=Energy Bolt
+entity.lostinfinity.cthulhu_meteor.name=Entangled Meteor
+
+itemGroup.tab_stones=Lost Infinity Stones
+itemGroup.tab_maps=Celestial Maps
+itemGroup.tab_deviant=Deviant Items
+itemGroup.tab_auxillary=Infinity Crafting
+itemGroup.tab_infinity=Infinity Weapons
+itemGroup.tab_auxweps=Celestial Weapons
+itemGroup.tab_blocks=Infinity Blocks
+itemGroup.tab_armors=Infinity Armor
+itemGroup.tab_deviantweapons=Deviant Weapons
+itemGroup.tab_starforge=The Starforge
+itemGroup.tab_mastercraft=Mastercrafted Materials
+itemGroup.tab_supermutated=Super-mutated Materials
+itemGroup.tab_galaxydungeon=Galaxy Dungeon
+itemGroup.tab_celestialarena=Celestial Arena
+
+fluid.concentrated_acid=Concentrated Acid
+
+effect.security_clearance=Security Clearance
+effect.ironheart=Ironheart
+
+effect.contagious=Contagious
+effect.nullified=Nullified
+
+effect.rampaging=Rampaging
+effect.protected=Protected
+
+effect.adrenaline=Adrenaline
+effect.ultraheavy=Ultraheavy
+effect.gravitational=Gravitational
+effect.vulnerability=Vulnerability
+effect.tethered=Tethered
+effect.blighted=Blighted
+effect.phased=Phased
+
+effect.intangible=Intangible
+effect.last_breath=Last Breath
+effect.nitrous=Nitrous
+effect.otherworldly=Otherworldly
+effect.racing_heart=Racing Heart
+effect.shattered=Shattered
+effect.blood_toxin=Blood Toxin
+effect.spectral=Spectral
+effect.armored=Armored
+effect.charging=Charging
+effect.distortion=Distortion
+effect.potion_affinity=Potion Affinity
+
+effect.unleashing=Unleashing
+effect.planesplit=Plane-Split
+effect.plague=Plague
+effect.shocked=Shocked
+effect.spontaneous_combustion=Spontaneous Combustion
+effect.dimensional_tear=Dimensional Tear
+effect.miasma=Miasma
+effect.supersonic=Supersonic
+effect.transfusion=Transfusion
+effect.acidic=Acidic Immunity
+effect.fracture=Fracture Immunity
+effect.supercharged=Super-Charged
+effect.feared=Feared
+effect.terrified=Terrified
+
+key.lostinfinity.category=Lost Infinity Stones
+key.lostinfinity.armor_set_bonus.desc=Toggle Armor Set Bonus
+key.lostinfinity.item_mode.desc=Cycle Item Mode
+key.lostinfinity.dismount.desc=Dismount
+
+description.lostinfinity.jei.ingots=Ingots can be forged through the Ingot refinery within Nonexistence.
+description.lostinfinity.jei.ingots.kyvorium=Created by right-clicking the Meta Materializer with a Clovinite Power Bank while a Vellorium Ingot, Kylaxium Ingot, and Xerovium Ingot is in the closest box, an Organic Plate, Corrupted Root, and Giant Tentacle in the middle box, as well as a sacrifice of 3 mobs or a single player in the farthest box.
+description.lostinfinity.jei.ingots.biosynthium=Created by right-clicking the Meta Materializer with an Adhesive Fibre while an Olysium Ingot, Detherium Ingot, and Phytrosium Ingot is in the closest box, a Gloom Bulb, Pickle, and Anthocite in the middle box, as well as a sacrifice of 3 mobs or a single player in the farthest box.
+description.lostinfinity.jei.ingots.malicium=Created by right-clicking the Meta Materializer with an External Clovinite Battery while a Noxerium Ingot, Incadium Ingot, and Emberium Ingot is in the closest box, a Ghostly Husk, Flexible Husk, and Corrupted Root in the middle box, as well as a sacrifice of 3 mobs or a single player in the farthest box.
+description.lostinfinity.jei.ingots.etherium=Created by right-clicking the Meta Materializer with an Ion Cell while an Olysium Ingot, Xerovium Ingot, and Detherium Ingot is in the closest box, a Photochromic Husk, Ghostly Husk, and Luminescent Stingers in the middle box, as well as a sacrifice of 3 mobs or a single player in the farthest box.
+description.lostinfinity.jei.ingots.polarium=Created by right-clicking the Meta Materializer with a Potent Polarcronite while a Xerovium Ingot, Phytrosium Ingot, and Hextorium Ingot is in the closest box, a Volatile Blood, Glowing Globes, and Glowing Organ in the middle box, as well as a sacrifice of 3 mobs or a single player in the farthest box.
+
+description.lostinfinity.jei.machines.gearbox=Must have a Combustion Engine powered next to it. Connect gears to each other where they are each touching (not overlapping)
+description.lostinfinity.jei.machines.compressiontable=Found within Nonexistence, system must be unclogged periodically with Carbonic Acid to compress ores
+description.lostinfinity.jei.machines.grinder=Using an active Gearbox next to it, grinds down Sunstone by cleaning the "soot" off without touching the red box in the center
+description.lostinfinity.jei.machines.engine=Used to Power a Gearbox using Spark Plugs
+description.lostinfinity.jei.machines.fusion=Complete the crafting by making a 2x2 of the same block using the pieces provided on the bottom left. Filling the board without completing a square will lead to a full reset of crafting progress
+description.lostinfinity.jei.machines.irg=Portal opens when an Inter-dimensional Rift Generator is found 30 blocks away in the Cardinal directions of a center placed Inter-Dimensional Rift Generator, and Eterno Cells are inserted.
+
+description.lostinfinity.jei.chemistryclays.colixium=Crafted by dropping 5 Darksteel Shards, 5 Elastic Tissue, and 5 Super-Mutated Crystals in a 2x2 pool of Concentrated Acid, then right-clicking the Concentrated Acid pool with a Colixium Catenation Pouch.
+description.lostinfinity.jei.chemistryclays.phoroxium=Crafted by dropping 5 Auradine, 5 Space Pickle, and 5 Super-Mutated Pelt in a 2x2 pool of Concentrated Acid, then right-clicking the Concentrated Acid pool with a Phoroxium Catenation Pouch.
+description.lostinfinity.jei.chemistryclays.laraxium=Crafted by dropping 5 Incandescite, 5 Glow Bulb, and 5 Organic Fuse in a 2x2 pool of Concentrated Acid, then right-clicking the Concentrated Acid pool with a Laraxium Catenation Pouch.
+
+description.lostinfinity.jei.minigames=Obtained by right-clicking the (minigame) starter block with (item used) and winning the mini-game
+
+description.lostinfinity.jei.minigames.map.ingenuity=Obtained by right-clicking the Blue Labyrinth Game starter block with Deviant String and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.duality=Obtained by right-clicking the Blue Labyrinth Game starter block with a Perfect Pearl and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.corruption=Obtained by right-clicking the Blue Labyrinth Game starter block with Deviant Gunpowder and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.aspiration=Obtained by right-clicking the Blue Labyrinth Game starter block with a Deviant Bear Hide and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.misdirection=Obtained by right-clicking the Blue Labyrinth Game starter block with a Reflective Shard and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.vengeance=Obtained by right-clicking the Blue Labyrinth Game starter block with a Deviant Ghast Tear and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.dread=Obtained by right-clicking the Yellow Labyrinth Game starter block with a Deviant Blaze Rod and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.anxiety=Obtained by right-clicking the Yellow Labyrinth Game starter block with a Deviant Snowball and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.imposition=Obtained by right-clicking the Purple Labyrinth Game starter block with Deviant Flesh and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.retrospection=Obtained by right-clicking the Purple Labyrinth Game starter block with a Deviant Mushroom and winning the mini-game in the Top Labyrinth
+
+description.lostinfinity.jei.minigames.map.ambition=Obtained by right-clicking the Item Game starter block with a Webbed Idol and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.perception=Obtained by right-clicking the Item Game starter block with a Relic of The Mirage and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.anticipation=Obtained by right-clicking the Item Game starter block with a Conductive Bar and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.cruelty=Obtained by right-clicking the Item Game starter block with a Jar of Blood and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.map.resolve=Obtained by right-clicking the Item Game starter block with a Frosted Log and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.interspacetransmitter=Obtained by right-clicking the Puzzle Key with a Beacon Key and defeating the Puzzle Master in the Bottom Labyrinth
+description.lostinfinity.jei.minigames.mechanicalsextant=Obtained by right-clicking the Navigation Device block with a Basic Sextant and winning the mini-game in the Bottom Labyrinth
+description.lostinfinity.jei.minigames.biosyncedclock=Obtained by right-clicking the Circuit Calibrator starter block with a Time Trigger and winning the mini-game in the Bottom Labyrinth
+description.lostinfinity.jei.minigames.audiosynchronizeddisc=Obtained by right-clicking the Melodic Sequencer starter block with a Blank Optical Disc and winning the mini-game in the Bottom Labyrinth
+description.lostinfinity.jei.minigames.dimensionalpolymer=Obtained by right-clicking the Polymerization Device block with a Full Rainfall Collector and winning the mini-game in the Bottom Labyrinth
+description.lostinfinity.jei.minigames.multitimelinedatachip=Obtained by right-clicking the Timeline Stablizer block with Advanced Synchronizer and winning the mini-game in the Middle Labyrinth
+description.lostinfinity.jei.minigames.astralplaneanalyzer=Obtained by right-clicking the Row Slide starter block with a Holotron Disc and winning the mini-game in the Middle Labyrinth
+description.lostinfinity.jei.minigames.spacetimetrigger=Obtained by right-clicking the Space-Time Synchronizer starter block with a Time Trigger and winning the mini-game in the Middle Labyrinth
+description.lostinfinity.jei.minigames.powerblade=Obtained by right-clicking the Power Condenser starter block with a Reinforced Blade and winning the mini-game in the Middle Labyrinth
+description.lostinfinity.jei.minigames.highspeedwire=Obtained by right-clicking the Block Ring Game starter block with High Tolerance Wire and winning the mini-game in the Middle Labyrinth
+description.lostinfinity.jei.minigames.rewiredioncell=Obtained by right-clicking the Ion Converter starter block with an Ion Cell and winning the mini-game in the Middle Labyrinth
+description.lostinfinity.jei.minigames.overchargedcell=Obtained by right-clicking the Light Tile Game starter block and winning the mini-game then using a Supercharged Cell on the High Powered Charger in the Middle Labyrinth
+description.lostinfinity.jei.minigames.eternalemberstargenerator=Obtained by right-clicking the Emberstar Charger starter block with an Unpowered Emberstar and winning the mini-game using Electrified Quartz in the Top Labyrinth
+description.lostinfinity.jei.minigames.geocoordinatedorb=Obtained by right-clicking the Geolocator Core starter block with a Geolocation Orb and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.geolocationorb=Obtained by right-clicking the Geolocator Core starter block with a Deviant Globe and winning the mini-game in the Top Labyrinth
+description.lostinfinity.jei.minigames.starcrystalcapacitor=Obtained by right-clicking the Star Crystal Memory Game starter block with an Unpowered Starcrystal and winning the mini-game using Electrified Quartz in the Top Labyrinth
+description.lostinfinity.jei.minigames.georedirectionorb=Obtained by right-clicking the Redirection Chamber Game starter block with a Geo-Coordinated Orb and winning the mini-game by turning all arrows red in the Middle Labyrinth
+description.lostinfinity.jei.minigames.microstoragepowercluster=Obtained by right-clicking the Power Condenser starter block with 4 Clovenite Power Banks and winning the mini-game in the Middle Labyrinth
+
+description.lostinfinity.jei.minigames.powercontroldisc=Obtained by right-clicking the Power Conduit starter block with a Blank Optical Disc and winning the mini-game in Nonexistence
+description.lostinfinity.jei.minigames.powerclamp=Obtained by right-clicking the Power Collider starter block with a Charge Cell and winning the mini-game in Nonexistence
+description.lostinfinity.jei.minigames.nanofluoricacid=Obtained by right-clicking the Pipe Game starter block with 10 Florocite and winning the mini-game in Nonexistence
+
+description.lostinfinity.jei.minigames.navigationmechanism=Obtained by right-clicking the Jet Pack and winning the mini-game in The Infinite Murk
+
+description.lostinfinity.jei.misc.gasfilledballoon=Throw and Unstable Balloon in the air and continue to bounce it up without it hitting the ground a total of 8 times
+description.lostinfinity.jei.misc.lifesynchronizer=Use Effigy Doll on a player then throw the doll into lava
+description.lostinfinity.jei.misc.giantheart=Use Pulse Charge on a Leviathan then slay it
+description.lostinfinity.jei.misc.claysupports=Use Clay Terraformer on Sea Clay, then change modes and place blocks in the chosen pattern
+description.lostinfinity.jei.misc.plasmaticcranium=Kill a player between the beams of a connected Plasma Emitter and Plasma Receiver
+description.lostinfinity.jei.misc.voidalteredspine=Use Rapid Tunneling Device on a player or Dimensional Trader while within the Infinite Murk
+description.lostinfinity.jei.misc.astralgenerator=Place down a Nebulous Beacon and protect it while it charges
+description.lostinfinity.jei.misc.astralorgan=Use Scroll of Reconstruction on 6 different Whispers and defeat the boss
+description.lostinfinity.jei.misc.reconfiguredmatter=Use the Matter Recombiner within the Infinite Murk
+description.lostinfinity.jei.misc.stickydarksteel=Feed a Tetherbug a Darksteel
+description.lostinfinity.jei.misc.organicshadowmatter=Place Fish Chow, right-click it, and follow the fish until the item drops
+description.lostinfinity.jei.misc.velocitizedfemur=Use Rocket Strapped Explosive on a player in the Overworld or a Dimensional Trader within the End
+description.lostinfinity.jei.misc.magicconch=Use Silver Tokens on Treasure Hunter and finish their challenge
+description.lostinfinity.jei.misc.chewedskull=Kill an entity by bringing a Skyre nearby with a Beacon of Darkness and right-clicking an entity with it to get the Skyre to attack them
+description.lostinfinity.jei.misc.heartoflight=Transport Wisp from the Radiant Tree to the Lumino Tree in Nonexistence and click it with a Lightbinder
+description.lostinfinity.jei.misc.aligneddisc=Create a 4x4 of Rift Entangled Tile in the Overworld, then switch to the Infinite Murk and right-click the same Rift Entangled Tiles with a Power Analyzer
+description.lostinfinity.jei.misc.murkyclay=Give a Grubber a Jar of Murky Syrup
+description.lostinfinity.jei.misc.voidsplitbone=Use Vacuum Container on a Void Flower in the Infinite Murk then use an Elastic Thread to connect the block to an entity
+description.lostinfinity.jei.misc.voidflower=Grow a Moon Flower in the Overworld, it will become a Void Flower in the Infinite Murk
+description.lostinfinity.jei.misc.branchofenergy=Transport Wisp from the Radiant Orange Tree to the Rebirth Blue Tree
+description.lostinfinity.jei.misc.electricalaccelerator=Right-Click Main Power Terminal Block within Nonexistence and complete the given Blueprints and return them to the block
+description.lostinfinity.jei.misc.crushedbones=Crush an entity under The Crusher
+description.lostinfinity.jei.misc.toxicsporesample=Throw Spike Balls at Galaxy Vine Spore
+description.lostinfinity.jei.misc.darkworlddatachip=Right-Click an Eye Battery in Nonexistence with 5 Organic Wire, 10 Organic Plate, 20 Gloominessence Cubes, and 3 Basic Storage Chip, and right-click the Eye Battery again
+description.lostinfinity.jei.misc.florocite=Find Lumcubes in the Luminessence area of Nonexistence and right-click them with a bio-energiser
+description.lostinfinity.jei.misc.heartofdarkness=Transport Wisp from Light to Darkness and right-click with the Darkbinder next to the Archlum Logs
+description.lostinfinity.jei.misc.mutantfungus=Click Fungus with Bio-Corruption Powder and have a Screecher hit it
+description.lostinfinity.jei.misc.knifeincarnation=Click the Knife Icon, and defeat the Galaxy Spire in the Nonexistence Boss Room
+description.lostinfinity.jei.misc.swordincarnation=Click the Sword Icon, and defeat the Galaxy Spire in the Nonexistence Boss Room
+description.lostinfinity.jei.misc.bombincarnation=Click the Bomb Icon, and defeat the Galaxy Spire in the Nonexistence Boss Room
+description.lostinfinity.jei.misc.warpeddisc=Use Geo-Coorelator to find Traveller 3 times and then kill it
+description.lostinfinity.jei.misc.clovinitepowerhub=Use External Clovinite Battery on Hyper Generator, throw 10 Clovinite Power Bank and 20 Electron Recycler into the Hyper Melder
+description.lostinfinity.jei.misc.explosivegoosample=Collect Goo thrown at you by a Hurler with a bottle
+description.lostinfinity.jei.misc.essence=Activate Idol in Nonexistence with Illumination Stone
+description.lostinfinity.jei.misc.acidbucket=Collect Concentrated Acid in Nonexistence near Mossy Astro Rock
+description.lostinfinity.jei.misc.eternocell=Charge Unpowered Cells in Nonexistence using the Cell Charger block
+
+description.lostinfinity.jei.unknown.etherflower=Grow an Etherstock up by right-clicking the top of the stock with Magic Biopowder until it becomes an Ether Flower
+description.lostinfinity.jei.unknown.lifeforce=Right-Click another player with a Super-Charged Injection and slay them
+description.lostinfinity.jei.unknown.radionfragment=Obtained by charging a Radion Pillar and right-clicking it
+description.lostinfinity.jei.unknown.fossils=Use a Fossil Finder to discover these fossils within the Shadow Sea
+description.lostinfinity.jei.unknown.scroll=Given to you when you lower a Screamer's total lives
+description.lostinfinity.jei.unknown.translationbook=Obtained by right-clicking the Ancient Symbol Interpreter with a Magical Book and winning the mini-game in the Labyrinth
+description.lostinfinity.jei.unknown.anthocite=Find Blightcubes in the Luminessence area of Nonexistence and right-click them with a bio-energiser
+description.lostinfinity.jei.unknown.watchfuleye=Throw Spike Balls at the corresponding Colored Tentacle Eyes
+description.lostinfinity.jei.unknown.elementstone=Activate an Unpowered Element Stone
+description.lostinfinity.jei.unknown.firefeather=Use Heat-Resistant Tongs on a Flutterfyre
+description.lostinfinity.jei.unknown.concentratedvenom=Right-Click a Acidback that has been Poisoned with a Glass Bottle
+description.lostinfinity.jei.unknown.cursedemerald=Formed when a Deviant with Skull Shot strikes an Emerald Ore block
+description.lostinfinity.jei.unknown.droidlocation=Data of Droid death given based on the vanilla world it died in or if it was fighting a Deviant
+description.lostinfinity.jei.unknown.superheatedingot=Formed when a Deviant Ghast's fireball strikes an Iron Ore block
+description.lostinfinity.jei.unknown.starlitglobe=Randomly given by Dimensional Trader when trading Deviant Egg, Deviant Beef, Deviant Milk, or Deviant Porkchop
+
+

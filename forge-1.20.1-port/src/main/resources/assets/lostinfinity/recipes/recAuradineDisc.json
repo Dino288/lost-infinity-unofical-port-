@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		},
+		{
+			"item": "lostinfinity:auradine"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:auradine_disc"
+	}
+}

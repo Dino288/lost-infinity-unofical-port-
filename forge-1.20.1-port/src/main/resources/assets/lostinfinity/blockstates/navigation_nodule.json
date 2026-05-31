@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:navigation_nodule_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:navigation_nodule_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:navigation_nodule_2"
+	},
+		"amount=3": {
+		"model": "lostinfinity:navigation_nodule_3"
+	}
+	}
+}

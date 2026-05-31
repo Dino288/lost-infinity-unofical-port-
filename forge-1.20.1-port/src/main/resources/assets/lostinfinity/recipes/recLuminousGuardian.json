@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "adb",
+        "aac",
+        "  a"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:myrite_chunk"
+        },
+        "b":
+        {
+            "item": "lostinfinity:welded_atomite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:organic_shadow_matter"
+        },
+        "d":
+        {
+            "item": "lostinfinity:hypersonic_drive_chamber"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:luminous_guardian"
+    }
+}

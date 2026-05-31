@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:glow_bomb"
+		},
+		{
+			"item": "lostinfinity:supermutated_crystals"
+		},
+		{
+			"item": "lostinfinity:glowing_organ"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:echo_bomb"
+	}
+}

@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+    	"particle": "lostinfinity:blocks/sunderwood_planks",
+        "down": "lostinfinity:blocks/sunderwood_planks",
+        "up": "lostinfinity:blocks/sunderwood_planks",
+        "north": "lostinfinity:blocks/sunderwood_planks",
+        "east": "lostinfinity:blocks/sunderwood_planks",
+        "south": "lostinfinity:blocks/sunderwood_planks",
+        "west": "lostinfinity:blocks/sunderwood_planks"
+    }
+}

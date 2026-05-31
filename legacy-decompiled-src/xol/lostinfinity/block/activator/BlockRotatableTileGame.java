@@ -1,0 +1,123 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.block.Block
+ *  net.minecraft.block.state.BlockState
+ *  net.minecraft.entity.Entity
+ *  net.minecraft.entity.item.ItemEntity
+ *  net.minecraft.entity.player.Player
+ *  net.minecraft.item.ItemStack
+ *  net.minecraft.util.Direction
+ *  net.minecraft.util.InteractionHand
+ *  net.minecraft.util.math.BlockPos
+ *  net.minecraft.util.math.Vec3i
+ *  net.minecraft.world.World
+ */
+package xol.lostinfinity.block.activator;
+
+import java.util.ArrayList;
+import java.util.Random;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
+import net.minecraft.world.level.Level;
+import xol.lostinfinity.block.activator.BlockRotatableTile;
+import xol.lostinfinity.block.basic.BlockBasic;
+import xol.lostinfinity.init.BlockInit;
+import xol.lostinfinity.init.ItemInit;
+
+public class BlockRotatableTileGame
+extends BlockBasic {
+    public BlockRotatableTileGame(String name, boolean hard) {
+        super(name);
+    }
+
+    private boolean validInput(ItemStack stack) {
+        return stack.func_77973_b().equals(ItemInit.geocoordinatedOrb);
+    }
+
+    public boolean func_180639_a(Level worldIn, BlockPos pos, BlockState state, Player playerIn, InteractionHand hand, Direction facing, float hitX, float hitY, float hitZ) {
+        if (!playerIn.func_70093_af()) {
+            if (this.validInput(playerIn.func_184586_b(hand))) {
+                if (!worldIn.field_72995_K) {
+                    this.reset(pos, worldIn, playerIn, hand, facing, hitX, hitY, hitZ);
+                }
+                playerIn.func_184586_b(hand).func_190918_g(1);
+            } else if (!worldIn.field_72995_K) {
+                BlockPos ref = pos.func_177982_a(0, 0, 0);
+                Vec3i dir = BlockRotatableTileGame.findTileDir(worldIn, ref);
+                int xDir = dir.func_177958_n();
+                int zDir = dir.func_177952_p();
+                int dimension = 6;
+                ref = ref.func_177971_a(dir);
+                boolean flag = true;
+                block0: for (int i = 0; i < dimension; ++i) {
+                    for (int j = 0; j < dimension; ++j) {
+                        BlockPos tile = ref.func_177982_a(xDir * i, 0, zDir * j);
+                        if (worldIn.func_180495_p(tile).equals(((BlockRotatableTile)BlockInit.rotatableTile).getStateWithFacing(Direction.NORTH))) continue;
+                        flag = false;
+                        continue block0;
+                    }
+                }
+                if (flag) {
+                    ItemEntity item = new ItemEntity(worldIn, (double)pos.func_177958_n(), (double)(pos.func_177956_o() + 2), (double)pos.func_177952_p(), new ItemStack(ItemInit.georedirectionOrb));
+                    item.field_70159_w = 0.0;
+                    item.field_70181_x = 0.0;
+                    item.field_70179_y = 0.0;
+                    worldIn.func_72838_d((Entity)item);
+                    this.reset(pos, worldIn, playerIn, hand, facing, hitX, hitY, hitZ);
+                }
+            }
+        }
+        return true;
+    }
+
+    private void reset(BlockPos pos, Level worldIn, Player playerIn, InteractionHand hand, Direction facing, float hitX, float hitY, float hitZ) {
+        BlockPos ref = pos.func_177982_a(0, 0, 0);
+        Vec3i dir = BlockRotatableTileGame.findTileDir(worldIn, ref);
+        int xDir = dir.func_177958_n();
+        int zDir = dir.func_177952_p();
+        int dimension = 6;
+        int iterations = 10;
+        ref = ref.func_177971_a(dir);
+        ArrayList<BlockPos> tiles = new ArrayList<BlockPos>();
+        for (int i = 0; i < dimension; ++i) {
+            for (int j = 0; j < dimension; ++j) {
+                BlockPos tile = ref.func_177982_a(xDir * i, 0, zDir * j);
+                if (!worldIn.func_180495_p(tile).func_177230_c().equals(BlockInit.rotatableTile)) continue;
+                tiles.add(tile);
+                worldIn.func_175656_a(tile, ((BlockRotatableTile)BlockInit.rotatableTile).getStateWithFacing(Direction.NORTH));
+            }
+        }
+        Random rand = new Random();
+        for (int k = 0; k < iterations; ++k) {
+            int index = rand.nextInt(tiles.size());
+            BlockState tileState = worldIn.func_180495_p((BlockPos)tiles.get(index));
+            Block tileBlock = tileState.func_177230_c();
+            if (!(tileBlock instanceof BlockRotatableTile)) continue;
+            ((BlockRotatableTile)tileBlock).func_180639_a(worldIn, (BlockPos)tiles.get(index), tileState, playerIn, hand, facing, hitX, hitY, hitZ);
+        }
+    }
+
+    private static Vec3i findTileDir(Level worldIn, BlockPos pos) {
+        ArrayList<Vec3i> dirs = new ArrayList<Vec3i>();
+        dirs.add(new Vec3i(1, 0, 1));
+        dirs.add(new Vec3i(-1, 0, 1));
+        dirs.add(new Vec3i(-1, 0, -1));
+        dirs.add(new Vec3i(1, 0, -1));
+        for (Vec3i dir : dirs) {
+            if (!worldIn.func_180495_p(pos.func_177971_a(dir)).func_177230_c().equals(BlockInit.rotatableTile)) continue;
+            return dir;
+        }
+        return null;
+    }
+}
+

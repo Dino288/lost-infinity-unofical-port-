@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "yzy",
+        " a "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:unbreakablechain"
+        },
+        "y":
+        {
+            "item": "lostinfinity:scorchedpipe"
+        },
+        "z":
+        {
+            "item": "lostinfinity:reflectiveshard"
+        },
+        "a":
+        {
+            "item": "lostinfinity:toxin_filter"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:filtrationmask"
+    }
+}

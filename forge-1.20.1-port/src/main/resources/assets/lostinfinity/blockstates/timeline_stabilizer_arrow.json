@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:timeline_stabilizer_arrow_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:timeline_stabilizer_arrow_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:timeline_stabilizer_arrow_2"
+	},
+		"amount=3": {
+		"model": "lostinfinity:timeline_stabilizer_arrow_3"
+	}
+	}
+}

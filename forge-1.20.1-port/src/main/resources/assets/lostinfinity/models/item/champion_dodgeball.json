@@ -1,0 +1,10 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/champion_dodgeball"
+	},
+		"overrides": [
+		{ "predicate": { "lostinfinity:balltype": 0.5 }, "model": "lostinfinity:item/champion_dodgeball_rapid"},
+		{ "predicate": { "lostinfinity:balltype": 1.0 }, "model": "lostinfinity:item/champion_dodgeball_super"}
+    ]
+}

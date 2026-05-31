@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bba",
+        "aaa",
+        "a a"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:amber"
+        },
+        "b":
+        {
+            "item": "lostinfinity:annealed_glass"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:basic_sextant"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:cavecrystal_blue", "weight": 100 },
+        { "model": "lostinfinity:cavecrystal_blue2", "weight": 100 },
+        { "model": "lostinfinity:cavecrystal_blue3", "weight": 100 },
+        { "model": "lostinfinity:cavecrystal_blue4", "weight": 100 }
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/mirror_of_consumption"
+	},
+	"overrides": [
+		{ "predicate": { "lostinfinity:mirrortype": 1.0 }, "model": "lostinfinity:item/mirror_of_consumption_tele"}
+    ],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [ 1.5, 1.5, 1]
+		},
+		"thirdperson_lefthand": {
+			"scale": [ 1.5, 1.5, 1]
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:blightcubes", "weight": 100 },
+        { "model": "lostinfinity:blightcubes2", "weight": 100 },
+        { "model": "lostinfinity:blightcubes3", "weight": 100 },
+        { "model": "lostinfinity:blightcubes4", "weight": 100 }
+        ]
+    }
+}

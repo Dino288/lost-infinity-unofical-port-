@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yay",
+        " x ",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "minecraft:stick"
+        },
+        "y":
+        {
+            "item": "minecraft:nether_star"
+        },
+        "a":
+        {
+            "item": "minecraft:ender_eye"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:celestialminerspickaxe"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        " ax",
+        "z x"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:cursedemerald"
+        },
+        "z":
+        {
+            "item": "minecraft:stick"
+        },
+        "a":
+        {
+            "item": "lostinfinity:reflectiveshard"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:etherealmirror"
+    }
+}

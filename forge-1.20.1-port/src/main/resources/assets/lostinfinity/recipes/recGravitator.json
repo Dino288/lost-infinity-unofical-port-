@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        " vy",
+        "a  "
+    ],
+    "key":
+    {
+        "v":
+        {
+            "item": "lostinfinity:malachite_inclinometer"
+        },
+        "a":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "y":
+        {
+            "item": "lostinfinity:starcut_metal"
+        },
+        "x":
+        {
+            "item": "lostinfinity:geocoordinated_orb"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:gravitator"
+    }
+}

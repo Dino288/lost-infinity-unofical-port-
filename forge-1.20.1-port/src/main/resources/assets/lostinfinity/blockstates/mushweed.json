@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"active=true":[
+		{ "model": "lostinfinity:mushweed_spore", "weight": 100 },
+		{ "model": "lostinfinity:mushweed_spore2", "weight": 100 },
+		{ "model": "lostinfinity:mushweed_spore3", "weight": 100 },
+		{ "model": "lostinfinity:mushweed_spore4", "weight": 100 },
+		{ "model": "lostinfinity:mushweed_spore5", "weight": 100 },
+		{ "model": "lostinfinity:mushweed_spore6", "weight": 100 }
+		],
+		"active=false":[
+		{ "model": "lostinfinity:mushweed", "weight": 100 },
+		{ "model": "lostinfinity:mushweed2", "weight": 100 },
+		{ "model": "lostinfinity:mushweed3", "weight": 100 },
+		{ "model": "lostinfinity:mushweed4", "weight": 100 },
+		{ "model": "lostinfinity:mushweed5", "weight": 100 },
+		{ "model": "lostinfinity:mushweed6", "weight": 100 }
+		]
+	}
+}

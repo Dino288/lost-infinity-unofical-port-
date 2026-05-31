@@ -1,0 +1,8 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "normal": {
+      "model": "lostinfinity:archlumio_rock"
+    }
+  }
+}

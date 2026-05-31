@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bdc",
+        "abd",
+        "b d"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:entangled_heart"
+        },
+        "b":
+        {
+            "item": "lostinfinity:sunstone_dust"
+        },
+        "c":
+        {
+            "item": "lostinfinity:debt_collector"
+        },
+        "d":
+        {
+            "item": "lostinfinity:synthesized_astrometal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:essence_possessor"
+    }
+}
+

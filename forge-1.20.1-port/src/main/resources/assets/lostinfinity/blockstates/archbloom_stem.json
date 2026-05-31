@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:archbloom_stem", "weight": 100 },
+		{ "model": "lostinfinity:archbloom_stem2", "weight": 100 },
+		{ "model": "lostinfinity:archbloom_stem3", "weight": 100 },
+		{ "model": "lostinfinity:archbloom_stem4", "weight": 100 }
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xvd",
+        "x d",
+        "xdd"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:electrolytic_rod"
+        },
+        "v":
+        {
+            "item": "lostinfinity:supermutated_crystals"
+        },
+        "d":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:arc_blaster"
+    }
+}

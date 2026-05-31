@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:blank_augment_slide"
+		},
+		{
+			"item": "lostinfinity:slippery_tendril"
+		},
+		{
+			"item": "lostinfinity:slippery_tendril"
+		},
+		{
+			"item": "lostinfinity:slippery_tendril"
+		},
+		{
+			"item": "lostinfinity:supermutated_hide"
+		},
+		{
+			"item": "lostinfinity:supermutated_hide"
+		},
+		{
+			"item": "lostinfinity:supermutated_hide"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:augment_slide_shatter"
+	}
+}

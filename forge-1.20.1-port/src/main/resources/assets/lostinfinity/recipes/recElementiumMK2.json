@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+		{
+			"item": "lostinfinity:myrite_chunk"
+		},
+		{
+			"item": "lostinfinity:myrite_chunk"
+		},
+		{
+			"item": "lostinfinity:crystal_of_curses"
+		},
+		{
+			"item": "lostinfinity:crystal_of_curses"
+		},
+		{
+			"item": "lostinfinity:shadow_hide"
+		},
+		{
+			"item": "lostinfinity:shadow_hide"
+		},
+		{
+			"item": "lostinfinity:elementium_bow_mk1"
+		}
+	],
+    "result":
+    {
+        "item": "lostinfinity:elementium_bow_mk2"
+    }
+}

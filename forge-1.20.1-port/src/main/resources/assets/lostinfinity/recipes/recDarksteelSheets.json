@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		},
+		{
+			"item": "lostinfinity:darksteel_shards"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:darksteel_sheets"
+	}
+}

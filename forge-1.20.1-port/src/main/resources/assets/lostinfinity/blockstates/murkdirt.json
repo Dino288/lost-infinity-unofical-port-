@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:murkdirt", "weight": 100 },
+		{ "model": "lostinfinity:murkdirt2", "weight": 100 },
+		{ "model": "lostinfinity:murkdirt3", "weight": 100 },
+		{ "model": "lostinfinity:murkdirt4", "weight": 100 }
+		]
+	}
+}

@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " mx",
+        "yvv",
+        "  y"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:multigalactic_power_crystal"
+        },
+        "v":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        },
+        "y":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "m":
+        {
+            "item": "lostinfinity:quickflame_solution"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:the_timekeeper"
+    }
+}

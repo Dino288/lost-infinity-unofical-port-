@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "lostinfinity:blocks/logs_archblighted_top",
+        "side": "lostinfinity:blocks/logs_archblighted_side2"
+    }
+}

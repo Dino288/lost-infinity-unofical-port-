@@ -1,0 +1,48 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "agd",
+        "bhe",
+        "chf"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:gem_resolve"
+        },
+        "b":
+        {
+            "item": "lostinfinity:gem_ingenuity"
+        },
+        "c":
+        {
+            "item": "lostinfinity:gem_misdirection"
+        },
+        "d":
+        {
+            "item": "lostinfinity:gem_ambition"
+        },
+        "e":
+        {
+            "item": "lostinfinity:gem_aspiration"
+        },
+        "f":
+        {
+            "item": "lostinfinity:gem_dread"
+        },
+        "g":
+        {
+            "item": "lostinfinity:astral_organ"
+        },
+        "h":
+        {
+            "item": "lostinfinity:biocut_metal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:aura_of_allegiance"
+    }
+}

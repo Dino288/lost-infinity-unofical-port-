@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "lostinfinity:corrosive_mix"
+        },
+        {
+            "item": "lostinfinity:corrosive_mix"
+        },
+        {
+            "item": "lostinfinity:corrosive_mix"
+        },
+        {
+            "type": "minecraft:item_nbt",
+            "item": "forge:bucketFilled",
+            "nbt": {
+            "FluidName": "concentrated_acid",
+            "Amount": 1000
+            }
+        }
+    ],
+    "result":
+    {
+        "item": "lostinfinity:carbonic_acid"
+    }
+}

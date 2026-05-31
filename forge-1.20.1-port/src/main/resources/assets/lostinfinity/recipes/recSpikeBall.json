@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "xzx",
+        " x "
+    ],
+    "key":
+    {
+        "z":
+        {
+            "item": "lostinfinity:slimed_bedrock"
+        },
+        "x":
+        {
+            "item": "lostinfinity:razor_fangs"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:spike_ball",
+        "count": 2
+    }
+}

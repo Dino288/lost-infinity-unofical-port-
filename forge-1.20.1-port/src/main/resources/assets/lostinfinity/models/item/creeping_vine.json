@@ -1,0 +1,28 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lostinfinity:items/creeping_vine"
+  },
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 0, -90, 0 ],
+			"translation": [ 0, -0.5, -3],
+			"scale": [ 1.5, 1.5, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [0,-90,0],
+			"translation": [ 5, 4, 0],
+			"scale": [ 1.5, 1.5, 1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 0, 90, 0 ],
+			"translation": [ 0, -0.5, -3],
+			"scale": [ 1.5, 1.5, 1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0,90,0],
+			"translation": [ 5, 4, 0],
+			"scale": [ 1.5, 1.5, 1]
+		}
+	}
+}

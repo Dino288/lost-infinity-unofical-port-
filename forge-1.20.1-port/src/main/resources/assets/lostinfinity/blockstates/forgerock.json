@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:forgerock", "weight": 100 },
+        { "model": "lostinfinity:forgerock2", "weight": 100 },
+        { "model": "lostinfinity:forgerock3", "weight": 100 },
+        { "model": "lostinfinity:forgerock4", "weight": 100 }
+        ]
+    }
+}

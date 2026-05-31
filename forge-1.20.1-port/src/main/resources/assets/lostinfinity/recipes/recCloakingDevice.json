@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ava",
+        "vxv",
+        "ava"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "x":
+        {
+            "item": "lostinfinity:cerulean_lens"
+        },
+        "v":
+        {
+            "item": "lostinfinity:anti_radar_chip"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:cloaking_device"
+    }
+}

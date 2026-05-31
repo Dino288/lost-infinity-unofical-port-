@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"particle": "lostinfinity:blocks/murkbricks",
+        "down": "lostinfinity:blocks/murkbricks",
+        "up": "lostinfinity:blocks/rift_entangled_tile_6",
+        "north": "lostinfinity:blocks/murkbricks",
+        "east": "lostinfinity:blocks/murkbricks",
+        "south": "lostinfinity:blocks/murkbricks",
+        "west": "lostinfinity:blocks/murkbricks"
+	}
+}

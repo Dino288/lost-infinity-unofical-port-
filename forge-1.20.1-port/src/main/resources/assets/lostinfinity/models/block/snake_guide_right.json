@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+    	"particle": "lostinfinity:blocks/champion_reinforcement",
+        "down": "lostinfinity:blocks/champion_reinforcement",
+        "up": "lostinfinity:blocks/snake_guide_right",
+        "north": "lostinfinity:blocks/champion_reinforcement",
+        "east": "lostinfinity:blocks/champion_reinforcement",
+        "south": "lostinfinity:blocks/champion_reinforcement",
+        "west": "lostinfinity:blocks/champion_reinforcement"
+    }
+}

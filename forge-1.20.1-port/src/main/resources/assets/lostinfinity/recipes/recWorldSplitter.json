@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " cb",
+        "dae",
+        " d "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:pylon_protector"
+        },
+        "b":
+        {
+            "item": "lostinfinity:heart_of_light"
+        },
+        "c":
+        {
+            "item": "lostinfinity:astral_plane_analyzer"
+        },
+        "d":
+        {
+            "item": "lostinfinity:incandescite_ingot"
+        },
+        "e":
+        {
+            "item": "lostinfinity:supermutated_skull"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:world_splitter"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "vav",
+        "aza",
+        "vmv"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:reflective_plating"
+        },
+        "v":
+        {
+            "item": "lostinfinity:crystallized_alloy"
+        },
+        "m":
+        {
+            "item": "lostinfinity:crimson_transducer"
+        },
+        "z":
+        {
+            "item": "lostinfinity:gem_misdirection"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:mirror_shield"
+    }
+}

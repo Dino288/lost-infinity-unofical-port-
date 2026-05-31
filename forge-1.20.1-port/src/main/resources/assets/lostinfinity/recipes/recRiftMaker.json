@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:serpentine_shield"
+		},
+		{
+			"item": "lostinfinity:phototenzyte_ingot"
+		},
+		{
+			"item": "lostinfinity:luminescent_stingers"
+		},
+		{
+			"item": "lostinfinity:luminescent_stingers"
+		},
+		{
+			"item": "lostinfinity:gem_cruelty"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:rift_maker"
+	}
+}

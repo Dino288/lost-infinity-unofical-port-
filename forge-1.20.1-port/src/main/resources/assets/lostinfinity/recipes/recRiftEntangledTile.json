@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "xax",
+        " xb"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:geodimensional_tunnel"
+        },
+        "x":
+        {
+            "item": "lostinfinity:murky_clay"
+        },
+        "b":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:rift_entangled_tile",
+        "count": 8
+    }
+}

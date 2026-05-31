@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "my ",
+        "yyv",
+        " va"
+    ],
+    "key":
+    {
+        "y":
+        {
+            "item": "lostinfinity:annealed_glass"
+        },
+        "m":
+        {
+            "item": "lostinfinity:glowblood_solution"
+        },
+        "v":
+        {
+            "item": "lostinfinity:synthetic_fibre"
+        },
+        "a":
+        {
+            "item": "lostinfinity:deviant_iron"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:beacon_of_light"
+    }
+}

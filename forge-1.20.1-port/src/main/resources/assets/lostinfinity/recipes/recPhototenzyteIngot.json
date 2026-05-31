@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		},
+		{
+			"item": "lostinfinity:phototenzyte"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:phototenzyte_ingot"
+	}
+}

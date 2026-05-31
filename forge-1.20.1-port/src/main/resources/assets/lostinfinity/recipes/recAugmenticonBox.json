@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "x x",
+        "xax",
+        "xkx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "k":
+        {
+            "item": "lostinfinity:digital_panel"
+        },
+        "a":
+        {
+            "item": "lostinfinity:datadrive"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:augmenticon_box"
+    }
+}

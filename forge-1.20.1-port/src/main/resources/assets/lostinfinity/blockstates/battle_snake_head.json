@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:battle_snake_head_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:battle_snake_head_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:battle_snake_head_2"
+	},
+		"amount=3": {
+		"model": "lostinfinity:battle_snake_head_3"
+	}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"active=true":[
+		{ "model": "lostinfinity:strangleweed_lash", "weight": 100 },
+		{ "model": "lostinfinity:strangleweed_lash2", "weight": 100 },
+		{ "model": "lostinfinity:strangleweed_lash3", "weight": 100 },
+		{ "model": "lostinfinity:strangleweed_lash4", "weight": 100 }
+		],
+		"active=false":[
+		{ "model": "lostinfinity:strangleweed", "weight": 100 },
+		{ "model": "lostinfinity:strangleweed2", "weight": 100 },
+		{ "model": "lostinfinity:strangleweed3", "weight": 100 },
+		{ "model": "lostinfinity:strangleweed4", "weight": 100 }
+		]
+	}
+}

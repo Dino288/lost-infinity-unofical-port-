@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:nightmare_solution"
+		},
+		{
+			"item": "lostinfinity:supermutated_spidereye"
+		},
+		{
+			"item": "lostinfinity:mutant_fungus"
+		},
+		{
+			"item": "lostinfinity:mutant_fungus"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:mortality_solution"
+	}
+}

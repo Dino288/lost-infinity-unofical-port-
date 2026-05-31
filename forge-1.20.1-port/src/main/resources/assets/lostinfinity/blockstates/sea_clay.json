@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=true": {
+      "model": "lostinfinity:sea_clay_active"
+    },
+    "active=false": {
+      "model": "lostinfinity:sea_clay_inactive"
+    }
+  }
+}

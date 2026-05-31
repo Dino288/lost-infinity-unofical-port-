@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "lostinfinity:rotatable_tile" },
+        "facing=east": { "model": "lostinfinity:rotatable_tile_east"},
+        "facing=south": { "model": "lostinfinity:rotatable_tile_south" },
+        "facing=west": { "model": "lostinfinity:rotatable_tile_west"}
+	}
+}

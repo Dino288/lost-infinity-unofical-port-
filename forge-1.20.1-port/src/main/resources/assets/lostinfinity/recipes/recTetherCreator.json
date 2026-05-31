@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xax",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "a":
+        {
+            "item": "lostinfinity:powerchip_tether"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:tether_creator"
+    }
+}

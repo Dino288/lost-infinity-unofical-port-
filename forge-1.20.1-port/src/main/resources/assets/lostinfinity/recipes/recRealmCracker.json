@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dec",
+        "edb",
+        "cba"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:ender_jumper"
+        },
+        "b":
+        {
+            "item": "lostinfinity:infused_nicronium"
+        },
+        "c":
+        {
+            "item": "lostinfinity:sticky_darksteel"
+        },
+        "d":
+        {
+            "item": "lostinfinity:ionite_bar"
+        },
+        "e":
+        {
+            "item": "lostinfinity:myrite_chunk"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:realm_cracker"
+    }
+}
+

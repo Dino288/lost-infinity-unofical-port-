@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/knifegun"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 0, -90, 0 ],
+			"translation": [ 0, 2, 4],
+			"scale": [ 2, 2, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0,-90,0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 0, 90, 0 ],
+			"translation": [ 0, 2, 4],
+			"scale": [ 2, 2, 1.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0,90,0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		}
+	}
+}

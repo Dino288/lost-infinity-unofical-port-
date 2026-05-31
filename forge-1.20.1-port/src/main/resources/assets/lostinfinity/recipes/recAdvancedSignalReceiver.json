@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ay ",
+        "yx ",
+        "  v"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:supermutated_spidereye"
+        },
+        "x":
+        {
+            "item": "lostinfinity:signal_receiver"
+        },
+        "v":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        },
+        "y":
+        {
+            "item": "lostinfinity:deviant_iron"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:advanced_signal_receiver"
+    }
+}

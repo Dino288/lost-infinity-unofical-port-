@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:target_active"
+	},
+		"active=false": {
+		"model": "lostinfinity:target_inactive"
+	}
+	}
+}

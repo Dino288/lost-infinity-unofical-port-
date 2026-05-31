@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"particle": "lostinfinity:blocks/pipe_t_lit",
+        "down": "lostinfinity:blocks/pipe_none",
+        "up": "lostinfinity:blocks/pipe_none",
+        "north": "lostinfinity:blocks/pipe_t_lit",
+        "east": "lostinfinity:blocks/pipe_t_lit",
+        "south": "lostinfinity:blocks/pipe_t_lit",
+        "west": "lostinfinity:blocks/pipe_t_lit"
+	}
+}

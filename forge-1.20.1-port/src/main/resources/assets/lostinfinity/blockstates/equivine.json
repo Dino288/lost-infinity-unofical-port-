@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"active=true":[
+		{ "model": "lostinfinity:equivine_bulb", "weight": 100 },
+		{ "model": "lostinfinity:equivine_bulb2", "weight": 100 },
+		{ "model": "lostinfinity:equivine_bulb3", "weight": 100 },
+		{ "model": "lostinfinity:equivine_bulb4", "weight": 100 },
+		{ "model": "lostinfinity:equivine_bulb5", "weight": 100 },
+		{ "model": "lostinfinity:equivine_bulb6", "weight": 100 }
+		],
+		"active=false":[
+		{ "model": "lostinfinity:equivine", "weight": 100 },
+		{ "model": "lostinfinity:equivine2", "weight": 100 },
+		{ "model": "lostinfinity:equivine3", "weight": 100 },
+		{ "model": "lostinfinity:equivine4", "weight": 100 },
+		{ "model": "lostinfinity:equivine5", "weight": 100 },
+		{ "model": "lostinfinity:equivine6", "weight": 100 }
+		]
+	}
+}

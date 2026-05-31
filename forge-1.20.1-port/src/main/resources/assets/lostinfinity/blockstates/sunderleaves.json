@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:sunderleaves", "weight": 100 },
+        { "model": "lostinfinity:sunderleaves2", "weight": 100 },
+        { "model": "lostinfinity:sunderleaves3", "weight": 100 }
+        ]
+    }
+}

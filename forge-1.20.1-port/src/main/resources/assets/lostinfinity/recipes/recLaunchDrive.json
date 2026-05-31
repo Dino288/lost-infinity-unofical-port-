@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "zyz",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:ion_crystal"
+        },
+        "y":
+        {
+            "item": "lostinfinity:deviant_wing"
+        },
+        "z":
+        {
+            "item": "lostinfinity:power_drive"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:launch_drive"
+    }
+}

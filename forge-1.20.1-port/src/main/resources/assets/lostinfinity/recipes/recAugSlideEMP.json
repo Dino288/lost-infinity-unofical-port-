@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:blank_augment_slide"
+		},
+		{
+			"item": "lostinfinity:positive_magnecronite"
+		},
+		{
+			"item": "lostinfinity:positive_magnecronite"
+		},
+		{
+			"item": "lostinfinity:positive_magnecronite"
+		},
+		{
+			"item": "lostinfinity:negative_magnecronite"
+		},
+		{
+			"item": "lostinfinity:negative_magnecronite"
+		},
+		{
+			"item": "lostinfinity:negative_magnecronite"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:augment_slide_emp"
+	}
+}

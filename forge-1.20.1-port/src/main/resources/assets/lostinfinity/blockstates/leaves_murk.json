@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:leaves_murk", "weight": 100 },
+		{ "model": "lostinfinity:leaves_murk2", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk3", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk4", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk5", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk6", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk7", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk8", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk9", "weight": 2 },
+		{ "model": "lostinfinity:leaves_murk10", "weight": 2 }
+		]
+	}
+}

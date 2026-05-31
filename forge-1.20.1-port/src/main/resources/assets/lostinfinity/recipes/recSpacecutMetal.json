@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:perfectpearl"
+		},
+		{
+			"item": "lostinfinity:celestialiron"
+		},
+		{
+			"item": "lostinfinity:razor_fangs"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:spacecut_metal"
+	}
+}

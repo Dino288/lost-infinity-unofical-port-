@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bde",
+        "a c",
+        "bde"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:power_fuel"
+        },
+        "b":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:super_booster"
+        },
+        "d":
+        {
+            "item": "lostinfinity:aligned_disc"
+        },
+        "e":
+        {
+            "item": "lostinfinity:comet_shower"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:call_of_the_cosmos"
+    }
+}

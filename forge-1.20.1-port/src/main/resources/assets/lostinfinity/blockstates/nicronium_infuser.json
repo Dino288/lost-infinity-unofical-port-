@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"burning=false": {
+		"model": "lostinfinity:nicronium_infuser"
+		},
+		"burning=true": {
+		"model": "lostinfinity:nicronium_infuser_on"
+		}
+	}
+}

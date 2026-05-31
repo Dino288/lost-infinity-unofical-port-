@@ -1,0 +1,23 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:champion_bay", "weight": 100 },
+        { "model": "lostinfinity:champion_bay2", "weight": 100 },
+        { "model": "lostinfinity:champion_bay3", "weight": 100 },
+        { "model": "lostinfinity:champion_bay4", "weight": 100 },
+        { "model": "lostinfinity:champion_bay5", "weight": 100 },
+        { "model": "lostinfinity:champion_bay6", "weight": 100 },
+        { "model": "lostinfinity:champion_bay7", "weight": 100 },
+        { "model": "lostinfinity:champion_bay8", "weight": 100 },
+       	{ "model": "lostinfinity:champion_bay9", "weight": 100 },
+        { "model": "lostinfinity:champion_bay10", "weight": 100 },
+        { "model": "lostinfinity:champion_bay11", "weight": 100 },
+        { "model": "lostinfinity:champion_bay12", "weight": 100 },
+        { "model": "lostinfinity:champion_bay13", "weight": 100 },
+        { "model": "lostinfinity:champion_bay14", "weight": 100 },
+        { "model": "lostinfinity:champion_bay15", "weight": 100 },
+     	{ "model": "lostinfinity:champion_bay16", "weight": 100 },
+        { "model": "lostinfinity:champion_bay17", "weight": 100 }
+        ]
+    }
+}

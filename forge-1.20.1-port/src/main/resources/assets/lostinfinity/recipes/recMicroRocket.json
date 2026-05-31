@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xbx",
+        "cac",
+        "xbx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        },
+        "b":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:dark_magic_powder"
+        },
+        "a":
+        {
+            "item": "lostinfinity:power_fuel"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:micro_rocket",
+        "count": 2
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "x y",
+        "yyy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:superheatedingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:celestialiron"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:masterforged_ingot"
+    }
+}

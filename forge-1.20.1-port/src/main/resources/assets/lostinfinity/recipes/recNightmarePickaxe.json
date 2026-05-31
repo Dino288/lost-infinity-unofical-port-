@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bcd",
+        " ac",
+        "a b"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:phototenzyte_ingot"
+        },
+        "b":
+        {
+            "item": "lostinfinity:nightmare_solution"
+        },
+        "c":
+        {
+            "item": "lostinfinity:darksteel_sheets"
+        },
+        "d":
+        {
+            "item": "lostinfinity:dark_magic_powder"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:nightmare_pickaxe"
+    }
+}

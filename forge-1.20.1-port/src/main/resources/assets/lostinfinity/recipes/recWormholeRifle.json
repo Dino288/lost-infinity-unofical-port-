@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "caa",
+        "bba",
+        " db"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:infused_nicronium"
+        },
+        "b":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:dark_magic_powder"
+        },
+        "d":
+        {
+            "item": "lostinfinity:ultrapowered_capacitor"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:wormhole_rifle"
+    }
+}
+

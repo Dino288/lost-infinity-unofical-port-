@@ -1,0 +1,18 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:fungal_astrorock", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock2", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock3", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock4", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock5", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock6", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock7", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock8", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock9", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock10", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock11", "weight": 100 },
+		{ "model": "lostinfinity:fungal_astrorock12", "weight": 100 }
+		]
+	}
+}

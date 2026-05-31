@@ -1,0 +1,44 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "acb",
+        "fdf",
+        "geg"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:ray_of_selection"
+        },
+        "b":
+        {
+            "item": "lostinfinity:sniper_of_selection"
+        },
+        "c":
+        {
+            "item": "lostinfinity:advanced_relay"
+        },
+        "d":
+        {
+            "item": "lostinfinity:darkworld_data_chip"
+        },
+        "e":
+        {
+            "item": "lostinfinity:astral_plane_analyzer"
+        },
+        "f":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        },
+        "g":
+        {
+            "item": "lostinfinity:ionite_bar"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:the_selector"
+    }
+}

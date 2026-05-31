@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:blank_augment_slide"
+		},
+		{
+			"item": "lostinfinity:spiked_tendril"
+		},
+		{
+			"item": "lostinfinity:spiked_tendril"
+		},
+		{
+			"item": "lostinfinity:spiked_tendril"
+		},
+		{
+			"item": "lostinfinity:everwatching_eye"
+		},
+		{
+			"item": "lostinfinity:everwatching_eye"
+		},
+		{
+			"item": "lostinfinity:everwatching_eye"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:augment_slide_nightmares"
+	}
+}

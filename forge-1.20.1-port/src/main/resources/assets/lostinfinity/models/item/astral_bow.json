@@ -1,0 +1,33 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/astral_bow"
+	},
+    "display": {
+    	"gui": {
+            "rotation": [ 180, 0, -90 ],
+            "translation": [0, 0, 0],
+            "scale": [ 1, 1, 1]
+        },
+        "thirdperson_righthand": {
+			"rotation": [ -90, 20, 0 ],
+			"translation": [ -1, -0.25, -4],
+			"scale": [ 1.5, 1.5, 1]
+		},
+        "thirdperson_lefthand": {
+            "rotation": [ -90, -20, 0 ],
+			"translation": [ -1, -0.25, -4],
+			"scale": [ 1.5, 1.5, 1]
+        },
+        "firstperson_righthand": {
+            "rotation": [ -80, -20, 0 ],
+            "translation": [ -8, -4, -8 ],
+            "scale": [ 3, 3, 1.5 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ -80, 20, 0 ],
+            "translation": [ -8, -4, -8 ],
+            "scale": [ 3, 3, 1.5 ]
+        }
+    }
+}

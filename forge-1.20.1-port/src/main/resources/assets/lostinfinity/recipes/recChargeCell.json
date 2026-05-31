@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " xz",
+        "xax",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:fractured_multiversite"
+        },
+        "a":
+        {
+            "item": "lostinfinity:glistening_crystals"
+        },
+        "z":
+        {
+            "item": "lostinfinity:polyamplification_solution"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:charge_cell"
+    }
+}

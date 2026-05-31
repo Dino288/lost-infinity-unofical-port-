@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xyx",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:powercrystal_yellow"
+        },
+        "y":
+        {
+            "item": "lostinfinity:powersphere_yellow"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:power_block_yellow"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "axa",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "a":
+        {
+            "item": "lostinfinity:shimmering_gloss"
+        },
+        "y":
+        {
+            "item": "lostinfinity:crystalized_bone"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:crystallized_alloy"
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:datadrive"
+		},
+		{
+			"item": "lostinfinity:organic_fuse"
+		},
+		{
+			"item": "lostinfinity:organic_fuse"
+		},
+		{
+			"item": "lostinfinity:organic_fuse"
+		},
+		{
+			"item": "lostinfinity:crimson_transducer"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:datadrive_laser"
+	}
+}

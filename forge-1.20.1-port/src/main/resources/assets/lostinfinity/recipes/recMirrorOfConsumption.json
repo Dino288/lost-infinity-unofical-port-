@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "cad",
+        "bab",
+        "beb"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:annealed_glass"
+        },
+        "b":
+        {
+            "item": "lostinfinity:infused_nicronium"
+        },
+        "c":
+        {
+            "item": "lostinfinity:suction_pad"
+        },
+        "d":
+        {
+            "item": "lostinfinity:ball_of_webs"
+        },
+        "e":
+        {
+            "item": "lostinfinity:gem_resolve"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:mirror_of_consumption"
+    }
+}

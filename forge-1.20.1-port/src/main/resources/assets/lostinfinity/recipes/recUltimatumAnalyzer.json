@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "ava",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "v":
+        {
+            "item": "lostinfinity:atlas_beacon"
+        },
+        "a":
+        {
+            "item": "lostinfinity:mysterious_gloop"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:ultimatum_analyzer_empty"
+    }
+}

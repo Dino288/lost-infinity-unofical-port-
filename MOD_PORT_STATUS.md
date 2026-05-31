@@ -1,0 +1,95 @@
+# Lost Infinity Stones 1.20.1 Forge Port Status
+
+Target:
+- Minecraft: 1.20.1
+- Forge: 47.4.10, the current Recommended build for 1.20.1
+- Original jar: lostinfinity-1.16.4.jar
+
+What was done:
+- Confirmed the jar metadata is actually a Forge 1.12.2 mod, not a 1.16.4 mod.
+- Downloaded Forge MDK `forge-1.20.1-47.4.10-mdk.zip`.
+- Downloaded CFR `0.152`.
+- Decompiled the jar into `decompiled/`.
+- Created a Forge 1.20.1 workspace in `forge-1.20.1-port/`.
+- Copied recovered Java sources into `forge-1.20.1-port/src/main/java/xol/lostinfinity/`.
+- Copied original assets into `forge-1.20.1-port/src/main/resources/assets/lostinfinity/`.
+- Updated Gradle metadata to use:
+  - mod id: `lostinfinity`
+  - mod name: `Lost Infinity Stones`
+  - mod version: `1.20.1-port.0`
+  - group id: `xol.lostinfinity`
+- Updated `pack.mcmeta` to pack format `15`.
+- Fixed one CFR-invalid decompile artifact in `LabPathGenerator`.
+- Fixed local Gradle/Java HTTPS trust issues by:
+  - using a local Gradle 8.8 distribution zip
+  - setting `systemProp.net.minecraftforge.gradle.check.certs=false`
+  - setting `org.gradle.jvmargs=-Xmx3G -Djavax.net.ssl.trustStoreType=Windows-ROOT`
+- Ran compile passes and reached real Java port errors.
+- Applied a first mechanical import/name migration for common 1.12.2 -> 1.20.1 classes.
+- Continued on 2026-05-31 by moving the broken decompiled source out of the compile path into `legacy-decompiled-src/`.
+- Created a modern Forge 1.20.1 bootstrap under `xol.lostinfinity`.
+- Generated modern deferred registries from recovered assets:
+  - 831 blocks from `assets/lostinfinity/blockstates`
+  - 831 block items
+  - 1,157 standalone items from `assets/lostinfinity/models/item`
+- Loaded the original recovered texture assets into the 1.20.1 resources:
+  - 4,589 texture files under `assets/lostinfinity/textures`
+- Generated modern entity registration scaffolding from recovered legacy IDs:
+  - 460 entity type IDs
+  - 296 spawn egg items
+  - placeholder mob/projectile classes so the IDs register on 1.20.1
+  - placeholder client renderer registration so entity types have a renderer path
+- Added data-driven dimension scaffolding for 8 recovered dimension IDs:
+  - `infinitemurk`
+  - `celestialvoid`
+  - `cartographerrealmtop`
+  - `cartographerrealmmid`
+  - `cartographerrealmbot`
+  - `grandmasteroutpost`
+  - `nonexistence`
+  - `shadowsea`
+- Added a `Lost Infinity Stones` creative tab.
+- Converted legacy `en_us.lang` translations to `en_us.json`.
+- Built a 1.20.1 Forge jar successfully.
+- Ran a Forge 1.20.1 dedicated server dev launch and reached a successful server start.
+
+Current compile result:
+- Command: `.\gradlew.bat build`
+- Current modern bootstrap project compiles and builds successfully.
+- Output jar: `lostinfinity-1.20.1-forge-47.4.10-content-bootstrap.jar`
+- Server smoke test:
+  - Command: `.\gradlew.bat runServer --args nogui`
+  - Result: server reached `Done` and loaded the mod namespace successfully.
+  - Runtime log reported `831 blocks`, `2284 items`, and `460 entity types`.
+- The preserved legacy decompiled source still does not compile as-is.
+- Historical error counts:
+  - First compile pass after decompile had `93,996` errors.
+  - After the first mechanical migration pass, the compiler reported `72,259` errors.
+
+Current main blockers:
+- The registered entities are placeholder 1.20.1 entities, not the original AI, attacks, movement, bosses, animations, or projectile behavior.
+- The generated dimension JSONs create valid dimension keys, but they reuse simple Overworld-style noise settings and a fixed plains biome. Original custom biomes, structures, terrain, and portals still need manual porting.
+- The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
+- Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
+- Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.
+- Old Forge lifecycle events (`FMLPreInitializationEvent`, `FMLInitializationEvent`, etc.) need a modern mod constructor and event bus registration.
+- Old registries need `DeferredRegister`/`RegistryObject`.
+- Old networking (`SimpleNetworkWrapper`, `IMessage`, `IMessageHandler`) needs modern `SimpleChannel`.
+- Old rendering/model classes (`ModelBase`, `ModelRenderer`, `GlStateManager`, old particle factories) need 1.20.1 client renderer rewrites.
+- Old dimensions/worldgen need 1.20.1 data-driven dimension/biome/levelgen rewrites.
+- Decompiled source contains SRG method names like `func_180639_a`, so methods need remapping to modern Mojang names.
+- Some mechanical class renames were applied, such as `TileEntity*` -> `BlockEntity*`, so related references and constructors need deliberate cleanup.
+
+Recommended next path:
+- Port in vertical slices instead of trying to compile all 2,169 decompiled Java files at once.
+- Start with mod bootstrap, registries, simple blocks/items, and creative tabs.
+- Then port block entities and containers/menus.
+- Then entities/projectiles.
+- Then client renderers/models/particles.
+- Then dimensions/worldgen.
+- Finally port custom commands, networking, recipes, and data generation.
+
+Important note:
+- This is a source reconstruction and major port, not a jar metadata update.
+- The current jar is a content-registration bootstrap. It should expose recovered block/item IDs and assets, but it does not yet restore the original custom gameplay behavior, entities, GUIs, dimensions, networking, machines, particles, or renderers.
+- A fully functional 1.20.1 port still requires substantial manual engineering across most systems in the mod.

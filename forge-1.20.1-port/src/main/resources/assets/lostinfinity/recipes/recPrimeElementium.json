@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:elementium_bow_mk3"
+		},
+		{
+			"item": "lostinfinity:gem_perception"
+		},
+		{
+			"item": "lostinfinity:ultrapowered_capacitor"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:prime_elementium_bow"
+	}
+}

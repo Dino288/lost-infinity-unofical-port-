@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "v v",
+        "aza",
+        "vav"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:crystal_of_curses"
+        },
+        "v":
+        {
+            "item": "lostinfinity:haunted_ingot"
+        },
+        "z":
+        {
+            "item": "lostinfinity:gem_ingenuity"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:hexbreaker"
+    }
+}

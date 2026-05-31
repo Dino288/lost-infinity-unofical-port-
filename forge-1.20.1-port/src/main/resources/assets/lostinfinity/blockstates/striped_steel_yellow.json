@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "lostinfinity:striped_steel_yellow" },
+        "axis=z":     { "model": "lostinfinity:striped_steel_yellow", "x": 90 },
+        "axis=x":     { "model": "lostinfinity:striped_steel_yellow", "x": 90, "y": 90 },
+        "axis=none":   { "model": "lostinfinity:striped_steel_yellow" }
+    }
+}

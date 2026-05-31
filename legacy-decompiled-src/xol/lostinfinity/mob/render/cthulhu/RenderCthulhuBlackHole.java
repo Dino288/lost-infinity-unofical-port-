@@ -1,0 +1,108 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  javax.annotation.Nullable
+ *  net.minecraft.client.renderer.BufferBuilder
+ *  net.minecraft.client.renderer.GlStateManager
+ *  net.minecraft.client.renderer.Tessellator
+ *  net.minecraft.client.renderer.culling.ICamera
+ *  net.minecraft.client.renderer.entity.Render
+ *  net.minecraft.client.renderer.entity.RenderManager
+ *  net.minecraft.client.renderer.vertex.DefaultVertexFormats
+ *  net.minecraft.util.ResourceLocation
+ *  net.minecraft.util.math.Mth
+ *  org.lwjgl.util.vector.Quaternion
+ */
+package xol.lostinfinity.mob.render.cthulhu;
+
+import javax.annotation.Nullable;
+import net.minecraft.client.renderer.BufferBuilder;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.culling.ICamera;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import org.lwjgl.util.vector.Quaternion;
+import xol.lostinfinity.mob.entity.cthulhu.EntityCthulhuBlackHole;
+
+public class RenderCthulhuBlackHole
+extends Render<EntityCthulhuBlackHole> {
+    public static final ResourceLocation TEXTURE = new ResourceLocation("lostinfinity:textures/particles/blackhole_portal.png");
+    private static final ResourceLocation TEXTURE_RING = new ResourceLocation("lostinfinity:textures/particles/blackhole_ring.png");
+
+    public RenderCthulhuBlackHole(RenderManager renderManager) {
+        super(renderManager);
+    }
+
+    public boolean shouldRender(EntityCthulhuBlackHole livingEntity, ICamera camera, double camX, double camY, double camZ) {
+        return true;
+    }
+
+    public void doRender(EntityCthulhuBlackHole entity, double x, double y, double z, float entityYaw, float partialTicks) {
+        int animationTick = entity.getAnimationTick();
+        this.func_110776_a(TEXTURE);
+        GlStateManager.func_179129_p();
+        GlStateManager.func_179140_f();
+        float growth = (float)Mth.func_151238_b((double)entity.getLastGrowth(), (double)entity.getGrowth(), (double)partialTicks);
+        float rotation = (float)Mth.func_151238_b((double)entity.getLastRotation(), (double)entity.getRotation(), (double)partialTicks);
+        float alpha = 1.0f;
+        if (entity.field_70173_aa >= 175) {
+            alpha -= (float)(entity.field_70173_aa - 175) * 0.04f;
+        }
+        Tessellator tessellator = Tessellator.func_178181_a();
+        BufferBuilder bufferbuilder = tessellator.func_178180_c();
+        GlStateManager.func_179147_l();
+        GlStateManager.func_179092_a((int)516, (float)0.2f);
+        GlStateManager.func_179112_b((int)770, (int)771);
+        GlStateManager.func_179131_c((float)1.0f, (float)1.0f, (float)1.0f, (float)alpha);
+        GlStateManager.func_179094_E();
+        GlStateManager.func_179137_b((double)x, (double)y, (double)z);
+        GlStateManager.func_179094_E();
+        GlStateManager.func_179114_b((float)(rotation * 57.29578f), (float)0.0f, (float)-1.0f, (float)0.0f);
+        bufferbuilder.func_181668_a(7, DefaultVertexFormats.field_181707_g);
+        bufferbuilder.func_181662_b((double)(-0.5f * growth), 0.0, (double)(0.5f * growth)).func_187315_a(0.0, 1.0).func_181675_d();
+        bufferbuilder.func_181662_b((double)(-0.5f * growth), 0.0, (double)(-0.5f * growth)).func_187315_a(0.0, 0.0).func_181675_d();
+        bufferbuilder.func_181662_b((double)(0.5f * growth), 0.0, (double)(-0.5f * growth)).func_187315_a(1.0, 0.0).func_181675_d();
+        bufferbuilder.func_181662_b((double)(0.5f * growth), 0.0, (double)(0.5f * growth)).func_187315_a(1.0, 1.0).func_181675_d();
+        tessellator.func_78381_a();
+        GlStateManager.func_179121_F();
+        this.func_110776_a(TEXTURE_RING);
+        if (animationTick < 150) {
+            int startRing;
+            int ringWidth = 4;
+            int ringCount = 6;
+            int frequency = 5;
+            float ratio = ((float)animationTick + partialTicks) % (float)frequency / (float)frequency;
+            float ringSize = (float)Mth.func_151238_b((double)ringWidth, (double)0.0, (double)ratio);
+            int rings = Math.min(ringCount - (animationTick - 120) / frequency, ringCount);
+            for (int i = startRing = Math.max(ringCount - 1 - animationTick / frequency, 0); i < rings; ++i) {
+                GlStateManager.func_179094_E();
+                GlStateManager.func_187444_a((Quaternion)entity.getRotation(i));
+                if (i >= ringCount - 2) {
+                    GlStateManager.func_179131_c((float)1.0f, (float)1.0f, (float)1.0f, (float)((ratio + (float)ringCount - (float)i - 1.0f) * 0.5f));
+                }
+                bufferbuilder.func_181668_a(7, DefaultVertexFormats.field_181707_g);
+                bufferbuilder.func_181662_b((double)(-(ringSize + (float)(i * ringWidth))), 0.5, (double)(ringSize + (float)(i * ringWidth))).func_187315_a(0.0, 1.0).func_181675_d();
+                bufferbuilder.func_181662_b((double)(-(ringSize + (float)(i * ringWidth))), 0.5, (double)(-(ringSize + (float)(i * ringWidth)))).func_187315_a(0.0, 0.0).func_181675_d();
+                bufferbuilder.func_181662_b((double)(ringSize + (float)(i * ringWidth)), 0.5, (double)(-(ringSize + (float)(i * ringWidth)))).func_187315_a(1.0, 0.0).func_181675_d();
+                bufferbuilder.func_181662_b((double)(ringSize + (float)(i * ringWidth)), 0.5, (double)(ringSize + (float)(i * ringWidth))).func_187315_a(1.0, 1.0).func_181675_d();
+                tessellator.func_78381_a();
+                GlStateManager.func_179121_F();
+            }
+        }
+        GlStateManager.func_179121_F();
+        GlStateManager.func_179145_e();
+        GlStateManager.func_179089_o();
+        GlStateManager.func_179084_k();
+    }
+
+    @Nullable
+    protected ResourceLocation getEntityTexture(EntityCthulhuBlackHole entity) {
+        return null;
+    }
+}
+

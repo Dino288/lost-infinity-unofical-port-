@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dad",
+        "abc",
+        "dcd"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:darksteel_sheets"
+        },
+        "b":
+        {
+            "item": "lostinfinity:flexible_husk"
+        },
+        "c":
+        {
+            "item": "lostinfinity:prismosis_rod"
+        },
+        "d":
+        {
+            "item": "lostinfinity:razor_edged_crystal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:razor_of_infinity"
+    }
+}

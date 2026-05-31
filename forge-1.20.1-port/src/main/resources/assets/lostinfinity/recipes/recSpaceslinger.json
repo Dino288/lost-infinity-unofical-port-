@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        "aaz",
+        " a "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:cursedemerald"
+        },
+        "y":
+        {
+            "item": "lostinfinity:supermutated_gel"
+        },
+        "z":
+        {
+            "item": "lostinfinity:supermutated_pearl"
+        },
+        "x":
+        {
+            "item": "lostinfinity:lifeboundemerald"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:spaceslinger"
+    }
+}

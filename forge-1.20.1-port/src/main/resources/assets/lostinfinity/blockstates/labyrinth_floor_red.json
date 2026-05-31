@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:labyrinth_floor_red", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red2", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red3", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red4", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red5", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red6", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red7", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red8", "weight": 100 },
+        { "model": "lostinfinity:labyrinth_floor_red9", "weight": 100 }
+        ]
+    }
+}

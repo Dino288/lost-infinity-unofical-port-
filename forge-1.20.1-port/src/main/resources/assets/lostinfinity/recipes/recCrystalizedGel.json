@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "xax",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:celestialquartz"
+        },
+        "a":
+        {
+            "item": "lostinfinity:livingslime"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:crystalizedgel"
+    }
+}

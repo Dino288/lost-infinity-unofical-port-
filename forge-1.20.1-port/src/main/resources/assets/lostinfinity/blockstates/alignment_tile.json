@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:alignment_tile_lit"
+	},
+		"active=false": {
+		"model": "lostinfinity:alignment_tile"
+	}
+	}
+}

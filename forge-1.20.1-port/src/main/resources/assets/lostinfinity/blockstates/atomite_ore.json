@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:atomite_ore_reactive"
+	},
+		"active=false": {
+		"model": "lostinfinity:atomite_ore"
+	}
+	}
+}

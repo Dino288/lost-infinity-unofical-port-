@@ -1,0 +1,43 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/laser_gun"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"lostinfinity:charging": 1
+			},
+			"model": "lostinfinity:item/laser_gun_charging"
+		},
+		{
+			"predicate": {
+				"lostinfinity:charging": 1,
+				"lostinfinity:charge": 1
+			},
+			"model": "lostinfinity:item/laser_gun_charged"
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 1, -8],
+			"scale": [2, 2, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 1, -8],
+			"scale": [2, 2, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -90, 0],
+			"translation": [5, 4, -3],
+			"scale": [2, 2, 1.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [5, 4, -3],
+			"scale": [2, 2, 1.5]
+		}
+	}
+}

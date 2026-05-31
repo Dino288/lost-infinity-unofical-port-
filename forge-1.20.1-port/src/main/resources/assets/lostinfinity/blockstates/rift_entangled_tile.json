@@ -1,0 +1,52 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:rift_entangled_tile_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:rift_entangled_tile_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:rift_entangled_tile_2"
+	},
+		"amount=3": {
+		"model": "lostinfinity:rift_entangled_tile_3"
+	},
+		"amount=4": {
+		"model": "lostinfinity:rift_entangled_tile_4"
+	},
+		"amount=5": {
+		"model": "lostinfinity:rift_entangled_tile_5"
+	},
+		"amount=6": {
+		"model": "lostinfinity:rift_entangled_tile_6"
+	},
+		"amount=7": {
+		"model": "lostinfinity:rift_entangled_tile_7"
+	},
+		"amount=8": {
+		"model": "lostinfinity:rift_entangled_tile_8"
+	},
+		"amount=9": {
+		"model": "lostinfinity:rift_entangled_tile_9"
+	},
+		"amount=10": {
+		"model": "lostinfinity:rift_entangled_tile_10"
+	},
+		"amount=11": {
+		"model": "lostinfinity:rift_entangled_tile_11"
+	},
+		"amount=12": {
+		"model": "lostinfinity:rift_entangled_tile_12"
+	},
+		"amount=13": {
+		"model": "lostinfinity:rift_entangled_tile_13"
+	},
+		"amount=14": {
+		"model": "lostinfinity:rift_entangled_tile_14"
+	},
+		"amount=15": {
+		"model": "lostinfinity:rift_entangled_tile_15"
+	}
+	}
+}

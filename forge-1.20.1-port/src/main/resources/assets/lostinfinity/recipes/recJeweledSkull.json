@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "yxy",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "minecraft:skull",
+            "data": 1
+        },
+        "y":
+        {
+            "item": "lostinfinity:celestialemerald"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:jeweledskulltrophy"
+    }
+}

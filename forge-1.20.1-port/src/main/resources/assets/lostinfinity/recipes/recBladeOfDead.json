@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yv",
+        "zxy",
+        "az "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:plucked_eye"
+        },
+        "z":
+        {
+            "item": "lostinfinity:plated_bone"
+        },
+        "v":
+        {
+            "item": "lostinfinity:gem_dread"
+        },
+        "x":
+        {
+            "item": "lostinfinity:ghosthunter"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:blade_of_the_dead"
+    }
+}

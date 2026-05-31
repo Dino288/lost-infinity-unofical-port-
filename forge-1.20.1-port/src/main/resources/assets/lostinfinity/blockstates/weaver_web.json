@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:weaver_web", "weight": 100 },
+		{ "model": "lostinfinity:weaver_web2", "weight": 100 },
+		{ "model": "lostinfinity:weaver_web3", "weight": 100 },
+		{ "model": "lostinfinity:weaver_web4", "weight": 100 }
+		]
+	}
+}

@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dbd",
+        "bab",
+        "cbc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:voidstone"
+        },
+        "b":
+        {
+            "item": "lostinfinity:inverse_magnecronite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:negative_magnecronite"
+        },
+        "d":
+        {
+            "item": "lostinfinity:deviant_iron"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:ball_of_contained_quarks",
+        "count": 2
+    }
+}

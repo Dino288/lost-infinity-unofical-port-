@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "lostinfinity:blocks/nebulous_beacon_top",
+    "down": "lostinfinity:blocks/nebulous_beacon_bottom",
+    "up": "lostinfinity:blocks/nebulous_beacon_top",
+    "north": "lostinfinity:blocks/nebulous_beacon_side",
+    "east": "lostinfinity:blocks/nebulous_beacon_side",
+    "south": "lostinfinity:blocks/nebulous_beacon_side",
+    "west": "lostinfinity:blocks/nebulous_beacon_side"
+  }
+}

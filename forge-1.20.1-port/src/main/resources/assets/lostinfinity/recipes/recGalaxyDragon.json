@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ffb",
+        "fda",
+        "ced"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:multigalactic_power_crystal"
+        },
+        "b":
+        {
+            "item": "lostinfinity:giant_heart"
+        },
+        "c":
+        {
+            "item": "lostinfinity:life_synchronizer"
+        },
+        "d":
+        {
+            "item": "lostinfinity:infused_nicronium"
+        },
+       "e":
+        {
+            "item": "lostinfinity:organic_wire"
+        },
+        "f":
+        {
+            "item": "lostinfinity:durable_husk"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:galaxy_dragon"
+    }
+}
+

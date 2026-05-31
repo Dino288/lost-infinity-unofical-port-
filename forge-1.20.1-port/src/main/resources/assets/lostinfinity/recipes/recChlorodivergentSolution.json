@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:polycharge_solution"
+		},
+		{
+			"item": "lostinfinity:acidblood_solution"
+		},
+		{
+			"item": "lostinfinity:toxic_spore_sample"
+		},
+		{
+			"item": "lostinfinity:toxic_spore_sample"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:chlorodivergent_solution",
+		"count": 4
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " a ",
+        "yxy",
+        "yyy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:ion_crystal"
+        },
+        "a":
+        {
+            "item": "lostinfinity:mastercut_diamond"
+        },
+        "y":
+        {
+            "item": "lostinfinity:voidcut_metal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:mounted_crystal"
+    }
+}

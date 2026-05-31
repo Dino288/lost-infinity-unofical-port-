@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "lostinfinity:blocks/blighted_core_active"
+	}
+}

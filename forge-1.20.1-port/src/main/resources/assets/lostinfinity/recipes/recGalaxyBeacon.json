@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "zaz",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:celestialredstone"
+        },
+        "z":
+        {
+            "item": "lostinfinity:deviantenderpearl"
+        },
+        "a":
+        {
+            "item": "lostinfinity:blazingstar"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:galaxybeacon"
+    }
+}

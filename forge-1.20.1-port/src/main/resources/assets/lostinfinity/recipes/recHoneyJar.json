@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yxy",
+        "yxy",
+        "yyy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:reinforced_glass"
+        },
+        "y":
+        {
+            "item": "lostinfinity:hivenite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:honey_jar_empty",
+        "count": 2
+    }
+}

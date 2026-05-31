@@ -1,0 +1,7 @@
+{
+	"parent": "block/carpet",
+	"textures": {
+		"particle": "lostinfinity:blocks/cosmic_fracture",
+		"wool": "lostinfinity:blocks/cosmic_fracture"
+	}
+}

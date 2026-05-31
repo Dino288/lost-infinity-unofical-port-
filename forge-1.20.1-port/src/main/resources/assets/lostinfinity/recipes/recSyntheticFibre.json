@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:deviantbearhide"
+		},
+		{
+			"item": "lostinfinity:sticky_hide"
+		},
+		{
+			"item": "lostinfinity:durable_husk"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:synthetic_fibre"
+	}
+}

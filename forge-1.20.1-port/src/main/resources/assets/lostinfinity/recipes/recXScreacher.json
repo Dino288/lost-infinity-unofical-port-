@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dad",
+        "fbf",
+        "cgc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:supermutated_saddle"
+        },
+        "b":
+        {
+            "item": "lostinfinity:rapid_illuminator"
+        },
+        "c":
+        {
+            "item": "lostinfinity:super_cell"
+        },
+        "d":
+        {
+            "item": "lostinfinity:biocut_metal"
+        },
+        "f":
+        {
+            "item": "lostinfinity:terracut_metal"
+        },
+        "g":
+        {
+            "item": "lostinfinity:sticky_shell"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:x_screacher"
+    }
+}

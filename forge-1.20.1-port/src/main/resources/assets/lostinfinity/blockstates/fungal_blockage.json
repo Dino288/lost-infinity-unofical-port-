@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"active=true":[
+		{ "model": "lostinfinity:fungal_blockage_clear"}
+		],
+		"active=false":[
+		{ "model": "lostinfinity:fungal_blockage", "weight": 100 },
+		{ "model": "lostinfinity:fungal_blockage2", "weight": 100 },
+		{ "model": "lostinfinity:fungal_blockage3", "weight": 100 },
+		{ "model": "lostinfinity:fungal_blockage4", "weight": 100 }
+		]
+	}
+}

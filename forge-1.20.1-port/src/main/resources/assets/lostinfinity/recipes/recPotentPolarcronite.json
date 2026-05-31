@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xmx",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:weak_polarcronite"
+        },
+        "m":
+        {
+            "item": "lostinfinity:ion_crystal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:potent_polarcronite"
+    }
+}

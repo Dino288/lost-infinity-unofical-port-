@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "beb",
+        "eae",
+        "cdf"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:razor_of_infinity"
+        },
+        "b":
+        {
+            "item": "lostinfinity:electrical_blubber"
+        },
+        "c":
+        {
+            "item": "lostinfinity:super_booster"
+        },
+        "d":
+        {
+            "item": "lostinfinity:power_clamp"
+        },
+        "e":
+        {
+            "item": "lostinfinity:welded_atomite"
+        },
+        "f":
+        {
+            "item": "lostinfinity:sticky_darksteel"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:titan_ring"
+    }
+}

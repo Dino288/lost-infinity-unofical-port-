@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:starfire_throwingknife"
+		},
+		{
+			"item": "lostinfinity:aurorus_throwingknife"
+		},
+		{
+			"item": "lostinfinity:novacron_throwingknife"
+		},
+		{
+			"item": "lostinfinity:moonglow_throwingknife"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:galactic_fragments"
+	}
+}

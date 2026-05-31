@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+    	"particle": "lostinfinity:blocks/augmenticon_creator_side",
+        "down": "lostinfinity:blocks/augmenticon_creator_top",
+        "up": "lostinfinity:blocks/augmenticon_creator_top",
+        "north": "lostinfinity:blocks/augmenticon_creator_side",
+        "east": "lostinfinity:blocks/augmenticon_creator_side",
+        "south": "lostinfinity:blocks/augmenticon_creator_side",
+        "west": "lostinfinity:blocks/augmenticon_creator_side"
+    }
+}

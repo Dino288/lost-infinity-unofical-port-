@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:starfire_wand"
+		},
+		{
+			"item": "lostinfinity:aurorus_wand"
+		},
+		{
+			"item": "lostinfinity:novacron_wand"
+		},
+		{
+			"item": "lostinfinity:moonglow_wand"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:galactic_fragments"
+	}
+}

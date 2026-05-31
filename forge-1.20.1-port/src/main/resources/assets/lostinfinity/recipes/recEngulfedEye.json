@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "yxy",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:plucked_eye"
+        },
+        "y":
+        {
+            "item": "lostinfinity:supermutated_flame"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:engulfed_eye"
+    }
+}

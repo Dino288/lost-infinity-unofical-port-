@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "lostinfinity:blocks/factory_lantern_top",
+        "side": "lostinfinity:blocks/combustion_engine_active"
+    }
+}

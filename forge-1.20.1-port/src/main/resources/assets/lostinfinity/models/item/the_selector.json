@@ -1,0 +1,33 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/the_selector_ah"
+	},
+	"overrides": [
+		{ "predicate": { "lostinfinity:characters": 0.33 }, "model": "lostinfinity:item/the_selector_io"},
+		{ "predicate": { "lostinfinity:characters": 0.66 }, "model": "lostinfinity:item/the_selector_pz"},
+		{ "predicate": { "lostinfinity:characters": 1.0 }, "model": "lostinfinity:item/the_selector_09"}
+    ],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 0, -90, 0 ],
+			"translation": [ 0, 2, -1],
+			"scale": [ 2, 2, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0,-90,0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 0, 90, 0 ],
+			"translation": [ 0, 2, -1],
+			"scale": [ 2, 2, 1.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0,90,0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		}
+	}
+}

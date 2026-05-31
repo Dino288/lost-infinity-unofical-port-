@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:heatsand", "weight": 100 },
+		{ "model": "lostinfinity:heatsand2", "weight": 100 },
+		{ "model": "lostinfinity:heatsand3", "weight": 100 },
+		{ "model": "lostinfinity:heatsand4", "weight": 100 },
+		{ "model": "lostinfinity:heatsand5", "weight": 100 },
+		{ "model": "lostinfinity:heatsand6", "weight": 100 }
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        " ay",
+        "a  "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:celestialemerald"
+        },
+        "x":
+        {
+            "item": "lostinfinity:variantanalyzerfull"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:rodofdeviation"
+    }
+}

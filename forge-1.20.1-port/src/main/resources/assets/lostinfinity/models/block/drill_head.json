@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "lostinfinity:blocks/drill_head_end",
+        "side": "lostinfinity:blocks/drill_head"
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:synchronizer"
+		},
+		{
+			"item": "lostinfinity:multi_timeline_data_chip"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:advanced_synchronizer"
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:synthetic_fibre"
+		},
+		{
+			"item": "lostinfinity:annealed_glass"
+		},
+		{
+			"item": "lostinfinity:deviant_iron"
+		},
+		{
+			"item": "lostinfinity:superstimulant"
+		},
+		{
+			"item": "lostinfinity:superstimulant"
+		},
+		{
+			"item": "lostinfinity:polyamplification_solution"
+		},
+		{
+			"item": "lostinfinity:polyamplification_solution"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:super_charged_injection"
+	}
+}

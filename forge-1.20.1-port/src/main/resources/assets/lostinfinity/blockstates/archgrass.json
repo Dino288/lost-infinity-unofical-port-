@@ -1,0 +1,26 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:archgrass", "weight": 100 },
+        { "model": "lostinfinity:archgrass2", "weight": 100 },
+        { "model": "lostinfinity:archgrass3", "weight": 100 },
+        { "model": "lostinfinity:archgrass4", "weight": 100 },
+        { "model": "lostinfinity:archgrass5", "weight": 100 },
+        { "model": "lostinfinity:archgrass6", "weight": 100 },
+        { "model": "lostinfinity:archgrass7", "weight": 100 },
+        { "model": "lostinfinity:archgrass8", "weight": 100 },
+        { "model": "lostinfinity:archgrass9", "weight": 100 },
+        { "model": "lostinfinity:archgrass10", "weight": 100 },
+        { "model": "lostinfinity:archgrass11", "weight": 100 },
+        { "model": "lostinfinity:archgrass12", "weight": 100 },
+        { "model": "lostinfinity:archgrass13", "weight": 100 },
+        { "model": "lostinfinity:archgrass14", "weight": 100 },
+        { "model": "lostinfinity:archgrass15", "weight": 100 },
+        { "model": "lostinfinity:archgrass16", "weight": 100 },
+        { "model": "lostinfinity:archgrass17", "weight": 100 },
+        { "model": "lostinfinity:archgrass18", "weight": 100 },
+        { "model": "lostinfinity:archgrass19", "weight": 100 },
+        { "model": "lostinfinity:archgrass20", "weight": 100 }
+        ]
+    }
+}

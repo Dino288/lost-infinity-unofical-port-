@@ -1,0 +1,20 @@
+.gradle/
+build/
+run/
+**/.gradle/
+**/build/
+**/run/
+*.log
+*.tmp
+eula.txt
+server.properties
+
+# Local recovery/build helper downloads.
+cfr-0.152.jar
+forge-1.20.1-47.4.10-mdk.zip
+gradle-8.8-bin.zip
+
+# Duplicate extraction/decompile working folders. The preserved source lives in legacy-decompiled-src/.
+decompiled/
+jar-extracted/
+/META-INF/

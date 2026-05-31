@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xa ",
+        "x  "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "a":
+        {
+            "item": "lostinfinity:smoldering_ghasttear"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:scorchedpipe"
+    }
+}

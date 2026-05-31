@@ -1,0 +1,6 @@
+{
+	"parent": "block/cross",
+	"textures": {
+		"cross": "lostinfinity:blocks/mushweed_spore6"
+	}
+}

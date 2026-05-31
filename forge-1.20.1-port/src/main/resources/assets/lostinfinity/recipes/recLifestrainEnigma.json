@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "aya",
+        "yxy",
+        "aya"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:broach_of_deviancy"
+        },
+       	"a":
+        {
+            "item": "lostinfinity:power_funnel"
+        },
+        "y":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:lifestrain_enigma"
+    }
+}

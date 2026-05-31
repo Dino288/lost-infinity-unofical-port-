@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "lostinfinity:fireblood_solution"
+        },
+        {
+            "item": "lostinfinity:fireblood_solution"
+        },
+        {
+            "item": "lostinfinity:fireblood_solution"
+        },
+        {
+            "item": "lostinfinity:acidblood_solution"
+        },
+        {
+            "item": "lostinfinity:acidblood_solution"
+        },
+        {
+            "item": "lostinfinity:acidblood_solution"
+        },
+        {
+            "item": "lostinfinity:concentratedvenom"
+        },
+        {
+            "item": "lostinfinity:concentratedvenom"
+        },
+        {
+            "item": "lostinfinity:concentratedvenom"
+        }
+    ],
+    "result":
+    {
+        "item": "lostinfinity:corrosive_mix"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " a ",
+        "bcb",
+        "bdb"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:advanced_signal_receiver"
+        },
+        "c":
+        {
+            "item": "lostinfinity:interspace_transmitter"
+        },
+       	"b":
+        {
+            "item": "lostinfinity:deviant_iron"
+        },
+        "d":
+        {
+            "item": "lostinfinity:spark_chamber"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:bomb_delivery_drone"
+    }
+}

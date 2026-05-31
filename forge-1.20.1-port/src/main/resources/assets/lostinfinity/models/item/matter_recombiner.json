@@ -1,0 +1,9 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/matter_recombiner_default"
+	},
+		"overrides": [
+		{ "predicate": { "lostinfinity:separation": 1.0 }, "model": "lostinfinity:item/matter_recombiner_separated"}
+    ]
+}

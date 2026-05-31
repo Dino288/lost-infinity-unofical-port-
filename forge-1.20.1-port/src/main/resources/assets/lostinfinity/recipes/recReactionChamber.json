@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " d ",
+        "dad",
+        "bcb"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:ring_of_illusions"
+        },
+        "b":
+        {
+            "item": "lostinfinity:blight_cure"
+        },
+        "c":
+        {
+            "item": "lostinfinity:nanofluoric_acid"
+        },
+        "d":
+        {
+            "item": "lostinfinity:supermutated_pelt"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:reaction_chamber"
+    }
+}

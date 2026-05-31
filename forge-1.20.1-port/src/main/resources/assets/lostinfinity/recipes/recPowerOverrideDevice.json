@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "kzk",
+        "yxy",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:basic_storage_chip"
+        },
+        "z":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        },
+        "y":
+        {
+            "item": "lostinfinity:overcharged_cell"
+        },
+        "k":
+        {
+            "item": "lostinfinity:reflectiveshard"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:power_override_device"
+    }
+}

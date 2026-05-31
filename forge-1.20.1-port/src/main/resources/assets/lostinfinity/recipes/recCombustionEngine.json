@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xax",
+        "xcx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "a":
+        {
+            "item": "lostinfinity:reinforced_glass"
+        },
+        "c":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:combustion_engine"
+    }
+}

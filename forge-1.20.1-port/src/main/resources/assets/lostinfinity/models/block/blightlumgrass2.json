@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+    	"particle": "lostinfinity:blocks/blightlumgrass_side",
+        "down": "lostinfinity:blocks/archlumio_rock",
+        "up": "lostinfinity:blocks/blightlumgrass_top2",
+        "north": "lostinfinity:blocks/blightlumgrass_side",
+        "east": "lostinfinity:blocks/blightlumgrass_side",
+        "south": "lostinfinity:blocks/blightlumgrass_side",
+        "west": "lostinfinity:blocks/blightlumgrass_side"
+    }
+}

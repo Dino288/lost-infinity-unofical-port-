@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "xax",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:deviant_iron"
+        },
+        "a":
+        {
+            "item": "lostinfinity:clovinite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:clovinite_power_bank"
+    }
+}

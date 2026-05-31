@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        "zay",
+        "az "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:supermutated_bone"
+        },
+        "y":
+        {
+            "item": "lostinfinity:darkconcoction"
+        },
+        "z":
+        {
+            "item": "lostinfinity:supermutated_hide"
+        },
+        "x":
+        {
+            "item": "lostinfinity:lifeboundemerald"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:vitalitus"
+    }
+}

@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/head_hunter"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ -55, 90, 20 ],
+			"translation": [ 0, 1.75, -1.25],
+			"scale": [ 1.5, 1.5, 1.2]
+		},
+		"firstperson_righthand": {
+			"rotation": [ -170, 110, 125 ],
+			"translation": [ 0, 5.25, 2.25 ],
+			"scale": [ 1.5, 1.5, 1.2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 55, 90, 110 ],
+			"translation": [ 0, 1.75, -1.25],
+			"scale": [ 1.5, 1.5, 1.2]
+		},
+		"firstperson_lefthand": {
+			"rotation": [170,-110,55],
+			"translation": [ 0, 1.75, -1.25 ],
+			"scale": [ 1.5, 1.5, 1.2]
+		}
+	}
+}

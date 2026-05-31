@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ymx",
+        "akz",
+        "y x"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:deviant_iron"
+        },
+        "y":
+        {
+            "item": "lostinfinity:annealed_glass"
+        },
+        "z":
+        {
+            "item": "lostinfinity:organic_power_cell"
+        },
+        "k":
+        {
+            "item": "lostinfinity:scorchedpipe"
+        },
+        "a":
+        {
+            "item": "lostinfinity:solarum_vial"
+        },
+        "m":
+        {
+            "item": "lostinfinity:burning_sap"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:spark_plug"
+    }
+}

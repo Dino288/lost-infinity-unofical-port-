@@ -1,0 +1,24 @@
+{
+	"variants": {
+		"active=true":[
+		{ "model": "lostinfinity:smokeweed_bulb", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed_bulb2", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed_bulb3", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed_bulb4", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed_bulb5", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed_bulb6", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed_bulb7", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed_bulb8", "weight": 100 }
+		],
+		"active=false":[
+		{ "model": "lostinfinity:smokeweed", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed2", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed3", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed4", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed5", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed6", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed7", "weight": 100 },
+		{ "model": "lostinfinity:smokeweed8", "weight": 100 }
+		]
+	}
+}

@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xav",
+        "aaa",
+        "yam"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "v":
+        {
+            "item": "lostinfinity:laser_blade"
+        },
+        "y":
+        {
+            "item": "lostinfinity:glowing_globes"
+        },
+        "m":
+        {
+            "item": "lostinfinity:mirror_shield"
+        },
+        "x":
+        {
+            "item": "lostinfinity:bladesofduality"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:dual_defender"
+    }
+}

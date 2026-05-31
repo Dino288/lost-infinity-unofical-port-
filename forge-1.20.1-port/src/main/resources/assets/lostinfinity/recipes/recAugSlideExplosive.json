@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:blank_augment_slide"
+		},
+		{
+			"item": "lostinfinity:vile_sac"
+		},
+		{
+			"item": "lostinfinity:vile_sac"
+		},
+		{
+			"item": "lostinfinity:vile_sac"
+		},
+		{
+			"item": "lostinfinity:explosive_sack"
+		},
+		{
+			"item": "lostinfinity:explosive_sack"
+		},
+		{
+			"item": "lostinfinity:explosive_sack"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:augment_slide_explosive"
+	}
+}

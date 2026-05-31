@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dc ",
+        "cab",
+        " be"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:microstorage_power_cluster"
+        },
+        "b":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:deviant_batwing"
+        },
+        "e":
+        {
+            "item": "lostinfinity:dominator"
+        },
+        "d":
+        {
+            "item": "lostinfinity:chemical_synchronizer"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:kingslayer"
+    }
+}

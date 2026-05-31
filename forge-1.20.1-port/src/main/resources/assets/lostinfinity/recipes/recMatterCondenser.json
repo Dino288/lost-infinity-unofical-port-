@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xvx",
+        "vav",
+        "xvx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:reinforced_glass"
+        },
+        "a":
+        {
+            "item": "lostinfinity:power_funnel"
+        },
+        "v":
+        {
+            "item": "lostinfinity:unstable_ingot"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:matter_condenser"
+    }
+}

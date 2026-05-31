@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " mv",
+        " ax",
+        "a  "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "m":
+        {
+            "item": "lostinfinity:bladesofconvergence"
+        },
+        "v":
+        {
+            "item": "lostinfinity:incarnation_of_the_sword"
+        },
+        "x":
+        {
+            "item": "lostinfinity:geodimensional_tunnel"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:blade_of_the_conqueror"
+    }
+}

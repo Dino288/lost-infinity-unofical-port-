@@ -1,0 +1,13 @@
+
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:embergrass", "weight": 100 },
+        { "model": "lostinfinity:embergrass2", "weight": 100 },
+        { "model": "lostinfinity:embergrass3", "weight": 100 },
+        { "model": "lostinfinity:embergrass4", "weight": 100 },
+        { "model": "lostinfinity:embergrass5", "weight": 100 },
+        { "model": "lostinfinity:embergrass6", "weight": 100 }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " k ",
+        "a v",
+        " e "
+    ],
+    "key":
+    {
+        "k":
+        {
+            "item": "lostinfinity:organic_wire"
+        },
+        "e":
+        {
+            "item": "lostinfinity:organic_fuse"
+        },
+        "v":
+        {
+            "item": "lostinfinity:everwatching_eye"
+        },
+        "a":
+        {
+            "item": "lostinfinity:neverwatching_eye"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:eye_battery"
+    }
+}

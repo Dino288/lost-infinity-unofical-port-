@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xex",
+        "xax",
+        "xex"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:radion_fragment"
+        },
+        "e":
+        {
+            "item": "lostinfinity:elastic_thread"
+        },
+        "a":
+        {
+            "item": "lostinfinity:crystal_of_curses"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:present"
+    }
+}

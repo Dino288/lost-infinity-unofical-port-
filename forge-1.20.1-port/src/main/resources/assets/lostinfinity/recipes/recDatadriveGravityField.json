@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:datadrive"
+		},
+		{
+			"item": "lostinfinity:spaceward_gyroscope"
+		},
+		{
+			"item": "lostinfinity:spaceward_gyroscope"
+		},
+		{
+			"item": "lostinfinity:spaceward_gyroscope"
+		},
+		{
+			"item": "lostinfinity:ether_chamber"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:datadrive_gravityfield"
+	}
+}

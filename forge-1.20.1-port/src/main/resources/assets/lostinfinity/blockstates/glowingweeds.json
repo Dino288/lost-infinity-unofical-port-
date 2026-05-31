@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:glowingweeds", "weight": 100 },
+        { "model": "lostinfinity:glowingweeds2", "weight": 100 },
+        { "model": "lostinfinity:glowingweeds3", "weight": 100 },
+        { "model": "lostinfinity:glowingweeds4", "weight": 100 }
+        ]
+    }
+}

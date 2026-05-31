@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "ax ",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:basic_storage_chip"
+        },
+        "y":
+        {
+            "item": "lostinfinity:starcrystal_capacitor"
+        },
+        "a":
+        {
+            "item": "lostinfinity:exothermite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:timeline_monitor"
+    }
+}

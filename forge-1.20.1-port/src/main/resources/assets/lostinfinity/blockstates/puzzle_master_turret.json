@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:puzzle_master_turret_active"
+	},
+		"active=false": {
+		"model": "lostinfinity:puzzle_master_turret"
+	}
+	}
+}

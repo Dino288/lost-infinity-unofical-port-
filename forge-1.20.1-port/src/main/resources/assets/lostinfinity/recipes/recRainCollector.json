@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        " a ",
+        "aaa"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:reinforced_glass"
+        },
+       	"x":
+        {
+            "item": "lostinfinity:deviant_shard"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:rainfall_collector"
+    }
+}

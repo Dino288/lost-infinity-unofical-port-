@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dfd",
+        "xve",
+        " v "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:hyper_knuckle"
+        },
+        "v":
+        {
+            "item": "lostinfinity:voidsplit_bone"
+        },
+        "e":
+        {
+            "item": "lostinfinity:solar_spear"
+        },
+        "d":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "f":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:everlasting_warlord"
+    }
+}

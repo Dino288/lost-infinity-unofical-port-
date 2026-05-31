@@ -1,0 +1,9 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:blightvine_root", "weight": 100 },
+		{ "model": "lostinfinity:blightvine_root2", "weight": 100 },
+		{ "model": "lostinfinity:blightvine_root3", "weight": 100 }
+		]
+	}
+}

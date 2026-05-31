@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:galaxy_vine_pink", "weight": 100 },
+        { "model": "lostinfinity:galaxy_vine_pink2", "weight": 100 }
+        ]
+    }
+}

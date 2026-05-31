@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        "zky",
+        "az "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:slimed_bedrock"
+        },
+        "z":
+        {
+            "item": "lostinfinity:spectral_ingot"
+        },
+        "k":
+        {
+            "item": "lostinfinity:starstorm"
+        },
+        "x":
+        {
+            "item": "lostinfinity:gem_anxiety"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:comet_shower"
+    }
+}

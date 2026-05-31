@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/arc_blaster"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 0, -90, 0 ],
+			"translation": [ 0, 0, -2],
+			"scale": [ 1, 1, 0.7]
+		},
+		"firstperson_righthand": {
+			"rotation": [0,-90,0],
+			"translation": [ 5, 4, 0 ],
+			"scale": [ 1, 1, 0.7]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 0, 90, 0 ],
+			"translation": [ 0, 0, -2],
+			"scale": [ 1, 1, 0.7]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0,90,0],
+			"translation": [ 5, 4, 0 ],
+			"scale": [ 1, 1, 0.7]
+		}
+	}
+}

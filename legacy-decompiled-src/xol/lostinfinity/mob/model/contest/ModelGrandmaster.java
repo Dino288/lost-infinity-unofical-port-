@@ -1,0 +1,114 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.client.model.ModelBase
+ *  net.minecraft.client.model.ModelRenderer
+ *  net.minecraft.client.renderer.GlStateManager
+ *  net.minecraft.entity.Entity
+ *  net.minecraft.util.math.Mth
+ */
+package xol.lostinfinity.mob.model.contest;
+
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.util.Mth;
+
+public class ModelGrandmaster
+extends ModelBase {
+    public ModelRenderer head;
+    public ModelRenderer armr;
+    public ModelRenderer arml;
+    public ModelRenderer legl;
+    public ModelRenderer bodytop;
+    public ModelRenderer coat;
+    public ModelRenderer legr;
+    public ModelRenderer head2;
+    public ModelRenderer head3;
+    public ModelRenderer head4;
+    public ModelRenderer head5;
+
+    public ModelGrandmaster() {
+        this.field_78090_t = 64;
+        this.field_78089_u = 64;
+        this.head5 = new ModelRenderer((ModelBase)this, 40, 10);
+        this.head5.field_78809_i = true;
+        this.head5.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.head5.func_78790_a(2.5f, -9.0f, -2.5f, 2, 3, 6, 0.0f);
+        this.armr = new ModelRenderer((ModelBase)this, 44, 22);
+        this.armr.func_78793_a(0.0f, 3.0f, 0.0f);
+        this.armr.func_78790_a(-8.0f, -2.0f, -2.0f, 4, 12, 4, 0.0f);
+        this.head2 = new ModelRenderer((ModelBase)this, 34, 0);
+        this.head2.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.head2.func_78790_a(-2.0f, -10.0f, -4.5f, 4, 3, 6, 0.0f);
+        this.head3 = new ModelRenderer((ModelBase)this, 24, 0);
+        this.head3.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.head3.func_78790_a(-1.5f, -11.0f, -4.0f, 3, 1, 3, 0.0f);
+        this.head4 = new ModelRenderer((ModelBase)this, 40, 10);
+        this.head4.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.head4.func_78790_a(-4.5f, -9.0f, -2.5f, 2, 3, 6, 0.0f);
+        this.coat = new ModelRenderer((ModelBase)this, 0, 38);
+        this.coat.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.coat.func_78790_a(-4.0f, 0.0f, -3.0f, 8, 18, 6, 0.5f);
+        this.arml = new ModelRenderer((ModelBase)this, 44, 22);
+        this.arml.func_78793_a(0.0f, 3.0f, 0.0f);
+        this.arml.func_78790_a(4.0f, -2.0f, -2.0f, 4, 12, 4, 0.0f);
+        this.legl = new ModelRenderer((ModelBase)this, 0, 22);
+        this.legl.field_78809_i = true;
+        this.legl.func_78793_a(2.0f, 12.0f, 0.0f);
+        this.legl.func_78790_a(-2.0f, 0.0f, -2.0f, 4, 12, 4, 0.0f);
+        this.bodytop = new ModelRenderer((ModelBase)this, 16, 20);
+        this.bodytop.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.bodytop.func_78790_a(-4.0f, 0.0f, -3.0f, 8, 12, 6, 0.0f);
+        this.legr = new ModelRenderer((ModelBase)this, 0, 22);
+        this.legr.func_78793_a(-2.0f, 12.0f, 0.0f);
+        this.legr.func_78790_a(-2.0f, 0.0f, -2.0f, 4, 12, 4, 0.0f);
+        this.head = new ModelRenderer((ModelBase)this, 0, 0);
+        this.head.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.head.func_78790_a(-4.0f, -8.0f, -4.0f, 8, 8, 8, 0.0f);
+    }
+
+    public void func_78088_a(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+        GlStateManager.func_179147_l();
+        GlStateManager.func_179112_b((int)770, (int)771);
+        GlStateManager.func_179131_c((float)1.0f, (float)1.0f, (float)1.0f, (float)((float)((double)(0.6f + 0.1f * Mth.func_76126_a((float)(f2 * 0.5f))) + entity.field_70170_p.field_73012_v.nextDouble() * (double)0.1f)));
+        this.head5.func_78785_a(f5);
+        this.armr.func_78785_a(f5);
+        this.head2.func_78785_a(f5);
+        this.head3.func_78785_a(f5);
+        this.head4.func_78785_a(f5);
+        this.coat.func_78785_a(f5);
+        this.arml.func_78785_a(f5);
+        this.legl.func_78785_a(f5);
+        this.bodytop.func_78785_a(f5);
+        this.legr.func_78785_a(f5);
+        this.head.func_78785_a(f5);
+        GlStateManager.func_179084_k();
+    }
+
+    public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+        modelRenderer.field_78795_f = x;
+        modelRenderer.field_78796_g = y;
+        modelRenderer.field_78808_h = z;
+    }
+
+    public void func_78087_a(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
+        this.head.field_78796_g = netHeadYaw * ((float)Math.PI / 180);
+        this.head.field_78795_f = headPitch * ((float)Math.PI / 180);
+        this.head2.field_78796_g = netHeadYaw * ((float)Math.PI / 180);
+        this.head2.field_78795_f = headPitch * ((float)Math.PI / 180);
+        this.head3.field_78796_g = netHeadYaw * ((float)Math.PI / 180);
+        this.head3.field_78795_f = headPitch * ((float)Math.PI / 180);
+        this.head4.field_78796_g = netHeadYaw * ((float)Math.PI / 180);
+        this.head4.field_78795_f = headPitch * ((float)Math.PI / 180);
+        this.head5.field_78796_g = netHeadYaw * ((float)Math.PI / 180);
+        this.head5.field_78795_f = headPitch * ((float)Math.PI / 180);
+        this.legr.field_78795_f = Mth.func_76134_b((float)(limbSwing * 0.6662f)) * 1.4f * limbSwingAmount * 0.5f;
+        this.legl.field_78795_f = Mth.func_76134_b((float)(limbSwing * 0.6662f + (float)Math.PI)) * 1.4f * limbSwingAmount * 0.5f;
+        this.armr.field_78795_f = Mth.func_76134_b((float)(limbSwing * 0.6662f + (float)Math.PI)) * 2.0f * limbSwingAmount * 0.5f;
+        this.arml.field_78795_f = Mth.func_76134_b((float)(limbSwing * 0.6662f)) * 2.0f * limbSwingAmount * 0.5f;
+    }
+}
+

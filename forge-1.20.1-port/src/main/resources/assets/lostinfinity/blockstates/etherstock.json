@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:etherstock_bloom"
+	},
+		"active=false": {
+		"model": "lostinfinity:etherstock"
+	}
+	}
+}

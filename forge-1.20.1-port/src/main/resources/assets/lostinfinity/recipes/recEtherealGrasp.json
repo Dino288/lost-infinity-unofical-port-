@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dcc",
+        "aec",
+        "bac"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:dangerous_accelerant"
+        },
+        "b":
+        {
+            "item": "lostinfinity:velocitized_femur"
+        },
+        "c":
+        {
+            "item": "lostinfinity:radion_ingot"
+        },
+        "d":
+        {
+            "item": "lostinfinity:reconfigured_matter"
+        },
+        "e":
+        {
+            "item": "lostinfinity:ghostly_husk"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:ethereal_grasp"
+    }
+}
+

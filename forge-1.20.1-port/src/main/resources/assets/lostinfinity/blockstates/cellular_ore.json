@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:cellular_ore", "weight": 100 },
+		{ "model": "lostinfinity:cellular_ore2", "weight": 100 },
+		{ "model": "lostinfinity:cellular_ore3", "weight": 100 },
+		{ "model": "lostinfinity:cellular_ore4", "weight": 100 }
+		]
+	}
+}

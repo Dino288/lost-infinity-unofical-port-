@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "lostinfinity:blocks/neosteel_beam",
+    "down": "lostinfinity:blocks/neosteel_beam_top",
+    "up": "lostinfinity:blocks/cell_charger",
+    "north": "lostinfinity:blocks/neosteel_beam",
+    "east": "lostinfinity:blocks/neosteel_beam",
+    "south": "lostinfinity:blocks/neosteel_beam",
+    "west": "lostinfinity:blocks/neosteel_beam"
+  }
+}

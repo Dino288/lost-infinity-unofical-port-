@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:forgeshroom_green", "weight": 100 },
+		{ "model": "lostinfinity:forgeshroom_green2", "weight": 100 },
+		{ "model": "lostinfinity:forgeshroom_green3", "weight": 100 },
+		{ "model": "lostinfinity:forgeshroom_green4", "weight": 100 }
+		]
+	}
+}

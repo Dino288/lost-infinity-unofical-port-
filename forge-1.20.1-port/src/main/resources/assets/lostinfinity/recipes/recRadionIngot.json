@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		},
+		{
+			"item": "lostinfinity:radion_fragment"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:radion_ingot"
+	}
+}

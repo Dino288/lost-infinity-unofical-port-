@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:blank_augment_slide"
+		},
+		{
+			"item": "lostinfinity:corrupted_root"
+		},
+		{
+			"item": "lostinfinity:corrupted_root"
+		},
+		{
+			"item": "lostinfinity:corrupted_root"
+		},
+		{
+			"item": "lostinfinity:gloom_bulb"
+		},
+		{
+			"item": "lostinfinity:gloom_bulb"
+		},
+		{
+			"item": "lostinfinity:gloom_bulb"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:augment_slide_blight"
+	}
+}

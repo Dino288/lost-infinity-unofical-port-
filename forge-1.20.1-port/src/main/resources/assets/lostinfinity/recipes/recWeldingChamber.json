@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "cbc",
+        "aca",
+        "aca"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "b":
+        {
+            "item": "lostinfinity:murky_clay"
+        },
+        "c":
+        {
+            "item": "lostinfinity:firefeather"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:welding_chamber"
+    }
+}

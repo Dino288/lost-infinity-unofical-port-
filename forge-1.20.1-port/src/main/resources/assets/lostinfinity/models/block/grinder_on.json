@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "lostinfinity:blocks/grinder",
+    "down": "lostinfinity:blocks/grinder",
+    "up": "lostinfinity:blocks/grinder_top_on",
+    "north": "lostinfinity:blocks/grinder",
+    "east": "lostinfinity:blocks/grinder",
+    "south": "lostinfinity:blocks/grinder",
+    "west": "lostinfinity:blocks/grinder"
+  }
+}

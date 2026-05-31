@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:forge_stalactite", "weight": 100 },
+        { "model": "lostinfinity:forge_stalactite2", "weight": 100 },
+        { "model": "lostinfinity:forge_stalactite3", "weight": 100 },
+        { "model": "lostinfinity:forge_stalactite4", "weight": 100 }
+        ]
+    }
+}

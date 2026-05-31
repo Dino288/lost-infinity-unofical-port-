@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ky ",
+        "zae",
+        " xa"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:giant_tentacle"
+        },
+        "y":
+        {
+            "item": "lostinfinity:simple_microcontroller"
+        },
+        "z":
+        {
+            "item": "lostinfinity:crushed_bones"
+        },
+        "e":
+        {
+            "item": "lostinfinity:multigalactic_power_crystal"
+        },
+        "k":
+        {
+            "item": "lostinfinity:eye_battery"
+        },
+        "x":
+        {
+            "item": "lostinfinity:infused_nicronium"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:staff_of_servitude"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "kmk",
+        "ava",
+        "ava"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:annealed_glass"
+        },
+        "v":
+        {
+            "item": "lostinfinity:quickflame_solution"
+        },
+        "k":
+        {
+            "item": "lostinfinity:powerful_polarcronite"
+        },
+        "m":
+        {
+            "item": "lostinfinity:nanofluoric_acid"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:unstable_nitrous_bottle"
+    }
+}

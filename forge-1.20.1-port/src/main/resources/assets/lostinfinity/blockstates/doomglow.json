@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:doomglow", "weight": 100 },
+        { "model": "lostinfinity:doomglow2", "weight": 100 },
+        { "model": "lostinfinity:doomglow3", "weight": 100 }
+        ]
+    }
+}

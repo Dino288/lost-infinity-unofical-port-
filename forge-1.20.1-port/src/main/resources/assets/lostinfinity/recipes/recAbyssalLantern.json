@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "afb",
+        "fcf",
+        "ede"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:astral_organ"
+        },
+        "b":
+        {
+            "item": "lostinfinity:flexible_exobone"
+        },
+        "c":
+        {
+            "item": "lostinfinity:reconfigured_matter"
+        },
+        "d":
+        {
+            "item": "lostinfinity:flexible_husk"
+        },
+        "e":
+        {
+            "item": "lostinfinity:giant_tentacle"
+        },
+        "f":
+        {
+            "item": "lostinfinity:exothermite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:abyssal_lantern"
+    }
+}
+

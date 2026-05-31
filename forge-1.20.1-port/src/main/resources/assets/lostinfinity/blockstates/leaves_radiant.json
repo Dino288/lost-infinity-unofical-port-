@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:leaves_radiant", "weight": 100 },
+        { "model": "lostinfinity:leaves_radiant2", "weight": 100 },
+        { "model": "lostinfinity:leaves_radiant3", "weight": 100 },
+        { "model": "lostinfinity:leaves_radiant4", "weight": 100 }
+        ]
+    }
+}

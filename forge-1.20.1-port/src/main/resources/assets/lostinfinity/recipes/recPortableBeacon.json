@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xyx",
+        "aza",
+        "xax"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:hard_crystal"
+        },
+       	"x":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:atlas_beacon"
+        },
+        "z":
+        {
+            "item": "lostinfinity:gem_imposition"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:portable_beacon"
+    }
+}

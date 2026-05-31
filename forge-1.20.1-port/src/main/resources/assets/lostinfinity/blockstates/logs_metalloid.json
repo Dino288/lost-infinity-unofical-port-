@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "lostinfinity:logs_metalloid" },
+        "axis=z":     { "model": "lostinfinity:logs_metalloid", "x": 90 },
+        "axis=x":     { "model": "lostinfinity:logs_metalloid", "x": 90, "y": 90 },
+        "axis=none":   { "model": "lostinfinity:logs_metalloid" }
+    }
+}

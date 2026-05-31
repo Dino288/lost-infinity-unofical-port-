@@ -1,0 +1,7 @@
+{
+	"parent": "block/carpet",
+	"textures": {
+		"particle": "lostinfinity:blocks/acidic_concoction_gel",
+		"wool": "lostinfinity:blocks/acidic_concoction_gel"
+	}
+}

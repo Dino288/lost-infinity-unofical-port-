@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "vy ",
+        "vza",
+        "vvv"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:gigacharge_solutions"
+        },
+        "v":
+        {
+            "item": "lostinfinity:sunder_log"
+        },
+        "y":
+        {
+            "item": "lostinfinity:stone_of_rebirth"
+        },
+        "z":
+        {
+            "item": "lostinfinity:biofuel_battery"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:stone_of_resurgence"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "aaa",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:auradine_disc"
+        },
+        "a":
+        {
+            "item": "lostinfinity:synthetic_fibre"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:space_dial_blueprint"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:mossy_astrorock", "weight": 100 },
+        { "model": "lostinfinity:mossy_astrorock2", "weight": 100 },
+        { "model": "lostinfinity:mossy_astrorock3", "weight": 100 },
+        { "model": "lostinfinity:mossy_astrorock4", "weight": 100 },
+        { "model": "lostinfinity:mossy_astrorock5", "weight": 100 },
+        { "model": "lostinfinity:mossy_astrorock6", "weight": 100 },
+        { "model": "lostinfinity:mossy_astrorock7", "weight": 100 },
+        { "model": "lostinfinity:mossy_astrorock8", "weight": 100 }
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/elementium_bow_air"
+	},
+	"overrides": [
+		{ "predicate": { "lostinfinity:elements": 0.16 }, "model": "lostinfinity:item/elementium_bow_water"},
+		{ "predicate": { "lostinfinity:elements": 0.33 }, "model": "lostinfinity:item/elementium_bow_earth"},
+		{ "predicate": { "lostinfinity:elements": 0.5 }, "model": "lostinfinity:item/elementium_bow_fire"},
+		{ "predicate": { "lostinfinity:elements": 0.66 }, "model": "lostinfinity:item/elementium_bow_shadow"},
+		{ "predicate": { "lostinfinity:elements": 0.83 }, "model": "lostinfinity:item/elementium_bow_blight"},
+		{ "predicate": { "lostinfinity:elements": 1.0 }, "model": "lostinfinity:item/elementium_bow_plague"}
+    ],
+    "display": {
+    	"gui": {
+            "rotation": [ 180, 0, -90 ],
+            "translation": [0, 0, 0],
+            "scale": [ 1, 1, 1]
+        },
+        "thirdperson_righthand": {
+			"rotation": [ -90, 0, 0 ],
+			"translation": [ -1, -0.25, -4],
+			"scale": [ 1.5, 1.5, 1]
+		},
+        "thirdperson_lefthand": {
+            "rotation": [ -90, 0, 0 ],
+			"translation": [ -1, -0.25, -4],
+			"scale": [ 1.5, 1.5, 1]
+        },
+        "firstperson_righthand": {
+            "rotation": [ -80, 0, 0 ],
+            "translation": [ -8, -4, -11 ],
+            "scale": [ 4, 4, 2 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ -80, 0, 0 ],
+            "translation": [ -8, -4, -11 ],
+            "scale": [ 4, 4, 2 ]
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "block/carpet",
+	"textures": {
+		"particle": "lostinfinity:blocks/fossil_track",
+		"wool": "lostinfinity:blocks/fossil_track"
+	}
+}

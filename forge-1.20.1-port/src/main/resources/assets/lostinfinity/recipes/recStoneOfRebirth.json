@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " m ",
+        "yzy",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:voidstone"
+        },
+        "m":
+        {
+            "item": "lostinfinity:lifestrain_enigma"
+        },
+        "z":
+        {
+            "item": "lostinfinity:plucked_eye"
+        },
+        "y":
+        {
+            "item": "lostinfinity:lifeboundemerald"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:stone_of_rebirth"
+    }
+}

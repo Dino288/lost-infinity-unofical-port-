@@ -1,0 +1,44 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ahd",
+        "bhe",
+        "chf"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:gem_aspiration"
+        },
+        "b":
+        {
+            "item": "lostinfinity:gem_corruption"
+        },
+        "c":
+        {
+            "item": "lostinfinity:gem_ingenuity"
+        },
+        "d":
+        {
+            "item": "lostinfinity:gem_duality"
+        },
+        "e":
+        {
+            "item": "lostinfinity:gem_perception"
+        },
+        "f":
+        {
+            "item": "lostinfinity:gem_resolve"
+        },
+        "h":
+        {
+            "item": "lostinfinity:synthesized_astrometal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:replica_infinity_gauntlet"
+    }
+}

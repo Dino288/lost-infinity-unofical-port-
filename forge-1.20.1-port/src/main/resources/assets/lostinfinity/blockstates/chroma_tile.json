@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:chroma_tile_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:chroma_tile_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:chroma_tile_2"
+	},
+		"amount=3": {
+		"model": "lostinfinity:chroma_tile_3"
+	}
+	}
+}

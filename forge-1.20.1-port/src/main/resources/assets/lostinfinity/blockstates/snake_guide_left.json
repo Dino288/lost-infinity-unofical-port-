@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=south": { "model": "lostinfinity:snake_guide_left" },
+        "facing=west": { "model": "lostinfinity:snake_guide_left", "y": 90 },
+        "facing=north": { "model": "lostinfinity:snake_guide_left", "y": 180 },
+        "facing=east": { "model": "lostinfinity:snake_guide_left", "y": 270 }
+	}
+}

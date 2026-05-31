@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yyy",
+        "yaa",
+        "yam"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:cellular_crystal"
+        },
+        "y":
+        {
+            "item": "lostinfinity:iron_hide"
+        },
+        "m":
+        {
+            "item": "lostinfinity:incarnation_of_the_knife"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:cluster_knives"
+    }
+}

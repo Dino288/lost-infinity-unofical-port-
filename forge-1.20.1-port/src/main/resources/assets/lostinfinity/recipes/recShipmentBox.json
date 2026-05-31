@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:masterfaceted_quartz"
+		},
+		{
+			"item": "lostinfinity:deviant_sand"
+		},
+		{
+			"item": "lostinfinity:deviant_sand"
+		},
+		{
+			"item": "lostinfinity:celestialiron"
+		},
+		{
+			"item": "lostinfinity:celestialiron"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:shipment_box"
+	}
+}

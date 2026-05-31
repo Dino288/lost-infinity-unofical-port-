@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"end": "lostinfinity:blocks/neosteel_beam_top",
+        "side": "lostinfinity:blocks/pipe_game"
+	}
+}

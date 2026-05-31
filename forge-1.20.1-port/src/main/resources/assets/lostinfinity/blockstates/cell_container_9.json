@@ -1,0 +1,14 @@
+{
+    "variants": {
+    	"amount=0": { "model": "lostinfinity:cell_container_9_0" },
+        "amount=1": { "model": "lostinfinity:cell_container_9_1"},
+        "amount=2": { "model": "lostinfinity:cell_container_9_2"},
+        "amount=3": { "model": "lostinfinity:cell_container_9_3"},
+        "amount=4": { "model": "lostinfinity:cell_container_9_4"},
+        "amount=5": { "model": "lostinfinity:cell_container_9_5"},
+        "amount=6": { "model": "lostinfinity:cell_container_9_6"},
+        "amount=7": { "model": "lostinfinity:cell_container_9_7"},
+        "amount=8": { "model": "lostinfinity:cell_container_9_8"},
+        "amount=9": { "model": "lostinfinity:cell_container_9_9"}
+    }
+}

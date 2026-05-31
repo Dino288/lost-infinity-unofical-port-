@@ -1,0 +1,12 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/rainfall_collector_0"
+	},
+	"overrides": [
+		{ "predicate": { "lostinfinity:collection": 1.0 }, "model": "lostinfinity:item/rainfall_collector_1"},
+		{ "predicate": { "lostinfinity:collection": 2.0 }, "model": "lostinfinity:item/rainfall_collector_2"},
+		{ "predicate": { "lostinfinity:collection": 2.0 }, "model": "lostinfinity:item/rainfall_collector_3"},
+		{ "predicate": { "lostinfinity:collection": 3.0 }, "model": "lostinfinity:item/rainfall_collector_4"}
+    ]
+}

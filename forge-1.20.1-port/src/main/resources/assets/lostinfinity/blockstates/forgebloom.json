@@ -1,0 +1,46 @@
+{
+	"variants": {
+		"normal": [
+			{
+				"model": "lostinfinity:forgebloom",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom2",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom3",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom4",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom5",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom6",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom7",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom8",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom9",
+				"weight": 100
+			},
+			{
+				"model": "lostinfinity:forgebloom10",
+				"weight": 100
+			}
+		]
+	}
+}

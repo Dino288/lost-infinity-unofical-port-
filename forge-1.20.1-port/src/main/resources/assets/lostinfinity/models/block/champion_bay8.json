@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "lostinfinity:blocks/champion_bay8"
+    }
+}

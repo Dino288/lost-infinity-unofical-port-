@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:auradine_ore_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:auradine_ore_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:auradine_ore_2"
+	},
+		"amount=3": {
+		"model": "lostinfinity:auradine_ore_3"
+	},
+		"amount=4": {
+		"model": "lostinfinity:auradine_ore_4"
+	}
+	}
+}

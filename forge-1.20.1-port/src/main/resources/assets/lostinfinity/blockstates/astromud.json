@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:astromud", "weight": 100 },
+        { "model": "lostinfinity:astromud2", "weight": 100 },
+        { "model": "lostinfinity:astromud3", "weight": 100 },
+        { "model": "lostinfinity:astromud4", "weight": 100 }
+        ]
+    }
+}

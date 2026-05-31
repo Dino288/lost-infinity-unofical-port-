@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        "zay",
+        "az "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:superheatedingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:moltendiamond"
+        },
+        "z":
+        {
+            "item": "lostinfinity:supermutated_string"
+        },
+        "x":
+        {
+            "item": "lostinfinity:blazingstar"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:starstorm"
+    }
+}

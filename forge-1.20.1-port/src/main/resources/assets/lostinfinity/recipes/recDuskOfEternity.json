@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bcd",
+        "cba",
+        "eaa"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:crystallized_alloy"
+        },
+        "b":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "c":
+        {
+            "item": "lostinfinity:dark_magic_powder"
+        },
+        "d":
+        {
+            "item": "lostinfinity:hexbreaker"
+        },
+        "e":
+        {
+            "item": "lostinfinity:vitalitus"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:dusk_of_eternity"
+    }
+}
+

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "yay",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:deviantshulkershell"
+        },
+        "y":
+        {
+            "item": "lostinfinity:celestialdiamond"
+        },
+        "a":
+        {
+            "item": "lostinfinity:cube_misdirection"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:gem_misdirection"
+    }
+}

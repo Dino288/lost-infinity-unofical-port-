@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:terror_glow_on"
+	},
+		"active=false": {
+		"model": "lostinfinity:terror_glow"
+	}
+	}
+}

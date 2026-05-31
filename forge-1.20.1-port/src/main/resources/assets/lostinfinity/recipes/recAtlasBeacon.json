@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "aya",
+        "yxy",
+        "aya"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "minecraft:beacon"
+        },
+       	"a":
+        {
+            "item": "lostinfinity:power_drive"
+        },
+        "y":
+        {
+            "item": "lostinfinity:magic_stone"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:atlas_beacon"
+    }
+}

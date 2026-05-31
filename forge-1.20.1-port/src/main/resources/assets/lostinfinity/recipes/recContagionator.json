@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "mxy",
+        "xx ",
+        "a x"
+    ],
+    "key":
+    {
+        "y":
+        {
+            "item": "lostinfinity:orb_of_plagues"
+        },
+        "a":
+        {
+            "item": "lostinfinity:rampage_injection"
+        },
+        "m":
+        {
+            "item": "lostinfinity:chemical_synchronizer"
+        },
+        "x":
+        {
+            "item": "lostinfinity:biocut_metal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:contagionater"
+    }
+}

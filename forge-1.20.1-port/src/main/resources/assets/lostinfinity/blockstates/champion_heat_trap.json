@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=false": {
+		"model": "lostinfinity:champion_heat_trap_inactive"
+	},
+		"active=true": {
+		"model": "lostinfinity:champion_heat_trap"
+	}
+	}
+}

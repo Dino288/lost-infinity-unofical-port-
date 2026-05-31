@@ -1,0 +1,22 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:snarlvine", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine2", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine3", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine4", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine5", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine6", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine7", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine8", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine9", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine10", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine11", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine12", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine13", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine14", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine15", "weight": 100 },
+		{ "model": "lostinfinity:snarlvine16", "weight": 100 }
+		]
+	}
+}

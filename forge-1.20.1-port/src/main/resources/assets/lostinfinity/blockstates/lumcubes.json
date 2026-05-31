@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:lumcubes", "weight": 100 },
+        { "model": "lostinfinity:lumcubes2", "weight": 100 },
+        { "model": "lostinfinity:lumcubes3", "weight": 100 },
+        { "model": "lostinfinity:lumcubes4", "weight": 100 }
+        ]
+    }
+}

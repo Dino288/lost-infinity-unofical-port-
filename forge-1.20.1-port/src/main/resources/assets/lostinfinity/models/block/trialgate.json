@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "lostinfinity:blocks/trialgate_top",
+        "down": "lostinfinity:blocks/trialgate_top",
+        "up": "lostinfinity:blocks/trialgate_top",
+        "north": "lostinfinity:blocks/trialgate_side",
+        "east": "lostinfinity:blocks/trialgate_side",
+        "south": "lostinfinity:blocks/trialgate_side",
+        "west": "lostinfinity:blocks/trialgate_side"
+    }
+}

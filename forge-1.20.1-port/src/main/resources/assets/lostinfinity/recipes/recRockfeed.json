@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:slimed_bedrock"
+		},
+		{
+			"item": "lostinfinity:slimed_bedrock"
+		},
+		{
+			"item": "lostinfinity:slimed_bedrock"
+		},
+		{
+			"item": "lostinfinity:ember_pods"
+		}
+	],
+    "result":
+    {
+        "item": "lostinfinity:rockfeed",
+        "count": 3
+    }
+}

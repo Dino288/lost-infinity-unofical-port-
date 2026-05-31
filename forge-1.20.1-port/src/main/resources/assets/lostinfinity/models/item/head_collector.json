@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/head_collector"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ -70, -90, -75],
+			"translation": [ 0, 10, 2],
+			"scale": [ 2, 2, 2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 90, 90, -75],
+			"translation": [ 0, 10, 2],
+			"scale": [ 2, 2, 2]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 0, -90, 25 ],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 0, -90, 70],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		}
+	}
+}

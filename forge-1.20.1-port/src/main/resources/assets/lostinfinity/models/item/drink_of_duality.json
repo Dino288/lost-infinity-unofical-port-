@@ -1,0 +1,31 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/drink_of_duality"
+	},
+	"overrides": [
+		{ "predicate": { "lostinfinity:drink": 1.0 }, "model": "lostinfinity:item/drink_of_duality_blue"}
+    ],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ -90, -90, -125 ],
+			"translation": [ 0, 5, 3],
+			"scale": [ 1, 1, 1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 90, 90, -35 ],
+			"translation": [ 0, 5, 3],
+			"scale": [ 1, 1, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 30, -90, 25 ],
+			"translation": [ 5, 4, 0 ],
+			"scale": [ 1, 1, 1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 30, 90, -25],
+			"translation": [ 5, 4, 0 ],
+			"scale": [ 1, 1, 1]
+		}
+	}
+}

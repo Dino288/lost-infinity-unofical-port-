@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yz",
+        "yxy",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:holoscreen"
+        },
+        "z":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        },
+        "y":
+        {
+            "item": "lostinfinity:deviant_iron"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:holotron_disc"
+    }
+}

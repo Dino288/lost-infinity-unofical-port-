@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "da ",
+        "bef",
+        " fc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:audio_synchronized_disc"
+        },
+        "b":
+        {
+            "item": "lostinfinity:astral_generator"
+        },
+        "c":
+        {
+            "item": "lostinfinity:void_altered_spine"
+        },
+        "d":
+        {
+            "item": "lostinfinity:hypersonic_drive_chamber"
+        },
+        "e":
+        {
+            "item": "lostinfinity:multiversite_plates"
+        },
+        "f":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:rise_of_phantoms"
+    }
+}
+

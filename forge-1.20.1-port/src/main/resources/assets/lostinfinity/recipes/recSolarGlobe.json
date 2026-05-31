@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " a ",
+        "bcd",
+        "bcd"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:starlitglobe"
+        },
+        "b":
+        {
+            "item": "lostinfinity:dimensional_building_blocks_blue"
+        },
+        "c":
+        {
+            "item": "lostinfinity:dimensional_building_blocks_red"
+        },
+        "d":
+        {
+            "item": "lostinfinity:dimensional_building_blocks_purple"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:solar_globe"
+    }
+}

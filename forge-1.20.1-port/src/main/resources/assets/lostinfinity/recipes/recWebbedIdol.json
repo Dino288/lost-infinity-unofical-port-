@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        "xyy",
+        "yx "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:supermutated_string"
+        },
+        "y":
+        {
+            "item": "lostinfinity:sunder_log"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:webbed_idol"
+    }
+}

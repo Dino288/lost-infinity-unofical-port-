@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"burning=false": {
+		"model": "lostinfinity:sap_evaporator"
+		},
+		"burning=true": {
+		"model": "lostinfinity:sap_evaporator_on"
+		}
+	}
+}

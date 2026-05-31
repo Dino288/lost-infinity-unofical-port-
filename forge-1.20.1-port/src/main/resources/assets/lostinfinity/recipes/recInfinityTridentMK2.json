@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+		{
+			"item": "lostinfinity:infinity_trident"
+		},
+		{
+			"item": "lostinfinity:audio_synchronized_disc"
+		},
+		{
+			"item": "lostinfinity:polyionite"
+		},
+		{
+			"item": "lostinfinity:polyionite"
+		},
+		{
+			"item": "lostinfinity:astral_organ"
+		}
+	],
+    "result":
+    {
+        "item": "lostinfinity:infinity_trident_mk2"
+    }
+}

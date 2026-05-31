@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "abc",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:mechanicalpowercell"
+        },
+        "a":
+        {
+            "item": "lostinfinity:deviantegg"
+        },
+        "b":
+        {
+            "item": "lostinfinity:deviantbone"
+        },
+        "c":
+        {
+            "item": "lostinfinity:skywormtooth"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:deviationanalyzerempty"
+    }
+}

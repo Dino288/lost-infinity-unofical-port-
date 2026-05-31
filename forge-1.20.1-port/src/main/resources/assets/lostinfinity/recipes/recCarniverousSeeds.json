@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:lifestrain_enigma"
+		},
+		{
+			"item": "lostinfinity:deviant_sand"
+		},
+		{
+			"item": "lostinfinity:emberleaf_seeds"
+		},
+		{
+			"item": "lostinfinity:emberleaf_seeds"
+		},
+		{
+			"item": "lostinfinity:emberleaf_seeds"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:carnivorous_seeds",
+        "count": 3
+	}
+}

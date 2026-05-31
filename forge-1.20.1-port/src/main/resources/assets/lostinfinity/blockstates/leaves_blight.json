@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:leaves_blight", "weight": 100 },
+        { "model": "lostinfinity:leaves_blight2", "weight": 100 },
+        { "model": "lostinfinity:leaves_blight3", "weight": 100 },
+        { "model": "lostinfinity:leaves_blight4", "weight": 100 },
+        { "model": "lostinfinity:leaves_blight5", "weight": 100 },
+        { "model": "lostinfinity:leaves_blight6", "weight": 100 }
+        ]
+    }
+}

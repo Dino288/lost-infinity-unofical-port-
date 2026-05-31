@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "aaa",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:myrite_chunk"
+        },
+        "a":
+        {
+            "item": "lostinfinity:synthetic_fibre"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:dimensionalizer_blueprint"
+    }
+}

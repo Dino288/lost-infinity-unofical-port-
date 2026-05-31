@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:book_of_translation"
+		},
+		{
+			"item": "lostinfinity:murky_clay"
+		},
+		{
+			"item": "lostinfinity:flexible_husk"
+		},
+		{
+			"item": "lostinfinity:colixium"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:scroll_of_dark_incantation"
+	}
+}

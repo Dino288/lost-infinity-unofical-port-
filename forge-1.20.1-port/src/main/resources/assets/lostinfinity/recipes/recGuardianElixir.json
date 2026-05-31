@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dvd",
+        "vmv",
+        "eae"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:ironheart_elixir"
+        },
+        "v":
+        {
+            "item": "lostinfinity:amber"
+        },
+        "e":
+        {
+            "item": "lostinfinity:supermutated_batwing"
+        },
+        "m":
+        {
+            "item": "lostinfinity:citrine_thyratron"
+        },
+        "d":
+        {
+            "item": "lostinfinity:razor_edged_crystal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:guardian_elixir"
+    }
+}

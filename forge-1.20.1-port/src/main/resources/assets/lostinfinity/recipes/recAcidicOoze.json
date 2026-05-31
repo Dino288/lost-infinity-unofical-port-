@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:deviant_slimeball"
+		},
+		{
+			"item": "lostinfinity:deviant_magmacream"
+		},
+		{
+			"item": "lostinfinity:deviantgel"
+		},
+		{
+            "type": "minecraft:item_nbt",
+            "item": "forge:bucketFilled",
+            "nbt": {
+            "FluidName": "concentrated_acid",
+            "Amount": 1000
+            }
+        }
+	],
+	"result": {
+		"item": "lostinfinity:acidicooze"
+	}
+}

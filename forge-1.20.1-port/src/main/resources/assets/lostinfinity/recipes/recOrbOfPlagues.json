@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "mam",
+        "axa",
+        "vkv"
+    ],
+    "key":
+    {
+        "v":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "a":
+        {
+            "item": "lostinfinity:crystal_plating"
+        },
+        "k":
+        {
+            "item": "lostinfinity:clovinite_power_hub"
+        },
+        "m":
+        {
+            "item": "lostinfinity:biotoxin"
+        },
+        "x":
+        {
+            "item": "lostinfinity:geodimensional_tunnel"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:orb_of_plagues"
+    }
+}

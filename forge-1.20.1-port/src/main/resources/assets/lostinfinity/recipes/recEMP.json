@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xyx",
+        "yav",
+        "xva"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:supermutated_iron"
+        },
+        "y":
+        {
+            "item": "lostinfinity:rewired_ion_cell"
+        },
+        "v":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        },
+        "x":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:emp"
+    }
+}

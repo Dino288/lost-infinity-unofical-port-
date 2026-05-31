@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "vav",
+        "yvy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:advanced_signal_receiver"
+        },
+        "v":
+        {
+            "item": "lostinfinity:spacetime_trigger"
+        },
+        "y":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "a":
+        {
+            "item": "lostinfinity:tentacle_synthesizer"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:tentacle_remote"
+    }
+}

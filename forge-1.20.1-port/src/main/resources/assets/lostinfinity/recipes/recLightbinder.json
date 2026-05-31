@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "k  ",
+        "vx ",
+        " vk"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:interlocking_spine"
+        },
+        "v":
+        {
+            "item": "lostinfinity:glowblood_solution"
+        },
+        "k":
+        {
+            "item": "lostinfinity:catatonite_ingot"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:lightbinder"
+    }
+}

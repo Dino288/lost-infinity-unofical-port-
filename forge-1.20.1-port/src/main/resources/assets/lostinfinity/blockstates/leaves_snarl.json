@@ -1,0 +1,14 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:leaves_snarl", "weight": 100 },
+		{ "model": "lostinfinity:leaves_snarl2", "weight": 100 },
+		{ "model": "lostinfinity:leaves_snarl3", "weight": 100 },
+		{ "model": "lostinfinity:leaves_snarl4", "weight": 100 },
+		{ "model": "lostinfinity:leaves_snarl5", "weight": 100 },
+		{ "model": "lostinfinity:leaves_snarl6", "weight": 100 },
+		{ "model": "lostinfinity:leaves_snarl7", "weight": 100 },
+		{ "model": "lostinfinity:leaves_snarl8", "weight": 100 }
+		]
+	}
+}

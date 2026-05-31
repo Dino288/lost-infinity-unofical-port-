@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        "zay",
+        "az "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:cursedemerald"
+        },
+        "y":
+        {
+            "item": "lostinfinity:supermutated_tooth"
+        },
+        "z":
+        {
+            "item": "lostinfinity:supermutated_hide"
+        },
+        "x":
+        {
+            "item": "lostinfinity:imbuedcrystal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:witchspike"
+    }
+}

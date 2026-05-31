@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bcb",
+        "ade",
+        "ade"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:ghostly_husk"
+        },
+        "b":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:toothy_tendril"
+        },
+        "d":
+        {
+            "item": "lostinfinity:electrolytic_rod"
+        },
+        "e":
+        {
+            "item": "lostinfinity:mortality_solution"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:infinity_trident"
+    }
+}
+

@@ -1,0 +1,14 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:bee_hive", "weight": 100 },
+		{ "model": "lostinfinity:bee_hive2", "weight": 100 },
+		{ "model": "lostinfinity:bee_hive3", "weight": 100 },
+		{ "model": "lostinfinity:bee_hive4", "weight": 100 },
+		{ "model": "lostinfinity:bee_hive5", "weight": 100 },
+		{ "model": "lostinfinity:bee_hive6", "weight": 100 },
+		{ "model": "lostinfinity:bee_hive7", "weight": 100 },
+		{ "model": "lostinfinity:bee_hive8", "weight": 100 }
+		]
+	}
+}

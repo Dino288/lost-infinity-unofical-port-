@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:crystal_lily", "weight": 100 },
+        { "model": "lostinfinity:crystal_lily2", "weight": 100 },
+        { "model": "lostinfinity:crystal_lily3", "weight": 100 },
+        { "model": "lostinfinity:crystal_lily4", "weight": 100 }
+        ]
+    }
+}

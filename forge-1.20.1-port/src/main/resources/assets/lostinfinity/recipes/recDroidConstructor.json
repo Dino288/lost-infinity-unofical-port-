@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        " ay",
+        "a  "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:deviantbone"
+        },
+        "y":
+        {
+            "item": "lostinfinity:mechanicalpowercell"
+        },
+        "x":
+        {
+            "item": "lostinfinity:gem_corruption"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:droidconstructor"
+    }
+}

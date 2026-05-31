@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "caa",
+        "eba",
+        "cdb"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        },
+        "b":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:power_fuel"
+        },
+        "d":
+        {
+            "item": "lostinfinity:ultrapowered_capacitor"
+        },
+        "e":
+        {
+            "item": "lostinfinity:laser_pointer"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:laser_gun"
+    }
+}
+

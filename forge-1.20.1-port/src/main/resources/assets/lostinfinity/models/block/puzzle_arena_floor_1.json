@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "lostinfinity:blocks/puzzle_arena_floor_1"
+	}
+}

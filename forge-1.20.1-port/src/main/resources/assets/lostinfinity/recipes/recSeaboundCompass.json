@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " ac",
+        "axa",
+        "ba "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:deviant_iron"
+        },
+        "b":
+        {
+            "item": "lostinfinity:rainfall_collector_full"
+        },
+        "c":
+        {
+            "item": "lostinfinity:velocitized_femur"
+        },
+        "x":
+        {
+            "item": "minecraft:compass"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:seabound_compass"
+    }
+}

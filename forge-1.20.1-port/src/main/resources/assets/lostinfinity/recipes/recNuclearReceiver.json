@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "vay",
+        " e "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:advanced_signal_receiver"
+        },
+        "v":
+        {
+            "item": "lostinfinity:negametric_isotope"
+        },
+        "y":
+        {
+            "item": "lostinfinity:radiochronic_isotope"
+        },
+        "e":
+        {
+            "item": "lostinfinity:interspace_transmitter"
+        },
+        "a":
+        {
+            "item": "lostinfinity:ion_bomb_receiver"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:nuclear_receiver"
+    }
+}

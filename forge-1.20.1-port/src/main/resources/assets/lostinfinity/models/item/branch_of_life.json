@@ -1,0 +1,33 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/branch_of_life"
+	},
+	"overrides": [
+		{ "predicate": { "lostinfinity:deviation": 0.33 }, "model": "lostinfinity:item/branch_of_life_sm"},
+		{ "predicate": { "lostinfinity:deviation": 0.66 }, "model": "lostinfinity:item/branch_of_life_hm"},
+		{ "predicate": { "lostinfinity:deviation": 1.0 }, "model": "lostinfinity:item/branch_of_life_mm"}
+    ],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ -70, -90, -125 ],
+			"translation": [ 0, 9.25, 3],
+			"scale": [ 2, 2, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 90, 90, -35 ],
+			"translation": [ 0, 9.25, 3],
+			"scale": [ 2, 2, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 0, -90, 25 ],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 0, -90, 105],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 1.5]
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:datadrive"
+		},
+		{
+			"item": "lostinfinity:item_ripper"
+		},
+		{
+			"item": "lostinfinity:item_ripper"
+		},
+		{
+			"item": "lostinfinity:item_ripper"
+		},
+		{
+			"item": "lostinfinity:matter_condenser"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:datadrive_timethief"
+	}
+}

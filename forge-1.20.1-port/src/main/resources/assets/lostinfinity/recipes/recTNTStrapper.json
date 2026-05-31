@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " vx",
+        "may",
+        "ay "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:sunder_log"
+        },
+        "y":
+        {
+            "item": "lostinfinity:supermutated_iron"
+        },
+        "m":
+        {
+            "item": "lostinfinity:stone_of_rebirth"
+        },
+        "v":
+        {
+            "item": "minecraft:tnt"
+        },
+        "x":
+        {
+            "item": "lostinfinity:incarnation_of_the_bomb"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:tnt_strapper"
+    }
+}

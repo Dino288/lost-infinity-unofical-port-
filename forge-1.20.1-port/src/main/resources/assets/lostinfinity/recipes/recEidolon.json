@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "abc",
+        "dfd",
+        "e e"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:rise_of_phantoms"
+        },
+        "b":
+        {
+            "item": "lostinfinity:ghostly_husk"
+        },
+        "c":
+        {
+            "item": "lostinfinity:astral_bow"
+        },
+        "d":
+        {
+            "item": "lostinfinity:photochromic_husk"
+        },
+        "e":
+        {
+            "item": "lostinfinity:super_cell"
+        },
+        "f":
+        {
+            "item": "lostinfinity:metamorphosis_core"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:eidolon"
+    }
+}

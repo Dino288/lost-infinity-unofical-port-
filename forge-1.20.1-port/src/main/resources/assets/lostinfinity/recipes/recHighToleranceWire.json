@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " ax",
+        "xax",
+        "xa "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:synthetic_fibre"
+        },
+        "a":
+        {
+            "item": "lostinfinity:metal_branch"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:high_tolerance_wire"
+    }
+}

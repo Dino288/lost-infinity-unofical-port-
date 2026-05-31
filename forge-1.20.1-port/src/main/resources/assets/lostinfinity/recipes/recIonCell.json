@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " xx",
+        "xvx",
+        "ax "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:metallicized_rock"
+        },
+        "v":
+        {
+            "item": "lostinfinity:ion_crystal"
+        },
+        "a":
+        {
+            "item": "lostinfinity:organic_fuse"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:ion_cell"
+    }
+}

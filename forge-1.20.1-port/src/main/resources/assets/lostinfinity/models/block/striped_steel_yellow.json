@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "lostinfinity:blocks/striped_steel_yellow_top",
+        "side": "lostinfinity:blocks/striped_steel_yellow_side"
+    }
+}

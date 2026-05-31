@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:masterfaceted_quartz"
+		},
+		{
+			"item": "lostinfinity:mastercharged_redstone"
+		},
+		{
+			"item": "lostinfinity:celestialiron"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:datadrive"
+	}
+}

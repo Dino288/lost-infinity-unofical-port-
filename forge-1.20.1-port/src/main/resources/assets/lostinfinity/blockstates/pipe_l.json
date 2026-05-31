@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "lostinfinity:pipe_l" },
+        "facing=east": { "model": "lostinfinity:pipe_l_east"},
+        "facing=south": { "model": "lostinfinity:pipe_l" },
+        "facing=west": { "model": "lostinfinity:pipe_l_east"}
+	}
+}

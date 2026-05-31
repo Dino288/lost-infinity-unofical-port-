@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "kec",
+        "ebe",
+        "dae"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:sword_of_selection"
+        },
+        "k":
+        {
+            "item": "lostinfinity:direct_weapon_convertor"
+        },
+        "b":
+        {
+            "item": "lostinfinity:overcharged_cell"
+        },
+        "c":
+        {
+            "item": "lostinfinity:reinforced_glass"
+        },
+        "d":
+        {
+            "item": "lostinfinity:weightless_gem"
+        },
+        "e":
+        {
+            "item": "lostinfinity:serpentine_bar"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:sniper_of_selection"
+    }
+}

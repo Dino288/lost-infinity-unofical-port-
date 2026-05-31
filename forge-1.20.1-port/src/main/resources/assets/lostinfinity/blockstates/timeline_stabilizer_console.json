@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:timeline_stabilizer_console_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:timeline_stabilizer_console_1"
+	}
+	}
+}

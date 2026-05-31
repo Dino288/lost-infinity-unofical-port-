@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dae",
+        "abc",
+        "dae"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:supermutated_sand"
+        },
+        "b":
+        {
+            "item": "lostinfinity:radiochronic_isotope"
+        },
+        "c":
+        {
+            "item": "lostinfinity:contained_lifeforce"
+        },
+        "d":
+        {
+            "item": "lostinfinity:sunder_log"
+        },
+        "e":
+        {
+            "item": "lostinfinity:terracut_metal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:creeping_vine"
+    }
+}
+

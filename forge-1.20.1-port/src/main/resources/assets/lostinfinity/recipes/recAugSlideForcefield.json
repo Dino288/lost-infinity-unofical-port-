@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:blank_augment_slide"
+		},
+		{
+			"item": "lostinfinity:deviant_globe"
+		},
+		{
+			"item": "lostinfinity:deviant_globe"
+		},
+		{
+			"item": "lostinfinity:deviant_globe"
+		},
+		{
+			"item": "lostinfinity:reflectiveshard"
+		},
+		{
+			"item": "lostinfinity:reflectiveshard"
+		},
+		{
+			"item": "lostinfinity:reflectiveshard"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:augment_slide_forcefield"
+	}
+}

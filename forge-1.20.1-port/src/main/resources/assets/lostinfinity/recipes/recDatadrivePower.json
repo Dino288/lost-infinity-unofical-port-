@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:datadrive"
+		},
+		{
+			"item": "lostinfinity:dimensional_capacitor"
+		},
+		{
+			"item": "lostinfinity:dimensional_capacitor"
+		},
+		{
+			"item": "lostinfinity:dimensional_capacitor"
+		},
+		{
+			"item": "lostinfinity:gigacharge_solutions"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:datadrive_power"
+	}
+}

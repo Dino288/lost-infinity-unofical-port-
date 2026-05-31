@@ -1,0 +1,31 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/attractor_beam"
+	},
+	"overrides": [
+		{ "predicate": { "lostinfinity:beamtype": 1.0 }, "model": "lostinfinity:item/attractor_beam_red"}
+    ],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 0, -90, 40 ],
+			"translation": [ 0, 0, -7],
+			"scale": [ 1, 1, 0.7]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 0, 90, -40 ],
+			"translation": [ 0, 0, -7],
+			"scale": [ 1, 1, 0.7]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 0, -90, 25 ],
+			"translation": [ 0.5, 4, 2 ],
+			"scale": [ 1.4, 1.4, 0.7]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 0, 90, -25 ],
+			"translation": [ 0.5, 4, 2 ],
+			"scale": [ 1.4, 1.4, 0.7]
+		}
+	}
+}

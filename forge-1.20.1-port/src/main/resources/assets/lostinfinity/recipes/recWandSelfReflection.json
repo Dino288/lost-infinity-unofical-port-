@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        " ay",
+        "a  "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:power_drive"
+        },
+        "y":
+        {
+            "item": "lostinfinity:shimmering_gloss"
+        },
+        "x":
+        {
+            "item": "lostinfinity:lifeboundemerald"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:wand_of_self_reflection"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "lostinfinity:blocks/chip_formatter_power_top",
+        "side": "lostinfinity:blocks/chip_formatter_side"
+    }
+}

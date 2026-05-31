@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+		{
+			"item": "lostinfinity:droidrelocator"
+		},
+		{
+			"item": "lostinfinity:superchargedcell"
+		},
+		{
+			"item": "lostinfinity:droidlocationdata_d"
+		}
+	],
+    "result":
+    {
+        "item": "lostinfinity:droidrelocator_storage"
+    }
+}

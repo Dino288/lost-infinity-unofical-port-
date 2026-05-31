@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:sword_of_selection"
+		},
+		{
+			"item": "lostinfinity:direct_weapon_convertor"
+		},
+		{
+			"item": "lostinfinity:gem_perception"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:ray_of_selection"
+	}
+}

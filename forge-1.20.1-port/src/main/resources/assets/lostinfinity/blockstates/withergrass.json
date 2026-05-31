@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:withergrass", "weight": 100 },
+        { "model": "lostinfinity:withergrass2", "weight": 100 },
+        { "model": "lostinfinity:withergrass3", "weight": 100 }
+        ]
+    }
+}

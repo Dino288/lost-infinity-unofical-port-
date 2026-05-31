@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ymy",
+        "xax",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:crystalized_bone"
+        },
+        "m":
+        {
+            "item": "lostinfinity:malachite_inclinometer"
+        },
+        "y":
+        {
+            "item": "lostinfinity:power_plug"
+        },
+        "a":
+        {
+            "item": "lostinfinity:geocoordinated_orb"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:geodimensional_tunnel"
+    }
+}

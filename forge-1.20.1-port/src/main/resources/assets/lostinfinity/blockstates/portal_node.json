@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:portal_node_active"
+	},
+		"active=false": {
+		"model": "lostinfinity:portal_node"
+	}
+	}
+}

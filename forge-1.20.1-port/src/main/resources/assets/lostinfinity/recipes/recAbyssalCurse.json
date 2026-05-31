@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxv",
+        "xmy",
+        "vyv"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:polyswitch"
+        },
+        "v":
+        {
+            "item": "lostinfinity:serpentine_bar"
+        },
+        "y":
+        {
+            "item": "lostinfinity:auradine_disc"
+        },
+        "m":
+        {
+            "item": "lostinfinity:phantom_blade"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:abyssal_curse"
+    }
+}

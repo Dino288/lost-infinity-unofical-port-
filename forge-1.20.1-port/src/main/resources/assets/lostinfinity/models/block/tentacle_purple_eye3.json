@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "lostinfinity:blocks/tentacle_purple_top",
+        "side": "lostinfinity:blocks/tentacle_purple_eye3"
+    }
+}

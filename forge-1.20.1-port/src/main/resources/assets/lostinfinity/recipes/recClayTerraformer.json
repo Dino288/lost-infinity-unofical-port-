@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ymx",
+        "vvv",
+        " mv"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:spacetime_trigger"
+        },
+        "v":
+        {
+            "item": "lostinfinity:multiversite_plates"
+        },
+        "y":
+        {
+            "item": "lostinfinity:vacuum_container"
+        },
+        "m":
+        {
+            "item": "lostinfinity:glowing_organ"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:clay_terraformer"
+    }
+}

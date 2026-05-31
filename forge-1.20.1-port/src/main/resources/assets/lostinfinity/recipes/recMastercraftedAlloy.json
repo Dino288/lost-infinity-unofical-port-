@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:masterforged_ingot"
+		},
+		{
+			"item": "lostinfinity:mastercut_diamond"
+		},
+		{
+			"item": "lostinfinity:masterfaceted_quartz"
+		},
+		{
+			"item": "lostinfinity:masterenthralled_emerald"
+		},
+		{
+			"item": "lostinfinity:mastercharged_redstone"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:mastercrafted_alloy"
+	}
+}

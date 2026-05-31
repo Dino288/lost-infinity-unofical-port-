@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yxy",
+        "vxv",
+        "yxy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:burning_sap"
+        },
+        "v":
+        {
+            "item": "lostinfinity:annealed_glass"
+        },
+        "y":
+        {
+            "item": "lostinfinity:deviant_iron"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:jar_of_sap",
+        "count": 3
+    }
+}

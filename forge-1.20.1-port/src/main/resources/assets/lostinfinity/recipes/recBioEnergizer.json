@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xx ",
+        "x a",
+        "xma"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:ember_pods"
+        },
+        "m":
+        {
+            "item": "lostinfinity:high_tolerance_wire"
+        },
+        "a":
+        {
+            "item": "lostinfinity:organic_fuse"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:bio_energizer",
+        "count": 3
+    }
+}

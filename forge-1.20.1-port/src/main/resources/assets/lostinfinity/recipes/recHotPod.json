@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "yzy",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:clovinite"
+        },
+        "z":
+        {
+            "item": "lostinfinity:ember_pods"
+        },
+        "y":
+        {
+            "item": "lostinfinity:heat_resistant_glass"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:hot_pod",
+        "count": 3
+    }
+}

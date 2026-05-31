@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xyx",
+        "xax",
+        "xkx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:incandescite_ingot"
+        },
+        "k":
+        {
+            "item": "lostinfinity:organic_wire"
+        },
+        "a":
+        {
+            "item": "lostinfinity:incarnation_of_the_sword"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:galactic_challenge_emblem"
+    }
+}

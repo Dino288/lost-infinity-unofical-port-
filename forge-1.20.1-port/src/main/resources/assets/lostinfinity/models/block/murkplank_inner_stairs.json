@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "lostinfinity:blocks/murkplanks",
+        "top": "lostinfinity:blocks/murkplanks",
+        "side": "lostinfinity:blocks/murkplanks"
+    }
+}

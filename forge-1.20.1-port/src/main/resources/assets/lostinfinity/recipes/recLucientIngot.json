@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		},
+		{
+			"item": "lostinfinity:lucient"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:lucient_ingot"
+	}
+}

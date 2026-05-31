@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:book"
+		},
+		{
+			"item": "lostinfinity:imbuedcrystal"
+		},
+		{
+			"item": "lostinfinity:darkconcoction"
+		},
+		{
+			"item": "lostinfinity:magic_stone"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:magical_book"
+	}
+}

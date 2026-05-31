@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "abd",
+        "bce",
+        "dec"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:advanced_relay"
+        },
+        "b":
+        {
+            "item": "lostinfinity:colixium"
+        },
+        "c":
+        {
+            "item": "lostinfinity:serpentine_bar"
+        },
+        "d":
+        {
+            "item": "lostinfinity:darkworld_data_chip"
+        },
+        "e":
+        {
+            "item": "lostinfinity:corrupted_root"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:plasma_quake"
+    }
+}

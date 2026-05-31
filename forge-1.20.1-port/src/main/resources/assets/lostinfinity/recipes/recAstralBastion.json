@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bab",
+        "ece",
+        "bdb"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:shimmering_gloss"
+        },
+        "b":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "c":
+        {
+            "item": "lostinfinity:colixium"
+        },
+        "d":
+        {
+            "item": "lostinfinity:blight_cure"
+        },
+        "e":
+        {
+            "item": "lostinfinity:dark_magic_powder"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:astral_bastion"
+    }
+}
+

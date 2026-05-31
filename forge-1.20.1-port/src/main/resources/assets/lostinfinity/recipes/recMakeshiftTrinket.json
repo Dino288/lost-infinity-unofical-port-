@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yv",
+        " xz",
+        "a  "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:deviantbone"
+        },
+        "y":
+        {
+            "item": "lostinfinity:livingslime"
+        },
+        "z":
+        {
+            "item": "lostinfinity:deviantstring"
+        },
+        "v":
+        {
+            "item": "lostinfinity:deviantenderpearl"
+        },
+        "x":
+        {
+            "item": "lostinfinity:skywormtooth"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:makeshifttrinket"
+    }
+}

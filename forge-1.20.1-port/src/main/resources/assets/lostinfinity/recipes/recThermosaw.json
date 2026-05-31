@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "add",
+        "add",
+        "abc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:cellular_crystal"
+        },
+        "b":
+        {
+            "item": "lostinfinity:superchargedcell"
+        },
+        "c":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "d":
+        {
+            "item": "lostinfinity:exothermite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:thermosaw"
+    }
+}

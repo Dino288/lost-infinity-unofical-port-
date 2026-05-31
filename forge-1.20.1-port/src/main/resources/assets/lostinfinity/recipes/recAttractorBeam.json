@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " yx",
+        " ay",
+        "a  "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:masterforged_ingot"
+        },
+        "y":
+        {
+            "item": "lostinfinity:powerful_polarcronite"
+        },
+        "x":
+        {
+            "item": "lostinfinity:weightless_gem"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:attractor_beam"
+    }
+}

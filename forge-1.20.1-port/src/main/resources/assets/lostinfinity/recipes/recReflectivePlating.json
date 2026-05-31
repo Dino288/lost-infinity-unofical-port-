@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "axa",
+        "xyx",
+        "axa"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:glistening_crystals"
+        },
+        "y":
+        {
+            "item": "lostinfinity:reinforced_glass"
+        },
+        "a":
+        {
+            "item": "lostinfinity:reflectiveshard"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:reflective_plating"
+    }
+}

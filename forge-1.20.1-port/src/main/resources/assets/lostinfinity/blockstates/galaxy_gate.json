@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:galaxy_gate_pass"
+	},
+		"active=false": {
+		"model": "lostinfinity:galaxy_gate"
+	}
+	}
+}

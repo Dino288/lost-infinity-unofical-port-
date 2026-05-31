@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dbe",
+        "adf",
+        "efc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:hypersonic_drive_chamber"
+        },
+        "b":
+        {
+            "item": "lostinfinity:void_altered_spine"
+        },
+        "c":
+        {
+            "item": "lostinfinity:giant_heart"
+        },
+        "d":
+        {
+            "item": "lostinfinity:infused_nicronium"
+        },
+        "e":
+        {
+            "item": "lostinfinity:sticky_darksteel"
+        },
+        "f":
+        {
+            "item": "lostinfinity:polyionite"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:lost_blades_of_infinity"
+    }
+}

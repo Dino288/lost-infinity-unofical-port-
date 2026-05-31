@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "mck",
+        "ava",
+        " a "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:annealed_glass"
+        },
+        "m":
+        {
+            "item": "lostinfinity:organic_wire"
+        },
+        "c":
+        {
+            "item": "lostinfinity:electrical_accelerator"
+        },
+        "v":
+        {
+            "item": "lostinfinity:polyamplification_solution"
+        },
+        "k":
+        {
+            "item": "lostinfinity:vile_sac"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:flask_of_the_forbidden"
+    }
+}

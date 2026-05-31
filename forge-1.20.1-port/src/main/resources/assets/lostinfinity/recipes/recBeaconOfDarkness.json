@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "cbc",
+        "bab",
+        "cbc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:beacon_of_light"
+        },
+        "b":
+        {
+            "item": "lostinfinity:ghostly_husk"
+        },
+        "c":
+        {
+            "item": "lostinfinity:murky_ash"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:beacon_of_darkness"
+    }
+}

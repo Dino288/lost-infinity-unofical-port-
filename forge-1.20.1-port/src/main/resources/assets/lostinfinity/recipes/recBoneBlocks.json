@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yy ",
+        " z ",
+        " yy"
+    ],
+    "key":
+    {
+        "z":
+        {
+            "item": "lostinfinity:plated_bone"
+        },
+        "y":
+        {
+            "item": "lostinfinity:organic_calcium"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:bone_blocks"
+    }
+}

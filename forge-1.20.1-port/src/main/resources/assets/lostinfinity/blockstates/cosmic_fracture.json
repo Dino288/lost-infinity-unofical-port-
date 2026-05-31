@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:cosmic_fracture", "weight": 100 },
+		{ "model": "lostinfinity:cosmic_fracture2", "weight": 100 },
+		{ "model": "lostinfinity:cosmic_fracture3", "weight": 100 },
+		{ "model": "lostinfinity:cosmic_fracture4", "weight": 100 }
+		]
+	}
+}

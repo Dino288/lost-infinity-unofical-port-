@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bcd",
+        "cba",
+        "eaa"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:crystallized_alloy"
+        },
+        "b":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "c":
+        {
+            "item": "lostinfinity:fused_synchronite"
+        },
+        "d":
+        {
+            "item": "lostinfinity:serpentine_shield"
+        },
+        "e":
+        {
+            "item": "lostinfinity:blade_of_the_forbidden"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:dawn_of_eternity"
+    }
+}
+

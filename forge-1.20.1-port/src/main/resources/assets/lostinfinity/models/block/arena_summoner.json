@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+    	"particle": "lostinfinity:blocks/arena_summoner_side",
+        "down": "lostinfinity:blocks/arena_summoner_top",
+        "up": "lostinfinity:blocks/arena_summoner_top",
+        "north": "lostinfinity:blocks/arena_summoner_side",
+        "east": "lostinfinity:blocks/arena_summoner_side",
+        "south": "lostinfinity:blocks/arena_summoner_side",
+        "west": "lostinfinity:blocks/arena_summoner_side"
+    }
+}

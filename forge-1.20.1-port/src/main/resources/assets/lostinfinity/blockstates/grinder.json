@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "burning=false": {
+        "model":  "lostinfinity:grinder"
+        },
+        "burning=true": {
+        "model":  "lostinfinity:grinder_on"
+        }
+    }
+}

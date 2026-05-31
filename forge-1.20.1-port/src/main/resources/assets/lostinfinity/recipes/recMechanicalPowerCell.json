@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yxy",
+        "yxy",
+        "yxy"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:deviantgunpowder"
+        },
+        "y":
+        {
+            "item": "lostinfinity:celestialiron"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:mechanicalpowercell"
+    }
+}

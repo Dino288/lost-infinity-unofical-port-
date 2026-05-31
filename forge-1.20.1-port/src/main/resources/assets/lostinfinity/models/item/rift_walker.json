@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/rift_walker"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 90, 90, 25],
+			"translation": [ 0, -2, 2],
+			"scale": [ 1, 1, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 180, 90, 0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 1, 1, 1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 90, -90, -25],
+			"translation": [ 0, -2, 2],
+			"scale": [ 1, 1, 1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 180, -90, 0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 1, 1, 1]
+		}
+	}
+}

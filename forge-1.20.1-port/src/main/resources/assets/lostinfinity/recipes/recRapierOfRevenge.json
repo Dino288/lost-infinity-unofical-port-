@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ecd",
+        "beb",
+        "abb"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:clovinite_power_hub"
+        },
+        "b":
+        {
+            "item": "lostinfinity:plated_bone"
+        },
+        "c":
+        {
+            "item": "lostinfinity:stone_of_resurgence"
+        },
+        "d":
+        {
+            "item": "lostinfinity:mortality_solution"
+        },
+        "e":
+        {
+            "item": "lostinfinity:power_blade"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:rapier_of_revenge"
+    }
+}

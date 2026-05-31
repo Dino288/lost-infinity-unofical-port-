@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " y ",
+        "yxy",
+        " y "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:blank_chargestone"
+        },
+        "y":
+        {
+            "item": "lostinfinity:glowblood_solution"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:illumination_stone"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xbx",
+        "cac",
+        "xbx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:exothermite"
+        },
+        "b":
+        {
+            "item": "lostinfinity:face_tendrils"
+        },
+        "c":
+        {
+            "item": "lostinfinity:giant_tentacle"
+        },
+        "a":
+        {
+            "item": "lostinfinity:gem_of_illusion"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:tentacle_synthesizer"
+    }
+}

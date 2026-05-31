@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostinfinity:deviant_fragment_tr"
+		},
+		{
+			"item": "lostinfinity:deviant_fragment_br"
+		},
+		{
+			"item": "lostinfinity:deviant_fragment_bl"
+		},
+		{
+			"item": "lostinfinity:deviant_fragment_tl"
+		}
+	],
+	"result": {
+		"item": "lostinfinity:deviant_tablet"
+	}
+}

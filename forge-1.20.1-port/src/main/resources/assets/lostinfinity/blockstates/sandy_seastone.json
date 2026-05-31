@@ -1,0 +1,24 @@
+{
+	"variants": {
+		"normal":[
+		{ "model": "lostinfinity:sandy_seastone", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone2", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone3", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone4", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone5", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone6", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone7", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone8", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone9", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone10", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone11", "weight": 50 },
+		{ "model": "lostinfinity:sandy_seastone12", "weight": 50 },
+		{ "model": "lostinfinity:seasand", "weight": 100 },
+		{ "model": "lostinfinity:seasand2", "weight": 100 },
+		{ "model": "lostinfinity:seasand3", "weight": 100 },
+		{ "model": "lostinfinity:seasand4", "weight": 100 },
+		{ "model": "lostinfinity:seasand5", "weight": 100 },
+		{ "model": "lostinfinity:seasand6", "weight": 100 }
+		]
+	}
+}

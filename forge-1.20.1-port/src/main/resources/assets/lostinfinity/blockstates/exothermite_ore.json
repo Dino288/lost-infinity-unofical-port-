@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"active=true": {
+		"model": "lostinfinity:exothermite_ore_active"
+	},
+		"active=false": {
+		"model": "lostinfinity:exothermite_ore"
+	}
+	}
+}

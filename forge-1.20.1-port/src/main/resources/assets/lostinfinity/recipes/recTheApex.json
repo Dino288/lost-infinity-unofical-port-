@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "kvv",
+        "k a",
+        "kvv"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:supermutated_string"
+        },
+        "v":
+        {
+            "item": "lostinfinity:cellular_crystal"
+        },
+        "k":
+        {
+            "item": "lostinfinity:myrite_chunk"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:the_apex"
+    }
+}

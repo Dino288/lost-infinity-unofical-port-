@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "kvv",
+        "m a",
+        "kvv"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:the_apex"
+        },
+        "v":
+        {
+            "item": "lostinfinity:myrite_chunk"
+        },
+        "m":
+        {
+            "item": "lostinfinity:gem_ambition"
+        },
+        "k":
+        {
+            "item": "lostinfinity:gaze_of_nightmares"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:fury_of_the_feared"
+    }
+}

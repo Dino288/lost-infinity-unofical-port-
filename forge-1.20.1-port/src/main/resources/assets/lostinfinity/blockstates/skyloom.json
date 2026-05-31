@@ -1,0 +1,17 @@
+
+{
+    "variants": {
+        "normal": [
+        { "model": "lostinfinity:skyloom", "weight": 100 },
+        { "model": "lostinfinity:skyloom2", "weight": 100 },
+        { "model": "lostinfinity:skyloom3", "weight": 100 },
+        { "model": "lostinfinity:skyloom4", "weight": 100 },
+        { "model": "lostinfinity:skyloom5", "weight": 100 },
+        { "model": "lostinfinity:skyloom6", "weight": 100 },
+        { "model": "lostinfinity:skyloom7", "weight": 100 },
+        { "model": "lostinfinity:skyloom8", "weight": 100 },
+        { "model": "lostinfinity:skyloom9", "weight": 100 },
+        { "model": "lostinfinity:skyloom10", "weight": 100 }
+        ]
+    }
+}

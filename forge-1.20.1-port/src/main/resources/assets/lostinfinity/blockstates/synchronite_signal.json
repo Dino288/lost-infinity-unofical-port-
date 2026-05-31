@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:synchronite_signal_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:synchronite_signal_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:synchronite_signal_2"
+	},
+		"amount=3": {
+		"model": "lostinfinity:synchronite_signal_3"
+	}
+	}
+}

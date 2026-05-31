@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "bde",
+        "a c",
+        "bde"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:hypersonic_drive_chamber"
+        },
+        "b":
+        {
+            "item": "lostinfinity:radion_ingot"
+        },
+        "c":
+        {
+            "item": "lostinfinity:dimensional_polymer"
+        },
+        "d":
+        {
+            "item": "lostinfinity:multiversite_plates"
+        },
+        "e":
+        {
+            "item": "lostinfinity:overcharged_cell"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:power_puncher"
+    }
+}

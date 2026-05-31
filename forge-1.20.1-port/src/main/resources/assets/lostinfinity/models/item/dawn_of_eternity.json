@@ -1,0 +1,39 @@
+{
+	"parent": "item/generated",
+	"overrides": [
+		{
+			"predicate": {
+				"lostinfinity:mode": 0
+			},
+			"model": "lostinfinity:item/blade_of_eternity_ascendum"
+		},
+		{
+			"predicate": {
+				"lostinfinity:mode": 1
+			},
+			"model": "lostinfinity:item/blade_of_eternity_restorum"
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-75, -90, -125],
+			"translation": [0, 7.5, 3],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 90, -35],
+			"translation": [0, 7.5, 3],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [27, -130, 24],
+			"translation": [1.25, 5.5, 3.25],
+			"scale": [1, 1, 1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [27, 50, -24],
+			"translation": [1.25, 5.5, 3.25],
+			"scale": [1, 1, 1]
+		}
+	}
+}

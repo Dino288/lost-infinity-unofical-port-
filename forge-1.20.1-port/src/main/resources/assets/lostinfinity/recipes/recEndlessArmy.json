@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dxy",
+        "xvm",
+        "dmd"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:serpentine_bar"
+        },
+        "v":
+        {
+            "item": "lostinfinity:tnt_strapper"
+        },
+        "y":
+        {
+            "item": "lostinfinity:spacetime_trigger"
+        },
+        "d":
+        {
+            "item": "lostinfinity:crushed_bones"
+        },
+        "m":
+        {
+            "item": "lostinfinity:supermutated_skull"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:endless_army"
+    }
+}

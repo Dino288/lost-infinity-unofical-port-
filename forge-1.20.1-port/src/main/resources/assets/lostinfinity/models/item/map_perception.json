@@ -1,0 +1,28 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/map_perception"
+	},
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [ 45, 180, 0 ],
+            "translation": [-7, 2, 3 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 45, 180, 0 ],
+            "translation": [ -7, 2, 3 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ -45, 0, 0 ],
+            "translation": [ -8, 2.5, -11 ],
+            "scale": [ 2, 2, 2 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ -45, 0, 0 ],
+            "translation": [ -8, 2.5, -11 ],
+            "scale": [ 2, 2, 2 ]
+        }
+    }
+}

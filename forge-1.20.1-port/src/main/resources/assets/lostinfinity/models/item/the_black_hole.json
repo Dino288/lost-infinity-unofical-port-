@@ -1,0 +1,31 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "lostinfinity:items/the_black_hole"
+	},
+		"overrides": [
+		{ "predicate": { "lostinfinity:usetype": 1.0 }, "model": "lostinfinity:item/the_black_hole_short"}
+    ],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 90, 90, 15],
+			"translation": [ 2, 0, 0],
+			"scale": [ 1.5, 1.5, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 90, 90, -15],
+			"translation": [ 2, 0, 0],
+			"scale": [ 1.5, 1.5, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 230, 90, 0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 2, 2, 2]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 45, 90, 0],
+			"translation": [ 5, 4, 2 ],
+			"scale": [ 0, 0, 0]
+		}
+	}
+}

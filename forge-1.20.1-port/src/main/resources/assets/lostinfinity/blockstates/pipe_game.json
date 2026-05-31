@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "lostinfinity:pipe_game" },
+        "axis=z":     { "model": "lostinfinity:pipe_game", "x": 90 },
+        "axis=x":     { "model": "lostinfinity:pipe_game", "x": 90, "y": 90 },
+        "axis=none":   { "model": "lostinfinity:pipe_game" }
+    }
+}

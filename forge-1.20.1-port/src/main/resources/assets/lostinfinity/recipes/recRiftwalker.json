@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dcb",
+        "c a",
+        "bab"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:infused_nicronium"
+        },
+        "b":
+        {
+            "item": "lostinfinity:darksteel_sheets"
+        },
+        "c":
+        {
+            "item": "lostinfinity:ghostly_husk"
+        },
+        "d":
+        {
+            "item": "lostinfinity:voidsplit_bone"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:rift_walker"
+    }
+}

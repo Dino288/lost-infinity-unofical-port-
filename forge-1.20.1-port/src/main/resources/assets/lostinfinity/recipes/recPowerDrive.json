@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " x ",
+        "zyz",
+        " x "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:electrified_quartz"
+        },
+        "y":
+        {
+            "item": "lostinfinity:reflectiveshard"
+        },
+        "z":
+        {
+            "item": "lostinfinity:mastercharged_redstone"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:power_drive"
+    }
+}

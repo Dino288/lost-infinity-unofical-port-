@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+    	"particle": "lostinfinity:blocks/high_powered_charger_side",
+        "down": "lostinfinity:blocks/high_powered_charger_top",
+        "up": "lostinfinity:blocks/high_powered_charger_top",
+        "north": "lostinfinity:blocks/high_powered_charger_side",
+        "east": "lostinfinity:blocks/high_powered_charger_side",
+        "south": "lostinfinity:blocks/high_powered_charger_side",
+        "west": "lostinfinity:blocks/high_powered_charger_side"
+    }
+}

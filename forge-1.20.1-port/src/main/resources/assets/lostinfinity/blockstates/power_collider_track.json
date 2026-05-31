@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"amount=0": {
+		"model": "lostinfinity:power_collider_track_0"
+	},
+		"amount=1": {
+		"model": "lostinfinity:power_collider_track_1"
+	},
+		"amount=2": {
+		"model": "lostinfinity:power_collider_track_2"
+	}
+	}
+}

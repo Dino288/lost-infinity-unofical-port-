@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "dda",
+        "dd ",
+        "b c"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:astral_generator"
+        },
+        "b":
+        {
+            "item": "lostinfinity:super_cell"
+        },
+        "c":
+        {
+            "item": "lostinfinity:mastercrafted_alloy"
+        },
+        "d":
+        {
+            "item": "lostinfinity:synthesized_astrometal"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:sword_of_insanity"
+    }
+}

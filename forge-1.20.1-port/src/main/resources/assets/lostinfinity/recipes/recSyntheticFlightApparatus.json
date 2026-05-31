@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "yay",
+        "xmx",
+        " v "
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "lostinfinity:supermutated_batwing"
+        },
+        "v":
+        {
+            "item": "lostinfinity:deviant_iron"
+        },
+        "y":
+        {
+            "item": "lostinfinity:ultraflight_wing"
+        },
+        "m":
+        {
+            "item": "lostinfinity:weightless_gem"
+        },
+        "a":
+        {
+            "item": "lostinfinity:launch_drive"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:synthetic_flight_apparatus"
+    }
+}

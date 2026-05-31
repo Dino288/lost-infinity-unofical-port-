@@ -1,0 +1,44 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "gah",
+        "dbf",
+        "cbc"
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "lostinfinity:giant_heart"
+        },
+        "b":
+        {
+            "item": "lostinfinity:linked_bone"
+        },
+        "c":
+        {
+            "item": "lostinfinity:synthesized_astrometal"
+        },
+        "d":
+        {
+            "item": "lostinfinity:etherflower"
+        },
+        "f":
+        {
+            "item": "lostinfinity:complex_gyroscope"
+        },
+        "g":
+        {
+            "item": "lostinfinity:supermutated_saddle"
+        },
+        "h":
+        {
+            "item": "lostinfinity:supermutated_wool"
+        }
+    },
+    "result":
+    {
+        "item": "lostinfinity:andromeda"
+    }
+}
