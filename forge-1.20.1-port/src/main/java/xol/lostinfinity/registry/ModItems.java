@@ -3,7 +3,6 @@ package xol.lostinfinity.registry;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BowItem;
@@ -36,16 +35,16 @@ public final class ModItems {
     private static Item createItem(String name) {
         Item.Properties properties = new Item.Properties();
         if (name.endsWith("_helmet") || name.endsWith("helmet") || name.endsWith("headguard") || name.endsWith("mask")) {
-            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, properties);
+            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.HELMET, properties);
         }
         if (name.endsWith("_chestplate") || name.endsWith("chestplate")) {
-            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, properties);
+            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.CHESTPLATE, properties);
         }
         if (name.endsWith("_leggings") || name.endsWith("leggings")) {
-            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, properties);
+            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.LEGGINGS, properties);
         }
         if (name.endsWith("_boots") || name.endsWith("boots")) {
-            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.BOOTS, properties);
+            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.BOOTS, properties);
         }
         if (name.contains("pickaxe")) {
             return new PickaxeItem(Tiers.DIAMOND, 1, -2.8F, properties);

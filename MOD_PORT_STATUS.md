@@ -76,6 +76,8 @@ What was done:
   - chestplate names register as wearable chest armor
   - leggings names register as wearable leg armor
   - boots names register as wearable boot armor
+  - armor sets now use custom Lost Infinity armor material names instead of vanilla diamond
+  - recovered armor PNGs are aliased into `textures/models/armor/*_layer_1.png` and `*_layer_2.png` so worn armor can render with mod textures
   - pickaxe/axe/shovel/hoe names register as tool items
   - sword/blade/saber/sabre/claw names register as sword items
   - bow names register as bow items
