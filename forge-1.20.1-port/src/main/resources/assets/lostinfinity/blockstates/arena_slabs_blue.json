@@ -1,5 +1,10 @@
 ﻿{
   "variants": {
-    "": { "model": "lostinfinity:block/arena_slabs_blue" }
+    "type=bottom,waterlogged=false": { "model": "lostinfinity:block/arena_slabs_blue" },
+    "type=bottom,waterlogged=true": { "model": "lostinfinity:block/arena_slabs_blue" },
+    "type=top,waterlogged=false": { "model": "lostinfinity:block/arena_slabs_blue" },
+    "type=top,waterlogged=true": { "model": "lostinfinity:block/arena_slabs_blue" },
+    "type=double,waterlogged=false": { "model": "lostinfinity:block/arena_slabs_blue" },
+    "type=double,waterlogged=true": { "model": "lostinfinity:block/arena_slabs_blue" }
   }
 }

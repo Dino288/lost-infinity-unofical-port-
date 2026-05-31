@@ -2,8 +2,18 @@ package xol.lostinfinity.registry;
 
 import java.util.ArrayList;
 import java.util.List;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShieldItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,10 +27,48 @@ public final class ModItems {
     private ModItems() {
     }
 
-    private static RegistryObject<Item> registerItem(String name) {
-        RegistryObject<Item> item = ITEMS.register(name, () -> new Item(new Item.Properties()));
+        private static RegistryObject<Item> registerItem(String name) {
+        RegistryObject<Item> item = ITEMS.register(name, () -> createItem(name));
         ALL_ITEMS.add(item);
         return item;
+    }
+
+    private static Item createItem(String name) {
+        Item.Properties properties = new Item.Properties();
+        if (name.endsWith("_helmet") || name.endsWith("helmet") || name.endsWith("headguard") || name.endsWith("mask")) {
+            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, properties);
+        }
+        if (name.endsWith("_chestplate") || name.endsWith("chestplate")) {
+            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, properties);
+        }
+        if (name.endsWith("_leggings") || name.endsWith("leggings")) {
+            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, properties);
+        }
+        if (name.endsWith("_boots") || name.endsWith("boots")) {
+            return new ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.BOOTS, properties);
+        }
+        if (name.contains("pickaxe")) {
+            return new PickaxeItem(Tiers.DIAMOND, 1, -2.8F, properties);
+        }
+        if (name.endsWith("_axe") || name.endsWith("axe")) {
+            return new AxeItem(Tiers.DIAMOND, 5.0F, -3.0F, properties);
+        }
+        if (name.contains("shovel")) {
+            return new ShovelItem(Tiers.DIAMOND, 1.5F, -3.0F, properties);
+        }
+        if (name.endsWith("_hoe") || name.endsWith("hoe")) {
+            return new HoeItem(Tiers.DIAMOND, -2, -1.0F, properties);
+        }
+        if (name.contains("bow")) {
+            return new BowItem(properties.durability(768));
+        }
+        if (name.contains("shield")) {
+            return new ShieldItem(properties.durability(672));
+        }
+        if (name.contains("sword") || name.contains("blade") || name.contains("saber") || name.contains("sabre") || name.contains("claw")) {
+            return new SwordItem(Tiers.DIAMOND, 6, -2.4F, properties);
+        }
+        return new Item(properties);
     }
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<? extends Block> block) {
@@ -2018,3 +2066,4 @@ public final class ModItems {
     public static final RegistryObject<Item> ITEM_ZIRCONIA_ROSEWOOD = registerItem("zirconia_rosewood");
     public static final RegistryObject<Item> ITEM_ZIRCONIA_VIOLET = registerItem("zirconia_violet");
 }
+
