@@ -1,17 +1,84 @@
 {
-  "has_precipitation": false,
-  "temperature": 0.5,
-  "downfall": 0.0,
-  "effects": {
-    "sky_color": 0,
-    "fog_color": 2236962,
-    "water_color": 3549736,
-    "water_fog_color": 65793,
-    "grass_color": 5592405,
-    "foliage_color": 3355443
-  },
-  "spawners": {},
-  "spawn_costs": {},
-  "carvers": {},
-  "features": []
+    "has_precipitation":  false,
+    "temperature":  0.5,
+    "downfall":  0.0,
+    "effects":  {
+                    "sky_color":  0,
+                    "fog_color":  2236962,
+                    "water_color":  3549736,
+                    "water_fog_color":  65793,
+                    "grass_color":  5592405,
+                    "foliage_color":  3355443
+                },
+    "spawners":  {
+
+                 },
+    "spawn_costs":  {
+
+                    },
+    "carvers":  {
+
+                },
+    "features":  [
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+                         "lostinfinity:ore_emberium_ore",
+                         "lostinfinity:ore_hextorium_ore",
+                         "lostinfinity:ore_crystonium_ore",
+                         "lostinfinity:ore_astrallium_ore",
+                         "lostinfinity:ore_kylaxium_ore",
+                         "lostinfinity:ore_vellorium_ore",
+                         "lostinfinity:ore_incadium_ore",
+                         "lostinfinity:ore_noxerium_ore",
+                         "lostinfinity:ore_olysium_ore",
+                         "lostinfinity:ore_detherium_ore",
+                         "lostinfinity:ore_xerovium_ore",
+                         "lostinfinity:ore_phytrosium_ore",
+                         "lostinfinity:ore_exothermite_ore",
+                         "lostinfinity:ore_lumio_ore",
+                         "lostinfinity:ore_clovinite_ore",
+                         "lostinfinity:ore_myrite_ore",
+                         "lostinfinity:ore_prismosis_ore",
+                         "lostinfinity:ore_cellular_ore",
+                         "lostinfinity:ore_serpentine_ore",
+                         "lostinfinity:ore_gloominessence_ore",
+                         "lostinfinity:ore_auradine_ore",
+                         "lostinfinity:ore_phototenzyte_ore",
+                         "lostinfinity:ore_incandescite_ore",
+                         "lostinfinity:ore_catatonite_ore",
+                         "lostinfinity:ore_ionite_ore",
+                         "lostinfinity:ore_hivenite_ore",
+                         "lostinfinity:ore_sunstone_ore",
+                         "lostinfinity:ore_synchronite_ore"
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ]
+                 ]
 }

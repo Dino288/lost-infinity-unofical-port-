@@ -119,6 +119,11 @@ What was done:
   - `infinitemurk` applies darkness/slowness
   - `shadowsea` grants water breathing/dolphin movement
 - Rewired all 8 dimension JSONs to use Lost Infinity biome IDs instead of `minecraft:plains`.
+- Added first-pass Lost Infinity ore worldgen:
+  - 28 legacy Nonexistence resource ores generate in the `nonexistence` biome from Y 80 to 146
+  - `darksteel_ore`, `multiversite_overworld`, `lucient_ore`, and `atomite_ore` generate in `infinitemurk`
+  - `igneous_pearl_ore` generates in `shadowsea`
+  - generated 33 configured ore features and 33 placed ore features
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -131,6 +136,9 @@ Current compile result:
 - Dimension biome datapack smoke test:
   - Command: `.\gradlew.bat runServer --args nogui`
   - Result: server reached `Done`, confirming the custom biome JSONs and dimension references load.
+- Dimension ore datapack smoke test:
+  - Command: `.\gradlew.bat runServer --args nogui`
+  - Result: server reached `Done`, confirming the configured/placed ore features load.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -142,7 +150,7 @@ Current main blockers:
 - Many items now have broad vanilla-like item classes, but original right-click powers, cooldowns, projectiles, energy systems, status effects, and custom equipment effects still need manual per-item ports.
 - Ranged utility items now have generic damaging projectile behavior, but the original per-item effects, damage types, ammo/energy systems, particles, and sounds are not fully reconstructed yet.
 - Placeholder mob textures now use recovered mob PNGs where possible, but original 3D models/animations/render layers are not restored yet.
-- The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects plus Lost Infinity biome IDs, but they still reuse simple Overworld-style noise settings. Original custom chunk generators, structures, terrain blocks, biome features, and exact portal rituals still need manual porting.
+- The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects, Lost Infinity biome IDs, and resource ore features, but they still reuse simple Overworld-style noise settings. Original custom chunk generators, structures, terrain blocks, non-ore biome features, and exact portal rituals still need manual porting.
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
 - Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.
