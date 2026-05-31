@@ -1,11 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:champion_steel", "weight": 100 },
-        { "model": "lostinfinity:champion_steel2", "weight": 100 },
-        { "model": "lostinfinity:champion_steel3", "weight": 100 },
-        { "model": "lostinfinity:champion_steel4", "weight": 100 },
-        { "model": "lostinfinity:champion_steel5", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_steel" }
+  }
 }

@@ -1,22 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:searock", "weight": 100 },
-		{ "model": "lostinfinity:searock2", "weight": 100 },
-		{ "model": "lostinfinity:searock3", "weight": 100 },
-		{ "model": "lostinfinity:searock4", "weight": 100 },
-		{ "model": "lostinfinity:searock5", "weight": 100 },
-		{ "model": "lostinfinity:searock6", "weight": 100 },
-		{ "model": "lostinfinity:searock7", "weight": 100 },
-		{ "model": "lostinfinity:searock8", "weight": 100 },
-		{ "model": "lostinfinity:searock9", "weight": 100 },
-		{ "model": "lostinfinity:searock10", "weight": 100 },
-		{ "model": "lostinfinity:searock11", "weight": 100 },
-		{ "model": "lostinfinity:searock12", "weight": 100 },
-		{ "model": "lostinfinity:searock13", "weight": 100 },
-		{ "model": "lostinfinity:searock14", "weight": 100 },
-		{ "model": "lostinfinity:searock15", "weight": 100 },
-		{ "model": "lostinfinity:searock16", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/searock" }
+  }
 }

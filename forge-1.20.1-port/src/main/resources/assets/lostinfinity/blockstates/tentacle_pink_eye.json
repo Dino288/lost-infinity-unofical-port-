@@ -1,22 +1,5 @@
-{
-    "variants": {
-        "axis=y": [
-            { "model": "lostinfinity:tentacle_pink_eye", "weight": 100 },
-            { "model": "lostinfinity:tentacle_pink_eye2", "weight": 100 },
-            { "model": "lostinfinity:tentacle_pink_eye3", "weight": 100 }
-        ],
-        "axis=z": [
-            { "model": "lostinfinity:tentacle_pink_eye", "weight": 100, "x": 90},
-            { "model": "lostinfinity:tentacle_pink_eye2", "weight": 100, "x": 90},
-            { "model": "lostinfinity:tentacle_pink_eye3", "weight": 100, "x": 90}
-        ],
-        "axis=x": [
-            { "model": "lostinfinity:tentacle_pink_eye", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:tentacle_pink_eye2", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:tentacle_pink_eye3", "weight": 100, "x": 90, "y": 90 }
-        ],
-        "axis=none": [
-            { "model": "lostinfinity:tentacle_pink_top"}
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/tentacle_pink_eye" }
+  }
 }

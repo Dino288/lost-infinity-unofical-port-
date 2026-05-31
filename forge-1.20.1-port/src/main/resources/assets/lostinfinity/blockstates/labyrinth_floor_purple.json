@@ -1,16 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:labyrinth_floor_purple", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple2", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple3", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple4", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple5", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple6", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple7", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple8", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple9", "weight": 100 },
-		{ "model": "lostinfinity:labyrinth_floor_purple10", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/labyrinth_floor_purple" }
+  }
 }

@@ -1,13 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:puzzle_arena_floor_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:puzzle_arena_floor_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:puzzle_arena_floor_2"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

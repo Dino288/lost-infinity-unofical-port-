@@ -1,16 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:mutant_bloom", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom2", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom3", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom4", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom5", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom6", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom7", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom8", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom9", "weight": 100 },
-		{ "model": "lostinfinity:mutant_bloom10", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/mutant_bloom" }
+  }
 }

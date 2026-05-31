@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:galaxy_portal_arc"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/galaxy_portal_arc" }
+  }
 }

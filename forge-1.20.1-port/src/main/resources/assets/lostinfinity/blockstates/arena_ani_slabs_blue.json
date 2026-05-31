@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:arena_ani_slabs_blue" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/arena_ani_slabs_blue" }
+  }
 }

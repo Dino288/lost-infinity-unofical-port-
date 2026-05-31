@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:hyper_melder_powered" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/hyper_melder_powered" }
+  }
 }

@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:empty_hivenite", "weight": 100 },
-		{ "model": "lostinfinity:empty_hivenite2", "weight": 100 },
-		{ "model": "lostinfinity:empty_hivenite3", "weight": 100 },
-		{ "model": "lostinfinity:empty_hivenite4", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/empty_hivenite" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:champion_carpet_parkour"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_carpet_parkour" }
+  }
 }

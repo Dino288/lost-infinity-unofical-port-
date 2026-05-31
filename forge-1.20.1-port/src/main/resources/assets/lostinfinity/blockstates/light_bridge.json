@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"active=true": {
-		"model": "lostinfinity:light_bridge_visible"
-	},
-		"active=false": {
-		"model": "lostinfinity:light_bridge"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/light_bridge" }
+  }
 }

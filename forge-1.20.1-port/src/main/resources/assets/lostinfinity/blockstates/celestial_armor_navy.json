@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:celestial_armor_navy" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_armor_navy" }
+  }
 }

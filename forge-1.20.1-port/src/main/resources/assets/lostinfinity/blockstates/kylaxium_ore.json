@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:kylaxium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/kylaxium_ore" }
+  }
 }

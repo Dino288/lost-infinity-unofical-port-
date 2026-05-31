@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:seastone"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/seastone" }
+  }
 }

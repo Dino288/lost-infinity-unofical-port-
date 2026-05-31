@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:ring_game"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/ring_game" }
+  }
 }

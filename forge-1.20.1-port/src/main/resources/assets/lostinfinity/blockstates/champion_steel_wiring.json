@@ -1,15 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:champion_steel_wiring", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring2", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring3", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring4", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring5", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring6", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring7", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring8", "weight": 100 },
-        { "model": "lostinfinity:champion_steel_wiring9", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_steel_wiring" }
+  }
 }

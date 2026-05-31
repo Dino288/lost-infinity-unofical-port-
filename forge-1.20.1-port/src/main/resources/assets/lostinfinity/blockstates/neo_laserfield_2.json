@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:neo_laserfield_2" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/neo_laserfield_2" }
+  }
 }

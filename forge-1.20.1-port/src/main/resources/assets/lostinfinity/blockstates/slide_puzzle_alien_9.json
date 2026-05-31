@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:slide_puzzle_alien_9"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/slide_puzzle_alien_9" }
+  }
 }

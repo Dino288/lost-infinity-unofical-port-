@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:block_trigger_ingot"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/block_trigger_ingot" }
+  }
 }

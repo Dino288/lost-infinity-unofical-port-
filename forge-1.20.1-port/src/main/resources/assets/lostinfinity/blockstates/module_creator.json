@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:module_creator"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/module_creator" }
+  }
 }

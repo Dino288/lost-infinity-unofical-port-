@@ -1,5 +1,5 @@
-{
+﻿{
   "variants": {
-    "normal": { "model": "lostinfinity:shipment_filler" }
+    "": { "model": "lostinfinity:block/shipment_filler" }
   }
 }

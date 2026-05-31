@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:champion_carpet_hunters" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_carpet_hunters" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:depleted_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/depleted_ore" }
+  }
 }

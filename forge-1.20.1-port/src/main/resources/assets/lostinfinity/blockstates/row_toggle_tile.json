@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"active=false": {
-		"model": "lostinfinity:row_toggle_tile_off"
-	},
-		"active=true": {
-		"model": "lostinfinity:row_toggle_tile"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/row_toggle_tile" }
+  }
 }

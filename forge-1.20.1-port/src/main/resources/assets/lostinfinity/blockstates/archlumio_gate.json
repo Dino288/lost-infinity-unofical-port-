@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:archlumio_gate" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/archlumio_gate" }
+  }
 }

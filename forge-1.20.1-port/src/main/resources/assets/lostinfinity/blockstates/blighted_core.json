@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"active=true": {
-		"model": "lostinfinity:blighted_core_active"
-	},
-		"active=false": {
-		"model": "lostinfinity:blighted_core"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blighted_core" }
+  }
 }

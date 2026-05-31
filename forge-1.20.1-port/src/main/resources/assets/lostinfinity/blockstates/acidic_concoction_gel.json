@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:acidic_concoction_gel"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/acidic_concoction_gel" }
+  }
 }

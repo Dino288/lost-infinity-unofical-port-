@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:labyrinth_glass_green"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/labyrinth_glass_green" }
+  }
 }

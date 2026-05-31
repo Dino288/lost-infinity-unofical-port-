@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"active=true": {
-		"model": "lostinfinity:portal_nexus_active"
-	},
-		"active=false": {
-		"model": "lostinfinity:portal_nexus"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/portal_nexus" }
+  }
 }

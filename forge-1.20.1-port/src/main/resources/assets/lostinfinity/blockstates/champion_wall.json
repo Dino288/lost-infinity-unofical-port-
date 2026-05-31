@@ -1,12 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:champion_wall", "weight": 100 },
-		{ "model": "lostinfinity:champion_wall2", "weight": 100 },
-		{ "model": "lostinfinity:champion_wall3", "weight": 100 },
-		{ "model": "lostinfinity:champion_wall4", "weight": 100 },
-		{ "model": "lostinfinity:champion_wall5", "weight": 100 },
-		{ "model": "lostinfinity:champion_wall6", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_wall" }
+  }
 }

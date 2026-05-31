@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:darkworld_converter"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/darkworld_converter" }
+  }
 }

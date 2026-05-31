@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:phytrosium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/phytrosium_ore" }
+  }
 }

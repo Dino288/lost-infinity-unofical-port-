@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:murkice"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/murkice" }
+  }
 }

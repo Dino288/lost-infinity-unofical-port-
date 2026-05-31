@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:row_toggle_game"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/row_toggle_game" }
+  }
 }

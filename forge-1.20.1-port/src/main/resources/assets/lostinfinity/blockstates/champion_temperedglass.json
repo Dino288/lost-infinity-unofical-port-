@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:champion_temperedglass" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_temperedglass" }
+  }
 }

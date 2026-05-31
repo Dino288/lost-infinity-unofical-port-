@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:celestial_eye_pink"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_eye_pink" }
+  }
 }

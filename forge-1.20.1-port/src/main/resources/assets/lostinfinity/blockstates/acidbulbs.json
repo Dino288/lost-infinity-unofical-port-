@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:acidbulbs" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/acidbulbs" }
+  }
 }

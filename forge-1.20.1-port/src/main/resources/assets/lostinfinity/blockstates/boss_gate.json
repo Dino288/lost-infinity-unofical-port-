@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:boss_gate"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/boss_gate" }
+  }
 }

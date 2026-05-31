@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:selection_preview"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/selection_preview" }
+  }
 }

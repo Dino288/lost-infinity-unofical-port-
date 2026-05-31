@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:incadium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/incadium_ore" }
+  }
 }

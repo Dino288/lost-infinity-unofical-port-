@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:ring_slide_button"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/ring_slide_button" }
+  }
 }

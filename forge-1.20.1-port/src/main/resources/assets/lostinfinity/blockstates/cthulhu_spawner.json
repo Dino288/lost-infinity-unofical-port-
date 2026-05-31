@@ -1,8 +1,5 @@
-{
-	"variants": {
-		"facing=north": { "model": "lostinfinity:cthulhu_spawner" },
-		"facing=south": { "model": "lostinfinity:cthulhu_spawner", "y": 180 },
-		"facing=west":  { "model": "lostinfinity:cthulhu_spawner", "y": 270 },
-		"facing=east":  { "model": "lostinfinity:cthulhu_spawner", "y": 90 }
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/cthulhu_spawner" }
+  }
 }

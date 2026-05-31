@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:screen_dodgeball"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_dodgeball" }
+  }
 }

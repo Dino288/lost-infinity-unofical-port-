@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:neosteel_black", "weight": 100 },
-		{ "model": "lostinfinity:neosteel_black2", "weight": 100 },
-		{ "model": "lostinfinity:neosteel_black3", "weight": 100 },
-		{ "model": "lostinfinity:neosteel_black4", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/neosteel_black" }
+  }
 }

@@ -52,6 +52,18 @@ What was done:
 - Converted legacy `en_us.lang` translations to `en_us.json`.
 - Built a 1.20.1 Forge jar successfully.
 - Ran a Forge 1.20.1 dedicated server dev launch and reached a successful server start.
+- Rebuilt blockstate files into 1.20.1-style model references:
+  - old `"normal"` variants were replaced with empty default variants
+  - blockstate model paths now point at `lostinfinity:block/<id>`
+  - all blockstate model references now resolve to an existing model
+- Added baseline AI goals to registered placeholder mobs:
+  - swimming
+  - wandering
+  - looking at nearby players
+  - random looking
+  - melee attacking
+  - retaliation targeting
+  - nearest-player targeting
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -68,6 +80,7 @@ Current compile result:
 
 Current main blockers:
 - The registered entities are placeholder 1.20.1 entities, not the original AI, attacks, movement, bosses, animations, or projectile behavior.
+- Placeholder mobs now have basic hostile mob AI, but this is not the original per-mob Lost Infinity behavior yet.
 - The generated dimension JSONs create valid dimension keys, but they reuse simple Overworld-style noise settings and a fixed plains biome. Original custom biomes, structures, terrain, and portals still need manual porting.
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:slagdeposit" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/slagdeposit" }
+  }
 }

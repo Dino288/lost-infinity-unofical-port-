@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:fossil_combiner"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/fossil_combiner" }
+  }
 }

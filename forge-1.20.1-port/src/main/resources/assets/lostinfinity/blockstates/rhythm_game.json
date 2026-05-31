@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:rhythm_game"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/rhythm_game" }
+  }
 }

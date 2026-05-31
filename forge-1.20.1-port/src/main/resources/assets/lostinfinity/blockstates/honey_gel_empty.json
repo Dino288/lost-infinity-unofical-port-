@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:honey_gel_empty"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/honey_gel_empty" }
+  }
 }

@@ -1,10 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:blightstocks_top", "weight": 100 },
-        { "model": "lostinfinity:blightstocks_top2", "weight": 100 },
-        { "model": "lostinfinity:blightstocks_top3", "weight": 100 },
-        { "model": "lostinfinity:blightstocks_top4", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blightstocks_top" }
+  }
 }

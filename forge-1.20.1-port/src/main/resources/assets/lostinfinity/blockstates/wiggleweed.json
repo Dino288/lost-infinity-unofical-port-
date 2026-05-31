@@ -1,28 +1,5 @@
-{
-	"variants": {
-		"active=true":[
-		{ "model": "lostinfinity:wiggleweed_bulb", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb2", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb3", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb4", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb5", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb6", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb7", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb8", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb9", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed_bulb10", "weight": 100 }
-		],
-		"active=false":[
-		{ "model": "lostinfinity:wiggleweed", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed2", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed3", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed4", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed5", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed6", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed7", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed8", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed9", "weight": 100 },
-		{ "model": "lostinfinity:wiggleweed10", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/wiggleweed" }
+  }
 }

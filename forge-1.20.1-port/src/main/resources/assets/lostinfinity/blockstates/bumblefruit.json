@@ -1,14 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:bumblefruit", "weight": 100 },
-		{ "model": "lostinfinity:bumblefruit2", "weight": 100 },
-		{ "model": "lostinfinity:bumblefruit3", "weight": 100 },
-		{ "model": "lostinfinity:bumblefruit4", "weight": 100 },
-		{ "model": "lostinfinity:bumblefruit5", "weight": 100 },
-		{ "model": "lostinfinity:bumblefruit6", "weight": 100 },
-		{ "model": "lostinfinity:bumblefruit7", "weight": 100 },
-		{ "model": "lostinfinity:bumblefruit8", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/bumblefruit" }
+  }
 }

@@ -1,19 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:monomer_cube_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:monomer_cube_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:monomer_cube_2"
-	},
-		"amount=3": {
-		"model": "lostinfinity:monomer_cube_3"
-	},
-		"amount=4": {
-		"model": "lostinfinity:monomer_cube_4"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

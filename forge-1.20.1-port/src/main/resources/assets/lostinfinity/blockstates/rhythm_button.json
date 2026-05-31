@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"active=true": {
-		"model": "lostinfinity:rhythm_button_active"
-	},
-		"active=false": {
-		"model": "lostinfinity:rhythm_button_inactive"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

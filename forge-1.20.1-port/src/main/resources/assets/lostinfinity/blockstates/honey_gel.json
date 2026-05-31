@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:honey_gel", "weight": 100 },
-		{ "model": "lostinfinity:honey_gel2", "weight": 100 },
-		{ "model": "lostinfinity:honey_gel3", "weight": 100 },
-		{ "model": "lostinfinity:honey_gel4", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/honey_gel" }
+  }
 }

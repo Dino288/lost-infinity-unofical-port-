@@ -1,9 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:watcherweeds", "weight": 100 },
-        { "model": "lostinfinity:watcherweeds2", "weight": 100 },
-        { "model": "lostinfinity:watcherweeds3", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/watcherweeds" }
+  }
 }

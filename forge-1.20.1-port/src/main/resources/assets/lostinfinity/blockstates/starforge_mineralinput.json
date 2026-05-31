@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:starforge_mineralinput" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/starforge_mineralinput" }
+  }
 }

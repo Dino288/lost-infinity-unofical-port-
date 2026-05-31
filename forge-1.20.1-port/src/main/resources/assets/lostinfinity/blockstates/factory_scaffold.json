@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:factory_scaffold"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/factory_scaffold" }
+  }
 }

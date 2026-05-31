@@ -1,20 +1,5 @@
-{
-	"variants": {
-		"active=true":[
-		{ "model": "lostinfinity:shiverglow_bulb", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow_bulb2", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow_bulb3", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow_bulb4", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow_bulb5", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow_bulb6", "weight": 100 }
-		],
-		"active=false":[
-		{ "model": "lostinfinity:shiverglow", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow2", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow3", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow4", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow5", "weight": 100 },
-		{ "model": "lostinfinity:shiverglow6", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/shiverglow" }
+  }
 }

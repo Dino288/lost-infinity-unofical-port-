@@ -1,7 +1,5 @@
-{
-	"variants": {
-    	"amount=0": { "model": "lostinfinity:serpentine_empty" },
-        "amount=1": { "model": "lostinfinity:serpentine_empty"},
-        "amount=2": { "model": "lostinfinity:serpentine_ore"}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/serpentine_ore" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:blight_idol_summoner"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blight_idol_summoner" }
+  }
 }

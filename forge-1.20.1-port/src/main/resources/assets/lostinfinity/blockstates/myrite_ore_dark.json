@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:myrite_ore_dark"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/myrite_ore_dark" }
+  }
 }

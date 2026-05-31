@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:astrallium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/astrallium_ore" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:treadmill_track"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/treadmill_track" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:galactic_challenge"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/galactic_challenge" }
+  }
 }

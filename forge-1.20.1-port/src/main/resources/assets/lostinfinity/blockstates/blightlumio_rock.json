@@ -1,26 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:blightlumio_rock", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock2", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock3", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock4", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock5", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock6", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock7", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock8", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock9", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock10", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock11", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock12", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock13", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock14", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock15", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock16", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock17", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock18", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock19", "weight": 100 },
-		{ "model": "lostinfinity:blightlumio_rock20", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blightlumio_rock" }
+  }
 }

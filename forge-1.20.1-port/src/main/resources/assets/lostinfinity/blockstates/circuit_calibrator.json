@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:circuit_calibrator"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/circuit_calibrator" }
+  }
 }

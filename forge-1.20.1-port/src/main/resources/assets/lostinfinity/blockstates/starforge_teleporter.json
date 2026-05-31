@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:starforge_teleporter" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/starforge_teleporter" }
+  }
 }

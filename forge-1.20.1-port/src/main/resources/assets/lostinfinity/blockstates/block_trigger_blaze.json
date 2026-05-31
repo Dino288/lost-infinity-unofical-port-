@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:block_trigger_blaze"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/block_trigger_blaze" }
+  }
 }

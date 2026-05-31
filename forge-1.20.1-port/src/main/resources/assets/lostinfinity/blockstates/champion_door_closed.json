@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:champion_door_closed" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_door_closed" }
+  }
 }

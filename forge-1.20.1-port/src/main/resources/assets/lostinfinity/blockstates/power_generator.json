@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:power_generator"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/power_generator" }
+  }
 }

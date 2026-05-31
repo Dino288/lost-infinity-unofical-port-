@@ -1,24 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:dense_kelp", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp2", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp3", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp4", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp5", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp6", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp7", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp8", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp9", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp10", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp11", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp12", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp13", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp14", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp15", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp16", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp17", "weight": 100 },
-		{ "model": "lostinfinity:dense_kelp18", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/dense_kelp" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:celestial_outer_maroon" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_outer_maroon" }
+  }
 }

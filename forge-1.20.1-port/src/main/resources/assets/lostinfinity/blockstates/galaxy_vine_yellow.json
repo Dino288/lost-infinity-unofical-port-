@@ -1,8 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:galaxy_vine_yellow", "weight": 100 },
-        { "model": "lostinfinity:galaxy_vine_yellow2", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/galaxy_vine_yellow" }
+  }
 }

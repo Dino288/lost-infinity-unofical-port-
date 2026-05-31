@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:tesla_tower"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/tesla_tower" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:range_module" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/range_module" }
+  }
 }

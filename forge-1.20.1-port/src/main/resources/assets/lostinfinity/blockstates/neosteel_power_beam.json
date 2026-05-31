@@ -1,8 +1,5 @@
-{
-    "variants": {
-        "axis=y":    { "model": "lostinfinity:neosteel_power_beam" },
-        "axis=z":     { "model": "lostinfinity:neosteel_power_beam", "x": 90 },
-        "axis=x":     { "model": "lostinfinity:neosteel_power_beam", "x": 90, "y": 90 },
-        "axis=none":   { "model": "lostinfinity:neosteel_power_beam" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/neosteel_power_beam" }
+  }
 }

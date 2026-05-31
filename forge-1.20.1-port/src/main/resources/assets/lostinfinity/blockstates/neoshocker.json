@@ -1,13 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:neoshocker_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:neoshocker_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:neoshocker_2"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

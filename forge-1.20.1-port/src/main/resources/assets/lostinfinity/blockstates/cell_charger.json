@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:cell_charger"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/cell_charger" }
+  }
 }

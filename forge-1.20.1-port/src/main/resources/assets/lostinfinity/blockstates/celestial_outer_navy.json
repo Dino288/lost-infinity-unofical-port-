@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:celestial_outer_navy"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_outer_navy" }
+  }
 }

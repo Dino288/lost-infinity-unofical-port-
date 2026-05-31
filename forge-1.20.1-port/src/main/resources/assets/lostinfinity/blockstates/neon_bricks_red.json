@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:neon_bricks_red"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/neon_bricks_red" }
+  }
 }

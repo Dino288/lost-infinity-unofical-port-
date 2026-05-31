@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:containment_gate"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/containment_gate" }
+  }
 }

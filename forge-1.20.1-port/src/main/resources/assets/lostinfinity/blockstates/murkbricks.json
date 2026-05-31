@@ -1,8 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:murkbricks", "weight": 100 },
-		{ "model": "lostinfinity:murkbricks2", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/murkbricks" }
+  }
 }

@@ -1,10 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:pyrevines", "weight": 100 },
-        { "model": "lostinfinity:pyrevines2", "weight": 100 },
-        { "model": "lostinfinity:pyrevines3", "weight": 100 },
-        { "model": "lostinfinity:pyrevines4", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/pyrevines" }
+  }
 }

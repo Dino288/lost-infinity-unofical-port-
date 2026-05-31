@@ -1,25 +1,5 @@
-{
-    "variants": {
-        "axis=y": [
-            { "model": "lostinfinity:sunderwood_sap", "weight": 100 },
-            { "model": "lostinfinity:sunderwood_sap2", "weight": 100 },
-            { "model": "lostinfinity:sunderwood_sap3", "weight": 100 },
-            { "model": "lostinfinity:sunderwood_sap4", "weight": 100 }
-        ],
-        "axis=z": [
-            { "model": "lostinfinity:sunderwood_sap", "weight": 100, "x": 90},
-            { "model": "lostinfinity:sunderwood_sap2", "weight": 100, "x": 90},
-            { "model": "lostinfinity:sunderwood_sap3", "weight": 100, "x": 90},
-            { "model": "lostinfinity:sunderwood_sap4", "weight": 100, "x": 90}
-        ],
-        "axis=x": [
-            { "model": "lostinfinity:sunderwood_sap", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:sunderwood_sap2", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:sunderwood_sap3", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:sunderwood_sap4", "weight": 100, "x": 90, "y": 90 }
-        ],
-        "axis=none": [
-            { "model": "lostinfinity:sunderwood_sap"}
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/sunderwood_sap" }
+  }
 }

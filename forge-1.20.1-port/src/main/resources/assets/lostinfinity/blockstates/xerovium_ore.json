@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:xerovium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/xerovium_ore" }
+  }
 }

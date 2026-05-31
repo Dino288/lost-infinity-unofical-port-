@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"burning=true": {
-		"model": "lostinfinity:rainfall_generator_active"
-	},
-		"burning=false": {
-		"model": "lostinfinity:rainfall_generator"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/rainfall_generator" }
+  }
 }

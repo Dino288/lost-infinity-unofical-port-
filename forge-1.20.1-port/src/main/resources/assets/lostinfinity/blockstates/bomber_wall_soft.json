@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:bomber_wall_soft"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/bomber_wall_soft" }
+  }
 }

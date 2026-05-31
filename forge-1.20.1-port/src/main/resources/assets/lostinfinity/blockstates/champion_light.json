@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:champion_light" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_light" }
+  }
 }

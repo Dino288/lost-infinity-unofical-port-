@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"burning=true": {
-		"model": "lostinfinity:combustion_engine_active"
-	},
-		"burning=false": {
-		"model": "lostinfinity:combustion_engine"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/combustion_engine" }
+  }
 }

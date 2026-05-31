@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:screen_redlight" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_redlight" }
+  }
 }

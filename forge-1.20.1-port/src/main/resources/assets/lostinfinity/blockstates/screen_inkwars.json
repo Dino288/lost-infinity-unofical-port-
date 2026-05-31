@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:screen_inkwars"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_inkwars" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:champion_carpet_inkwars"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_carpet_inkwars" }
+  }
 }

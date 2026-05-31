@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:astrorock_crystal_pink" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/astrorock_crystal_pink" }
+  }
 }

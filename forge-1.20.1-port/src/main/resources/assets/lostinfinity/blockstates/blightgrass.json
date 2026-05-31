@@ -1,24 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:blightgrass", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass2", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass3", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass4", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass5", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass6", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass7", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass8", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass9", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass10", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass11", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass12", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass13", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass14", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass15", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass16", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass17", "weight": 100 },
-		{ "model": "lostinfinity:blightgrass18", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blightgrass" }
+  }
 }

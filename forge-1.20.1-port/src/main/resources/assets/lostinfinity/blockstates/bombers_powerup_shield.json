@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:bombers_powerup_shield"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/bombers_powerup_shield" }
+  }
 }

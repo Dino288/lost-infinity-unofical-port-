@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:eternal_beacon"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/eternal_beacon" }
+  }
 }

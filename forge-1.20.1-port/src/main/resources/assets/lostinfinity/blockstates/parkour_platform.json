@@ -1,13 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:parkour_platform_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:parkour_platform_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:parkour_platform_2"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

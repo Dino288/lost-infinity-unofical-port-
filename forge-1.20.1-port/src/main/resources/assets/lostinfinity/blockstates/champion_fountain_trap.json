@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:champion_fountain_trap"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_fountain_trap" }
+  }
 }

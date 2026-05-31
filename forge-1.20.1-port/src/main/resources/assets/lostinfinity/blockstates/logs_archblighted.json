@@ -1,44 +1,5 @@
-{
-    "variants": {
-        "axis=y": [
-            { "model": "lostinfinity:logs_archblighted", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted2", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted3", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted4", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted5", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted6", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted7", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted8", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted9", "weight": 100 },
-            { "model": "lostinfinity:logs_archblighted10", "weight": 100 }
-        ],
-        "axis=z": [
-            { "model": "lostinfinity:logs_archblighted", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted2", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted3", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted4", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted5", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted6", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted7", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted8", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted9", "weight": 100, "x": 90},
-            { "model": "lostinfinity:logs_archblighted10", "weight": 100, "x": 90}
-            
-        ],
-        "axis=x": [
-            { "model": "lostinfinity:logs_archblighted", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted2", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted3", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted4", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted5", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted6", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted7", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted8", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted9", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:logs_archblighted10", "weight": 100, "x": 90, "y": 90 }
-        ],
-        "axis=none": [
-            { "model": "lostinfinity:logs_archblighted"}
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/logs_archblighted" }
+  }
 }

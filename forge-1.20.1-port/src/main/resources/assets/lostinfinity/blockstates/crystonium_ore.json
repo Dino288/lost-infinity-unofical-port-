@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:crystonium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/crystonium_ore" }
+  }
 }

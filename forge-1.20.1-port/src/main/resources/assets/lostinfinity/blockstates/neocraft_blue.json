@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:neocraft_blue" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/neocraft_blue" }
+  }
 }

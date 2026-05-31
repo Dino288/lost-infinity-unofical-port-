@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:archbloom" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/archbloom" }
+  }
 }

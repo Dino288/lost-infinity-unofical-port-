@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:lab_game_purple" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/lab_game_purple" }
+  }
 }

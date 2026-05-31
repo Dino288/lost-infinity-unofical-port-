@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:darkvine", "weight": 100 },
-		{ "model": "lostinfinity:darkvine2", "weight": 100 },
-		{ "model": "lostinfinity:darkvine3", "weight": 100 },
-		{ "model": "lostinfinity:darkvine4", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/darkvine" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:galdungeonreward1" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/galdungeonreward1" }
+  }
 }

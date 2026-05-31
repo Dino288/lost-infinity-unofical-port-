@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:champion_carpet_redlight" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_carpet_redlight" }
+  }
 }

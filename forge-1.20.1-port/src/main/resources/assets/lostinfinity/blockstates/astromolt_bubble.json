@@ -1,12 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:astromolt_bubble1", "weight": 100 },
-        { "model": "lostinfinity:astromolt_bubble2", "weight": 100 },
-        { "model": "lostinfinity:astromolt_bubble3", "weight": 100 },
-        { "model": "lostinfinity:astromolt_bubble4", "weight": 100 },
-        { "model": "lostinfinity:astromolt_bubble5", "weight": 100 },
-        { "model": "lostinfinity:astromolt_bubble6", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

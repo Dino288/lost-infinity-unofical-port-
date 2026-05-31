@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:fish_chow"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/fish_chow" }
+  }
 }

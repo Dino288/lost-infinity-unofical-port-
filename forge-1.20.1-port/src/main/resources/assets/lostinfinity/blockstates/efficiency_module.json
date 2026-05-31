@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:efficiency_module" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/efficiency_module" }
+  }
 }

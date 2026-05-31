@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:detherium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/detherium_ore" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "variant=default": { "model": "lostinfinity:factory_platform" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

@@ -1,14 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:blazing_dahila_stem1", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_stem2", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_stem3", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_stem4", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_stem5", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_stem6", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_stem7", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_stem8", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:screen_blackmarket" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_blackmarket" }
+  }
 }

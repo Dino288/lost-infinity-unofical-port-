@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:arena_lamprazor_yellow" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/arena_lamprazor_yellow" }
+  }
 }

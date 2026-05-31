@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:lumio_ore_empty" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/lumio_ore_empty" }
+  }
 }

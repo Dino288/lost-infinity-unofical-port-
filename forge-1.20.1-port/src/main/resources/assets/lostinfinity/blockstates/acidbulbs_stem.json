@@ -1,8 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:acidbulbs_stem", "weight": 100 },
-        { "model": "lostinfinity:acidbulbs_stem2", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/acidbulbs_stem" }
+  }
 }

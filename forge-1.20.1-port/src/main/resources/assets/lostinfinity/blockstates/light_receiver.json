@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:light_receiver"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/light_receiver" }
+  }
 }

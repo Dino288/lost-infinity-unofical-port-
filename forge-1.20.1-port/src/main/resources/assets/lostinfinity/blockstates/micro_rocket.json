@@ -1,7 +1,5 @@
-{
+﻿{
   "variants": {
-    "normal": {
-      "model": "lostinfinity:micro_rocket"
-    }
+    "": { "model": "lostinfinity:block/micro_rocket" }
   }
 }

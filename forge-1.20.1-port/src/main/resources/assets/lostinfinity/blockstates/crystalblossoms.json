@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:crystalblossoms" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/crystalblossoms" }
+  }
 }

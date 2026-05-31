@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:item_challenge_fuse"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/item_challenge_fuse" }
+  }
 }

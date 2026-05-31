@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:champion_glass_dark"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_glass_dark" }
+  }
 }

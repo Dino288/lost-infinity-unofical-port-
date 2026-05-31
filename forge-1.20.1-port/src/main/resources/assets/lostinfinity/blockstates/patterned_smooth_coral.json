@@ -1,52 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:patterned_smooth_coral_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:patterned_smooth_coral_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:patterned_smooth_coral_2"
-	},
-		"amount=3": {
-		"model": "lostinfinity:patterned_smooth_coral_3"
-	},
-		"amount=4": {
-		"model": "lostinfinity:patterned_smooth_coral_4"
-	},
-		"amount=5": {
-		"model": "lostinfinity:patterned_smooth_coral_5"
-	},
-		"amount=6": {
-		"model": "lostinfinity:patterned_smooth_coral_6"
-	},
-		"amount=7": {
-		"model": "lostinfinity:patterned_smooth_coral_7"
-	},
-		"amount=8": {
-		"model": "lostinfinity:patterned_smooth_coral_8"
-	},
-		"amount=9": {
-		"model": "lostinfinity:patterned_smooth_coral_9"
-	},
-		"amount=10": {
-		"model": "lostinfinity:patterned_smooth_coral_10"
-	},
-		"amount=11": {
-		"model": "lostinfinity:patterned_smooth_coral_11"
-	},
-		"amount=12": {
-		"model": "lostinfinity:patterned_smooth_coral_12"
-	},
-		"amount=13": {
-		"model": "lostinfinity:patterned_smooth_coral_13"
-	},
-		"amount=14": {
-		"model": "lostinfinity:patterned_smooth_coral_14"
-	},
-		"amount=15": {
-		"model": "lostinfinity:patterned_smooth_coral_15"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

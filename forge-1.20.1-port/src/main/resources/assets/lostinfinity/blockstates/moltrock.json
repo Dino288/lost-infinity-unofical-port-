@@ -1,18 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:moltrock", "weight": 100 },
-		{ "model": "lostinfinity:moltrock2", "weight": 100 },
-		{ "model": "lostinfinity:moltrock3", "weight": 100 },
-		{ "model": "lostinfinity:moltrock4", "weight": 100 },
-		{ "model": "lostinfinity:moltrock5", "weight": 100 },
-		{ "model": "lostinfinity:moltrock6", "weight": 100 },
-		{ "model": "lostinfinity:moltrock7", "weight": 100 },
-		{ "model": "lostinfinity:moltrock8", "weight": 100 },
-		{ "model": "lostinfinity:moltrock9", "weight": 100 },
-		{ "model": "lostinfinity:moltrock10", "weight": 100 },
-		{ "model": "lostinfinity:moltrock11", "weight": 100 },
-		{ "model": "lostinfinity:moltrock12", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/moltrock" }
+  }
 }

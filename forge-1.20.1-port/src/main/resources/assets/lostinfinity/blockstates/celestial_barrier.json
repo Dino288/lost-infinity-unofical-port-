@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:celestial_barrier" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_barrier" }
+  }
 }

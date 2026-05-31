@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"active=true": {
-		"model": "lostinfinity:phototenzyte_ore_active"
-	},
-		"active=false": {
-		"model": "lostinfinity:phototenzyte_ore_inactive"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

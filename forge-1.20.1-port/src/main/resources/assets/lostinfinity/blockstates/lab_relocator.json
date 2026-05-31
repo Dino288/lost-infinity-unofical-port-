@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:lab_relocator" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/lab_relocator" }
+  }
 }

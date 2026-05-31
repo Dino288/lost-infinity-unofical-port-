@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:screen_laserwarz"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_laserwarz" }
+  }
 }

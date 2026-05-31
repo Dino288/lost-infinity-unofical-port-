@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:emberslag_deposit"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/emberslag_deposit" }
+  }
 }

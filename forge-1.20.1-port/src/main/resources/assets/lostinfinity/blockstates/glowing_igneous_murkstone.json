@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:glowing_igneous_murkstone"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/glowing_igneous_murkstone" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:champion_dungeon_selector" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_dungeon_selector" }
+  }
 }

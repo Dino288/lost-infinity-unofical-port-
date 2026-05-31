@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:gloominessence_ore"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/gloominessence_ore" }
+  }
 }

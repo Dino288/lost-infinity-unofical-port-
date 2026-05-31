@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:tether_creator" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/tether_creator" }
+  }
 }

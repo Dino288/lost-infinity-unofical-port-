@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:blightbloom" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blightbloom" }
+  }
 }

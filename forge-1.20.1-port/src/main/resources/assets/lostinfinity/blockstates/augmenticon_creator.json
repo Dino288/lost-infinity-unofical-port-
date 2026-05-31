@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:augmenticon_creator" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/augmenticon_creator" }
+  }
 }

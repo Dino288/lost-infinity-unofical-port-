@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:archbloom_stem", "weight": 100 },
-		{ "model": "lostinfinity:archbloom_stem2", "weight": 100 },
-		{ "model": "lostinfinity:blightbloom_stem3", "weight": 100 },
-		{ "model": "lostinfinity:blightbloom_stem4", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

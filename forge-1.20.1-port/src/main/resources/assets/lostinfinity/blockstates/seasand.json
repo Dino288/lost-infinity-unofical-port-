@@ -1,12 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:seasand", "weight": 100 },
-		{ "model": "lostinfinity:seasand2", "weight": 100 },
-		{ "model": "lostinfinity:seasand3", "weight": 100 },
-		{ "model": "lostinfinity:seasand4", "weight": 100 },
-		{ "model": "lostinfinity:seasand5", "weight": 100 },
-		{ "model": "lostinfinity:seasand6", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/seasand" }
+  }
 }

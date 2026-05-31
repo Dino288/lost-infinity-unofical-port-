@@ -1,11 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:leaves_archlum", "weight": 100 },
-        { "model": "lostinfinity:leaves_archlum2", "weight": 100 },
-        { "model": "lostinfinity:leaves_archlum3", "weight": 100 },
-        { "model": "lostinfinity:leaves_archlum4", "weight": 100 },
-        { "model": "lostinfinity:leaves_archlum5", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/leaves_archlum" }
+  }
 }

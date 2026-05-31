@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:puzzle_lava"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/puzzle_lava" }
+  }
 }

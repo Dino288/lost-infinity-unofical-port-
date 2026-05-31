@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:champion_strobe_sync2"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_strobe_sync2" }
+  }
 }

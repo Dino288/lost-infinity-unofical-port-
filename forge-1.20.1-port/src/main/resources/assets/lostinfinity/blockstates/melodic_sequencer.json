@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:melodic_sequencer"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/melodic_sequencer" }
+  }
 }

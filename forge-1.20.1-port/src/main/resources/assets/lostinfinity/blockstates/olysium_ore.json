@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:olysium_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/olysium_ore" }
+  }
 }

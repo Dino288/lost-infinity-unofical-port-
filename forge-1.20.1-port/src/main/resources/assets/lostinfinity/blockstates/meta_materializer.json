@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:meta_materializer"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/meta_materializer" }
+  }
 }

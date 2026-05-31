@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:light_tile_dark"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/light_tile_dark" }
+  }
 }

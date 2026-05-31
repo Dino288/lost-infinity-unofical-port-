@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:neocrafting_station"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/neocrafting_station" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:depth_module" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/depth_module" }
+  }
 }

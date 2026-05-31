@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:whack_game"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/whack_game" }
+  }
 }

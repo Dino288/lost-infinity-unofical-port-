@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:blight_eye_empty"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blight_eye_empty" }
+  }
 }

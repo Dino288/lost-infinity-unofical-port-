@@ -1,11 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:crystal_deposit", "weight": 100 },
-		{ "model": "lostinfinity:crystal_deposit2", "weight": 100 },
-		{ "model": "lostinfinity:crystal_deposit3", "weight": 100 },
-		{ "model": "lostinfinity:crystal_deposit4", "weight": 100 },
-		{ "model": "lostinfinity:crystal_deposit5", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/crystal_deposit" }
+  }
 }

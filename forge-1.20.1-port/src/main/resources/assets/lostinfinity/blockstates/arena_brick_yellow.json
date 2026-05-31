@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:arena_brick_yellow" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/arena_brick_yellow" }
+  }
 }

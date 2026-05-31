@@ -1,13 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:nightvines_flower", "weight": 100 },
-        { "model": "lostinfinity:nightvines_flower2", "weight": 100 },
-        { "model": "lostinfinity:nightvines_flower3", "weight": 100 },
-        { "model": "lostinfinity:nightvines_flower4", "weight": 100 },
-        { "model": "lostinfinity:nightvines_flower5", "weight": 100 },
-        { "model": "lostinfinity:nightvines_flower6", "weight": 100 },
-        { "model": "lostinfinity:nightvines_flower7", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/nightvines_flower" }
+  }
 }

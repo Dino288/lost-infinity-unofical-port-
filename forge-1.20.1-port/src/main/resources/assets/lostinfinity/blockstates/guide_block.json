@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:guide_block"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/guide_block" }
+  }
 }

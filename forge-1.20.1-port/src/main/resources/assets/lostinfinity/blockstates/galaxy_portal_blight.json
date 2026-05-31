@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:galaxy_portal_blight"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/galaxy_portal_blight" }
+  }
 }

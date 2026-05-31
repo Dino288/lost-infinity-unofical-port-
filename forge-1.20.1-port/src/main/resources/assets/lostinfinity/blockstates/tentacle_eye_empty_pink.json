@@ -1,8 +1,5 @@
-{
-    "variants": {
-        "axis=y":    { "model": "lostinfinity:tentacle_eye_empty_pink" },
-        "axis=z":     { "model": "lostinfinity:tentacle_eye_empty_pink", "x": 90 },
-        "axis=x":     { "model": "lostinfinity:tentacle_eye_empty_pink", "x": 90, "y": 90 },
-        "axis=none":   { "model": "lostinfinity:tentacle_eye_empty_pink_top" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/tentacle_eye_empty_pink" }
+  }
 }

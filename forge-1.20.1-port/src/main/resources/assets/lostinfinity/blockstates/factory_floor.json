@@ -1,11 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:factory_floor", "weight": 100 },
-		{ "model": "lostinfinity:factory_floor2", "weight": 100 },
-		{ "model": "lostinfinity:factory_floor3", "weight": 100 },
-		{ "model": "lostinfinity:factory_floor4", "weight": 100 },
-		{ "model": "lostinfinity:factory_floor5", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/factory_floor" }
+  }
 }

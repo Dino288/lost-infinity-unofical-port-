@@ -1,16 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:leaves_darkborn", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn2", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn3", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn4", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn5", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn6", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn7", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn8", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn9", "weight": 100 },
-		{ "model": "lostinfinity:leaves_darkborn10", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/leaves_darkborn" }
+  }
 }

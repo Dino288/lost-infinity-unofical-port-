@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:arena_barrier" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/arena_barrier" }
+  }
 }

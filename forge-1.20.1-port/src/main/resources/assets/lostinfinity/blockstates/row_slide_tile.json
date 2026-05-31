@@ -1,16 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:row_slide_tile_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:row_slide_tile_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:row_slide_tile_2"
-	},
-		"amount=3": {
-		"model": "lostinfinity:row_slide_tile_3"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/row_slide_tile" }
+  }
 }

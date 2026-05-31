@@ -1,52 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:ancient_symbol_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:ancient_symbol_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:ancient_symbol_2"
-	},
-		"amount=3": {
-		"model": "lostinfinity:ancient_symbol_3"
-	},
-		"amount=4": {
-		"model": "lostinfinity:ancient_symbol_4"
-	},
-		"amount=5": {
-		"model": "lostinfinity:ancient_symbol_5"
-	},
-		"amount=6": {
-		"model": "lostinfinity:ancient_symbol_6"
-	},
-		"amount=7": {
-		"model": "lostinfinity:ancient_symbol_7"
-	},
-		"amount=8": {
-		"model": "lostinfinity:ancient_symbol_8"
-	},
-		"amount=9": {
-		"model": "lostinfinity:ancient_symbol_9"
-	},
-		"amount=10": {
-		"model": "lostinfinity:ancient_symbol_10"
-	},
-		"amount=11": {
-		"model": "lostinfinity:ancient_symbol_11"
-	},
-		"amount=12": {
-		"model": "lostinfinity:ancient_symbol_12"
-	},
-		"amount=13": {
-		"model": "lostinfinity:ancient_symbol_13"
-	},
-		"amount=14": {
-		"model": "lostinfinity:ancient_symbol_14"
-	},
-		"amount=15": {
-		"model": "lostinfinity:ancient_symbol_15"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

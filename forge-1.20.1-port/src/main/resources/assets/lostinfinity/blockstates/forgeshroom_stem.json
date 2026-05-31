@@ -1,26 +1,5 @@
-{
-    "variants": {
-        "axis=y": [
-            { "model": "lostinfinity:forgeshroom_stem", "weight": 100 },
-            { "model": "lostinfinity:forgeshroom_stem2", "weight": 100 },
-            { "model": "lostinfinity:forgeshroom_stem3", "weight": 100 },
-            { "model": "lostinfinity:forgeshroom_stem4", "weight": 100 }
-        ],
-        "axis=z": [
-            { "model": "lostinfinity:forgeshroom_stem", "weight": 100, "x": 90},
-            { "model": "lostinfinity:forgeshroom_stem2", "weight": 100, "x": 90},
-            { "model": "lostinfinity:forgeshroom_stem3", "weight": 100, "x": 90},
-            { "model": "lostinfinity:forgeshroom_stem4", "weight": 100, "x": 90}
-            
-        ],
-        "axis=x": [
-            { "model": "lostinfinity:forgeshroom_stem", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:forgeshroom_stem2", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:forgeshroom_stem3", "weight": 100, "x": 90, "y": 90 },
-            { "model": "lostinfinity:forgeshroom_stem4", "weight": 100, "x": 90, "y": 90 }
-        ],
-        "axis=none": [
-            { "model": "lostinfinity:forgeshroom_stem"}
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/forgeshroom_stem" }
+  }
 }

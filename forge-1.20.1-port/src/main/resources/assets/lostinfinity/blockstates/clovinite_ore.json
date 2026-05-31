@@ -1,8 +1,5 @@
-{
-    "variants": {
-        "axis=y":    { "model": "lostinfinity:clovinite_ore" },
-        "axis=z":     { "model": "lostinfinity:clovinite_ore", "x": 90 },
-        "axis=x":     { "model": "lostinfinity:clovinite_ore", "x": 90, "y": 90 },
-        "axis=none":   { "model": "lostinfinity:clovinite_ore" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/clovinite_ore" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:astrorock_lamp_purple" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/astrorock_lamp_purple" }
+  }
 }

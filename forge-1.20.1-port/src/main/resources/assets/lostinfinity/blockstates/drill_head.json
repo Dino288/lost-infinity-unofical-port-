@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:drill_head"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/drill_head" }
+  }
 }

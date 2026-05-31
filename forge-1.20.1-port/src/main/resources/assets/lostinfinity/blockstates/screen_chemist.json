@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:screen_chemist"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_chemist" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:fossil_track"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/fossil_track" }
+  }
 }

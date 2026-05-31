@@ -1,10 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:hivenite_ore", "weight": 100 },
-		{ "model": "lostinfinity:hivenite_ore2", "weight": 100 },
-		{ "model": "lostinfinity:hivenite_ore3", "weight": 100 },
-		{ "model": "lostinfinity:hivenite_ore4", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/hivenite_ore" }
+  }
 }

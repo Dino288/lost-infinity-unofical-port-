@@ -1,14 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:puff_spore", "weight": 100 },
-		{ "model": "lostinfinity:puff_spore2", "weight": 100 },
-		{ "model": "lostinfinity:puff_spore3", "weight": 100 },
-		{ "model": "lostinfinity:puff_spore4", "weight": 100 },
-		{ "model": "lostinfinity:puff_spore5", "weight": 100 },
-		{ "model": "lostinfinity:puff_spore6", "weight": 100 },
-		{ "model": "lostinfinity:puff_spore7", "weight": 100 },
-		{ "model": "lostinfinity:puff_spore8", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/puff_spore" }
+  }
 }

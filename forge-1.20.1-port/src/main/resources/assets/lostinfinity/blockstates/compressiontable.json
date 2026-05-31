@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:compressiontable" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/compressiontable" }
+  }
 }

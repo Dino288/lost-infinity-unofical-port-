@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:champion_signal_red" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_signal_red" }
+  }
 }

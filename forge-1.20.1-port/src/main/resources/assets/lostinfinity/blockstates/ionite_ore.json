@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:ionite_ore"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/ionite_ore" }
+  }
 }

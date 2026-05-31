@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:celestial_core_orange" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_core_orange" }
+  }
 }

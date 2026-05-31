@@ -1,8 +1,5 @@
-{
-    "variants": {
-        "axis=y":    { "model": "lostinfinity:sunderwood" },
-        "axis=z":     { "model": "lostinfinity:sunderwood", "x": 90 },
-        "axis=x":     { "model": "lostinfinity:sunderwood", "x": 90, "y": 90 },
-        "axis=none":   { "model": "lostinfinity:sunderwood_top" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/sunderwood" }
+  }
 }

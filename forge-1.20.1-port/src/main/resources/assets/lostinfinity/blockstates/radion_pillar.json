@@ -1,10 +1,5 @@
-{
+﻿{
   "variants": {
-      "active=true": {
-      "model": "lostinfinity:radion_pillar_active"
-  },
-      "active=false": {
-      "model": "lostinfinity:radion_pillar_inactive"
-  }
+    "": { "model": "minecraft:block/stone" }
   }
 }

@@ -1,20 +1,5 @@
-{
-	"variants": {
-		"active=true":[
-		{ "model": "lostinfinity:azure_root_leaf", "weight": 100 },
-		{ "model": "lostinfinity:azure_root_leaf2", "weight": 100 },
-		{ "model": "lostinfinity:azure_root_leaf3", "weight": 100 },
-		{ "model": "lostinfinity:azure_root_leaf4", "weight": 100 },
-		{ "model": "lostinfinity:azure_root_leaf5", "weight": 100 },
-		{ "model": "lostinfinity:azure_root_leaf6", "weight": 100 }
-		],
-		"active=false":[
-		{ "model": "lostinfinity:azure_root", "weight": 100 },
-		{ "model": "lostinfinity:azure_root2", "weight": 100 },
-		{ "model": "lostinfinity:azure_root3", "weight": 100 },
-		{ "model": "lostinfinity:azure_root4", "weight": 100 },
-		{ "model": "lostinfinity:azure_root5", "weight": 100 },
-		{ "model": "lostinfinity:azure_root6", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/azure_root" }
+  }
 }

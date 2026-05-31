@@ -1,20 +1,5 @@
-{
-	"variants": {
-		"active=true":[
-		{ "model": "lostinfinity:emberkelp_dense", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp_dense2", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp_dense3", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp_dense4", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp_dense5", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp_dense6", "weight": 100 }
-		],
-		"active=false":[
-		{ "model": "lostinfinity:emberkelp", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp2", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp3", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp4", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp5", "weight": 100 },
-		{ "model": "lostinfinity:emberkelp6", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/emberkelp" }
+  }
 }

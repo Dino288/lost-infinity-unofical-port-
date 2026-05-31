@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:multiversite_murk"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/multiversite_murk" }
+  }
 }

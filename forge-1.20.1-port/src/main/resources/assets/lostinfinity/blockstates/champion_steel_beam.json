@@ -1,8 +1,5 @@
-{
-    "variants": {
-    	"facing=south": { "model": "lostinfinity:champion_steel_beam" },
-        "facing=west": { "model": "lostinfinity:champion_steel_beam", "y": 90 },
-        "facing=north": { "model": "lostinfinity:champion_steel_beam", "y": 180 },
-        "facing=east": { "model": "lostinfinity:champion_steel_beam", "y": 270 }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/champion_steel_beam" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:sky_striker" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/sky_striker" }
+  }
 }

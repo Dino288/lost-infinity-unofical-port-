@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:factory_lantern" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/factory_lantern" }
+  }
 }

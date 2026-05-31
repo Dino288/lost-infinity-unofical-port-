@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:connect_game"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/connect_game" }
+  }
 }

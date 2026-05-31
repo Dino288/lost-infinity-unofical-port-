@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:whack_block_unpowered" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/whack_block_unpowered" }
+  }
 }

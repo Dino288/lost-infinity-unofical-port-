@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:celestial_armor_pink"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_armor_pink" }
+  }
 }

@@ -1,6 +1,5 @@
-{
-    "variants": {
-        "half=bottom,variant=default": { "model": "lostinfinity:factory_platform_half" },
-        "half=top,variant=default": { "model": "lostinfinity:factory_platform_upper" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/factory_platform_half" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:row_increment_button"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/row_increment_button" }
+  }
 }

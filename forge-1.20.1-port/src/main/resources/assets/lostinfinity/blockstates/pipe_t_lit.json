@@ -1,8 +1,5 @@
-{
-	"variants": {
-		"facing=north": { "model": "lostinfinity:pipe_t_lit" },
-        "facing=east": { "model": "lostinfinity:pipe_t_lit_east"},
-        "facing=south": { "model": "lostinfinity:pipe_t_lit_south" },
-        "facing=west": { "model": "lostinfinity:pipe_t_lit_west"}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/pipe_t_lit" }
+  }
 }

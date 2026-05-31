@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:parkour_platform_slippery"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/parkour_platform_slippery" }
+  }
 }

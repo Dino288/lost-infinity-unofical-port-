@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:switchable_light_on"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/switchable_light_on" }
+  }
 }

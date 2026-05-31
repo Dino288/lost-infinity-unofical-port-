@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:timeline_stabilizer_capsule"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/timeline_stabilizer_capsule" }
+  }
 }

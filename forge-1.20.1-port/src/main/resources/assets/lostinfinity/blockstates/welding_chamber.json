@@ -1,10 +1,5 @@
-{
-    "variants": {
-        "burning=false": {
-        "model":  "lostinfinity:welding_table"
-        },
-        "burning=true": {
-        "model":  "lostinfinity:welding_table_on"
-        }
-    }
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

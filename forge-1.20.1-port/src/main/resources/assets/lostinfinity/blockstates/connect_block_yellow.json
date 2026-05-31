@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:connect_block_yellow"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/connect_block_yellow" }
+  }
 }

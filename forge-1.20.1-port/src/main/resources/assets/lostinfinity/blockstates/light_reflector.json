@@ -1,16 +1,5 @@
-{
-	"variants": {
-		"facing=north": {
-		"model": "lostinfinity:light_reflector_north"
-	},
-		"facing=east": {
-		"model": "lostinfinity:light_reflector_east"
-	},
-		"facing=south": {
-		"model": "lostinfinity:light_reflector_south"
-	},
-		"facing=west": {
-		"model": "lostinfinity:light_reflector_west"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/light_reflector" }
+  }
 }

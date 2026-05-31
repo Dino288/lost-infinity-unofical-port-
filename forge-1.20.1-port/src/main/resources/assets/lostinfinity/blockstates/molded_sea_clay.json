@@ -1,7 +1,5 @@
-{
+﻿{
   "variants": {
-    "normal": {
-      "model": "lostinfinity:molded_sea_clay"
-    }
+    "": { "model": "lostinfinity:block/molded_sea_clay" }
   }
 }

@@ -1,16 +1,5 @@
-{
-	"variants": {
-		"active=true":[
-		{ "model": "lostinfinity:strangelash_pods", "weight": 100 },
-		{ "model": "lostinfinity:strangelash_pods2", "weight": 100 },
-		{ "model": "lostinfinity:strangelash_pods3", "weight": 100 },
-		{ "model": "lostinfinity:strangelash_pods4", "weight": 100 }
-		],
-		"active=false":[
-		{ "model": "lostinfinity:strangelash", "weight": 100 },
-		{ "model": "lostinfinity:strangelash2", "weight": 100 },
-		{ "model": "lostinfinity:strangelash3", "weight": 100 },
-		{ "model": "lostinfinity:strangelash4", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/strangelash" }
+  }
 }

@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:acid_pocket"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/acid_pocket" }
+  }
 }

@@ -1,8 +1,5 @@
-{
-    "variants": {
-    	"facing=south": { "model": "lostinfinity:launch_coordinator_empty" },
-        "facing=west": { "model": "lostinfinity:launch_coordinator_empty", "y": 90 },
-        "facing=north": { "model": "lostinfinity:launch_coordinator_empty", "y": 180 },
-        "facing=east": { "model": "lostinfinity:launch_coordinator_empty", "y": 270 }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/launch_coordinator_empty" }
+  }
 }

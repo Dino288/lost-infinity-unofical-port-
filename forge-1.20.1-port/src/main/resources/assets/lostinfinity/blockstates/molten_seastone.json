@@ -1,16 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:molten_seastone", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone2", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone3", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone4", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone5", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone6", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone7", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone8", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone9", "weight": 100 },
-		{ "model": "lostinfinity:molten_seastone10", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/molten_seastone" }
+  }
 }

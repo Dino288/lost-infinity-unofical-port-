@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:main_power_terminal"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/main_power_terminal" }
+  }
 }

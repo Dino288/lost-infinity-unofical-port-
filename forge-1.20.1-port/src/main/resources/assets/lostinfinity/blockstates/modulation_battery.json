@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:modulation_battery" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/modulation_battery" }
+  }
 }

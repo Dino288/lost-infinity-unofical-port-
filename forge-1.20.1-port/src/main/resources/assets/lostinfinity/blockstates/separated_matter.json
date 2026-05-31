@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:separated_matter"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/separated_matter" }
+  }
 }

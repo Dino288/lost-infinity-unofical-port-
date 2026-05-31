@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:leaves_metalloid" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/leaves_metalloid" }
+  }
 }

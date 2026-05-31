@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:fall_bridge"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/fall_bridge" }
+  }
 }

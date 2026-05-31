@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:screen_archeologist"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_archeologist" }
+  }
 }

@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:starblock" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/starblock" }
+  }
 }

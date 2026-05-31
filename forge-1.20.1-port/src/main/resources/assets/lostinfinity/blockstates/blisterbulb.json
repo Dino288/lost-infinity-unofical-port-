@@ -1,9 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:blisterbulb", "weight": 100 },
-        { "model": "lostinfinity:blisterbulb2", "weight": 100 },
-        { "model": "lostinfinity:blisterbulb3", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/blisterbulb" }
+  }
 }

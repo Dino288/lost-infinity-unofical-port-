@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:deviation_field" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/deviation_field" }
+  }
 }

@@ -1,14 +1,5 @@
-{
-    "variants": {
-    	"amount=0": { "model": "lostinfinity:cell_container_3_0" },
-        "amount=1": { "model": "lostinfinity:cell_container_3_1"},
-        "amount=2": { "model": "lostinfinity:cell_container_3_2"},
-        "amount=3": { "model": "lostinfinity:cell_container_3_3"},
-        "amount=4": { "model": "lostinfinity:cell_container_3_3"},
-        "amount=5": { "model": "lostinfinity:cell_container_3_3"},
-        "amount=6": { "model": "lostinfinity:cell_container_3_3"},
-        "amount=7": { "model": "lostinfinity:cell_container_3_3"},
-        "amount=8": { "model": "lostinfinity:cell_container_3_3"},
-        "amount=9": { "model": "lostinfinity:cell_container_3_3"}
-    }
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

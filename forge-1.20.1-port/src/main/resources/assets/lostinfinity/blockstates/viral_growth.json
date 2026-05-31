@@ -1,13 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:viral_growth", "weight": 100 },
-		{ "model": "lostinfinity:viral_growth2", "weight": 100 },
-		{ "model": "lostinfinity:viral_growth3", "weight": 100 },
-		{ "model": "lostinfinity:viral_growth4", "weight": 100 },
-		{ "model": "lostinfinity:viral_growth5", "weight": 100 },
-		{ "model": "lostinfinity:viral_growth6", "weight": 100 },
-		{ "model": "lostinfinity:viral_growth7", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/viral_growth" }
+  }
 }

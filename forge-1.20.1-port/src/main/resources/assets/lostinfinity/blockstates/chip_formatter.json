@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:chip_formatter" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/chip_formatter" }
+  }
 }

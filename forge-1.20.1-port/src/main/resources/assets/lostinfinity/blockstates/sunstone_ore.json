@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:sunstone_ore"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/sunstone_ore" }
+  }
 }

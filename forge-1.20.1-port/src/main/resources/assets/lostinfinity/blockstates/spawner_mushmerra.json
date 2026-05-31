@@ -1,8 +1,5 @@
-{
-  "forge_marker": 1,
+﻿{
   "variants": {
-    "normal": {
-      "model": "lostinfinity:fungal_astromud"
-    }
+    "": { "model": "minecraft:block/stone" }
   }
 }

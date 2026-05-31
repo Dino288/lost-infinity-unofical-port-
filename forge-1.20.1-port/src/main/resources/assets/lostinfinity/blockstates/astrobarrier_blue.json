@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:astrobarrier_blue" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/astrobarrier_blue" }
+  }
 }

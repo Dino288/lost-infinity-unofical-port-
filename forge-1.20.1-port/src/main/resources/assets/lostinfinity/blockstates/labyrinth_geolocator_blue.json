@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:labyrinth_geolocator_blue" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/labyrinth_geolocator_blue" }
+  }
 }

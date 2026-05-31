@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:screen_hunterkiller" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/screen_hunterkiller" }
+  }
 }

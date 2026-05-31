@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:security_gate_1" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/security_gate_1" }
+  }
 }

@@ -1,8 +1,5 @@
-{
-	"variants": {
-		"facing=north": { "model": "lostinfinity:pipe_elbow" },
-        "facing=east": { "model": "lostinfinity:pipe_elbow_east"},
-        "facing=south": { "model": "lostinfinity:pipe_elbow_south" },
-        "facing=west": { "model": "lostinfinity:pipe_elbow_west"}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/pipe_elbow" }
+  }
 }

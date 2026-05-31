@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:drill_console"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/drill_console" }
+  }
 }

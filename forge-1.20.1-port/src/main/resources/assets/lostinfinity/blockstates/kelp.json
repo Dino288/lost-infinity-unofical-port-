@@ -1,12 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:kelp", "weight": 100 },
-		{ "model": "lostinfinity:kelp2", "weight": 100 },
-		{ "model": "lostinfinity:kelp3", "weight": 100 },
-		{ "model": "lostinfinity:kelp4", "weight": 100 },
-		{ "model": "lostinfinity:kelp5", "weight": 100 },
-		{ "model": "lostinfinity:kelp6", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/kelp" }
+  }
 }

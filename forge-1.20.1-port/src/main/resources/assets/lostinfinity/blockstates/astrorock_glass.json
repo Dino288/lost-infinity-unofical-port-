@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:astrorock_glass" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/astrorock_glass" }
+  }
 }

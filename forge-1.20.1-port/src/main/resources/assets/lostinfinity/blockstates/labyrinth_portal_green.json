@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:labyrinth_portal_green"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/labyrinth_portal_green" }
+  }
 }

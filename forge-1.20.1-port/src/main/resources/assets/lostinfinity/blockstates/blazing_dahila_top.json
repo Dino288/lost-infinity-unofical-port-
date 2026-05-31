@@ -1,10 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:blazing_dahila_top1", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_top2", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_top3", "weight": 100 },
-        { "model": "lostinfinity:blazing_dahila_top4", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

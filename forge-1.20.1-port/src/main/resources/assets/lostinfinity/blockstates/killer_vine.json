@@ -1,12 +1,5 @@
-{
-    "variants": {
-        "age=0": { "model": "lostinfinity:killer_vine_stage1" },
-        "age=1": { "model": "lostinfinity:killer_vine_stage2" },
-        "age=2": { "model": "lostinfinity:killer_vine_stage2" },
-        "age=3": { "model": "lostinfinity:killer_vine_stage3" },
-        "age=4": { "model": "lostinfinity:killer_vine_stage3" },
-        "age=5": { "model": "lostinfinity:killer_vine_stage4" },
-        "age=6": { "model": "lostinfinity:killer_vine_stage4" },
-        "age=7": { "model": "lostinfinity:killer_vine_stage5" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "minecraft:block/stone" }
+  }
 }

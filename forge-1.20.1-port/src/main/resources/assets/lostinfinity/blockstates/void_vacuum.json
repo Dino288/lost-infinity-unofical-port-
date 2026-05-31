@@ -1,7 +1,5 @@
-{
-	"variants": {
-		"normal": {
-		"model": "lostinfinity:void_vacuum"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/void_vacuum" }
+  }
 }

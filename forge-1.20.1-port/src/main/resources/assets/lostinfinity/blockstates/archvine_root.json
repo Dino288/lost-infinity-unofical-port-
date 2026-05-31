@@ -1,9 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:archvine_root", "weight": 100 },
-		{ "model": "lostinfinity:archvine_root2", "weight": 100 },
-		{ "model": "lostinfinity:archvine_root3", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/archvine_root" }
+  }
 }

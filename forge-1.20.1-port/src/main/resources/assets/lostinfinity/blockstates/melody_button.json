@@ -1,19 +1,5 @@
-{
-	"variants": {
-		"amount=0": {
-		"model": "lostinfinity:melody_button_0"
-	},
-		"amount=1": {
-		"model": "lostinfinity:melody_button_1"
-	},
-		"amount=2": {
-		"model": "lostinfinity:melody_button_2"
-	},
-		"amount=3": {
-		"model": "lostinfinity:melody_button_3"
-	},
-		"amount=4": {
-		"model": "lostinfinity:melody_button_4"
-	}
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/melody_button" }
+  }
 }

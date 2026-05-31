@@ -1,11 +1,5 @@
-{
-	"variants": {
-		"normal":[
-		{ "model": "lostinfinity:leaves_rebirth", "weight": 100 },
-		{ "model": "lostinfinity:leaves_rebirth2", "weight": 100 },
-		{ "model": "lostinfinity:leaves_rebirth3", "weight": 100 },
-		{ "model": "lostinfinity:leaves_rebirth4", "weight": 100 },
-		{ "model": "lostinfinity:leaves_rebirth5", "weight": 100 }
-		]
-	}
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/leaves_rebirth" }
+  }
 }

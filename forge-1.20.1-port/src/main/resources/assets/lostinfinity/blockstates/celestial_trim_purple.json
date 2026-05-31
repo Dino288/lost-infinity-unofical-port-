@@ -1,5 +1,5 @@
-{
-    "variants": {
-        "normal": { "model": "lostinfinity:celestial_trim_purple" }
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/celestial_trim_purple" }
+  }
 }

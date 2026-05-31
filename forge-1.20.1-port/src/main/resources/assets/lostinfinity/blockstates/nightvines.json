@@ -1,20 +1,5 @@
-{
-    "variants": {
-        "normal": [
-        { "model": "lostinfinity:nightvines", "weight": 100 },
-        { "model": "lostinfinity:nightvines2", "weight": 100 },
-        { "model": "lostinfinity:nightvines3", "weight": 100 },
-        { "model": "lostinfinity:nightvines4", "weight": 100 },
-        { "model": "lostinfinity:nightvines5", "weight": 100 },
-        { "model": "lostinfinity:nightvines6", "weight": 100 },
-        { "model": "lostinfinity:nightvines7", "weight": 100 },
-        { "model": "lostinfinity:nightvines8", "weight": 100 },
-        { "model": "lostinfinity:nightvines9", "weight": 100 },
-        { "model": "lostinfinity:nightvines10", "weight": 100 },
-        { "model": "lostinfinity:nightvines11", "weight": 100 },
-        { "model": "lostinfinity:nightvines12", "weight": 100 },
-        { "model": "lostinfinity:nightvines13", "weight": 100 },
-        { "model": "lostinfinity:nightvines14", "weight": 100 }
-        ]
-    }
+﻿{
+  "variants": {
+    "": { "model": "lostinfinity:block/nightvines" }
+  }
 }

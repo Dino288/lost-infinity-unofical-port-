@@ -1,5 +1,5 @@
-{
+﻿{
   "variants": {
-    "normal": { "model": "lostinfinity:nebulous_beacon" }
+    "": { "model": "lostinfinity:block/nebulous_beacon" }
   }
 }
