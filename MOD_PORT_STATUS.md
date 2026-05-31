@@ -48,6 +48,14 @@ What was done:
   - `grandmasteroutpost`
   - `nonexistence`
   - `shadowsea`
+- Added first-pass modern biome datapack entries recovered from legacy dimension names:
+  - `celestialvoid`
+  - `grandmasteroutpost`
+  - `nonexistence`
+  - `cartographerrealm`
+  - `infinitemurk`
+  - `shadowsea`
+  - `moltensea`
 - Added a `Lost Infinity Stones` creative tab.
 - Converted legacy `en_us.lang` translations to `en_us.json`.
 - Built a 1.20.1 Forge jar successfully.
@@ -110,6 +118,7 @@ What was done:
   - `grandmasteroutpost` keeps hunger filled
   - `infinitemurk` applies darkness/slowness
   - `shadowsea` grants water breathing/dolphin movement
+- Rewired all 8 dimension JSONs to use Lost Infinity biome IDs instead of `minecraft:plains`.
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -119,6 +128,9 @@ Current compile result:
   - Command: `.\gradlew.bat runServer --args nogui`
   - Result: server reached `Done` and loaded the mod namespace successfully.
   - Runtime log reported `831 blocks`, `2284 items`, and `460 entity types`.
+- Dimension biome datapack smoke test:
+  - Command: `.\gradlew.bat runServer --args nogui`
+  - Result: server reached `Done`, confirming the custom biome JSONs and dimension references load.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -130,7 +142,7 @@ Current main blockers:
 - Many items now have broad vanilla-like item classes, but original right-click powers, cooldowns, projectiles, energy systems, status effects, and custom equipment effects still need manual per-item ports.
 - Ranged utility items now have generic damaging projectile behavior, but the original per-item effects, damage types, ammo/energy systems, particles, and sounds are not fully reconstructed yet.
 - Placeholder mob textures now use recovered mob PNGs where possible, but original 3D models/animations/render layers are not restored yet.
-- The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects, but they still reuse simple Overworld-style noise settings and a fixed plains biome. Original custom biomes, structures, terrain, and exact portal rituals still need manual porting.
+- The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects plus Lost Infinity biome IDs, but they still reuse simple Overworld-style noise settings. Original custom chunk generators, structures, terrain blocks, biome features, and exact portal rituals still need manual porting.
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
 - Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.
