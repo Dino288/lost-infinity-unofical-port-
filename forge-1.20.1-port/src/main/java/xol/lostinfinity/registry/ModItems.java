@@ -17,6 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.item.LostDimensionItem;
 import xol.lostinfinity.item.LostRangedItem;
 
 public final class ModItems {
@@ -34,6 +35,9 @@ public final class ModItems {
 
     private static Item createItem(String name) {
         Item.Properties properties = new Item.Properties();
+        if (isDimensionUtility(name)) {
+            return new LostDimensionItem(name, properties);
+        }
         if (name.endsWith("_helmet") || name.endsWith("helmet") || name.endsWith("headguard") || name.endsWith("mask")) {
             return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.HELMET, properties);
         }
@@ -71,6 +75,10 @@ public final class ModItems {
             return new SwordItem(ModToolTiers.LOST_INFINITY, 6, -2.4F, properties);
         }
         return new Item(properties);
+    }
+
+    private static boolean isDimensionUtility(String name) {
+        return name.equals("murky_mirror") || name.equals("galaxybeacon") || name.equals("magic_conch") || name.equals("solar_globe");
     }
 
     private static boolean isRangedUtility(String name) {

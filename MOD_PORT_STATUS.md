@@ -92,6 +92,10 @@ What was done:
   - shield names register as shield items
   - gun/rifle/cannon/zapper/wand/staff/launcher/slinger/blaster/trident/bomb names register as right-click ranged utility items with cooldowns, durability, and fired item projectiles
   - generic ranged utility projectiles now deal inferred combat damage on hit instead of being visual-only throws
+  - `murky_mirror` now toggles travel between the current dimension and `infinitemurk`
+  - `galaxybeacon` now toggles travel between the Overworld and the recovered Nonexistence/Galaxy Dungeon entry coordinates
+  - `magic_conch` now toggles travel between the Overworld and random Shadow Sea coordinates
+  - `solar_globe` now teleports to Cartographer Realm floors and uses sneak-right-click to cycle top/middle/bottom floor targeting
   - tool and sword-like names now use a custom Lost Infinity tool tier instead of vanilla diamond
 - Added first-pass block behavior inference:
   - slab/slabs names register as `SlabBlock`

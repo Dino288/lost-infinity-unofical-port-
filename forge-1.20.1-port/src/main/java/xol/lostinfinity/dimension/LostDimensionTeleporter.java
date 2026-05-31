@@ -17,16 +17,26 @@ public final class LostDimensionTeleporter {
     }
 
     public static boolean teleport(ServerPlayer player, String id) {
+        return teleport(player, id, player.getX(), player.getY(), player.getZ(), true);
+    }
+
+    public static boolean teleport(ServerPlayer player, String id, double x, double y, double z, boolean useSafeSurface) {
         MinecraftServer server = player.server;
-        ResourceKey<Level> key = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(LostInfinity.MODID, id));
+        ResourceLocation targetId = "overworld".equals(id) ? new ResourceLocation("minecraft", "overworld") : new ResourceLocation(LostInfinity.MODID, id);
+        ResourceKey<Level> key = ResourceKey.create(Registries.DIMENSION, targetId);
         ServerLevel target = server.getLevel(key);
         if (target == null) {
-            player.displayClientMessage(Component.literal("Dimension is not loaded: " + LostInfinity.MODID + ":" + id), false);
+            player.displayClientMessage(Component.literal("Dimension is not loaded: " + targetId), false);
             return false;
         }
 
-        BlockPos landing = landingPosition(target, player.getBlockX(), player.getBlockZ(), player.getY());
-        player.teleportTo(target, landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D, player.getYRot(), player.getXRot());
+        if (useSafeSurface) {
+            BlockPos landing = landingPosition(target, (int) Math.floor(x), (int) Math.floor(z), y);
+            player.teleportTo(target, landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D, player.getYRot(), player.getXRot());
+        } else {
+            double safeY = Math.max(target.getMinBuildHeight() + 4.0D, Math.min(y, target.getMaxBuildHeight() - 4.0D));
+            player.teleportTo(target, x, safeY, z, player.getYRot(), player.getXRot());
+        }
         return true;
     }
 
