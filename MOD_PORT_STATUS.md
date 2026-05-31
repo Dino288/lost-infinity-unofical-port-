@@ -82,10 +82,16 @@ What was done:
   - sword/blade/saber/sabre/claw names register as sword items
   - bow names register as bow items
   - shield names register as shield items
+  - gun/rifle/cannon/zapper/wand/staff/launcher/slinger/blaster/trident/bomb names register as right-click ranged utility items with cooldowns, durability, and fired item projectiles
+  - tool and sword-like names now use a custom Lost Infinity tool tier instead of vanilla diamond
 - Added first-pass block behavior inference:
   - slab/slabs names register as `SlabBlock`
   - stairs names register as `StairBlock`
   - slab/stair blockstates include their 1.20.1 placement properties so alternate states do not fall back to missing models
+  - glass/barrier names register as `GlassBlock`
+  - plant/leaf/vine/weed/grass/flower/bloom/bulb/stem/root/coral names use softer, no-occlusion block properties
+  - lamp/light/lantern/glow/lumi/lit/on names emit light
+  - ore, metal, steel, machine, battery, forge, and console names use more appropriate mining/sound properties
 - Added a placeholder entity texture renderer:
   - maps 219 recovered mob IDs to matching `textures/entity/...` PNGs
   - renders placeholder mobs as textured billboards instead of a generic item
@@ -109,6 +115,7 @@ Current main blockers:
 - The registered entities are placeholder 1.20.1 entities, not the original AI, attacks, movement, bosses, animations, or projectile behavior.
 - Placeholder mobs now have basic hostile mob AI, but this is not the original per-mob Lost Infinity behavior yet.
 - Many items now have broad vanilla-like item classes, but original right-click powers, cooldowns, projectiles, energy systems, status effects, and custom equipment effects still need manual per-item ports.
+- Ranged utility items now have a generic projectile behavior, but the original per-item effects, damage types, ammo/energy systems, particles, and sounds are not fully reconstructed yet.
 - Placeholder mob textures now use recovered mob PNGs where possible, but original 3D models/animations/render layers are not restored yet.
 - The generated dimension JSONs create valid dimension keys, but they reuse simple Overworld-style noise settings and a fixed plains biome. Original custom biomes, structures, terrain, and portals still need manual porting.
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.

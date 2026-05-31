@@ -12,12 +12,12 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.item.LostRangedItem;
 
 public final class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, LostInfinity.MODID);
@@ -47,16 +47,16 @@ public final class ModItems {
             return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.BOOTS, properties);
         }
         if (name.contains("pickaxe")) {
-            return new PickaxeItem(Tiers.DIAMOND, 1, -2.8F, properties);
+            return new PickaxeItem(ModToolTiers.LOST_INFINITY, 1, -2.8F, properties);
         }
         if (name.endsWith("_axe") || name.endsWith("axe")) {
-            return new AxeItem(Tiers.DIAMOND, 5.0F, -3.0F, properties);
+            return new AxeItem(ModToolTiers.LOST_INFINITY, 5.0F, -3.0F, properties);
         }
         if (name.contains("shovel")) {
-            return new ShovelItem(Tiers.DIAMOND, 1.5F, -3.0F, properties);
+            return new ShovelItem(ModToolTiers.LOST_INFINITY, 1.5F, -3.0F, properties);
         }
         if (name.endsWith("_hoe") || name.endsWith("hoe")) {
-            return new HoeItem(Tiers.DIAMOND, -2, -1.0F, properties);
+            return new HoeItem(ModToolTiers.LOST_INFINITY, -2, -1.0F, properties);
         }
         if (name.contains("bow")) {
             return new BowItem(properties.durability(768));
@@ -64,10 +64,19 @@ public final class ModItems {
         if (name.contains("shield")) {
             return new ShieldItem(properties.durability(672));
         }
+        if (isRangedUtility(name)) {
+            return new LostRangedItem(properties.durability(512), name.contains("bomb") ? 1.0F : 1.8F, name.contains("bomb") ? 30 : 14);
+        }
         if (name.contains("sword") || name.contains("blade") || name.contains("saber") || name.contains("sabre") || name.contains("claw")) {
-            return new SwordItem(Tiers.DIAMOND, 6, -2.4F, properties);
+            return new SwordItem(ModToolTiers.LOST_INFINITY, 6, -2.4F, properties);
         }
         return new Item(properties);
+    }
+
+    private static boolean isRangedUtility(String name) {
+        return name.contains("gun") || name.contains("rifle") || name.contains("cannon") || name.contains("zapper")
+                || name.contains("wand") || name.contains("staff") || name.contains("launcher") || name.contains("slinger")
+                || name.contains("blaster") || name.contains("trident") || name.contains("bomb");
     }
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<? extends Block> block) {

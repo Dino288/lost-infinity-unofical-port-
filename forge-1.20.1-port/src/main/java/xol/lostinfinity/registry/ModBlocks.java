@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Supplier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -28,15 +29,42 @@ public final class ModBlocks {
         return block;
     }
 
-        private static Block defaultBlock(String name) {
-        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F, 6.0F).sound(SoundType.STONE);
+    private static Block defaultBlock(String name) {
+        BlockBehaviour.Properties properties = propertiesFor(name);
         if (name.contains("slab")) {
             return new SlabBlock(properties);
         }
         if (name.contains("stairs")) {
             return new StairBlock(Blocks.STONE.defaultBlockState(), properties);
         }
+        if (name.contains("glass") || name.contains("barrier")) {
+            return new GlassBlock(properties);
+        }
         return new Block(properties);
+    }
+
+    private static BlockBehaviour.Properties propertiesFor(String name) {
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F, 6.0F).sound(SoundType.STONE);
+        if (name.contains("glass") || name.contains("barrier")) {
+            properties = properties.strength(0.3F, 1.5F).sound(SoundType.GLASS).noOcclusion();
+        }
+        if (name.contains("leaf") || name.contains("leaves") || name.contains("vine") || name.contains("weed")
+                || name.contains("grass") || name.contains("flower") || name.contains("bloom") || name.contains("bulb")
+                || name.contains("stem") || name.contains("root") || name.contains("coral")) {
+            properties = properties.strength(0.4F, 0.4F).sound(SoundType.GRASS).noOcclusion();
+        }
+        if (name.contains("lamp") || name.contains("light") || name.contains("lantern") || name.contains("glow")
+                || name.contains("lumi") || name.endsWith("_lit") || name.endsWith("_on")) {
+            properties = properties.lightLevel(state -> 15);
+        }
+        if (name.contains("metal") || name.contains("steel") || name.contains("machine") || name.contains("battery")
+                || name.contains("forge") || name.contains("console")) {
+            properties = properties.strength(4.0F, 9.0F).sound(SoundType.METAL);
+        }
+        if (name.contains("ore")) {
+            properties = properties.strength(3.0F, 6.0F).requiresCorrectToolForDrops();
+        }
+        return properties;
     }
 
     public static final RegistryObject<Block> ACID_LANTERN = registerBlock("acid_lantern", () -> defaultBlock("acid_lantern"));
