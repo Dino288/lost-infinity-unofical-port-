@@ -3,22 +3,22 @@ package xol.lostinfinity.registry;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShieldItem;
-import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.item.LostAxeItem;
 import xol.lostinfinity.item.LostDimensionItem;
+import xol.lostinfinity.item.LostHoeItem;
+import xol.lostinfinity.item.LostPickaxeItem;
 import xol.lostinfinity.item.LostRangedItem;
+import xol.lostinfinity.item.LostShovelItem;
+import xol.lostinfinity.item.LostSwordItem;
 
 public final class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, LostInfinity.MODID);
@@ -51,16 +51,16 @@ public final class ModItems {
             return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.BOOTS, properties);
         }
         if (name.contains("pickaxe")) {
-            return new PickaxeItem(ModToolTiers.LOST_INFINITY, 1, -2.8F, properties);
+            return new LostPickaxeItem(name, ModToolTiers.LOST_INFINITY, 1, -2.8F, properties);
         }
-        if (name.endsWith("_axe") || name.endsWith("axe")) {
-            return new AxeItem(ModToolTiers.LOST_INFINITY, 5.0F, -3.0F, properties);
+        if (name.endsWith("_axe") || name.endsWith("axe") || name.contains("saw")) {
+            return new LostAxeItem(name, ModToolTiers.LOST_INFINITY, 5.0F, -3.0F, properties);
         }
         if (name.contains("shovel")) {
-            return new ShovelItem(ModToolTiers.LOST_INFINITY, 1.5F, -3.0F, properties);
+            return new LostShovelItem(ModToolTiers.LOST_INFINITY, 1.5F, -3.0F, properties);
         }
         if (name.endsWith("_hoe") || name.endsWith("hoe")) {
-            return new HoeItem(ModToolTiers.LOST_INFINITY, -2, -1.0F, properties);
+            return new LostHoeItem(ModToolTiers.LOST_INFINITY, -2, -1.0F, properties);
         }
         if (name.contains("bow")) {
             return new BowItem(properties.durability(768));
@@ -72,7 +72,7 @@ public final class ModItems {
             return new LostRangedItem(properties.durability(512), name.contains("bomb") ? 1.0F : 1.8F, name.contains("bomb") ? 30 : 14, rangedDamage(name));
         }
         if (name.contains("sword") || name.contains("blade") || name.contains("saber") || name.contains("sabre") || name.contains("claw")) {
-            return new SwordItem(ModToolTiers.LOST_INFINITY, 6, -2.4F, properties);
+            return new LostSwordItem(name, ModToolTiers.LOST_INFINITY, 6, -2.4F, properties);
         }
         return new Item(properties);
     }

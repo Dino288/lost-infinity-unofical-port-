@@ -86,8 +86,18 @@ What was done:
   - boots names register as wearable boot armor
   - armor sets now use custom Lost Infinity armor material names instead of vanilla diamond
   - recovered armor PNGs are aliased into `textures/models/armor/*_layer_1.png` and `*_layer_2.png` so worn armor can render with mod textures
-  - pickaxe/axe/shovel/hoe names register as tool items
-  - sword/blade/saber/sabre/claw names register as sword items
+  - full armor sets now have first-pass set bonuses and combat reactions:
+    - Vampyreon lifesteals/regenerates
+    - Graviterium reduces damage and grants mobility/fall protection
+    - Plasmythic grants fire protection and burns attackers
+    - Spectros grants stealth/vision and slows targets
+    - Blightcyst grants resistance/regeneration and poisons targets
+    - Bionic Veggitron adds regeneration/saturation and attack damage
+    - Vitraliton grants absorption/resistance and defensive healing
+    - Celestial grants void-friendly movement/vision
+  - pickaxe/axe/shovel/hoe names register as custom Lost Infinity tool items with right-click utility effects
+  - special pickaxes such as celestial, forgefire, crystal, and nightmare variants have mining/attack/use effects
+  - sword/blade/saber/sabre/claw names register as custom Lost Infinity sword items with inferred combat effects
   - bow names register as bow items
   - shield names register as shield items
   - gun/rifle/cannon/zapper/wand/staff/launcher/slinger/blaster/trident/bomb names register as right-click ranged utility items with cooldowns, durability, and fired item projectiles
