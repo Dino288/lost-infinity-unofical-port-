@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/lost_blades_of_infinity"
+		"layer0": "lostinfinity:item/lost_blades_of_infinity"
 	},
 	"display": {
 		"thirdperson_righthand": {

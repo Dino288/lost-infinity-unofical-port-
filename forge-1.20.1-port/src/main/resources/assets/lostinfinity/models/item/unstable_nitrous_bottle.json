@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/unstable_nitrous_bottle"
+		"layer0": "lostinfinity:item/unstable_nitrous_bottle"
 	},
 	"display": {
 		"thirdperson_righthand": {

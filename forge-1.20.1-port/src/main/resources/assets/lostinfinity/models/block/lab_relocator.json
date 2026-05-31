@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-    	"particle": "lostinfinity:blocks/lab_relocator",
-        "down": "lostinfinity:blocks/arena_brick_black",
-        "up": "lostinfinity:blocks/arena_brick_black",
-        "north": "lostinfinity:blocks/lab_relocator",
-        "east": "lostinfinity:blocks/lab_relocator",
-        "south": "lostinfinity:blocks/lab_relocator",
-        "west": "lostinfinity:blocks/lab_relocator"
+    	"particle": "lostinfinity:block/lab_relocator",
+        "down": "lostinfinity:block/arena_brick_black",
+        "up": "lostinfinity:block/arena_brick_black",
+        "north": "lostinfinity:block/lab_relocator",
+        "east": "lostinfinity:block/lab_relocator",
+        "south": "lostinfinity:block/lab_relocator",
+        "west": "lostinfinity:block/lab_relocator"
     }
 }

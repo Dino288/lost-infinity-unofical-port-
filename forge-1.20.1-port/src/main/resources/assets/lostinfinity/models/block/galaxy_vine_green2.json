@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/galaxy_vine_green2"
+        "cross": "lostinfinity:block/galaxy_vine_green2"
     }
 }
+

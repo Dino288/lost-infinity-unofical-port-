@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/dose_of_deception"
+		"layer0": "lostinfinity:item/dose_of_deception"
 	},
 	"display": {
 		"thirdperson_righthand": {

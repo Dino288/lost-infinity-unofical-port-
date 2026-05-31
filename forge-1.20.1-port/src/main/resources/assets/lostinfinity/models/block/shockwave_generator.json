@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-    	"particle": "lostinfinity:blocks/shockwave_generator",
-        "down": "lostinfinity:blocks/generator_top",
-        "up": "lostinfinity:blocks/generator_top",
-        "north": "lostinfinity:blocks/shockwave_generator",
-        "east": "lostinfinity:blocks/shockwave_generator",
-        "south": "lostinfinity:blocks/shockwave_generator",
-        "west": "lostinfinity:blocks/shockwave_generator"
+    	"particle": "lostinfinity:block/shockwave_generator",
+        "down": "lostinfinity:block/generator_top",
+        "up": "lostinfinity:block/generator_top",
+        "north": "lostinfinity:block/shockwave_generator",
+        "east": "lostinfinity:block/shockwave_generator",
+        "south": "lostinfinity:block/shockwave_generator",
+        "west": "lostinfinity:block/shockwave_generator"
     }
 }

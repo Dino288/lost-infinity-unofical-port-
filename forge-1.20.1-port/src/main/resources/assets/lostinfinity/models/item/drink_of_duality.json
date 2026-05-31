@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/drink_of_duality"
+		"layer0": "lostinfinity:item/drink_of_duality"
 	},
 	"overrides": [
 		{ "predicate": { "lostinfinity:drink": 1.0 }, "model": "lostinfinity:item/drink_of_duality_blue"}

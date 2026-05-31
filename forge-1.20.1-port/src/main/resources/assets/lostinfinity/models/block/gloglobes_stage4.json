@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/gloglobes_stage4"
+        "cross": "lostinfinity:block/gloglobes_stage4"
     }
 }
+

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/plasma_materializer"
+		"layer0": "lostinfinity:item/plasma_materializer"
 	},
 	"display": {
 		"thirdperson_righthand": {

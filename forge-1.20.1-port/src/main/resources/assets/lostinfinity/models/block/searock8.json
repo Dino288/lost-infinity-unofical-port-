@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/searock8"
+		"cross": "lostinfinity:block/searock8"
 	}
 }

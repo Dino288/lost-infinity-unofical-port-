@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/glowblood_solution"
+		"layer0": "lostinfinity:item/glowblood_solution"
 	}
 }

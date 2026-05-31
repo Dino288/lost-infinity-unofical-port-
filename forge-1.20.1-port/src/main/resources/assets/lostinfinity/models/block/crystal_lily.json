@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/crystal_lily"
+        "cross": "lostinfinity:block/crystal_lily"
     }
 }
+

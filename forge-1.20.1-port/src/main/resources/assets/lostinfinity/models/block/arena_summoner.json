@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-    	"particle": "lostinfinity:blocks/arena_summoner_side",
-        "down": "lostinfinity:blocks/arena_summoner_top",
-        "up": "lostinfinity:blocks/arena_summoner_top",
-        "north": "lostinfinity:blocks/arena_summoner_side",
-        "east": "lostinfinity:blocks/arena_summoner_side",
-        "south": "lostinfinity:blocks/arena_summoner_side",
-        "west": "lostinfinity:blocks/arena_summoner_side"
+    	"particle": "lostinfinity:block/arena_summoner_side",
+        "down": "lostinfinity:block/arena_summoner_top",
+        "up": "lostinfinity:block/arena_summoner_top",
+        "north": "lostinfinity:block/arena_summoner_side",
+        "east": "lostinfinity:block/arena_summoner_side",
+        "south": "lostinfinity:block/arena_summoner_side",
+        "west": "lostinfinity:block/arena_summoner_side"
     }
 }

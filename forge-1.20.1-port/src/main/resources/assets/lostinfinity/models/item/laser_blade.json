@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/laser_blade"
+		"layer0": "lostinfinity:item/laser_blade"
 	}
 }

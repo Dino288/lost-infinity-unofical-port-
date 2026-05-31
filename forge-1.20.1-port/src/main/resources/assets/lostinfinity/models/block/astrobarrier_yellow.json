@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/astrobarrier_yellow"
+        "all": "lostinfinity:block/astrobarrier_yellow"
     }
 }
+

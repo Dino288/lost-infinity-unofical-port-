@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/astromolt_bubble2"
+        "all": "lostinfinity:block/astromolt_bubble2"
     }
 }
+

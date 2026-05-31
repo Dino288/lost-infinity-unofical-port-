@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/vampyreon_prime_chestplate"
+		"layer0": "lostinfinity:item/vampyreon_prime_chestplate"
 	}
 }

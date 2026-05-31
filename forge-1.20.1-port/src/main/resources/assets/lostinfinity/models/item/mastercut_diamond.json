@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/mastercut_diamond"
+		"layer0": "lostinfinity:item/mastercut_diamond"
 	}
 }

@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/row_toggle_game"
+		"all": "lostinfinity:block/row_toggle_game"
 	}
 }

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/comet_shower"
+		"layer0": "lostinfinity:item/comet_shower"
 	},
 	"display": {
 		"thirdperson_righthand": {

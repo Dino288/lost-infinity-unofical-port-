@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/dryads_grip_detonate"
+		"layer0": "lostinfinity:item/dryads_grip_detonate"
 	},
 	"display": {
 		"thirdperson_righthand": {

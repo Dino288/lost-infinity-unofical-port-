@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/skyloom2"
+        "cross": "lostinfinity:block/skyloom2"
     }
 }
+

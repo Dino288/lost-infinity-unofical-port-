@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/augmenticon_box"
+		"layer0": "lostinfinity:item/augmenticon_box"
 	}
 }

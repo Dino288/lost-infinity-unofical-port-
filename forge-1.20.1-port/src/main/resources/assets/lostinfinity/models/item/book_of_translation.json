@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/book_of_translation"
+		"layer0": "lostinfinity:item/book_of_translation"
 	}
 }

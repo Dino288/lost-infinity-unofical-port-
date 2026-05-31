@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/embergrass3"
+        "cross": "lostinfinity:block/embergrass3"
     }
 }
+

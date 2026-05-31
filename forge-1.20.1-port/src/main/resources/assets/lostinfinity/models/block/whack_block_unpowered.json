@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/whack_block_unpowered"
+		"all": "lostinfinity:block/whack_block_unpowered"
 	}
 }

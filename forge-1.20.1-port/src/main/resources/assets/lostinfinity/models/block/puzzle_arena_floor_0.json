@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/puzzle_arena_floor_0"
+		"all": "lostinfinity:block/puzzle_arena_floor_0"
 	}
 }

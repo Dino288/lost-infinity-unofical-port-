@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/encrypted_power_blueprints"
+		"layer0": "lostinfinity:item/encrypted_power_blueprints"
 	}
 }

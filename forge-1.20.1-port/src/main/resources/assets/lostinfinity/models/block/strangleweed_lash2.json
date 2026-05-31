@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/strangleweed_lash2"
+		"cross": "lostinfinity:block/strangleweed_lash2"
 	}
 }

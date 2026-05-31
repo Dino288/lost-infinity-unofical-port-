@@ -1,8 +1,8 @@
-{
-    "parent": "block/outer_stairs",
+﻿{
+    "parent": "minecraft:block/outer_stairs",
     "textures": {
-        "bottom": "lostinfinity:blocks/murkbricks",
-        "top": "lostinfinity:blocks/murkbricks",
-        "side": "lostinfinity:blocks/murkbricks"
+        "bottom": "lostinfinity:block/murkbricks",
+        "top": "lostinfinity:block/murkbricks",
+        "side": "lostinfinity:block/murkbricks"
     }
 }

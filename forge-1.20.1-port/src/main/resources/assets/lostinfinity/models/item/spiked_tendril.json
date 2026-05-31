@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/spiked_tendril"
+		"layer0": "lostinfinity:item/spiked_tendril"
 	}
 }

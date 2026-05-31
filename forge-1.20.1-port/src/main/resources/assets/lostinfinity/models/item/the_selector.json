@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/the_selector_ah"
+		"layer0": "lostinfinity:item/the_selector_ah"
 	},
 	"overrides": [
 		{ "predicate": { "lostinfinity:characters": 0.33 }, "model": "lostinfinity:item/the_selector_io"},

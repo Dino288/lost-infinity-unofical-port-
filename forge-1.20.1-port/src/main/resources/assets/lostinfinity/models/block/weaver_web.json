@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/weaver_web"
+		"cross": "lostinfinity:block/weaver_web"
 	}
 }

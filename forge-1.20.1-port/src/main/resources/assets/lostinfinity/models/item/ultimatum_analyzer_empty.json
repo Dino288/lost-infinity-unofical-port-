@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/ultimatum_analyzer_empty"
+		"layer0": "lostinfinity:item/ultimatum_analyzer_empty"
 	}
 }

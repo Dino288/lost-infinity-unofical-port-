@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/blightstocks_top2"
+        "cross": "lostinfinity:block/blightstocks_top2"
     }
 }
+

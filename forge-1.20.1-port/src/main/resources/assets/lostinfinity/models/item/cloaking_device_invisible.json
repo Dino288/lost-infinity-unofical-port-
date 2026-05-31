@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/cloaking_device"
+		"layer0": "lostinfinity:item/cloaking_device"
 	},
 	"display": {
 		"thirdperson_righthand": {

@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/molten_seastone8"
+		"all": "lostinfinity:block/molten_seastone8"
 	}
 }

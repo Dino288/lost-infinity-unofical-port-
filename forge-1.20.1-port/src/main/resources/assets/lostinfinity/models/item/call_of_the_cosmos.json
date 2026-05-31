@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/call_of_the_cosmos"
+		"layer0": "lostinfinity:item/call_of_the_cosmos"
 	},
 		"overrides": [
 		{ "predicate": { "lostinfinity:cosmostype": 1.0 }, "model": "lostinfinity:item/call_of_the_cosmos_alternate"}

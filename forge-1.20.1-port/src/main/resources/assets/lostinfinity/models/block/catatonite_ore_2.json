@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/catatonite_ore_2"
+		"all": "lostinfinity:block/catatonite_ore_2"
 	}
 }

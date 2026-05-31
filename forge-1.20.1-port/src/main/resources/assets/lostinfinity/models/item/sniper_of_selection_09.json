@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/sniper_of_selection_09"
+		"layer0": "lostinfinity:item/sniper_of_selection_09"
 	},
 	"display": {
 		"thirdperson_righthand": {

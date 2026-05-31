@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/galdungeonreward2"
+        "all": "lostinfinity:block/galdungeonreward2"
     }
 }
+

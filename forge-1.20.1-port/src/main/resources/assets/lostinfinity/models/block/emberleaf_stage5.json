@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/emberleaf_stage5"
+        "cross": "lostinfinity:block/emberleaf_stage5"
     }
 }
+

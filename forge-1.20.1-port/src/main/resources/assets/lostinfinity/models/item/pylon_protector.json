@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/pylon_protector"
+		"layer0": "lostinfinity:item/pylon_protector"
 	},
 	"display": {
 		"thirdperson_righthand": {

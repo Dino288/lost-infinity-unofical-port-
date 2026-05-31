@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-        "particle": "lostinfinity:blocks/pickchargingtable_top",
-        "down": "lostinfinity:blocks/pickchargingtable_top",
-        "up": "lostinfinity:blocks/pickchargingtable_top",
-        "north": "lostinfinity:blocks/pickchargingtable_side",
-        "east": "lostinfinity:blocks/pickchargingtable_side",
-        "south": "lostinfinity:blocks/pickchargingtable_side",
-        "west": "lostinfinity:blocks/pickchargingtable_side"
+        "particle": "lostinfinity:block/pickchargingtable_top",
+        "down": "lostinfinity:block/pickchargingtable_top",
+        "up": "lostinfinity:block/pickchargingtable_top",
+        "north": "lostinfinity:block/pickchargingtable_side",
+        "east": "lostinfinity:block/pickchargingtable_side",
+        "south": "lostinfinity:block/pickchargingtable_side",
+        "west": "lostinfinity:block/pickchargingtable_side"
     }
 }

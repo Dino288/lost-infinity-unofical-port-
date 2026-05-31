@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-    	"particle": "lostinfinity:blocks/archlumgrass_side",
-        "down": "lostinfinity:blocks/archlumio_rock",
-        "up": "lostinfinity:blocks/archlumgrass_top6",
-        "north": "lostinfinity:blocks/archlumgrass_side",
-        "east": "lostinfinity:blocks/archlumgrass_side",
-        "south": "lostinfinity:blocks/archlumgrass_side",
-        "west": "lostinfinity:blocks/archlumgrass_side"
+    	"particle": "lostinfinity:block/archlumgrass_side",
+        "down": "lostinfinity:block/archlumio_rock",
+        "up": "lostinfinity:block/archlumgrass_top6",
+        "north": "lostinfinity:block/archlumgrass_side",
+        "east": "lostinfinity:block/archlumgrass_side",
+        "south": "lostinfinity:block/archlumgrass_side",
+        "west": "lostinfinity:block/archlumgrass_side"
     }
 }

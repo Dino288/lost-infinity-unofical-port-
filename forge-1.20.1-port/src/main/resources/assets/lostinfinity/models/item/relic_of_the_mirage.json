@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/relic_of_the_mirage"
+		"layer0": "lostinfinity:item/relic_of_the_mirage"
 	},
 	"display": {
 		"thirdperson_righthand": {

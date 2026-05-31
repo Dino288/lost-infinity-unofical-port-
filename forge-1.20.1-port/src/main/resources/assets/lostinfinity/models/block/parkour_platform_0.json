@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/parkour_platform_0"
+		"all": "lostinfinity:block/parkour_platform_0"
 	}
 }

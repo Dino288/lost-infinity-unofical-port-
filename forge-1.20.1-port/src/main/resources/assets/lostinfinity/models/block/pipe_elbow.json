@@ -1,12 +1,12 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"particle": "lostinfinity:blocks/pipe_elbow",
-        "down": "lostinfinity:blocks/pipe_none",
-        "up": "lostinfinity:blocks/pipe_none",
-        "north": "lostinfinity:blocks/pipe_elbow",
-        "east": "lostinfinity:blocks/pipe_elbow",
-        "south": "lostinfinity:blocks/pipe_elbow",
-        "west": "lostinfinity:blocks/pipe_elbow"
+		"particle": "lostinfinity:block/pipe_elbow",
+        "down": "lostinfinity:block/pipe_none",
+        "up": "lostinfinity:block/pipe_none",
+        "north": "lostinfinity:block/pipe_elbow",
+        "east": "lostinfinity:block/pipe_elbow",
+        "south": "lostinfinity:block/pipe_elbow",
+        "west": "lostinfinity:block/pipe_elbow"
 	}
 }

@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/sap_evaporator_on"
+		"all": "lostinfinity:block/sap_evaporator_on"
 	}
 }

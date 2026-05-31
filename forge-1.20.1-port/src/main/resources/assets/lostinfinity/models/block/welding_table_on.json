@@ -1,12 +1,12 @@
-{
-  "parent": "block/cube",
+﻿{
+  "parent": "minecraft:block/cube",
     "textures": {
-        "particle": "lostinfinity:blocks/welding_chamber_top_active",
-        "down": "lostinfinity:blocks/welding_chamber_bottom",
-        "up": "lostinfinity:blocks/welding_chamber_top_active",
-        "north": "lostinfinity:blocks/welding_chamber_side",
-        "east": "lostinfinity:blocks/welding_chamber_side",
-        "south": "lostinfinity:blocks/welding_chamber_side",
-        "west": "lostinfinity:blocks/welding_chamber_side"
+        "particle": "lostinfinity:block/welding_chamber_top_active",
+        "down": "lostinfinity:block/welding_chamber_bottom",
+        "up": "lostinfinity:block/welding_chamber_top_active",
+        "north": "lostinfinity:block/welding_chamber_side",
+        "east": "lostinfinity:block/welding_chamber_side",
+        "south": "lostinfinity:block/welding_chamber_side",
+        "west": "lostinfinity:block/welding_chamber_side"
     }
 }

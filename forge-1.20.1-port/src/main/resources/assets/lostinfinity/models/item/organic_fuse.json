@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/organic_fuse"
+		"layer0": "lostinfinity:item/organic_fuse"
 	}
 }

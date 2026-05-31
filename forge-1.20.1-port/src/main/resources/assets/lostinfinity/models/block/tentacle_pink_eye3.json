@@ -1,7 +1,8 @@
-{
-    "parent": "block/cube_column",
+﻿{
+    "parent": "minecraft:block/cube_column",
     "textures": {
-        "end": "lostinfinity:blocks/tentacle_pink_top",
-        "side": "lostinfinity:blocks/tentacle_pink_eye3"
+        "end": "lostinfinity:block/tentacle_pink_top",
+        "side": "lostinfinity:block/tentacle_pink_eye3"
     }
 }
+

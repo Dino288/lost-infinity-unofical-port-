@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/main_power_terminal"
+		"all": "lostinfinity:block/main_power_terminal"
 	}
 }

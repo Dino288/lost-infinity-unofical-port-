@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/crystonium_condensed"
+		"layer0": "lostinfinity:item/crystonium_condensed"
 	}
 }

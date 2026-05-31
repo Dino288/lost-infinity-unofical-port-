@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/snarlvine15"
+		"cross": "lostinfinity:block/snarlvine15"
 	}
 }

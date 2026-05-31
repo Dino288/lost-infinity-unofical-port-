@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/rapier_of_revenge"
+		"layer0": "lostinfinity:item/rapier_of_revenge"
 	},
 	"display": {
 		"thirdperson_righthand": {

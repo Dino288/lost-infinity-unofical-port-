@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/hypersonic_drive_chamber"
+		"layer0": "lostinfinity:item/hypersonic_drive_chamber"
 	}
 }

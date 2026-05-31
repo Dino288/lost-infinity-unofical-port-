@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/astrometal_amalgamator_glue"
+		"layer0": "lostinfinity:item/astrometal_amalgamator_glue"
 	}
 }

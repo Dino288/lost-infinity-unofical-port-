@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/celestial_outer_maroon"
+        "all": "lostinfinity:block/celestial_outer_maroon"
     }
 }
+

@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/ball_of_webs"
+		"layer0": "lostinfinity:item/ball_of_webs"
 	}
 }

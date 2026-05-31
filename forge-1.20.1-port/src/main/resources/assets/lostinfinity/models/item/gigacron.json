@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/gigacron"
+		"layer0": "lostinfinity:item/gigacron"
 	},
 	"display": {
 		"thirdperson_righthand": {

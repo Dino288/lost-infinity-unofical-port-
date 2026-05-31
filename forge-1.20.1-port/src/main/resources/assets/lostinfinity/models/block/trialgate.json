@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-        "particle": "lostinfinity:blocks/trialgate_top",
-        "down": "lostinfinity:blocks/trialgate_top",
-        "up": "lostinfinity:blocks/trialgate_top",
-        "north": "lostinfinity:blocks/trialgate_side",
-        "east": "lostinfinity:blocks/trialgate_side",
-        "south": "lostinfinity:blocks/trialgate_side",
-        "west": "lostinfinity:blocks/trialgate_side"
+        "particle": "lostinfinity:block/trialgate_top",
+        "down": "lostinfinity:block/trialgate_top",
+        "up": "lostinfinity:block/trialgate_top",
+        "north": "lostinfinity:block/trialgate_side",
+        "east": "lostinfinity:block/trialgate_side",
+        "south": "lostinfinity:block/trialgate_side",
+        "west": "lostinfinity:block/trialgate_side"
     }
 }

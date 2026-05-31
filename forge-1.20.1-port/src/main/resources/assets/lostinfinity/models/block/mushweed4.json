@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/mushweed4"
+		"cross": "lostinfinity:block/mushweed4"
 	}
 }

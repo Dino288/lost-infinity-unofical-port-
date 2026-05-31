@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/the_apex"
+		"layer0": "lostinfinity:item/the_apex"
 	},
 	"display": {
 		"thirdperson_righthand": {

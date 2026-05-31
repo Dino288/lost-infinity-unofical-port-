@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/heatweed3"
+		"cross": "lostinfinity:block/heatweed3"
 	}
 }

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/storm_bauble"
+		"layer0": "lostinfinity:item/storm_bauble"
 	},
 	"display": {
 		"thirdperson_righthand": {

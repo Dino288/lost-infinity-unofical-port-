@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/drill_control_1"
+		"all": "lostinfinity:block/drill_control_1"
 	}
 }

@@ -1,7 +1,7 @@
-{
-  "parent": "item/generated",
+﻿{
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "lostinfinity:items/song_of_invigoration"
+    "layer0": "lostinfinity:item/song_of_invigoration"
   },
 	"overrides": [
 		{

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/droidconstructor_mk2"
+		"layer0": "lostinfinity:item/droidconstructor_mk2"
 	},
 	"display": {
 		"thirdperson_righthand": {

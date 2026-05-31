@@ -1,12 +1,12 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-        "particle": "lostinfinity:blocks/nicronium_infuser_on_top",
-        "down": "lostinfinity:blocks/nicronium_infuser_bottom",
-        "up": "lostinfinity:blocks/nicronium_infuser_on_top",
-        "north": "lostinfinity:blocks/nicronium_infuser_on",
-        "east": "lostinfinity:blocks/nicronium_infuser_on",
-        "south": "lostinfinity:blocks/nicronium_infuser_on",
-        "west": "lostinfinity:blocks/nicronium_infuser_on"
+        "particle": "lostinfinity:block/nicronium_infuser_on_top",
+        "down": "lostinfinity:block/nicronium_infuser_bottom",
+        "up": "lostinfinity:block/nicronium_infuser_on_top",
+        "north": "lostinfinity:block/nicronium_infuser_on",
+        "east": "lostinfinity:block/nicronium_infuser_on",
+        "south": "lostinfinity:block/nicronium_infuser_on",
+        "west": "lostinfinity:block/nicronium_infuser_on"
     }
 }

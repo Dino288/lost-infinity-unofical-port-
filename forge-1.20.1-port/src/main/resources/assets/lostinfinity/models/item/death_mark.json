@@ -1,7 +1,7 @@
-{
-  "parent": "item/generated",
+﻿{
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "lostinfinity:items/death_mark"
+    "layer0": "lostinfinity:item/death_mark"
   },
 	"display": {
 		"thirdperson_righthand": {

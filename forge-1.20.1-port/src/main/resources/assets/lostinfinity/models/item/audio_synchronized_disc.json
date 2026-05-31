@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/audio_synchronized_disc"
+		"layer0": "lostinfinity:item/audio_synchronized_disc"
 	}
 }

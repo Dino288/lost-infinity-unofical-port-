@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/multi_timeline_data_chip"
+		"layer0": "lostinfinity:item/multi_timeline_data_chip"
 	}
 }

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/holo_point"
+		"layer0": "lostinfinity:item/holo_point"
 	},
 	"display": {
 		"thirdperson_righthand": {

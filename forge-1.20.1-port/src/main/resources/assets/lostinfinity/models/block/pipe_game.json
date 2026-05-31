@@ -1,7 +1,7 @@
-{
-	"parent": "block/cube_column",
+﻿{
+	"parent": "minecraft:block/cube_column",
 	"textures": {
-		"end": "lostinfinity:blocks/neosteel_beam_top",
-        "side": "lostinfinity:blocks/pipe_game"
+		"end": "lostinfinity:block/neosteel_beam_top",
+        "side": "lostinfinity:block/pipe_game"
 	}
 }

@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/masterfaceted_quartz"
+		"layer0": "lostinfinity:item/masterfaceted_quartz"
 	}
 }

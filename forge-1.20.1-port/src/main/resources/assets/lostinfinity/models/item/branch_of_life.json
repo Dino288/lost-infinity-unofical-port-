@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/branch_of_life"
+		"layer0": "lostinfinity:item/branch_of_life"
 	},
 	"overrides": [
 		{ "predicate": { "lostinfinity:deviation": 0.33 }, "model": "lostinfinity:item/branch_of_life_sm"},

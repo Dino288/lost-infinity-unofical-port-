@@ -1,8 +1,8 @@
-{
-    "parent": "block/stairs",
+﻿{
+    "parent": "minecraft:block/stairs",
     "textures": {
-        "bottom": "lostinfinity:blocks/arena_brick_red",
-        "top": "lostinfinity:blocks/arena_brick_red",
-        "side": "lostinfinity:blocks/arena_brick_red"
+        "bottom": "lostinfinity:block/arena_brick_red",
+        "top": "lostinfinity:block/arena_brick_red",
+        "side": "lostinfinity:block/arena_brick_red"
     }
 }

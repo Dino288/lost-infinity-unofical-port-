@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/navigation_mechanism"
+		"layer0": "lostinfinity:item/navigation_mechanism"
 	}
 }

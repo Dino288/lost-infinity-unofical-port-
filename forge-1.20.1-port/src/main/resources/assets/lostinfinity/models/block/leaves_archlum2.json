@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/leaves_archlum2"
+        "all": "lostinfinity:block/leaves_archlum2"
     }
 }
+

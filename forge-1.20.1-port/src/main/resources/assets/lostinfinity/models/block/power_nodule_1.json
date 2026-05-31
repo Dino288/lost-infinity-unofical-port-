@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/power_nodule_1"
+		"all": "lostinfinity:block/power_nodule_1"
 	}
 }

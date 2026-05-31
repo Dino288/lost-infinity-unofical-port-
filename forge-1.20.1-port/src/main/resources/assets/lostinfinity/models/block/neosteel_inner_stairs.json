@@ -1,8 +1,8 @@
-{
-    "parent": "block/inner_stairs",
+﻿{
+    "parent": "minecraft:block/inner_stairs",
     "textures": {
-        "bottom": "lostinfinity:blocks/neosteel",
-        "top": "lostinfinity:blocks/neosteel",
-        "side": "lostinfinity:blocks/neosteel"
+        "bottom": "lostinfinity:block/neosteel",
+        "top": "lostinfinity:block/neosteel",
+        "side": "lostinfinity:block/neosteel"
     }
 }

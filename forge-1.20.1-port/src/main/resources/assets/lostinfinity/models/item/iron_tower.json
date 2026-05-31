@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/iron_tower"
+		"layer0": "lostinfinity:item/iron_tower"
 	},
 	"display": {
 		"thirdperson_righthand": {

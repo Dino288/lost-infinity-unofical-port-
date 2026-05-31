@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/rise_of_phantoms"
+		"layer0": "lostinfinity:item/rise_of_phantoms"
 	},
 	"display": {
 		"thirdperson_righthand": {

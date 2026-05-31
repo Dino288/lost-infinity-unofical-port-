@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/blazing_dahila_stem5"
+        "cross": "lostinfinity:block/blazing_dahila_stem5"
     }
 }
+

@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/puff_spore5"
+		"cross": "lostinfinity:block/puff_spore5"
 	}
 }

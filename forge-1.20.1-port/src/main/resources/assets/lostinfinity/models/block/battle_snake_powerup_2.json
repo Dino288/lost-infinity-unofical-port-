@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/battle_snake_powerup_2"
+		"all": "lostinfinity:block/battle_snake_powerup_2"
 	}
 }

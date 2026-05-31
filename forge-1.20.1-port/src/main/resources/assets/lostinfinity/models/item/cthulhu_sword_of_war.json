@@ -1,7 +1,7 @@
-{
-  "parent": "item/generated",
+﻿{
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "lostinfinity:items/cthulhu/sword_of_war"
+    "layer0": "lostinfinity:item/cthulhu/sword_of_war"
   },
   "display": {
     "thirdperson_righthand": {

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/map_retrospection"
+		"layer0": "lostinfinity:item/map_retrospection"
 	},
     "display": {
         "thirdperson_righthand": {

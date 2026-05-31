@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/galaxy_portal_home"
+		"all": "lostinfinity:block/galaxy_portal_home"
 	}
 }

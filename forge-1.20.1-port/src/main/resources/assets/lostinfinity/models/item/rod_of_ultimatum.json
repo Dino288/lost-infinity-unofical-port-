@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/rod_of_ultimatum"
+		"layer0": "lostinfinity:item/rod_of_ultimatum"
 	},
 	"display": {
 		"thirdperson_righthand": {

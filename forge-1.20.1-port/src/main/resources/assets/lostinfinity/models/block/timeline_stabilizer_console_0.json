@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/timeline_stabilizer_console_0"
+		"all": "lostinfinity:block/timeline_stabilizer_console_0"
 	}
 }

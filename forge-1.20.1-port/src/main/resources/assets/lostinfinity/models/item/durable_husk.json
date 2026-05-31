@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/durable_husk"
+		"layer0": "lostinfinity:item/durable_husk"
 	}
 }

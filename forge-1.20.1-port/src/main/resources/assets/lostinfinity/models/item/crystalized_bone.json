@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/crystalized_bone"
+		"layer0": "lostinfinity:item/crystalized_bone"
 	}
 }

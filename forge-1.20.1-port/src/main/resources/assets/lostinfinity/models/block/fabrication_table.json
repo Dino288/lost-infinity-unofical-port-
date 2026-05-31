@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-        "particle": "lostinfinity:blocks/fabrication_table_top",
-        "down": "lostinfinity:blocks/fabrication_table_top",
-        "up": "lostinfinity:blocks/fabrication_table_top",
-        "north": "lostinfinity:blocks/fabrication_table_side",
-        "east": "lostinfinity:blocks/fabrication_table_side",
-        "south": "lostinfinity:blocks/fabrication_table_side",
-        "west": "lostinfinity:blocks/fabrication_table_side"
+        "particle": "lostinfinity:block/fabrication_table_top",
+        "down": "lostinfinity:block/fabrication_table_top",
+        "up": "lostinfinity:block/fabrication_table_top",
+        "north": "lostinfinity:block/fabrication_table_side",
+        "east": "lostinfinity:block/fabrication_table_side",
+        "south": "lostinfinity:block/fabrication_table_side",
+        "west": "lostinfinity:block/fabrication_table_side"
     }
 }

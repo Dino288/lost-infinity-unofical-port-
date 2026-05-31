@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/novacron_blade"
+		"layer0": "lostinfinity:item/novacron_blade"
 	},
 	"display": {
 		"thirdperson_righthand": {

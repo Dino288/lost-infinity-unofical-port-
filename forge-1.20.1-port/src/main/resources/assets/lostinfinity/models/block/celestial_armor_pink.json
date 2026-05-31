@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/celestial_armor_pink"
+		"all": "lostinfinity:block/celestial_armor_pink"
 	}
 }

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/champion_dodgeball"
+		"layer0": "lostinfinity:item/champion_dodgeball"
 	},
 		"overrides": [
 		{ "predicate": { "lostinfinity:balltype": 0.5 }, "model": "lostinfinity:item/champion_dodgeball_rapid"},

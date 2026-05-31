@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/alignment_dial_game"
+		"all": "lostinfinity:block/alignment_dial_game"
 	}
 }

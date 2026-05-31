@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/acidic_concoction"
+		"layer0": "lostinfinity:item/acidic_concoction"
 	},
 	"display": {
 		"thirdperson_righthand": {

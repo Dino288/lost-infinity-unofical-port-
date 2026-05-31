@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/labyrinth_charger_unpowered"
+        "all": "lostinfinity:block/labyrinth_charger_unpowered"
     }
 }
+

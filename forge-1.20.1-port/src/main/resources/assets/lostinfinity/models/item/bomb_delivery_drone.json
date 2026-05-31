@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/bomb_delivery_drone"
+		"layer0": "lostinfinity:item/bomb_delivery_drone"
 	},
     "display": {
         "thirdperson_righthand": {

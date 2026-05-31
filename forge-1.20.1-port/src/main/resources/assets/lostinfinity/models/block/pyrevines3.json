@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/pyrevines3"
+        "all": "lostinfinity:block/pyrevines3"
     }
 }
+

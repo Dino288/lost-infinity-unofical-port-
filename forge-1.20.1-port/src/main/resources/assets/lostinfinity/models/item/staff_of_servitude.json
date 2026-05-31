@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/staff_of_servitude"
+		"layer0": "lostinfinity:item/staff_of_servitude"
 	},
 	"display": {
 		"thirdperson_righthand": {

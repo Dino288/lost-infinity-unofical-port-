@@ -1,6 +1,6 @@
-{
-  "parent": "block/cube_all",
+﻿{
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "lostinfinity:blocks/molded_sea_clay"
+    "all": "lostinfinity:block/molded_sea_clay"
   }
 }

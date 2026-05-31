@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/space_pickle_stage2"
+        "cross": "lostinfinity:block/space_pickle_stage2"
     }
 }
+

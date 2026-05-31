@@ -1,6 +1,6 @@
-{
-	"parent": "item/handheld",
+﻿{
+	"parent": "minecraft:item/handheld",
 	"textures": {
-		"layer0": "lostinfinity:items/crystal_pickaxe"
+		"layer0": "lostinfinity:item/crystal_pickaxe"
 	}
 }

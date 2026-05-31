@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/chain_of_venoms"
+		"layer0": "lostinfinity:item/chain_of_venoms"
 	},
 	"display": {
 		"thirdperson_righthand": {

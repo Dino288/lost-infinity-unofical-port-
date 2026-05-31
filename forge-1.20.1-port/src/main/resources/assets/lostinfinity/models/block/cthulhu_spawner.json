@@ -1,8 +1,8 @@
-{
-	"parent": "block/orientable",
+﻿{
+	"parent": "minecraft:block/orientable",
 	"textures": {
-		"top": "lostinfinity:blocks/cthulhu_spawner_top",
-		"front": "lostinfinity:blocks/cthulhu_spawner_front",
-		"side": "lostinfinity:blocks/cthulhu_spawner_side"
+		"top": "lostinfinity:block/cthulhu_spawner_top",
+		"front": "lostinfinity:block/cthulhu_spawner_front",
+		"side": "lostinfinity:block/cthulhu_spawner_side"
 	}
 }

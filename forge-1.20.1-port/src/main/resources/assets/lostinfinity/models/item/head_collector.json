@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/head_collector"
+		"layer0": "lostinfinity:item/head_collector"
 	},
 	"display": {
 		"thirdperson_righthand": {

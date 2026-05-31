@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/vitalitus"
+		"layer0": "lostinfinity:item/vitalitus"
 	},
 	"display": {
 		"thirdperson_righthand": {

@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/beacon_of_light"
+		"layer0": "lostinfinity:item/beacon_of_light"
 	},
 	"display": {
 		"thirdperson_righthand": {

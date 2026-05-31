@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/archvine_root3"
+		"cross": "lostinfinity:block/archvine_root3"
 	}
 }

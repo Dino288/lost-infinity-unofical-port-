@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/astrorock_lamp_purple"
+        "all": "lostinfinity:block/astrorock_lamp_purple"
     }
 }
+

@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-    	"particle": "lostinfinity:blocks/present_side",
-        "down": "lostinfinity:blocks/present_bottom",
-        "up": "lostinfinity:blocks/present_top",
-        "north": "lostinfinity:blocks/present_side",
-        "east": "lostinfinity:blocks/present_side",
-        "south": "lostinfinity:blocks/present_side",
-        "west": "lostinfinity:blocks/present_side"
+    	"particle": "lostinfinity:block/present_side",
+        "down": "lostinfinity:block/present_bottom",
+        "up": "lostinfinity:block/present_top",
+        "north": "lostinfinity:block/present_side",
+        "east": "lostinfinity:block/present_side",
+        "south": "lostinfinity:block/present_side",
+        "west": "lostinfinity:block/present_side"
     }
 }

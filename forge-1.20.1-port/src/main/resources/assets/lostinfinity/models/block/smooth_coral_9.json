@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/smooth_coral_9"
+		"all": "lostinfinity:block/smooth_coral_9"
 	}
 }

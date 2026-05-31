@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/honey_gel_empty"
+		"all": "lostinfinity:block/honey_gel_empty"
 	}
 }

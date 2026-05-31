@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/champion_dungeon_brick"
+        "all": "lostinfinity:block/champion_dungeon_brick"
     }
 }
+

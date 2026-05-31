@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/cane_of_venoms"
+		"layer0": "lostinfinity:item/cane_of_venoms"
 	},
 	"overrides": [
     {

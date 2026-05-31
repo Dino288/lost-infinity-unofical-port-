@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/rotatable_tile_south"
+        "all": "lostinfinity:block/rotatable_tile_south"
     }
 }
+

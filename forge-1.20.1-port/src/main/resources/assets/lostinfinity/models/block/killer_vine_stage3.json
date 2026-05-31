@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/killer_vine_stage3"
+		"cross": "lostinfinity:block/killer_vine_stage3"
 	}
 }

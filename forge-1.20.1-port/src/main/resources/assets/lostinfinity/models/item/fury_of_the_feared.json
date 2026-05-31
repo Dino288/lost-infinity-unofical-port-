@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/fury_of_the_feared"
+		"layer0": "lostinfinity:item/fury_of_the_feared"
 	},
 	"display": {
 		"thirdperson_righthand": {

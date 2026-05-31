@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/unpowered_forge_battery"
+        "all": "lostinfinity:block/unpowered_forge_battery"
     }
 }
+

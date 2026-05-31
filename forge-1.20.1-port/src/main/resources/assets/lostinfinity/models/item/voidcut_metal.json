@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/voidcut_metal"
+		"layer0": "lostinfinity:item/voidcut_metal"
 	}
 }

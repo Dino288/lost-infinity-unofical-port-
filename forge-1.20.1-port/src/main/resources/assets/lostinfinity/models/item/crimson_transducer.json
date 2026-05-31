@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/crimson_transducer"
+		"layer0": "lostinfinity:item/crimson_transducer"
 	}
 }

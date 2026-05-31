@@ -1,6 +1,6 @@
-{
+﻿{
 	"parent": "lostinfinity:item/dawn_of_eternity",
 	"textures": {
-		"layer0": "lostinfinity:items/blade_of_eternity_restorum"
+		"layer0": "lostinfinity:item/blade_of_eternity_restorum"
 	}
 }

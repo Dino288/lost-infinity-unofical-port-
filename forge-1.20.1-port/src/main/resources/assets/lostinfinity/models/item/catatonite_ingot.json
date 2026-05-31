@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/catatonite_ingot"
+		"layer0": "lostinfinity:item/catatonite_ingot"
 	}
 }

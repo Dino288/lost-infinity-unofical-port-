@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/axiom_celestarium"
+		"layer0": "lostinfinity:item/axiom_celestarium"
 	},
 	"display": {
 		"gui": {

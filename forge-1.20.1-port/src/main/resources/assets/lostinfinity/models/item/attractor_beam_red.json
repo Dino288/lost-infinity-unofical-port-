@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/attractor_beam_red"
+		"layer0": "lostinfinity:item/attractor_beam_red"
 	},
 	"display": {
 		"thirdperson_righthand": {

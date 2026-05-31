@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/mutant_bloom8"
+		"cross": "lostinfinity:block/mutant_bloom8"
 	}
 }

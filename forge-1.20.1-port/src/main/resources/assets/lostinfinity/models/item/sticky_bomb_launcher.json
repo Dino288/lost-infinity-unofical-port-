@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/sticky_bomb_launcher"
+		"layer0": "lostinfinity:item/sticky_bomb_launcher"
 	},
 	"display": {
 		"thirdperson_righthand": {

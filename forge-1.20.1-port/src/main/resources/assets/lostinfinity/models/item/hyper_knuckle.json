@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/hyper_knuckle"
+		"layer0": "lostinfinity:item/hyper_knuckle"
 	},
 	"display": {
 		"thirdperson_righthand": {

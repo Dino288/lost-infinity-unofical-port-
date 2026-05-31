@@ -1,7 +1,8 @@
-{
-    "parent": "block/cube_column",
+﻿{
+    "parent": "minecraft:block/cube_column",
     "textures": {
-        "end": "lostinfinity:blocks/factory_lantern_top",
-        "side": "lostinfinity:blocks/combustion_engine"
+        "end": "lostinfinity:block/factory_lantern_top",
+        "side": "lostinfinity:block/combustion_engine"
     }
 }
+

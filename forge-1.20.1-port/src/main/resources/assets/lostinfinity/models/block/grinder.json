@@ -1,12 +1,12 @@
-{
-  "parent": "block/cube",
+﻿{
+  "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "lostinfinity:blocks/grinder",
-    "down": "lostinfinity:blocks/grinder",
-    "up": "lostinfinity:blocks/grinder_top",
-    "north": "lostinfinity:blocks/grinder",
-    "east": "lostinfinity:blocks/grinder",
-    "south": "lostinfinity:blocks/grinder",
-    "west": "lostinfinity:blocks/grinder"
+    "particle": "lostinfinity:block/grinder",
+    "down": "lostinfinity:block/grinder",
+    "up": "lostinfinity:block/grinder_top",
+    "north": "lostinfinity:block/grinder",
+    "east": "lostinfinity:block/grinder",
+    "south": "lostinfinity:block/grinder",
+    "west": "lostinfinity:block/grinder"
   }
 }

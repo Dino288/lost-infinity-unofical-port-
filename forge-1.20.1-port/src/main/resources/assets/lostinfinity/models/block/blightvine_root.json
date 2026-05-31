@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/blightvine_root"
+		"cross": "lostinfinity:block/blightvine_root"
 	}
 }

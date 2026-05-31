@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/leaves_celestial_blue"
+        "all": "lostinfinity:block/leaves_celestial_blue"
     }
 }
+

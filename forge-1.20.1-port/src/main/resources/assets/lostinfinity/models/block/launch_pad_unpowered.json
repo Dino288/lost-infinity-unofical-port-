@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/launch_pad_unpowered"
+        "all": "lostinfinity:block/launch_pad_unpowered"
     }
 }
+

@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/box_of_life"
+		"layer0": "lostinfinity:item/box_of_life"
 	}
 }

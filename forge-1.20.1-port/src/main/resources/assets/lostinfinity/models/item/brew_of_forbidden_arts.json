@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/brew_of_forbidden_arts"
+		"layer0": "lostinfinity:item/brew_of_forbidden_arts"
 	},
 	"display": {
 		"thirdperson_righthand": {

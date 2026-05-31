@@ -1,6 +1,7 @@
 ﻿{
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "lostinfinity:blocks/light_reflector"
+    "all": "lostinfinity:block/light_reflector"
   }
 }
+

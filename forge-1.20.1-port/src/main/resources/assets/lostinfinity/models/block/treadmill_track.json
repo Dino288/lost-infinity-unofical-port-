@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-    	"particle": "lostinfinity:blocks/champion_wall",
-        "down": "lostinfinity:blocks/champion_wall",
-        "up": "lostinfinity:blocks/treadmill_track",
-        "north": "lostinfinity:blocks/champion_wall",
-        "east": "lostinfinity:blocks/champion_wall",
-        "south": "lostinfinity:blocks/champion_wall",
-        "west": "lostinfinity:blocks/champion_wall"
+    	"particle": "lostinfinity:block/champion_wall",
+        "down": "lostinfinity:block/champion_wall",
+        "up": "lostinfinity:block/treadmill_track",
+        "north": "lostinfinity:block/champion_wall",
+        "east": "lostinfinity:block/champion_wall",
+        "south": "lostinfinity:block/champion_wall",
+        "west": "lostinfinity:block/champion_wall"
     }
 }

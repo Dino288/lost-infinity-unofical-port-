@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/laser_gun_charging"
+		"layer0": "lostinfinity:item/laser_gun_charging"
 	},
 	"display": {
 		"thirdperson_righthand": {

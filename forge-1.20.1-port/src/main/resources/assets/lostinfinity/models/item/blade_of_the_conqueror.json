@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/blade_of_the_conqueror"
+		"layer0": "lostinfinity:item/blade_of_the_conqueror"
 	},
 	"overrides": [
 		{ "predicate": { "lostinfinity:attack": 0.5 }, "model": "lostinfinity:item/blade_of_the_conqueror_blue"},

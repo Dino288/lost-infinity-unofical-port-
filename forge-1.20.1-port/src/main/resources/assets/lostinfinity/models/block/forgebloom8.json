@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/forgebloom8"
+        "cross": "lostinfinity:block/forgebloom8"
     }
 }
+

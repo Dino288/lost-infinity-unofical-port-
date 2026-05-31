@@ -1,12 +1,12 @@
-{
-  "parent": "block/cube",
+﻿{
+  "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "lostinfinity:blocks/micro_rocket",
-    "down": "lostinfinity:blocks/micro_rocket",
-    "up": "lostinfinity:blocks/micro_rocket",
-    "north": "lostinfinity:blocks/micro_rocket",
-    "east": "lostinfinity:blocks/micro_rocket",
-    "south": "lostinfinity:blocks/micro_rocket",
-    "west": "lostinfinity:blocks/micro_rocket"
+    "particle": "lostinfinity:block/micro_rocket",
+    "down": "lostinfinity:block/micro_rocket",
+    "up": "lostinfinity:block/micro_rocket",
+    "north": "lostinfinity:block/micro_rocket",
+    "east": "lostinfinity:block/micro_rocket",
+    "south": "lostinfinity:block/micro_rocket",
+    "west": "lostinfinity:block/micro_rocket"
   }
 }

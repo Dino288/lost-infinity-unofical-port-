@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/fracture_of_the_cosmos"
+		"layer0": "lostinfinity:item/fracture_of_the_cosmos"
 	},
 	"display": {
 		"thirdperson_righthand": {

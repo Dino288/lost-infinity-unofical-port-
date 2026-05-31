@@ -1,7 +1,8 @@
-{
-    "parent": "block/cube_column",
+﻿{
+    "parent": "minecraft:block/cube_column",
     "textures": {
-        "end": "lostinfinity:blocks/logs_archblighted_top",
-        "side": "lostinfinity:blocks/logs_archblighted_side6"
+        "end": "lostinfinity:block/logs_archblighted_top",
+        "side": "lostinfinity:block/logs_archblighted_side6"
     }
 }
+

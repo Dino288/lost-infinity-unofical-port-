@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/shiverglow4"
+		"cross": "lostinfinity:block/shiverglow4"
 	}
 }

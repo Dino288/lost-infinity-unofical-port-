@@ -1,7 +1,8 @@
-
+﻿
 {
-    "parent": "block/cube_all",
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/lumio_rock6"
+        "all": "lostinfinity:block/lumio_rock6"
     }
 }
+

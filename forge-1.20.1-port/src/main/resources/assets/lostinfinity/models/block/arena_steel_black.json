@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/arena_steel_black"
+        "all": "lostinfinity:block/arena_steel_black"
     }
 }
+

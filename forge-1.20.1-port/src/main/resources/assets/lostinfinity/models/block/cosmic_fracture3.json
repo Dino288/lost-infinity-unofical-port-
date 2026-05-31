@@ -1,7 +1,7 @@
-{
-	"parent": "block/carpet",
+﻿{
+	"parent": "minecraft:block/carpet",
 	"textures": {
-		"particle": "lostinfinity:blocks/cosmic_fracture3",
-		"wool": "lostinfinity:blocks/cosmic_fracture3"
+		"particle": "lostinfinity:block/cosmic_fracture3",
+		"wool": "lostinfinity:block/cosmic_fracture3"
 	}
 }

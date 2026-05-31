@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/watcherweeds_top3"
+        "cross": "lostinfinity:block/watcherweeds_top3"
     }
 }
+

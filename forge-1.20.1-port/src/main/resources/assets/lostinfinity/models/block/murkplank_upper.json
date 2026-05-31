@@ -1,8 +1,9 @@
-{
-    "parent": "block/upper_slab",
+﻿{
+    "parent": "minecraft:block/upper_slab",
     "textures": {
-        "bottom": "lostinfinity:blocks/murkplanks",
-        "top": "lostinfinity:blocks/murkplanks",
-        "side": "lostinfinity:blocks/murkplanks"
+        "bottom": "lostinfinity:block/murkplanks",
+        "top": "lostinfinity:block/murkplanks",
+        "side": "lostinfinity:block/murkplanks"
     }
 }
+

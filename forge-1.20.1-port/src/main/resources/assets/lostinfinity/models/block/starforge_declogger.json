@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-        "particle": "lostinfinity:blocks/starforge_declogger_top",
-        "down": "lostinfinity:blocks/starforge_declogger_top",
-        "up": "lostinfinity:blocks/starforge_declogger_top",
-        "north": "lostinfinity:blocks/starforge_declogger_side",
-        "east": "lostinfinity:blocks/starforge_declogger_side",
-        "south": "lostinfinity:blocks/starforge_declogger_side",
-        "west": "lostinfinity:blocks/starforge_declogger_side"
+        "particle": "lostinfinity:block/starforge_declogger_top",
+        "down": "lostinfinity:block/starforge_declogger_top",
+        "up": "lostinfinity:block/starforge_declogger_top",
+        "north": "lostinfinity:block/starforge_declogger_side",
+        "east": "lostinfinity:block/starforge_declogger_side",
+        "south": "lostinfinity:block/starforge_declogger_side",
+        "west": "lostinfinity:block/starforge_declogger_side"
     }
 }

@@ -1,8 +1,8 @@
-{
-    "parent": "block/inner_stairs",
+﻿{
+    "parent": "minecraft:block/inner_stairs",
     "textures": {
-        "bottom": "lostinfinity:blocks/champion_steel_floor",
-        "top": "lostinfinity:blocks/champion_steel_floor",
-        "side": "lostinfinity:blocks/champion_steel_floor"
+        "bottom": "lostinfinity:block/champion_steel_floor",
+        "top": "lostinfinity:block/champion_steel_floor",
+        "side": "lostinfinity:block/champion_steel_floor"
     }
 }

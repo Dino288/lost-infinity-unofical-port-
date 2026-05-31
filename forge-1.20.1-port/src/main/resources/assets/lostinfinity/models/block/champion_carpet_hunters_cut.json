@@ -1,12 +1,13 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-    	"particle": "lostinfinity:blocks/champion_steel_floor",
-        "down": "lostinfinity:blocks/champion_steel_floor",
-        "up": "lostinfinity:blocks/champion_carpet_hunters_cut",
-        "north": "lostinfinity:blocks/champion_steel_floor",
-        "east": "lostinfinity:blocks/champion_steel_floor",
-        "south": "lostinfinity:blocks/champion_steel_floor",
-        "west": "lostinfinity:blocks/champion_steel_floor"
+    	"particle": "lostinfinity:block/champion_steel_floor",
+        "down": "lostinfinity:block/champion_steel_floor",
+        "up": "lostinfinity:block/champion_carpet_hunters_cut",
+        "north": "lostinfinity:block/champion_steel_floor",
+        "east": "lostinfinity:block/champion_steel_floor",
+        "south": "lostinfinity:block/champion_steel_floor",
+        "west": "lostinfinity:block/champion_steel_floor"
     }
 }
+

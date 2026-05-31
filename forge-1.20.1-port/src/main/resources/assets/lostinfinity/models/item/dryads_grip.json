@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/dryads_grip"
+		"layer0": "lostinfinity:item/dryads_grip"
 	},
 		"overrides": [
 		{ "predicate": { "lostinfinity:usetype": 1.0 }, "model": "lostinfinity:item/dryads_grip_detonate"}

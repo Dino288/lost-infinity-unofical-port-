@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/bio_energizer"
+		"layer0": "lostinfinity:item/bio_energizer"
 	}
 }

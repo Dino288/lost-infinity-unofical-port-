@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/twigoftrickery"
+		"layer0": "lostinfinity:item/twigoftrickery"
 	},
 	"display": {
 		"thirdperson_righthand": {

@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/dark_rough_coral_15"
+		"all": "lostinfinity:block/dark_rough_coral_15"
 	}
 }

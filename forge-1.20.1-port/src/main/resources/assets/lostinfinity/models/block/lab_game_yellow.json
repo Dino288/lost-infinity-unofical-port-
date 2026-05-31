@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/lab_game_starter_yellow"
+        "all": "lostinfinity:block/lab_game_starter_yellow"
     }
 }
+

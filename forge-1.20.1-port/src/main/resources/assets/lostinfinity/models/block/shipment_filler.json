@@ -1,12 +1,12 @@
-{
-  "parent": "block/cube",
+﻿{
+  "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "lostinfinity:blocks/neosteel_beam",
-    "down": "lostinfinity:blocks/neosteel_beam_top",
-    "up": "lostinfinity:blocks/shipment_filler",
-    "north": "lostinfinity:blocks/neosteel_beam",
-    "east": "lostinfinity:blocks/neosteel_beam",
-    "south": "lostinfinity:blocks/neosteel_beam",
-    "west": "lostinfinity:blocks/neosteel_beam"
+    "particle": "lostinfinity:block/neosteel_beam",
+    "down": "lostinfinity:block/neosteel_beam_top",
+    "up": "lostinfinity:block/shipment_filler",
+    "north": "lostinfinity:block/neosteel_beam",
+    "east": "lostinfinity:block/neosteel_beam",
+    "south": "lostinfinity:block/neosteel_beam",
+    "west": "lostinfinity:block/neosteel_beam"
   }
 }

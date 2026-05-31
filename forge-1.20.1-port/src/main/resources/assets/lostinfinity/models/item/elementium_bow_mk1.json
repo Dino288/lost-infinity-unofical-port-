@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/elementium_bow_air"
+		"layer0": "lostinfinity:item/elementium_bow_air"
 	},
 	"overrides": [
 		{ "predicate": { "lostinfinity:elements": 0.33 }, "model": "lostinfinity:item/elementium_bow_water"},

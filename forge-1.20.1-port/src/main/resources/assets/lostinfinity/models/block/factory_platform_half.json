@@ -1,8 +1,9 @@
-{
-    "parent": "block/half_slab",
+﻿{
+    "parent": "minecraft:block/half_slab",
     "textures": {
-        "bottom": "lostinfinity:blocks/factory_platform_bottom",
-        "top": "lostinfinity:blocks/factory_platform_top",
-        "side": "lostinfinity:blocks/factory_platform_side"
+        "bottom": "lostinfinity:block/factory_platform_bottom",
+        "top": "lostinfinity:block/factory_platform_top",
+        "side": "lostinfinity:block/factory_platform_side"
     }
 }
+

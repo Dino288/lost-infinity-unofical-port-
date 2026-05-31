@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/amazonite_token"
+		"layer0": "lostinfinity:item/amazonite_token"
 	}
 }

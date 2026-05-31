@@ -1,6 +1,7 @@
-{
-    "parent": "block/cross",
+﻿{
+    "parent": "minecraft:block/cross",
     "textures": {
-        "cross": "lostinfinity:blocks/moon_flower_stage1"
+        "cross": "lostinfinity:block/moon_flower_stage1"
     }
 }
+

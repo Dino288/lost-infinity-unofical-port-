@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/emberkelp_dense4"
+		"cross": "lostinfinity:block/emberkelp_dense4"
 	}
 }

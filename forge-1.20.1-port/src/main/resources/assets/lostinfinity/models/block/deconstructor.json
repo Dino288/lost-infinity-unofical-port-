@@ -1,12 +1,12 @@
-{
-    "parent": "block/cube",
+﻿{
+    "parent": "minecraft:block/cube",
     "textures": {
-    	"particle": "lostinfinity:blocks/deconstructor_end",
-        "down": "lostinfinity:blocks/deconstructor_end",
-        "up": "lostinfinity:blocks/deconstructor",
-        "north": "lostinfinity:blocks/deconstructor_end",
-        "east": "lostinfinity:blocks/deconstructor_end",
-        "south": "lostinfinity:blocks/deconstructor_end",
-        "west": "lostinfinity:blocks/deconstructor_end"
+    	"particle": "lostinfinity:block/deconstructor_end",
+        "down": "lostinfinity:block/deconstructor_end",
+        "up": "lostinfinity:block/deconstructor",
+        "north": "lostinfinity:block/deconstructor_end",
+        "east": "lostinfinity:block/deconstructor_end",
+        "south": "lostinfinity:block/deconstructor_end",
+        "west": "lostinfinity:block/deconstructor_end"
     }
 }

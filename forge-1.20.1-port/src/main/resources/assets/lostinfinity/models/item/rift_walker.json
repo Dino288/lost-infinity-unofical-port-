@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/rift_walker"
+		"layer0": "lostinfinity:item/rift_walker"
 	},
 	"display": {
 		"thirdperson_righthand": {

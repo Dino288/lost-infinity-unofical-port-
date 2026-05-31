@@ -1,6 +1,6 @@
-{
-	"parent": "block/cube_all",
+﻿{
+	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "lostinfinity:blocks/blighted_core_active"
+		"all": "lostinfinity:block/blighted_core_active"
 	}
 }

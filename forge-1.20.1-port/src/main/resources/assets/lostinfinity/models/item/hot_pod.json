@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/hot_pod"
+		"layer0": "lostinfinity:item/hot_pod"
 	}
 }

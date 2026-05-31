@@ -56,6 +56,13 @@ What was done:
   - old `"normal"` variants were replaced with empty default variants
   - blockstate model paths now point at `lostinfinity:block/<id>`
   - all blockstate model references now resolve to an existing model
+- Migrated recovered legacy texture layout for Minecraft 1.20.1:
+  - copied `textures/blocks` to `textures/block`
+  - copied `textures/items` to `textures/item`
+  - rewrote model texture references from `lostinfinity:blocks/...` to `lostinfinity:block/...`
+  - rewrote model texture references from `lostinfinity:items/...` to `lostinfinity:item/...`
+  - rewrote vanilla model parents to explicit `minecraft:block/...` and `minecraft:item/...`
+  - added atlas aliases/fallbacks so all direct `lostinfinity:block/...` and `lostinfinity:item/...` model texture references resolve to a PNG
 - Added baseline AI goals to registered placeholder mobs:
   - swimming
   - wandering

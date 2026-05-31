@@ -1,6 +1,6 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/radion_ore_active"
+        "all": "lostinfinity:block/radion_ore_active"
   }
 }

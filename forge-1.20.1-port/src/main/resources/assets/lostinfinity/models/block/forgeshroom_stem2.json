@@ -1,7 +1,8 @@
-{
-    "parent": "block/cube_column",
+﻿{
+    "parent": "minecraft:block/cube_column",
     "textures": {
-        "end": "lostinfinity:blocks/forgeshroom_stem_top",
-        "side": "lostinfinity:blocks/forgeshroom_stem_side2"
+        "end": "lostinfinity:block/forgeshroom_stem_top",
+        "side": "lostinfinity:block/forgeshroom_stem_side2"
     }
 }
+

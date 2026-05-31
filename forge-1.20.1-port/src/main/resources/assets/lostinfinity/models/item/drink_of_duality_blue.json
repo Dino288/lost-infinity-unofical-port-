@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/drink_of_duality_blue"
+		"layer0": "lostinfinity:item/drink_of_duality_blue"
 	},
 	"display": {
 		"thirdperson_righthand": {

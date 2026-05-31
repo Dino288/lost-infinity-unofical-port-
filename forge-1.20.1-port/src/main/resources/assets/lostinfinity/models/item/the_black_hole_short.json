@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/the_black_hole_short"
+		"layer0": "lostinfinity:item/the_black_hole_short"
 	},
 	"display": {
 		"thirdperson_righthand": {

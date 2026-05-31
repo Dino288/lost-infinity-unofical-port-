@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/colixium_catenation_pouch"
+		"layer0": "lostinfinity:item/colixium_catenation_pouch"
 	}
 }

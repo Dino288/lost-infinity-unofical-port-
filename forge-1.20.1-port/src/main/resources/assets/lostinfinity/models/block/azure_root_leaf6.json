@@ -1,6 +1,6 @@
-{
-	"parent": "block/cross",
+﻿{
+	"parent": "minecraft:block/cross",
 	"textures": {
-		"cross": "lostinfinity:blocks/azure_root_leaf6"
+		"cross": "lostinfinity:block/azure_root_leaf6"
 	}
 }

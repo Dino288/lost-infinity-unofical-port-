@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/galactic_challenge_emblem"
+		"layer0": "lostinfinity:item/galactic_challenge_emblem"
 	}
 }

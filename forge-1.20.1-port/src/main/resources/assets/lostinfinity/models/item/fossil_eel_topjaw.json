@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/fossil_eel_topjaw"
+		"layer0": "lostinfinity:item/fossil_eel_topjaw"
 	}
 }

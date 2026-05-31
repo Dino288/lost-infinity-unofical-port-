@@ -1,6 +1,6 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/glow_bomb"
+		"layer0": "lostinfinity:item/glow_bomb"
 	}
 }

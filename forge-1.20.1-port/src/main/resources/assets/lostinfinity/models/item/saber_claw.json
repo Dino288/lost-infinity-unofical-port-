@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/saber_claw"
+		"layer0": "lostinfinity:item/saber_claw"
 	},
 	"display": {
 		"thirdperson_righthand": {

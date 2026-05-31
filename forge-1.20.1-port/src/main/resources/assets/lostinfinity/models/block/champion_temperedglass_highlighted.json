@@ -1,6 +1,7 @@
-{
-    "parent": "block/cube_all",
+﻿{
+    "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "lostinfinity:blocks/champion_temperedglass_highlighted"
+        "all": "lostinfinity:block/champion_temperedglass_highlighted"
     }
 }
+

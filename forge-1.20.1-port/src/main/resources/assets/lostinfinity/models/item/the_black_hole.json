@@ -1,7 +1,7 @@
-{
-	"parent": "item/generated",
+﻿{
+	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "lostinfinity:items/the_black_hole"
+		"layer0": "lostinfinity:item/the_black_hole"
 	},
 		"overrides": [
 		{ "predicate": { "lostinfinity:usetype": 1.0 }, "model": "lostinfinity:item/the_black_hole_short"}
