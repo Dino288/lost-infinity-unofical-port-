@@ -1,5 +1,9 @@
 package xol.lostinfinity.dimension;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -17,6 +21,8 @@ import xol.lostinfinity.LostInfinity;
 
 @Mod.EventBusSubscriber(modid = LostInfinity.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class LostOriginalStructureGeneration {
+    private static final Grid STARFORGE_DUNGEON = Grid.load("data/lostinfinity/structures/predefined/starforge_dungeon.csv");
+
     private LostOriginalStructureGeneration() {
     }
 
@@ -40,6 +46,31 @@ public final class LostOriginalStructureGeneration {
         } else if ("cartographerrealmbot".equals(dimension)) {
             generateCartographer(level, chunkX, chunkZ, Floor.BOT);
             generatePuzzleMasterOrigin(level, chunkX, chunkZ);
+        } else if ("nonexistence".equals(dimension)) {
+            generateNonexistenceGalaxy(level, chunkX, chunkZ);
+        }
+    }
+
+    private static void generateNonexistenceGalaxy(ServerLevel level, int chunkX, int chunkZ) {
+        GridNode node = STARFORGE_DUNGEON.getNodeAtLocation(chunkX, chunkZ, -14, 52);
+        if (node == null || !node.pieceType().startsWith("3")) {
+            return;
+        }
+        Random random = seededRandom(level, chunkX, chunkZ);
+        String structure = galaxyDungeonStructure(node.pieceType().substring(1));
+        if (structure.isEmpty()) {
+            return;
+        }
+
+        int posX = chunkX * 16 + 8;
+        int posZ = chunkZ * 16 + 8;
+        String[] parts = structure.split(",");
+        placeTemplate(level, parts[0], new BlockPos(posX, 80 + node.heightOffset(), posZ), node.rotation(random), random);
+        if (parts.length > 1) {
+            ExtraStructure extra = galaxyExtra(parts[1]);
+            if (extra != null) {
+                placeTemplate(level, extra.name(), new BlockPos(posX, 80 + node.heightOffset() + extra.yOffset(), posZ), extra.rotation(), random);
+            }
         }
     }
 
@@ -149,6 +180,53 @@ public final class LostOriginalStructureGeneration {
         };
     }
 
+    private static Rotation rotationFromInt(int rotation, Random random) {
+        return switch (rotation) {
+            case 1 -> Rotation.CLOCKWISE_90;
+            case -1 -> Rotation.COUNTERCLOCKWISE_90;
+            case 2 -> Rotation.CLOCKWISE_180;
+            case 7 -> random.nextBoolean() ? Rotation.CLOCKWISE_90 : Rotation.COUNTERCLOCKWISE_90;
+            case 8 -> random.nextBoolean() ? Rotation.NONE : Rotation.CLOCKWISE_180;
+            case 9 -> rotationFromInt(random.nextInt(4) - 1, random);
+            default -> Rotation.NONE;
+        };
+    }
+
+    private static String galaxyDungeonStructure(String pieceType) {
+        return switch (pieceType) {
+            case "galaxy1" -> "galaxy/galaxy_dungeon_lower1,galaxy1";
+            case "galaxy2" -> "galaxy/galaxy_dungeon_lower2,galaxy2";
+            case "galaxy3" -> "galaxy/galaxy_dungeon_lower3,galaxy3";
+            case "galaxy4" -> "galaxy/galaxy_dungeon_lower4,galaxy4";
+            case "galblue" -> "galaxy/galaxy_basic_blue";
+            case "galgreen" -> "galaxy/galaxy_basic_green";
+            case "galyellow" -> "galaxy/galaxy_basic_yellow";
+            case "galpink" -> "galaxy/galaxy_basic_pink";
+            case "galsword" -> "galaxy/galaxy_elite_sword";
+            case "galbomb" -> "galaxy/galaxy_elite_bomb";
+            case "galknife" -> "galaxy/galaxy_elite_knife";
+            case "gallight1" -> "galaxy/galaxy_lightmaze1";
+            case "gallight2" -> "galaxy/galaxy_lightmaze2";
+            case "gallight3" -> "galaxy/galaxy_lightmaze3";
+            case "gallight4" -> "galaxy/galaxy_lightmaze4";
+            case "galterror1" -> "galaxy/galaxy_shockarena1";
+            case "galterror2" -> "galaxy/galaxy_shockarena2";
+            case "galterror3" -> "galaxy/galaxy_shockarena3";
+            case "galterror4" -> "galaxy/galaxy_shockarena4";
+            default -> "";
+        };
+    }
+
+    private static ExtraStructure galaxyExtra(String name) {
+        return switch (name) {
+            case "galaxy1" -> new ExtraStructure("galaxy/galaxy_dungeon_upper1", 19, Rotation.NONE);
+            case "galaxy2" -> new ExtraStructure("galaxy/galaxy_dungeon_upper2", 19, Rotation.NONE);
+            case "galaxy3" -> new ExtraStructure("galaxy/galaxy_dungeon_upper3", 19, Rotation.NONE);
+            case "galaxy4" -> new ExtraStructure("galaxy/galaxy_dungeon_upper4", 19, Rotation.NONE);
+            default -> null;
+        };
+    }
+
     private static String teleRoom(Floor floor) {
         return switch (floor) {
             case TOP -> "labyrinth/labteleroom";
@@ -222,5 +300,50 @@ public final class LostOriginalStructureGeneration {
         TOP,
         MID,
         BOT
+    }
+
+    private record ExtraStructure(String name, int yOffset, Rotation rotation) {
+    }
+
+    private record GridNode(String pieceType, int rotation, int heightOffset) {
+        private Rotation rotation(Random random) {
+            return rotationFromInt(rotation, random);
+        }
+    }
+
+    private record Grid(GridNode[][] nodes, int rows, int columns) {
+        private static Grid load(String path) {
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    LostOriginalStructureGeneration.class.getClassLoader().getResourceAsStream(path), StandardCharsets.UTF_8))) {
+                var lines = reader.lines().toList();
+                int rows = lines.size();
+                int columns = rows == 0 ? 0 : lines.get(0).split(",", -1).length;
+                GridNode[][] nodes = new GridNode[rows][columns];
+                for (int row = 0; row < rows; row++) {
+                    String[] values = lines.get(row).split(",", -1);
+                    for (int column = 0; column < values.length; column++) {
+                        if (values[column].isEmpty()) {
+                            continue;
+                        }
+                        String[] data = values[column].split(":");
+                        int yOffset = data.length > 2 ? Integer.parseInt(data[2]) : 0;
+                        nodes[row][column] = new GridNode(data[0], Integer.parseInt(data[1]), yOffset);
+                    }
+                }
+                return new Grid(nodes, rows, columns);
+            } catch (IOException | NullPointerException ex) {
+                LostInfinity.LOGGER.warn("Unable to load Lost Infinity structure grid {}", path, ex);
+                return new Grid(new GridNode[0][0], 0, 0);
+            }
+        }
+
+        private GridNode getNodeAtLocation(int x, int z, int offsetX, int offsetZ) {
+            int row = rows - 1 - x + offsetX;
+            int column = z + offsetZ;
+            if (row < 0 || column < 0 || row >= rows || column >= columns) {
+                return null;
+            }
+            return nodes[row][column];
+        }
     }
 }
