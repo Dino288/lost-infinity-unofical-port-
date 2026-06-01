@@ -142,6 +142,10 @@ What was done:
   - copied recovered `starforge_dungeon.csv` into modern structure data resources
   - added a modern CSV grid parser for the legacy Nonexistence structure grid
   - added original area-3 Galaxy Dungeon structure mapping and upper/lower paired room placement
+- Ported the next original Nonexistence Starforge approach slice:
+  - copied recovered original Forge Mines, Starforge, and Twisted Tunnels NBT templates into modern structure data resources
+  - added legacy CSV mappings for Nonexistence areas 0, 1, and 2
+  - restored original extra-piece placement for ore pillars, the two-layer Twisted Tunnels entry, and Sunder Hive upper/lower structures
 - Added first-pass Lost Infinity ore worldgen:
   - 28 legacy Nonexistence resource ores generate in the `nonexistence` biome from Y 80 to 146
   - `darksteel_ore`, `multiversite_overworld`, `lucient_ore`, and `atomite_ore` generate in `infinitemurk`

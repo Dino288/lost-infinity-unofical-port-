@@ -53,11 +53,11 @@ public final class LostOriginalStructureGeneration {
 
     private static void generateNonexistenceGalaxy(ServerLevel level, int chunkX, int chunkZ) {
         GridNode node = STARFORGE_DUNGEON.getNodeAtLocation(chunkX, chunkZ, -14, 52);
-        if (node == null || !node.pieceType().startsWith("3")) {
+        if (node == null) {
             return;
         }
         Random random = seededRandom(level, chunkX, chunkZ);
-        String structure = galaxyDungeonStructure(node.pieceType().substring(1));
+        String structure = nonexistenceStructure(node.pieceType(), random);
         if (structure.isEmpty()) {
             return;
         }
@@ -67,9 +67,9 @@ public final class LostOriginalStructureGeneration {
         String[] parts = structure.split(",");
         placeTemplate(level, parts[0], new BlockPos(posX, 80 + node.heightOffset(), posZ), node.rotation(random), random);
         if (parts.length > 1) {
-            ExtraStructure extra = galaxyExtra(parts[1]);
+            ExtraStructure extra = extraStructure(parts[1], random);
             if (extra != null) {
-                placeTemplate(level, extra.name(), new BlockPos(posX, 80 + node.heightOffset() + extra.yOffset(), posZ), extra.rotation(), random);
+                placeTemplate(level, extra.name(), new BlockPos(posX + random.nextInt(extra.xOffsetCap()), 80 + node.heightOffset() + extra.yOffset(), posZ + random.nextInt(extra.zOffsetCap())), extra.rotation(), random);
             }
         }
     }
@@ -192,6 +192,91 @@ public final class LostOriginalStructureGeneration {
         };
     }
 
+    private static String nonexistenceStructure(String name, Random random) {
+        int areaNumIdx = getAreaNumIdx(name);
+        int areaNum = areaNumIdx == 0 ? -1 : Integer.parseInt(name.substring(0, areaNumIdx));
+        String pieceType = name.substring(areaNumIdx);
+        return switch (areaNum) {
+            case 0 -> mineShaftsStructure(pieceType, random);
+            case 1 -> mineShaftPoisStructure(pieceType);
+            case 2 -> starforgeMinesStructure(pieceType, random);
+            case 3 -> galaxyDungeonStructure(pieceType);
+            default -> "";
+        };
+    }
+
+    private static int getAreaNumIdx(String name) {
+        int i = 0;
+        while (i < name.length() && Character.isDigit(name.charAt(i))) {
+            i++;
+        }
+        return i;
+    }
+
+    private static String mineShaftsStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "tsect" -> randomPiece("forgemines", "forgeminestsect", 2, random);
+            case "end" -> randomPiece("forgemines", "forgeminesend", 3, random);
+            case "turn" -> randomPiece("forgemines", "forgeminesturn", 3, random);
+            case "shaft" -> randomPiece("forgemines", "forgeminesshaft", 8, random);
+            case "stairs" -> randomPiece("forgemines", "forge_mines_stairs", 6, random);
+            case "secur1" -> "starforge/forgeclearance1";
+            case "secur3" -> "starforge/forgeclearance3";
+            case "forgegen" -> "starforge/forgemines_powergen";
+            case "forgeterm" -> "starforge/forgemines_powerterminal";
+            case "rworm" -> randomPiece("forgemines", "forgemines_rockworm", 2, random);
+            default -> "";
+        };
+    }
+
+    private static String mineShaftPoisStructure(String pieceType) {
+        return switch (pieceType) {
+            case "starforge" -> "starforge/starforge_forge";
+            case "entry" -> "forgemines/forgemines_entry";
+            case "dark" -> "twistedtunnels/twistedtunnel_entrytop,twistedtunnel_entrybot";
+            case "sunderbr" -> "starforge/sundertree2";
+            case "sundertr" -> "starforge/sundertree4";
+            case "sunderbl" -> "starforge/sundertree1";
+            case "sundertl" -> "starforge/sundertree3,hiveent";
+            case "hive1" -> "starforge/sunder_hive_bottom_1,hive1";
+            case "hive2" -> "starforge/sunder_hive_bottom_2,hive2";
+            case "hive3" -> "starforge/sunder_hive_bottom_3,hive3";
+            case "hive4" -> "starforge/sunder_hive_bottom_4,hive4";
+            case "clovm1" -> "starforge/clovinite_mine1";
+            case "clovm2" -> "starforge/clovinite_mine2";
+            case "clovm3" -> "starforge/clovinite_mine3";
+            case "clovm4" -> "starforge/clovinite_mine4";
+            case "cata1" -> "starforge/catatonite_mine1";
+            case "cata2" -> "starforge/catatonite_mine2";
+            case "cata3" -> "starforge/catatonite_mine3";
+            case "cata4" -> "starforge/catatonite_mine4";
+            default -> "";
+        };
+    }
+
+    private static String starforgeMinesStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "minescr" -> "forgemines/forge_mines_corner";
+            case "minesgw" -> "forgemines/forge_mines_door";
+            case "minesgwo" -> "forgemines/forge_mines_dooropen";
+            case "minegen" -> "forgemines/forge_mines_powergen";
+            case "mines" -> randomPiece("forgemines", "forge_mines", 16, random) + ",orepillar";
+            case "minesed" -> randomPiece("forgemines", "forge_mines_wall", 10, random);
+            case "mycave1" -> "forgemines/forgemines_myrite_cave1";
+            case "mycave2" -> "forgemines/forgemines_myrite_cave2";
+            case "mycave3" -> "forgemines/forgemines_myrite_cave3";
+            case "mycave4" -> "forgemines/forgemines_myrite_cave4";
+            case "mypass" -> "forgemines/forgemines_myrite_passage";
+            case "mywall" -> "forgemines/forgemines_myrite_wall";
+            case "myentry" -> "forgemines/forgemines_myrite_entry";
+            default -> "";
+        };
+    }
+
+    private static String randomPiece(String folder, String prefix, int count, Random random) {
+        return folder + "/" + prefix + (random.nextInt(count) + 1);
+    }
+
     private static String galaxyDungeonStructure(String pieceType) {
         return switch (pieceType) {
             case "galaxy1" -> "galaxy/galaxy_dungeon_lower1,galaxy1";
@@ -217,12 +302,19 @@ public final class LostOriginalStructureGeneration {
         };
     }
 
-    private static ExtraStructure galaxyExtra(String name) {
+    private static ExtraStructure extraStructure(String name, Random random) {
         return switch (name) {
-            case "galaxy1" -> new ExtraStructure("galaxy/galaxy_dungeon_upper1", 19, Rotation.NONE);
-            case "galaxy2" -> new ExtraStructure("galaxy/galaxy_dungeon_upper2", 19, Rotation.NONE);
-            case "galaxy3" -> new ExtraStructure("galaxy/galaxy_dungeon_upper3", 19, Rotation.NONE);
-            case "galaxy4" -> new ExtraStructure("galaxy/galaxy_dungeon_upper4", 19, Rotation.NONE);
+            case "orepillar" -> new ExtraStructure(randomPiece("forgemines", "forgemines_orepillar", 10, random), 0, 5, 5, rotationFromInt(9, random));
+            case "twistedtunnel_entrybot" -> new ExtraStructure("twistedtunnels/twistedtunnel_entrybot", -32, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "galaxy1" -> new ExtraStructure("galaxy/galaxy_dungeon_upper1", 19, 1, 1, Rotation.NONE);
+            case "galaxy2" -> new ExtraStructure("galaxy/galaxy_dungeon_upper2", 19, 1, 1, Rotation.NONE);
+            case "galaxy3" -> new ExtraStructure("galaxy/galaxy_dungeon_upper3", 19, 1, 1, Rotation.NONE);
+            case "galaxy4" -> new ExtraStructure("galaxy/galaxy_dungeon_upper4", 19, 1, 1, Rotation.NONE);
+            case "hiveent" -> new ExtraStructure("starforge/sunder_hive_entry", -13, 1, 1, Rotation.NONE);
+            case "hive1" -> new ExtraStructure("starforge/sunder_hive_top_1", 32, 1, 1, Rotation.NONE);
+            case "hive2" -> new ExtraStructure("starforge/sunder_hive_top_2", 32, 1, 1, Rotation.NONE);
+            case "hive3" -> new ExtraStructure("starforge/sunder_hive_top_3", 32, 1, 1, Rotation.NONE);
+            case "hive4" -> new ExtraStructure("starforge/sunder_hive_top_4", 32, 1, 1, Rotation.NONE);
             default -> null;
         };
     }
@@ -302,7 +394,7 @@ public final class LostOriginalStructureGeneration {
         BOT
     }
 
-    private record ExtraStructure(String name, int yOffset, Rotation rotation) {
+    private record ExtraStructure(String name, int yOffset, int xOffsetCap, int zOffsetCap, Rotation rotation) {
     }
 
     private record GridNode(String pieceType, int rotation, int heightOffset) {
