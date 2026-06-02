@@ -3,6 +3,7 @@ package xol.lostinfinity;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import xol.lostinfinity.network.LostNetwork;
@@ -15,6 +16,7 @@ import xol.lostinfinity.registry.ModItems;
 import xol.lostinfinity.registry.ModMenus;
 import xol.lostinfinity.registry.ModParticles;
 import xol.lostinfinity.registry.ModRecipeTypes;
+import xol.lostinfinity.registry.ModSpawnPlacements;
 import xol.lostinfinity.registry.ModSpawnEggs;
 
 @Mod(LostInfinity.MODID)
@@ -34,8 +36,13 @@ public final class LostInfinity {
         ModParticles.PARTICLE_TYPES.register(modEventBus);
         ModRecipeTypes.RECIPE_SERIALIZERS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        modEventBus.addListener(LostInfinity::commonSetup);
         LostNetwork.register();
         LOGGER.info("Lost Infinity 1.20.1 port bootstrap registered {} blocks, {} items, and {} entity types.",
                 ModBlocks.ALL_BLOCKS.size(), ModItems.ALL_ITEMS.size(), ModEntities.ALL_ENTITIES.size());
+    }
+
+    private static void commonSetup(FMLCommonSetupEvent event) {
+        event.enqueueWork(ModSpawnPlacements::registerAll);
     }
 }
