@@ -171,6 +171,11 @@ What was done:
   - `galaxygulper`, `laserspire`, and `galaxy_dragon` now use original-style size/stat profiles instead of the generic placeholder mob values
   - restored the Galaxy Gulper watchful-eye feeding loop with `acidblood_solution` reward drops, plus its stronger timed bite window
   - restored conservative Laser Spire stationary firing and Galaxy Dragon fire breath/fireball-style combat hooks while full mount controls and projectile models remain pending
+- Ported the first original Shadow Sea mob behavior slice:
+  - `longfin`, `doublerang`, `rayfish`, `glowfish`, `underfin`, `octobrella`, `eelshark`, `ribshark`, `crabulon`, `sea_serpent`, and `leviathan` now use original-style sizes/categories, swimming movement, and water-safe behavior
+  - restored fish chow tracking/eating with delayed `organic_shadow_matter` drops for the fish-family mobs
+  - restored Glowfish's unique bioluminescent pearl reward and Octobrella's deviant-egg twilight pearl interaction
+  - restored conservative predator max-health attacks, Crabulon ranged shots, and Eelshark shock debuffs; the old custom `Nullified` effect is currently represented by vanilla weakness/slowness until the custom effect registry is ported
 
 Current compile result:
 - Command: `.\gradlew.bat build`

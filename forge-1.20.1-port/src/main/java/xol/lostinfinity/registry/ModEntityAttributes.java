@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.entity.LostGalaxyMob;
 import xol.lostinfinity.entity.LostPlaceholderMob;
+import xol.lostinfinity.entity.LostSeaMob;
 
 @Mod.EventBusSubscriber(modid = LostInfinity.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class ModEntityAttributes {
@@ -268,16 +269,16 @@ public final class ModEntityAttributes {
         event.put(ModEntities.KALIKOS.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.GHOSTCOPY.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.LEER.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.DOUBLERANG.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.LONGFIN.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.OCTOBRELLA.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.RAYFISH.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.GLOWFISH.get(), LostPlaceholderMob.createAttributes().build());
+        event.put(ModEntities.DOUBLERANG.get(), LostSeaMob.fishAttributes().build());
+        event.put(ModEntities.LONGFIN.get(), LostSeaMob.fishAttributes().build());
+        event.put(ModEntities.OCTOBRELLA.get(), LostSeaMob.octoAttributes().build());
+        event.put(ModEntities.RAYFISH.get(), LostSeaMob.fishAttributes().build());
+        event.put(ModEntities.GLOWFISH.get(), LostSeaMob.fishAttributes().build());
         event.put(ModEntities.DEVIANTSQUID.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.UNDERFIN.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.EELSHARK.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.CRABULON.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.RIBSHARK.get(), LostPlaceholderMob.createAttributes().build());
+        event.put(ModEntities.UNDERFIN.get(), LostSeaMob.fishAttributes().build());
+        event.put(ModEntities.EELSHARK.get(), LostSeaMob.predatorAttributes(500.0D, 0.32D, 32.0D).build());
+        event.put(ModEntities.CRABULON.get(), LostSeaMob.predatorAttributes(500.0D, 0.22D, 32.0D).build());
+        event.put(ModEntities.RIBSHARK.get(), LostSeaMob.predatorAttributes(160.0D, 0.32D, 32.0D).build());
         event.put(ModEntities.SCREAMER.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.NEBULA_GRUNT.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.NEBULA_WIZARD.get(), LostPlaceholderMob.createAttributes().build());
@@ -286,8 +287,8 @@ public final class ModEntityAttributes {
         event.put(ModEntities.MULTIVERSEGHOST.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.RISINGPHANTOM.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.TENTACLELANTERN.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.LEVIATHAN.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.SEA_SERPENT.get(), LostPlaceholderMob.createAttributes().build());
+        event.put(ModEntities.LEVIATHAN.get(), LostSeaMob.predatorAttributes(5000.0D, 0.32D, 128.0D).build());
+        event.put(ModEntities.SEA_SERPENT.get(), LostSeaMob.predatorAttributes(5000.0D, 0.32D, 128.0D).build());
         event.put(ModEntities.GALAXY_DRAGON.get(), LostGalaxyMob.dragonAttributes().build());
         event.put(ModEntities.X_SCREACHER.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.LOST_BLADE.get(), LostPlaceholderMob.createAttributes().build());

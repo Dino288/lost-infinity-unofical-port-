@@ -11,6 +11,7 @@ import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.entity.LostGalaxyMob;
 import xol.lostinfinity.entity.LostPlaceholderMob;
 import xol.lostinfinity.entity.LostPlaceholderProjectile;
+import xol.lostinfinity.entity.LostSeaMob;
 
 public final class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, LostInfinity.MODID);
@@ -32,6 +33,16 @@ public final class ModEntities {
     private static RegistryObject<EntityType<LostPlaceholderMob>> registerGalaxyMob(String name, LostGalaxyMob.Kind kind, float width, float height) {
         RegistryObject<EntityType<LostPlaceholderMob>> entity = ENTITY_TYPES.register(name, () -> EntityType.Builder
                 .<LostPlaceholderMob>of((type, level) -> new LostGalaxyMob(type, level, kind), MobCategory.MONSTER)
+                .sized(width, height)
+                .clientTrackingRange(8)
+                .build(LostInfinity.MODID + ":" + name));
+        ALL_ENTITIES.add(entity);
+        return entity;
+    }
+
+    private static RegistryObject<EntityType<LostPlaceholderMob>> registerSeaMob(String name, LostSeaMob.Kind kind, float width, float height, MobCategory category) {
+        RegistryObject<EntityType<LostPlaceholderMob>> entity = ENTITY_TYPES.register(name, () -> EntityType.Builder
+                .<LostPlaceholderMob>of((type, level) -> new LostSeaMob(type, level, kind), category)
                 .sized(width, height)
                 .clientTrackingRange(8)
                 .build(LostInfinity.MODID + ":" + name));
@@ -304,16 +315,16 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> KALIKOS = registerMob("kalikos");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GHOSTCOPY = registerMob("ghostcopy");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LEER = registerMob("leer");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DOUBLERANG = registerMob("doublerang");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> LONGFIN = registerMob("longfin");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> OCTOBRELLA = registerMob("octobrella");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> RAYFISH = registerMob("rayfish");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOWFISH = registerMob("glowfish");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DOUBLERANG = registerSeaMob("doublerang", LostSeaMob.Kind.DOUBLERANG, 1.0F, 2.5F, MobCategory.WATER_AMBIENT);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> LONGFIN = registerSeaMob("longfin", LostSeaMob.Kind.LONGFIN, 1.0F, 1.0F, MobCategory.WATER_AMBIENT);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> OCTOBRELLA = registerSeaMob("octobrella", LostSeaMob.Kind.OCTOBRELLA, 2.5F, 2.5F, MobCategory.MONSTER);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> RAYFISH = registerSeaMob("rayfish", LostSeaMob.Kind.RAYFISH, 1.0F, 1.5F, MobCategory.WATER_AMBIENT);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOWFISH = registerSeaMob("glowfish", LostSeaMob.Kind.GLOWFISH, 1.0F, 1.0F, MobCategory.WATER_AMBIENT);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSQUID = registerMob("deviantsquid");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> UNDERFIN = registerMob("underfin");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> EELSHARK = registerMob("eelshark");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> CRABULON = registerMob("crabulon");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> RIBSHARK = registerMob("ribshark");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> UNDERFIN = registerSeaMob("underfin", LostSeaMob.Kind.UNDERFIN, 1.0F, 1.0F, MobCategory.WATER_AMBIENT);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> EELSHARK = registerSeaMob("eelshark", LostSeaMob.Kind.EELSHARK, 3.0F, 3.0F, MobCategory.MONSTER);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> CRABULON = registerSeaMob("crabulon", LostSeaMob.Kind.CRABULON, 7.0F, 7.0F, MobCategory.MONSTER);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> RIBSHARK = registerSeaMob("ribshark", LostSeaMob.Kind.RIBSHARK, 1.5F, 1.5F, MobCategory.MONSTER);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SCREAMER = registerMob("screamer");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> NEBULA_GRUNT = registerMob("nebula_grunt");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> NEBULA_WIZARD = registerMob("nebula_wizard");
@@ -322,8 +333,8 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> MULTIVERSEGHOST = registerMob("multiverseghost");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> RISINGPHANTOM = registerMob("risingphantom");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TENTACLELANTERN = registerMob("tentaclelantern");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> LEVIATHAN = registerMob("leviathan");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> SEA_SERPENT = registerMob("sea_serpent");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> LEVIATHAN = registerSeaMob("leviathan", LostSeaMob.Kind.LEVIATHAN, 3.0F, 3.0F, MobCategory.MONSTER);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> SEA_SERPENT = registerSeaMob("sea_serpent", LostSeaMob.Kind.SEA_SERPENT, 3.0F, 3.0F, MobCategory.MONSTER);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXY_DRAGON = registerGalaxyMob("galaxy_dragon", LostGalaxyMob.Kind.DRAGON, 2.0F, 1.53F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> X_SCREACHER = registerMob("x_screacher");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LOST_BLADE = registerMob("lost_blade");
