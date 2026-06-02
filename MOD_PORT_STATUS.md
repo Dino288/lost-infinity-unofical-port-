@@ -146,6 +146,10 @@ What was done:
   - copied recovered original Forge Mines, Starforge, and Twisted Tunnels NBT templates into modern structure data resources
   - added legacy CSV mappings for Nonexistence areas 0, 1, and 2
   - restored original extra-piece placement for ore pillars, the two-layer Twisted Tunnels entry, and Sunder Hive upper/lower structures
+- Ported the next original Nonexistence cavern/outpost slice:
+  - copied recovered Twisted Tunnels, Overgrown, Crystal Crevice, Luminescent Cavern, Manufacturing Outpost, and Fungal Cavern NBT templates into modern structure data resources
+  - added legacy CSV mappings for Nonexistence areas 4, 5, 6, 7, 12, and 13
+  - restored original paired Luminescent Cavern above/below tunnel placement
 - Added first-pass Lost Infinity ore worldgen:
   - 28 legacy Nonexistence resource ores generate in the `nonexistence` biome from Y 80 to 146
   - `darksteel_ore`, `multiversite_overworld`, `lucient_ore`, and `atomite_ore` generate in `infinitemurk`

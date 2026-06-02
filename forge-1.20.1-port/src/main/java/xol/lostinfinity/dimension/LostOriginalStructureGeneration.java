@@ -201,6 +201,12 @@ public final class LostOriginalStructureGeneration {
             case 1 -> mineShaftPoisStructure(pieceType);
             case 2 -> starforgeMinesStructure(pieceType, random);
             case 3 -> galaxyDungeonStructure(pieceType);
+            case 4 -> twistedTunnelsStructure(pieceType, random);
+            case 5 -> overgrownPassagesStructure(pieceType, random);
+            case 6 -> crystalCreviceStructure(pieceType, random);
+            case 7 -> luminescentCavernStructure(pieceType, random);
+            case 12 -> manufacturingOutpostStructure(pieceType);
+            case 13 -> fungalCavernStructure(pieceType, random);
             default -> "";
         };
     }
@@ -277,6 +283,129 @@ public final class LostOriginalStructureGeneration {
         return folder + "/" + prefix + (random.nextInt(count) + 1);
     }
 
+    private static String twistedTunnelsStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "twistx" -> randomPiece("twistedtunnels", "twistedtunnel_xshaft", 4, random);
+            case "twistz" -> randomPiece("twistedtunnels", "twistedtunnel_zshaft", 4, random);
+            case "twistturn1" -> randomPiece("twistedtunnels", "twistedtunnel_turn_1_", 2, random);
+            case "twistturn2" -> randomPiece("twistedtunnels", "twistedtunnel_turn_2_", 2, random);
+            case "twisttxin" -> "twistedtunnels/twistedtunnel_tsect_xin";
+            case "twisttxde" -> "twistedtunnels/twistedtunnel_tsect_xde";
+            case "twisttzin" -> "twistedtunnels/twistedtunnel_tsect_zin";
+            case "twisttzde" -> "twistedtunnels/twistedtunnel_tsect_zde";
+            case "twistslug" -> randomPiece("twistedtunnels", "twisted_tunnel_rockslug", 4, random);
+            case "compression" -> "twistedtunnels/twistedtunnel_compression";
+            case "twistgen" -> "twistedtunnels/twistedtunnel_powergen";
+            case "twistdk1" -> "twistedtunnels/twistedtunnel_dusker1";
+            case "twistdk2" -> "twistedtunnels/twistedtunnel_dusker2";
+            case "twistdk3" -> "twistedtunnels/twistedtunnel_dusker3";
+            case "twistphot1" -> "twistedtunnels/twistedtunnel_phototenzyte1";
+            case "twistphot2" -> "twistedtunnels/twistedtunnel_phototenzyte2";
+            case "twistphot3" -> "twistedtunnels/twistedtunnel_phototenzyte3";
+            case "twistphot4" -> "twistedtunnels/twistedtunnel_phototenzyte4";
+            case "twistphot5" -> "twistedtunnels/twistedtunnel_phototenzyte5";
+            case "twistphot6" -> "twistedtunnels/twistedtunnel_phototenzyte6";
+            default -> "";
+        };
+    }
+
+    private static String overgrownPassagesStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "ogentry" -> "overgrown/overgrown_entry";
+            case "ogstairs" -> randomPiece("overgrown", "overgrown_stairs", 9, random);
+            case "corcavern" -> randomPiece("overgrown", "corrosive_cavern_", 4, random);
+            case "ogtsect" -> randomPiece("overgrown", "overgrown_tsect_", 3, random);
+            case "ogturn" -> randomPiece("overgrown", "overgrown_turn_", 2, random);
+            case "ogfyre" -> "overgrown/overgrown_giantfyreweed";
+            case "corent" -> "overgrown/corrosive_cavern_entry";
+            case "oggen" -> "overgrown/overgrown_powergen";
+            case "ogaura1" -> "overgrown/overgrown_auradine1";
+            case "ogaura2" -> "overgrown/overgrown_auradine2";
+            case "ogaura3" -> "overgrown/overgrown_auradine3";
+            case "ogaura4" -> "overgrown/overgrown_auradine4";
+            default -> "";
+        };
+    }
+
+    private static String crystalCreviceStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "crysent" -> "crystal/crystal_crevice_entry";
+            case "fabricator" -> "crystal/crystal_crevice_fabricator";
+            case "synch1" -> "crystal/crystal_crevice_synchro1";
+            case "synch2" -> "crystal/crystal_crevice_synchro2";
+            case "cryblight" -> "crystal/crystal_crevice_blight";
+            case "crystal" -> randomPiece("crystal", "crystal_crevice_", 9, random);
+            default -> "";
+        };
+    }
+
+    private static String luminescentCavernStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "lumentry" -> "lumcavern/lumcavern_entry";
+            case "lumessent" -> "lumcavern/lumcavern_ess_entry";
+            case "lumboss" -> "lumcavern/lumcavern_boss_entry";
+            case "augment" -> "lumcavern/lumcavern_boss";
+            case "lumtree" -> "lumcavern/lumcavern_lumtree";
+            case "lumgate" -> "lumcavern/lumcavern_archlum_gate";
+            case "lumprism1" -> "lumcavern/lumcavern_prism1";
+            case "lumprism2" -> "lumcavern/lumcavern_prism2";
+            case "lumprism3" -> "lumcavern/lumcavern_prism3";
+            case "lumportal" -> "lumcavern/lumcavern_portal";
+            case "lumgen" -> "lumcavern/lumcavern_powergen";
+            case "lumshaft" -> randomPiece("lumcavern", "lumcavern_tunnel", 36, random);
+            case "lumturn" -> randomPiece("lumcavern", "lumcavern_turn", 12, random);
+            case "lumtsect" -> randomPiece("lumcavern", "lumcavern_tsect", 16, random);
+            case "lumess" -> randomPiece("lumcavern", "lumcavern_ess_seg", 12, random);
+            case "lumups" -> randomPiece("lumcavern", "lumcavern_up_small", 10, random);
+            case "lumupl" -> randomPiece("lumcavern", "lumcavern_up_big", 10, random);
+            case "lumcabove" -> randomPiece("lumcavern", "lumcavern_tunnel", 36, random) + ",lumabove";
+            case "lumcbelow" -> randomPiece("lumcavern", "lumcavern_tunnel", 36, random) + ",lumbelow";
+            default -> "";
+        };
+    }
+
+    private static String manufacturingOutpostStructure(String pieceType) {
+        return switch (pieceType) {
+            case "manent1" -> "twistedtunnels/twisted_manufact_entry1";
+            case "manent2" -> "twistedtunnels/twisted_manufact_entry2";
+            case "manent3" -> "twistedtunnels/twisted_manufact_entry3";
+            case "manup1" -> "manufacturing/manufacturing_outpost_p1";
+            case "manup2" -> "manufacturing/manufacturing_outpost_p2";
+            case "manup3" -> "manufacturing/manufacturing_outpost_p3";
+            case "manup4" -> "manufacturing/manufacturing_outpost_p4";
+            case "serp1" -> "manufacturing/serpentine_cave1";
+            case "serp2" -> "manufacturing/serpentine_cave2";
+            case "serp3" -> "manufacturing/serpentine_cave3";
+            case "serp4" -> "manufacturing/serpentine_cave4";
+            case "serp5" -> "manufacturing/serpentine_cave5";
+            case "serp6" -> "manufacturing/serpentine_cave6";
+            case "exo1" -> "manufacturing/exothermite_cave1";
+            case "exo2" -> "manufacturing/exothermite_cave2";
+            case "sun1" -> "manufacturing/sunstone_mine1";
+            case "sun2" -> "manufacturing/sunstone_mine2";
+            default -> "";
+        };
+    }
+
+    private static String fungalCavernStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "fungtun" -> randomPiece("fungal", "fungalcavern_tunnel", 6, random);
+            case "fungat" -> randomPiece("fungal", "fungalcavern_tunnel", 72, random);
+            case "funblock" -> "fungal/fungalcavern_blockage";
+            case "fungrot1" -> "fungal/fungalcavern_turn_1";
+            case "fungrot2" -> "fungal/fungalcavern_turn_2";
+            case "fungrot3" -> "fungal/fungalcavern_turn_3";
+            case "fungrot4" -> "fungal/fungalcavern_turn_4";
+            case "fungluc1" -> "fungal/fungalcavern_lucient1";
+            case "fungluc2" -> "fungal/fungalcavern_lucient2";
+            case "fungluc3" -> "fungal/fungalcavern_lucient3";
+            case "fungluc4" -> "fungal/fungalcavern_lucient4";
+            case "fungluc5" -> "fungal/fungalcavern_lucient5";
+            case "fungluc6" -> "fungal/fungalcavern_lucient6";
+            default -> "";
+        };
+    }
+
     private static String galaxyDungeonStructure(String pieceType) {
         return switch (pieceType) {
             case "galaxy1" -> "galaxy/galaxy_dungeon_lower1,galaxy1";
@@ -306,6 +435,8 @@ public final class LostOriginalStructureGeneration {
         return switch (name) {
             case "orepillar" -> new ExtraStructure(randomPiece("forgemines", "forgemines_orepillar", 10, random), 0, 5, 5, rotationFromInt(9, random));
             case "twistedtunnel_entrybot" -> new ExtraStructure("twistedtunnels/twistedtunnel_entrybot", -32, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "lumabove" -> new ExtraStructure(randomPiece("lumcavern", "lumcavern_tunnel", 36, random), 10, 1, 1, rotationFromInt(8, random));
+            case "lumbelow" -> new ExtraStructure(randomPiece("lumcavern", "lumcavern_tunnel", 36, random), -10, 1, 1, rotationFromInt(8, random));
             case "galaxy1" -> new ExtraStructure("galaxy/galaxy_dungeon_upper1", 19, 1, 1, Rotation.NONE);
             case "galaxy2" -> new ExtraStructure("galaxy/galaxy_dungeon_upper2", 19, 1, 1, Rotation.NONE);
             case "galaxy3" -> new ExtraStructure("galaxy/galaxy_dungeon_upper3", 19, 1, 1, Rotation.NONE);
