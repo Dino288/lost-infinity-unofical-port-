@@ -163,6 +163,10 @@ What was done:
   - `darksteel_ore`, `multiversite_overworld`, `lucient_ore`, and `atomite_ore` generate in `infinitemurk`
   - `igneous_pearl_ore` generates in `shadowsea`
   - generated 33 configured ore features and 33 placed ore features
+- Ported the first original Galaxy Dungeon mob behavior slice:
+  - `galaxybeast`, `galaxysorcerer`, `galaxygladiator`, and `galaxyspire` now use original-style sizes, health, movement speed, follow range, and damage profiles
+  - restored the Galaxy Beast's drifting/chasing behavior, Sorcerer's spell projectile cadence, Gladiator's teleport strike, and a conservative Spire stationary turret behavior
+  - preserved compatibility with the existing recovered texture billboard renderer while original 3D models/animations remain pending
 
 Current compile result:
 - Command: `.\gradlew.bat build`

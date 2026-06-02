@@ -4,6 +4,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.entity.LostGalaxyMob;
 import xol.lostinfinity.entity.LostPlaceholderMob;
 
 @Mod.EventBusSubscriber(modid = LostInfinity.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -43,10 +44,10 @@ public final class ModEntityAttributes {
         event.put(ModEntities.ASPECT.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.SLIMESTRIDER.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.VELO.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.GALAXYBEAST.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.GALAXYSORCERER.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.GALAXYGLADIATOR.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.GALAXYSPIRE.get(), LostPlaceholderMob.createAttributes().build());
+        event.put(ModEntities.GALAXYBEAST.get(), LostGalaxyMob.beastAttributes().build());
+        event.put(ModEntities.GALAXYSORCERER.get(), LostGalaxyMob.sorcererAttributes().build());
+        event.put(ModEntities.GALAXYGLADIATOR.get(), LostGalaxyMob.gladiatorAttributes().build());
+        event.put(ModEntities.GALAXYSPIRE.get(), LostGalaxyMob.spireAttributes().build());
         event.put(ModEntities.DEVIANTAMALGAM.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.STARFIEND.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.BLOODHUNTER.get(), LostPlaceholderMob.createAttributes().build());

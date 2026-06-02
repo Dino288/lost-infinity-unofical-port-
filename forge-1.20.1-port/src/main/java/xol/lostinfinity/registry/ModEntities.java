@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.entity.LostGalaxyMob;
 import xol.lostinfinity.entity.LostPlaceholderMob;
 import xol.lostinfinity.entity.LostPlaceholderProjectile;
 
@@ -22,6 +23,16 @@ public final class ModEntities {
         RegistryObject<EntityType<LostPlaceholderMob>> entity = ENTITY_TYPES.register(name, () -> EntityType.Builder
                 .of(LostPlaceholderMob::new, MobCategory.CREATURE)
                 .sized(0.6F, 1.95F)
+                .clientTrackingRange(8)
+                .build(LostInfinity.MODID + ":" + name));
+        ALL_ENTITIES.add(entity);
+        return entity;
+    }
+
+    private static RegistryObject<EntityType<LostPlaceholderMob>> registerGalaxyMob(String name, LostGalaxyMob.Kind kind, float width, float height) {
+        RegistryObject<EntityType<LostPlaceholderMob>> entity = ENTITY_TYPES.register(name, () -> EntityType.Builder
+                .<LostPlaceholderMob>of((type, level) -> new LostGalaxyMob(type, level, kind), MobCategory.MONSTER)
+                .sized(width, height)
                 .clientTrackingRange(8)
                 .build(LostInfinity.MODID + ":" + name));
         ALL_ENTITIES.add(entity);
@@ -69,10 +80,10 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ASPECT = registerMob("aspect");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SLIMESTRIDER = registerMob("slimestrider");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> VELO = registerMob("velo");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYBEAST = registerMob("galaxybeast");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYSORCERER = registerMob("galaxysorcerer");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYGLADIATOR = registerMob("galaxygladiator");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYSPIRE = registerMob("galaxyspire");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYBEAST = registerGalaxyMob("galaxybeast", LostGalaxyMob.Kind.BEAST, 3.5F, 3.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYSORCERER = registerGalaxyMob("galaxysorcerer", LostGalaxyMob.Kind.SORCERER, 2.0F, 4.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYGLADIATOR = registerGalaxyMob("galaxygladiator", LostGalaxyMob.Kind.GLADIATOR, 2.0F, 4.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYSPIRE = registerGalaxyMob("galaxyspire", LostGalaxyMob.Kind.SPIRE, 3.5F, 6.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTAMALGAM = registerMob("deviantamalgam");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> STARFIEND = registerMob("starfiend");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> BLOODHUNTER = registerMob("bloodhunter");
