@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.entity.LostDeviantMob;
 import xol.lostinfinity.entity.LostGalaxyMob;
 import xol.lostinfinity.entity.LostPlaceholderMob;
 import xol.lostinfinity.entity.LostPlaceholderProjectile;
@@ -50,6 +51,16 @@ public final class ModEntities {
         return entity;
     }
 
+    private static RegistryObject<EntityType<LostPlaceholderMob>> registerDeviantMob(String name, LostDeviantMob.Kind kind, float width, float height) {
+        RegistryObject<EntityType<LostPlaceholderMob>> entity = ENTITY_TYPES.register(name, () -> EntityType.Builder
+                .<LostPlaceholderMob>of((type, level) -> new LostDeviantMob(type, level, kind, name), MobCategory.MONSTER)
+                .sized(width, height)
+                .clientTrackingRange(12)
+                .build(LostInfinity.MODID + ":" + name));
+        ALL_ENTITIES.add(entity);
+        return entity;
+    }
+
     private static RegistryObject<EntityType<LostPlaceholderProjectile>> registerProjectile(String name) {
         RegistryObject<EntityType<LostPlaceholderProjectile>> entity = ENTITY_TYPES.register(name, () -> EntityType.Builder
                 .of(LostPlaceholderProjectile::new, MobCategory.MISC)
@@ -62,32 +73,32 @@ public final class ModEntities {
     }
 
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DIMENSIONALMERCHANT = registerMob("dimensionalmerchant");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTBEAR = registerMob("deviantbear");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTBEAR = registerDeviantMob("deviantbear", LostDeviantMob.Kind.GOLEM, 2.5F, 4.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TREADMILLOBSTACLE = registerMob("treadmillobstacle");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TREADMILLOBSTACLEJUMPABLE = registerMob("treadmillobstaclejumpable");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTGHAST = registerMob("deviantghast");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCOW = registerMob("deviantcow");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSHEEP = registerMob("deviantsheep");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTHORSE = registerMob("devianthorse");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTPIG = registerMob("deviantpig");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTEVOKER = registerMob("deviantevoker");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTEVOKERVEX = registerMob("deviantevokervex");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTENDERMAN = registerMob("deviantenderman");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCHICKEN = registerMob("deviantchicken");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSHULKER = registerMob("deviantshulker");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSKYWORM = registerMob("deviantskyworm");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTGHAST = registerDeviantMob("deviantghast", LostDeviantMob.Kind.FLYING, 4.0F, 4.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCOW = registerDeviantMob("deviantcow", LostDeviantMob.Kind.DEVIANT, 2.3F, 2.3F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSHEEP = registerDeviantMob("deviantsheep", LostDeviantMob.Kind.DEVIANT, 1.8F, 2.3F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTHORSE = registerDeviantMob("devianthorse", LostDeviantMob.Kind.DEVIANT, 2.5F, 3.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTPIG = registerDeviantMob("deviantpig", LostDeviantMob.Kind.DEVIANT, 1.6F, 1.6F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTEVOKER = registerDeviantMob("deviantevoker", LostDeviantMob.Kind.CASTER, 1.6F, 3.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTEVOKERVEX = registerDeviantMob("deviantevokervex", LostDeviantMob.Kind.FLYING, 1.2F, 1.2F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTENDERMAN = registerDeviantMob("deviantenderman", LostDeviantMob.Kind.ENDERMAN, 1.5F, 4.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCHICKEN = registerDeviantMob("deviantchicken", LostDeviantMob.Kind.DEVIANT, 1.6F, 2.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSHULKER = registerDeviantMob("deviantshulker", LostDeviantMob.Kind.SHULKER, 2.0F, 2.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSKYWORM = registerDeviantMob("deviantskyworm", LostDeviantMob.Kind.FLYING, 2.5F, 1.2F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ELARA = registerMob("elara");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> INFINITYSTONE = registerMob("infinitystone");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCREEPER = registerMob("deviantcreeper");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSKELETON = registerMob("deviantskeleton");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCREEPER = registerDeviantMob("deviantcreeper", LostDeviantMob.Kind.CREEPER, 2.0F, 3.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSKELETON = registerDeviantMob("deviantskeleton", LostDeviantMob.Kind.DEVIANT, 1.6F, 3.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> UROGO = registerMob("urogo");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DROID = registerMob("droid");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DROIDBOSS = registerMob("droidboss");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> LOSTDEVIANT = registerMob("lostdeviant");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> LOSTDEVIANT = registerDeviantMob("lostdeviant", LostDeviantMob.Kind.DEVIANT, 1.0F, 2.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ARENAEVENT = registerMob("arenaevent");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LABWARRIOR = registerMob("labwarrior");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LABWIZARD = registerMob("labwizard");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSPIDER = registerMob("deviantspider");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSPIDER = registerDeviantMob("deviantspider", LostDeviantMob.Kind.SPIDER, 3.0F, 1.6F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ASPECT = registerMob("aspect");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SLIMESTRIDER = registerMob("slimestrider");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> VELO = registerMob("velo");
@@ -95,23 +106,23 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYSORCERER = registerGalaxyMob("galaxysorcerer", LostGalaxyMob.Kind.SORCERER, 2.0F, 4.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYGLADIATOR = registerGalaxyMob("galaxygladiator", LostGalaxyMob.Kind.GLADIATOR, 2.0F, 4.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYSPIRE = registerGalaxyMob("galaxyspire", LostGalaxyMob.Kind.SPIRE, 3.5F, 6.0F);
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTAMALGAM = registerMob("deviantamalgam");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTAMALGAM = registerDeviantMob("deviantamalgam", LostDeviantMob.Kind.GOLEM, 3.0F, 5.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> STARFIEND = registerMob("starfiend");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> BLOODHUNTER = registerMob("bloodhunter");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> FUNGFLY = registerMob("fungfly");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> RIKARUS = registerMob("rikarus");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> RESTORATIONCRYSTAL = registerMob("restorationcrystal");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTWITCH = registerMob("deviantwitch");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTWITCH = registerDeviantMob("deviantwitch", LostDeviantMob.Kind.CASTER, 1.6F, 3.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> MIRRORZOMBIE = registerMob("mirrorzombie");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSLIMESTRIDER = registerMob("deviantslimestrider");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSLIMESTRIDER = registerDeviantMob("deviantslimestrider", LostDeviantMob.Kind.SLIME, 2.0F, 2.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CHEMIST = registerMob("chemist");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SANDATTACK = registerMob("sandattack");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTBLAZE = registerMob("deviantblaze");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANBLAZE = registerMob("titanblaze");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSHULKER = registerMob("titanshulker");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSPIDER = registerMob("titanspider");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSKELETON = registerMob("titanskeleton");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TRIALOBSERVER = registerMob("trialobserver");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTBLAZE = registerDeviantMob("deviantblaze", LostDeviantMob.Kind.BLAZE, 3.5F, 6.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANBLAZE = registerDeviantMob("titanblaze", LostDeviantMob.Kind.TITAN, 3.0F, 7.5F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSHULKER = registerDeviantMob("titanshulker", LostDeviantMob.Kind.TITAN, 5.0F, 5.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSPIDER = registerDeviantMob("titanspider", LostDeviantMob.Kind.TITAN, 7.0F, 4.5F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSKELETON = registerDeviantMob("titanskeleton", LostDeviantMob.Kind.TITAN, 4.0F, 8.5F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TRIALOBSERVER = registerDeviantMob("trialobserver", LostDeviantMob.Kind.TRIAL_OBSERVER, 5.0F, 4.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> REFLECTAL = registerMob("reflectal");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LUMINOUSGUARDIAN = registerMob("luminousguardian");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> HANGER = registerMob("hanger");
@@ -126,7 +137,7 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SCREACHER = registerMob("screacher");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> EYESLUG = registerMob("eyeslug");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> FLUTTERFYRE = registerMob("flutterfyre");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSNOWMAN = registerMob("deviantsnowman");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSNOWMAN = registerDeviantMob("deviantsnowman", LostDeviantMob.Kind.CASTER, 2.0F, 3.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> NUXURO = registerMob("nuxuro");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CLYSTER = registerMob("clyster");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CRAWKER = registerMob("crawker");
@@ -140,9 +151,9 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> PHASER = registerMob("phaser");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SHIMMER = registerMob("shimmer");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SPYKER = registerMob("spyker");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTMOOSHROOM = registerMob("deviantmooshroom");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTZOMBIE = registerMob("deviantzombie");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSLIME = registerMob("deviantslime");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTMOOSHROOM = registerDeviantMob("deviantmooshroom", LostDeviantMob.Kind.DEVIANT, 2.3F, 2.3F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTZOMBIE = registerDeviantMob("deviantzombie", LostDeviantMob.Kind.DEVIANT, 2.0F, 3.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSLIME = registerDeviantMob("deviantslime", LostDeviantMob.Kind.SLIME, 2.0F, 2.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ARASH = registerMob("arash");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ALESTRIA = registerMob("alestria");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ATLASSPIRE = registerMob("atlasspire");
@@ -150,26 +161,26 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> BARUL = registerMob("barul");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SENTRYCRYSTAL = registerMob("sentrycrystal");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ATLASCRYSTAL = registerMob("atlascrystal");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCRYSTAL = registerMob("deviantcrystal");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTLLAMA = registerMob("deviantllama");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTMAGMACUBE = registerMob("deviantmagmacube");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTVEX = registerMob("deviantvex");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSTRAY = registerMob("deviantstray");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTPIGLIN = registerMob("deviantpiglin");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANCREEPER = registerMob("titancreeper");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANENDERMAN = registerMob("titanenderman");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANLLAMA = registerMob("titanllama");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANMAGMACUBE = registerMob("titanmagmacube");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANPIGLIN = registerMob("titanpiglin");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSTRAY = registerMob("titanstray");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCRYSTAL = registerDeviantMob("deviantcrystal", LostDeviantMob.Kind.SHULKER, 2.0F, 2.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTLLAMA = registerDeviantMob("deviantllama", LostDeviantMob.Kind.DEVIANT, 3.0F, 4.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTMAGMACUBE = registerDeviantMob("deviantmagmacube", LostDeviantMob.Kind.SLIME, 2.0F, 2.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTVEX = registerDeviantMob("deviantvex", LostDeviantMob.Kind.FLYING, 1.2F, 1.2F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSTRAY = registerDeviantMob("deviantstray", LostDeviantMob.Kind.DEVIANT, 1.6F, 3.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTPIGLIN = registerDeviantMob("deviantpiglin", LostDeviantMob.Kind.DEVIANT, 1.8F, 3.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANCREEPER = registerDeviantMob("titancreeper", LostDeviantMob.Kind.TITAN, 3.5F, 7.5F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANENDERMAN = registerDeviantMob("titanenderman", LostDeviantMob.Kind.TITAN, 2.5F, 11.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANLLAMA = registerDeviantMob("titanllama", LostDeviantMob.Kind.TITAN, 3.5F, 8.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANMAGMACUBE = registerDeviantMob("titanmagmacube", LostDeviantMob.Kind.TITAN, 4.0F, 4.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANPIGLIN = registerDeviantMob("titanpiglin", LostDeviantMob.Kind.TITAN, 3.5F, 7.0F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANSTRAY = registerDeviantMob("titanstray", LostDeviantMob.Kind.TITAN, 3.0F, 8.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> COURSERING = registerMob("coursering");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANVEX = registerMob("titanvex");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANZOMBIE = registerMob("titanzombie");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANVEX = registerDeviantMob("titanvex", LostDeviantMob.Kind.TITAN, 2.0F, 3.8F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANZOMBIE = registerDeviantMob("titanzombie", LostDeviantMob.Kind.TITAN, 4.0F, 9.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOOP = registerMob("gloop");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOOPMOTHER = registerMob("gloopmother");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CYCLOS = registerMob("cyclos");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CLINGER = registerMob("clinger");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTDIMTRADER = registerMob("deviantdimtrader");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTDIMTRADER = registerDeviantMob("deviantdimtrader", LostDeviantMob.Kind.DEVIANT, 1.0F, 2.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> MEMPUZZLEMERCHANT = registerMob("mempuzzlemerchant");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SKYBOOSTER = registerMob("skybooster");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ROCKET_STRAPPED_EXPLOSIVE = registerMob("rocket_strapped_explosive");
@@ -199,12 +210,12 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CONTROLLER_TRAMPOLINE_DODGEBALL = registerMob("controller_trampoline_dodgeball");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> PARTICLETROJAN = registerMob("particletrojan");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> PLASMAEXPLOSION = registerMob("plasmaexplosion");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> AZROSS = registerMob("azross");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> AZROSS = registerDeviantMob("azross", LostDeviantMob.Kind.PRIME, 1.75F, 2.9F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DUSKERQUEEN = registerMob("duskerqueen");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CONTRADER_REDLIGHT = registerMob("contrader_redlight");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> OPERATOR_REDLIGHT = registerMob("operator_redlight");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CONTROLLER_REDLIGHT = registerMob("controller_redlight");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANT_WITHER = registerMob("deviant_wither");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANT_WITHER = registerDeviantMob("deviant_wither", LostDeviantMob.Kind.FLYING, 3.0F, 3.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> WITHER_SKULLLING = registerMob("wither_skullling");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GLANGLER = registerMob("glangler");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOCHIPPER = registerMob("glochipper");
@@ -218,13 +229,13 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GIANTFLAPPER = registerMob("giantflapper");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> IONEXPLOSION = registerMob("ionexplosion");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> NITROEXPLOSION = registerMob("nitroexplosion");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTGOLEM = registerMob("deviantgolem");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTGOLEM = registerDeviantMob("deviantgolem", LostDeviantMob.Kind.GOLEM, 3.0F, 5.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> STICKYBOMB = registerMob("stickybomb");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> VECTOSECT = registerMob("vectosect");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> STICKLER = registerMob("stickler");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> UNSTABLEMERCHANT = registerMob("unstablemerchant");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> FERALMERCHANT = registerMob("feralmerchant");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCAVESPIDER = registerMob("deviantcavespider");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTCAVESPIDER = registerDeviantMob("deviantcavespider", LostDeviantMob.Kind.SPIDER, 2.0F, 1.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TORNINDIVIDUAL = registerMob("tornindividual");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> RAVAGER = registerMob("ravager");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> VYCELLIA = registerMob("vycellia");
@@ -235,7 +246,7 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SKYCRAB = registerMob("skycrab");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOMITE = registerMob("glomite");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TNTZOMBIE = registerMob("tntzombie");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTBAT = registerMob("deviantbat");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTBAT = registerDeviantMob("deviantbat", LostDeviantMob.Kind.FLYING, 1.6F, 1.8F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> OPERATOR_BOMBERS = registerMob("operator_bombers");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CONTROLLER_BOMBERS = registerMob("controller_bombers");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CONTRADER_BOMBERS = registerMob("contrader_bombers");
@@ -268,7 +279,7 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> THUNDERBOMB = registerMob("thunderbomb");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> STORMBOMB = registerMob("stormbomb");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> PIPEGAMEMERCHANT = registerMob("pipegamemerchant");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> ZENON = registerMob("zenon");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> ZENON = registerDeviantMob("zenon", LostDeviantMob.Kind.PRIME, 1.75F, 3.2F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CRUSHER = registerMob("crusher");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DRIPPLER = registerMob("drippler");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GORGER = registerMob("gorger");
@@ -284,20 +295,20 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DOOMDOG = registerMob("doomdog");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> BLISTERWEED = registerMob("blisterweed");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GRUBBER = registerMob("grubber");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANOPOD = registerMob("titanopod");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> TITANOPOD = registerDeviantMob("titanopod", LostDeviantMob.Kind.TITAN, 4.0F, 4.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SNAPPER = registerMob("snapper");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> FLASHFLY = registerMob("flashfly");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTWITHERSKELETON = registerMob("deviantwitherskeleton");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTWITHERSKELETON = registerDeviantMob("deviantwitherskeleton", LostDeviantMob.Kind.DEVIANT, 1.8F, 3.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TERRORFLY = registerMob("terrorfly");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TENTACLON = registerMob("tentaclon");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GALACTICTERROR = registerMob("galacticterror");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTGUARDIAN = registerMob("deviantguardian");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTGUARDIAN = registerDeviantMob("deviantguardian", LostDeviantMob.Kind.CASTER, 2.0F, 2.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> FORBIDDENBRAND = registerMob("forbiddenbrand");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> PICKLEMAN = registerMob("pickleman");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> MORTARCANNON = registerMob("mortarcannon");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CLUSTERCANNON = registerMob("clustercannon");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTOCELOTE = registerMob("deviantocelote");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> LIVORAX = registerMob("livorax");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTOCELOTE = registerDeviantMob("deviantocelote", LostDeviantMob.Kind.DEVIANT, 1.5F, 1.5F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> LIVORAX = registerDeviantMob("livorax", LostDeviantMob.Kind.PRIME, 2.5F, 2.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LURCHER = registerMob("lurcher");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> NAT = registerMob("nat");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SENTRY = registerMob("sentry");
@@ -312,7 +323,7 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DOOMSDAY = registerMob("doomsday");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SKYRE = registerMob("skyre");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ROCKWORM = registerMob("rockworm");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> KALIKOS = registerMob("kalikos");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> KALIKOS = registerDeviantMob("kalikos", LostDeviantMob.Kind.PRIME, 2.0F, 4.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GHOSTCOPY = registerMob("ghostcopy");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LEER = registerMob("leer");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> DOUBLERANG = registerSeaMob("doublerang", LostSeaMob.Kind.DOUBLERANG, 1.0F, 2.5F, MobCategory.WATER_AMBIENT);
@@ -320,7 +331,7 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> OCTOBRELLA = registerSeaMob("octobrella", LostSeaMob.Kind.OCTOBRELLA, 2.5F, 2.5F, MobCategory.MONSTER);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> RAYFISH = registerSeaMob("rayfish", LostSeaMob.Kind.RAYFISH, 1.0F, 1.5F, MobCategory.WATER_AMBIENT);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOWFISH = registerSeaMob("glowfish", LostSeaMob.Kind.GLOWFISH, 1.0F, 1.0F, MobCategory.WATER_AMBIENT);
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSQUID = registerMob("deviantsquid");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANTSQUID = registerDeviantMob("deviantsquid", LostDeviantMob.Kind.CASTER, 2.0F, 1.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> UNDERFIN = registerSeaMob("underfin", LostSeaMob.Kind.UNDERFIN, 1.0F, 1.0F, MobCategory.WATER_AMBIENT);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> EELSHARK = registerSeaMob("eelshark", LostSeaMob.Kind.EELSHARK, 3.0F, 3.0F, MobCategory.MONSTER);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CRABULON = registerSeaMob("crabulon", LostSeaMob.Kind.CRABULON, 7.0F, 7.0F, MobCategory.MONSTER);
@@ -345,8 +356,8 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> AURA_OF_ALLEGIANCE = registerMob("aura_of_allegiance");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SUPPLY_TRADER = registerMob("supply_trader");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> JET_MOUNT = registerMob("jet_mount");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANT_WOLF = registerMob("deviant_wolf");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANT_HUSK = registerMob("deviant_husk");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANT_WOLF = registerDeviantMob("deviant_wolf", LostDeviantMob.Kind.DEVIANT, 1.5F, 1.9F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> DEVIANT_HUSK = registerDeviantMob("deviant_husk", LostDeviantMob.Kind.DEVIANT, 2.0F, 3.0F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> BOMB_DRONE = registerMob("bomb_drone");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> PLAYER_LIMB = registerMob("player_limb");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> CTHULHU = registerMob("cthulhu");

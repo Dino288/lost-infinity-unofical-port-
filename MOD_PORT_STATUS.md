@@ -208,6 +208,12 @@ What was done:
   - added matching `/lostinfinity clearrifts`, `/lostinfinity clearfractures`, `/lostinfinity setdeviant`, and `/lostinfinity chargeep` subcommands
   - `clearrifts` removes recovered rift-like entity IDs in range, `clearfractures` removes `cosmic_fracture` blocks in range, `setdeviant` preserves the old Branch of Life NBT selection key, and `chargeep` fills Essence Possessor NBT essence to 10
   - the old supporting systems for stored deviants, rifts, fractures, and Essence Possessor combat behavior still need deeper original-specific ports
+- Ported the first Deviant/Prime/Titan mob behavior slice:
+  - added `LostDeviantMob` as a shared modern 1.20.1 AI base for recovered deviant, prime, and titan families
+  - routed 51 obvious recovered deviant/prime/titan entity IDs away from the generic placeholder mob and into family-specific behavior
+  - restored original-size-inspired dimensions and stronger attribute profiles for Deviants, flying Deviants, Primes, Titans, and Trial Observer
+  - added conservative recovered-family behavior for flying chase/ranged attacks, creeper detonations, enderman teleports, shulker/turret fire, caster debuffs, spider leaps/poison, slime hops, blaze fire attacks, golem/titan stomps, and prime boss attacks
+  - original per-mob projectile classes, full boss phases, 3D models, animations, and exact legacy AI edge cases still need deeper reconstruction
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -239,14 +245,17 @@ Current compile result:
   - Result: build succeeded with the recovered command aliases registered.
   - Command: `.\gradlew.bat runServer --args nogui`
   - Result: server reached `Done`, confirming command registration loads.
+- Deviant/Prime/Titan AI compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with the new shared deviant AI base and updated entity attributes.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
   - After the first mechanical migration pass, the compiler reported `72,259` errors.
 
 Current main blockers:
-- The registered entities are placeholder 1.20.1 entities, not the original AI, attacks, movement, bosses, animations, or projectile behavior.
-- Placeholder mobs now have basic hostile mob AI, but this is not the original per-mob Lost Infinity behavior yet.
+- Galaxy, Shadow Sea, and the first Deviant/Prime/Titan families now have behavior slices, but many other registered mobs still use basic placeholder AI instead of original attacks, movement, bosses, animations, or projectile behavior.
+- The new Deviant/Prime/Titan AI is a conservative recovered-family port; exact per-mob projectile classes, boss phases, summon logic, and special legacy edge cases still need manual reconstruction.
 - Many items now have broad vanilla-like item classes plus a first-pass special utility behavior layer, but exact original right-click powers, cooldowns, projectiles, energy/ammo systems, status effects, and custom equipment effects still need manual per-item ports.
 - Ranged utility items now have generic damaging projectile behavior, but the original per-item effects, damage types, ammo/energy systems, particles, and sounds are not fully reconstructed yet.
 - Placeholder mob textures now use recovered mob PNGs where possible, but original 3D models/animations/render layers are not restored yet.
