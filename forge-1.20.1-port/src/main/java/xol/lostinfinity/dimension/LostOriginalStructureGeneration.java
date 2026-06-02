@@ -5,11 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.chunk.ChunkStatus;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
@@ -18,6 +21,7 @@ import net.minecraftforge.event.level.ChunkEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.registry.ModBlocks;
 
 @Mod.EventBusSubscriber(modid = LostInfinity.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class LostOriginalStructureGeneration {
@@ -48,6 +52,294 @@ public final class LostOriginalStructureGeneration {
             generatePuzzleMasterOrigin(level, chunkX, chunkZ);
         } else if ("nonexistence".equals(dimension)) {
             generateNonexistenceGalaxy(level, chunkX, chunkZ);
+        } else if ("shadowsea".equals(dimension)) {
+            generateShadowSeaDecor(level, chunkX, chunkZ);
+        }
+    }
+
+    private static void generateShadowSeaDecor(ServerLevel level, int chunkX, int chunkZ) {
+        Random random = seededRandom(level, chunkX, chunkZ);
+        int baseX = chunkX * 16;
+        int baseZ = chunkZ * 16;
+        skinShadowSeaTerrain(level, baseX, baseZ);
+        int plantRuns = 10 + random.nextInt(15);
+        for (int i = 0; i < plantRuns; i++) {
+            int x = baseX + 8 + random.nextInt(8);
+            int z = baseZ + 8 + random.nextInt(8);
+            BlockPos pos = seaFloorTop(level, x, z);
+            if (pos == null) {
+                continue;
+            }
+            int weightedPick = random.nextInt(50);
+            if (weightedPick < 5) {
+                generateKelp(level, random, pos);
+            } else if (weightedPick < 10) {
+                generateWiggleWeed(level, random, pos);
+            } else if (weightedPick < 25) {
+                level.setBlock(pos, ModBlocks.SEABUSH.get().defaultBlockState(), 2);
+            } else {
+                level.setBlock(pos, ModBlocks.SEAROCK.get().defaultBlockState(), 2);
+            }
+        }
+
+        int coralRuns = 1 + random.nextInt(4);
+        for (int i = 0; i < coralRuns; i++) {
+            int x = baseX + 8 + random.nextInt(8);
+            int z = baseZ + 8 + random.nextInt(8);
+            BlockPos pos = seaFloorTop(level, x, z);
+            if (pos != null) {
+                generateSimpleCoral(level, random, pos);
+            }
+        }
+
+        if (random.nextInt(25) == 5) {
+            BlockPos pos = seaFloorTop(level, baseX + 8 + random.nextInt(8), baseZ + 8 + random.nextInt(8));
+            if (pos != null) {
+                generateClaySpire(level, random, pos);
+            }
+        }
+
+        if (random.nextInt(280) == 45) {
+            BlockPos pos = seaFloorTop(level, baseX + 8 + random.nextInt(8), baseZ + 8 + random.nextInt(8));
+            if (pos != null) {
+                placeTemplate(level, "sea/pearl_house", pos, randomRotation(random), random);
+            }
+        }
+    }
+
+    private static void skinShadowSeaTerrain(ServerLevel level, int baseX, int baseZ) {
+        for (int x = baseX; x < baseX + 16; x++) {
+            for (int z = baseZ; z < baseZ + 16; z++) {
+                int surfaceDepth = -1;
+                for (int y = Math.min(level.getMaxBuildHeight() - 1, 190); y > level.getMinBuildHeight(); y--) {
+                    BlockPos pos = new BlockPos(x, y, z);
+                    BlockState state = level.getBlockState(pos);
+                    if (state.isAir()) {
+                        surfaceDepth = -1;
+                        continue;
+                    }
+                    if (!isMinecraftTerrain(state)) {
+                        continue;
+                    }
+                    surfaceDepth++;
+                    BlockState replacement = surfaceDepth == 0
+                            ? ModBlocks.SEASAND.get().defaultBlockState()
+                            : surfaceDepth < 4
+                                    ? ModBlocks.SANDY_SEASTONE.get().defaultBlockState()
+                                    : ModBlocks.SEASTONE.get().defaultBlockState();
+                    level.setBlock(pos, replacement, 2);
+                }
+            }
+        }
+    }
+
+    private static boolean isMinecraftTerrain(BlockState state) {
+        ResourceLocation location = BuiltInRegistries.BLOCK.getKey(state.getBlock());
+        return "minecraft".equals(location.getNamespace()) && !state.isAir();
+    }
+
+    private static BlockPos seaFloorTop(ServerLevel level, int x, int z) {
+        for (int y = Math.min(level.getMaxBuildHeight() - 2, 180); y > level.getMinBuildHeight() + 1; y--) {
+            BlockPos pos = new BlockPos(x, y, z);
+            BlockState below = level.getBlockState(pos.below());
+            if (level.getBlockState(pos).isAir() && isShadowSeaGround(below)) {
+                return pos;
+            }
+        }
+        return null;
+    }
+
+    private static boolean isShadowSeaGround(BlockState state) {
+        Block block = state.getBlock();
+        return block == ModBlocks.SEASAND.get()
+                || block == ModBlocks.SANDY_SEASTONE.get()
+                || block == ModBlocks.SEASTONE.get()
+                || block == ModBlocks.SEA_CLAY.get()
+                || block == ModBlocks.IGNEOUS_SEASTONE.get()
+                || block == ModBlocks.MOLTEN_SEASTONE.get();
+    }
+
+    private static void generateKelp(ServerLevel level, Random random, BlockPos pos) {
+        int height = 15 + random.nextInt(20);
+        for (int i = 0; i <= height; i++) {
+            BlockPos place = pos.above(i);
+            if (!level.getBlockState(place).isAir()) {
+                break;
+            }
+            BlockState state = i < height * 0.75F
+                    ? ModBlocks.KELP.get().defaultBlockState()
+                    : ModBlocks.DENSE_KELP.get().defaultBlockState();
+            level.setBlock(place, state, 2);
+        }
+    }
+
+    private static void generateWiggleWeed(ServerLevel level, Random random, BlockPos pos) {
+        int height = 7 + random.nextInt(12);
+        for (int i = 0; i <= height; i++) {
+            BlockPos place = pos.above(i);
+            if (!level.getBlockState(place).isAir()) {
+                break;
+            }
+            level.setBlock(place, ModBlocks.WIGGLEWEED.get().defaultBlockState(), 2);
+        }
+    }
+
+    private static void generateSimpleCoral(ServerLevel level, Random random, BlockPos pos) {
+        switch (random.nextInt(7)) {
+            case 0 -> generateCoralPole(level, random, pos);
+            case 1 -> generateCoralTube(level, random, pos);
+            case 2 -> generateCoralPlate(level, random, pos);
+            case 3 -> generateCoralBranch(level, random, pos);
+            case 4 -> generateCoralFunnel(level, random, pos);
+            case 5 -> generateCoralBrain(level, random, pos);
+            default -> generateCoralTree(level, random, pos);
+        }
+    }
+
+    private static void generateCoralPole(ServerLevel level, Random random, BlockPos pos) {
+        BlockState stem = randomCoralState(random);
+        BlockState top = ModBlocks.ROUGH_CORAL.get().defaultBlockState();
+        int height = 3 + random.nextInt(13);
+        for (int i = 0; i < height; i++) {
+            placeIfAir(level, pos.above(i), i == height - 1 ? top : stem);
+        }
+    }
+
+    private static void generateCoralTube(ServerLevel level, Random random, BlockPos pos) {
+        BlockState state = randomCoralState(random);
+        int height = 6 + random.nextInt(10);
+        int radius = 1 + random.nextInt(2);
+        for (int y = 0; y < height; y++) {
+            for (int x = -radius; x <= radius; x++) {
+                for (int z = -radius; z <= radius; z++) {
+                    if (x * x + z * z <= radius * radius && (y == height - 1 || x * x + z * z >= radius)) {
+                        placeIfAir(level, pos.offset(x, y, z), state);
+                    }
+                }
+            }
+        }
+    }
+
+    private static void generateCoralPlate(ServerLevel level, Random random, BlockPos pos) {
+        BlockState edge = ModBlocks.SMOOTH_CORAL.get().defaultBlockState();
+        BlockState inner = ModBlocks.LIGHT_SMOOTH_CORAL.get().defaultBlockState();
+        int radius = 3 + random.nextInt(8);
+        for (int x = -radius; x <= radius; x++) {
+            for (int z = -radius; z <= radius; z++) {
+                int dist = x * x + z * z;
+                if (dist <= radius * radius) {
+                    int y = dist > radius * radius / 2 ? 1 : 0;
+                    placeIfAir(level, pos.offset(x, y, z), dist > radius * radius - radius ? edge : inner);
+                }
+            }
+        }
+    }
+
+    private static void generateCoralBranch(ServerLevel level, Random random, BlockPos pos) {
+        BlockState state = ModBlocks.ROUGH_CORAL.get().defaultBlockState();
+        int height = 8 + random.nextInt(18);
+        BlockPos current = pos;
+        for (int i = 0; i < height; i++) {
+            placeIfAir(level, current.above(i), state);
+            if (i > 3 && random.nextInt(3) == 0) {
+                int length = 2 + random.nextInt(5);
+                int dx = random.nextBoolean() ? 1 : -1;
+                int dz = random.nextBoolean() ? 1 : -1;
+                for (int j = 1; j <= length; j++) {
+                    placeIfAir(level, current.offset(dx * j, i + j / 2, dz * j), state);
+                }
+            }
+        }
+    }
+
+    private static void generateCoralFunnel(ServerLevel level, Random random, BlockPos pos) {
+        BlockState state = ModBlocks.ROUGH_CORAL.get().defaultBlockState();
+        int height = 10 + random.nextInt(16);
+        int radius = 0;
+        for (int y = 0; y < height; y++) {
+            if (y > height - 3) {
+                radius += 2;
+            } else if (y % 5 == 4) {
+                radius++;
+            }
+            for (int x = -radius; x <= radius; x++) {
+                for (int z = -radius; z <= radius; z++) {
+                    if (x * x + z * z <= radius * radius) {
+                        placeIfAir(level, pos.offset(x, y, z), state);
+                    }
+                }
+            }
+        }
+    }
+
+    private static void generateCoralBrain(ServerLevel level, Random random, BlockPos pos) {
+        BlockState stateA = ModBlocks.PATTERNED_SMOOTH_CORAL.get().defaultBlockState();
+        BlockState stateB = ModBlocks.SMOOTH_CORAL.get().defaultBlockState();
+        int radius = 4 + random.nextInt(5);
+        for (int x = -radius; x <= radius; x++) {
+            for (int y = -radius / 2; y <= radius / 2; y++) {
+                for (int z = -radius; z <= radius; z++) {
+                    if (x * x + y * y * 2 + z * z <= radius * radius) {
+                        placeIfAir(level, pos.offset(x, y + radius / 2, z), random.nextBoolean() ? stateA : stateB);
+                    }
+                }
+            }
+        }
+    }
+
+    private static void generateCoralTree(ServerLevel level, Random random, BlockPos pos) {
+        BlockState state = randomCoralState(random);
+        int height = 8 + random.nextInt(14);
+        for (int y = 0; y < height; y++) {
+            placeIfAir(level, pos.above(y), state);
+        }
+        for (int i = 0; i < 5 + random.nextInt(8); i++) {
+            int y = height / 2 + random.nextInt(Math.max(1, height / 2));
+            int dx = random.nextBoolean() ? 1 : -1;
+            int dz = random.nextBoolean() ? 1 : -1;
+            int length = 2 + random.nextInt(6);
+            for (int j = 1; j <= length; j++) {
+                placeIfAir(level, pos.offset(dx * j, y + j / 2, dz * j), state);
+            }
+        }
+    }
+
+    private static BlockState randomCoralState(Random random) {
+        return switch (random.nextInt(5)) {
+            case 0 -> ModBlocks.SUPER_ROUGH_CORAL.get().defaultBlockState();
+            case 1 -> ModBlocks.ROUGH_CORAL.get().defaultBlockState();
+            case 2 -> ModBlocks.SMOOTH_CORAL.get().defaultBlockState();
+            case 3 -> ModBlocks.LIGHT_SMOOTH_CORAL.get().defaultBlockState();
+            default -> ModBlocks.PATTERNED_SMOOTH_CORAL.get().defaultBlockState();
+        };
+    }
+
+    private static void generateClaySpire(ServerLevel level, Random random, BlockPos pos) {
+        if (!isShadowSeaGround(level.getBlockState(pos.below()))) {
+            return;
+        }
+        BlockPos current = pos;
+        boolean shiftLast = true;
+        int height = 15 + random.nextInt(34);
+        for (int y = 0; y < height; y++) {
+            for (int x = -1; x <= 1; x++) {
+                for (int z = -1; z <= 1; z++) {
+                    if (y == height - 1 && x == 0 && z == 0) {
+                        continue;
+                    }
+                    placeIfAir(level, current.offset(x, 0, z), random.nextBoolean()
+                            ? ModBlocks.SEASTONE.get().defaultBlockState()
+                            : ModBlocks.SEA_CLAY.get().defaultBlockState());
+                }
+            }
+            current = shiftLast ? current.above() : current.offset(-1 + random.nextInt(3), 1, -1 + random.nextInt(3));
+            shiftLast = !shiftLast;
+        }
+    }
+
+    private static void placeIfAir(ServerLevel level, BlockPos pos, BlockState state) {
+        if (level.getBlockState(pos).isAir()) {
+            level.setBlock(pos, state, 2);
         }
     }
 

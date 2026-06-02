@@ -154,6 +154,10 @@ What was done:
   - copied recovered Archluminescent Cavern and Blighted Luminescence NBT templates into modern structure data resources
   - added legacy CSV mappings for Nonexistence areas 8 and 9
   - restored original paired upper/lower cavern placement for Arch, Blight, above/below tunnels, and Incandescite rooms
+- Ported the first original Shadow Sea decoration slice:
+  - copied recovered `sea/pearl_house.nbt` into modern structure data resources
+  - added seeded Shadow Sea chunk decoration for sea plants, kelp, wiggleweed, coral formations, clay spires, and rare pearl houses
+  - added a Shadow Sea terrain skin pass that converts vanilla terrain in new Shadow Sea chunks into original seasand, sandy seastone, and seastone without replacing Lost Infinity ores/structures
 - Added first-pass Lost Infinity ore worldgen:
   - 28 legacy Nonexistence resource ores generate in the `nonexistence` biome from Y 80 to 146
   - `darksteel_ore`, `multiversite_overworld`, `lucient_ore`, and `atomite_ore` generate in `infinitemurk`
