@@ -67,15 +67,15 @@ public class LostDimensionItem extends Item {
 
     private static void toggleDimension(ServerPlayer player, String targetDimension) {
         if (isInLostDimension(player, targetDimension)) {
-            LostDimensionTeleporter.teleport(player, "overworld", player.getX(), player.getY(), player.getZ(), true);
+            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
         } else {
-            LostDimensionTeleporter.teleport(player, targetDimension, player.getX(), player.getY(), player.getZ(), true);
+            LostDimensionTeleporter.teleport(player, targetDimension, 0.0D, 90.0D, 0.0D, true);
         }
     }
 
     private static void useGalaxyBeacon(ServerPlayer player) {
         if (isInLostDimension(player, "nonexistence")) {
-            LostDimensionTeleporter.teleport(player, "overworld", player.getX(), player.getY(), player.getZ(), true);
+            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
         } else {
             LostDimensionTeleporter.teleport(player, "nonexistence", 24.0D, 110.0D, 17.0D, false);
         }
@@ -83,11 +83,9 @@ public class LostDimensionItem extends Item {
 
     private static void useMagicConch(ServerPlayer player) {
         if (isInLostDimension(player, "shadowsea")) {
-            LostDimensionTeleporter.teleport(player, "overworld", player.getX(), player.getY(), player.getZ(), true);
+            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
         } else {
-            double x = randomCoordinate(player.getRandom());
-            double z = randomCoordinate(player.getRandom());
-            LostDimensionTeleporter.teleport(player, "shadowsea", x, 160.0D, z, false);
+            LostDimensionTeleporter.teleport(player, "shadowsea", 0.0D, 96.0D, 0.0D, true);
         }
     }
 
@@ -100,25 +98,19 @@ public class LostDimensionItem extends Item {
         }
         if (LostInfinity.MODID.equals(player.level().dimension().location().getNamespace())
                 && player.level().dimension().location().getPath().startsWith("cartographerrealm")) {
-            LostDimensionTeleporter.teleport(player, "overworld", player.getX(), player.getY(), player.getZ(), true);
+            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
             return;
         }
 
         int floor = getSolarFloor(stack);
         String dimension = floor == 1 ? "cartographerrealmmid" : floor == 2 ? "cartographerrealmbot" : "cartographerrealmtop";
-        int roomX = player.getRandom().nextInt(1000) - 500;
-        int roomZ = player.getRandom().nextInt(1000) - 500;
-        double y = roomX == roomZ ? 16.0D : 25.0D;
-        LostDimensionTeleporter.teleport(player, dimension, 15.0D + 160.0D * roomX, y, 15.0D + 160.0D * roomZ, false);
+        double y = floor == 2 ? 36.0D : floor == 1 ? 48.0D : 64.0D;
+        LostDimensionTeleporter.teleport(player, dimension, 15.0D, y, 15.0D, false);
     }
 
     private static boolean isInLostDimension(ServerPlayer player, String dimension) {
         return LostInfinity.MODID.equals(player.level().dimension().location().getNamespace())
                 && dimension.equals(player.level().dimension().location().getPath());
-    }
-
-    private static double randomCoordinate(net.minecraft.util.RandomSource random) {
-        return (-0.5D + random.nextDouble()) * 10000.0D;
     }
 
     private static int getSolarFloor(ItemStack stack) {
