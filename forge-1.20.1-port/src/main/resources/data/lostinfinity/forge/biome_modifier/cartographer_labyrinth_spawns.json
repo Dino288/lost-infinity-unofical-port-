@@ -1,0 +1,48 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#lostinfinity:cartographer_realm",
+  "spawners": [
+    {
+      "type": "lostinfinity:labwarrior",
+      "weight": 18,
+      "minCount": 1,
+      "maxCount": 3,
+      "category": "monster"
+    },
+    {
+      "type": "lostinfinity:labwizard",
+      "weight": 14,
+      "minCount": 1,
+      "maxCount": 2,
+      "category": "monster"
+    },
+    {
+      "type": "lostinfinity:gloop",
+      "weight": 12,
+      "minCount": 1,
+      "maxCount": 3,
+      "category": "monster"
+    },
+    {
+      "type": "lostinfinity:clinger",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 2,
+      "category": "monster"
+    },
+    {
+      "type": "lostinfinity:cyclos",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 2,
+      "category": "monster"
+    },
+    {
+      "type": "lostinfinity:sentrycrystal",
+      "weight": 5,
+      "minCount": 1,
+      "maxCount": 1,
+      "category": "monster"
+    }
+  ]
+}
