@@ -1,5 +1,6 @@
 package xol.lostinfinity.client;
 
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -7,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.registry.ModEntities;
+import xol.lostinfinity.registry.ModMenus;
 
 @Mod.EventBusSubscriber(modid = LostInfinity.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public final class ClientModEvents {
@@ -16,6 +18,7 @@ public final class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+        MenuScreens.register(ModMenus.LOST_MACHINE_MENU.get(), LostMachineScreen::new);
         EntityRenderers.register(ModEntities.DIMENSIONALMERCHANT.get(), LostPlaceholderEntityRenderer::new);
         EntityRenderers.register(ModEntities.DEVIANTBEAR.get(), LostPlaceholderEntityRenderer::new);
         EntityRenderers.register(ModEntities.TREADMILLOBSTACLE.get(), LostPlaceholderEntityRenderer::new);

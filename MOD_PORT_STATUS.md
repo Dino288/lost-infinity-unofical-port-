@@ -184,6 +184,11 @@ What was done:
 - Added the first modern custom effect registry slice:
   - registered `lostinfinity:nullified` as a harmful mob effect with a 1.20.1 language key
   - wired Eelshark shocks to apply the restored `Nullified` effect alongside the temporary vanilla weakness/slowness behavior
+- Added the first modern block entity/container/menu port slice:
+  - registered a shared `lostinfinity:lost_machine` block entity type and `lostinfinity:lost_machine` menu type
+  - converted 28 recovered legacy machine/game/controller block IDs into 1.20.1 `EntityBlock` instances with persistent NBT-backed inventory state
+  - added a functional 3x3 machine inventory, shift-click handling, item drops on block break, comparator output, server screen opening, and a basic client menu screen
+  - original per-machine processing rules, energy networks, recipes, puzzle logic, renderer models, and GUI art still need original-specific reconstruction
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -199,6 +204,9 @@ Current compile result:
 - Dimension ore datapack smoke test:
   - Command: `.\gradlew.bat runServer --args nogui`
   - Result: server reached `Done`, confirming the configured/placed ore features load.
+- Machine block entity/menu smoke test:
+  - Command: `.\gradlew.bat runServer --args nogui`
+  - Result: server reached `Done`, confirming the block entity and menu registries load.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -214,6 +222,7 @@ Current main blockers:
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
 - Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.
+- The first shared machine block entity/menu layer exists, but the original machine-specific inventories, recipes, progress behavior, energy/power systems, and GUIs still need per-machine ports.
 - Old Forge lifecycle events (`FMLPreInitializationEvent`, `FMLInitializationEvent`, etc.) need a modern mod constructor and event bus registration.
 - Old registries need `DeferredRegister`/`RegistryObject`.
 - Old networking (`SimpleNetworkWrapper`, `IMessage`, `IMessageHandler`) needs modern `SimpleChannel`.

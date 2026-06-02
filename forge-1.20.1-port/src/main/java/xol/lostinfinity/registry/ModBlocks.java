@@ -16,6 +16,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.block.LostDimensionPortalBlock;
+import xol.lostinfinity.block.LostMachineBlock;
 
 public final class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, LostInfinity.MODID);
@@ -35,6 +36,9 @@ public final class ModBlocks {
         String targetDimension = targetDimensionFor(name);
         if (targetDimension != null) {
             return new LostDimensionPortalBlock(properties.noOcclusion().lightLevel(state -> 11), targetDimension);
+        }
+        if (isMachineBlock(name)) {
+            return new LostMachineBlock(properties, name);
         }
         if (name.contains("slab")) {
             return new SlabBlock(properties);
@@ -98,6 +102,19 @@ public final class ModBlocks {
             return "nonexistence";
         }
         return null;
+    }
+
+    private static boolean isMachineBlock(String name) {
+        return switch (name) {
+            case "alignment_dial_game", "ancient_symbol_interpreter", "chemistry_table", "chroma_game",
+                    "circuit_calibrator", "combustion_engine", "compressiontable", "cthulhu_spawner",
+                    "drill_console", "eternal_beacon", "fusion_table", "gearbox", "grinder",
+                    "killer_vine", "light_emitter", "melodic_sequencer", "navigation_device",
+                    "nebulous_beacon", "nicronium_infuser", "polymerization_device", "power_collider",
+                    "rainfall_generator", "sap_evaporator", "shipment_filler", "shockwave_generator",
+                    "tesla_tower", "void_vacuum", "welding_chamber" -> true;
+            default -> false;
+        };
     }
 
     public static final RegistryObject<Block> ACID_LANTERN = registerBlock("acid_lantern", () -> defaultBlock("acid_lantern"));
