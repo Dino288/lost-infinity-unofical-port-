@@ -29,10 +29,7 @@ public final class LostItemBehavior {
     public static boolean useModeEnergyItem(String itemName, ItemStack stack, Level level, Player player, InteractionHand hand) {
         String name = normalize(itemName);
         if (player.isShiftKeyDown() && modeCount(name) > 1) {
-            int nextMode = (mode(stack) + 1) % modeCount(name);
-            stack.getOrCreateTag().putInt(MODE_TAG, nextMode);
-            player.displayClientMessage(Component.literal("Mode: " + modeName(name, nextMode)), true);
-            level.playSound(null, player.blockPosition(), SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.PLAYERS, 0.5F, 1.2F);
+            cycleModeFromNetwork(name, stack, level, player);
             return true;
         }
 
@@ -58,6 +55,17 @@ public final class LostItemBehavior {
             return true;
         }
         return false;
+    }
+
+    public static void cycleModeFromNetwork(String itemName, ItemStack stack, Level level, Player player) {
+        String name = normalize(itemName);
+        if (modeCount(name) <= 1) {
+            return;
+        }
+        int nextMode = (mode(stack) + 1) % modeCount(name);
+        stack.getOrCreateTag().putInt(MODE_TAG, nextMode);
+        player.displayClientMessage(Component.literal("Mode: " + modeName(name, nextMode)), true);
+        level.playSound(null, player.blockPosition(), SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.PLAYERS, 0.5F, 1.2F);
     }
 
     public static void onWeaponHit(String itemName, ItemStack stack, LivingEntity target, LivingEntity attacker) {

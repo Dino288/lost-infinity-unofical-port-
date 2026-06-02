@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import xol.lostinfinity.network.LostNetwork;
 import xol.lostinfinity.registry.ModBlocks;
 import xol.lostinfinity.registry.ModBlockEntities;
 import xol.lostinfinity.registry.ModCreativeTabs;
@@ -31,6 +32,7 @@ public final class LostInfinity {
         ModMenus.MENUS.register(modEventBus);
         ModParticles.PARTICLE_TYPES.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        LostNetwork.register();
         LOGGER.info("Lost Infinity 1.20.1 port bootstrap registered {} blocks, {} items, and {} entity types.",
                 ModBlocks.ALL_BLOCKS.size(), ModItems.ALL_ITEMS.size(), ModEntities.ALL_ENTITIES.size());
     }

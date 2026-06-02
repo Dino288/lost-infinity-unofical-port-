@@ -92,6 +92,19 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         machine.tickServer(level, pos);
     }
 
+    public void applyNetworkUpdate(int index, int value) {
+        switch (index) {
+            case 0 -> progress = Math.max(0, value);
+            case 1 -> processTime = Math.max(1, value);
+            case 2 -> energy = Math.max(0, Math.min(ENERGY_CAPACITY, value));
+            case 3 -> active = value != 0;
+            case 4 -> puzzleState = Math.floorMod(value, 16);
+            default -> {
+            }
+        }
+        setChanged();
+    }
+
     private void tickServer(Level level, BlockPos pos) {
         active = false;
         if (isGenerator()) {
