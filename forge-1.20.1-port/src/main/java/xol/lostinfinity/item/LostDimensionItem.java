@@ -5,6 +5,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.dimension.LostDimensionTeleporter;
+import xol.lostinfinity.effect.LostFx;
 
 public class LostDimensionItem extends Item {
     private static final String SOLAR_FLOOR_TAG = "lostinfinity_solar_floor";
@@ -71,28 +73,28 @@ public class LostDimensionItem extends Item {
 
     private static void toggleDimension(ServerPlayer player, ItemStack stack, String targetDimension) {
         if (isInLostDimension(player, targetDimension)) {
-            teleportToReturnPosition(player, stack);
+            teleportToReturnPosition(player, stack, "murk");
         } else {
             rememberReturnPosition(player, stack);
-            LostDimensionTeleporter.teleport(player, targetDimension, 0.0D, 90.0D, 0.0D, true);
+            teleport(player, targetDimension, 0.0D, 90.0D, 0.0D, true, "murk");
         }
     }
 
     private static void useGalaxyBeacon(ServerPlayer player, ItemStack stack) {
         if (isInLostDimension(player, "nonexistence")) {
-            teleportToReturnPosition(player, stack);
+            teleportToReturnPosition(player, stack, "portal_beam");
         } else {
             rememberReturnPosition(player, stack);
-            LostDimensionTeleporter.teleport(player, "nonexistence", 24.0D, 110.0D, 17.0D, false);
+            teleport(player, "nonexistence", 24.0D, 110.0D, 17.0D, false, "portal_beam");
         }
     }
 
     private static void useMagicConch(ServerPlayer player, ItemStack stack) {
         if (isInLostDimension(player, "shadowsea")) {
-            teleportToReturnPosition(player, stack);
+            teleportToReturnPosition(player, stack, "murky_mist");
         } else {
             rememberReturnPosition(player, stack);
-            LostDimensionTeleporter.teleport(player, "shadowsea", 0.0D, 96.0D, 0.0D, true);
+            teleport(player, "shadowsea", 0.0D, 96.0D, 0.0D, true, "murky_mist");
         }
     }
 
@@ -105,7 +107,7 @@ public class LostDimensionItem extends Item {
         }
         if (LostInfinity.MODID.equals(player.level().dimension().location().getNamespace())
                 && player.level().dimension().location().getPath().startsWith("cartographerrealm")) {
-            teleportToReturnPosition(player, stack);
+            teleportToReturnPosition(player, stack, "space_magic");
             return;
         }
 
@@ -113,7 +115,7 @@ public class LostDimensionItem extends Item {
         int floor = getSolarFloor(stack);
         String dimension = floor == 1 ? "cartographerrealmmid" : floor == 2 ? "cartographerrealmbot" : "cartographerrealmtop";
         double y = floor == 2 ? 36.0D : floor == 1 ? 48.0D : 64.0D;
-        LostDimensionTeleporter.teleport(player, dimension, 15.0D, y, 15.0D, false);
+        teleport(player, dimension, 15.0D, y, 15.0D, false, "space_magic");
     }
 
     private static boolean isInLostDimension(ServerPlayer player, String dimension) {
@@ -129,15 +131,34 @@ public class LostDimensionItem extends Item {
         tag.putDouble(RETURN_Z_TAG, player.getZ());
     }
 
-    private static void teleportToReturnPosition(ServerPlayer player, ItemStack stack) {
+    private static void teleportToReturnPosition(ServerPlayer player, ItemStack stack, String particle) {
         CompoundTag tag = stack.getOrCreateTag();
         String dimension = tag.getString(RETURN_DIMENSION_TAG);
         if (dimension.isBlank() || !dimension.startsWith("minecraft:")) {
-            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
+            teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true, particle);
             return;
         }
         String target = "minecraft:overworld".equals(dimension) ? "overworld" : dimension;
-        LostDimensionTeleporter.teleport(player, target, tag.getDouble(RETURN_X_TAG), tag.getDouble(RETURN_Y_TAG), tag.getDouble(RETURN_Z_TAG), true);
+        teleport(player, target, tag.getDouble(RETURN_X_TAG), tag.getDouble(RETURN_Y_TAG), tag.getDouble(RETURN_Z_TAG), true, particle);
+    }
+
+    private static void teleport(ServerPlayer player, String dimension, double x, double y, double z, boolean surface, String particle) {
+        LostFx.play(player.level(), player.blockPosition(), "portal_open", SoundSource.PLAYERS, 0.8F, 1.0F);
+        LostFx.burst(player.level(), player.blockPosition(), particle, 24, 0.7D, 0.05D);
+        if (LostDimensionTeleporter.teleport(player, dimension, x, y, z, surface)) {
+            LostFx.play(player.level(), player.blockPosition(), arrivalSound(particle), SoundSource.PLAYERS, 0.75F, 1.05F);
+            LostFx.burst(player.level(), player.blockPosition(), particle, 32, 0.9D, 0.04D);
+        }
+    }
+
+    private static String arrivalSound(String particle) {
+        if ("portal_beam".equals(particle)) {
+            return "nebulous_beacon";
+        }
+        if ("space_magic".equals(particle)) {
+            return "big_warp";
+        }
+        return "portal_open";
     }
 
     private static int getSolarFloor(ItemStack stack) {
