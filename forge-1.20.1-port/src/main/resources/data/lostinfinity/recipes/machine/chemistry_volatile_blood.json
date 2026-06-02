@@ -1,0 +1,18 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "chemistry",
+  "input": {
+    "item": "lostinfinity:volatile_blood"
+  },
+  "catalyst": {
+    "item": "lostinfinity:concentrated_acid"
+  },
+  "fluid": "lostinfinity:concentrated_acid",
+  "consume_catalyst": true,
+  "energy": 55,
+  "time": 140,
+  "output": {
+    "item": "lostinfinity:volatility_solution",
+    "count": 1
+  }
+}

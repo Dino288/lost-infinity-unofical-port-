@@ -1,0 +1,18 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "chemistry",
+  "input": {
+    "item": "lostinfinity:ultralight_dust"
+  },
+  "catalyst": {
+    "item": "lostinfinity:concentrated_acid"
+  },
+  "fluid": "lostinfinity:concentrated_acid",
+  "consume_catalyst": true,
+  "energy": 55,
+  "time": 140,
+  "output": {
+    "item": "lostinfinity:ultraviolet_solution",
+    "count": 1
+  }
+}

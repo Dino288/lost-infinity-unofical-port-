@@ -29,6 +29,8 @@ import xol.lostinfinity.effect.LostFx;
 import xol.lostinfinity.menu.LostMachineMenu;
 import xol.lostinfinity.registry.ModBlockEntities;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.recipe.LostMachineRecipe;
+import xol.lostinfinity.registry.ModRecipeTypes;
 
 public class LostMachineBlockEntity extends BlockEntity implements MenuProvider, Container {
     private static final int INPUT_SLOT = 0;
@@ -123,8 +125,8 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
             pulseMachineEffect(level, pos);
         }
 
-        MachineRecipe recipe = recipeForCurrentInput();
-        if (recipe == null || !canOutput(recipe.output(), recipe.outputCount())) {
+        MachineRecipe recipe = recipeForCurrentInput(level);
+        if (recipe == null || !canOutput(recipe.output())) {
             progress = 0;
             setChanged();
             return;
@@ -213,7 +215,7 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         energy = Math.max(0, energy - recipe.energyCost());
         LostFx.burst(level, worldPosition, machineParticle(), 16, 0.65D, 0.04D);
         LostFx.play(level, worldPosition, machineSound(), SoundSource.BLOCKS, 0.8F, 0.9F + level.random.nextFloat() * 0.25F);
-        ItemStack output = new ItemStack(recipe.output(), recipe.outputCount());
+        ItemStack output = recipe.output().copy();
         ItemStack existing = items.get(OUTPUT_SLOT);
         if (existing.isEmpty()) {
             items.set(OUTPUT_SLOT, output);
@@ -240,10 +242,14 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         return "block_ding";
     }
 
-    private MachineRecipe recipeForCurrentInput() {
+    private MachineRecipe recipeForCurrentInput(Level level) {
         ItemStack input = items.get(INPUT_SLOT);
         if (input.isEmpty()) {
             return null;
+        }
+        MachineRecipe datapackRecipe = datapackRecipe(level);
+        if (datapackRecipe != null) {
+            return datapackRecipe;
         }
         String inputId = itemPath(input);
         Item output = inferOutput(inputId);
@@ -254,7 +260,15 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         int cost = machineId.contains("compression") || machineId.contains("fusion") || machineId.contains("collider") ? 80 : 35;
         int count = machineId.contains("grinder") || machineId.contains("crusher") ? 2 : 1;
         boolean usesCatalyst = machineId.contains("infuser") || machineId.contains("polymer") || machineId.contains("fusion");
-        return new MachineRecipe(output, count, time, cost, usesCatalyst);
+        return new MachineRecipe(new ItemStack(output, count), time, cost, usesCatalyst);
+    }
+
+    private MachineRecipe datapackRecipe(Level level) {
+        return level.getRecipeManager().getAllRecipesFor(ModRecipeTypes.MACHINE).stream()
+                .filter(recipe -> recipe.matchesMachine(machineId) && recipe.matches(this, level))
+                .findFirst()
+                .map(recipe -> new MachineRecipe(recipe.output(), recipe.time(), recipe.energy(), recipe.consumeCatalyst()))
+                .orElse(null);
     }
 
     private Item inferOutput(String inputId) {
@@ -296,9 +310,10 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         return item(inputId + "_processed");
     }
 
-    private boolean canOutput(Item output, int count) {
+    private boolean canOutput(ItemStack output) {
         ItemStack existing = items.get(OUTPUT_SLOT);
-        return existing.isEmpty() || (existing.is(output) && existing.getCount() + count <= existing.getMaxStackSize());
+        return existing.isEmpty() || (ItemStack.isSameItemSameTags(existing, output)
+                && existing.getCount() + output.getCount() <= existing.getMaxStackSize());
     }
 
     private void chargeFromFuel() {
@@ -443,6 +458,6 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         setChanged();
     }
 
-    private record MachineRecipe(Item output, int outputCount, int time, int energyCost, boolean usesCatalyst) {
+    private record MachineRecipe(ItemStack output, int time, int energyCost, boolean usesCatalyst) {
     }
 }

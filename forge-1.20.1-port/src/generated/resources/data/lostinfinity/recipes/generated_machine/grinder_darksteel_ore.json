@@ -1,0 +1,14 @@
+{
+  "type": "lostinfinity:machine",
+  "consume_catalyst": false,
+  "energy": 45,
+  "input": {
+    "item": "lostinfinity:darksteel_ore"
+  },
+  "machine": "grinder",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:darksteel_ingot"
+  },
+  "time": 120
+}

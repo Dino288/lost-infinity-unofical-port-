@@ -1,0 +1,13 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "grinder",
+  "input": {
+    "item": "lostinfinity:sunstone_ore"
+  },
+  "energy": 45,
+  "time": 120,
+  "output": {
+    "item": "lostinfinity:sunstone_dust",
+    "count": 2
+  }
+}

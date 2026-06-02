@@ -305,6 +305,11 @@ Current compile result:
 - Networking compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with a modern Forge `SimpleChannel` and recovered packet slices for item modes, machine updates, client particles, client sounds, animation hints, input, and set-bonus toggles.
+- Recipe/loot/datagen compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with a modern `lostinfinity:machine` recipe serializer/type, datapack-backed machine processing, 29 generated machine recipes, fluid/NBT recipe fields, biome tags, and server datagen providers.
+  - Command: `.\gradlew.bat runData`
+  - Result: datagen completed successfully and emitted the machine recipe/biome tag provider output under `src/generated/resources`.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -320,8 +325,8 @@ Current main blockers:
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
 - Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.
-- The first shared machine block entity/menu layer exists, but the original machine-specific inventories, recipes, progress behavior, energy/power systems, and GUIs still need per-machine ports.
-- The shared machine layer now has inferred processing, energy, puzzle, pulse, and menu-sync behavior, but exact original machine recipe tables, energy networks, GUI art, renderers, and minigame rules still need per-machine reconstruction.
+- The first shared machine block entity/menu layer exists, and it now reads modern datapack `lostinfinity:machine` recipes before falling back to inferred processing. Original machine-specific inventories, complete recipe tables, progress behavior, energy/power systems, and GUIs still need per-machine ports.
+- The shared machine layer now has inferred processing, datapack machine recipes, energy, puzzle, pulse, and menu-sync behavior, but exact original machine recipe tables, energy networks, GUI art, renderers, and minigame rules still need per-machine reconstruction.
 - Old Forge lifecycle events (`FMLPreInitializationEvent`, `FMLInitializationEvent`, etc.) need a modern mod constructor and event bus registration.
 - Old registries need `DeferredRegister`/`RegistryObject`.
 - Old networking (`SimpleNetworkWrapper`, `IMessage`, `IMessageHandler`) needs modern `SimpleChannel`.
@@ -329,7 +334,7 @@ Current main blockers:
 - Old dimensions/worldgen need 1.20.1 data-driven dimension/biome/levelgen rewrites.
 - Decompiled source contains SRG method names like `func_180639_a`, so methods need remapping to modern Mojang names.
 - Some mechanical class renames were applied, such as `TileEntity*` -> `BlockEntity*`, so related references and constructors need deliberate cleanup.
-- First-pass mining/material/tool/armor/entity tags exist, but biome tags, handwritten datagen providers, and deeper loot/recipe generation still need work.
+- First-pass mining/material/tool/armor/entity/biome tags now exist, and handwritten datagen providers can emit the machine recipe and biome tag slice. Deeper loot generation, full custom machine recipe recovery, fluid container behavior, and broader recipe compatibility still need work.
 - The recovered command names are ported, but several systems they operate on are still placeholder-level until the related item/entity/block behavior is fully reconstructed.
 - The original custom potion/effect set is registered and now has a shared recovered interaction layer, but exact per-item application sources, client overlays such as distortion, exact icon sheets, and every edge-case interaction still need targeted ports.
 - The recovered particle/sound assets are present and a first modern trigger layer is wired, but exact legacy particle classes, moving/looping sound packets, every mob ambient/hurt/death mapping, and custom block/entity render beam effects still need targeted ports.

@@ -1,0 +1,13 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "grinder",
+  "input": {
+    "item": "lostinfinity:kylaxium_ore"
+  },
+  "energy": 45,
+  "time": 120,
+  "output": {
+    "item": "lostinfinity:kylaxium_ingot",
+    "count": 1
+  }
+}

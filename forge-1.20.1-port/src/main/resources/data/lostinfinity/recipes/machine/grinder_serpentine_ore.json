@@ -1,0 +1,13 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "grinder",
+  "input": {
+    "item": "lostinfinity:serpentine_ore"
+  },
+  "energy": 45,
+  "time": 120,
+  "output": {
+    "item": "lostinfinity:serpentine_crystal",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "grinder",
+  "input": {
+    "item": "lostinfinity:hextorium_ore"
+  },
+  "energy": 45,
+  "time": 120,
+  "output": {
+    "item": "lostinfinity:hextorium_ingot",
+    "count": 1
+  }
+}
