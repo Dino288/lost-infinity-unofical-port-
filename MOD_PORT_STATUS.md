@@ -296,6 +296,9 @@ Current compile result:
 - Dimension/worldgen exactness compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with Infinite Murk terrain/decor skinning, Nonexistence recovered palette/decor skinning, and portal progression gating.
+- Custom effect compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with the recovered 39-effect registry and a shared original-interaction behavior layer for damage, tick, spread, movement, and stacking effects.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -322,6 +325,7 @@ Current main blockers:
 - Some mechanical class renames were applied, such as `TileEntity*` -> `BlockEntity*`, so related references and constructors need deliberate cleanup.
 - First-pass mining/material/tool/armor/entity tags exist, but biome tags, handwritten datagen providers, and deeper loot/recipe generation still need work.
 - The recovered command names are ported, but several systems they operate on are still placeholder-level until the related item/entity/block behavior is fully reconstructed.
+- The original custom potion/effect set is registered and now has a shared recovered interaction layer, but exact per-item application sources, client overlays such as distortion, exact icon sheets, and every edge-case interaction still need targeted ports.
 
 Recommended next path:
 - Port in vertical slices instead of trying to compile all 2,169 decompiled Java files at once.
