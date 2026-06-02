@@ -9,6 +9,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -16,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.dimension.LostDimensionTeleporter;
+import xol.lostinfinity.effect.LostFx;
 
 public class LostDimensionPortalBlock extends Block {
     private final String targetDimension;
@@ -30,11 +32,25 @@ public class LostDimensionPortalBlock extends Block {
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
             if (!canUsePortal(serverPlayer)) {
                 serverPlayer.displayClientMessage(Component.translatable("message.lostinfinity.portal.locked"), true);
+                LostFx.play(level, pos, "weapon_error", SoundSource.BLOCKS, 0.5F, 0.8F);
+                LostFx.burst(level, pos, "dark_magic", 8, 0.35D, 0.02D);
                 return InteractionResult.SUCCESS;
             }
+            LostFx.play(level, pos, "portal_open", SoundSource.BLOCKS, 0.9F, 1.0F);
+            LostFx.burst(level, pos, portalParticle(), 28, 0.75D, 0.05D);
             LostDimensionTeleporter.teleport(serverPlayer, targetDimension);
         }
         return InteractionResult.sidedSuccess(level.isClientSide());
+    }
+
+    private String portalParticle() {
+        return switch (targetDimension) {
+            case "shadowsea" -> "murky_mist";
+            case "infinitemurk" -> "murk";
+            case "cartographerrealmtop", "cartographerrealmmid", "cartographerrealmbot" -> "space_magic";
+            case "nonexistence", "celestialvoid" -> "portal_beam";
+            default -> "warp";
+        };
     }
 
     private boolean canUsePortal(ServerPlayer player) {

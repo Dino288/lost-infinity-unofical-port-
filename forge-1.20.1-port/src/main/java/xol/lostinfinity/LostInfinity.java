@@ -12,6 +12,7 @@ import xol.lostinfinity.registry.ModEffects;
 import xol.lostinfinity.registry.ModEntities;
 import xol.lostinfinity.registry.ModItems;
 import xol.lostinfinity.registry.ModMenus;
+import xol.lostinfinity.registry.ModParticles;
 import xol.lostinfinity.registry.ModSpawnEggs;
 
 @Mod(LostInfinity.MODID)
@@ -28,6 +29,7 @@ public final class LostInfinity {
         ModSpawnEggs.touch();
         ModItems.ITEMS.register(modEventBus);
         ModMenus.MENUS.register(modEventBus);
+        ModParticles.PARTICLE_TYPES.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         LOGGER.info("Lost Infinity 1.20.1 port bootstrap registered {} blocks, {} items, and {} entity types.",
                 ModBlocks.ALL_BLOCKS.size(), ModItems.ALL_ITEMS.size(), ModEntities.ALL_ENTITIES.size());

@@ -18,12 +18,14 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.NonNullList;
 import net.minecraftforge.registries.ForgeRegistries;
 import xol.lostinfinity.block.LostMachineBlock;
+import xol.lostinfinity.effect.LostFx;
 import xol.lostinfinity.menu.LostMachineMenu;
 import xol.lostinfinity.registry.ModBlockEntities;
 import xol.lostinfinity.LostInfinity;
@@ -123,7 +125,7 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         processTime = recipe.time();
         progress++;
         if (progress >= processTime) {
-            craft(recipe);
+            craft(level, recipe);
             progress = 0;
         }
         setChanged();
@@ -164,17 +166,23 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
             return;
         }
         if (machineId.contains("shockwave")) {
+            LostFx.burst(level, pos, "electric_explosion_blue", 18, 1.0D, 0.05D);
+            LostFx.play(level, pos, "electric_bounce", SoundSource.BLOCKS, 0.8F, 0.8F);
             for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, new net.minecraft.world.phys.AABB(pos).inflate(5.0D))) {
                 entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1));
                 entity.hurt(level.damageSources().magic(), 2.0F);
             }
             energy = Math.max(0, energy - 20);
         } else if (machineId.contains("rainfall")) {
+            LostFx.burst(level, pos, "murky_mist", 14, 1.5D, 0.04D);
+            LostFx.play(level, pos, "rainfall_generator", SoundSource.BLOCKS, 0.75F, 1.0F);
             for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, new net.minecraft.world.phys.AABB(pos).inflate(6.0D))) {
                 entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 80, 0));
             }
             energy = Math.max(0, energy - 10);
         } else if (machineId.contains("beacon") || machineId.contains("tesla")) {
+            LostFx.burst(level, pos, machineId.contains("tesla") ? "zap" : "portal_beam", 12, 0.75D, 0.03D);
+            LostFx.play(level, pos, machineId.contains("tesla") ? "charging_power" : "nebulous_beacon", SoundSource.BLOCKS, 0.8F, 1.0F);
             for (Player player : level.getEntitiesOfClass(Player.class, new net.minecraft.world.phys.AABB(pos).inflate(8.0D))) {
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 80, 0, true, false));
             }
@@ -182,7 +190,7 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         }
     }
 
-    private void craft(MachineRecipe recipe) {
+    private void craft(Level level, MachineRecipe recipe) {
         ItemStack input = items.get(INPUT_SLOT);
         ItemStack catalyst = items.get(CATALYST_SLOT);
         input.shrink(1);
@@ -190,6 +198,8 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
             catalyst.shrink(1);
         }
         energy = Math.max(0, energy - recipe.energyCost());
+        LostFx.burst(level, worldPosition, machineParticle(), 16, 0.65D, 0.04D);
+        LostFx.play(level, worldPosition, machineSound(), SoundSource.BLOCKS, 0.8F, 0.9F + level.random.nextFloat() * 0.25F);
         ItemStack output = new ItemStack(recipe.output(), recipe.outputCount());
         ItemStack existing = items.get(OUTPUT_SLOT);
         if (existing.isEmpty()) {
@@ -197,6 +207,24 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         } else {
             existing.grow(output.getCount());
         }
+    }
+
+    private String machineParticle() {
+        if (machineId.contains("infuser")) return "ancient_spell";
+        if (machineId.contains("polymer") || machineId.contains("chem")) return "acid";
+        if (machineId.contains("fusion") || machineId.contains("collider")) return "plasma";
+        if (machineId.contains("grinder") || machineId.contains("crusher")) return "small_spark";
+        if (machineId.contains("circuit") || machineId.contains("calibrator")) return "zap";
+        return "space_magic";
+    }
+
+    private String machineSound() {
+        if (machineId.contains("infuser")) return "infuser";
+        if (machineId.contains("polymer") || machineId.contains("chem")) return "chemical_mixing";
+        if (machineId.contains("fusion") || machineId.contains("collider")) return "manufacture_machine";
+        if (machineId.contains("grinder") || machineId.contains("crusher")) return "rock_tumble";
+        if (machineId.contains("circuit") || machineId.contains("calibrator")) return "minigame_score";
+        return "block_ding";
     }
 
     private MachineRecipe recipeForCurrentInput() {

@@ -299,6 +299,9 @@ Current compile result:
 - Custom effect compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with the recovered 39-effect registry and a shared original-interaction behavior layer for damage, tick, spread, movement, and stacking effects.
+- Particles/sounds compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with a modern custom particle registry/client sprite provider, 33 recovered particle atlas entries, and recovered sound/particle triggers for projectiles, effects, portals, and machines.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -326,6 +329,7 @@ Current main blockers:
 - First-pass mining/material/tool/armor/entity tags exist, but biome tags, handwritten datagen providers, and deeper loot/recipe generation still need work.
 - The recovered command names are ported, but several systems they operate on are still placeholder-level until the related item/entity/block behavior is fully reconstructed.
 - The original custom potion/effect set is registered and now has a shared recovered interaction layer, but exact per-item application sources, client overlays such as distortion, exact icon sheets, and every edge-case interaction still need targeted ports.
+- The recovered particle/sound assets are present and a first modern trigger layer is wired, but exact legacy particle classes, moving/looping sound packets, every mob ambient/hurt/death mapping, and custom block/entity render beam effects still need targeted ports.
 
 Recommended next path:
 - Port in vertical slices instead of trying to compile all 2,169 decompiled Java files at once.

@@ -18,6 +18,7 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.NetworkHooks;
+import xol.lostinfinity.effect.LostFx;
 import xol.lostinfinity.registry.ModEffects;
 
 public class LostPlaceholderProjectile extends Entity {
@@ -125,7 +126,7 @@ public class LostPlaceholderProjectile extends Entity {
         }
         impactBurst(id);
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) {
-            this.level().playSound(null, hit.getBlockPos(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 1.0F, 0.7F);
+            LostFx.play(this.level(), hit.getBlockPos(), "rift_create", SoundSource.NEUTRAL, 1.0F, 0.7F);
         }
         discard();
     }
@@ -134,9 +135,12 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("bomb") || id.contains("explosive") || id.contains("meteor") || id.contains("comet") || id.contains("asteroid")
                 || id.contains("rocket") || id.contains("tnt") || id.contains("doom") || id.contains("plasma")) {
             float radius = id.contains("meteor") || id.contains("asteroid") || id.contains("doom") ? 3.5F : id.contains("micro") ? 1.5F : 2.5F;
+            LostFx.burst(this.level(), this.blockPosition(), burstParticle(id), 32, radius * 0.35D, 0.08D);
+            LostFx.play(this.level(), this.blockPosition(), explosionSound(id), SoundSource.NEUTRAL, 1.1F, 0.85F + this.level().random.nextFloat() * 0.25F);
             this.level().explode(this, this.getX(), this.getY(), this.getZ(), radius, Level.ExplosionInteraction.MOB);
         } else {
-            this.level().playSound(null, this.blockPosition(), SoundEvents.GENERIC_SPLASH, SoundSource.NEUTRAL, 0.7F, 1.3F);
+            LostFx.burst(this.level(), this.blockPosition(), burstParticle(id), 18, 0.65D, 0.04D);
+            LostFx.play(this.level(), this.blockPosition(), impactSound(id), SoundSource.NEUTRAL, 0.7F, 1.1F + this.level().random.nextFloat() * 0.25F);
         }
         if (id.contains("sonic") || id.contains("soundwave") || id.contains("pulse")) {
             for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(3.5D))) {
@@ -220,16 +224,76 @@ public class LostPlaceholderProjectile extends Entity {
     }
 
     private void spawnTrail(String id) {
-        if (!this.level().isClientSide()) {
+        if (this.level().isClientSide() || this.age % 2 != 0) {
             return;
         }
+        LostFx.trail(this.level(), this, trailParticle(id), 2);
+    }
+
+    private String trailParticle(String id) {
         if (id.contains("fire") || id.contains("ember") || id.contains("meteor")) {
-            this.level().addParticle(net.minecraft.core.particles.ParticleTypes.FLAME, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
-        } else if (id.contains("poison") || id.contains("acid") || id.contains("blight") || id.contains("plague")) {
-            this.level().addParticle(net.minecraft.core.particles.ParticleTypes.WITCH, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
-        } else if (id.contains("laser") || id.contains("beam") || id.contains("galaxy") || id.contains("void")) {
-            this.level().addParticle(net.minecraft.core.particles.ParticleTypes.END_ROD, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+            return "plasma";
         }
+        if (id.contains("poison") || id.contains("venom")) {
+            return "venom";
+        }
+        if (id.contains("acid")) {
+            return "acid";
+        }
+        if (id.contains("blight") || id.contains("plague")) {
+            return "plague";
+        }
+        if (id.contains("laser") || id.contains("beam")) {
+            return "laser_fizzle";
+        }
+        if (id.contains("galaxy") || id.contains("star") || id.contains("astral")) {
+            return switch (Math.floorMod(this.tickCount, 4)) {
+                case 0 -> "galaxy_blue";
+                case 1 -> "galaxy_green";
+                case 2 -> "galaxy_purple";
+                default -> "galaxy_yellow";
+            };
+        }
+        if (id.contains("portal") || id.contains("rift") || id.contains("wormhole") || id.contains("warp")) {
+            return "warp";
+        }
+        if (id.contains("shock") || id.contains("tesla") || id.contains("zapper") || id.contains("arc")) {
+            return "zap";
+        }
+        if (id.contains("sound") || id.contains("sonic")) {
+            return "supersonic_blue";
+        }
+        if (id.contains("dark") || id.contains("shadow") || id.contains("void")) {
+            return "shadow_blast";
+        }
+        if (id.contains("gravity")) {
+            return "gravity_ring";
+        }
+        return "generic_dot_purple";
+    }
+
+    private String burstParticle(String id) {
+        if (id.contains("plasma")) return "plasma_explosion";
+        if (id.contains("cosmic") || id.contains("galaxy") || id.contains("star") || id.contains("meteor") || id.contains("asteroid")) return "cosmic_explosion_type1";
+        if (id.contains("shock") || id.contains("tesla") || id.contains("arc")) return "electric_explosion_blue";
+        if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) return "portal_beam";
+        return trailParticle(id);
+    }
+
+    private String impactSound(String id) {
+        if (id.contains("laser") || id.contains("beam")) return "laser_weapon_10";
+        if (id.contains("sound") || id.contains("sonic")) return "sound_bounce";
+        if (id.contains("shock") || id.contains("tesla") || id.contains("arc")) return "electric_bounce";
+        if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) return "rift_create";
+        if (id.contains("acid") || id.contains("poison") || id.contains("venom") || id.contains("plague")) return "flask_explode";
+        return "swing_hit";
+    }
+
+    private String explosionSound(String id) {
+        if (id.contains("meteor") || id.contains("asteroid")) return "asteroid_impact";
+        if (id.contains("missile") || id.contains("rocket")) return "missile_explosion";
+        if (id.contains("cosmic") || id.contains("galaxy") || id.contains("plasma")) return "cosmic_explosion";
+        return "deep_explosion";
     }
 
     private String projectileId() {
