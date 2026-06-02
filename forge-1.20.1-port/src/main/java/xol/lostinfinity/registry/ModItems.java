@@ -18,6 +18,7 @@ import xol.lostinfinity.item.LostHoeItem;
 import xol.lostinfinity.item.LostPickaxeItem;
 import xol.lostinfinity.item.LostRangedItem;
 import xol.lostinfinity.item.LostShovelItem;
+import xol.lostinfinity.item.LostSpecialUseItem;
 import xol.lostinfinity.item.LostSwordItem;
 
 public final class ModItems {
@@ -37,6 +38,9 @@ public final class ModItems {
         Item.Properties properties = new Item.Properties();
         if (isDimensionUtility(name)) {
             return new LostDimensionItem(name, properties);
+        }
+        if (isSpecialUseItem(name)) {
+            return new LostSpecialUseItem(name, properties.durability(specialUseDurability(name)));
         }
         if (name.endsWith("_helmet") || name.endsWith("helmet") || name.endsWith("headguard") || name.endsWith("mask")) {
             return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.HELMET, properties);
@@ -98,6 +102,23 @@ public final class ModItems {
             return 6.0F;
         }
         return 5.0F;
+    }
+
+    private static boolean isSpecialUseItem(String name) {
+        return name.contains("cure") || name.contains("elixir") || name.contains("brew") || name.contains("drink")
+                || name.contains("injection") || name.contains("nitrous_bottle") || name.contains("energetic_heart")
+                || name.contains("cloaking_device") || name.contains("ring_of_illusions")
+                || name.contains("rift_walker") || name.contains("starlit_globe")
+                || name.contains("hot_pod") || name.contains("blight") || name.contains("biocorruption")
+                || name.contains("bio_energizer") || name.contains("power_pulse") || name.contains("pulse_charge")
+                || name.contains("element_stone") || name.contains("mystery_box") || name.contains("box_of_life")
+                || name.contains("analyzer") || name.contains("correlator") || name.contains("seabound_compass")
+                || name.contains("ball_of_contained") || name.contains("exothermite") || name.contains("plasma_emitter");
+    }
+
+    private static int specialUseDurability(String name) {
+        return name.contains("device") || name.contains("globe") || name.contains("analyzer") || name.contains("correlator")
+                || name.contains("compass") || name.contains("emitter") ? 256 : 1;
     }
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<? extends Block> block) {

@@ -189,6 +189,11 @@ What was done:
   - converted 28 recovered legacy machine/game/controller block IDs into 1.20.1 `EntityBlock` instances with persistent NBT-backed inventory state
   - added a functional 3x3 machine inventory, shift-click handling, item drops on block break, comparator output, server screen opening, and a basic client menu screen
   - original per-machine processing rules, energy networks, recipes, puzzle logic, renderer models, and GUI art still need original-specific reconstruction
+- Added the next item/tool/utility behavior slice:
+  - added `LostSpecialUseItem` for recovered non-weapon utility items that were previously plain generic items
+  - restored first-pass active behavior for cure/elixir/brew items, injections, cloaking/rift tools, hot pods, blight/bio/pulse items, mystery/life boxes, analyzer/correlator/compass tools, and recovered utility explosive/projectile items
+  - added modern cooldowns, consume/durability handling, player buffs, bad-effect clearing, teleport blink, fire/effect bursts, analysis messages, and projectile firing hooks
+  - exact original ammo/energy systems, custom particles/sounds, item-specific projectile classes, and every named legacy edge case still need manual reconstruction
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -207,6 +212,9 @@ Current compile result:
 - Machine block entity/menu smoke test:
   - Command: `.\gradlew.bat runServer --args nogui`
   - Result: server reached `Done`, confirming the block entity and menu registries load.
+- Special item behavior compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with the new recovered utility item behavior class.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -215,7 +223,7 @@ Current compile result:
 Current main blockers:
 - The registered entities are placeholder 1.20.1 entities, not the original AI, attacks, movement, bosses, animations, or projectile behavior.
 - Placeholder mobs now have basic hostile mob AI, but this is not the original per-mob Lost Infinity behavior yet.
-- Many items now have broad vanilla-like item classes, but original right-click powers, cooldowns, projectiles, energy systems, status effects, and custom equipment effects still need manual per-item ports.
+- Many items now have broad vanilla-like item classes plus a first-pass special utility behavior layer, but exact original right-click powers, cooldowns, projectiles, energy/ammo systems, status effects, and custom equipment effects still need manual per-item ports.
 - Ranged utility items now have generic damaging projectile behavior, but the original per-item effects, damage types, ammo/energy systems, particles, and sounds are not fully reconstructed yet.
 - Placeholder mob textures now use recovered mob PNGs where possible, but original 3D models/animations/render layers are not restored yet.
 - The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects, Lost Infinity biome IDs, and resource ore features, but they still reuse simple Overworld-style noise settings. Original custom chunk generators, structures, terrain blocks, non-ore biome features, and exact portal rituals still need manual porting.
