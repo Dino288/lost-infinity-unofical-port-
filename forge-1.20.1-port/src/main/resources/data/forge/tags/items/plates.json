@@ -1,0 +1,20 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:bionic_veggitron_chestplate",
+                   "lostinfinity:blightcyst_chestplate",
+                   "lostinfinity:blightcyst_prime_chestplate",
+                   "lostinfinity:darksteel_sheets",
+                   "lostinfinity:graviterium_chestplate",
+                   "lostinfinity:multiversite_plates",
+                   "lostinfinity:organic_plate",
+                   "lostinfinity:plasmythic_chestplate",
+                   "lostinfinity:plated_bone",
+                   "lostinfinity:spectros_chestplate",
+                   "lostinfinity:spectros_prime_chestplate",
+                   "lostinfinity:vampyreon_chestplate",
+                   "lostinfinity:vampyreon_prime_chestplate",
+                   "lostinfinity:vitraliton_chestplate",
+                   "lostinfinity:vitraliton_prime_chestplate"
+               ]
+}

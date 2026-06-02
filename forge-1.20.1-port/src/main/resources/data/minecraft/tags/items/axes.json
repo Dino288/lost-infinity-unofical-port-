@@ -1,0 +1,11 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:celestialminerspickaxe",
+                   "lostinfinity:crystal_pickaxe",
+                   "lostinfinity:forgefire_axe",
+                   "lostinfinity:forgefirepickaxe",
+                   "lostinfinity:nightmare_pickaxe",
+                   "lostinfinity:thermosaw"
+               ]
+}

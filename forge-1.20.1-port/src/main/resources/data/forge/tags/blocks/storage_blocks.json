@@ -1,0 +1,26 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:astrosteel",
+                   "lostinfinity:block_track",
+                   "lostinfinity:block_track_used",
+                   "lostinfinity:block_track_win",
+                   "lostinfinity:block_trigger_blaze",
+                   "lostinfinity:block_trigger_creeper",
+                   "lostinfinity:block_trigger_dimtrader",
+                   "lostinfinity:block_trigger_enderman",
+                   "lostinfinity:block_trigger_ingot",
+                   "lostinfinity:block_trigger_mystery",
+                   "lostinfinity:block_trigger_piglin",
+                   "lostinfinity:block_trigger_skeleton",
+                   "lostinfinity:block_trigger_spider",
+                   "lostinfinity:block_trigger_stray",
+                   "lostinfinity:champion_steel",
+                   "lostinfinity:connect_block",
+                   "lostinfinity:guide_block",
+                   "lostinfinity:neosteel",
+                   "lostinfinity:omni_power_block",
+                   "lostinfinity:power_key_block",
+                   "lostinfinity:puzzle_key_block"
+               ]
+}

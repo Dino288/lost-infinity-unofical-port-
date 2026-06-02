@@ -1,0 +1,21 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:crabulon",
+                   "lostinfinity:crabulon_projectile",
+                   "lostinfinity:deviantsquid",
+                   "lostinfinity:doublerang",
+                   "lostinfinity:eelshark",
+                   "lostinfinity:glowfish",
+                   "lostinfinity:leviathan",
+                   "lostinfinity:leviathan_breath",
+                   "lostinfinity:leviathan_tesla_orb",
+                   "lostinfinity:leviathan_tracer",
+                   "lostinfinity:longfin",
+                   "lostinfinity:octobrella",
+                   "lostinfinity:rayfish",
+                   "lostinfinity:ribshark",
+                   "lostinfinity:sea_serpent",
+                   "lostinfinity:underfin"
+               ]
+}

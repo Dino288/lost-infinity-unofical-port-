@@ -1,0 +1,17 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:celestialminerspickaxe",
+                   "lostinfinity:clay_terraformer",
+                   "lostinfinity:crystal_pickaxe",
+                   "lostinfinity:drill_beam",
+                   "lostinfinity:drill_console",
+                   "lostinfinity:drill_control",
+                   "lostinfinity:drill_head",
+                   "lostinfinity:drill_shaft",
+                   "lostinfinity:forgefire_axe",
+                   "lostinfinity:forgefirepickaxe",
+                   "lostinfinity:nightmare_pickaxe",
+                   "lostinfinity:thermosaw"
+               ]
+}

@@ -1,0 +1,27 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:asteroid",
+                   "lostinfinity:cosmic_fireball",
+                   "lostinfinity:cthulhu_meteor",
+                   "lostinfinity:fallingstar",
+                   "lostinfinity:galaxy_dragon",
+                   "lostinfinity:galaxybeast",
+                   "lostinfinity:galaxyblast",
+                   "lostinfinity:galaxybomb",
+                   "lostinfinity:galaxygladiator",
+                   "lostinfinity:galaxygulper",
+                   "lostinfinity:galaxyknife",
+                   "lostinfinity:galaxylaser",
+                   "lostinfinity:galaxysorcerer",
+                   "lostinfinity:galaxyspell",
+                   "lostinfinity:galaxyspire",
+                   "lostinfinity:meteor",
+                   "lostinfinity:nebula_giant",
+                   "lostinfinity:nebula_grunt",
+                   "lostinfinity:nebula_wizard",
+                   "lostinfinity:nebulaspell",
+                   "lostinfinity:starblast",
+                   "lostinfinity:starfiend"
+               ]
+}

@@ -1,0 +1,33 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:acidbulbs_stem",
+                   "lostinfinity:archbloom_stem",
+                   "lostinfinity:blazing_dahila_stem",
+                   "lostinfinity:blightbloom_stem",
+                   "lostinfinity:champion_logo_core",
+                   "lostinfinity:champion_logo_gold",
+                   "lostinfinity:champion_logo_purple",
+                   "lostinfinity:crystalblossoms_stem",
+                   "lostinfinity:forgeshroom_stem",
+                   "lostinfinity:gloglobes",
+                   "lostinfinity:item_challenge_branch",
+                   "lostinfinity:logs_archblighted",
+                   "lostinfinity:logs_archlum",
+                   "lostinfinity:logs_archlum_wrapped",
+                   "lostinfinity:logs_celestial",
+                   "lostinfinity:logs_celestial_purple",
+                   "lostinfinity:logs_celestial_red",
+                   "lostinfinity:logs_metalloid",
+                   "lostinfinity:logs_murk",
+                   "lostinfinity:logs_nitro",
+                   "lostinfinity:murkplank_half",
+                   "lostinfinity:murkplank_stairs",
+                   "lostinfinity:murkplanks",
+                   "lostinfinity:screen_archeologist",
+                   "lostinfinity:starforge_declogger",
+                   "lostinfinity:sunderleaves",
+                   "lostinfinity:sunderwood",
+                   "lostinfinity:sunderwood_planks"
+               ]
+}

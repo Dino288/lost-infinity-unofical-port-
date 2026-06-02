@@ -194,6 +194,14 @@ What was done:
   - restored first-pass active behavior for cure/elixir/brew items, injections, cloaking/rift tools, hot pods, blight/bio/pulse items, mystery/life boxes, analyzer/correlator/compass tools, and recovered utility explosive/projectile items
   - added modern cooldowns, consume/durability handling, player buffs, bad-effect clearing, teleport blink, fire/effect bursts, analysis messages, and projectile firing hooks
   - exact original ammo/energy systems, custom particles/sounds, item-specific projectile classes, and every named legacy edge case still need manual reconstruction
+- Added the first data/tag compatibility slice:
+  - generated Minecraft mining tags for recovered pickaxe, axe, shovel, and hoe block groups
+  - generated `needs_iron_tool` and `needs_diamond_tool` tags for obvious ores, metals, machines, ancient blocks, and high-tier materials
+  - tightened block properties so obvious ore/stone/metal/machine blocks require the correct tool for drops
+  - generated Lost Infinity block grouping tags for ores, metal blocks, stone blocks, wood blocks, and plants
+  - generated Lost Infinity item grouping tags for ingots, gems, dusts, nuggets, plates, rods, gears, tools, weapons, armor, and special-use items
+  - generated Forge common compatibility tags for ores/storage blocks and material groups so recipes/datapacks can target shared categories
+  - generated entity grouping tags for deviants, galaxy mobs, Shadow Sea mobs, projectiles, and obvious bosses
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -215,6 +223,11 @@ Current compile result:
 - Special item behavior compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with the new recovered utility item behavior class.
+- Data/tag compatibility smoke test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with 41 generated tag JSON files and the mining requirement patch.
+  - Command: `.\gradlew.bat runServer --args nogui`
+  - Result: server reached `Done`, confirming the generated tags load.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -238,6 +251,7 @@ Current main blockers:
 - Old dimensions/worldgen need 1.20.1 data-driven dimension/biome/levelgen rewrites.
 - Decompiled source contains SRG method names like `func_180639_a`, so methods need remapping to modern Mojang names.
 - Some mechanical class renames were applied, such as `TileEntity*` -> `BlockEntity*`, so related references and constructors need deliberate cleanup.
+- First-pass mining/material/tool/armor/entity tags exist, but biome tags, handwritten datagen providers, and deeper loot/recipe generation still need work.
 
 Recommended next path:
 - Port in vertical slices instead of trying to compile all 2,169 decompiled Java files at once.

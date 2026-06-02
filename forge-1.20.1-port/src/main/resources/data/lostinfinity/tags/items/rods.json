@@ -1,0 +1,25 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:aurorus_wand",
+                   "lostinfinity:chlorodivergent_solution",
+                   "lostinfinity:clovinite_rod",
+                   "lostinfinity:deviant_blazerod",
+                   "lostinfinity:electrolytic_rod",
+                   "lostinfinity:item_challenge_sticky",
+                   "lostinfinity:moonglow_wand",
+                   "lostinfinity:novacron_wand",
+                   "lostinfinity:prismosis_rod",
+                   "lostinfinity:rod_of_ultimatum",
+                   "lostinfinity:rodofdeviation",
+                   "lostinfinity:spawner_stickler",
+                   "lostinfinity:staff_of_servitude",
+                   "lostinfinity:starfire_wand",
+                   "lostinfinity:sticky_bomb_launcher",
+                   "lostinfinity:sticky_darksteel",
+                   "lostinfinity:sticky_hide",
+                   "lostinfinity:sticky_shell",
+                   "lostinfinity:supermutationrod",
+                   "lostinfinity:wand_of_self_reflection"
+               ]
+}

@@ -1,0 +1,19 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:astromud",
+                   "lostinfinity:crystallized_soil",
+                   "lostinfinity:crystallized_soil_powered",
+                   "lostinfinity:crystallized_soil_unpowered",
+                   "lostinfinity:fungal_astromud",
+                   "lostinfinity:fungal_astromud_blue",
+                   "lostinfinity:fungal_astromud_teal",
+                   "lostinfinity:heatsand",
+                   "lostinfinity:molded_sea_clay",
+                   "lostinfinity:murkdirt",
+                   "lostinfinity:murksoil",
+                   "lostinfinity:sea_clay",
+                   "lostinfinity:spawner_flashfly",
+                   "lostinfinity:strangelash"
+               ]
+}

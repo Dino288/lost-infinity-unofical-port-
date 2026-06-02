@@ -73,7 +73,27 @@ public final class ModBlocks {
         if (name.contains("ore")) {
             properties = properties.strength(3.0F, 6.0F).requiresCorrectToolForDrops();
         }
+        if (requiresCorrectTool(name)) {
+            properties = properties.requiresCorrectToolForDrops();
+        }
         return properties;
+    }
+
+    private static boolean requiresCorrectTool(String name) {
+        if (name.contains("leaf") || name.contains("leaves") || name.contains("vine") || name.contains("weed")
+                || name.contains("grass") || name.contains("flower") || name.contains("bloom") || name.contains("bulb")
+                || name.contains("stem") || name.contains("root") || name.contains("coral")
+                || name.contains("glass") || name.contains("barrier")) {
+            return false;
+        }
+        return name.contains("ore") || name.contains("stone") || name.contains("rock") || name.contains("brick")
+                || name.contains("metal") || name.contains("steel") || name.contains("machine") || name.contains("battery")
+                || name.contains("forge") || name.contains("console") || name.contains("engine") || name.contains("gearbox")
+                || name.contains("generator") || name.contains("infuser") || name.contains("beacon") || name.contains("collider")
+                || name.contains("calibrator") || name.contains("chemistry") || name.contains("welding") || name.contains("fusion")
+                || name.contains("polymer") || name.contains("grinder") || name.contains("drill") || name.contains("pillar")
+                || name.contains("tile") || name.contains("slab") || name.contains("stairs") || name.contains("obsidian")
+                || name.contains("seastone") || name.contains("astrorock");
     }
 
     private static String targetDimensionFor(String name) {

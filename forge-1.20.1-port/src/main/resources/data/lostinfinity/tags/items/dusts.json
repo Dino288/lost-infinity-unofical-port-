@@ -1,0 +1,29 @@
+﻿{
+    "replace":  false,
+    "values":  [
+                   "lostinfinity:augment_slide_dash",
+                   "lostinfinity:augment_slide_unleash",
+                   "lostinfinity:biocorruption_powder",
+                   "lostinfinity:cyclone_dust",
+                   "lostinfinity:dark_magic_powder",
+                   "lostinfinity:datadrive_dash",
+                   "lostinfinity:deviantgunpowder",
+                   "lostinfinity:gravity_dust",
+                   "lostinfinity:magic_biopowder",
+                   "lostinfinity:magisyre_powder_blue",
+                   "lostinfinity:magisyre_powder_green",
+                   "lostinfinity:magisyre_powder_orange",
+                   "lostinfinity:magisyre_powder_pink",
+                   "lostinfinity:magisyre_powder_yellow",
+                   "lostinfinity:murky_ash",
+                   "lostinfinity:nightmare_powder",
+                   "lostinfinity:spawner_flashfly",
+                   "lostinfinity:strangelash",
+                   "lostinfinity:sunder_ash",
+                   "lostinfinity:sunderash",
+                   "lostinfinity:sunstone_dust",
+                   "lostinfinity:supermutated_powder",
+                   "lostinfinity:token_arash",
+                   "lostinfinity:ultralight_dust"
+               ]
+}
