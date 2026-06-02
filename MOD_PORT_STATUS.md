@@ -214,6 +214,12 @@ What was done:
   - restored original-size-inspired dimensions and stronger attribute profiles for Deviants, flying Deviants, Primes, Titans, and Trial Observer
   - added conservative recovered-family behavior for flying chase/ranged attacks, creeper detonations, enderman teleports, shulker/turret fire, caster debuffs, spider leaps/poison, slime hops, blaze fire attacks, golem/titan stomps, and prime boss attacks
   - original per-mob projectile classes, full boss phases, 3D models, animations, and exact legacy AI edge cases still need deeper reconstruction
+- Added the first modern entity renderer/model slice:
+  - added `LostAnimatedEntityRenderer`, replacing the flat billboard renderer for all 460 registered entity IDs
+  - keeps using the recovered `LostEntityTextures` texture map while rendering animated 3D cuboid rigs instead of flat texture cards
+  - added broad modern render body plans for humanoids, quadrupeds, spiders, flyers, fish/serpents, crystal/turret entities, slimes, and projectile/orb entities
+  - added simple walk, wing, fin, tail, slime pulse, crystal spin, and projectile spin animations
+  - exact legacy `ModelBase` geometry, texture UV layout, render layers, boss bars, custom projectile models, and per-mob animation states still need deeper reconstruction from the old 1.12 model/render classes
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -248,6 +254,9 @@ Current compile result:
 - Deviant/Prime/Titan AI compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with the new shared deviant AI base and updated entity attributes.
+- Entity renderer/model compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with the new animated entity renderer registered for all entity IDs.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -258,7 +267,7 @@ Current main blockers:
 - The new Deviant/Prime/Titan AI is a conservative recovered-family port; exact per-mob projectile classes, boss phases, summon logic, and special legacy edge cases still need manual reconstruction.
 - Many items now have broad vanilla-like item classes plus a first-pass special utility behavior layer, but exact original right-click powers, cooldowns, projectiles, energy/ammo systems, status effects, and custom equipment effects still need manual per-item ports.
 - Ranged utility items now have generic damaging projectile behavior, but the original per-item effects, damage types, ammo/energy systems, particles, and sounds are not fully reconstructed yet.
-- Placeholder mob textures now use recovered mob PNGs where possible, but original 3D models/animations/render layers are not restored yet.
+- Entity textures now render on animated 3D cuboid body plans instead of flat billboards, but original 1.12 model geometry, UV-specific texture mapping, render layers, boss/projectile renderers, and animation states are not fully restored yet.
 - The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects, Lost Infinity biome IDs, and resource ore features, but they still reuse simple Overworld-style noise settings. Original custom chunk generators, structures, terrain blocks, non-ore biome features, and exact portal rituals still need manual porting.
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
