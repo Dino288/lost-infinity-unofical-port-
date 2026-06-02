@@ -166,8 +166,8 @@ public final class ModEntityAttributes {
         event.put(ModEntities.ESSENCEIDOL.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.GLOBRO.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.AUGMENTICON.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.GALAXYGULPER.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.LASERSPIRE.get(), LostPlaceholderMob.createAttributes().build());
+        event.put(ModEntities.GALAXYGULPER.get(), LostGalaxyMob.gulperAttributes().build());
+        event.put(ModEntities.LASERSPIRE.get(), LostGalaxyMob.laserSpireAttributes().build());
         event.put(ModEntities.GIANTFLAPPER.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.IONEXPLOSION.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.NITROEXPLOSION.get(), LostPlaceholderMob.createAttributes().build());
@@ -288,7 +288,7 @@ public final class ModEntityAttributes {
         event.put(ModEntities.TENTACLELANTERN.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.LEVIATHAN.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.SEA_SERPENT.get(), LostPlaceholderMob.createAttributes().build());
-        event.put(ModEntities.GALAXY_DRAGON.get(), LostPlaceholderMob.createAttributes().build());
+        event.put(ModEntities.GALAXY_DRAGON.get(), LostGalaxyMob.dragonAttributes().build());
         event.put(ModEntities.X_SCREACHER.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.LOST_BLADE.get(), LostPlaceholderMob.createAttributes().build());
         event.put(ModEntities.NUCLEAR_EXPLOSION.get(), LostPlaceholderMob.createAttributes().build());

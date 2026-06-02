@@ -202,8 +202,8 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> ESSENCEIDOL = registerMob("essenceidol");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GLOBRO = registerMob("globro");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> AUGMENTICON = registerMob("augmenticon");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYGULPER = registerMob("galaxygulper");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> LASERSPIRE = registerMob("laserspire");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXYGULPER = registerGalaxyMob("galaxygulper", LostGalaxyMob.Kind.GULPER, 1.75F, 2.5F);
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> LASERSPIRE = registerGalaxyMob("laserspire", LostGalaxyMob.Kind.LASER_SPIRE, 2.0F, 3.5F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> GIANTFLAPPER = registerMob("giantflapper");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> IONEXPLOSION = registerMob("ionexplosion");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> NITROEXPLOSION = registerMob("nitroexplosion");
@@ -324,7 +324,7 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<LostPlaceholderMob>> TENTACLELANTERN = registerMob("tentaclelantern");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LEVIATHAN = registerMob("leviathan");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> SEA_SERPENT = registerMob("sea_serpent");
-    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXY_DRAGON = registerMob("galaxy_dragon");
+    public static final RegistryObject<EntityType<LostPlaceholderMob>> GALAXY_DRAGON = registerGalaxyMob("galaxy_dragon", LostGalaxyMob.Kind.DRAGON, 2.0F, 1.53F);
     public static final RegistryObject<EntityType<LostPlaceholderMob>> X_SCREACHER = registerMob("x_screacher");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> LOST_BLADE = registerMob("lost_blade");
     public static final RegistryObject<EntityType<LostPlaceholderMob>> NUCLEAR_EXPLOSION = registerMob("nuclear_explosion");

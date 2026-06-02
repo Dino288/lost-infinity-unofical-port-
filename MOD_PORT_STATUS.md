@@ -167,6 +167,10 @@ What was done:
   - `galaxybeast`, `galaxysorcerer`, `galaxygladiator`, and `galaxyspire` now use original-style sizes, health, movement speed, follow range, and damage profiles
   - restored the Galaxy Beast's drifting/chasing behavior, Sorcerer's spell projectile cadence, Gladiator's teleport strike, and a conservative Spire stationary turret behavior
   - preserved compatibility with the existing recovered texture billboard renderer while original 3D models/animations remain pending
+- Ported the next original Galaxy mob behavior slice:
+  - `galaxygulper`, `laserspire`, and `galaxy_dragon` now use original-style size/stat profiles instead of the generic placeholder mob values
+  - restored the Galaxy Gulper watchful-eye feeding loop with `acidblood_solution` reward drops, plus its stronger timed bite window
+  - restored conservative Laser Spire stationary firing and Galaxy Dragon fire breath/fireball-style combat hooks while full mount controls and projectile models remain pending
 
 Current compile result:
 - Command: `.\gradlew.bat build`
