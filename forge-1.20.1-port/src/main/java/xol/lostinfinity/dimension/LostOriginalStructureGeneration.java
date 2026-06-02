@@ -205,6 +205,8 @@ public final class LostOriginalStructureGeneration {
             case 5 -> overgrownPassagesStructure(pieceType, random);
             case 6 -> crystalCreviceStructure(pieceType, random);
             case 7 -> luminescentCavernStructure(pieceType, random);
+            case 8 -> archluminescentCavernStructure(pieceType, random);
+            case 9 -> blightedLuminescenceStructure(pieceType, random);
             case 12 -> manufacturingOutpostStructure(pieceType);
             case 13 -> fungalCavernStructure(pieceType, random);
             default -> "";
@@ -406,6 +408,105 @@ public final class LostOriginalStructureGeneration {
         };
     }
 
+    private static String archluminescentCavernStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "archgate" -> "lumcavern/lumcavern_archlum_top";
+            case "archentry" -> "archcavern/archcavern_entry";
+            case "archshaft" -> randomPiece("archcavern", "archcavern_tunnel", 24, random);
+            case "archthin" -> randomPiece("archcavern", "archcavern_thintunnel", 18, random);
+            case "archblock" -> randomPiece("archcavern", "archcavern_archblock", 4, random);
+            case "archabs" -> randomPiece("archcavern", "archcavern_tunnel", 24, random) + ",archaboves";
+            case "archbls" -> randomPiece("archcavern", "archcavern_tunnel", 24, random) + ",archbelows";
+            case "archabt" -> randomPiece("archcavern", "archcavern_thintunnel", 18, random) + ",archabovet";
+            case "archblt" -> randomPiece("archcavern", "archcavern_thintunnel", 18, random) + ",archbelowt";
+            case "archwisp1" -> "archcavern/archcavern_wisp1";
+            case "archwisp2" -> "archcavern/archcavern_wisp2";
+            case "archwisp3" -> "archcavern/archcavern_wisp3";
+            case "archwisp4" -> "archcavern/archcavern_wisp4";
+            case "archbirth" -> "archcavern/archcavern_rebirth";
+            case "archport" -> "archcavern/archcavern_portal";
+            case "archpipe" -> "archcavern/archcavern_pipe";
+            case "archinc1" -> "archcavern/archcavern_incandescite_lower1,archinc1";
+            case "archinc2" -> "archcavern/archcavern_incandescite_lower2,archinc2";
+            case "archinc3" -> "archcavern/archcavern_incandescite_lower3,archinc3";
+            case "archinc4" -> "archcavern/archcavern_incandescite_lower4,archinc4";
+            case "archinc5" -> "archcavern/archcavern_incandescite_lower5,archinc5";
+            case "archinc6" -> "archcavern/archcavern_incandescite_lower6,archinc6";
+            case "archinc7" -> "archcavern/archcavern_incandescite_lower7,archinc7";
+            case "archinc8" -> "archcavern/archcavern_incandescite_lower8,archinc8";
+            case "archinc9" -> "archcavern/archcavern_incandescite_lower9,archinc9";
+            case "archsu" -> randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archsu";
+            case "archsr" -> randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archsr";
+            case "archsl" -> randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archsl";
+            case "archsd" -> randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archsd";
+            case "archlu" -> randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archlu";
+            case "archll" -> randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archll";
+            case "archld" -> randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archld";
+            case "archlr" -> randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archlr";
+            case "archmu" -> random.nextBoolean()
+                    ? randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archmlu"
+                    : randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archmsu";
+            case "archml" -> random.nextBoolean()
+                    ? randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archmll"
+                    : randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archmsl";
+            case "archmd" -> random.nextBoolean()
+                    ? randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archmld"
+                    : randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archmsd";
+            case "archmr" -> random.nextBoolean()
+                    ? randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archmlr"
+                    : randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archmsr";
+            default -> "";
+        };
+    }
+
+    private static String blightedLuminescenceStructure(String pieceType, Random random) {
+        return switch (pieceType) {
+            case "bligentry" -> "blightcavern/blightcavern_entry";
+            case "bligdark" -> "blightcavern/blightcavern_darktree";
+            case "bligcrush" -> "blightcavern/blightcavern_crusher";
+            case "bligshaft" -> randomPiece("blightcavern", "blightcavern_tunnel", 48, random);
+            case "bligthin" -> randomPiece("blightcavern", "blightcavern_thintunnel", 36, random);
+            case "bligblock" -> randomPiece("blightcavern", "blightcavern_blightblock", 4, random);
+            case "bligabs" -> randomPiece("blightcavern", "blightcavern_tunnel", 48, random) + ",bligaboves";
+            case "bligbls" -> randomPiece("blightcavern", "blightcavern_tunnel", 48, random) + ",bligbelows";
+            case "bligabt" -> randomPiece("blightcavern", "blightcavern_thintunnel", 36, random) + ",bligabovet";
+            case "bligblt" -> randomPiece("blightcavern", "blightcavern_thintunnel", 36, random) + ",bligbelowt";
+            case "bligess" -> randomPiece("blightcavern", "blightcavern_ess_seg", 12, random);
+            case "bligessent" -> "blightcavern/blightcavern_ess_entry";
+            case "bligsap" -> "blightcavern/blightcavern_sap";
+            case "bligport" -> "blightcavern/blightcavern_mouth";
+            case "bligsec" -> "blightcavern/blightcavern_secu3";
+            case "bligsu" -> randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligsu";
+            case "bligsr" -> randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligsr";
+            case "bligsl" -> randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligsl";
+            case "bligsd" -> randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligsd";
+            case "bliglu" -> randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bliglu";
+            case "bligll" -> randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bligll";
+            case "bligld" -> randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bligld";
+            case "bliglr" -> randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bliglr";
+            case "bligmu" -> random.nextBoolean()
+                    ? randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligmlu"
+                    : randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bligmsu";
+            case "bligml" -> random.nextBoolean()
+                    ? randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligmll"
+                    : randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bligmsl";
+            case "bligmd" -> random.nextBoolean()
+                    ? randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligmld"
+                    : randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bligmsd";
+            case "bligmr" -> random.nextBoolean()
+                    ? randomPiece("blightcavern", "blightcavern_smallup", 18, random) + ",bligmlr"
+                    : randomPiece("blightcavern", "blightcavern_largeup", 18, random) + ",bligmsr";
+            case "bligpow1" -> "blightcavern/blightcavern_powercore_1";
+            case "bligpow2" -> "blightcavern/blightcavern_powercore_2";
+            case "bligpow3" -> "blightcavern/blightcavern_powercore_3";
+            case "bligpow4" -> "blightcavern/blightcavern_powercore_4";
+            case "bligpow5" -> "blightcavern/blightcavern_powercore_5";
+            case "bligliblo" -> "blightcavern/blightcavern_lightblockage";
+            case "bligboss" -> "blightcavern/blightcavern_bossgate";
+            default -> "";
+        };
+    }
+
     private static String galaxyDungeonStructure(String pieceType) {
         return switch (pieceType) {
             case "galaxy1" -> "galaxy/galaxy_dungeon_lower1,galaxy1";
@@ -446,6 +547,55 @@ public final class LostOriginalStructureGeneration {
             case "hive2" -> new ExtraStructure("starforge/sunder_hive_top_2", 32, 1, 1, Rotation.NONE);
             case "hive3" -> new ExtraStructure("starforge/sunder_hive_top_3", 32, 1, 1, Rotation.NONE);
             case "hive4" -> new ExtraStructure("starforge/sunder_hive_top_4", 32, 1, 1, Rotation.NONE);
+            case "archsu" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 20, 1, 1, Rotation.CLOCKWISE_90);
+            case "archsl" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 20, 1, 1, Rotation.NONE);
+            case "archsr" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 20, 1, 1, Rotation.CLOCKWISE_180);
+            case "archsd" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 20, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "archlu" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 30, 1, 1, Rotation.CLOCKWISE_90);
+            case "archll" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 30, 1, 1, Rotation.NONE);
+            case "archlr" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 30, 1, 1, Rotation.CLOCKWISE_180);
+            case "archld" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 30, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "archmsu" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 30, 1, 1, Rotation.CLOCKWISE_90);
+            case "archmsl" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 30, 1, 1, Rotation.NONE);
+            case "archmsr" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 30, 1, 1, Rotation.CLOCKWISE_180);
+            case "archmsd" -> new ExtraStructure(randomPiece("archcavern", "archcavern_smalldown", 9, random), 30, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "archmlu" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 20, 1, 1, Rotation.CLOCKWISE_90);
+            case "archmll" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 20, 1, 1, Rotation.NONE);
+            case "archmlr" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 20, 1, 1, Rotation.CLOCKWISE_180);
+            case "archmld" -> new ExtraStructure(randomPiece("archcavern", "archcavern_largedown", 9, random), 20, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "archaboves" -> new ExtraStructure(randomPiece("archcavern", "archcavern_tunnel", 24, random), 20, 1, 1, Rotation.NONE);
+            case "archbelows" -> new ExtraStructure(randomPiece("archcavern", "archcavern_tunnel", 24, random), -20, 1, 1, Rotation.NONE);
+            case "archabovet" -> new ExtraStructure(randomPiece("archcavern", "archcavern_thintunnel", 18, random), 20, 1, 1, Rotation.NONE);
+            case "archbelowt" -> new ExtraStructure(randomPiece("archcavern", "archcavern_thintunnel", 18, random), -20, 1, 1, Rotation.NONE);
+            case "bligsu" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 20, 1, 1, Rotation.CLOCKWISE_90);
+            case "bligsl" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 20, 1, 1, Rotation.NONE);
+            case "bligsr" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 20, 1, 1, Rotation.CLOCKWISE_180);
+            case "bligsd" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 20, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "bliglu" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 30, 1, 1, Rotation.CLOCKWISE_90);
+            case "bligll" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 30, 1, 1, Rotation.NONE);
+            case "bliglr" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 30, 1, 1, Rotation.CLOCKWISE_180);
+            case "bligld" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 30, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "bligmsu" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 30, 1, 1, Rotation.CLOCKWISE_90);
+            case "bligmsl" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 30, 1, 1, Rotation.NONE);
+            case "bligmsr" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 30, 1, 1, Rotation.CLOCKWISE_180);
+            case "bligmsd" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_smalldown", 18, random), 30, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "bligmlu" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 20, 1, 1, Rotation.CLOCKWISE_90);
+            case "bligmll" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 20, 1, 1, Rotation.NONE);
+            case "bligmlr" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 20, 1, 1, Rotation.CLOCKWISE_180);
+            case "bligmld" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_largedown", 18, random), 20, 1, 1, Rotation.COUNTERCLOCKWISE_90);
+            case "bligaboves" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_tunnel", 48, random), 20, 1, 1, Rotation.NONE);
+            case "bligbelows" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_tunnel", 48, random), -20, 1, 1, Rotation.NONE);
+            case "bligabovet" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_thintunnel", 36, random), 20, 1, 1, Rotation.NONE);
+            case "bligbelowt" -> new ExtraStructure(randomPiece("blightcavern", "blightcavern_thintunnel", 36, random), -20, 1, 1, Rotation.NONE);
+            case "archinc1" -> new ExtraStructure("archcavern/archcavern_incandescite_upper1", 30, 1, 1, Rotation.NONE);
+            case "archinc2" -> new ExtraStructure("archcavern/archcavern_incandescite_upper2", 30, 1, 1, Rotation.NONE);
+            case "archinc3" -> new ExtraStructure("archcavern/archcavern_incandescite_upper3", 30, 1, 1, Rotation.NONE);
+            case "archinc4" -> new ExtraStructure("archcavern/archcavern_incandescite_upper4", 30, 1, 1, Rotation.NONE);
+            case "archinc5" -> new ExtraStructure("archcavern/archcavern_incandescite_upper5", 30, 1, 1, Rotation.NONE);
+            case "archinc6" -> new ExtraStructure("archcavern/archcavern_incandescite_upper6", 30, 1, 1, Rotation.NONE);
+            case "archinc7" -> new ExtraStructure("archcavern/archcavern_incandescite_upper7", 30, 1, 1, Rotation.NONE);
+            case "archinc8" -> new ExtraStructure("archcavern/archcavern_incandescite_upper8", 30, 1, 1, Rotation.NONE);
+            case "archinc9" -> new ExtraStructure("archcavern/archcavern_incandescite_upper9", 30, 1, 1, Rotation.NONE);
             default -> null;
         };
     }

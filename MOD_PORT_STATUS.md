@@ -150,6 +150,10 @@ What was done:
   - copied recovered Twisted Tunnels, Overgrown, Crystal Crevice, Luminescent Cavern, Manufacturing Outpost, and Fungal Cavern NBT templates into modern structure data resources
   - added legacy CSV mappings for Nonexistence areas 4, 5, 6, 7, 12, and 13
   - restored original paired Luminescent Cavern above/below tunnel placement
+- Ported the next original Nonexistence Arch/Blight cavern slice:
+  - copied recovered Archluminescent Cavern and Blighted Luminescence NBT templates into modern structure data resources
+  - added legacy CSV mappings for Nonexistence areas 8 and 9
+  - restored original paired upper/lower cavern placement for Arch, Blight, above/below tunnels, and Incandescite rooms
 - Added first-pass Lost Infinity ore worldgen:
   - 28 legacy Nonexistence resource ores generate in the `nonexistence` biome from Y 80 to 146
   - `darksteel_ore`, `multiversite_overworld`, `lucient_ore`, and `atomite_ore` generate in `infinitemurk`
