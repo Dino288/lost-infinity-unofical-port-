@@ -5,6 +5,8 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import xol.lostinfinity.registry.ModMenus;
@@ -12,15 +14,22 @@ import xol.lostinfinity.registry.ModMenus;
 public class LostMachineMenu extends AbstractContainerMenu {
     private static final int MACHINE_SLOTS = 9;
     private final Container container;
+    private final ContainerData data;
 
     public LostMachineMenu(int containerId, Inventory playerInventory) {
-        this(containerId, playerInventory, new SimpleContainer(MACHINE_SLOTS));
+        this(containerId, playerInventory, new SimpleContainer(MACHINE_SLOTS), new SimpleContainerData(5));
     }
 
     public LostMachineMenu(int containerId, Inventory playerInventory, Container container) {
+        this(containerId, playerInventory, container, new SimpleContainerData(5));
+    }
+
+    public LostMachineMenu(int containerId, Inventory playerInventory, Container container, ContainerData data) {
         super(ModMenus.LOST_MACHINE_MENU.get(), containerId);
         checkContainerSize(container, MACHINE_SLOTS);
         this.container = container;
+        this.data = data;
+        addDataSlots(data);
         container.startOpen(playerInventory.player);
 
         for (int row = 0; row < 3; row++) {
@@ -43,6 +52,26 @@ public class LostMachineMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player player) {
         return container.stillValid(player);
+    }
+
+    public int progress() {
+        return data.get(0);
+    }
+
+    public int processTime() {
+        return Math.max(1, data.get(1));
+    }
+
+    public int energy() {
+        return data.get(2);
+    }
+
+    public boolean active() {
+        return data.get(3) != 0;
+    }
+
+    public int puzzleState() {
+        return data.get(4);
     }
 
     @Override

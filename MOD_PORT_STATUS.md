@@ -236,6 +236,17 @@ What was done:
   - added per-piece armor tick/reactive effects for jet/sky/wing slow-fall, cthulhu/void/murk vision, tesla/voltaic resistance/shock, thorn/spike retaliation, blight/plague poison, and fire/plasmythic burning
   - updated ranged items to use the shared ammo/energy behavior and show NBT counters in tooltips
   - exact per-item legacy recipes, GUI charging systems, true ammo item consumption, original summons, all custom particles/sounds, and every named item edge case still need deeper reconstruction
+- Added the next machine/block-entity behavior slice:
+  - upgraded the shared `LostMachineBlockEntity` from passive inventory/progress storage into a name-driven machine processor for the 28 recovered machine/controller IDs
+  - added input, catalyst, fuel, and output slot roles while preserving the existing 3x3 machine inventory layout
+  - added NBT-backed process time, energy, active state, and puzzle state data
+  - added generator/engine energy production, fuel charging from redstone/coal/energy-like items, and redstone output based on energy or puzzle state
+  - added inferred machine-family recipes for grinder/crusher dusting, compression, welding/circuit/gearbox plate-making, infuser/fusion/collider infusion, polymerization, chemistry solutions, sap evaporation, and shipment filling
+  - added puzzle/controller ticking for game, dial, sequencer, interpreter, emitter, and navigation device machines
+  - added area pulse behavior for shockwave generator, rainfall generator, beacon, and tesla-style machines
+  - synced progress, process time, energy, active state, and puzzle state through the menu using `ContainerData`
+  - updated the machine screen with progress and energy bars plus puzzle-state readout
+  - exact original machine recipe tables, multi-block energy network wiring, GUI art, special renderers, puzzle minigame rules, and per-machine block models still need deeper reconstruction
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -279,6 +290,9 @@ Current compile result:
 - Item/tool/armor behavior compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with the new shared mode/energy/ammo/reactive behavior layer and custom armor item wrapper.
+- Machine behavior/menu compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with the upgraded machine processor, menu data sync, and screen indicators.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -295,6 +309,7 @@ Current main blockers:
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
 - Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.
 - The first shared machine block entity/menu layer exists, but the original machine-specific inventories, recipes, progress behavior, energy/power systems, and GUIs still need per-machine ports.
+- The shared machine layer now has inferred processing, energy, puzzle, pulse, and menu-sync behavior, but exact original machine recipe tables, energy networks, GUI art, renderers, and minigame rules still need per-machine reconstruction.
 - Old Forge lifecycle events (`FMLPreInitializationEvent`, `FMLInitializationEvent`, etc.) need a modern mod constructor and event bus registration.
 - Old registries need `DeferredRegister`/`RegistryObject`.
 - Old networking (`SimpleNetworkWrapper`, `IMessage`, `IMessageHandler`) needs modern `SimpleChannel`.
