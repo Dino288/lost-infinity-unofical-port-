@@ -23,7 +23,7 @@ public final class LostDimensionTeleporter {
 
     public static boolean teleport(ServerPlayer player, String id, double x, double y, double z, boolean useSafeSurface) {
         MinecraftServer server = player.server;
-        ResourceLocation targetId = "overworld".equals(id) ? new ResourceLocation("minecraft", "overworld") : new ResourceLocation(LostInfinity.MODID, id);
+        ResourceLocation targetId = targetLocation(id);
         ResourceKey<Level> key = ResourceKey.create(Registries.DIMENSION, targetId);
         ServerLevel target = server.getLevel(key);
         if (target == null) {
@@ -53,6 +53,16 @@ public final class LostDimensionTeleporter {
             y = (int) Math.max(target.getMinBuildHeight() + 4.0D, Math.min(fallbackY, target.getMaxBuildHeight() - 4.0D));
         }
         return new BlockPos(x, y, z);
+    }
+
+    private static ResourceLocation targetLocation(String id) {
+        if ("overworld".equals(id)) {
+            return new ResourceLocation("minecraft", "overworld");
+        }
+        if (id.contains(":")) {
+            return new ResourceLocation(id);
+        }
+        return new ResourceLocation(LostInfinity.MODID, id);
     }
 
     private static double safeCoordinate(double coordinate) {

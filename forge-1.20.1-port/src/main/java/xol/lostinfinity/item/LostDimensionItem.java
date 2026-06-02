@@ -18,6 +18,10 @@ import xol.lostinfinity.dimension.LostDimensionTeleporter;
 
 public class LostDimensionItem extends Item {
     private static final String SOLAR_FLOOR_TAG = "lostinfinity_solar_floor";
+    private static final String RETURN_DIMENSION_TAG = "lostinfinity_return_dimension";
+    private static final String RETURN_X_TAG = "lostinfinity_return_x";
+    private static final String RETURN_Y_TAG = "lostinfinity_return_y";
+    private static final String RETURN_Z_TAG = "lostinfinity_return_z";
     private final String itemName;
 
     public LostDimensionItem(String itemName, Properties properties) {
@@ -30,13 +34,13 @@ public class LostDimensionItem extends Item {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
             if ("murky_mirror".equals(itemName)) {
-                toggleDimension(serverPlayer, "infinitemurk");
+                toggleDimension(serverPlayer, stack, "infinitemurk");
                 player.getCooldowns().addCooldown(this, 80);
             } else if ("galaxybeacon".equals(itemName)) {
-                useGalaxyBeacon(serverPlayer);
+                useGalaxyBeacon(serverPlayer, stack);
                 player.getCooldowns().addCooldown(this, 120);
             } else if ("magic_conch".equals(itemName)) {
-                useMagicConch(serverPlayer);
+                useMagicConch(serverPlayer, stack);
                 player.getCooldowns().addCooldown(this, 120);
             } else if ("solar_globe".equals(itemName)) {
                 useSolarGlobe(serverPlayer, stack);
@@ -65,26 +69,29 @@ public class LostDimensionItem extends Item {
         }
     }
 
-    private static void toggleDimension(ServerPlayer player, String targetDimension) {
+    private static void toggleDimension(ServerPlayer player, ItemStack stack, String targetDimension) {
         if (isInLostDimension(player, targetDimension)) {
-            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
+            teleportToReturnPosition(player, stack);
         } else {
+            rememberReturnPosition(player, stack);
             LostDimensionTeleporter.teleport(player, targetDimension, 0.0D, 90.0D, 0.0D, true);
         }
     }
 
-    private static void useGalaxyBeacon(ServerPlayer player) {
+    private static void useGalaxyBeacon(ServerPlayer player, ItemStack stack) {
         if (isInLostDimension(player, "nonexistence")) {
-            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
+            teleportToReturnPosition(player, stack);
         } else {
+            rememberReturnPosition(player, stack);
             LostDimensionTeleporter.teleport(player, "nonexistence", 24.0D, 110.0D, 17.0D, false);
         }
     }
 
-    private static void useMagicConch(ServerPlayer player) {
+    private static void useMagicConch(ServerPlayer player, ItemStack stack) {
         if (isInLostDimension(player, "shadowsea")) {
-            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
+            teleportToReturnPosition(player, stack);
         } else {
+            rememberReturnPosition(player, stack);
             LostDimensionTeleporter.teleport(player, "shadowsea", 0.0D, 96.0D, 0.0D, true);
         }
     }
@@ -98,10 +105,11 @@ public class LostDimensionItem extends Item {
         }
         if (LostInfinity.MODID.equals(player.level().dimension().location().getNamespace())
                 && player.level().dimension().location().getPath().startsWith("cartographerrealm")) {
-            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
+            teleportToReturnPosition(player, stack);
             return;
         }
 
+        rememberReturnPosition(player, stack);
         int floor = getSolarFloor(stack);
         String dimension = floor == 1 ? "cartographerrealmmid" : floor == 2 ? "cartographerrealmbot" : "cartographerrealmtop";
         double y = floor == 2 ? 36.0D : floor == 1 ? 48.0D : 64.0D;
@@ -111,6 +119,25 @@ public class LostDimensionItem extends Item {
     private static boolean isInLostDimension(ServerPlayer player, String dimension) {
         return LostInfinity.MODID.equals(player.level().dimension().location().getNamespace())
                 && dimension.equals(player.level().dimension().location().getPath());
+    }
+
+    private static void rememberReturnPosition(ServerPlayer player, ItemStack stack) {
+        CompoundTag tag = stack.getOrCreateTag();
+        tag.putString(RETURN_DIMENSION_TAG, player.level().dimension().location().toString());
+        tag.putDouble(RETURN_X_TAG, player.getX());
+        tag.putDouble(RETURN_Y_TAG, player.getY());
+        tag.putDouble(RETURN_Z_TAG, player.getZ());
+    }
+
+    private static void teleportToReturnPosition(ServerPlayer player, ItemStack stack) {
+        CompoundTag tag = stack.getOrCreateTag();
+        String dimension = tag.getString(RETURN_DIMENSION_TAG);
+        if (dimension.isBlank() || !dimension.startsWith("minecraft:")) {
+            LostDimensionTeleporter.teleport(player, "overworld", 0.0D, 80.0D, 0.0D, true);
+            return;
+        }
+        String target = "minecraft:overworld".equals(dimension) ? "overworld" : dimension;
+        LostDimensionTeleporter.teleport(player, target, tag.getDouble(RETURN_X_TAG), tag.getDouble(RETURN_Y_TAG), tag.getDouble(RETURN_Z_TAG), true);
     }
 
     private static int getSolarFloor(ItemStack stack) {
