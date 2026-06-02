@@ -310,6 +310,9 @@ Current compile result:
   - Result: build succeeded with a modern `lostinfinity:machine` recipe serializer/type, datapack-backed machine processing, 29 generated machine recipes, fluid/NBT recipe fields, biome tags, and server datagen providers.
   - Command: `.\gradlew.bat runData`
   - Result: datagen completed successfully and emitted the machine recipe/biome tag provider output under `src/generated/resources`.
+- Client UI/HUD compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with recovered legacy GUI texture selection for the shared machine screen plus modern health, distortion, and held-item energy/ammo/mode overlays.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -339,6 +342,7 @@ Current main blockers:
 - The original custom potion/effect set is registered and now has a shared recovered interaction layer, but exact per-item application sources, client overlays such as distortion, exact icon sheets, and every edge-case interaction still need targeted ports.
 - The recovered particle/sound assets are present and a first modern trigger layer is wired, but exact legacy particle classes, moving/looping sound packets, every mob ambient/hurt/death mapping, and custom block/entity render beam effects still need targeted ports.
 - The old packet system now has a modern `SimpleChannel` backbone and first packet ports, but exact old GUI packet semantics, mind-control routing, moving/looping sound state, shipment/supply inventory sync, and full animation-state consumption still need targeted reconstruction.
+- The shared machine screen now uses recovered legacy GUI art by machine family, and first HUD overlays exist for health values, distortion cover, and held-item status. Exact original per-machine button layouts, click handlers, item-specific GUIs, boss bars, target vision, supply/trader screens, and every original overlay still need targeted ports.
 
 Recommended next path:
 - Port in vertical slices instead of trying to compile all 2,169 decompiled Java files at once.

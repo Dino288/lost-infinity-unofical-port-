@@ -9,6 +9,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import xol.lostinfinity.blockentity.LostMachineBlockEntity;
 import xol.lostinfinity.registry.ModMenus;
 
 public class LostMachineMenu extends AbstractContainerMenu {
@@ -72,6 +73,10 @@ public class LostMachineMenu extends AbstractContainerMenu {
 
     public int puzzleState() {
         return data.get(4);
+    }
+
+    public String machineId() {
+        return container instanceof LostMachineBlockEntity machine ? machine.machineId() : "lost_machine";
     }
 
     @Override

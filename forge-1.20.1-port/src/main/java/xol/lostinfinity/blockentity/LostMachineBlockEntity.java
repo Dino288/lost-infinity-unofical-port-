@@ -393,6 +393,10 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         return data;
     }
 
+    public String machineId() {
+        return machineId;
+    }
+
     public void dropContents(Level level, BlockPos pos) {
         SimpleContainer container = new SimpleContainer(items.size());
         for (int index = 0; index < items.size(); index++) {
