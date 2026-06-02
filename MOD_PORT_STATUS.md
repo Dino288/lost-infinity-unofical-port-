@@ -293,6 +293,9 @@ Current compile result:
 - Machine behavior/menu compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with the upgraded machine processor, menu data sync, and screen indicators.
+- Dimension/worldgen exactness compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with Infinite Murk terrain/decor skinning, Nonexistence recovered palette/decor skinning, and portal progression gating.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -304,7 +307,7 @@ Current main blockers:
 - Many items now have broad vanilla-like item classes plus shared special utility, mode, energy, ammo, and reactive behavior layers, but exact original per-item powers, GUI charging systems, true ammo item consumption, summons, particles/sounds, and every named edge case still need manual per-item ports.
 - Recovered projectile IDs now have moving/colliding inferred behavior, but exact original per-projectile classes, owner/team checks, per-item ammo/energy integration, particles, sounds, and summon/block effects are not fully reconstructed yet.
 - Entity textures now render on animated 3D cuboid body plans instead of flat billboards, but original 1.12 model geometry, UV-specific texture mapping, render layers, boss/projectile renderers, and animation states are not fully restored yet.
-- The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects, Lost Infinity biome IDs, and resource ore features, but they still reuse simple Overworld-style noise settings. Original custom chunk generators, structures, terrain blocks, non-ore biome features, and exact portal rituals still need manual porting.
+- The generated dimension JSONs create valid dimension keys and now have portal/dimension effects, Lost Infinity biome IDs, resource ore features, recovered terrain/decor passes for Shadow Sea/Infinite Murk/Nonexistence, and portal relic gating. They still reuse simple Overworld-style noise settings, so exact original chunk-generator math, all biome features, every structure placement rule, and full ritual/progression chains still need manual porting.
 - The original textures are included, but original entity models/render layers/animations have not been fully ported to 1.20.1 yet.
 - Old 1.12.2 block construction APIs, especially `Material`, hardness/resistance setters, registry names, and creative tabs.
 - Old `ITileEntityProvider`/`TileEntity` model needs conversion to 1.20.1 `EntityBlock`/`BlockEntity`/`BlockEntityType`.

@@ -2833,5 +2833,6 @@
     "dimension.lostinfinity.cartographerrealmbot":  "Cartographer Realm Bot",
     "dimension.lostinfinity.grandmasteroutpost":  "Grandmaster Outpost",
     "dimension.lostinfinity.nonexistence":  "Nonexistence",
-    "dimension.lostinfinity.shadowsea":  "Shadow Sea"
+    "dimension.lostinfinity.shadowsea":  "Shadow Sea",
+    "message.lostinfinity.portal.locked":  "The portal will not open without the matching Lost Infinity relic."
 }

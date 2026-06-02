@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
@@ -52,9 +53,192 @@ public final class LostOriginalStructureGeneration {
             generatePuzzleMasterOrigin(level, chunkX, chunkZ);
         } else if ("nonexistence".equals(dimension)) {
             generateNonexistenceGalaxy(level, chunkX, chunkZ);
+            generateNonexistenceDecor(level, chunkX, chunkZ);
+        } else if ("infinitemurk".equals(dimension)) {
+            generateInfiniteMurkDecor(level, chunkX, chunkZ);
         } else if ("shadowsea".equals(dimension)) {
             generateShadowSeaDecor(level, chunkX, chunkZ);
         }
+    }
+
+    private static void generateInfiniteMurkDecor(ServerLevel level, int chunkX, int chunkZ) {
+        Random random = seededRandom(level, chunkX, chunkZ);
+        int baseX = chunkX * 16;
+        int baseZ = chunkZ * 16;
+        skinInfiniteMurkTerrain(level, baseX, baseZ);
+        int plantRuns = 7 + random.nextInt(13);
+        for (int i = 0; i < plantRuns; i++) {
+            BlockPos pos = surfaceTop(level, baseX + random.nextInt(16), baseZ + random.nextInt(16));
+            if (pos == null || !isLostBlock(level.getBlockState(pos.below()), "murksoil", "murkdirt", "murkstone", "igneous_murkstone")) {
+                continue;
+            }
+            int pick = random.nextInt(12);
+            if (pick < 4) {
+                placeLostIfAir(level, pos, "darkvine");
+            } else if (pick < 7) {
+                placeLostIfAir(level, pos, "void_flower");
+            } else if (pick < 10) {
+                generateMurkTree(level, random, pos);
+            } else {
+                placeLostIfAir(level, pos, "gloglobes");
+            }
+        }
+    }
+
+    private static void skinInfiniteMurkTerrain(ServerLevel level, int baseX, int baseZ) {
+        for (int x = baseX; x < baseX + 16; x++) {
+            for (int z = baseZ; z < baseZ + 16; z++) {
+                int surfaceDepth = -1;
+                for (int y = Math.min(level.getMaxBuildHeight() - 1, 190); y > level.getMinBuildHeight(); y--) {
+                    BlockPos pos = new BlockPos(x, y, z);
+                    BlockState state = level.getBlockState(pos);
+                    if (state.isAir()) {
+                        surfaceDepth = -1;
+                        continue;
+                    }
+                    if (!isMinecraftTerrain(state)) {
+                        continue;
+                    }
+                    surfaceDepth++;
+                    BlockState replacement = surfaceDepth == 0
+                            ? lostState("murksoil", ModBlocks.MURKSOIL.get().defaultBlockState())
+                            : surfaceDepth < 4
+                                    ? lostState("murkdirt", ModBlocks.MURKDIRT.get().defaultBlockState())
+                                    : randomMurkStone(level, x, y, z);
+                    level.setBlock(pos, replacement, 2);
+                }
+            }
+        }
+    }
+
+    private static BlockState randomMurkStone(ServerLevel level, int x, int y, int z) {
+        long value = Math.floorMod(level.getSeed() + x * 734287L + y * 912931L + z * 438289L, 160L);
+        if (value == 0 && y < 42) {
+            return lostState("multiversite_murk", ModBlocks.MULTIVERSITE_MURK.get().defaultBlockState());
+        }
+        if (value < 3 && y < 55) {
+            return lostState("lucient_ore", ModBlocks.LUCIENT_ORE.get().defaultBlockState());
+        }
+        if (value < 6 && y < 70) {
+            return lostState("darksteel_ore", ModBlocks.DARKSTEEL_ORE.get().defaultBlockState());
+        }
+        if (value < 9 && y < 34) {
+            return lostState("atomite_ore", ModBlocks.ATOMITE_ORE.get().defaultBlockState());
+        }
+        return value < 18
+                ? lostState("igneous_murkstone", ModBlocks.IGNEOUS_MURKSTONE.get().defaultBlockState())
+                : lostState("murkstone", ModBlocks.MURKSTONE.get().defaultBlockState());
+    }
+
+    private static void generateMurkTree(ServerLevel level, Random random, BlockPos pos) {
+        int height = 4 + random.nextInt(4);
+        for (int y = 0; y < height; y++) {
+            placeIfAir(level, pos.above(y), lostState("logs_murk", Blocks.OAK_LOG.defaultBlockState()));
+        }
+        BlockState leaves = lostState("leaves_murk", Blocks.OAK_LEAVES.defaultBlockState());
+        BlockPos top = pos.above(height);
+        for (int x = -2; x <= 2; x++) {
+            for (int z = -2; z <= 2; z++) {
+                for (int y = -1; y <= 1; y++) {
+                    if (Math.abs(x) + Math.abs(z) + Math.abs(y) < 5) {
+                        placeIfAir(level, top.offset(x, y, z), leaves);
+                    }
+                }
+            }
+        }
+    }
+
+    private static void generateNonexistenceDecor(ServerLevel level, int chunkX, int chunkZ) {
+        Random random = seededRandom(level, chunkX, chunkZ);
+        int baseX = chunkX * 16;
+        int baseZ = chunkZ * 16;
+        skinNonexistenceTerrain(level, baseX, baseZ);
+        int runs = 5 + random.nextInt(11);
+        for (int i = 0; i < runs; i++) {
+            BlockPos pos = surfaceTop(level, baseX + random.nextInt(16), baseZ + random.nextInt(16));
+            if (pos == null) {
+                continue;
+            }
+            if (isLostBlock(level.getBlockState(pos.below()), "astrorock", "astrosteel", "mossy_astrorock", "enghouled_astrorock")) {
+                placeLostIfAir(level, pos, random.nextBoolean() ? "astrorock_crystal_blue" : "astrorock_crystal_pink");
+            } else if (isLostBlock(level.getBlockState(pos.below()), "forgerock", "lumio_rock", "archlumio_rock", "blightlumio_rock")) {
+                int pick = random.nextInt(8);
+                if (pick < 2) {
+                    placeLostIfAir(level, pos, "forgebloom");
+                } else if (pick < 4) {
+                    placeLostIfAir(level, pos, "forgeshroom_blue");
+                } else if (pick < 6) {
+                    placeLostIfAir(level, pos, "archvine");
+                } else {
+                    placeLostIfAir(level, pos, "blightvine");
+                }
+            }
+        }
+    }
+
+    private static void skinNonexistenceTerrain(ServerLevel level, int baseX, int baseZ) {
+        for (int x = baseX; x < baseX + 16; x++) {
+            for (int z = baseZ; z < baseZ + 16; z++) {
+                int surfaceDepth = -1;
+                for (int y = Math.min(level.getMaxBuildHeight() - 1, 210); y > level.getMinBuildHeight(); y--) {
+                    BlockPos pos = new BlockPos(x, y, z);
+                    BlockState state = level.getBlockState(pos);
+                    if (state.isAir()) {
+                        surfaceDepth = -1;
+                        continue;
+                    }
+                    if (!isMinecraftTerrain(state)) {
+                        continue;
+                    }
+                    surfaceDepth++;
+                    level.setBlock(pos, nonexistenceState(level, x, y, z, surfaceDepth), 2);
+                }
+            }
+        }
+    }
+
+    private static BlockState nonexistenceState(ServerLevel level, int x, int y, int z, int surfaceDepth) {
+        long zone = Math.floorMod((x >> 5) * 31L + (z >> 5) * 17L + level.getSeed(), 5L);
+        long value = Math.floorMod(level.getSeed() + x * 4111L + y * 131L + z * 7351L, 200L);
+        if (value == 0 && y < 48) {
+            return lostState("multiversite_overworld", ModBlocks.MULTIVERSITE_OVERWORLD.get().defaultBlockState());
+        }
+        if (value < 4 && y < 60) {
+            return lostState("lumio_ore", ModBlocks.LUMIO_ORE.get().defaultBlockState());
+        }
+        if (zone <= 1) {
+            if (surfaceDepth == 0 && value < 35) {
+                return lostState("mossy_astrorock", ModBlocks.MOSSY_ASTROROCK.get().defaultBlockState());
+            }
+            if (surfaceDepth < 3 && value < 70) {
+                return randomAstroColor(value);
+            }
+            return value < 95
+                    ? lostState("astrosteel", ModBlocks.ASTROSTEEL.get().defaultBlockState())
+                    : lostState("astrorock", ModBlocks.ASTROROCK.get().defaultBlockState());
+        }
+        if (zone == 2) {
+            return surfaceDepth == 0
+                    ? lostState("lumio_rock", ModBlocks.LUMIO_ROCK.get().defaultBlockState())
+                    : lostState("forgerock", ModBlocks.FORGEROCK.get().defaultBlockState());
+        }
+        if (zone == 3) {
+            return surfaceDepth == 0
+                    ? lostState("archlumgrass", ModBlocks.ARCHLUMGRASS.get().defaultBlockState())
+                    : lostState("archlumio_rock", ModBlocks.ARCHLUMIO_ROCK.get().defaultBlockState());
+        }
+        return surfaceDepth == 0
+                ? lostState("blightlumgrass", ModBlocks.BLIGHTLUMGRASS.get().defaultBlockState())
+                : lostState("blightlumio_rock", ModBlocks.BLIGHTLUMIO_ROCK.get().defaultBlockState());
+    }
+
+    private static BlockState randomAstroColor(long value) {
+        return switch ((int) (value % 4)) {
+            case 0 -> lostState("astrorock_blue", ModBlocks.ASTROROCK_BLUE.get().defaultBlockState());
+            case 1 -> lostState("astrorock_green", ModBlocks.ASTROROCK_GREEN.get().defaultBlockState());
+            case 2 -> lostState("astrorock_purple", ModBlocks.ASTROROCK_PURPLE.get().defaultBlockState());
+            default -> lostState("astrorock_yellow", ModBlocks.ASTROROCK_YELLOW.get().defaultBlockState());
+        };
     }
 
     private static void generateShadowSeaDecor(ServerLevel level, int chunkX, int chunkZ) {
@@ -341,6 +525,41 @@ public final class LostOriginalStructureGeneration {
         if (level.getBlockState(pos).isAir()) {
             level.setBlock(pos, state, 2);
         }
+    }
+
+    private static void placeLostIfAir(ServerLevel level, BlockPos pos, String blockName) {
+        BlockState state = lostState(blockName, Blocks.AIR.defaultBlockState());
+        if (!state.isAir()) {
+            placeIfAir(level, pos, state);
+        }
+    }
+
+    private static BlockPos surfaceTop(ServerLevel level, int x, int z) {
+        for (int y = Math.min(level.getMaxBuildHeight() - 2, 210); y > level.getMinBuildHeight() + 1; y--) {
+            BlockPos pos = new BlockPos(x, y, z);
+            if (level.getBlockState(pos).isAir() && !level.getBlockState(pos.below()).isAir()) {
+                return pos;
+            }
+        }
+        return null;
+    }
+
+    private static boolean isLostBlock(BlockState state, String... names) {
+        ResourceLocation location = BuiltInRegistries.BLOCK.getKey(state.getBlock());
+        if (!LostInfinity.MODID.equals(location.getNamespace())) {
+            return false;
+        }
+        for (String name : names) {
+            if (name.equals(location.getPath())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static BlockState lostState(String name, BlockState fallback) {
+        Block block = BuiltInRegistries.BLOCK.get(new ResourceLocation(LostInfinity.MODID, name));
+        return block == Blocks.AIR ? fallback : block.defaultBlockState();
     }
 
     private static void generateNonexistenceGalaxy(ServerLevel level, int chunkX, int chunkZ) {
