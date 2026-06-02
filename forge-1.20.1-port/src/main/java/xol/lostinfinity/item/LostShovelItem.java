@@ -11,14 +11,20 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 
 public class LostShovelItem extends ShovelItem {
-    public LostShovelItem(Tier tier, float attackDamageModifier, float attackSpeedModifier, Properties properties) {
+    private final String itemName;
+
+    public LostShovelItem(String itemName, Tier tier, float attackDamageModifier, float attackSpeedModifier, Properties properties) {
         super(tier, attackDamageModifier, attackSpeedModifier, properties);
+        this.itemName = itemName;
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide()) {
+            if (LostItemBehavior.useModeEnergyItem(itemName, stack, level, player, hand)) {
+                return InteractionResultHolder.success(stack);
+            }
             player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 160, 0, true, false));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120, 0, true, false));
             player.getCooldowns().addCooldown(this, 140);

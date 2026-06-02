@@ -11,14 +11,20 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 
 public class LostHoeItem extends HoeItem {
-    public LostHoeItem(Tier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
+    private final String itemName;
+
+    public LostHoeItem(String itemName, Tier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
         super(tier, attackDamageModifier, attackSpeedModifier, properties);
+        this.itemName = itemName;
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide()) {
+            if (LostItemBehavior.useModeEnergyItem(itemName, stack, level, player, hand)) {
+                return InteractionResultHolder.success(stack);
+            }
             player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0, true, false));
             player.getCooldowns().addCooldown(this, 160);
         }

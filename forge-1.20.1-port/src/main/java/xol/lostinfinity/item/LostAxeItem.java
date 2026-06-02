@@ -21,6 +21,7 @@ public class LostAxeItem extends AxeItem {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        LostItemBehavior.onWeaponHit(itemName, stack, target, attacker);
         if (itemName.contains("forgefire") || itemName.contains("thermo")) {
             target.setSecondsOnFire(8);
         }
@@ -34,6 +35,9 @@ public class LostAxeItem extends AxeItem {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide()) {
+            if (LostItemBehavior.useModeEnergyItem(itemName, stack, level, player, hand)) {
+                return InteractionResultHolder.success(stack);
+            }
             if (itemName.contains("forgefire") || itemName.contains("thermo")) {
                 player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 240, 0, true, false));
             } else {

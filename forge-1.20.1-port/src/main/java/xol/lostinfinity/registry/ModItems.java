@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.item.LostArmorItem;
 import xol.lostinfinity.item.LostAxeItem;
 import xol.lostinfinity.item.LostDimensionItem;
 import xol.lostinfinity.item.LostHoeItem;
@@ -43,16 +44,16 @@ public final class ModItems {
             return new LostSpecialUseItem(name, properties.durability(specialUseDurability(name)));
         }
         if (name.endsWith("_helmet") || name.endsWith("helmet") || name.endsWith("headguard") || name.endsWith("mask")) {
-            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.HELMET, properties);
+            return new LostArmorItem(name, ModArmorMaterials.forItemName(name), ArmorItem.Type.HELMET, properties);
         }
         if (name.endsWith("_chestplate") || name.endsWith("chestplate")) {
-            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.CHESTPLATE, properties);
+            return new LostArmorItem(name, ModArmorMaterials.forItemName(name), ArmorItem.Type.CHESTPLATE, properties);
         }
         if (name.endsWith("_leggings") || name.endsWith("leggings")) {
-            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.LEGGINGS, properties);
+            return new LostArmorItem(name, ModArmorMaterials.forItemName(name), ArmorItem.Type.LEGGINGS, properties);
         }
         if (name.endsWith("_boots") || name.endsWith("boots")) {
-            return new ArmorItem(ModArmorMaterials.forItemName(name), ArmorItem.Type.BOOTS, properties);
+            return new LostArmorItem(name, ModArmorMaterials.forItemName(name), ArmorItem.Type.BOOTS, properties);
         }
         if (name.contains("pickaxe")) {
             return new LostPickaxeItem(name, ModToolTiers.LOST_INFINITY, 1, -2.8F, properties);
@@ -61,10 +62,10 @@ public final class ModItems {
             return new LostAxeItem(name, ModToolTiers.LOST_INFINITY, 5.0F, -3.0F, properties);
         }
         if (name.contains("shovel")) {
-            return new LostShovelItem(ModToolTiers.LOST_INFINITY, 1.5F, -3.0F, properties);
+            return new LostShovelItem(name, ModToolTiers.LOST_INFINITY, 1.5F, -3.0F, properties);
         }
         if (name.endsWith("_hoe") || name.endsWith("hoe")) {
-            return new LostHoeItem(ModToolTiers.LOST_INFINITY, -2, -1.0F, properties);
+            return new LostHoeItem(name, ModToolTiers.LOST_INFINITY, -2, -1.0F, properties);
         }
         if (name.contains("bow")) {
             return new BowItem(properties.durability(768));
@@ -73,7 +74,7 @@ public final class ModItems {
             return new ShieldItem(properties.durability(672));
         }
         if (isRangedUtility(name)) {
-            return new LostRangedItem(properties.durability(512), name.contains("bomb") ? 1.0F : 1.8F, name.contains("bomb") ? 30 : 14, rangedDamage(name));
+            return new LostRangedItem(name, properties.durability(512), name.contains("bomb") ? 1.0F : 1.8F, name.contains("bomb") ? 30 : 14, rangedDamage(name));
         }
         if (name.contains("sword") || name.contains("blade") || name.contains("saber") || name.contains("sabre") || name.contains("claw")) {
             return new LostSwordItem(name, ModToolTiers.LOST_INFINITY, 6, -2.4F, properties);

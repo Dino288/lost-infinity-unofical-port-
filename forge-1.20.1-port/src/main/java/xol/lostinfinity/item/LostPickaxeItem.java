@@ -38,6 +38,7 @@ public class LostPickaxeItem extends PickaxeItem {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        LostItemBehavior.onWeaponHit(itemName, stack, target, attacker);
         if (itemName.contains("forgefire")) {
             target.setSecondsOnFire(6);
         } else if (itemName.contains("nightmare")) {
@@ -51,6 +52,9 @@ public class LostPickaxeItem extends PickaxeItem {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide()) {
+            if (LostItemBehavior.useModeEnergyItem(itemName, stack, level, player, hand)) {
+                return InteractionResultHolder.success(stack);
+            }
             if (itemName.contains("forgefire")) {
                 player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 240, 0, true, false));
                 player.getCooldowns().addCooldown(this, 160);

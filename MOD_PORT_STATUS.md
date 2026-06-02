@@ -226,6 +226,16 @@ What was done:
   - inferred broad original-style projectile effects from recovered IDs: fire/ember burning, poison/acid/blight/plague poison, dark/death/wither effects, cryo/stun/ink slowing, lightning/tesla/nullified shocks, water/whirlpool slowing, selector/void nullification, pull chains/tethers, gravity launch, piercing lasers/beams/chains, and homing/tracer/chaser correction
   - added explosion behavior for recovered bomb, explosive, meteor, comet, asteroid, rocket, TNT, doom, and plasma projectile families
   - exact per-projectile classes, ownership/team rules, custom models, custom particles/sounds, block placement, summon behavior, and legacy damage formulas still need deeper reconstruction
+- Added the next item/tool/armor exact-behavior slice:
+  - added `LostItemBehavior` as a shared NBT-backed behavior layer for recovered tools, weapons, ranged items, special utility items, and armor
+  - added mode cycling with sneak-right-click for recovered high-power items such as gauntlet, selector/selection, timekeeper, world splitter, black hole, and ultimatum families
+  - added item NBT counters for energy and ammo, with battery/energy-cell and ammo/shell/cartridge/magazine recharge behavior
+  - added mode powers for Strike, Blink, Burst, Summon, Stasis, and Pull-style item families, including lightning summon, short teleport, nullified/stasis effects, area bursts, and defensive buffs
+  - wired shared weapon-hit effects into swords, pickaxes, and axes for selector/nullified, time/stasis, sonic/reverberance splash, resurgence healing, ultimatum/world-splitter bonus magic damage, and black-hole launch behavior
+  - added `LostArmorItem` so recovered armor pieces now have item-owned behavior, mode/energy tooltips, and armor tick hooks instead of being plain `ArmorItem`
+  - added per-piece armor tick/reactive effects for jet/sky/wing slow-fall, cthulhu/void/murk vision, tesla/voltaic resistance/shock, thorn/spike retaliation, blight/plague poison, and fire/plasmythic burning
+  - updated ranged items to use the shared ammo/energy behavior and show NBT counters in tooltips
+  - exact per-item legacy recipes, GUI charging systems, true ammo item consumption, original summons, all custom particles/sounds, and every named item edge case still need deeper reconstruction
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -266,6 +276,9 @@ Current compile result:
 - Projectile behavior compile test:
   - Command: `.\gradlew.bat build`
   - Result: build succeeded with the upgraded recovered projectile behavior base.
+- Item/tool/armor behavior compile test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with the new shared mode/energy/ammo/reactive behavior layer and custom armor item wrapper.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -274,7 +287,7 @@ Current compile result:
 Current main blockers:
 - Galaxy, Shadow Sea, and the first Deviant/Prime/Titan families now have behavior slices, but many other registered mobs still use basic placeholder AI instead of original attacks, movement, bosses, animations, or projectile behavior.
 - The new Deviant/Prime/Titan AI is a conservative recovered-family port; exact per-mob projectile classes, boss phases, summon logic, and special legacy edge cases still need manual reconstruction.
-- Many items now have broad vanilla-like item classes plus a first-pass special utility behavior layer, but exact original right-click powers, cooldowns, projectiles, energy/ammo systems, status effects, and custom equipment effects still need manual per-item ports.
+- Many items now have broad vanilla-like item classes plus shared special utility, mode, energy, ammo, and reactive behavior layers, but exact original per-item powers, GUI charging systems, true ammo item consumption, summons, particles/sounds, and every named edge case still need manual per-item ports.
 - Recovered projectile IDs now have moving/colliding inferred behavior, but exact original per-projectile classes, owner/team checks, per-item ammo/energy integration, particles, sounds, and summon/block effects are not fully reconstructed yet.
 - Entity textures now render on animated 3D cuboid body plans instead of flat billboards, but original 1.12 model geometry, UV-specific texture mapping, render layers, boss/projectile renderers, and animation states are not fully restored yet.
 - The generated dimension JSONs create valid dimension keys and now have first-pass portal/dimension effects, Lost Infinity biome IDs, and resource ore features, but they still reuse simple Overworld-style noise settings. Original custom chunk generators, structures, terrain blocks, non-ore biome features, and exact portal rituals still need manual porting.

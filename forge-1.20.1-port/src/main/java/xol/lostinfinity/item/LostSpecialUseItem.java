@@ -43,6 +43,9 @@ public class LostSpecialUseItem extends Item {
         if (level.isClientSide()) {
             return InteractionResultHolder.sidedSuccess(stack, true);
         }
+        if (LostItemBehavior.useModeEnergyItem(itemName, stack, level, player, hand)) {
+            return InteractionResultHolder.success(stack);
+        }
 
         if (isCureItem()) {
             clearBadEffects(player);
@@ -115,6 +118,7 @@ public class LostSpecialUseItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.literal("Recovered special item: first-pass 1.20.1 behavior restored.").withStyle(ChatFormatting.DARK_AQUA));
+        LostItemBehavior.appendModeEnergyTooltip(itemName, stack, tooltip);
     }
 
     private boolean isCureItem() {

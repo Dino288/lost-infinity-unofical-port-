@@ -21,6 +21,7 @@ public class LostSwordItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        LostItemBehavior.onWeaponHit(itemName, stack, target, attacker);
         if (itemName.contains("starfire") || itemName.contains("solar") || itemName.contains("fire")) {
             target.setSecondsOnFire(6);
         }
@@ -40,6 +41,9 @@ public class LostSwordItem extends SwordItem {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide()) {
+            if (LostItemBehavior.useModeEnergyItem(itemName, stack, level, player, hand)) {
+                return InteractionResultHolder.success(stack);
+            }
             if (itemName.contains("phantom") || itemName.contains("spectros")) {
                 player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 120, 0, true, false));
             } else if (itemName.contains("eternity") || itemName.contains("infinity") || itemName.contains("multiversal")) {

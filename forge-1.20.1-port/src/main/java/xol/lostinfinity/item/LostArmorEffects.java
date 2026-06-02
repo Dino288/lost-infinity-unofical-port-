@@ -78,7 +78,17 @@ public final class LostArmorEffects {
 
         if (event.getEntity() instanceof Player target) {
             String targetSet = fullArmorSet(target);
-            if (targetSet.contains("plasmythic") && event.getSource().getEntity() instanceof LivingEntity attacker) {
+            LivingEntity attacker = event.getSource().getEntity() instanceof LivingEntity living ? living : null;
+            if (attacker != null) {
+                for (EquipmentSlot slot : new EquipmentSlot[] { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET }) {
+                    ItemStack armor = target.getItemBySlot(slot);
+                    String itemName = armorItemName(armor);
+                    if (!itemName.isEmpty()) {
+                        LostItemBehavior.onArmorHurt(itemName, armor, target, attacker);
+                    }
+                }
+            }
+            if (targetSet.contains("plasmythic") && attacker != null) {
                 attacker.setSecondsOnFire(targetSet.contains("prime") ? 8 : 4);
             }
             if (targetSet.contains("graviterium")) {
@@ -131,5 +141,13 @@ public final class LostArmorEffects {
             return path.substring(0, path.length() - "mask".length());
         }
         return "";
+    }
+
+    private static String armorItemName(ItemStack stack) {
+        if (stack.isEmpty()) {
+            return "";
+        }
+        ResourceLocation id = stack.getItem().builtInRegistryHolder().key().location();
+        return LostInfinity.MODID.equals(id.getNamespace()) ? id.getPath().toLowerCase(Locale.ROOT) : "";
     }
 }
