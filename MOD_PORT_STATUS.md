@@ -202,6 +202,12 @@ What was done:
   - generated Lost Infinity item grouping tags for ingots, gems, dusts, nuggets, plates, rods, gears, tools, weapons, armor, and special-use items
   - generated Forge common compatibility tags for ores/storage blocks and material groups so recipes/datapacks can target shared categories
   - generated entity grouping tags for deviants, galaxy mobs, Shadow Sea mobs, projectiles, and obvious bosses
+- Ported the recovered legacy server commands to Brigadier:
+  - kept the existing `/lostinfinity dimension <id>` command for the eight modern Lost Infinity dimensions
+  - added legacy aliases `/clearrifts <range>`, `/clearfractures <range>`, `/setdeviant <name>`, and `/chargeep`
+  - added matching `/lostinfinity clearrifts`, `/lostinfinity clearfractures`, `/lostinfinity setdeviant`, and `/lostinfinity chargeep` subcommands
+  - `clearrifts` removes recovered rift-like entity IDs in range, `clearfractures` removes `cosmic_fracture` blocks in range, `setdeviant` preserves the old Branch of Life NBT selection key, and `chargeep` fills Essence Possessor NBT essence to 10
+  - the old supporting systems for stored deviants, rifts, fractures, and Essence Possessor combat behavior still need deeper original-specific ports
 
 Current compile result:
 - Command: `.\gradlew.bat build`
@@ -228,6 +234,11 @@ Current compile result:
   - Result: build succeeded with 41 generated tag JSON files and the mining requirement patch.
   - Command: `.\gradlew.bat runServer --args nogui`
   - Result: server reached `Done`, confirming the generated tags load.
+- Command port smoke test:
+  - Command: `.\gradlew.bat build`
+  - Result: build succeeded with the recovered command aliases registered.
+  - Command: `.\gradlew.bat runServer --args nogui`
+  - Result: server reached `Done`, confirming command registration loads.
 - The preserved legacy decompiled source still does not compile as-is.
 - Historical error counts:
   - First compile pass after decompile had `93,996` errors.
@@ -252,6 +263,7 @@ Current main blockers:
 - Decompiled source contains SRG method names like `func_180639_a`, so methods need remapping to modern Mojang names.
 - Some mechanical class renames were applied, such as `TileEntity*` -> `BlockEntity*`, so related references and constructors need deliberate cleanup.
 - First-pass mining/material/tool/armor/entity tags exist, but biome tags, handwritten datagen providers, and deeper loot/recipe generation still need work.
+- The recovered command names are ported, but several systems they operate on are still placeholder-level until the related item/entity/block behavior is fully reconstructed.
 
 Recommended next path:
 - Port in vertical slices instead of trying to compile all 2,169 decompiled Java files at once.
