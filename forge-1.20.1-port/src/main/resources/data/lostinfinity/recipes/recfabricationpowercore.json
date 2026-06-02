@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xyx",
+                    "xyx",
+                    "xyx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:synthetic_fibre"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:ion_crystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:fabrication_power_core"
+               }
+}

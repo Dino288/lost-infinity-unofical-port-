@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "bdb",
+                    "aca",
+                    "bdb"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:electrolytic_rod"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:incandescite_ingot"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:spacetime_trigger"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:supermutated_iron"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:iron_tower"
+               }
+}

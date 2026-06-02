@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:clovinite_power_bank"
+                        },
+                        {
+                            "item":  "lostinfinity:high_tolerance_wire"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:external_clovinite_battery"
+               }
+}

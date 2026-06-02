@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "yay",
+                    "yzy",
+                    " x "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:voidcut_metal"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:superchargedcell"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:blazingstar"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:forgefirepickaxe"
+               }
+}

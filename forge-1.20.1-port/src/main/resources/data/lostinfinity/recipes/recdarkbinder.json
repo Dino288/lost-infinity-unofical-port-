@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "k  ",
+                    "vx ",
+                    " vk"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:interlocking_spine"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:nightmare_solution"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:myrite_chunk"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:darkbinder"
+               }
+}

@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "yay",
+                    " z "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:celestialiron"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:voidcut_metal"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:mechanicalpowercell"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:superstimulant"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:toxin_filter"
+               }
+}

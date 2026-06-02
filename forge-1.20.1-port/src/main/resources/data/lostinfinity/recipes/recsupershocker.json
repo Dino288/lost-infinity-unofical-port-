@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:arc_zapper"
+                        },
+                        {
+                            "item":  "lostinfinity:plasma_materializer"
+                        },
+                        {
+                            "item":  "lostinfinity:ultrapowered_capacitor"
+                        },
+                        {
+                            "item":  "lostinfinity:ultrapowered_capacitor"
+                        },
+                        {
+                            "item":  "lostinfinity:gem_anticipation"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:super_shocker"
+               }
+}

@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:datadrive"
+                        },
+                        {
+                            "item":  "lostinfinity:unstable_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:unstable_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:unstable_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:superstimulant"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:datadrive_speed"
+               }
+}

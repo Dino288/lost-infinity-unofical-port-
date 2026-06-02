@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "aca",
+                    "bdb",
+                    "ebc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:welded_atomite"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:organic_wire"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:glowing_organ"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:power_control_disc"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:supermutated_pelt"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:energetic_heart"
+               }
+}

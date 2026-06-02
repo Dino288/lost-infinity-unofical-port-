@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "aaa",
+                    "xxx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:celestialemerald"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:variantanalyzerempty"
+               }
+}

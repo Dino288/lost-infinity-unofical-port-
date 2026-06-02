@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "kxa",
+                    "kzy",
+                    " z "
+                ],
+    "key":  {
+                "k":  {
+                          "item":  "lostinfinity:celestialiron"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:gem_retrospection"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:dual_power_assembly"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:scorchedpipe"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:head_collector"
+               }
+}

@@ -1,0 +1,26 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:electrified_quartz"
+                        },
+                        {
+                            "item":  "lostinfinity:electrified_quartz"
+                        },
+                        {
+                            "item":  "lostinfinity:electrified_quartz"
+                        },
+                        {
+                            "item":  "lostinfinity:hard_crystal"
+                        },
+                        {
+                            "item":  "lostinfinity:hard_crystal"
+                        },
+                        {
+                            "item":  "lostinfinity:polycharge_solution"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:ion_crystal"
+               }
+}

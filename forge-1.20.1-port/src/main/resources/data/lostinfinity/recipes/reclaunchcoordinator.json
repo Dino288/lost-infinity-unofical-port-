@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xax",
+                    "aya",
+                    "yyy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:polycharge_solution"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:digital_panel"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:launch_coordinator_empty"
+               }
+}

@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:frozen_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:acidicooze"
+                        },
+                        {
+                            "item":  "lostinfinity:acidicooze"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:slippery_ingot"
+               }
+}

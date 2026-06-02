@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "beb",
+                    "aca",
+                    "bdb"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:shimmering_gloss"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:exothermite"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:giant_heart"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:clay_support_base"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:clay_support_cap"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:potion_polarizer"
+               }
+}

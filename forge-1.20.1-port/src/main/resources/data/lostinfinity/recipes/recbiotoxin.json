@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:concentratedvenom"
+                        },
+                        {
+                            "item":  "lostinfinity:toxin_coated_fangs"
+                        },
+                        {
+                            "item":  "lostinfinity:toxin_coated_fangs"
+                        },
+                        {
+                            "item":  "lostinfinity:toxin_coated_fangs"
+                        },
+                        {
+                            "item":  "lostinfinity:toxin_coated_fangs"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:biotoxin"
+               }
+}

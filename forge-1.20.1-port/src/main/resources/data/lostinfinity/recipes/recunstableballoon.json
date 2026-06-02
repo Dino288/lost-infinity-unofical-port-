@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " x ",
+                    "x x",
+                    "vdv"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:glowing_organ"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:elastic_tissue"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:elastic_thread"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:unstable_balloon"
+               }
+}

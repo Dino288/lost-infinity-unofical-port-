@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "bc ",
+                    "cdb",
+                    " ba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:rapier_of_revenge"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:pickle"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:auradine_disc"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:multigalactic_power_crystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:sabre_of_the_pickle_lord"
+               }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xvx",
+                    "xax",
+                    " x "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:deviant_gold"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:mastercharged_redstone"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:glowblood_solution"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:electron_recycler"
+               }
+}

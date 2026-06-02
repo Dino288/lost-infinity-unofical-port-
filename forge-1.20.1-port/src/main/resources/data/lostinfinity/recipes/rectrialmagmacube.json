@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xax",
+                    "xxx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:celestialiron"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:supermutated_magmacream"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:trialmagmacube"
+               }
+}

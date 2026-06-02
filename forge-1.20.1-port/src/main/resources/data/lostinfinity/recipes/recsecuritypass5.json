@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:security_pass_4"
+                        },
+                        {
+                            "item":  "lostinfinity:linked_bone"
+                        },
+                        {
+                            "item":  "lostinfinity:polyionite"
+                        },
+                        {
+                            "item":  "lostinfinity:lucient"
+                        },
+                        {
+                            "item":  "lostinfinity:lucient"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:security_pass_5"
+               }
+}

@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:deviant_iron"
+                        },
+                        {
+                            "item":  "lostinfinity:deviant_iron"
+                        },
+                        {
+                            "item":  "lostinfinity:deviant_iron"
+                        },
+                        {
+                            "item":  "lostinfinity:deviant_spidereye"
+                        },
+                        {
+                            "item":  "lostinfinity:deviant_spidereye"
+                        },
+                        {
+                            "item":  "lostinfinity:deviant_spidereye"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_hurt"
+               }
+}

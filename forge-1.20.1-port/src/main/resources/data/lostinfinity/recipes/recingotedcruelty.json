@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " x ",
+                    "yay",
+                    " x "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:deviantshulkershell"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:cube_cruelty"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:gem_cruelty"
+               }
+}

@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:polycharge_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:polycharge_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:polycharge_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:lifeboundemerald"
+                        },
+                        {
+                            "item":  "lostinfinity:lifeboundemerald"
+                        },
+                        {
+                            "item":  "lostinfinity:lifeboundemerald"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_regenerative"
+               }
+}

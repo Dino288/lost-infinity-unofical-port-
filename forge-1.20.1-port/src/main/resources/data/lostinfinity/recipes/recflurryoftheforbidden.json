@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "kev",
+                    "m a",
+                    "kpv"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:fury_of_the_feared"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:deviant_skull"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:gem_of_illusion"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:clovinite_power_hub"
+                      },
+                "p":  {
+                          "item":  "lostinfinity:rewired_ion_cell"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:citrine_thyratron"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:flurry_of_the_forbidden"
+               }
+}

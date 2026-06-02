@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "yx ",
+                    " x ",
+                    " xy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:superheatedingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:deviantstring"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:unbreakablechain"
+               }
+}

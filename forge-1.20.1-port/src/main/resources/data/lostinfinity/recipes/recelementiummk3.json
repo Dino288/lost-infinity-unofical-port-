@@ -1,0 +1,32 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:elementium_bow_mk2"
+                        },
+                        {
+                            "item":  "lostinfinity:biotoxin"
+                        },
+                        {
+                            "item":  "lostinfinity:biotoxin"
+                        },
+                        {
+                            "item":  "lostinfinity:gloominessence_cubes"
+                        },
+                        {
+                            "item":  "lostinfinity:gloominessence_cubes"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_crystals"
+                        },
+                        {
+                            "item":  "lostinfinity:incandescite_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:incandescite_ingot"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:elementium_bow_mk3"
+               }
+}

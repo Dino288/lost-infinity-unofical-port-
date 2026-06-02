@@ -7,6 +7,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import xol.lostinfinity.registry.ModBlocks;
 import xol.lostinfinity.registry.ModCreativeTabs;
+import xol.lostinfinity.registry.ModEffects;
 import xol.lostinfinity.registry.ModEntities;
 import xol.lostinfinity.registry.ModItems;
 import xol.lostinfinity.registry.ModSpawnEggs;
@@ -19,6 +20,7 @@ public final class LostInfinity {
     public LostInfinity(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
         ModBlocks.BLOCKS.register(modEventBus);
+        ModEffects.MOB_EFFECTS.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
         ModSpawnEggs.touch();
         ModItems.ITEMS.register(modEventBus);

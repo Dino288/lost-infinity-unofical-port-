@@ -1,0 +1,18 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:glow_bomb"
+                        },
+                        {
+                            "item":  "lostinfinity:ultraviolet_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:ultraviolet_solution"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:ultraviolet_bomb",
+                   "count":  2
+               }
+}

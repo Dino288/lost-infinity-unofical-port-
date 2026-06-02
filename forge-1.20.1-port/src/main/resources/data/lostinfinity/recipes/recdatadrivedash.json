@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:datadrive"
+                        },
+                        {
+                            "item":  "lostinfinity:masterenthralled_emerald"
+                        },
+                        {
+                            "item":  "lostinfinity:masterenthralled_emerald"
+                        },
+                        {
+                            "item":  "lostinfinity:masterenthralled_emerald"
+                        },
+                        {
+                            "item":  "lostinfinity:ultraflight_wing"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:datadrive_dash"
+               }
+}

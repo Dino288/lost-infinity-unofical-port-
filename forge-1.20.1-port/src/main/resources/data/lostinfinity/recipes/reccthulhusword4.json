@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "a  ",
+                    " bc",
+                    " cc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:solarum_vial"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:lucient_ingot"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:synthesized_astrometal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:cthulhu_sword_of_peace"
+               }
+}

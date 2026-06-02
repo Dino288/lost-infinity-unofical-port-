@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cea",
+                    "d f",
+                    "ceb"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:rgb_illuminator"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:aligned_disc"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:darksteel_sheets"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:infused_nicronium"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:phototenzyte_ingot"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:deviantstring"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:astral_bow"
+               }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " a ",
+                    "xxx",
+                    "zaz"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:supermutated_shell"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:inverse_magnecronite"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:voidcut_metal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:vacuum_container"
+               }
+}

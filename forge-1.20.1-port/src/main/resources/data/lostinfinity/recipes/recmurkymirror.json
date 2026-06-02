@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "yyy",
+                    "yxy",
+                    "yzy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:annealed_glass"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:geodimensional_tunnel"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:fractured_multiversite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:murky_mirror"
+               }
+}

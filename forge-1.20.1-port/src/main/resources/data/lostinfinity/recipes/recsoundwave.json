@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "evx",
+                    "ddd",
+                    "e d"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:hypersonic_drive_chamber"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:audio_synchronized_disc"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:polyionite"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:incandescite_ingot"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:soundwave"
+               }
+}

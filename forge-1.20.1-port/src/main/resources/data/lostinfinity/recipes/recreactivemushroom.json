@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:strange_mushroom"
+                        },
+                        {
+                            "item":  "lostinfinity:negametric_isotope"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:reactive_mushroom"
+               }
+}

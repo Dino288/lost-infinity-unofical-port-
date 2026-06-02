@@ -1,0 +1,37 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cbd",
+                    "afa",
+                    "geh"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:annealed_glass"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:exothermite"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:colixium"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:biotoxin"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:power_clamp"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:multiversite_plates"
+                      },
+                "g":  {
+                          "item":  "lostinfinity:supermutated_ink"
+                      },
+                "h":  {
+                          "item":  "lostinfinity:polyswitch"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:acidic_concoction"
+               }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "a  ",
+                    " bc",
+                    " cc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:navigation_mechanism"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:super_cell"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:synthesized_astrometal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:cthulhu_sword_of_uncertainty"
+               }
+}

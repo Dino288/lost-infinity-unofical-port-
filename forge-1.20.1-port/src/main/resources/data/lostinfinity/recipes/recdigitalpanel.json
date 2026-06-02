@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "yyy",
+                    "yxy",
+                    "yzy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:glistening_crystals"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:polycharge_solution"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:voidcut_metal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:digital_panel"
+               }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "zzz",
+                    "xax",
+                    "xxx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:celestialiron"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:superchargedcell"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:electrified_quartz"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:pickchargingtable"
+               }
+}

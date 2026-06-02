@@ -1,0 +1,26 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:reinforced_glass"
+                        },
+                        {
+                            "item":  "lostinfinity:masterfaceted_quartz"
+                        },
+                        {
+                            "item":  "lostinfinity:perfectpearl"
+                        },
+                        {
+                            "item":  "lostinfinity:salivated_crystals"
+                        },
+                        {
+                            "item":  "lostinfinity:salivated_crystals"
+                        },
+                        {
+                            "item":  "lostinfinity:salivated_crystals"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:crystal_plating"
+               }
+}

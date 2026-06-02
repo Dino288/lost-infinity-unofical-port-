@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yx",
+                    "zay",
+                    "az "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:catalyzing_cell"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:masterenthralled_emerald"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:envenomed_diamond"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:life_destabilizer"
+               }
+}

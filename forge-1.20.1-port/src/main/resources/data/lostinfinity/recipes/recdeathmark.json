@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cbd",
+                    "bae",
+                    "dbc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:flurry_of_the_forbidden"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:linked_bone"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:ethercut_metal"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:starcut_metal"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:giant_heart"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:death_mark"
+               }
+}

@@ -1,0 +1,20 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:matter_condenser"
+                        },
+                        {
+                            "item":  "lostinfinity:organic_fuse"
+                        },
+                        {
+                            "item":  "lostinfinity:geocoordinated_orb"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite_bar"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:matter_recombiner"
+               }
+}

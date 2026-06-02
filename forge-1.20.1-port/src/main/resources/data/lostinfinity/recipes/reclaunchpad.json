@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xax",
+                    "aya",
+                    "xax"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:launch_drive"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:ultralight_dust"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:launch_pad_unpowered"
+               }
+}

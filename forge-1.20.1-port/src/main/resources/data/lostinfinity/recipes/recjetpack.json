@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "dad",
+                    "ebe",
+                    "aca"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:supermutated_fang"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:gas_filled_balloon"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:spark_chamber"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:supermutated_sand"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:exothermite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:jet_pack"
+               }
+}

@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yx",
+                    " az",
+                    "a  "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:deviantbone"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:droidlocationdata_o"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:droidlocationdata_e"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:droidlocationdata_n"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:droidrelocator"
+               }
+}

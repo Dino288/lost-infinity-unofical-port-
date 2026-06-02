@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cde",
+                    "dad",
+                    " b "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:everlasting_warlord"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:catatonite_ingot"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:velocitized_femur"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:electrical_blubber"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:welded_atomite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:avenger"
+               }
+}

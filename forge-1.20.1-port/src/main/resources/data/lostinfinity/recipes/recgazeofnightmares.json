@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " a ",
+                    "x z",
+                    " a "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:hypnotic_eye"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:deviantenderpearl"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:nightmare_solution"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:gaze_of_nightmares"
+               }
+}

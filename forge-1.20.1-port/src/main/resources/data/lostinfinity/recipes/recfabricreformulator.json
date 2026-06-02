@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cxc",
+                    "xax",
+                    "cxc"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:exothermite"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:matter_condenser"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:fabric_reformulator",
+                   "count":  4
+               }
+}

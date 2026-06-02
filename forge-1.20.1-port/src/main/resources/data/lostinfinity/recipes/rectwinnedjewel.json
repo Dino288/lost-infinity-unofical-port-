@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "x y",
+                    "xay",
+                    "x y"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:supermutated_flame"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:supermutated_shell"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:imbuedcrystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:twinned_jewel"
+               }
+}

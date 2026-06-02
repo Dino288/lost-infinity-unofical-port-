@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "x x",
+                    "xmx",
+                    "vav"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:laser_blade"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:blade_of_the_dead"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:gem_of_illusion"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:phantom_blade"
+               }
+}

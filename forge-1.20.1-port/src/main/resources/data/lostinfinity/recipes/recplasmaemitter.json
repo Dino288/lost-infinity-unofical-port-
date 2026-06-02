@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "kk ",
+                    "kxv",
+                    " vv"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:energy_splitter"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:myrite_chunk"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:plasma_emitter"
+               }
+}

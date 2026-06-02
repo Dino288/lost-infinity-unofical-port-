@@ -1,0 +1,30 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:hot_pod"
+                        },
+                        {
+                            "item":  "lostinfinity:hot_pod"
+                        },
+                        {
+                            "item":  "lostinfinity:hot_pod"
+                        },
+                        {
+                            "item":  "lostinfinity:hot_pod"
+                        },
+                        {
+                            "item":  "lostinfinity:hot_pod"
+                        },
+                        {
+                            "item":  "lostinfinity:hot_pod"
+                        },
+                        {
+                            "item":  "lostinfinity:solarum_vial"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:extremely_hot_pod",
+                   "count":  6
+               }
+}

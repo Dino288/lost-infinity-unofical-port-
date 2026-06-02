@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xax",
+                    "xxx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:ultralight_dust"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:deviant_wing"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:ultraflight_wing"
+               }
+}

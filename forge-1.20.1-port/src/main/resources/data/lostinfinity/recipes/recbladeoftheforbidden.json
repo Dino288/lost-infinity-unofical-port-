@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yy",
+                    "m a",
+                    "yy "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:multigalactic_power_crystal"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:bladesofconvergence"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:phototenzyte_ingot"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:blade_of_the_forbidden"
+               }
+}

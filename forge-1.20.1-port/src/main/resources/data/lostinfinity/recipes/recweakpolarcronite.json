@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xmy",
+                    "yyy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:positive_magnecronite"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:volatility_solution"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:negative_magnecronite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:weak_polarcronite"
+               }
+}

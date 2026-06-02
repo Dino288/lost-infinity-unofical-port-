@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xax",
+                    "xbx",
+                    "xcx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:darkworld_data_chip"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:microstorage_power_cluster"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:spacetime_trigger"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:nicronium_infuser"
+               }
+}

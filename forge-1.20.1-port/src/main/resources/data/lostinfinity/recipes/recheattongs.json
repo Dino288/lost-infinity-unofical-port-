@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "x x",
+                    "x x",
+                    "xax"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:superheatedingot"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:moltendiamond"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:heat_resistant_tongs"
+               }
+}

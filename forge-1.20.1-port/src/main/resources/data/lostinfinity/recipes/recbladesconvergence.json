@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:bladesofduality"
+                        },
+                        {
+                            "item":  "lostinfinity:theskyverge"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:bladesofconvergence"
+               }
+}

@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:deviantenderpearl"
+                        },
+                        {
+                            "item":  "lostinfinity:superheatedingot"
+                        },
+                        {
+                            "item":  "lostinfinity:skywormtooth"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:voidcut_metal"
+               }
+}

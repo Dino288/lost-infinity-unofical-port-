@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "a  ",
+                    " bc",
+                    " cc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:totem_of_corruption"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:supermutated_wool"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:synthesized_astrometal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:cthulhu_sword_of_war"
+               }
+}

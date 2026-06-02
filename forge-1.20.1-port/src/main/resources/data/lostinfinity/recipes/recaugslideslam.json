@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_slimeball"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_slimeball"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_slimeball"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_magmacream"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_magmacream"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_magmacream"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_slam"
+               }
+}

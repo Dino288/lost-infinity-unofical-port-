@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "yxy",
+                    "xax",
+                    " x "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterfaceted_quartz"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:dimensional_capacitor"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:geocoordinated_orb"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:unpowered_starcrystal"
+               }
+}

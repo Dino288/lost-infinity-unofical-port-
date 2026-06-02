@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "  x",
+                    "ya ",
+                    "xy "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:glow_bulb"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:malachite_inclinometer"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:spaceward_gyroscope"
+               }
+}

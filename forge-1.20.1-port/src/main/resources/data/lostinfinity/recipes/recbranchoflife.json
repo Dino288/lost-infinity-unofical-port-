@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "kkm",
+                    "kva",
+                    "v  "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:radioactive_isotopes"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:sunder_log"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:twigoftrickery"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:terracut_metal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:branch_of_life"
+               }
+}

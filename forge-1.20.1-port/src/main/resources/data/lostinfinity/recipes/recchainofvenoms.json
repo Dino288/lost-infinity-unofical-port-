@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:cane_of_venoms"
+                        },
+                        {
+                            "item":  "lostinfinity:darkworld_data_chip"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:chain_of_venoms"
+               }
+}

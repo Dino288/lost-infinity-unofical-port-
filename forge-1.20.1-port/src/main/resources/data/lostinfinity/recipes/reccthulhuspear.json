@@ -1,0 +1,34 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "eae",
+                    "cbc",
+                    "gfd"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:eterno_cell"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:totem_of_corruption"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:supermutated_fang"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:navigation_mechanism"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:etherflower"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:interspace_transmitter"
+                      },
+                "g":  {
+                          "item":  "lostinfinity:supermutated_gold"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:cthulhu_spear"
+               }
+}

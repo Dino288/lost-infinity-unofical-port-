@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xmx",
+                    "xvx",
+                    " a "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:mortality_solution"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:prismosis_rod"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:clovinite_power_hub"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:saber_claw"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:hyper_knuckle"
+               }
+}

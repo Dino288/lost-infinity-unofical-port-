@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "vzv",
+                    "yxy",
+                    "yky"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:volatile_gloop"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:power_funnel"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:organic_fuse"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:gigacharge_solutions"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:combustion_chamber"
+               }
+}

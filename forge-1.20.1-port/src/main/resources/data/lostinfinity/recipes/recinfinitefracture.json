@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ya ",
+                    "ymv",
+                    " vx"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:crystal_diode"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:fractured_ingot"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:galactic_fragments"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:crystal_fins"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:sunder_log"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:infinite_fracture"
+               }
+}

@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " a ",
+                    "xvd",
+                    "k k"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:comet_shower"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:digital_panel"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:combustion_chamber"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:ultrapowered_capacitor"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:comet_cannon"
+               }
+}

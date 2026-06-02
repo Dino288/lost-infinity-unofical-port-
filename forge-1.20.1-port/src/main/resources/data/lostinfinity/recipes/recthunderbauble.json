@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "axa",
+                    "xyx",
+                    "axa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:supermutated_shell"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:superchargedcell"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:celestialdiamond"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:thunderbauble"
+               }
+}

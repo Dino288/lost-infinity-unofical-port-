@@ -176,6 +176,14 @@ What was done:
   - restored fish chow tracking/eating with delayed `organic_shadow_matter` drops for the fish-family mobs
   - restored Glowfish's unique bioluminescent pearl reward and Octobrella's deviant-egg twilight pearl interaction
   - restored conservative predator max-health attacks, Crabulon ranged shots, and Eelshark shock debuffs; the old custom `Nullified` effect is currently represented by vanilla weakness/slowness until the custom effect registry is ported
+- Migrated legacy recipe and loot-table data into modern 1.20.1 datapack locations:
+  - copied 502 currently loadable recovered recipe JSONs from old `assets/lostinfinity/recipes` into `data/lostinfinity/recipes`
+  - copied 178 recovered loot-table JSONs from old `assets/lostinfinity/loot_tables` into `data/lostinfinity/loot_tables`
+  - normalized un-namespaced legacy recipe, loot entry, function, and condition IDs so the 1.20.1 datapack loader can read them
+  - repaired legacy item IDs for Ionite, skull, and firework recipes; deferred two old fluid-NBT acid recipes until the custom fluid system is ported
+- Added the first modern custom effect registry slice:
+  - registered `lostinfinity:nullified` as a harmful mob effect with a 1.20.1 language key
+  - wired Eelshark shocks to apply the restored `Nullified` effect alongside the temporary vanilla weakness/slowness behavior
 
 Current compile result:
 - Command: `.\gradlew.bat build`

@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "kak",
+                    "ava",
+                    " a "
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:digital_panel"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:metal_branch"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:clovinite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:fresh_data_chip"
+               }
+}

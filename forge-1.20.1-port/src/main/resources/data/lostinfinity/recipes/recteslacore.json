@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "aad",
+                    "acb",
+                    "dba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:phototenzyte_ingot"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:branch_of_energy"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:spark_chamber"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:polyamplification_solution"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:tesla_core"
+               }
+}

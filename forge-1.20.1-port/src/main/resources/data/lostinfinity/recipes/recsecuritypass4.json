@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:security_pass_3"
+                        },
+                        {
+                            "item":  "lostinfinity:colixium"
+                        },
+                        {
+                            "item":  "lostinfinity:book_of_translation"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:exothermite"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:security_pass_4"
+               }
+}

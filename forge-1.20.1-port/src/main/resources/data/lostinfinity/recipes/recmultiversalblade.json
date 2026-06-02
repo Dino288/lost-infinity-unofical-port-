@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "abc",
+                    "ede",
+                    " f "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:ghosthunter"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:blade_of_the_dead"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:phantom_blade"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:aligned_disc"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:void_box"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:welded_atomite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:multiversal_blade"
+               }
+}

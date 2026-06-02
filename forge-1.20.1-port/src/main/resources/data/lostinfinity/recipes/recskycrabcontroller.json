@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "kyx",
+                    " vy",
+                    "a k"
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:citrine_supercharger"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:deviant_iron"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:synthetic_flight_apparatus"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:overcharged_cell"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:advanced_signal_receiver"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:skycrab_controller"
+               }
+}

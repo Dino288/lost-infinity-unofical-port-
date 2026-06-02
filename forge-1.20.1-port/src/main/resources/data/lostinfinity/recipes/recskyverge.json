@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yx",
+                    " ay",
+                    "a  "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:celestialiron"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:deviantbearhide"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:gem_aspiration"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:theskyverge"
+               }
+}

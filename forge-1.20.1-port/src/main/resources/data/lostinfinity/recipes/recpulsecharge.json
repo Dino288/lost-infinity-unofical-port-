@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " v ",
+                    "vav",
+                    " e "
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:radion_fragment"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:linked_bone"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:echo_bomb"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:pulse_charge"
+               }
+}

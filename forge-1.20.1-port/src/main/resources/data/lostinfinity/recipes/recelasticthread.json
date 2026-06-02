@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:supermutated_string"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_gel"
+                        },
+                        {
+                            "item":  "lostinfinity:livingslime"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:elastic_thread"
+               }
+}

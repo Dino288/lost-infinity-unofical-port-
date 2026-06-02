@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:purple_tendril"
+                        },
+                        {
+                            "item":  "lostinfinity:firefeather"
+                        },
+                        {
+                            "item":  "lostinfinity:firefeather"
+                        },
+                        {
+                            "item":  "lostinfinity:firefeather"
+                        },
+                        {
+                            "item":  "lostinfinity:livingslime"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:shimmering_gloss"
+               }
+}

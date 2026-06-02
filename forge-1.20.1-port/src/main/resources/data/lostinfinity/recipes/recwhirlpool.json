@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "efa",
+                    "bef",
+                    "cde"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:velocitized_femur"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:astral_organ"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:polyionite"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:gravity_core"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:catatonite_ingot"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:crystal_fins"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:whirlpool"
+               }
+}

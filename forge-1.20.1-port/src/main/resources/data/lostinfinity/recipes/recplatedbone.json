@@ -1,0 +1,20 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:supermutated_bone"
+                        },
+                        {
+                            "item":  "lostinfinity:masterforged_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:masterforged_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:voidcut_metal"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:plated_bone"
+               }
+}

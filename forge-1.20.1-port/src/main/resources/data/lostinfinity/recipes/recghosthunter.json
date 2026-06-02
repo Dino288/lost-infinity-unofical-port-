@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yx",
+                    "zay",
+                    "az "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:smoldering_ghasttear"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:supermutated_tooth"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:supermutated_powder"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:imbuedcrystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:ghosthunter"
+               }
+}

@@ -1,0 +1,21 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:glowblood_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:unstable_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:myrite"
+                        },
+                        {
+                            "item":  "lostinfinity:glowing_globes"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:ultraviolet_solution",
+                   "count":  3
+               }
+}

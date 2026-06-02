@@ -1,0 +1,26 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:hard_bone"
+                        },
+                        {
+                            "item":  "lostinfinity:rockspine"
+                        },
+                        {
+                            "item":  "lostinfinity:giant_tooth"
+                        },
+                        {
+                            "item":  "lostinfinity:hard_bone"
+                        },
+                        {
+                            "item":  "lostinfinity:rockspine"
+                        },
+                        {
+                            "item":  "lostinfinity:giant_tooth"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:organic_calcium"
+               }
+}

@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "bcd",
+                    "aea",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:annealed_glass"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:myrite_chunk"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:phototenzyte_ingot"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:catatonite_ingot"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:voidsplit_bone"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:dose_of_deception"
+               }
+}

@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "aaa",
+                    "avz",
+                    "ak "
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:blank_augment_slide"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:starcrystal_capacitor"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:galactic_fragments"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:deviant_gold"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:security_pass_1"
+               }
+}

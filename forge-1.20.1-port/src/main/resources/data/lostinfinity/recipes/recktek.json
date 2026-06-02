@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " dv",
+                    "xxe",
+                    " xd"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:amber"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:nanofluoric_acid"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:chemical_synchronizer"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:auradine_disc"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:ktek"
+               }
+}

@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "x  ",
+                    " v ",
+                    "  a"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:jar_of_syrup"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:annealed_glass"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:gloominessence_cubes"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:blight_cure",
+                   "count":  5
+               }
+}

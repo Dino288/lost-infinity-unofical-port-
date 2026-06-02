@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:synthetic_fibre"
+                        },
+                        {
+                            "item":  "lostinfinity:sticky_hide"
+                        },
+                        {
+                            "item":  "lostinfinity:ball_of_webs"
+                        },
+                        {
+                            "item":  "lostinfinity:ball_of_webs"
+                        },
+                        {
+                            "item":  "lostinfinity:ball_of_webs"
+                        },
+                        {
+                            "item":  "lostinfinity:suction_pad"
+                        },
+                        {
+                            "item":  "lostinfinity:suction_pad"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:adhesive_fibre"
+               }
+}

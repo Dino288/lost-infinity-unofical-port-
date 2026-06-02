@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xy ",
+                    " av",
+                    " va"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:glowing_globes"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:glow_bulb"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:synthetic_fibre"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:plated_bone"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:signal_receiver"
+               }
+}

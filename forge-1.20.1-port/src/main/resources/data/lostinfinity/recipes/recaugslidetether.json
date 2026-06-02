@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:ball_of_webs"
+                        },
+                        {
+                            "item":  "lostinfinity:ball_of_webs"
+                        },
+                        {
+                            "item":  "lostinfinity:ball_of_webs"
+                        },
+                        {
+                            "item":  "lostinfinity:organic_plate"
+                        },
+                        {
+                            "item":  "lostinfinity:organic_plate"
+                        },
+                        {
+                            "item":  "lostinfinity:organic_plate"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_tether"
+               }
+}

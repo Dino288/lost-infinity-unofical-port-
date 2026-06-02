@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:security_pass_5"
+                        },
+                        {
+                            "item":  "lostinfinity:etherflower"
+                        },
+                        {
+                            "item":  "lostinfinity:synthesized_astrometal"
+                        },
+                        {
+                            "item":  "lostinfinity:synthesized_astrometal"
+                        },
+                        {
+                            "item":  "lostinfinity:synthesized_astrometal"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:security_pass_6"
+               }
+}

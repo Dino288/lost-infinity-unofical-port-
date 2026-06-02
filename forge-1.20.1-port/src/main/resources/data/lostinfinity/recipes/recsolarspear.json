@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxe",
+                    "xd ",
+                    "f d"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:auradine_disc"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:astral_plane_analyzer"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:mortality_solution"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:solar_spear"
+               }
+}

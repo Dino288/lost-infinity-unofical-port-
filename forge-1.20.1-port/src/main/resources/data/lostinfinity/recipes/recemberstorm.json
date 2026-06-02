@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "fdc",
+                    "acb",
+                    "ecc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:aligned_disc"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:solarum_vial"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:polyionite"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:gravity_core"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:dimensional_polymer"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:supermutated_fang"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:emberstorm"
+               }
+}

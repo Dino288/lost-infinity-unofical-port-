@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:volatile_blood"
+                        },
+                        {
+                            "item":  "lostinfinity:volatile_blood"
+                        },
+                        {
+                            "item":  "lostinfinity:volatile_blood"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_pearl"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_pearl"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_pearl"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_invisibility"
+               }
+}

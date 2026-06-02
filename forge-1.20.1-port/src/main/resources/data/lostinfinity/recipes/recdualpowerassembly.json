@@ -1,0 +1,20 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:organic_power_cell"
+                        },
+                        {
+                            "item":  "lostinfinity:mechanicalpowercell"
+                        },
+                        {
+                            "item":  "lostinfinity:deviant_slimeball"
+                        },
+                        {
+                            "item":  "lostinfinity:electrified_quartz"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:dual_power_assembly"
+               }
+}

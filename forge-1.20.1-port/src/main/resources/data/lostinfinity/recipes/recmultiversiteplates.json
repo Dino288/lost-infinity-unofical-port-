@@ -1,0 +1,35 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        },
+                        {
+                            "item":  "lostinfinity:fractured_multiversite"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:multiversite_plates"
+               }
+}

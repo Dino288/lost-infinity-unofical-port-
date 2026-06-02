@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xav",
+                    "aaa",
+                    "yam"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:time_trigger"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:basic_storage_chip"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:quantum_shield"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:blade_of_the_conqueror"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:the_black_hole"
+               }
+}

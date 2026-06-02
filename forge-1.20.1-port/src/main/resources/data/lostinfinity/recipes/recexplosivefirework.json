@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:fireblood_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:quickflame_solution"
+                        },
+                        {
+                            "item":  "minecraft:firework_rocket"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:explosive_strapped_firework"
+               }
+}

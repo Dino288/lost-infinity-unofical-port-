@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "dac",
+                    "db ",
+                    "d b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:interspace_transmitter"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:branch_of_energy"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:spark_chamber"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:darksteel_sheets"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:tesla_towers"
+               }
+}

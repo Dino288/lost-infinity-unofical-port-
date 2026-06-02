@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:witchspike"
+                        },
+                        {
+                            "item":  "lostinfinity:dual_weapon_convertor"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:cane_of_venoms"
+               }
+}

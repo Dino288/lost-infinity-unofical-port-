@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " xy",
+                    "xvx",
+                    "yx "
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:gem_ambition"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:reinforced_glass"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:metal_branch"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:rampage_injection"
+               }
+}

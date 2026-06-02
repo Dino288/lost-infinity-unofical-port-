@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "vxx",
+                    "yxx",
+                    " ax"
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:clovinite_power_hub"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:axiom_celestarium"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:pylon_protector"
+               }
+}

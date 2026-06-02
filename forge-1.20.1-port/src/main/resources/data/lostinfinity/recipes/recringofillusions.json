@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "vxv",
+                    "aka",
+                    "vxv"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:phototenzyte_ingot"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:spaceslinger"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:gem_of_illusion"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:mortality_solution"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:ring_of_illusions"
+               }
+}

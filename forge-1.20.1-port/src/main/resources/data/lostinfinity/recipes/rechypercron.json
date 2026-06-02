@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " fe",
+                    "afx",
+                    "gf "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:gigacron"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:basic_storage_chip"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:heavy_crystal"
+                      },
+                "g":  {
+                          "item":  "lostinfinity:chemical_synchronizer"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:hyper_knuckle"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:hypercron"
+               }
+}

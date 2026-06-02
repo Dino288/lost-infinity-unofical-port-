@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " ay",
+                    " xy",
+                    " x "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:starcut_metal"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:eternal_emberstar_generator"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:forgefire_axe"
+               }
+}

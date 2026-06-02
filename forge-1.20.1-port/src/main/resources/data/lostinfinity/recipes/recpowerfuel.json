@@ -1,0 +1,32 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:rainfall_collector_full"
+                        },
+                        {
+                            "item":  "lostinfinity:inverse_magnecronite"
+                        },
+                        {
+                            "item":  "lostinfinity:inverse_magnecronite"
+                        },
+                        {
+                            "item":  "lostinfinity:inverse_magnecronite"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_ink"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_ink"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_ink"
+                        },
+                        {
+                            "item":  "lostinfinity:quickflame_solution"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:power_fuel"
+               }
+}

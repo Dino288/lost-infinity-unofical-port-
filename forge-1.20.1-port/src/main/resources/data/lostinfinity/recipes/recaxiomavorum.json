@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "aza",
+                    "xyx",
+                    "axa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:superheatedingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:reflectiveshard"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:superchargedcell"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:supermutated_gel"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:axiomavorum"
+               }
+}

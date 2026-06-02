@@ -1,0 +1,40 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "gbc",
+                    "dea",
+                    "hfi"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:clay_support_base"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:clay_support_cap"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:clay_reinforcement"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:neverwatching_eye"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:biosynced_clock"
+                      },
+                "g":  {
+                          "item":  "lostinfinity:plasmatic_cranium"
+                      },
+                "h":  {
+                          "item":  "lostinfinity:reconfigured_matter"
+                      },
+                "i":  {
+                          "item":  "lostinfinity:sunder_log"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:puppet_master"
+               }
+}

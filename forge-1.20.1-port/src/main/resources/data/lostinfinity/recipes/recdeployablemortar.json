@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ddb",
+                    "dcc",
+                    "eca"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:combustion_chamber"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:chemical_synchronizer"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:fused_synchronite"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:high_speed_wire"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:deployable_mortar_cannon"
+               }
+}

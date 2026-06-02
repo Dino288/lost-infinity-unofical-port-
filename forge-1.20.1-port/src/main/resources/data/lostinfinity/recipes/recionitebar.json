@@ -1,0 +1,35 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        },
+                        {
+                            "item":  "lostinfinity:ionite"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:ionite_bar"
+               }
+}

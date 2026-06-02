@@ -29,6 +29,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.Vec3;
 import xol.lostinfinity.registry.ModBlocks;
+import xol.lostinfinity.registry.ModEffects;
 import xol.lostinfinity.registry.ModItems;
 
 public class LostSeaMob extends LostPlaceholderMob {
@@ -179,6 +180,7 @@ public class LostSeaMob extends LostPlaceholderMob {
         this.level().playSound(null, this.blockPosition(), SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.HOSTILE, 1.75F,
                 0.8F + this.random.nextFloat() * 0.4F);
         for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(8.0D))) {
+            player.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 300, 0));
             player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 0));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 0));
         }

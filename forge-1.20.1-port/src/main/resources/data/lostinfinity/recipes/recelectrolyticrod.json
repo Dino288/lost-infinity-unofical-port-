@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " vx",
+                    "xax",
+                    "xv "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:electrolysis_solution"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:deviant_shard"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:phototenzyte_ingot"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:electrolytic_rod"
+               }
+}

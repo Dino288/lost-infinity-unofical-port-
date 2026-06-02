@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yx",
+                    " az",
+                    "a  "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:supermutated_bone"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:darkconcoction"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:supermutated_egg"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:supermutated_pearl"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:twigoftrickery"
+               }
+}

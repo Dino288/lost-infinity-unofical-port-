@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "y y",
+                    "yxy",
+                    "yyy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:hypnotic_eye"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:voidcut_metal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:voidstone"
+               }
+}

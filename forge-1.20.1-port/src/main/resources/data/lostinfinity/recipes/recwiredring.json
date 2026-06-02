@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:auradine_disc"
+                        },
+                        {
+                            "item":  "lostinfinity:high_tolerance_wire"
+                        },
+                        {
+                            "item":  "lostinfinity:holotron_disc"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:wired_ring"
+               }
+}

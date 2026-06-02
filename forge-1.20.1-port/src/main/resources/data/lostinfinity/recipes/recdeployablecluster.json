@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ddb",
+                    "dfc",
+                    "eca"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:combustion_chamber"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:colixium"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:laraxium"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:exothermite"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:high_speed_wire"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:laser_pointer"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:deployable_cluster_cannon"
+               }
+}

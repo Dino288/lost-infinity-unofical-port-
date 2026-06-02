@@ -1,0 +1,35 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:voidcut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:ethercut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:starcut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:spacecut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:terracut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:lightcut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:biocut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:masterforged_ingot"
+                        },
+                        {
+                            "item":  "lostinfinity:astrometal_amalgamator_glue"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:synthesized_astrometal"
+               }
+}

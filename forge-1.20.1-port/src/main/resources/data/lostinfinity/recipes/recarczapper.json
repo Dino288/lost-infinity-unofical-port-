@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "vyy",
+                    "xvm",
+                    "vy "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:element_stone"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:elastic_fibre"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:combustion_chamber"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:arc_zapper"
+               }
+}

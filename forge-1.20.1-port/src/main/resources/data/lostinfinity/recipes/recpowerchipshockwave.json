@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xyx",
+                    "xax",
+                    "axa"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:starcrystal_capacitor"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:supermutated_powder"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:powerchip_shockwave"
+               }
+}

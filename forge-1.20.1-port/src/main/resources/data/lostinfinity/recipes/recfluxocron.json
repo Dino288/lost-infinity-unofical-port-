@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yv",
+                    " ay",
+                    "a  "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:geodimensional_tunnel"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:fluxlantern"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:fluxocron"
+               }
+}

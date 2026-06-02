@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " xy",
+                    "vxa",
+                    "yvx"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:infinite_fracture"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:overcharged_cell"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:nightglazed_crystal"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:lightcut_metal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:moonshaker"
+               }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xax",
+                    "xcx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:multiversite_plates"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:overcharged_cell"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:geodimensional_tunnel"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:cthulhu_spawner"
+               }
+}

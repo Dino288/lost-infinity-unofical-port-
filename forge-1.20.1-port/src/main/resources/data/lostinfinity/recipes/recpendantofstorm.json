@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "yxy",
+                    "yay",
+                    " y "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:supermutated_spidereye"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:supermutated_gold"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:hivenite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:pendant_of_the_storm"
+               }
+}

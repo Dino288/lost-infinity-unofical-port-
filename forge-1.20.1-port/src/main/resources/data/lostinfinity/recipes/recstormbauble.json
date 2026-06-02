@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "aca",
+                    "cec",
+                    "dcb"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:amber"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:chemical_synchronizer"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:annealed_glass"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:electrical_accelerator"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:thunderbauble"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:storm_bauble"
+               }
+}

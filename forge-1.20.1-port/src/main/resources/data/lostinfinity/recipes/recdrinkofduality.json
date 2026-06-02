@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "mdk",
+                    "ava",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:luminescent_cubes"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:unstable_ingot"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:superstimulant"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:gem_duality"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:lifestrain_enigma"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:drink_of_duality"
+               }
+}

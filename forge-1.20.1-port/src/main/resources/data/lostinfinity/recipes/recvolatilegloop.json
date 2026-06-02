@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " a ",
+                    "b b",
+                    " d "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:volatility_solution"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:mysterious_gloop"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:explosive_goo_sample"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:volatile_gloop"
+               }
+}

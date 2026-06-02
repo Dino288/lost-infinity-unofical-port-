@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xmx",
+                    "mzm",
+                    "xmx"
+                ],
+    "key":  {
+                "z":  {
+                          "item":  "lostinfinity:sonic_shield"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:serpentine_crystal"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:spiked_tendril"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:serpentine_shield"
+               }
+}

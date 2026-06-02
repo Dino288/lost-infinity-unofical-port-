@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:mysterious_gloop"
+                        },
+                        {
+                            "item":  "lostinfinity:mysterious_gloop"
+                        },
+                        {
+                            "item":  "lostinfinity:mysterious_gloop"
+                        },
+                        {
+                            "item":  "lostinfinity:hivenite"
+                        },
+                        {
+                            "item":  "lostinfinity:hivenite"
+                        },
+                        {
+                            "item":  "lostinfinity:hivenite"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_heal"
+               }
+}

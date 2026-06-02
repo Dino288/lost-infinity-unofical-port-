@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " vx",
+                    "vav",
+                    " v "
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:slimed_bedrock"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:organic_fuse"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:glow_bulb"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:glow_bomb",
+                   "count":  4
+               }
+}

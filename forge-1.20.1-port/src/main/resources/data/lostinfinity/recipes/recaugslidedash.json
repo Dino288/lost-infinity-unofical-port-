@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:superstimulant"
+                        },
+                        {
+                            "item":  "lostinfinity:superstimulant"
+                        },
+                        {
+                            "item":  "lostinfinity:superstimulant"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_egg"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_egg"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_egg"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_dash"
+               }
+}

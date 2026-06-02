@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " a ",
+                    " a ",
+                    "yxy"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:unbreakablechain"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:superheatedingot"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:gem_ingenuity"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:fluxlantern"
+               }
+}

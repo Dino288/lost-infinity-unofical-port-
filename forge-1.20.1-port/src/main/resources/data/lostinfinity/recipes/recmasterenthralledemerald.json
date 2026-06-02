@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "x y",
+                    "yyy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:cursedemerald"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:celestialemerald"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:masterenthralled_emerald"
+               }
+}

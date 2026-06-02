@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " e ",
+                    "akc",
+                    "b d"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:polycharge_solution"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:nightmare_solution"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:volatility_solution"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:unstable_solution"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:mastercharged_redstone"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:deviantstring"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:gigacharge_solutions"
+               }
+}

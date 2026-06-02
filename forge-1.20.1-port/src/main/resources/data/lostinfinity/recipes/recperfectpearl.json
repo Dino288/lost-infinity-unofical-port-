@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xax",
+                    "xxx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "minecraft:prismarine_crystals"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:deviantenderpearl"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:perfectpearl"
+               }
+}

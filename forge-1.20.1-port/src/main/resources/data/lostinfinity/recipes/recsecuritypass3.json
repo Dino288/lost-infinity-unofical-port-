@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:security_pass_2"
+                        },
+                        {
+                            "item":  "lostinfinity:adhesive_fibre"
+                        },
+                        {
+                            "item":  "lostinfinity:annealed_glass"
+                        },
+                        {
+                            "item":  "lostinfinity:nanofluoric_acid"
+                        },
+                        {
+                            "item":  "lostinfinity:gloominessence_cubes"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:security_pass_3"
+               }
+}

@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " a ",
+                    "ede",
+                    "bfc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:emp"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:spark_chamber"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:auradine_disc"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:astral_plane_analyzer"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:giant_tentacle"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:spacetime_trigger"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:brand_of_the_forbidden"
+               }
+}

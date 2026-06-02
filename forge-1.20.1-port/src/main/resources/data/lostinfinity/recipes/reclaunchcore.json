@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xyx",
+                    "xxx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:weightless_gem"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:launch_core"
+               }
+}

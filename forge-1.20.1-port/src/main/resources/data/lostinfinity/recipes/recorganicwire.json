@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " ax",
+                    "xax",
+                    "xa "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:gloom_bulb"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:corrupted_root"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:organic_wire"
+               }
+}

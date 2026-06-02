@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "myk",
+                    "axy",
+                    "eex"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:sunder_log"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:heart_of_darkness"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:adhesive_fibre"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:crystallized_alloy"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:rapid_growth_solution"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:nanofluoric_acid"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:dryads_grip"
+               }
+}

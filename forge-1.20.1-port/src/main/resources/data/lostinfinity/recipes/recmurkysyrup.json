@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:jar_of_syrup"
+                        },
+                        {
+                            "item":  "lostinfinity:murky_ash"
+                        },
+                        {
+                            "item":  "lostinfinity:murky_ash"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:jar_of_murky_syrup"
+               }
+}

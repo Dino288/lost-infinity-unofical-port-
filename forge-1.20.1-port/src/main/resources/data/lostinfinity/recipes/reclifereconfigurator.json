@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yx",
+                    "zky",
+                    "az "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:unstable_ingot"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:nightmare_solution"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:life_destabilizer"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:gem_ingenuity"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:life_reconfigurator"
+               }
+}

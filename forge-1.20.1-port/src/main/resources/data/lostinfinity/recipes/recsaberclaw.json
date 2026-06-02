@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xvx",
+                    "vav"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:laser_blade"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:iron_hide"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:stone_of_rebirth"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:saber_claw"
+               }
+}

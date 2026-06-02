@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cba",
+                    "daa",
+                    "eaf"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:radion_fragment"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:mechanical_sextant"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:book_of_translation"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:biosynced_clock"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:audio_synchronized_disc"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:phototenzyte_ingot"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:puzzle_key"
+               }
+}

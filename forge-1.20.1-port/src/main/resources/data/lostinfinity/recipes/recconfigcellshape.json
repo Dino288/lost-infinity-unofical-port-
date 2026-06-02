@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:mastercharged_redstone"
+                        },
+                        {
+                            "item":  "lostinfinity:unstable_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:celestialiron"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:configuration_cell_shape"
+               }
+}

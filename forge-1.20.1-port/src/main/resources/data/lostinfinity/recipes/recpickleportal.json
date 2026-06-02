@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cbe",
+                    "bad",
+                    "eda"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:darksteel_sheets"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:phoroxium"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:serpentine_bar"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:branch_of_energy"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:pickle"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:pickle_portal"
+               }
+}

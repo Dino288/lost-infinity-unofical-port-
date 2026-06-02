@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:datadrive"
+                        },
+                        {
+                            "item":  "lostinfinity:voidcut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:voidcut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:voidcut_metal"
+                        },
+                        {
+                            "item":  "lostinfinity:crystal_plating"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:datadrive_defense"
+               }
+}

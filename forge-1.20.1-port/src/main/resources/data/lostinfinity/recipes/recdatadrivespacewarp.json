@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:datadrive"
+                        },
+                        {
+                            "item":  "lostinfinity:power_drive"
+                        },
+                        {
+                            "item":  "lostinfinity:power_drive"
+                        },
+                        {
+                            "item":  "lostinfinity:power_drive"
+                        },
+                        {
+                            "item":  "lostinfinity:geodimensional_tunnel"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:datadrive_spacewarp"
+               }
+}

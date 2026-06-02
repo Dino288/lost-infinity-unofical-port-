@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " ya",
+                    " xy",
+                    "x  "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:crystallized_alloy"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:bioluminescent_power_supply"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:crystal_pickaxe"
+               }
+}

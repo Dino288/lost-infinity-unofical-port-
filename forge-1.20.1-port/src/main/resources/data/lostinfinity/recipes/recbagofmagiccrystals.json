@@ -1,0 +1,26 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cbc",
+                    "dad",
+                    "ddd"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:perfectpearl"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:supermutated_ink"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:deviant_shard"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:deviantbearhide"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:bag_of_magic_crystals",
+                   "count":  2
+               }
+}

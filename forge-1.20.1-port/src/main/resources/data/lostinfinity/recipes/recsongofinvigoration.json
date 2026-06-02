@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cde",
+                    "aaf",
+                    "abf"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:sunder_log"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:void_box"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:power_fuel"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:infused_nicronium"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:audio_synchronized_disc"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:high_speed_wire"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:song_of_invigoration"
+               }
+}

@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xvm",
+                    "xdv",
+                    "  v"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:prismosis_rod"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:infused_nicronium"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:lifevessel"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:multigalactic_power_crystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:debt_collector"
+               }
+}

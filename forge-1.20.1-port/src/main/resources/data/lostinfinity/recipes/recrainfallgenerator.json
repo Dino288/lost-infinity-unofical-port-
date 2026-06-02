@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cbc",
+                    "aca",
+                    "aca"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:darksteel_sheets"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:murky_clay"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:deviant_shard"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:rainfall_generator"
+               }
+}

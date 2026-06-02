@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yx",
+                    "xmy",
+                    "ax "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:last_breath"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:amber"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:incarnation_of_the_sword"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:myrite_chunk"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:dominator"
+               }
+}

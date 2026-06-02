@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xax",
+                    "aza",
+                    "vkv"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:spacecut_metal"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:starcut_metal"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:dual_power_assembly"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:lifestrain_enigma"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:sonic_shield"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:quantum_shield"
+               }
+}

@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:mastercrafted_alloy"
+                        },
+                        {
+                            "item":  "lostinfinity:datadrive_speed"
+                        },
+                        {
+                            "item":  "lostinfinity:datadrive_power"
+                        },
+                        {
+                            "item":  "lostinfinity:datadrive_defense"
+                        },
+                        {
+                            "item":  "lostinfinity:datadrive_dash"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:droid_upgrade_mk2"
+               }
+}

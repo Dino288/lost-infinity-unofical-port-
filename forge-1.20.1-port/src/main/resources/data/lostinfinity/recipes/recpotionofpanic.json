@@ -1,0 +1,34 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "feg",
+                    "ada",
+                    "bcb"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:annealed_glass"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:organic_shadow_matter"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:clay_support_base"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:clay_reinforcement"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:clay_support_cap"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:power_control_disc"
+                      },
+                "g":  {
+                          "item":  "lostinfinity:polyamplification_solution"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:potion_of_panic"
+               }
+}

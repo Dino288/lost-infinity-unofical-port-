@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "yay",
+                    "xzx",
+                    "k k"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:reflectiveshard"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:scorchedpipe"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:gem_misdirection"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:deviantbottle"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:celestialquartz"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:lifevessel"
+               }
+}

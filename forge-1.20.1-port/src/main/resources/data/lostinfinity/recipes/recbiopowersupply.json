@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "zmz",
+                    "yxy",
+                    "yky"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:dimensional_capacitor"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:polycharge_solution"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:luminescent_stingers"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:synthetic_fibre"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:organic_fuse"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:bioluminescent_power_supply"
+               }
+}

@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " y ",
+                    "yxy",
+                    " y "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "minecraft:wither_skeleton_skull"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:celestialemerald"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:jeweledskulltrophy"
+               }
+}

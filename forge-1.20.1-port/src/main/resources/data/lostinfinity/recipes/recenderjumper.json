@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xmy",
+                    "vxv",
+                    "ymx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:citrine_thyratron"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:haunted_ingot"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:georedirection_orb"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:ender_jumper"
+               }
+}

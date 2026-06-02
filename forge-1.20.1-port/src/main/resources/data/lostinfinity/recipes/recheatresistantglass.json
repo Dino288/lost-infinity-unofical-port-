@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "aaa",
+                    "kkk",
+                    " v "
+                ],
+    "key":  {
+                "v":  {
+                          "item":  "lostinfinity:superheatedingot"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:reinforced_glass"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:cellular_crystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:heat_resistant_glass",
+                   "count":  3
+               }
+}

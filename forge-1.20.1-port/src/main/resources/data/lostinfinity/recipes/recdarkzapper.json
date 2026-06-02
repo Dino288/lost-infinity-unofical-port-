@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " bb",
+                    "dea",
+                    " bc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:arc_zapper"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:organic_wire"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:auradine_disc"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:everwatching_eye"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:multigalactic_power_crystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:dark_zapper"
+               }
+}

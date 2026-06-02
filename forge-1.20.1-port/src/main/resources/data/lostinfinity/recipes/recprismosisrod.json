@@ -1,0 +1,35 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_shards"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:prismosis_rod"
+               }
+}

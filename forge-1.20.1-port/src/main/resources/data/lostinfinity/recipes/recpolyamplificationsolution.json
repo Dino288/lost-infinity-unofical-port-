@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:polycharge_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:polycharge_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:polycharge_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:quickflame_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:quickflame_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:quickflame_solution"
+                        },
+                        {
+                            "item":  "lostinfinity:giant_dusker_eggs"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:polyamplification_solution"
+               }
+}

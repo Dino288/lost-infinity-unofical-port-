@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:branch_of_energy"
+                        },
+                        {
+                            "item":  "lostinfinity:branch_of_energy"
+                        },
+                        {
+                            "item":  "lostinfinity:branch_of_energy"
+                        },
+                        {
+                            "item":  "lostinfinity:glowing_pustules"
+                        },
+                        {
+                            "item":  "lostinfinity:glowing_pustules"
+                        },
+                        {
+                            "item":  "lostinfinity:glowing_pustules"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_unleash"
+               }
+}

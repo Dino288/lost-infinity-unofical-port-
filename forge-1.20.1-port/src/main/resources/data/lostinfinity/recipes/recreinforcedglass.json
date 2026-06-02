@@ -1,0 +1,20 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:masterfaceted_quartz"
+                        },
+                        {
+                            "item":  "lostinfinity:organic_calcium"
+                        },
+                        {
+                            "item":  "lostinfinity:organic_calcium"
+                        },
+                        {
+                            "item":  "lostinfinity:organic_calcium"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:reinforced_glass"
+               }
+}

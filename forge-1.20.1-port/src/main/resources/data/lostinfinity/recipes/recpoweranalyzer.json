@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xx ",
+                    "xmv",
+                    "  x"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:deviant_iron"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:heat_resistant_glass"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:power_analyzer"
+               }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " z ",
+                    "yxy",
+                    "yyy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "minecraft:slime_ball"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:deviantmilk"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:deviantbearhide"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:bagofslime"
+               }
+}

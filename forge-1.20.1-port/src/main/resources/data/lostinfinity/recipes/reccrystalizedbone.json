@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:bone_blocks"
+                        },
+                        {
+                            "item":  "lostinfinity:crystalizedgel"
+                        },
+                        {
+                            "item":  "lostinfinity:prismatic_calcium"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:crystalized_bone"
+               }
+}

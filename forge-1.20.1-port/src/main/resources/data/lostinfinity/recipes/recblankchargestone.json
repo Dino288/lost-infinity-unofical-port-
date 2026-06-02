@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " z ",
+                    "yxy",
+                    "yyy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:glow_bulb"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:voidstone"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:blank_chargestone"
+               }
+}

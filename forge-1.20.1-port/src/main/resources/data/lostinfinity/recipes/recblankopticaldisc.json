@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " z ",
+                    "x z",
+                    " x "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:deviant_shard"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:reflectiveshard"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:blank_optical_disc"
+               }
+}

@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " z ",
+                    "yxy",
+                    " yk"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:heavy_crystal"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:mastercharged_redstone"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:crystal_diode"
+               }
+}

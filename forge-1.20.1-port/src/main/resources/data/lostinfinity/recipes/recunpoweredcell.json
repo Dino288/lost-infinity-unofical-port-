@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ead",
+                    "aca",
+                    "bae"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:annealed_glass"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:high_speed_wire"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:organic_wire"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:deviant_iron"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:unpowered_cell"
+               }
+}

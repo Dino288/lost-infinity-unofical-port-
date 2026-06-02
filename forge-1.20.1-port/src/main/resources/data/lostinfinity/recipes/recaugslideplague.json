@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:toxic_spore_sample"
+                        },
+                        {
+                            "item":  "lostinfinity:toxic_spore_sample"
+                        },
+                        {
+                            "item":  "lostinfinity:toxic_spore_sample"
+                        },
+                        {
+                            "item":  "lostinfinity:plant_tooth"
+                        },
+                        {
+                            "item":  "lostinfinity:plant_tooth"
+                        },
+                        {
+                            "item":  "lostinfinity:plant_tooth"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_plague"
+               }
+}

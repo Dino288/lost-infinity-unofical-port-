@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:lifeboundemerald"
+                        },
+                        {
+                            "item":  "lostinfinity:synchronizer"
+                        },
+                        {
+                            "item":  "lostinfinity:biosynced_clock"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:effigy_doll"
+               }
+}

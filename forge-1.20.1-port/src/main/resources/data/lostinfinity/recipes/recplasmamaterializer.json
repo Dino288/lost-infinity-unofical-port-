@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " yv",
+                    "zay",
+                    "az "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:prismatic_calcium"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:shimmering_gloss"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:spacecut_metal"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:gem_anxiety"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:plasma_materializer"
+               }
+}

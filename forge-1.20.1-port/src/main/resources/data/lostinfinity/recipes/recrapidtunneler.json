@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " ab",
+                    "a a",
+                    "ca "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:fractured_multiversite"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:bioluminescent_power_supply"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:super_booster"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:rapid_tunneling_device"
+               }
+}

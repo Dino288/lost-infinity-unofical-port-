@@ -1,0 +1,26 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:cyclone_dust"
+                        },
+                        {
+                            "item":  "lostinfinity:cyclone_dust"
+                        },
+                        {
+                            "item":  "lostinfinity:cyclone_dust"
+                        },
+                        {
+                            "item":  "lostinfinity:gravity_dust"
+                        },
+                        {
+                            "item":  "lostinfinity:gravity_dust"
+                        },
+                        {
+                            "item":  "lostinfinity:gravity_dust"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:ultralight_dust"
+               }
+}

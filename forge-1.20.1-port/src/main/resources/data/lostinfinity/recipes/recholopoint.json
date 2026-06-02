@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " xv",
+                    "xmy",
+                    " y "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:high_speed_wire"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:darkworld_data_chip"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:nanofluoric_acid"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:arc_blaster"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:holo_point"
+               }
+}

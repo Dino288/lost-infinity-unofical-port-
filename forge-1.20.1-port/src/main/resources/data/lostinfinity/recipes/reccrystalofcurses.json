@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "v v",
+                    "aza",
+                    "v v"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:imbuedcrystal"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:gaze_of_nightmares"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:hard_crystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:crystal_of_curses"
+               }
+}

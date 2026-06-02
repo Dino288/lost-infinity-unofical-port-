@@ -1,0 +1,26 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:crystal_of_curses"
+                        },
+                        {
+                            "item":  "lostinfinity:prismosis_rod"
+                        },
+                        {
+                            "item":  "lostinfinity:watchful_eye_pink"
+                        },
+                        {
+                            "item":  "lostinfinity:watchful_eye_blue"
+                        },
+                        {
+                            "item":  "lostinfinity:watchful_eye_purple"
+                        },
+                        {
+                            "item":  "lostinfinity:haunted_ingot"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:gem_of_illusion"
+               }
+}

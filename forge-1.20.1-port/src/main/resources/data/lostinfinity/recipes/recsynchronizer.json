@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xvx",
+                    " a ",
+                    "xvx"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:ion_cell"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:deviant_iron"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:warped_disc"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:synchronizer"
+               }
+}

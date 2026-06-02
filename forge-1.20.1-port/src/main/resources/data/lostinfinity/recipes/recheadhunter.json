@@ -1,0 +1,28 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "dec",
+                    "bba",
+                    " aa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:infused_nicronium"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:interspace_transmitter"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:contained_lifeforce"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:mechanical_sextant"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:head_hunter"
+               }
+}

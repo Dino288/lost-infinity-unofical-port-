@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " z ",
+                    "yxy",
+                    "yky"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterfaceted_quartz"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:dual_power_assembly"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:synthetic_fibre"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:ion_crystal"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:dimensional_capacitor"
+               }
+}

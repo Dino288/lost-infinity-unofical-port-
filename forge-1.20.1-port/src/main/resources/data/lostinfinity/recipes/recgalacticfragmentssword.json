@@ -1,0 +1,20 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:starfire_blade"
+                        },
+                        {
+                            "item":  "lostinfinity:aurorus_blade"
+                        },
+                        {
+                            "item":  "lostinfinity:novacron_blade"
+                        },
+                        {
+                            "item":  "lostinfinity:moonglow_blade"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:galactic_fragments"
+               }
+}

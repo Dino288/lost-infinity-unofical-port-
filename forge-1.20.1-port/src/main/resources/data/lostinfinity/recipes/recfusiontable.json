@@ -1,0 +1,22 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "cbc",
+                    "aca",
+                    "aca"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:sticky_darksteel"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:multiversite_plates"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:crystallized_alloy"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:fusion_table"
+               }
+}

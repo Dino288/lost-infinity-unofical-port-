@@ -1,0 +1,31 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "abc",
+                    "fdf",
+                    "efa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:organic_shadow_matter"
+                      },
+                "b":  {
+                          "item":  "lostinfinity:catatonite_ingot"
+                      },
+                "c":  {
+                          "item":  "lostinfinity:supermutated_ink"
+                      },
+                "d":  {
+                          "item":  "lostinfinity:unstable_solution"
+                      },
+                "e":  {
+                          "item":  "lostinfinity:dark_magic_powder"
+                      },
+                "f":  {
+                          "item":  "lostinfinity:fractured_multiversite"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:brew_of_forbidden_arts"
+               }
+}

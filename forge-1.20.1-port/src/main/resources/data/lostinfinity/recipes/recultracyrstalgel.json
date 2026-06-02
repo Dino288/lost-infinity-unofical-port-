@@ -1,0 +1,26 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:crystalizedgel"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_bonemeal"
+                        },
+                        {
+                            "item":  "lostinfinity:supermutated_bonemeal"
+                        },
+                        {
+                            "item":  "lostinfinity:superstimulant"
+                        },
+                        {
+                            "item":  "lostinfinity:superstimulant"
+                        },
+                        {
+                            "item":  "lostinfinity:potent_polarcronite"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:ultragrowth_crystal_gel"
+               }
+}

@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:comet_cannon"
+                        },
+                        {
+                            "item":  "lostinfinity:myrite_chunk"
+                        },
+                        {
+                            "item":  "lostinfinity:myrite_chunk"
+                        },
+                        {
+                            "item":  "lostinfinity:myrite_chunk"
+                        },
+                        {
+                            "item":  "lostinfinity:gem_anticipation"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:the_star_soldier"
+               }
+}

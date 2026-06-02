@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " x ",
+                    "xyx",
+                    " x "
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:masterforged_ingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:module_container"
+               }
+}

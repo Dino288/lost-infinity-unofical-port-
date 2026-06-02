@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:flask_of_the_forbidden"
+                        },
+                        {
+                            "item":  "lostinfinity:gem_resolve"
+                        },
+                        {
+                            "item":  "lostinfinity:biocorruption_powder"
+                        },
+                        {
+                            "item":  "lostinfinity:biocorruption_powder"
+                        },
+                        {
+                            "item":  "lostinfinity:biocorruption_powder"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:flask_of_the_corrupted"
+               }
+}

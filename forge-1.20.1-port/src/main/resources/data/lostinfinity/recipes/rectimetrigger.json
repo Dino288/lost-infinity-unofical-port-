@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ama",
+                    "ava",
+                    "kaa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:deviant_iron"
+                      },
+                "k":  {
+                          "item":  "lostinfinity:high_tolerance_wire"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:reflectiveshard"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:heat_resistant_glass"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:time_trigger"
+               }
+}

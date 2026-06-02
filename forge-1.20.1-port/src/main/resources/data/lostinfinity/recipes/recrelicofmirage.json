@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "axv",
+                    "xxm",
+                    "vmx"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "lostinfinity:gem_perception"
+                      },
+                "m":  {
+                          "item":  "lostinfinity:overcharged_cell"
+                      },
+                "v":  {
+                          "item":  "lostinfinity:spaceward_gyroscope"
+                      },
+                "x":  {
+                          "item":  "lostinfinity:supermutated_gold"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:relic_of_the_mirage"
+               }
+}

@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "xax",
+                    "xxx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:mastercrafted_alloy"
+                      },
+                "a":  {
+                          "item":  "lostinfinity:powerchip_shockwave"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:shockwave_generator"
+               }
+}

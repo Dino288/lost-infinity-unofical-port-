@@ -1,0 +1,29 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:blank_augment_slide"
+                        },
+                        {
+                            "item":  "lostinfinity:deviantenderpearl"
+                        },
+                        {
+                            "item":  "lostinfinity:deviantenderpearl"
+                        },
+                        {
+                            "item":  "lostinfinity:deviantenderpearl"
+                        },
+                        {
+                            "item":  "lostinfinity:starlitglobe"
+                        },
+                        {
+                            "item":  "lostinfinity:starlitglobe"
+                        },
+                        {
+                            "item":  "lostinfinity:starlitglobe"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:augment_slide_teleport"
+               }
+}

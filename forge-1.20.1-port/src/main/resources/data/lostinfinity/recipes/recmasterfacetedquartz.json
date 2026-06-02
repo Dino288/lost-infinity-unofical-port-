@@ -1,0 +1,19 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xxx",
+                    "x y",
+                    "yyy"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:electrified_quartz"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:celestialquartz"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:masterfaceted_quartz"
+               }
+}

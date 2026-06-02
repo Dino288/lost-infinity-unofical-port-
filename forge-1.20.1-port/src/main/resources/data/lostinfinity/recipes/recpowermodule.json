@@ -1,0 +1,25 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xyx",
+                    "zqz",
+                    "xyx"
+                ],
+    "key":  {
+                "x":  {
+                          "item":  "lostinfinity:superheatedingot"
+                      },
+                "y":  {
+                          "item":  "lostinfinity:celestialredstone"
+                      },
+                "z":  {
+                          "item":  "lostinfinity:celestialquartz"
+                      },
+                "q":  {
+                          "item":  "lostinfinity:supermutated_powder"
+                      }
+            },
+    "result":  {
+                   "item":  "lostinfinity:power_module"
+               }
+}

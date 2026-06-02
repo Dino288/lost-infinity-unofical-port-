@@ -1,0 +1,23 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "lostinfinity:security_pass_1"
+                        },
+                        {
+                            "item":  "lostinfinity:ember_pods"
+                        },
+                        {
+                            "item":  "lostinfinity:myrite_chunk"
+                        },
+                        {
+                            "item":  "lostinfinity:external_clovinite_battery"
+                        },
+                        {
+                            "item":  "lostinfinity:omni_crystal"
+                        }
+                    ],
+    "result":  {
+                   "item":  "lostinfinity:security_pass_2"
+               }
+}
