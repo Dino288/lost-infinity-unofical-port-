@@ -28,6 +28,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.Vec3;
+import xol.lostinfinity.effect.LostFx;
 import xol.lostinfinity.registry.ModBlocks;
 import xol.lostinfinity.registry.ModEffects;
 import xol.lostinfinity.registry.ModItems;
@@ -138,6 +139,12 @@ public class LostSeaMob extends LostPlaceholderMob {
         } else if (this.kind == Kind.CRABULON && target != null && this.tickCount % 60 == 0 && this.distanceToSqr(target) > 16.0D) {
             shootAt(target, 12.0F, 1.5F);
             this.level().playSound(null, this.blockPosition(), SoundEvents.TRIDENT_THROW, SoundSource.HOSTILE, 1.0F, 0.8F);
+        } else if (this.kind == Kind.OCTOBRELLA && target != null && this.tickCount % 90 == 0) {
+            inkCloud(target);
+        } else if ((this.kind == Kind.LEVIATHAN || this.kind == Kind.SEA_SERPENT) && target != null && this.tickCount % 120 == 0) {
+            whirlpool(target);
+        } else if (this.kind == Kind.RIBSHARK && target != null && this.tickCount % 55 == 0) {
+            bloodFrenzy(target);
         }
     }
 
@@ -179,11 +186,51 @@ public class LostSeaMob extends LostPlaceholderMob {
     private void shockNearbyPlayers() {
         this.level().playSound(null, this.blockPosition(), SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.HOSTILE, 1.75F,
                 0.8F + this.random.nextFloat() * 0.4F);
+        LostFx.burst(this.level(), this.blockPosition(), "electric_explosion_blue", 28, 1.0D, 0.05D);
         for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(8.0D))) {
             player.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 300, 0));
             player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 0));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 0));
         }
+    }
+
+    private void inkCloud(LivingEntity target) {
+        LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 32, 1.3D, 0.04D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.SQUID_SQUIRT, SoundSource.HOSTILE, 1.0F, 0.8F);
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(7.0D), entity -> entity != this)) {
+            living.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0));
+            living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1));
+        }
+        Vec3 away = this.position().subtract(target.position()).normalize().scale(0.55D);
+        this.setDeltaMovement(this.getDeltaMovement().add(away.x, 0.15D, away.z));
+    }
+
+    private void whirlpool(LivingEntity target) {
+        LostFx.burst(this.level(), this.blockPosition(), "gravity_ring", 40, 1.7D, 0.07D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.CONDUIT_AMBIENT, SoundSource.HOSTILE, 1.0F, 0.6F);
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(10.0D), entity -> entity != this)) {
+            Vec3 pull = this.position().subtract(living.position());
+            if (pull.lengthSqr() > 0.01D) {
+                living.push(pull.normalize().x * 0.8D, -0.25D, pull.normalize().z * 0.8D);
+            }
+            living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 2));
+            if (living == target) {
+                living.hurt(this.damageSources().mobAttack(this), this.kind == Kind.LEVIATHAN ? 10.0F : 7.0F);
+            }
+        }
+    }
+
+    private void bloodFrenzy(LivingEntity target) {
+        if (target.getHealth() > target.getMaxHealth() * 0.5F) {
+            return;
+        }
+        Vec3 delta = target.position().subtract(this.position());
+        if (delta.lengthSqr() > 1.0D) {
+            this.setDeltaMovement(this.getDeltaMovement().add(delta.normalize().scale(0.55D)));
+        }
+        this.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120, 1, true, false));
+        this.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 120, 0, true, false));
+        LostFx.burst(this.level(), this.blockPosition(), "venom", 10, 0.5D, 0.03D);
     }
 
     private void swimToward(Vec3 target, double speed) {

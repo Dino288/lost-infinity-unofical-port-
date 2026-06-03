@@ -12,6 +12,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -65,6 +66,9 @@ public class LostPlaceholderMob extends PathfinderMob {
             }
         } else if (isBurrowEntity()) {
             this.setNoGravity(false);
+        }
+        if (isStationaryEntity()) {
+            this.setDeltaMovement(Vec3.ZERO);
         }
         if (!this.level().isClientSide()) {
             tickSpecialBehavior();
@@ -133,6 +137,10 @@ public class LostPlaceholderMob extends PathfinderMob {
         }
         LivingEntity target = this.getTarget();
         if (target != null && target.isAlive()) {
+            if (isStationaryEntity()) {
+                this.getNavigation().stop();
+                this.setDeltaMovement(Vec3.ZERO);
+            }
             if (isFlyingEntity()) {
                 Vec3 delta = target.getEyePosition().subtract(this.position());
                 if (delta.lengthSqr() > 1.0D) {
@@ -154,6 +162,13 @@ public class LostPlaceholderMob extends PathfinderMob {
             if (isExplosiveEntity() && this.distanceToSqr(target) < 4.0D * 4.0D) {
                 primeFuse();
             }
+            if (isTrapEntity() && this.distanceToSqr(target) < 9.0D) {
+                springTrap(target);
+            }
+            if (isDecoyEntity() && this.supportCooldown <= 0) {
+                confuseTarget(target);
+                this.supportCooldown = 140;
+            }
         }
         if ((isHealerEntity() || isSummonerEntity()) && this.supportCooldown <= 0) {
             if (isHealerEntity()) {
@@ -163,6 +178,12 @@ public class LostPlaceholderMob extends PathfinderMob {
                 summonMinion(target);
             }
             this.supportCooldown = isSummonerEntity() ? 180 : 120;
+        }
+        if (isCollectorEntity() && this.tickCount % 40 == 0) {
+            collectNearbyItems();
+        }
+        if (isMountEntity() && target != null && target.isAlive() && this.tickCount % 35 == 0) {
+            mountedCharge(target);
         }
         if (this.fuseTicks >= 0) {
             this.fuseTicks++;
@@ -262,6 +283,47 @@ public class LostPlaceholderMob extends PathfinderMob {
         this.level().playSound(null, this.blockPosition(), SoundEvents.GRAVEL_BREAK, SoundSource.HOSTILE, 0.8F, 0.8F);
     }
 
+    private void springTrap(LivingEntity target) {
+        if (this.specialCooldown > 0) {
+            return;
+        }
+        this.specialCooldown = 80;
+        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, isBossEntity() ? 3 : 2));
+        target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 80, 0));
+        Vec3 pull = this.position().subtract(target.position()).normalize().scale(0.85D);
+        target.push(pull.x, 0.15D, pull.z);
+        LostFx.burst(this.level(), this.blockPosition(), mobId().contains("tentacle") ? "shadow_blast" : "gravity_ring", 20, 0.7D, 0.04D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.CHAIN_PLACE, SoundSource.HOSTILE, 0.8F, 0.85F);
+    }
+
+    private void confuseTarget(LivingEntity target) {
+        target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 160, 0));
+        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0));
+        LostFx.burst(this.level(), target.blockPosition(), "space_magic", 16, 0.55D, 0.03D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.ILLUSIONER_CAST_SPELL, SoundSource.HOSTILE, 0.7F, 1.15F);
+    }
+
+    private void collectNearbyItems() {
+        for (ItemEntity item : this.level().getEntitiesOfClass(ItemEntity.class, this.getBoundingBox().inflate(5.0D))) {
+            Vec3 pull = this.position().add(0.0D, this.getBbHeight() * 0.5D, 0.0D).subtract(item.position());
+            if (pull.lengthSqr() > 0.04D) {
+                item.setDeltaMovement(item.getDeltaMovement().scale(0.6D).add(pull.normalize().scale(0.18D)));
+            } else if (mobId().contains("pearl") || mobId().contains("collector")) {
+                this.heal(1.0F);
+                item.discard();
+                LostFx.burst(this.level(), this.blockPosition(), "portal_beam", 8, 0.3D, 0.02D);
+            }
+        }
+    }
+
+    private void mountedCharge(LivingEntity target) {
+        Vec3 delta = target.position().subtract(this.position());
+        if (delta.lengthSqr() > 4.0D && delta.lengthSqr() < 144.0D) {
+            this.setDeltaMovement(delta.normalize().scale(0.95D).add(0.0D, 0.18D, 0.0D));
+            this.level().playSound(null, this.blockPosition(), SoundEvents.HORSE_GALLOP, SoundSource.HOSTILE, 0.7F, 1.05F);
+        }
+    }
+
     private void applyThemedHit(LivingEntity living) {
         String id = mobId();
         if (id.contains("acid") || id.contains("vile") || id.contains("poison") || id.contains("venom") || id.contains("blight")) {
@@ -307,7 +369,8 @@ public class LostPlaceholderMob extends PathfinderMob {
         String id = mobId();
         return id.contains("merchant") || id.contains("trader") || id.contains("operator") || id.contains("controller")
                 || id.contains("contrader") || id.contains("hologram") || id.contains("market") || id.contains("puzzlemaster")
-                || id.contains("statue") || id.contains("deco") || id.contains("supply");
+                || id.contains("statue") || id.contains("deco") || id.contains("supply") || id.contains("obstacle")
+                || id.contains("screen") || id.contains("arenaevent");
     }
 
     private boolean isFlyingEntity() {
@@ -365,6 +428,37 @@ public class LostPlaceholderMob extends PathfinderMob {
         String id = mobId();
         return id.contains("worm") || id.contains("slug") || id.contains("lurcher") || id.contains("crawker") || id.contains("rock")
                 || id.contains("tentaclon") || id.contains("tetherbug");
+    }
+
+    private boolean isTrapEntity() {
+        String id = mobId();
+        return id.contains("trap") || id.contains("tether") || id.contains("clinger") || id.contains("grappler")
+                || id.contains("hanger") || id.contains("brand") || id.contains("mark_of");
+    }
+
+    private boolean isStationaryEntity() {
+        String id = mobId();
+        return id.contains("obstacle") || id.contains("totem") || id.contains("pylon") || id.contains("crystal")
+                || id.contains("cannon") || id.contains("turret") || id.contains("statue") || id.contains("rift")
+                || id.contains("trap");
+    }
+
+    private boolean isDecoyEntity() {
+        String id = mobId();
+        return id.contains("decoy") || id.contains("ghostcopy") || id.contains("shimmer") || id.contains("phaser")
+                || id.contains("illusion") || id.contains("mirror");
+    }
+
+    private boolean isCollectorEntity() {
+        String id = mobId();
+        return id.contains("collector") || id.contains("merchant") || id.contains("market") || id.contains("contrader")
+                || id.contains("pearlcollector");
+    }
+
+    private boolean isMountEntity() {
+        String id = mobId();
+        return id.contains("mount") || id.contains("horse") || id.contains("ravager") || id.contains("rib") || id.contains("crusher")
+                || id.contains("ribrex");
     }
 
     private boolean isStoneEntity() {
