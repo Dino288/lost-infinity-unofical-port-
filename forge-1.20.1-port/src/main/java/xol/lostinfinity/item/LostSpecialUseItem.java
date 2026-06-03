@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
@@ -27,6 +28,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 import xol.lostinfinity.entity.LostCombatProjectile;
+import xol.lostinfinity.effect.LostFx;
 import xol.lostinfinity.registry.ModEffects;
 
 public class LostSpecialUseItem extends Item {
@@ -100,6 +102,40 @@ public class LostSpecialUseItem extends Item {
         if (itemName.contains("analyzer") || itemName.contains("correlator") || itemName.contains("compass")) {
             analyze(level, player);
             player.getCooldowns().addCooldown(this, 40);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("attractor") || itemName.contains("vacuum") || itemName.contains("magnet") || itemName.contains("tether")) {
+            attract(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 80);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("shield") || itemName.contains("forcefield") || itemName.contains("pylon_protector")
+                || itemName.contains("beacon_of_light")) {
+            defensivePulse(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 180);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("summon") || itemName.contains("staff_of_servitude") || itemName.contains("tentacle_remote")
+                || itemName.contains("luminousguardian") || itemName.contains("starsoldier") || itemName.contains("skycrabcontroller")) {
+            summonHelper(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 240);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("rain") || itemName.contains("storm") || itemName.contains("thunder") || itemName.contains("moonshaker")
+                || itemName.contains("time_trigger")) {
+            weatherOrTime(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 300);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("reconstruction") || itemName.contains("repair") || itemName.contains("resurgence")
+                || itemName.contains("rebirth") || itemName.contains("life_vessel")) {
+            repairAndRestore(player);
+            consumeOrDamage(player, stack, hand, itemName.contains("scroll"));
+            player.getCooldowns().addCooldown(this, 180);
             return InteractionResultHolder.success(stack);
         }
         if (itemName.contains("bomb") || itemName.contains("charge") || itemName.contains("quark") || itemName.contains("gluon")
@@ -196,6 +232,93 @@ public class LostSpecialUseItem extends Item {
             player.displayClientMessage(Component.literal("Nearby entities: "
                     + serverLevel.getEntities(player, new AABB(player.blockPosition()).inflate(24.0D)).size()), false);
         }
+    }
+
+    private void attract(Level level, Player player) {
+        boolean pushAway = itemName.contains("repuls") || itemName.contains("shockwave");
+        double radius = itemName.contains("vacuum") ? 14.0D : 9.0D;
+        for (Entity entity : level.getEntities(player, player.getBoundingBox().inflate(radius), entity -> entity.isAlive())) {
+            Vec3 delta = player.position().subtract(entity.position());
+            if (delta.lengthSqr() < 0.01D) {
+                continue;
+            }
+            Vec3 motion = delta.normalize().scale(pushAway ? -0.75D : 0.65D);
+            entity.push(motion.x, pushAway ? 0.25D : 0.1D, motion.z);
+            if (entity instanceof ItemEntity itemEntity) {
+                itemEntity.setPickUpDelay(0);
+            }
+        }
+        LostFx.burst(level, player.blockPosition(), pushAway ? "electric_explosion_blue" : "gravity_ring", 24, 1.1D, 0.05D);
+        level.playSound(null, player.blockPosition(), pushAway ? SoundEvents.GENERIC_EXPLODE : SoundEvents.BEACON_POWER_SELECT,
+                SoundSource.PLAYERS, 0.65F, 1.2F);
+    }
+
+    private void defensivePulse(Level level, Player player) {
+        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 260, itemName.contains("quantum") ? 2 : 1, true, false));
+        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 260, 1, true, false));
+        for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(5.0D), entity -> entity != player)) {
+            entity.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
+            Vec3 push = entity.position().subtract(player.position()).normalize().scale(0.7D);
+            entity.push(push.x, 0.25D, push.z);
+        }
+        LostFx.burst(level, player.blockPosition(), "portal_beam", 26, 0.9D, 0.04D);
+        level.playSound(null, player.blockPosition(), SoundEvents.SHIELD_BLOCK, SoundSource.PLAYERS, 0.8F, 0.9F);
+    }
+
+    private void summonHelper(Level level, Player player) {
+        EntityType<?> type = itemName.contains("skycrab") ? EntityType.PHANTOM
+                : itemName.contains("tentacle") ? EntityType.SQUID
+                : itemName.contains("guardian") ? EntityType.IRON_GOLEM
+                : EntityType.WOLF;
+        Entity entity = type.create(level);
+        if (entity == null) {
+            return;
+        }
+        Vec3 pos = player.position().add(player.getLookAngle().scale(2.0D));
+        entity.moveTo(pos.x, pos.y, pos.z, player.getYRot(), 0.0F);
+        if (entity instanceof LivingEntity living) {
+            living.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0, true, false));
+            living.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0, true, false));
+        }
+        level.addFreshEntity(entity);
+        LostFx.burst(level, entity.blockPosition(), "ancient_spell", 24, 0.7D, 0.04D);
+        level.playSound(null, entity.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 0.8F, 1.1F);
+    }
+
+    private void weatherOrTime(Level level, Player player) {
+        if (level instanceof ServerLevel serverLevel) {
+            if (itemName.contains("rain")) {
+                serverLevel.setWeatherParameters(0, 6000, true, false);
+            } else if (itemName.contains("storm") || itemName.contains("thunder")) {
+                serverLevel.setWeatherParameters(0, 6000, true, true);
+                for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(10.0D), entity -> entity != player)) {
+                    entity.hurt(level.damageSources().lightningBolt(), 5.0F);
+                    entity.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 0));
+                }
+            } else {
+                serverLevel.setDayTime((serverLevel.getDayTime() + 12000L) % 24000L);
+            }
+        }
+        LostFx.burst(level, player.blockPosition(), itemName.contains("storm") || itemName.contains("thunder") ? "electric_explosion_blue" : "space_magic",
+                32, 1.3D, 0.05D);
+        level.playSound(null, player.blockPosition(), SoundEvents.BEACON_ACTIVATE, SoundSource.PLAYERS, 0.8F, 0.7F);
+    }
+
+    private void repairAndRestore(Player player) {
+        int repaired = 0;
+        for (ItemStack carried : player.getInventory().items) {
+            if (carried.isDamageableItem() && carried.getDamageValue() > 0) {
+                carried.setDamageValue(Math.max(0, carried.getDamageValue() - 80));
+                repaired++;
+                if (repaired >= 4) {
+                    break;
+                }
+            }
+        }
+        player.heal(itemName.contains("life") || itemName.contains("rebirth") ? 10.0F : 4.0F);
+        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 160, 1, true, false));
+        player.level().playSound(null, player.blockPosition(), SoundEvents.ANVIL_USE, SoundSource.PLAYERS, 0.55F, 1.4F);
+        LostFx.burst(player.level(), player.blockPosition(), "murky_mist", 18, 0.65D, 0.04D);
     }
 
     private void shootUtilityProjectile(Level level, Player player, ItemStack stack) {
