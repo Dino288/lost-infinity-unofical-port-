@@ -38,6 +38,8 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
     private static final int FUEL_SLOT = 2;
     private static final int OUTPUT_SLOT = 8;
     private static final int ENERGY_CAPACITY = 1000;
+    private static final String ITEM_ENERGY_TAG = "LostEnergy";
+    private static final String ITEM_AMMO_TAG = "LostAmmo";
     private final NonNullList<ItemStack> items = NonNullList.withSize(9, ItemStack.EMPTY);
     private final ContainerData data = new ContainerData() {
         @Override
@@ -151,9 +153,10 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         progress = (progress + 1) % 100;
         processTime = 100;
         ItemStack fuel = items.get(FUEL_SLOT);
-        if (isFuel(fuel) && energy <= ENERGY_CAPACITY - 100) {
-            fuel.shrink(1);
-            energy += 100;
+        if (canStoreItemEnergy(fuel) && chargeItem(fuel, machineId.contains("hyper") ? 8 : 4)) {
+            energy = Math.min(ENERGY_CAPACITY, energy + 1);
+        } else if (isFuel(fuel) && energy <= ENERGY_CAPACITY - 100) {
+            energy += consumeFuelEnergy(fuel);
         } else {
             energy = Math.min(ENERGY_CAPACITY, energy + (machineId.contains("hyper") ? 5 : 2));
         }
@@ -318,15 +321,71 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
 
     private void chargeFromFuel() {
         ItemStack fuel = items.get(FUEL_SLOT);
-        if (isFuel(fuel) && energy <= ENERGY_CAPACITY - 80) {
-            fuel.shrink(1);
-            energy += fuel.getItem() == Items.COAL_BLOCK ? 800 : 80;
+        if (fuel.isEmpty() || energy >= ENERGY_CAPACITY) {
+            return;
+        }
+        if (canStoreItemEnergy(fuel) && fuel.getOrCreateTag().getInt(ITEM_ENERGY_TAG) > 0) {
+            int transfer = Math.min(Math.min(32, fuel.getOrCreateTag().getInt(ITEM_ENERGY_TAG)), ENERGY_CAPACITY - energy);
+            fuel.getOrCreateTag().putInt(ITEM_ENERGY_TAG, fuel.getOrCreateTag().getInt(ITEM_ENERGY_TAG) - transfer);
+            energy += transfer;
+        } else if (isFuel(fuel) && energy <= ENERGY_CAPACITY - 80) {
+            energy += consumeFuelEnergy(fuel);
         }
     }
 
     private static boolean isFuel(ItemStack stack) {
         return stack.is(Items.REDSTONE) || stack.is(Items.COAL) || stack.is(Items.CHARCOAL) || stack.is(Items.COAL_BLOCK)
-                || itemPath(stack).contains("battery") || itemPath(stack).contains("energy");
+                || canStoreItemEnergy(stack) || itemPath(stack).contains("fuel") || itemPath(stack).contains("power_cell");
+    }
+
+    private static int consumeFuelEnergy(ItemStack fuel) {
+        if (fuel.isEmpty()) {
+            return 0;
+        }
+        int amount;
+        if (fuel.is(Items.COAL_BLOCK)) {
+            amount = 800;
+        } else if (fuel.is(Items.REDSTONE)) {
+            amount = 60;
+        } else if (itemPath(fuel).contains("power_fuel")) {
+            amount = 180;
+        } else {
+            amount = 80;
+        }
+        fuel.shrink(1);
+        return amount;
+    }
+
+    private static boolean canStoreItemEnergy(ItemStack stack) {
+        String path = itemPath(stack);
+        return path.contains("battery") || path.contains("energy_cell") || path.contains("power_cell")
+                || path.contains("tesla_core") || path.contains("unpowered_cell") || path.contains("mechanicalpowercell")
+                || path.contains("organicpowercell") || (stack.hasTag() && stack.getOrCreateTag().contains(ITEM_ENERGY_TAG));
+    }
+
+    private static boolean chargeItem(ItemStack stack, int amount) {
+        if (!canStoreItemEnergy(stack)) {
+            return false;
+        }
+        CompoundTag tag = stack.getOrCreateTag();
+        int capacity = itemEnergyCapacity(stack);
+        int current = Math.max(0, tag.getInt(ITEM_ENERGY_TAG));
+        if (current >= capacity) {
+            return false;
+        }
+        tag.putInt(ITEM_ENERGY_TAG, Math.min(capacity, current + amount));
+        if (itemPath(stack).contains("cell") || itemPath(stack).contains("battery")) {
+            tag.putInt(ITEM_AMMO_TAG, Math.max(tag.getInt(ITEM_AMMO_TAG), tag.getInt(ITEM_ENERGY_TAG) / 8));
+        }
+        return true;
+    }
+
+    private static int itemEnergyCapacity(ItemStack stack) {
+        String path = itemPath(stack);
+        if (path.contains("tesla")) return 500;
+        if (path.contains("power_cell") || path.contains("mechanicalpowercell") || path.contains("organicpowercell")) return 400;
+        if (path.contains("battery") || path.contains("energy_cell") || path.contains("unpowered_cell")) return 250;
+        return 300;
     }
 
     private boolean isGenerator() {
