@@ -130,7 +130,7 @@ public class LostPlaceholderMob extends PathfinderMob {
 
     @Override
     protected ResourceLocation getDefaultLootTable() {
-        return ResourceLocation.fromNamespaceAndPath(LostInfinity.MODID, mobId());
+        return ResourceLocation.fromNamespaceAndPath(LostInfinity.MODID, recoveredLootId(mobId()));
     }
 
     @Override
@@ -647,5 +647,19 @@ public class LostPlaceholderMob extends PathfinderMob {
 
     private String mobId() {
         return this.getType().builtInRegistryHolder().key().location().getPath().toLowerCase(Locale.ROOT);
+    }
+
+    protected String recoveredLootId(String id) {
+        return switch (id) {
+            case "sea_serpent" -> "seaserpent";
+            case "deviant_wolf" -> "deviantwolf";
+            case "deviant_husk" -> "devianthusk";
+            case "deviant_wither" -> "deviantwither";
+            case "titanpiglin" -> "titanpigman";
+            case "mushmerra_clone" -> "mushmerra";
+            case "giant_rockslug" -> "rockslug";
+            case "x_screacher" -> "screacher";
+            default -> id;
+        };
     }
 }
