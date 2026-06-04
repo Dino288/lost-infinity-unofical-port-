@@ -5,7 +5,6 @@ import java.util.Locale;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.InteractionHand;
@@ -52,12 +51,16 @@ public class LostSpecialUseItem extends Item {
         if (isCureItem()) {
             clearBadEffects(player);
             player.heal(itemName.contains("guardian") ? 8.0F : 4.0F);
+            LostFx.play(level, player.blockPosition(), "bioenergize", SoundSource.PLAYERS, 0.7F, 1.15F);
+            LostFx.burst(level, player.blockPosition(), "miasma", 16, 0.55D, 0.03D);
             consumeOrDamage(player, stack, hand, true);
             player.getCooldowns().addCooldown(this, 80);
             return InteractionResultHolder.success(stack);
         }
         if (isInjection()) {
             applyInjection(player);
+            LostFx.play(level, player.blockPosition(), "syringe_use", SoundSource.PLAYERS, 0.75F, 1.0F);
+            LostFx.burst(level, player.blockPosition(), "blood_drop", 10, 0.35D, 0.02D);
             consumeOrDamage(player, stack, hand, true);
             player.getCooldowns().addCooldown(this, 200);
             return InteractionResultHolder.success(stack);
@@ -65,6 +68,8 @@ public class LostSpecialUseItem extends Item {
         if (itemName.contains("cloaking_device") || itemName.contains("ring_of_illusions")) {
             player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 400, 0, true, false));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, true, false));
+            LostFx.play(level, player.blockPosition(), "rapid_teleport", SoundSource.PLAYERS, 0.45F, 1.35F);
+            LostFx.burst(level, player.blockPosition(), "spectral", 18, 0.65D, 0.03D);
             player.getCooldowns().addCooldown(this, 240);
             consumeOrDamage(player, stack, hand, false);
             return InteractionResultHolder.success(stack);
@@ -77,6 +82,7 @@ public class LostSpecialUseItem extends Item {
         }
         if (itemName.contains("hot_pod") || itemName.contains("extremely_hot_pod")) {
             fireBurst(level, player, itemName.contains("extremely") ? 7.0D : 4.5D);
+            LostFx.play(level, player.blockPosition(), "magic_weapon_4", SoundSource.PLAYERS, 0.8F, 0.85F);
             consumeOrDamage(player, stack, hand, true);
             player.getCooldowns().addCooldown(this, 100);
             return InteractionResultHolder.success(stack);
@@ -89,6 +95,7 @@ public class LostSpecialUseItem extends Item {
         }
         if (itemName.contains("power_pulse") || itemName.contains("pulse_charge") || itemName.contains("element_stone")) {
             effectBurst(level, player, MobEffects.MOVEMENT_SLOWDOWN, MobEffects.DAMAGE_BOOST);
+            LostFx.play(level, player.blockPosition(), itemName.contains("pulse") ? "sound_gun" : "magic_weapon_5", SoundSource.PLAYERS, 0.65F, 1.1F);
             player.getCooldowns().addCooldown(this, 160);
             consumeOrDamage(player, stack, hand, false);
             return InteractionResultHolder.success(stack);
@@ -101,6 +108,8 @@ public class LostSpecialUseItem extends Item {
         }
         if (itemName.contains("analyzer") || itemName.contains("correlator") || itemName.contains("compass")) {
             analyze(level, player);
+            LostFx.play(level, player.blockPosition(), "scanner", SoundSource.PLAYERS, 0.6F, 1.0F);
+            LostFx.burst(level, player.blockPosition(), "small_spark", 8, 0.35D, 0.02D);
             player.getCooldowns().addCooldown(this, 40);
             return InteractionResultHolder.success(stack);
         }
@@ -194,12 +203,14 @@ public class LostSpecialUseItem extends Item {
         Vec3 look = player.getLookAngle();
         BlockHitResult hit = level.clip(new ClipContext(eye, eye.add(look.scale(range)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, player));
         Vec3 target = hit.getType() == HitResult.Type.BLOCK ? hit.getLocation().subtract(look.scale(1.5D)) : eye.add(look.scale(range));
+        LostFx.burst(level, player.blockPosition(), "warp", 18, 0.55D, 0.04D);
         player.teleportTo(target.x, target.y, target.z);
-        level.playSound(null, player.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 0.75F, 1.25F);
+        LostFx.burst(level, player.blockPosition(), "warp", 24, 0.65D, 0.04D);
+        LostFx.play(level, player.blockPosition(), "rapid_teleport", SoundSource.PLAYERS, 0.75F, 1.25F);
     }
 
     private static void fireBurst(Level level, Player player, double radius) {
-        level.playSound(null, player.blockPosition(), SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 0.8F, 0.8F);
+        LostFx.burst(level, player.blockPosition(), "plasma_explosion", 26, 0.9D, 0.06D);
         for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(radius), entity -> entity != player)) {
             entity.setSecondsOnFire((int) radius);
             entity.hurt(level.damageSources().playerAttack(player), (float) radius);
@@ -207,7 +218,8 @@ public class LostSpecialUseItem extends Item {
     }
 
     private void effectBurst(Level level, Player player, MobEffect targetEffect, MobEffect selfEffect) {
-        level.playSound(null, player.blockPosition(), SoundEvents.BEACON_ACTIVATE, SoundSource.PLAYERS, 0.55F, 1.4F);
+        LostFx.play(level, player.blockPosition(), targetEffect == MobEffects.POISON ? "flask_explode" : "magic_weapon_10", SoundSource.PLAYERS, 0.55F, 1.25F);
+        LostFx.burst(level, player.blockPosition(), targetEffect == MobEffects.POISON ? "plague" : "supersonic_blue", 24, 0.9D, 0.04D);
         for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(6.0D), entity -> entity != player)) {
             entity.addEffect(new MobEffectInstance(targetEffect, 220, itemName.contains("ultra") ? 2 : 0));
             if (targetEffect == MobEffects.POISON) {
@@ -221,7 +233,8 @@ public class LostSpecialUseItem extends Item {
         ItemStack reward = new ItemStack(strong ? net.minecraft.world.item.Items.GOLDEN_APPLE : net.minecraft.world.item.Items.EMERALD);
         ItemEntity item = new ItemEntity(level, player.getX(), player.getY() + 0.5D, player.getZ(), reward);
         level.addFreshEntity(item);
-        level.playSound(null, player.blockPosition(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, 0.5F, 1.5F);
+        LostFx.play(level, player.blockPosition(), "special_craft", SoundSource.PLAYERS, 0.7F, 1.2F);
+        LostFx.burst(level, player.blockPosition(), "golden_magic", 18, 0.5D, 0.03D);
     }
 
     private void analyze(Level level, Player player) {
@@ -249,8 +262,7 @@ public class LostSpecialUseItem extends Item {
             }
         }
         LostFx.burst(level, player.blockPosition(), pushAway ? "electric_explosion_blue" : "gravity_ring", 24, 1.1D, 0.05D);
-        level.playSound(null, player.blockPosition(), pushAway ? SoundEvents.GENERIC_EXPLODE : SoundEvents.BEACON_POWER_SELECT,
-                SoundSource.PLAYERS, 0.65F, 1.2F);
+        LostFx.play(level, player.blockPosition(), pushAway ? "electric_bounce" : "magic_weapon_3", SoundSource.PLAYERS, 0.65F, 1.2F);
     }
 
     private void defensivePulse(Level level, Player player) {
@@ -262,7 +274,7 @@ public class LostSpecialUseItem extends Item {
             entity.push(push.x, 0.25D, push.z);
         }
         LostFx.burst(level, player.blockPosition(), "portal_beam", 26, 0.9D, 0.04D);
-        level.playSound(null, player.blockPosition(), SoundEvents.SHIELD_BLOCK, SoundSource.PLAYERS, 0.8F, 0.9F);
+        LostFx.play(level, player.blockPosition(), "shield_block", SoundSource.PLAYERS, 0.8F, 0.9F);
     }
 
     private void summonHelper(Level level, Player player) {
@@ -282,7 +294,7 @@ public class LostSpecialUseItem extends Item {
         }
         level.addFreshEntity(entity);
         LostFx.burst(level, entity.blockPosition(), "ancient_spell", 24, 0.7D, 0.04D);
-        level.playSound(null, entity.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 0.8F, 1.1F);
+        LostFx.play(level, entity.blockPosition(), "magic_weapon_13", SoundSource.PLAYERS, 0.8F, 1.1F);
     }
 
     private void weatherOrTime(Level level, Player player) {
@@ -301,7 +313,7 @@ public class LostSpecialUseItem extends Item {
         }
         LostFx.burst(level, player.blockPosition(), itemName.contains("storm") || itemName.contains("thunder") ? "electric_explosion_blue" : "space_magic",
                 32, 1.3D, 0.05D);
-        level.playSound(null, player.blockPosition(), SoundEvents.BEACON_ACTIVATE, SoundSource.PLAYERS, 0.8F, 0.7F);
+        LostFx.play(level, player.blockPosition(), itemName.contains("rain") ? "rainfall_generator" : "magic_weapon_12", SoundSource.PLAYERS, 0.8F, 0.7F);
     }
 
     private void repairAndRestore(Player player) {
@@ -317,7 +329,7 @@ public class LostSpecialUseItem extends Item {
         }
         player.heal(itemName.contains("life") || itemName.contains("rebirth") ? 10.0F : 4.0F);
         player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 160, 1, true, false));
-        player.level().playSound(null, player.blockPosition(), SoundEvents.ANVIL_USE, SoundSource.PLAYERS, 0.55F, 1.4F);
+        LostFx.play(player.level(), player.blockPosition(), "special_craft", SoundSource.PLAYERS, 0.55F, 1.4F);
         LostFx.burst(player.level(), player.blockPosition(), "murky_mist", 18, 0.65D, 0.04D);
     }
 
@@ -329,7 +341,24 @@ public class LostSpecialUseItem extends Item {
         projectile.setItem(projectileStack);
         projectile.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, itemName.contains("bomb") ? 1.05F : 1.75F, 0.6F);
         level.addFreshEntity(projectile);
-        level.playSound(null, player.blockPosition(), SoundEvents.FIRECHARGE_USE, SoundSource.PLAYERS, 0.5F, 1.0F);
+        LostFx.play(level, player.blockPosition(), utilityShotSound(), SoundSource.PLAYERS, 0.55F, itemName.contains("bomb") ? 0.85F : 1.05F);
+        LostFx.burst(level, player.blockPosition(), itemName.contains("exothermite") ? "plasma" : "small_spark", 8, 0.25D, 0.02D);
+    }
+
+    private String utilityShotSound() {
+        if (itemName.contains("bomb")) {
+            return "bomb_tick";
+        }
+        if (itemName.contains("exothermite")) {
+            return "missile_launch";
+        }
+        if (itemName.contains("quark") || itemName.contains("gluon")) {
+            return "magic_weapon_20";
+        }
+        if (itemName.contains("emitter")) {
+            return "sound_gun";
+        }
+        return "magic_weapon_1";
     }
 
     private static void consumeOrDamage(Player player, ItemStack stack, InteractionHand hand, boolean consume) {
