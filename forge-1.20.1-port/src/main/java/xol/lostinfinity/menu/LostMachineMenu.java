@@ -14,6 +14,11 @@ import xol.lostinfinity.registry.ModMenus;
 
 public class LostMachineMenu extends AbstractContainerMenu {
     private static final int MACHINE_SLOTS = 9;
+    private static final int INPUT_SLOT = 0;
+    private static final int CATALYST_SLOT = 1;
+    private static final int FUEL_SLOT = 2;
+    private static final int MODULE_START_SLOT = 3;
+    private static final int MODULE_END_SLOT = 7;
     private final Container container;
     private final ContainerData data;
 
@@ -90,7 +95,7 @@ public class LostMachineMenu extends AbstractContainerMenu {
                 if (!moveItemStackTo(stack, MACHINE_SLOTS, slots.size(), true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!moveItemStackTo(stack, 0, MACHINE_SLOTS, false)) {
+            } else if (!movePlayerStackToMachine(stack)) {
                 return ItemStack.EMPTY;
             }
             if (stack.isEmpty()) {
@@ -100,6 +105,40 @@ public class LostMachineMenu extends AbstractContainerMenu {
             }
         }
         return moved;
+    }
+
+    private boolean movePlayerStackToMachine(ItemStack stack) {
+        if (isFuel(stack) && moveItemStackTo(stack, FUEL_SLOT, FUEL_SLOT + 1, false)) {
+            return true;
+        }
+        if (isModule(stack) && moveItemStackTo(stack, MODULE_START_SLOT, MODULE_END_SLOT + 1, false)) {
+            return true;
+        }
+        if (moveItemStackTo(stack, INPUT_SLOT, INPUT_SLOT + 1, false)) {
+            return true;
+        }
+        return moveItemStackTo(stack, CATALYST_SLOT, CATALYST_SLOT + 1, false);
+    }
+
+    private static boolean isFuel(ItemStack stack) {
+        String path = itemPath(stack);
+        return path.contains("fuel") || path.contains("battery") || path.contains("power_cell") || path.contains("energy_cell")
+                || path.contains("capacitor") || path.contains("mechanicalpowercell") || path.contains("organicpowercell")
+                || path.contains("superchargedcell") || stack.is(net.minecraft.world.item.Items.REDSTONE)
+                || stack.is(net.minecraft.world.item.Items.COAL) || stack.is(net.minecraft.world.item.Items.CHARCOAL)
+                || stack.is(net.minecraft.world.item.Items.COAL_BLOCK);
+    }
+
+    private static boolean isModule(ItemStack stack) {
+        String path = itemPath(stack);
+        return path.contains("module") || path.contains("_upgrade") || path.contains("_chip");
+    }
+
+    private static String itemPath(ItemStack stack) {
+        if (stack.isEmpty()) {
+            return "";
+        }
+        return stack.getItem().builtInRegistryHolder().key().location().getPath();
     }
 
     @Override

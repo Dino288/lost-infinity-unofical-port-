@@ -160,6 +160,22 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         ItemStack target = items.get(INPUT_SLOT);
         active = false;
         processTime = machineId.contains("high_powered") || machineId.contains("labyrinth") ? 40 : 80;
+        MachineRecipe recipe = datapackRecipe(level);
+        if (recipe != null && canOutput(recipe.output())) {
+            if (energy < recipe.energyCost()) {
+                progress = 0;
+                return;
+            }
+            active = true;
+            processTime = effectiveTime(recipe.time());
+            progress++;
+            if (progress >= processTime) {
+                craft(level, recipe);
+                progress = 0;
+            }
+            pulseMachineEffect(level, pos);
+            return;
+        }
         if (canStoreItemEnergy(target) && energy > 0) {
             int transfer = Math.min(energy, machineId.contains("high_powered") || machineId.contains("labyrinth") ? 12 : 6);
             if (chargeItem(target, transfer)) {
