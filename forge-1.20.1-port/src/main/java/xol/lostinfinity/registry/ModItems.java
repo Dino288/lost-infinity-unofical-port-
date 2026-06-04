@@ -40,9 +40,6 @@ public final class ModItems {
         if (isDimensionUtility(name)) {
             return new LostDimensionItem(name, properties);
         }
-        if (isSpecialUseItem(name)) {
-            return new LostSpecialUseItem(name, properties.durability(specialUseDurability(name)));
-        }
         if (name.endsWith("_helmet") || name.endsWith("helmet") || name.endsWith("headguard") || name.endsWith("mask")) {
             return new LostArmorItem(name, ModArmorMaterials.forItemName(name), ArmorItem.Type.HELMET, properties);
         }
@@ -78,6 +75,9 @@ public final class ModItems {
         }
         if (name.contains("sword") || name.contains("blade") || name.contains("saber") || name.contains("sabre") || name.contains("claw")) {
             return new LostSwordItem(name, ModToolTiers.LOST_INFINITY, 6, -2.4F, properties);
+        }
+        if (isSpecialUseItem(name)) {
+            return new LostSpecialUseItem(name, properties.durability(specialUseDurability(name)));
         }
         return new Item(properties);
     }
