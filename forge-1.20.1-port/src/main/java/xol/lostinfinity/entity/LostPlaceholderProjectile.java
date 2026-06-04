@@ -160,7 +160,8 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("fire") || id.contains("ember") || id.contains("meteor") || id.contains("comet") || id.contains("exothermite")) {
             living.setSecondsOnFire(5);
         }
-        if (id.contains("cryo") || id.contains("ice") || id.contains("stun") || id.contains("ink") || id.contains("gel")) {
+        if (id.contains("cryo") || id.contains("ice") || id.contains("stun") || id.contains("ink") || id.contains("gel")
+                || id.contains("bubble") || id.contains("whirlpool") || id.contains("fountain")) {
             living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, id.contains("stun") ? 2 : 1));
         }
         if (id.contains("stun") || id.contains("sonic") || id.contains("soundwave") || id.contains("shock") || id.contains("tesla")
@@ -168,11 +169,23 @@ public class LostPlaceholderProjectile extends Entity {
             living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
             living.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 0));
         }
-        if (id.contains("leviathan") || id.contains("whirlpool") || id.contains("water") || id.contains("fountain")) {
+        if (id.contains("leviathan") || id.contains("whirlpool") || id.contains("water") || id.contains("fountain")
+                || id.contains("bubble") || id.contains("crabulon")) {
             living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0));
         }
         if (id.contains("selector") || id.contains("selection") || id.contains("destabilizer") || id.contains("void")) {
             living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 160, 0));
+        }
+        if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) {
+            living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 0));
+            living.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 140, 0));
+        }
+        if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) {
+            living.setSecondsOnFire(6);
+            living.addEffect(new MobEffectInstance(MobEffects.GLOWING, 120, 0));
+        }
+        if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) {
+            living.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 90, 0));
         }
     }
 
@@ -234,7 +247,7 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("fire") || id.contains("ember") || id.contains("meteor")) {
             return "plasma";
         }
-        if (id.contains("poison") || id.contains("venom")) {
+        if (id.contains("poison") || id.contains("venom") || id.contains("bubble")) {
             return "venom";
         }
         if (id.contains("acid")) {
@@ -257,11 +270,23 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole") || id.contains("warp")) {
             return "warp";
         }
+        if (id.contains("water") || id.contains("whirlpool") || id.contains("fountain") || id.contains("leviathan") || id.contains("crabulon")) {
+            return "murk";
+        }
         if (id.contains("shock") || id.contains("tesla") || id.contains("zapper") || id.contains("arc")) {
             return "zap";
         }
         if (id.contains("sound") || id.contains("sonic")) {
             return "supersonic_blue";
+        }
+        if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) {
+            return "murky_mist";
+        }
+        if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) {
+            return "spectral";
+        }
+        if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) {
+            return "space_magic";
         }
         if (id.contains("dark") || id.contains("shadow") || id.contains("void")) {
             return "shadow_blast";
@@ -274,6 +299,10 @@ public class LostPlaceholderProjectile extends Entity {
 
     private String burstParticle(String id) {
         if (id.contains("plasma")) return "plasma_explosion";
+        if (id.contains("murk") || id.contains("eidolon") || id.contains("ink") || id.contains("gloom")) return "murky_mist";
+        if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) return "spectral";
+        if (id.contains("water") || id.contains("whirlpool") || id.contains("fountain") || id.contains("leviathan") || id.contains("crabulon")) return "murk";
+        if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) return "space_magic";
         if (id.contains("cosmic") || id.contains("galaxy") || id.contains("star") || id.contains("meteor") || id.contains("asteroid")) return "cosmic_explosion_type1";
         if (id.contains("shock") || id.contains("tesla") || id.contains("arc")) return "electric_explosion_blue";
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) return "portal_beam";
@@ -284,6 +313,10 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("laser") || id.contains("beam")) return "laser_weapon_10";
         if (id.contains("sound") || id.contains("sonic")) return "sound_bounce";
         if (id.contains("shock") || id.contains("tesla") || id.contains("arc")) return "electric_bounce";
+        if (id.contains("water") || id.contains("whirlpool") || id.contains("fountain") || id.contains("bubble")) return "water_drop";
+        if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) return "goo_explode";
+        if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) return "generic_ui_5";
+        if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) return "magic_weapon_10";
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) return "rift_create";
         if (id.contains("acid") || id.contains("poison") || id.contains("venom") || id.contains("plague")) return "flask_explode";
         return "swing_hit";

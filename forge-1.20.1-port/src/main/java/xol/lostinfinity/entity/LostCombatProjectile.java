@@ -63,7 +63,8 @@ public class LostCombatProjectile extends Snowball {
         if (id.contains("fire") || id.contains("flame") || id.contains("plasma") || id.contains("meteor") || id.contains("exothermite")) {
             living.setSecondsOnFire(id.contains("exothermite") ? 8 : 5);
         }
-        if (id.contains("ice") || id.contains("cryo") || id.contains("stun") || id.contains("web") || id.contains("ink")) {
+        if (id.contains("ice") || id.contains("cryo") || id.contains("stun") || id.contains("web") || id.contains("ink")
+                || id.contains("bubble") || id.contains("whirlpool") || id.contains("fountain") || id.contains("water")) {
             living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, id.contains("stun") ? 2 : 1));
         }
         if (id.contains("sonic") || id.contains("sound") || id.contains("echo")) {
@@ -71,6 +72,17 @@ public class LostCombatProjectile extends Snowball {
         }
         if (id.contains("tesla") || id.contains("zapper") || id.contains("shock") || id.contains("laser") || id.contains("selection")) {
             living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
+        }
+        if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) {
+            living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 0));
+            living.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 140, 0));
+        }
+        if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) {
+            living.setSecondsOnFire(6);
+            living.addEffect(new MobEffectInstance(MobEffects.GLOWING, 120, 0));
+        }
+        if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) {
+            living.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 90, 0));
         }
     }
 
@@ -103,6 +115,10 @@ public class LostCombatProjectile extends Snowball {
         if (id.contains("acid")) return "acid";
         if (id.contains("venom") || id.contains("poison")) return "venom";
         if (id.contains("plague") || id.contains("blight")) return "plague";
+        if (id.contains("water") || id.contains("whirlpool") || id.contains("fountain") || id.contains("bubble")) return "murk";
+        if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) return "murky_mist";
+        if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) return "spectral";
+        if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) return "space_magic";
         if (id.contains("laser")) return "laser_fizzle";
         if (id.contains("tesla") || id.contains("shock") || id.contains("zapper")) return "electric_explosion_blue";
         if (id.contains("galaxy") || id.contains("cosmic") || id.contains("meteor")) return "cosmic_explosion_type1";
