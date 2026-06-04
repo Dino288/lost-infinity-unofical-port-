@@ -84,6 +84,19 @@ public class LostCombatProjectile extends Snowball {
         if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) {
             living.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 90, 0));
         }
+        if (id.contains("blood") || id.contains("vamp") || id.contains("leech")) {
+            living.addEffect(new MobEffectInstance(ModEffects.BLOOD_TOXIN.get(), 140, 0));
+        }
+        if (id.contains("crystal") || id.contains("shard") || id.contains("fracture")) {
+            living.addEffect(new MobEffectInstance(ModEffects.SHATTERED.get(), 120, 0));
+        }
+        if (id.contains("magic") || id.contains("spell") || id.contains("wand")) {
+            living.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 120, 0));
+        }
+        if (id.contains("forbidden") || id.contains("ultimate") || id.contains("doom")) {
+            living.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 120, 0));
+            living.addEffect(new MobEffectInstance(ModEffects.TERRIFIED.get(), 100, 0));
+        }
     }
 
     private void impactBurst(BlockPos pos, String id) {
@@ -103,6 +116,8 @@ public class LostCombatProjectile extends Snowball {
         if (id.contains("laser") || id.contains("sniper") || id.contains("selection")) adjusted += 3.0F;
         if (id.contains("rocket") || id.contains("launcher") || id.contains("cannon") || id.contains("mortar")) adjusted += 4.0F;
         if (id.contains("ultimate") || id.contains("world_splitter") || id.contains("black_hole")) adjusted += 5.0F;
+        if (id.contains("crystal") || id.contains("shard") || id.contains("knife")) adjusted += 2.0F;
+        if (id.contains("forbidden") || id.contains("doom")) adjusted += 4.0F;
         return adjusted;
     }
 
@@ -119,6 +134,13 @@ public class LostCombatProjectile extends Snowball {
         if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) return "murky_mist";
         if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) return "spectral";
         if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) return "space_magic";
+        if (id.contains("blood") || id.contains("vamp") || id.contains("leech")) return "blood_drop";
+        if (id.contains("crystal") || id.contains("shard") || id.contains("fracture") || id.contains("gel")) return "small_spark";
+        if (id.contains("magic") || id.contains("spell") || id.contains("wand") || id.contains("ancient")) return "ancient_spell";
+        if (id.contains("bio") || id.contains("toxic") || id.contains("miasma")) return "miasma";
+        if (id.contains("sky") || id.contains("air") || id.contains("wind")) return "supersonic_blue";
+        if (id.contains("earth") || id.contains("rock") || id.contains("stone")) return "small_spark";
+        if (id.contains("forbidden") || id.contains("ultimate") || id.contains("doom")) return "bad_magic";
         if (id.contains("laser")) return "laser_fizzle";
         if (id.contains("tesla") || id.contains("shock") || id.contains("zapper")) return "electric_explosion_blue";
         if (id.contains("galaxy") || id.contains("cosmic") || id.contains("meteor")) return "cosmic_explosion_type1";

@@ -187,6 +187,19 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("murk") || id.contains("eidolon") || id.contains("gloom") || id.contains("ink")) {
             living.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 90, 0));
         }
+        if (id.contains("blood") || id.contains("vamp") || id.contains("leech")) {
+            living.addEffect(new MobEffectInstance(ModEffects.BLOOD_TOXIN.get(), 140, 0));
+        }
+        if (id.contains("crystal") || id.contains("shard") || id.contains("fracture")) {
+            living.addEffect(new MobEffectInstance(ModEffects.SHATTERED.get(), 120, 0));
+        }
+        if (id.contains("magic") || id.contains("spell") || id.contains("wizard") || id.contains("wand")) {
+            living.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 120, 0));
+        }
+        if (id.contains("forbidden") || id.contains("ultimate") || id.contains("doom")) {
+            living.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 120, 0));
+            living.addEffect(new MobEffectInstance(ModEffects.TERRIFIED.get(), 100, 0));
+        }
     }
 
     private float damageFor(String id) {
@@ -195,6 +208,8 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("knife") || id.contains("shard") || id.contains("spear") || id.contains("trident")) damage += 4.0F;
         if (id.contains("meteor") || id.contains("comet") || id.contains("asteroid") || id.contains("doom")) damage += 8.0F;
         if (id.contains("cthulhu") || id.contains("leviathan") || id.contains("galaxy") || id.contains("elementiumprime")) damage += 4.0F;
+        if (id.contains("crystal") || id.contains("fracture")) damage += 2.0F;
+        if (id.contains("forbidden") || id.contains("ultimate")) damage += 4.0F;
         if (id.contains("effect") || id.contains("portal") || id.contains("rift")) damage = 0.0F;
         return damage;
     }
@@ -288,6 +303,27 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) {
             return "space_magic";
         }
+        if (id.contains("blood") || id.contains("vamp") || id.contains("leech")) {
+            return "blood_drop";
+        }
+        if (id.contains("crystal") || id.contains("shard") || id.contains("fracture") || id.contains("gel")) {
+            return "small_spark";
+        }
+        if (id.contains("magic") || id.contains("spell") || id.contains("wizard") || id.contains("wand") || id.contains("ancient")) {
+            return "ancient_spell";
+        }
+        if (id.contains("bio") || id.contains("toxic") || id.contains("miasma")) {
+            return "miasma";
+        }
+        if (id.contains("sky") || id.contains("air") || id.contains("wind")) {
+            return "supersonic_blue";
+        }
+        if (id.contains("earth") || id.contains("rock") || id.contains("stone")) {
+            return "small_spark";
+        }
+        if (id.contains("forbidden") || id.contains("ultimate") || id.contains("doom")) {
+            return "bad_magic";
+        }
         if (id.contains("dark") || id.contains("shadow") || id.contains("void")) {
             return "shadow_blast";
         }
@@ -303,6 +339,13 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) return "spectral";
         if (id.contains("water") || id.contains("whirlpool") || id.contains("fountain") || id.contains("leviathan") || id.contains("crabulon")) return "murk";
         if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) return "space_magic";
+        if (id.contains("blood") || id.contains("vamp") || id.contains("leech")) return "blood_drop";
+        if (id.contains("crystal") || id.contains("shard") || id.contains("fracture") || id.contains("gel")) return "small_spark";
+        if (id.contains("magic") || id.contains("spell") || id.contains("wizard") || id.contains("wand") || id.contains("ancient")) return "ancient_spell";
+        if (id.contains("bio") || id.contains("toxic") || id.contains("miasma")) return "miasma";
+        if (id.contains("sky") || id.contains("air") || id.contains("wind")) return "supersonic_blue";
+        if (id.contains("earth") || id.contains("rock") || id.contains("stone")) return "small_spark";
+        if (id.contains("forbidden") || id.contains("ultimate") || id.contains("doom")) return "bad_magic";
         if (id.contains("cosmic") || id.contains("galaxy") || id.contains("star") || id.contains("meteor") || id.contains("asteroid")) return "cosmic_explosion_type1";
         if (id.contains("shock") || id.contains("tesla") || id.contains("arc")) return "electric_explosion_blue";
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) return "portal_beam";
@@ -319,6 +362,11 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("solar") || id.contains("sunstone") || id.contains("celestial")) return "magic_weapon_10";
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) return "rift_create";
         if (id.contains("acid") || id.contains("poison") || id.contains("venom") || id.contains("plague")) return "flask_explode";
+        if (id.contains("blood") || id.contains("vamp") || id.contains("leech")) return "bioenergize";
+        if (id.contains("crystal") || id.contains("shard") || id.contains("fracture") || id.contains("earth") || id.contains("rock") || id.contains("stone")) return "rock_tumble";
+        if (id.contains("magic") || id.contains("spell") || id.contains("wizard") || id.contains("wand") || id.contains("ancient")) return "magic_weapon_11";
+        if (id.contains("forbidden") || id.contains("ultimate") || id.contains("doom")) return "magic_weapon_5";
+        if (id.contains("sky") || id.contains("air") || id.contains("wind")) return "sound_bounce";
         return "swing_hit";
     }
 
