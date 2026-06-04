@@ -91,6 +91,7 @@ public final class LostDimensionTeleporter {
     private static BlockState platformBlock(String dimension) {
         return switch (dimension) {
             case "shadowsea" -> ModBlocks.SEASTONE.get().defaultBlockState();
+            case "moltensea" -> ModBlocks.MOLTEN_SEASTONE.get().defaultBlockState();
             case "infinitemurk" -> ModBlocks.MURKSTONE.get().defaultBlockState();
             case "nonexistence" -> ModBlocks.ASTROROCK.get().defaultBlockState();
             case "celestialvoid", "grandmasteroutpost" -> ModBlocks.STARBLOCK.get().defaultBlockState();

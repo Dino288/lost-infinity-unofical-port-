@@ -115,6 +115,9 @@ public final class ModBlocks {
         if (name.equals("dimensionalizer") || name.equals("portal_nexus") || name.equals("portal_node")) {
             return "nonexistence";
         }
+        if (name.equals("galaxy_portal_molten")) {
+            return "moltensea";
+        }
         if (name.contains("shadow") || name.contains("sea")) {
             return name.contains("portal") || name.contains("teleporter") ? "shadowsea" : null;
         }

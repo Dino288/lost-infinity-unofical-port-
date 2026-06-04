@@ -35,6 +35,7 @@ public final class LostInfinityCommands {
             "cartographerrealmbot",
             "grandmasteroutpost",
             "nonexistence",
+            "moltensea",
             "shadowsea"
     };
 

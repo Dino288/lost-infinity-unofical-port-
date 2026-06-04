@@ -40,6 +40,7 @@ public final class LostDimensionEffects {
             case "grandmasteroutpost" -> tickGrandmasterOutpost(player);
             case "infinitemurk" -> tickInfiniteMurk(player);
             case "shadowsea" -> tickShadowSea(player);
+            case "moltensea" -> tickMoltenSea(player);
             default -> {
             }
         }
@@ -125,6 +126,17 @@ public final class LostDimensionEffects {
         if (!hasNamedEquipment(player, "magic_conch") && !hasLostArmor(player) && player.tickCount % 140 == 0) {
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1, true, false));
             player.displayClientMessage(Component.literal("The reef currents fight against you."), false);
+        }
+    }
+
+    private static void tickMoltenSea(ServerPlayer player) {
+        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 120, 0, true, false));
+        player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 120, 0, true, false));
+        player.addEffect(new MobEffectInstance(ModEffects.SUPERSONIC.get(), 80, 0, true, false));
+        if (!hasLostArmor(player) && player.tickCount % 100 == 0) {
+            player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 0, true, false));
+            player.hurt(player.damageSources().hotFloor(), 1.0F);
+            player.displayClientMessage(Component.literal("The molten reef burns through weak protection."), false);
         }
     }
 
