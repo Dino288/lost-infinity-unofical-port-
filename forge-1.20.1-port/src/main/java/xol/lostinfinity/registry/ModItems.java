@@ -79,7 +79,25 @@ public final class ModItems {
         if (isSpecialUseItem(name)) {
             return new LostSpecialUseItem(name, properties.durability(specialUseDurability(name)));
         }
-        return new Item(properties);
+        return new Item(plainItemProperties(name, properties));
+    }
+
+    private static Item.Properties plainItemProperties(String name, Item.Properties properties) {
+        if (name.contains("star") || name.contains("galaxy") || name.contains("celestial") || name.contains("void")
+                || name.contains("infinite") || name.contains("eternal") || name.contains("forbidden")
+                || name.contains("exothermite") || name.contains("plasma") || name.contains("ember")
+                || name.contains("fire") || name.contains("sunstone") || name.contains("solar")) {
+            properties = properties.fireResistant();
+        }
+        if (name.contains("box") || name.contains("crate") || name.contains("pouch") || name.contains("bag")
+                || name.contains("container") || name.contains("vessel") || name.contains("core")
+                || name.contains("cell") || name.contains("battery") || name.contains("capacitor")) {
+            properties = properties.stacksTo(16);
+        } else if (name.contains("disc") || name.contains("chip") || name.contains("module") || name.contains("blueprint")
+                || name.contains("token") || name.contains("card") || name.contains("key")) {
+            properties = properties.stacksTo(32);
+        }
+        return properties;
     }
 
     private static boolean isDimensionUtility(String name) {
