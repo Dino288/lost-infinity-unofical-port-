@@ -720,7 +720,7 @@ public final class LostOriginalStructureGeneration {
             case 9 -> blightedLuminescenceStructure(pieceType, random);
             case 12 -> manufacturingOutpostStructure(pieceType);
             case 13 -> fungalCavernStructure(pieceType, random);
-            default -> "";
+            default -> galaxyDungeonStructure("galaxy" + (random.nextInt(4) + 1));
         };
     }
 
@@ -744,7 +744,7 @@ public final class LostOriginalStructureGeneration {
             case "forgegen" -> "starforge/forgemines_powergen";
             case "forgeterm" -> "starforge/forgemines_powerterminal";
             case "rworm" -> randomPiece("forgemines", "forgemines_rockworm", 2, random);
-            default -> "";
+            default -> randomPiece("forgemines", "forgeminesshaft", 8, random);
         };
     }
 
@@ -769,7 +769,7 @@ public final class LostOriginalStructureGeneration {
             case "cata2" -> "starforge/catatonite_mine2";
             case "cata3" -> "starforge/catatonite_mine3";
             case "cata4" -> "starforge/catatonite_mine4";
-            default -> "";
+            default -> "forgemines/forgemines_entry";
         };
     }
 
@@ -788,7 +788,7 @@ public final class LostOriginalStructureGeneration {
             case "mypass" -> "forgemines/forgemines_myrite_passage";
             case "mywall" -> "forgemines/forgemines_myrite_wall";
             case "myentry" -> "forgemines/forgemines_myrite_entry";
-            default -> "";
+            default -> randomPiece("forgemines", "forge_mines", 16, random) + ",orepillar";
         };
     }
 
@@ -818,7 +818,9 @@ public final class LostOriginalStructureGeneration {
             case "twistphot4" -> "twistedtunnels/twistedtunnel_phototenzyte4";
             case "twistphot5" -> "twistedtunnels/twistedtunnel_phototenzyte5";
             case "twistphot6" -> "twistedtunnels/twistedtunnel_phototenzyte6";
-            default -> "";
+            default -> random.nextBoolean()
+                    ? randomPiece("twistedtunnels", "twistedtunnel_xshaft", 4, random)
+                    : randomPiece("twistedtunnels", "twistedtunnel_zshaft", 4, random);
         };
     }
 
@@ -836,7 +838,7 @@ public final class LostOriginalStructureGeneration {
             case "ogaura2" -> "overgrown/overgrown_auradine2";
             case "ogaura3" -> "overgrown/overgrown_auradine3";
             case "ogaura4" -> "overgrown/overgrown_auradine4";
-            default -> "";
+            default -> randomPiece("overgrown", "overgrown_stairs", 9, random);
         };
     }
 
@@ -848,7 +850,7 @@ public final class LostOriginalStructureGeneration {
             case "synch2" -> "crystal/crystal_crevice_synchro2";
             case "cryblight" -> "crystal/crystal_crevice_blight";
             case "crystal" -> randomPiece("crystal", "crystal_crevice_", 9, random);
-            default -> "";
+            default -> randomPiece("crystal", "crystal_crevice_", 9, random);
         };
     }
 
@@ -873,7 +875,7 @@ public final class LostOriginalStructureGeneration {
             case "lumupl" -> randomPiece("lumcavern", "lumcavern_up_big", 10, random);
             case "lumcabove" -> randomPiece("lumcavern", "lumcavern_tunnel", 36, random) + ",lumabove";
             case "lumcbelow" -> randomPiece("lumcavern", "lumcavern_tunnel", 36, random) + ",lumbelow";
-            default -> "";
+            default -> randomPiece("lumcavern", "lumcavern_tunnel", 36, random);
         };
     }
 
@@ -896,7 +898,7 @@ public final class LostOriginalStructureGeneration {
             case "exo2" -> "manufacturing/exothermite_cave2";
             case "sun1" -> "manufacturing/sunstone_mine1";
             case "sun2" -> "manufacturing/sunstone_mine2";
-            default -> "";
+            default -> "manufacturing/manufacturing_outpost_p" + (Math.floorMod(pieceType.hashCode(), 4) + 1);
         };
     }
 
@@ -915,7 +917,7 @@ public final class LostOriginalStructureGeneration {
             case "fungluc4" -> "fungal/fungalcavern_lucient4";
             case "fungluc5" -> "fungal/fungalcavern_lucient5";
             case "fungluc6" -> "fungal/fungalcavern_lucient6";
-            default -> "";
+            default -> randomPiece("fungal", "fungalcavern_tunnel", 72, random);
         };
     }
 
@@ -966,7 +968,7 @@ public final class LostOriginalStructureGeneration {
             case "archmr" -> random.nextBoolean()
                     ? randomPiece("archcavern", "archcavern_smallup", 9, random) + ",archmlr"
                     : randomPiece("archcavern", "archcavern_largeup", 9, random) + ",archmsr";
-            default -> "";
+            default -> randomPiece("archcavern", "archcavern_tunnel", 24, random);
         };
     }
 
@@ -1014,7 +1016,7 @@ public final class LostOriginalStructureGeneration {
             case "bligpow5" -> "blightcavern/blightcavern_powercore_5";
             case "bligliblo" -> "blightcavern/blightcavern_lightblockage";
             case "bligboss" -> "blightcavern/blightcavern_bossgate";
-            default -> "";
+            default -> randomPiece("blightcavern", "blightcavern_tunnel", 48, random);
         };
     }
 
@@ -1039,7 +1041,7 @@ public final class LostOriginalStructureGeneration {
             case "galterror2" -> "galaxy/galaxy_shockarena2";
             case "galterror3" -> "galaxy/galaxy_shockarena3";
             case "galterror4" -> "galaxy/galaxy_shockarena4";
-            default -> "";
+            default -> "galaxy/galaxy_basic_blue";
         };
     }
 
