@@ -22,6 +22,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import xol.lostinfinity.dimension.LostDimensionTeleporter;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.progression.LostProgression;
 import xol.lostinfinity.registry.ModBlocks;
 
 @Mod.EventBusSubscriber(modid = LostInfinity.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
@@ -57,6 +58,7 @@ public final class LostInfinityCommands {
                 .then(chargeEssencePossessorCommand())
                 .then(dimensionStatusCommand())
                 .then(whereAmICommand())
+                .then(progressionCommand())
                 .then(chargeHeldCommand())
                 .then(fillAmmoCommand()));
 
@@ -66,6 +68,7 @@ public final class LostInfinityCommands {
         dispatcher.register(chargeEssencePossessorCommand());
         dispatcher.register(dimensionStatusCommand());
         dispatcher.register(whereAmICommand());
+        dispatcher.register(progressionCommand());
         dispatcher.register(chargeHeldCommand());
         dispatcher.register(fillAmmoCommand());
     }
@@ -117,6 +120,12 @@ public final class LostInfinityCommands {
         return Commands.literal("whereami")
                 .requires(source -> source.hasPermission(2))
                 .executes(context -> whereAmI(context.getSource()));
+    }
+
+    private static com.mojang.brigadier.builder.LiteralArgumentBuilder<CommandSourceStack> progressionCommand() {
+        return Commands.literal("progression")
+                .requires(source -> source.hasPermission(2))
+                .executes(context -> progression(context.getSource()));
     }
 
     private static com.mojang.brigadier.builder.LiteralArgumentBuilder<CommandSourceStack> chargeHeldCommand() {
@@ -226,6 +235,12 @@ public final class LostInfinityCommands {
         ResourceLocation dimension = player.level().dimension().location();
         BlockPos pos = player.blockPosition();
         source.sendSuccess(() -> Component.literal("Dimension: " + dimension + " @ " + pos.getX() + ", " + pos.getY() + ", " + pos.getZ()), false);
+        return 1;
+    }
+
+    private static int progression(CommandSourceStack source) throws CommandSyntaxException {
+        ServerPlayer player = source.getPlayerOrException();
+        source.sendSuccess(() -> Component.literal(LostProgression.status(player)), false);
         return 1;
     }
 

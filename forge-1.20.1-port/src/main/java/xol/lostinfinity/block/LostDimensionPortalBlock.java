@@ -18,6 +18,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.dimension.LostDimensionTeleporter;
 import xol.lostinfinity.effect.LostFx;
+import xol.lostinfinity.progression.LostProgression;
 
 public class LostDimensionPortalBlock extends Block {
     private final String targetDimension;
@@ -54,6 +55,9 @@ public class LostDimensionPortalBlock extends Block {
     }
 
     private boolean canUsePortal(ServerPlayer player) {
+        if (LostProgression.canUseDimension(player, targetDimension)) {
+            return true;
+        }
         return switch (targetDimension) {
             case "shadowsea" -> hasItemLike(player, "magic_conch", "igneous_pearl", "igneous_pearl_ore");
             case "infinitemurk" -> hasItemLike(player, "murky_mirror");

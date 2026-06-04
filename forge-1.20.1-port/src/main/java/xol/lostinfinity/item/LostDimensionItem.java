@@ -17,6 +17,7 @@ import org.jetbrains.annotations.Nullable;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.dimension.LostDimensionTeleporter;
 import xol.lostinfinity.effect.LostFx;
+import xol.lostinfinity.progression.LostProgression;
 
 public class LostDimensionItem extends Item {
     private static final String SOLAR_FLOOR_TAG = "lostinfinity_solar_floor";
@@ -35,6 +36,7 @@ public class LostDimensionItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
+            LostProgression.recoverUnlockFromItem(serverPlayer, stack);
             if ("murky_mirror".equals(itemName)) {
                 toggleDimension(serverPlayer, stack, "infinitemurk");
                 player.getCooldowns().addCooldown(this, 80);
