@@ -211,8 +211,9 @@ public class LostSpecialUseItem extends Item {
             return InteractionResultHolder.success(stack);
         }
 
-        player.displayClientMessage(Component.literal("This recovered item still needs its exact original mechanic ported."), true);
-        player.getCooldowns().addCooldown(this, 20);
+        recoveredArtifactPulse(level, player);
+        consumeOrDamage(player, stack, hand, false);
+        player.getCooldowns().addCooldown(this, 100);
         return InteractionResultHolder.success(stack);
     }
 
@@ -603,6 +604,44 @@ public class LostSpecialUseItem extends Item {
         player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 160, 0, true, false));
         LostFx.burst(level, player.blockPosition(), "small_spark", 16, 0.45D, 0.03D);
         LostFx.play(level, player.blockPosition(), "chemical_mixing", SoundSource.PLAYERS, 0.55F, 1.2F);
+    }
+
+    private void recoveredArtifactPulse(Level level, Player player) {
+        if (itemName.contains("dark") || itemName.contains("void") || itemName.contains("shadow") || itemName.contains("murk")) {
+            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 240, 0, true, false));
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(5.0D), entity -> entity != player)) {
+                entity.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 0));
+                entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 120, 0));
+            }
+            LostFx.burst(level, player.blockPosition(), "shadow_blast", 18, 0.6D, 0.03D);
+            LostFx.play(level, player.blockPosition(), "magic_weapon_11", SoundSource.PLAYERS, 0.55F, 1.0F);
+            return;
+        }
+        if (itemName.contains("galaxy") || itemName.contains("star") || itemName.contains("astral") || itemName.contains("celestial")) {
+            player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 180, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 140, 0, true, false));
+            LostFx.burst(level, player.blockPosition(), "space_magic", 22, 0.65D, 0.03D);
+            LostFx.play(level, player.blockPosition(), "cosmic_explosion", SoundSource.PLAYERS, 0.45F, 1.45F);
+            return;
+        }
+        if (itemName.contains("sea") || itemName.contains("coral") || itemName.contains("water") || itemName.contains("aqua")) {
+            player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 240, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 160, 0, true, false));
+            LostFx.burst(level, player.blockPosition(), "murk", 18, 0.55D, 0.03D);
+            LostFx.play(level, player.blockPosition(), "water_drop", SoundSource.PLAYERS, 0.55F, 1.2F);
+            return;
+        }
+        if (itemName.contains("lab") || itemName.contains("maze") || itemName.contains("puzzle")) {
+            player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 180, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 220, 0, true, false));
+            LostFx.burst(level, player.blockPosition(), "spectral", 18, 0.55D, 0.03D);
+            LostFx.play(level, player.blockPosition(), "generic_ui_5", SoundSource.PLAYERS, 0.6F, 1.15F);
+            return;
+        }
+        player.addEffect(new MobEffectInstance(MobEffects.LUCK, 180, 0, true, false));
+        player.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 180, 0, true, false));
+        LostFx.burst(level, player.blockPosition(), "small_spark", 14, 0.45D, 0.03D);
+        LostFx.play(level, player.blockPosition(), "magic_weapon_5", SoundSource.PLAYERS, 0.5F, 1.25F);
     }
 
     private void shootUtilityProjectile(Level level, Player player, ItemStack stack) {
