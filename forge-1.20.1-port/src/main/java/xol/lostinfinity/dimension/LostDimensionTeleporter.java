@@ -9,9 +9,11 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.registry.ModBlocks;
 
 public final class LostDimensionTeleporter {
     private LostDimensionTeleporter() {
@@ -36,12 +38,12 @@ public final class LostDimensionTeleporter {
         y = Double.isFinite(y) ? y : 80.0D;
         if (useSafeSurface) {
             BlockPos landing = landingPosition(target, (int) Math.floor(x), (int) Math.floor(z), y);
-            ensureSafeLanding(target, landing);
+            ensureSafeLanding(target, landing, targetId.getPath());
             player.teleportTo(target, landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D, player.getYRot(), player.getXRot());
         } else {
             double safeY = Math.max(target.getMinBuildHeight() + 4.0D, Math.min(y, target.getMaxBuildHeight() - 4.0D));
             BlockPos landing = new BlockPos((int) Math.floor(x), (int) Math.floor(safeY), (int) Math.floor(z));
-            ensureSafeLanding(target, landing);
+            ensureSafeLanding(target, landing, targetId.getPath());
             player.teleportTo(target, landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D, player.getYRot(), player.getXRot());
         }
         return true;
@@ -72,16 +74,30 @@ public final class LostDimensionTeleporter {
         return Math.max(-100000.0D, Math.min(100000.0D, coordinate));
     }
 
-    private static void ensureSafeLanding(ServerLevel target, BlockPos landing) {
+    private static void ensureSafeLanding(ServerLevel target, BlockPos landing, String dimension) {
         BlockPos floor = landing.below();
-        if (target.getBlockState(floor).isAir()) {
+        if (target.getBlockState(floor).isAir() || !target.getFluidState(floor).isEmpty()) {
+            BlockState platform = platformBlock(dimension);
             for (int x = -1; x <= 1; x++) {
                 for (int z = -1; z <= 1; z++) {
-                    target.setBlockAndUpdate(floor.offset(x, 0, z), Blocks.COBBLESTONE.defaultBlockState());
+                    target.setBlockAndUpdate(floor.offset(x, 0, z), platform);
                 }
             }
         }
         target.setBlockAndUpdate(landing, Blocks.AIR.defaultBlockState());
         target.setBlockAndUpdate(landing.above(), Blocks.AIR.defaultBlockState());
+    }
+
+    private static BlockState platformBlock(String dimension) {
+        return switch (dimension) {
+            case "shadowsea" -> ModBlocks.SEASTONE.get().defaultBlockState();
+            case "infinitemurk" -> ModBlocks.MURKSTONE.get().defaultBlockState();
+            case "nonexistence" -> ModBlocks.ASTROROCK.get().defaultBlockState();
+            case "celestialvoid", "grandmasteroutpost" -> ModBlocks.STARBLOCK.get().defaultBlockState();
+            case "cartographerrealmtop" -> ModBlocks.LABYRINTH_FLOOR.get().defaultBlockState();
+            case "cartographerrealmmid" -> ModBlocks.LABYRINTH_FLOOR_RED.get().defaultBlockState();
+            case "cartographerrealmbot" -> ModBlocks.LABYRINTH_FLOOR_PURPLE.get().defaultBlockState();
+            default -> Blocks.COBBLESTONE.defaultBlockState();
+        };
     }
 }
