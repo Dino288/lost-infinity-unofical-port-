@@ -2,6 +2,7 @@ package xol.lostinfinity.client;
 
 import java.util.HashMap;
 import java.util.Map;
+import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import xol.lostinfinity.LostInfinity;
@@ -9,6 +10,7 @@ import xol.lostinfinity.LostInfinity;
 public final class LostEntityTextures {
     private static final ResourceLocation FALLBACK = new ResourceLocation(LostInfinity.MODID, "textures/entity/deviantbear.png");
     private static final Map<String, ResourceLocation> TEXTURES = new HashMap<>();
+    private static final Map<String, ResourceLocation> RESOLVED = new HashMap<>();
 
     static {
         TEXTURES.put("dimensionalmerchant", new ResourceLocation(LostInfinity.MODID, "textures/entity/dim_merchant/dimensionalmerchant_cellgame.png"));
@@ -237,6 +239,75 @@ public final class LostEntityTextures {
 
     public static ResourceLocation textureFor(Entity entity) {
         ResourceLocation key = entity.getType().builtInRegistryHolder().key().location();
-        return TEXTURES.getOrDefault(key.getPath(), FALLBACK);
+        String id = key.getPath();
+        ResourceLocation explicit = TEXTURES.get(id);
+        if (explicit != null) {
+            return explicit;
+        }
+        return RESOLVED.computeIfAbsent(id, LostEntityTextures::resolveTexture);
+    }
+
+    private static ResourceLocation resolveTexture(String id) {
+        for (String candidate : candidates(id)) {
+            ResourceLocation texture = new ResourceLocation(LostInfinity.MODID, "textures/entity/" + candidate + ".png");
+            if (hasTexture(texture)) {
+                return texture;
+            }
+        }
+        return FALLBACK;
+    }
+
+    private static String[] candidates(String id) {
+        String compact = id.replace("_", "");
+        String dashless = id.replace("-", "");
+        String projectile = projectileTextureName(id);
+        return new String[] {
+                id,
+                compact,
+                dashless,
+                "deviant/" + id,
+                "deviant/" + compact,
+                "titan/" + id,
+                "titan/" + compact,
+                "starforge/" + id,
+                "starforge/" + compact,
+                "labyrinth/" + id,
+                "labyrinth/" + compact,
+                "murk/" + id,
+                "murk/" + compact,
+                "sea/" + id,
+                "sea/" + compact,
+                "fungal/" + id,
+                "fungal/" + compact,
+                "totem/" + id,
+                "totem/" + compact,
+                "rift/" + id,
+                "rift/" + compact,
+                projectile,
+                compact + "1",
+                compact + "_1",
+                id + "1",
+                id + "_1"
+        };
+    }
+
+    private static String projectileTextureName(String id) {
+        if (id.endsWith("mk2")) {
+            return id.substring(0, id.length() - 3) + "_mk2";
+        }
+        if (id.contains("beam") || id.contains("laser")) {
+            return "laser_beam";
+        }
+        if (id.contains("bomb")) {
+            return "sticky_bomb";
+        }
+        if (id.contains("trident")) {
+            return id.contains("mk2") ? "infinity_trident_mk2" : "infinity_trident";
+        }
+        return id;
+    }
+
+    private static boolean hasTexture(ResourceLocation texture) {
+        return Minecraft.getInstance().getResourceManager().getResource(texture).isPresent();
     }
 }
