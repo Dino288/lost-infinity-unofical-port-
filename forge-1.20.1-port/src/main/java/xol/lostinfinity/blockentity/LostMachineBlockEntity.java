@@ -280,7 +280,10 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         if (machineId.contains("circuit") || machineId.contains("calibrator")) return "minigame_score";
         if (machineId.contains("deconstructor")) return "rift_create";
         if (machineId.contains("synthesizer")) return "special_craft";
-        return "block_ding";
+        if (machineId.contains("matter") || machineId.contains("recombiner") || machineId.contains("condenser")) return "rift_create";
+        if (machineId.contains("bio") || machineId.contains("organic") || machineId.contains("sap")) return "bioenergize";
+        if (machineId.contains("gearbox") || machineId.contains("weld") || machineId.contains("fabricat")) return "manufacture_machine";
+        return "special_craft";
     }
 
     private MachineRecipe recipeForCurrentInput(Level level) {
@@ -316,51 +319,107 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         if (machineId.contains("grinder") || machineId.contains("crusher")) {
             Item dust = item(inputId.replace("_ore", "_dust").replace("_ingot", "_dust"));
             if (dust != Items.AIR) return dust;
-            return item("dust_" + inputId.replace("_ore", "").replace("_ingot", ""));
+            Item crushed = tryItems(
+                    inputId.replace("_ore", "_fragments"),
+                    inputId.replace("_ore", "_shard"),
+                    inputId.replace("_ore", "_shards"),
+                    inputId.replace("_ore", "_crystal"),
+                    inputId.replace("_ore", "_powder"),
+                    inputId.replace("_bone", "_bonemeal"),
+                    "crushed_" + inputId,
+                    "dust_" + inputId.replace("_ore", "").replace("_ingot", ""));
+            if (crushed != Items.AIR) return crushed;
+            return item("supermutated_powder");
         }
         if (machineId.contains("compression")) {
-            Item block = item(inputId + "_block");
+            Item block = tryItems(inputId + "_block", inputId.replace("_ingot", "_block"), inputId.replace("_dust", "_block"));
             if (block != Items.AIR) return block;
-            return item("compressed_" + inputId);
+            Item condensed = tryItems("biosynthium_condensed", "gloominessence_cubes", "bone_blocks", "crystallized_alloy");
+            return condensed != Items.AIR ? condensed : item("mastercrafted_alloy");
         }
         if (machineId.contains("welding") || machineId.contains("circuit") || machineId.contains("gearbox")) {
-            Item plate = item(inputId.replace("_ingot", "_plate"));
+            Item plate = tryItems(
+                    inputId.replace("_ingot", "_plate"),
+                    inputId.replace("_ingot", "_plates"),
+                    inputId.replace("_crystal", "_plating"),
+                    "crystal_plating",
+                    "organic_plate",
+                    "multiversite_plates");
             if (plate != Items.AIR) return plate;
-            return item("metal_plate");
+            if (inputId.contains("wire") || machineId.contains("circuit")) {
+                return tryItems("crystal_diode", "wired_ring", "high_tolerance_wire", "high_speed_wire");
+            }
+            if (machineId.contains("gearbox")) {
+                return tryItems("fabrication_power_core", "mechanicalpowercell", "mastercrafted_alloy");
+            }
+            return item("masterforged_ingot");
         }
         if (machineId.contains("deconstructor")) {
             Item ingot = item(inputId.replace("_block", "_ingot"));
             if (ingot != Items.AIR) return ingot;
             Item shard = item(inputId.replace("_block", "_shard"));
             if (shard != Items.AIR) return shard;
-            return item("multiversite");
+            return tryItems("deviant_fragment_bl", "radion_fragment", "galactic_fragments", "atomite_fragments", "multiversite_plates");
         }
         if (machineId.contains("infuser") || machineId.contains("fusion") || machineId.contains("collider")) {
-            Item infused = item("infused_" + inputId);
+            Item infused = tryItems("infused_" + inputId, inputId.replace("_ingot", "_alloy"), inputId.replace("_dust", "_crystal"));
             if (infused != Items.AIR) return infused;
             Item crystal = item(inputId.replace("_dust", "_crystal").replace("_ingot", "_crystal"));
-            return crystal != Items.AIR ? crystal : item("multiversite");
+            if (crystal != Items.AIR) return crystal;
+            if (machineId.contains("fusion") || machineId.contains("collider")) {
+                return tryItems("mastercrafted_alloy", "masterforged_ingot", "multigalactic_power_crystal", "dimensional_polymer");
+            }
+            return tryItems("imbuedcrystal", "chargedgalaxycrystal", "omni_crystal", "multiversite_plates");
         }
         if (machineId.contains("synthesizer")) {
-            Item synthesized = item("synthesized_" + inputId);
+            Item synthesized = tryItems("synthesized_" + inputId, inputId + "_sample", inputId.replace("_solution", "_sample"));
             if (synthesized != Items.AIR) return synthesized;
-            return item(inputId + "_sample");
+            if (inputId.contains("bone")) return tryItems("supermutated_bone", "crystalized_bone", "plated_bone");
+            if (inputId.contains("spore") || inputId.contains("bio")) return tryItems("biocrystal_sample", "toxic_spore_sample", "explosive_goo_sample");
+            return tryItems("biocrystal_sample", "cure_sample_blue", "blue_monomer_sample");
         }
         if (machineId.contains("polymer")) {
-            Item polymer = item(inputId.replace("_dust", "_polymer"));
-            return polymer != Items.AIR ? polymer : item("synthetic_fibre");
+            Item polymer = tryItems(inputId.replace("_dust", "_polymer"), inputId.replace("_solution", "_polymer"), "dimensional_polymer");
+            if (polymer != Items.AIR) return polymer;
+            return tryItems("synthetic_fibre", "adhesive_fibre", "elastic_fibre");
         }
         if (machineId.contains("chemistry")) {
-            Item solution = item(inputId.replace("_dust", "_solution"));
-            return solution != Items.AIR ? solution : item("acidblood_solution");
+            Item solution = tryItems(
+                    inputId.replace("_dust", "_solution"),
+                    inputId.replace("_powder", "_solution"),
+                    inputId.replace("_blood", "_solution"),
+                    "bioreactive_solution",
+                    "corrupted_solution",
+                    "unstable_solution",
+                    "acidblood_solution");
+            return solution != Items.AIR ? solution : item("carbonic_acid");
         }
         if (machineId.contains("sap_evaporator")) {
-            return item("hardened_sap");
+            return tryItems("burning_sap", "jar_of_sap", "adhesive_fibre");
         }
         if (machineId.contains("shipment_filler")) {
-            return item("shipment_crate");
+            return tryItems("shipment_box", "mystery_box", "augmenticon_box");
         }
-        return item(inputId + "_processed");
+        if (machineId.contains("matter") || machineId.contains("recombiner") || machineId.contains("condenser")) {
+            return tryItems("reconfigured_matter", "organic_shadow_matter", "metamorphosis_core");
+        }
+        if (machineId.contains("bio") || machineId.contains("organic")) {
+            return tryItems("biofuel_battery", "organic_power_cell", "biocorruption_powder", "magic_biopowder");
+        }
+        if (machineId.contains("spawner")) {
+            return tryItems("player_essence", "gloominessence", "deviant_shard", "dark_magic_powder");
+        }
+        return tryItems(inputId + "_sample", inputId + "_dust", "reconfigured_matter", "multiversite_plates");
+    }
+
+    private static Item tryItems(String... ids) {
+        for (String id : ids) {
+            Item candidate = item(id);
+            if (candidate != Items.AIR) {
+                return candidate;
+            }
+        }
+        return Items.AIR;
     }
 
     private boolean canOutput(ItemStack output) {
