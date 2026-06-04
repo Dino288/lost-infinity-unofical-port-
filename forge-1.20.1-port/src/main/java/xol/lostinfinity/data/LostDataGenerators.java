@@ -14,5 +14,6 @@ public final class LostDataGenerators {
     public static void gatherData(GatherDataEvent event) {
         event.getGenerator().addProvider(event.includeServer(), new LostMachineRecipeProvider(event.getGenerator().getPackOutput()));
         event.getGenerator().addProvider(event.includeServer(), new LostBiomeTagDataProvider(event.getGenerator().getPackOutput()));
+        event.getGenerator().addProvider(event.includeServer(), new LostBlockLootDataProvider(event.getGenerator().getPackOutput()));
     }
 }
