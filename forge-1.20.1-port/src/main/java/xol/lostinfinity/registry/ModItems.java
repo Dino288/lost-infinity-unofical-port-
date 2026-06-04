@@ -134,7 +134,12 @@ public final class ModItems {
                 || name.contains("heart") || name.contains("seed") || name.contains("sap")
                 || name.contains("container") || name.contains("totem") || name.contains("idol")
                 || name.contains("relic") || name.contains("controller") || name.contains("constructor")
-                || name.contains("remote");
+                || name.contains("remote") || name.contains("solution") || name.contains("powder")
+                || name.contains("sample") || name.contains("vial") || name.contains("concoction")
+                || name.contains("toxin") || name.contains("blood") || name.contains("ooze")
+                || name.contains("gel") || name.contains("syrup") || name.contains("pouch")
+                || name.contains("acid") || name.contains("tissue") || name.contains("fibre")
+                || name.contains("monomer") || name.contains("dust");
     }
 
     private static int specialUseDurability(String name) {

@@ -191,6 +191,18 @@ public class LostSpecialUseItem extends Item {
             player.getCooldowns().addCooldown(this, 120);
             return InteractionResultHolder.success(stack);
         }
+        if (itemName.contains("solution") || itemName.contains("powder") || itemName.contains("sample")
+                || itemName.contains("vial") || itemName.contains("concoction") || itemName.contains("toxin")
+                || itemName.contains("blood") || itemName.contains("ooze") || itemName.contains("gel")
+                || itemName.contains("syrup") || itemName.contains("pouch") || itemName.contains("acid")
+                || itemName.contains("tissue") || itemName.contains("fibre") || itemName.contains("monomer")
+                || itemName.contains("dust")) {
+            chemistryPulse(level, player);
+            consumeOrDamage(player, stack, hand, itemName.contains("solution") || itemName.contains("vial")
+                    || itemName.contains("concoction") || itemName.contains("powder") || itemName.contains("sample"));
+            player.getCooldowns().addCooldown(this, 100);
+            return InteractionResultHolder.success(stack);
+        }
         if (itemName.contains("bomb") || itemName.contains("charge") || itemName.contains("quark") || itemName.contains("gluon")
                 || itemName.contains("exothermite") || itemName.contains("emitter")) {
             shootUtilityProjectile(level, player, stack);
@@ -530,6 +542,67 @@ public class LostSpecialUseItem extends Item {
         player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 0, true, false));
         LostFx.play(level, player.blockPosition(), "magic_weapon_5", SoundSource.PLAYERS, 0.55F, 1.25F);
         LostFx.burst(level, player.blockPosition(), "space_magic", 18, 0.5D, 0.03D);
+    }
+
+    private void chemistryPulse(Level level, Player player) {
+        if (itemName.contains("cure") || itemName.contains("filter") || itemName.contains("syrup")) {
+            clearBadEffects(player);
+            player.heal(3.0F);
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 0, true, false));
+            LostFx.play(level, player.blockPosition(), "bioenergize", SoundSource.PLAYERS, 0.55F, 1.25F);
+            LostFx.burst(level, player.blockPosition(), "miasma", 14, 0.45D, 0.03D);
+            return;
+        }
+        if (itemName.contains("acid") || itemName.contains("toxin") || itemName.contains("poison")
+                || itemName.contains("biocorruption")) {
+            effectBurst(level, player, MobEffects.POISON, ModEffects.ACIDIC.get());
+            return;
+        }
+        if (itemName.contains("plague") || itemName.contains("bio") || itemName.contains("corrupt")) {
+            effectBurst(level, player, ModEffects.PLAGUE.get(), ModEffects.CONTAGIOUS.get());
+            return;
+        }
+        if (itemName.contains("fire") || itemName.contains("flame") || itemName.contains("solar")
+                || itemName.contains("quickflame")) {
+            fireBurst(level, player, 4.5D);
+            player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 180, 0, true, false));
+            return;
+        }
+        if (itemName.contains("growth") || itemName.contains("gel") || itemName.contains("syrup")) {
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 180, 1, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 100, 0, true, false));
+            LostFx.burst(level, player.blockPosition(), "miasma", 18, 0.55D, 0.03D);
+            LostFx.play(level, player.blockPosition(), "special_craft", SoundSource.PLAYERS, 0.55F, 1.35F);
+            return;
+        }
+        if (itemName.contains("gravity") || itemName.contains("cyclone") || itemName.contains("ultralight")) {
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(6.0D), entity -> entity != player)) {
+                entity.addEffect(new MobEffectInstance(ModEffects.GRAVITATIONAL.get(), 140, itemName.contains("ultralight") ? 0 : 1));
+                entity.push(0.0D, itemName.contains("ultralight") ? 0.7D : 0.35D, 0.0D);
+            }
+            LostFx.burst(level, player.blockPosition(), "gravity_ring", 20, 0.8D, 0.04D);
+            LostFx.play(level, player.blockPosition(), "magic_weapon_3", SoundSource.PLAYERS, 0.6F, 1.1F);
+            return;
+        }
+        if (itemName.contains("nightmare") || itemName.contains("dark") || itemName.contains("mortality")) {
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(5.5D), entity -> entity != player)) {
+                entity.addEffect(new MobEffectInstance(ModEffects.TERRIFIED.get(), 180, 0));
+                entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 0));
+            }
+            LostFx.burst(level, player.blockPosition(), "dark_magic", 18, 0.65D, 0.03D);
+            LostFx.play(level, player.blockPosition(), "magic_weapon_11", SoundSource.PLAYERS, 0.6F, 0.9F);
+            return;
+        }
+        if (itemName.contains("volatile") || itemName.contains("unstable") || itemName.contains("explosive")) {
+            fireBurst(level, player, 3.5D);
+            LostFx.burst(level, player.blockPosition(), "plasma_explosion", 20, 0.7D, 0.05D);
+            LostFx.play(level, player.blockPosition(), "deep_explosion", SoundSource.PLAYERS, 0.55F, 1.25F);
+            return;
+        }
+        player.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 200, 0, true, false));
+        player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 160, 0, true, false));
+        LostFx.burst(level, player.blockPosition(), "small_spark", 16, 0.45D, 0.03D);
+        LostFx.play(level, player.blockPosition(), "chemical_mixing", SoundSource.PLAYERS, 0.55F, 1.2F);
     }
 
     private void shootUtilityProjectile(Level level, Player player, ItemStack stack) {
