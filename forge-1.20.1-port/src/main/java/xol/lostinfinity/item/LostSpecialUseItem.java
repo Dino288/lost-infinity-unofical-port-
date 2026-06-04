@@ -425,8 +425,8 @@ public class LostSpecialUseItem extends Item {
                 }
             }
         }
-        LostFx.play(level, player.blockPosition(), "generic_ui_5", SoundSource.PLAYERS, 0.6F, 1.25F);
-        LostFx.burst(level, player.blockPosition(), itemName.contains("blight") || itemName.contains("plague") ? "plague" : "small_spark", 18, 0.65D, 0.03D);
+        LostFx.play(level, player.blockPosition(), augmentSound(), SoundSource.PLAYERS, 0.6F, 1.25F);
+        LostFx.burst(level, player.blockPosition(), augmentParticle(), 18, 0.65D, 0.03D);
     }
 
     private void dataPulse(Level level, Player player) {
@@ -489,8 +489,8 @@ public class LostSpecialUseItem extends Item {
         } else {
             player.addEffect(new MobEffectInstance(MobEffects.LUCK, 180, 0, true, false));
         }
-        LostFx.play(level, player.blockPosition(), itemName.contains("power") ? "charging_power" : "generic_ui_5", SoundSource.PLAYERS, 0.65F, 1.15F);
-        LostFx.burst(level, player.blockPosition(), itemName.contains("power") ? "electric_explosion_blue" : "spectral", 20, 0.65D, 0.03D);
+        LostFx.play(level, player.blockPosition(), progressionSound(), SoundSource.PLAYERS, 0.65F, 1.15F);
+        LostFx.burst(level, player.blockPosition(), progressionParticle(), 20, 0.65D, 0.03D);
     }
 
     private void resourcePulse(Level level, Player player) {
@@ -635,13 +635,49 @@ public class LostSpecialUseItem extends Item {
             player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 180, 0, true, false));
             player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 220, 0, true, false));
             LostFx.burst(level, player.blockPosition(), "spectral", 18, 0.55D, 0.03D);
-            LostFx.play(level, player.blockPosition(), "generic_ui_5", SoundSource.PLAYERS, 0.6F, 1.15F);
+            LostFx.play(level, player.blockPosition(), "magic_weapon_5", SoundSource.PLAYERS, 0.6F, 1.15F);
             return;
         }
         player.addEffect(new MobEffectInstance(MobEffects.LUCK, 180, 0, true, false));
         player.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 180, 0, true, false));
         LostFx.burst(level, player.blockPosition(), "small_spark", 14, 0.45D, 0.03D);
         LostFx.play(level, player.blockPosition(), "magic_weapon_5", SoundSource.PLAYERS, 0.5F, 1.25F);
+    }
+
+    private String augmentSound() {
+        if (itemName.contains("heal") || itemName.contains("regenerative")) return "bioenergize";
+        if (itemName.contains("dash") || itemName.contains("slide")) return "sound_bounce";
+        if (itemName.contains("teleport")) return "rapid_teleport";
+        if (itemName.contains("invisibility") || itemName.contains("nightmare")) return "magic_weapon_11";
+        if (itemName.contains("blight") || itemName.contains("plague")) return "flask_explode";
+        if (itemName.contains("emp")) return "charging_power";
+        if (itemName.contains("destructive") || itemName.contains("shatter") || itemName.contains("slam")) return "rock_tumble";
+        return "special_craft";
+    }
+
+    private String augmentParticle() {
+        if (itemName.contains("heal") || itemName.contains("regenerative")) return "blood_drop";
+        if (itemName.contains("dash") || itemName.contains("slide")) return "supersonic_blue";
+        if (itemName.contains("teleport")) return "warp";
+        if (itemName.contains("invisibility") || itemName.contains("nightmare")) return "shadow_blast";
+        if (itemName.contains("blight") || itemName.contains("plague")) return "plague";
+        if (itemName.contains("emp")) return "electric_explosion_blue";
+        if (itemName.contains("destructive") || itemName.contains("shatter") || itemName.contains("slam")) return "small_spark";
+        return "ancient_spell";
+    }
+
+    private String progressionSound() {
+        if (itemName.contains("power") || itemName.contains("override")) return "charging_power";
+        if (itemName.contains("maze") || itemName.contains("puzzle")) return "magic_weapon_5";
+        if (itemName.contains("arena") || itemName.contains("token") || itemName.endsWith("card")) return "armor_activate";
+        return "nebulous_beacon";
+    }
+
+    private String progressionParticle() {
+        if (itemName.contains("power") || itemName.contains("override")) return "electric_explosion_blue";
+        if (itemName.contains("maze") || itemName.contains("puzzle")) return "spectral";
+        if (itemName.contains("arena") || itemName.contains("token") || itemName.endsWith("card")) return "space_magic";
+        return "portal_beam";
     }
 
     private void shootUtilityProjectile(Level level, Player player, ItemStack stack) {
