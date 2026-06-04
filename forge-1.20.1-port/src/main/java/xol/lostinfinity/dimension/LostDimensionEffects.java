@@ -13,6 +13,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.registry.ModEffects;
 
 @Mod.EventBusSubscriber(modid = LostInfinity.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class LostDimensionEffects {
@@ -33,6 +34,7 @@ public final class LostDimensionEffects {
         switch (dimension.getPath()) {
             case "celestialvoid" -> tickCelestialVoid(player);
             case "nonexistence" -> tickNonexistence(player);
+            case "cartographerrealmtop" -> tickCartographerRealmTop(player);
             case "cartographerrealmmid" -> tickCartographerRealm(player, false);
             case "cartographerrealmbot" -> tickCartographerRealm(player, true);
             case "grandmasteroutpost" -> tickGrandmasterOutpost(player);
@@ -50,6 +52,8 @@ public final class LostDimensionEffects {
             return;
         }
         player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 80, 0, true, false));
+        player.addEffect(new MobEffectInstance(ModEffects.GRAVITATIONAL.get(), 80, 0, true, false));
+        player.addEffect(new MobEffectInstance(ModEffects.OTHERWORLDLY.get(), 80, 0, true, false));
         if (player.getAbilities().flying && player.tickCount % 40 == 0) {
             player.hurt(player.damageSources().magic(), 1.0F);
             player.displayClientMessage(Component.literal("Flight damages your lungs due to the lack of atmosphere."), false);
@@ -59,23 +63,38 @@ public final class LostDimensionEffects {
     private static void tickNonexistence(ServerPlayer player) {
         if (hasNamedEquipment(player, "filtrationmask") || hasLostArmor(player)) {
             player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 260, 0, true, false));
+            player.addEffect(new MobEffectInstance(ModEffects.OTHERWORLDLY.get(), 120, 0, true, false));
             return;
         }
         player.addEffect(new MobEffectInstance(MobEffects.WITHER, 80, 1, true, false));
         player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 120, 1, true, false));
+        player.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 100, 0, true, false));
         if (player.tickCount % 80 == 0) {
             player.displayClientMessage(Component.literal("Toxic fumes quickly fill your airways."), false);
         }
     }
 
+    private static void tickCartographerRealmTop(ServerPlayer player) {
+        if (isHolding(player, "synchronizer") || isHolding(player, "advanced_synchronizer")) {
+            player.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 80, 0, true, false));
+            return;
+        }
+        if (player.tickCount % 120 == 0) {
+            player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0, true, false));
+            player.displayClientMessage(Component.literal("The labyrinth map refuses to stay still. Hold a synchronizer to steady it."), false);
+        }
+    }
+
     private static void tickCartographerRealm(ServerPlayer player, boolean lowerRealm) {
         if (isHolding(player, "synchronizer") || isHolding(player, "advanced_synchronizer")) {
+            player.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 80, lowerRealm ? 1 : 0, true, false));
             return;
         }
         int interval = lowerRealm ? 40 : 80;
         if (player.tickCount % interval == 0) {
             player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, lowerRealm ? 1 : 0, true, false));
             player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 120, lowerRealm ? 1 : 0, true, false));
+            player.addEffect(new MobEffectInstance(ModEffects.DISTORTION.get(), 120, lowerRealm ? 1 : 0, true, false));
             player.displayClientMessage(Component.literal("A dimensional tear pulls at you. Hold a synchronizer to stabilize it."), false);
         }
     }
@@ -85,16 +104,28 @@ public final class LostDimensionEffects {
             FoodData food = player.getFoodData();
             food.eat(20, 20.0F);
         }
+        player.addEffect(new MobEffectInstance(ModEffects.PROTECTED.get(), 80, 0, true, false));
+        player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 40, 0, true, false));
     }
 
     private static void tickInfiniteMurk(ServerPlayer player) {
         player.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 100, 0, true, false));
         player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 80, 0, true, false));
+        player.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 80, 0, true, false));
+        if (!hasLostArmor(player) && player.tickCount % 120 == 0) {
+            player.hurt(player.damageSources().magic(), 1.0F);
+            player.displayClientMessage(Component.literal("The murk drags at your reflection."), false);
+        }
     }
 
     private static void tickShadowSea(ServerPlayer player) {
         player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 120, 0, true, false));
         player.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 80, 0, true, false));
+        player.addEffect(new MobEffectInstance(ModEffects.SUPERSONIC.get(), 80, 0, true, false));
+        if (!hasNamedEquipment(player, "magic_conch") && !hasLostArmor(player) && player.tickCount % 140 == 0) {
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1, true, false));
+            player.displayClientMessage(Component.literal("The reef currents fight against you."), false);
+        }
     }
 
     private static boolean hasLostArmor(ServerPlayer player) {
