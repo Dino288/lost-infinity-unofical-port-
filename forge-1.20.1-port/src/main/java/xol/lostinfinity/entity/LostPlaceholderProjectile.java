@@ -114,6 +114,7 @@ public class LostPlaceholderProjectile extends Entity {
                 living.push(0.0D, 0.9D, 0.0D);
             }
         }
+        areaEffect(id);
         impactBurst(id);
         if (!isPiercing(id)) {
             discard();
@@ -124,6 +125,7 @@ public class LostPlaceholderProjectile extends Entity {
         if (this.level().isClientSide()) {
             return;
         }
+        areaEffect(id);
         impactBurst(id);
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) {
             LostFx.play(this.level(), hit.getBlockPos(), "rift_create", SoundSource.NEUTRAL, 1.0F, 0.7F);
@@ -148,6 +150,65 @@ public class LostPlaceholderProjectile extends Entity {
                 living.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0));
             }
         }
+    }
+
+    private void areaEffect(String id) {
+        double radius = areaRadius(id);
+        if (radius <= 0.0D) {
+            return;
+        }
+        Vec3 center = this.position();
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(radius))) {
+            if (!living.isAlive()) {
+                continue;
+            }
+            applyEffects(living, id);
+            if (id.contains("gravity") || id.contains("black_hole") || id.contains("wormhole") || id.contains("rift") || id.contains("portal")) {
+                Vec3 pull = center.subtract(living.position());
+                if (pull.lengthSqr() > 0.001D) {
+                    Vec3 motion = pull.normalize().scale(0.75D);
+                    living.push(motion.x, 0.18D, motion.z);
+                }
+                living.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 100, 0));
+            }
+            if (id.contains("sonic") || id.contains("soundwave") || id.contains("pulse") || id.contains("echo")) {
+                Vec3 away = living.position().subtract(center);
+                if (away.lengthSqr() > 0.001D) {
+                    Vec3 motion = away.normalize().scale(0.85D);
+                    living.push(motion.x, 0.28D, motion.z);
+                }
+                living.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 0));
+            }
+            if (id.contains("web") || id.contains("chain") || id.contains("tether") || id.contains("vine")) {
+                living.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 140, 0));
+                living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 2));
+            }
+            if (id.contains("cryo") || id.contains("ice") || id.contains("frost")) {
+                living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 140, 2));
+                living.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 120, 0));
+            }
+        }
+        if (id.contains("gravity") || id.contains("black_hole") || id.contains("wormhole") || id.contains("rift") || id.contains("portal")) {
+            LostFx.burst(this.level(), this.blockPosition(), id.contains("black_hole") ? "blackhole_ring" : "wormhole_portal", 28, radius * 0.22D, 0.03D);
+            LostFx.play(this.level(), this.blockPosition(), "rift_create", SoundSource.NEUTRAL, 0.9F, 0.75F);
+        } else if (id.contains("sonic") || id.contains("soundwave") || id.contains("pulse") || id.contains("echo")) {
+            LostFx.burst(this.level(), this.blockPosition(), "supersonic_blue", 24, radius * 0.22D, 0.06D);
+            LostFx.play(this.level(), this.blockPosition(), "sound_bounce", SoundSource.NEUTRAL, 0.8F, 0.9F);
+        } else if (id.contains("web") || id.contains("chain") || id.contains("tether") || id.contains("vine")) {
+            LostFx.burst(this.level(), this.blockPosition(), id.contains("chain") ? "barul_chain" : "web_magic", 22, radius * 0.18D, 0.02D);
+            LostFx.play(this.level(), this.blockPosition(), id.contains("chain") ? "darkbind" : "tetherbug_attack", SoundSource.NEUTRAL, 0.75F, 1.0F);
+        }
+    }
+
+    private double areaRadius(String id) {
+        if (id.contains("black_hole") || id.contains("gravity") || id.contains("wormhole")) return 5.0D;
+        if (id.contains("portal") || id.contains("rift")) return 4.0D;
+        if (id.contains("sonic") || id.contains("soundwave") || id.contains("pulse") || id.contains("echo")) return 4.0D;
+        if (id.contains("web") || id.contains("chain") || id.contains("tether") || id.contains("vine")) return 3.5D;
+        if (id.contains("cryo") || id.contains("ice") || id.contains("frost")) return 3.0D;
+        if (id.contains("poison") || id.contains("venom") || id.contains("plague") || id.contains("blight")) return 3.0D;
+        if (id.contains("murk") || id.contains("gloom") || id.contains("ink")) return 3.0D;
+        return 0.0D;
     }
 
     private void applyEffects(LivingEntity living, String id) {
@@ -262,6 +323,9 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("fire") || id.contains("ember") || id.contains("meteor")) {
             return "plasma";
         }
+        if (id.contains("cryo") || id.contains("ice") || id.contains("frost")) {
+            return "cryo_beam";
+        }
         if (id.contains("poison") || id.contains("venom") || id.contains("bubble")) {
             return "venom";
         }
@@ -283,13 +347,16 @@ public class LostPlaceholderProjectile extends Entity {
             };
         }
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole") || id.contains("warp")) {
-            return "warp";
+            return id.contains("wormhole") ? "wormhole_portal" : "warp";
         }
         if (id.contains("water") || id.contains("whirlpool") || id.contains("fountain") || id.contains("leviathan") || id.contains("crabulon")) {
             return "murk";
         }
         if (id.contains("shock") || id.contains("tesla") || id.contains("zapper") || id.contains("arc")) {
-            return "zap";
+            return "tesla_ring_blue";
+        }
+        if (id.contains("web") || id.contains("chain") || id.contains("tether") || id.contains("vine")) {
+            return id.contains("chain") ? "barul_chain" : "web_magic";
         }
         if (id.contains("sound") || id.contains("sonic")) {
             return "supersonic_blue";
@@ -330,11 +397,16 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("gravity")) {
             return "gravity_ring";
         }
+        if (id.contains("black_hole")) {
+            return "blackhole_portal";
+        }
         return fallbackParticle(id);
     }
 
     private String burstParticle(String id) {
         if (id.contains("plasma")) return "plasma_explosion";
+        if (id.contains("cryo") || id.contains("ice") || id.contains("frost")) return "ice_blast";
+        if (id.contains("web") || id.contains("chain") || id.contains("tether") || id.contains("vine")) return id.contains("chain") ? "barul_chain" : "web_magic";
         if (id.contains("murk") || id.contains("eidolon") || id.contains("ink") || id.contains("gloom")) return "murky_mist";
         if (id.contains("puzzle") || id.contains("maze") || id.contains("labyrinth") || id.contains("recursor")) return "spectral";
         if (id.contains("water") || id.contains("whirlpool") || id.contains("fountain") || id.contains("leviathan") || id.contains("crabulon")) return "murk";
@@ -349,6 +421,7 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("cosmic") || id.contains("galaxy") || id.contains("star") || id.contains("meteor") || id.contains("asteroid")) return "cosmic_explosion_type1";
         if (id.contains("shock") || id.contains("tesla") || id.contains("arc")) return "electric_explosion_blue";
         if (id.contains("portal") || id.contains("rift") || id.contains("wormhole")) return "portal_beam";
+        if (id.contains("black_hole") || id.contains("gravity")) return "blackhole_ring";
         return trailParticle(id);
     }
 
