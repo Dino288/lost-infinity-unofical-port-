@@ -1,0 +1,18 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "charger",
+    "input":  {
+                  "item":  "lostinfinity:synchronizer"
+              },
+    "consume_catalyst":  false,
+    "energy":  120,
+    "time":  220,
+    "output":  {
+                   "item":  "lostinfinity:advanced_synchronizer",
+                   "count":  1,
+                   "nbt":  "{LostEnergy:1500}"
+               },
+    "catalyst":  {
+                     "item":  "lostinfinity:dimensional_capacitor"
+                 }
+}

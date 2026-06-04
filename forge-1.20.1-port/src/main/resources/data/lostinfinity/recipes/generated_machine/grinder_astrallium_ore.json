@@ -1,0 +1,14 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "grinder",
+    "input":  {
+                  "item":  "lostinfinity:astrallium_ore"
+              },
+    "consume_catalyst":  false,
+    "energy":  55,
+    "time":  130,
+    "output":  {
+                   "item":  "lostinfinity:astrallium_ingot",
+                   "count":  2
+               }
+}

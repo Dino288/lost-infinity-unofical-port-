@@ -1,0 +1,15 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "calibrator",
+    "input":  {
+                  "item":  "lostinfinity:fresh_data_chip"
+              },
+    "consume_catalyst":  false,
+    "energy":  90,
+    "time":  180,
+    "output":  {
+                   "item":  "lostinfinity:fresh_data_chip",
+                   "count":  1,
+                   "nbt":  "{LostInfinityCalibrated:1b}"
+               }
+}

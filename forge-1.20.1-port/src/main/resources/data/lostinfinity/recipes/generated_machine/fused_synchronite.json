@@ -1,0 +1,18 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "calibrator",
+    "input":  {
+                  "item":  "lostinfinity:synchronite_ore"
+              },
+    "consume_catalyst":  false,
+    "energy":  140,
+    "time":  240,
+    "output":  {
+                   "item":  "lostinfinity:fused_synchronite",
+                   "count":  1,
+                   "nbt":  "{LostStability:100}"
+               },
+    "catalyst":  {
+                     "item":  "lostinfinity:advanced_synchronizer"
+                 }
+}

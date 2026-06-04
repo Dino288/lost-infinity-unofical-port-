@@ -1,0 +1,14 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "grinder",
+    "input":  {
+                  "item":  "lostinfinity:hivenite_ore"
+              },
+    "consume_catalyst":  false,
+    "energy":  50,
+    "time":  120,
+    "output":  {
+                   "item":  "lostinfinity:hivenite",
+                   "count":  2
+               }
+}

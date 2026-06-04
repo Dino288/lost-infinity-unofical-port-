@@ -1,0 +1,14 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "sap",
+    "input":  {
+                  "item":  "lostinfinity:sunderwood_sap"
+              },
+    "consume_catalyst":  false,
+    "energy":  35,
+    "time":  120,
+    "output":  {
+                   "item":  "lostinfinity:jar_of_sap",
+                   "count":  1
+               }
+}

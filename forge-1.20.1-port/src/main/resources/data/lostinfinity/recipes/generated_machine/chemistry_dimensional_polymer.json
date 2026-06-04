@@ -1,0 +1,18 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "chemistry",
+    "input":  {
+                  "item":  "lostinfinity:dimensional_capacitor"
+              },
+    "consume_catalyst":  true,
+    "energy":  120,
+    "time":  220,
+    "output":  {
+                   "item":  "lostinfinity:dimensional_polymer",
+                   "count":  1
+               },
+    "catalyst":  {
+                     "item":  "lostinfinity:nanofluoric_acid"
+                 },
+    "fluid":  "lostinfinity:nanofluoric_acid"
+}

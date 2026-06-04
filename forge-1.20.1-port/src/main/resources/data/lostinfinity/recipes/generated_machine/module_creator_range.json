@@ -1,0 +1,17 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "module",
+    "input":  {
+                  "item":  "lostinfinity:module_container"
+              },
+    "consume_catalyst":  true,
+    "energy":  75,
+    "time":  150,
+    "output":  {
+                   "item":  "lostinfinity:module_range",
+                   "count":  1
+               },
+    "catalyst":  {
+                     "item":  "lostinfinity:georedirection_orb"
+                 }
+}

@@ -1,0 +1,18 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "charger",
+    "input":  {
+                  "item":  "lostinfinity:unpowered_cell"
+              },
+    "consume_catalyst":  true,
+    "energy":  90,
+    "time":  180,
+    "output":  {
+                   "item":  "lostinfinity:superchargedcell",
+                   "count":  1,
+                   "nbt":  "{LostEnergy:1000}"
+               },
+    "catalyst":  {
+                     "item":  "lostinfinity:power_fuel"
+                 }
+}

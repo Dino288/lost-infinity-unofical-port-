@@ -1,0 +1,18 @@
+﻿{
+    "type":  "lostinfinity:machine",
+    "machine":  "chemistry",
+    "input":  {
+                  "item":  "lostinfinity:toxic_spore_sample"
+              },
+    "consume_catalyst":  true,
+    "energy":  80,
+    "time":  180,
+    "output":  {
+                   "item":  "lostinfinity:bioreactive_solution",
+                   "count":  1
+               },
+    "catalyst":  {
+                     "item":  "lostinfinity:acidblood_solution"
+                 },
+    "fluid":  "lostinfinity:concentrated_acid"
+}

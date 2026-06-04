@@ -28,6 +28,11 @@ public class LostBiomeTagDataProvider implements DataProvider {
         Path root = output.getOutputFolder(PackOutput.Target.DATA_PACK).resolve(LostInfinity.MODID).resolve("tags/worldgen/biome");
         Map<String, List<String>> tags = new LinkedHashMap<>();
         tags.put("lost_dimensions", List.of("cartographerrealm", "shadowsea", "nonexistence", "moltensea", "infinitemurk", "grandmasteroutpost", "celestialvoid"));
+        tags.put("has_lost_ores", List.of("shadowsea", "nonexistence", "infinitemurk", "celestialvoid"));
+        tags.put("has_murk_structures", List.of("infinitemurk"));
+        tags.put("has_shadow_sea_structures", List.of("shadowsea", "moltensea"));
+        tags.put("has_labyrinth_structures", List.of("cartographerrealm"));
+        tags.put("has_void_structures", List.of("nonexistence", "celestialvoid", "grandmasteroutpost"));
         tags.put("shadow_sea", List.of("shadowsea", "moltensea"));
         tags.put("infinite_murk", List.of("infinitemurk"));
         tags.put("nonexistence", List.of("nonexistence"));
