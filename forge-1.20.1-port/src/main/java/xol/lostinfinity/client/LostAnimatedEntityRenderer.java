@@ -34,6 +34,9 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
             "deviantbear", "deviantcow", "deviantsheep", "devianthorse", "deviantpig", "deviantwolf",
             "deviant_wolf", "deviantocelote", "deviantmooshroom", "deviantllama", "titanllama", "doomdog",
             "rockslug", "giant_rockslug", "ravager", "ribrex", "chomper", "gnawer", "hypnosaur");
+    private static final Set<String> BOSSES = Set.of(
+            "cthulhu", "andromeda", "mushmerra", "mushmerra_clone", "zenon", "kalikos", "livorax",
+            "ozor", "thundyron", "cryonus", "azross", "vycellia", "barul", "titanopod", "elementiumprime");
 
     public LostAnimatedEntityRenderer(EntityRendererProvider.Context context) {
         super(context);
@@ -57,6 +60,12 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         float walk = entity.tickCount + partialTick;
         if (isProjectileLike(id)) {
             renderProjectileRig(poseStack, vertices, packedLight, width, height, walk, id);
+        } else if (id.contains("cthulhu")) {
+            renderCthulhuRig(poseStack, vertices, packedLight, width, height, walk, id);
+        } else if (id.equals("leviathan") || id.equals("sea_serpent") || id.contains("worm")) {
+            renderSerpentRig(poseStack, vertices, packedLight, width, height, walk, id);
+        } else if (BOSSES.contains(id)) {
+            renderBossRig(poseStack, vertices, packedLight, width, height, walk, id);
         } else if (FISH.contains(id)) {
             renderFishRig(poseStack, vertices, packedLight, width, height, walk, id);
         } else if (SPIDERS.contains(id)) {
@@ -170,6 +179,87 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         poseStack.popPose();
     }
 
+    private void renderBossRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
+        float scale = Math.max(width / 1.7F, height / 2.4F);
+        float swing = Mth.sin(walk * 0.28F) * 13.0F;
+        poseStack.pushPose();
+        poseStack.scale(scale, scale, scale);
+        box(poseStack, vertices, light, 0.0F, 1.35F, 0.0F, 1.25F, 1.25F, 0.82F);
+        box(poseStack, vertices, light, 0.0F, 2.12F, -0.08F, 0.82F, 0.72F, 0.72F);
+        limb(poseStack, vertices, light, -0.82F, 1.52F, 0.0F, 20.0F + swing, 0.28F, 1.05F, 0.28F);
+        limb(poseStack, vertices, light, 0.82F, 1.52F, 0.0F, -20.0F - swing, 0.28F, 1.05F, 0.28F);
+        limb(poseStack, vertices, light, -0.36F, 0.55F, 0.0F, -swing, 0.32F, 0.92F, 0.34F);
+        limb(poseStack, vertices, light, 0.36F, 0.55F, 0.0F, swing, 0.32F, 0.92F, 0.34F);
+        if (id.contains("mush") || id.contains("fung")) {
+            box(poseStack, vertices, light, 0.0F, 2.55F, 0.0F, 1.35F, 0.38F, 1.35F);
+            box(poseStack, vertices, light, 0.0F, 2.35F, 0.0F, 0.55F, 0.35F, 0.55F);
+        }
+        if (id.contains("zenon") || id.contains("kalikos") || id.contains("elementium")) {
+            poseStack.pushPose();
+            poseStack.mulPose(Axis.YP.rotationDegrees(walk * 4.0F));
+            box(poseStack, vertices, light, 0.0F, 1.65F, 0.0F, 1.72F, 0.12F, 1.72F);
+            box(poseStack, vertices, light, 0.0F, 1.65F, 0.0F, 0.12F, 1.72F, 1.72F);
+            poseStack.popPose();
+        }
+        if (id.contains("thundyron") || id.contains("cryonus") || id.contains("ozor")) {
+            for (int i = 0; i < 3; i++) {
+                poseStack.pushPose();
+                poseStack.mulPose(Axis.YP.rotationDegrees(walk * 2.5F + i * 120.0F));
+                box(poseStack, vertices, light, 0.0F, 1.78F, 0.82F, 0.32F, 0.32F, 0.32F);
+                poseStack.popPose();
+            }
+        }
+        poseStack.popPose();
+    }
+
+    private void renderCthulhuRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
+        float scale = Math.max(width / 2.0F, height / 2.5F);
+        poseStack.pushPose();
+        poseStack.scale(scale, scale, scale);
+        if (id.contains("turret")) {
+            box(poseStack, vertices, light, 0.0F, 0.55F, 0.0F, 0.9F, 0.85F, 0.9F);
+            box(poseStack, vertices, light, 0.0F, 1.18F, -0.38F, 0.52F, 0.42F, 0.95F);
+        } else if (id.contains("tentacle")) {
+            for (int i = 0; i < 5; i++) {
+                float bend = Mth.sin(walk * 0.2F + i * 0.8F) * 14.0F;
+                limb(poseStack, vertices, light, 0.0F, 0.36F + i * 0.28F, 0.0F, bend, 0.34F - i * 0.03F, 0.45F, 0.34F - i * 0.03F);
+            }
+        } else if (id.contains("black_hole") || id.contains("rift") || id.contains("healing_orb") || id.contains("death_fx")) {
+            poseStack.mulPose(Axis.YP.rotationDegrees(walk * 7.0F));
+            box(poseStack, vertices, light, 0.0F, 0.9F, 0.0F, 1.0F, 1.0F, 1.0F);
+            box(poseStack, vertices, light, 0.0F, 0.9F, 0.0F, 1.55F, 0.12F, 1.55F);
+            box(poseStack, vertices, light, 0.0F, 0.9F, 0.0F, 0.12F, 1.55F, 1.55F);
+        } else {
+            box(poseStack, vertices, light, 0.0F, 1.25F, 0.0F, 1.35F, 1.15F, 0.92F);
+            box(poseStack, vertices, light, 0.0F, 2.02F, -0.05F, 0.95F, 0.82F, 0.82F);
+            wing(poseStack, vertices, light, -0.95F, 1.52F, 0.0F, 26.0F + Mth.sin(walk * 0.28F) * 12.0F);
+            wing(poseStack, vertices, light, 0.95F, 1.52F, 0.0F, -26.0F - Mth.sin(walk * 0.28F) * 12.0F);
+            for (int i = 0; i < 4; i++) {
+                float x = (i - 1.5F) * 0.22F;
+                limb(poseStack, vertices, light, x, 1.04F, -0.38F, 22.0F + Mth.sin(walk * 0.22F + i) * 18.0F, 0.16F, 0.78F, 0.16F);
+            }
+        }
+        poseStack.popPose();
+    }
+
+    private void renderSerpentRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
+        float scale = Math.max(width / 2.2F, height / 1.2F);
+        poseStack.pushPose();
+        poseStack.scale(scale, scale, scale);
+        for (int i = 0; i < 6; i++) {
+            float z = (i - 2.5F) * 0.48F;
+            float sway = Mth.sin(walk * 0.22F + i * 0.7F) * 0.18F;
+            box(poseStack, vertices, light, sway, 0.85F, z, 1.05F - i * 0.07F, 0.62F - i * 0.035F, 0.58F);
+        }
+        box(poseStack, vertices, light, 0.0F, 0.92F, -1.58F, 0.78F, 0.52F, 0.72F);
+        tail(poseStack, vertices, light, 0.0F, 0.82F, 1.58F, Mth.sin(walk * 0.32F) * 28.0F);
+        if (id.contains("leviathan")) {
+            wing(poseStack, vertices, light, -0.76F, 0.95F, -0.35F, 72.0F);
+            wing(poseStack, vertices, light, 0.76F, 0.95F, -0.35F, -72.0F);
+        }
+        poseStack.popPose();
+    }
+
     private void renderProjectileRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
         poseStack.pushPose();
         poseStack.mulPose(Axis.YP.rotationDegrees(walk * projectileSpin(id)));
@@ -191,6 +281,10 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
                 box(poseStack, vertices, light, 0.0F, 0.0F, 0.0F, size * 0.12F, size * 0.72F, size * 0.12F);
                 poseStack.popPose();
             }
+        } else if (id.contains("chakram") || id.contains("ring")) {
+            poseStack.mulPose(Axis.ZP.rotationDegrees(walk * 18.0F));
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 1.35F, size * 0.14F, size * 1.35F);
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 0.78F, size * 0.16F, size * 0.78F);
         } else if (id.contains("meteor") || id.contains("comet") || id.contains("asteroid")) {
             box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 1.25F, size * 1.25F, size * 1.25F);
             box(poseStack, vertices, light, 0.0F, 0.15F, size * 0.85F, size * 0.55F, size * 0.55F, size * 1.6F);
@@ -274,7 +368,9 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         return id.contains("shot") || id.contains("bullet") || id.contains("blast") || id.contains("bomb")
                 || id.contains("laser") || id.contains("orb") || id.contains("meteor") || id.contains("pellet")
                 || id.contains("arrow") || id.contains("bolt") || id.contains("beam") || id.contains("projectile")
-                || id.contains("fireball") || id.contains("skull") || id.contains("missile");
+                || id.contains("fireball") || id.contains("skull") || id.contains("missile") || id.contains("chakram")
+                || id.contains("trident") || id.contains("chain") || id.contains("spear") || id.contains("knife")
+                || id.contains("comet") || id.contains("asteroid") || id.contains("rift") || id.contains("portal");
     }
 
     private static void box(PoseStack poseStack, VertexConsumer vertices, int light, float cx, float cy, float cz, float sx, float sy, float sz) {
