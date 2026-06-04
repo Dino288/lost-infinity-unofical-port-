@@ -180,6 +180,17 @@ public class LostSpecialUseItem extends Item {
             player.getCooldowns().addCooldown(this, 90);
             return InteractionResultHolder.success(stack);
         }
+        if (itemName.contains("battery") || itemName.contains("cell") || itemName.contains("capacitor")
+                || itemName.contains("generator") || itemName.contains("crystal") || itemName.contains("orb")
+                || itemName.contains("heart") || itemName.contains("seed") || itemName.contains("sap")
+                || itemName.contains("container") || itemName.contains("totem") || itemName.contains("idol")
+                || itemName.contains("relic") || itemName.contains("controller") || itemName.contains("constructor")
+                || itemName.contains("remote")) {
+            resourcePulse(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 120);
+            return InteractionResultHolder.success(stack);
+        }
         if (itemName.contains("bomb") || itemName.contains("charge") || itemName.contains("quark") || itemName.contains("gluon")
                 || itemName.contains("exothermite") || itemName.contains("emitter")) {
             shootUtilityProjectile(level, player, stack);
@@ -467,6 +478,58 @@ public class LostSpecialUseItem extends Item {
         }
         LostFx.play(level, player.blockPosition(), itemName.contains("power") ? "charging_power" : "generic_ui_5", SoundSource.PLAYERS, 0.65F, 1.15F);
         LostFx.burst(level, player.blockPosition(), itemName.contains("power") ? "electric_explosion_blue" : "spectral", 20, 0.65D, 0.03D);
+    }
+
+    private void resourcePulse(Level level, Player player) {
+        if (itemName.contains("battery") || itemName.contains("cell") || itemName.contains("capacitor")
+                || itemName.contains("generator")) {
+            player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 180, 1, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 160, 0, true, false));
+            LostFx.play(level, player.blockPosition(), "charging_power", SoundSource.PLAYERS, 0.6F, 1.2F);
+            LostFx.burst(level, player.blockPosition(), "electric_explosion_blue", 18, 0.55D, 0.03D);
+            return;
+        }
+        if (itemName.contains("heart") || itemName.contains("vessel")) {
+            player.heal(itemName.contains("giant") || itemName.contains("light") ? 8.0F : 4.0F);
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 160, 1, true, false));
+            LostFx.play(level, player.blockPosition(), "bioenergize", SoundSource.PLAYERS, 0.65F, 1.15F);
+            LostFx.burst(level, player.blockPosition(), "blood_drop", 14, 0.45D, 0.02D);
+            return;
+        }
+        if (itemName.contains("seed") || itemName.contains("sap") || itemName.contains("flower")) {
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 140, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 80, 0, true, false));
+            LostFx.play(level, player.blockPosition(), "special_craft", SoundSource.PLAYERS, 0.55F, 1.35F);
+            LostFx.burst(level, player.blockPosition(), "miasma", 18, 0.5D, 0.03D);
+            return;
+        }
+        if (itemName.contains("totem") || itemName.contains("idol") || itemName.contains("relic")) {
+            defensivePulse(level, player);
+            player.addEffect(new MobEffectInstance(MobEffects.LUCK, 200, 0, true, false));
+            return;
+        }
+        if (itemName.contains("controller") || itemName.contains("constructor") || itemName.contains("remote")) {
+            summonHelper(level, player);
+            return;
+        }
+        if (itemName.contains("plague") || itemName.contains("curse") || itemName.contains("dark")
+                || itemName.contains("shadow") || itemName.contains("forbidden")) {
+            effectBurst(level, player, MobEffects.WITHER, MobEffects.DAMAGE_BOOST);
+            return;
+        }
+        if (itemName.contains("solar") || itemName.contains("ember") || itemName.contains("fire")
+                || itemName.contains("burning")) {
+            fireBurst(level, player, 4.0D);
+            return;
+        }
+        if (itemName.contains("georedirection") || itemName.contains("orb")) {
+            attract(level, player);
+            return;
+        }
+        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 160, 0, true, false));
+        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 0, true, false));
+        LostFx.play(level, player.blockPosition(), "magic_weapon_5", SoundSource.PLAYERS, 0.55F, 1.25F);
+        LostFx.burst(level, player.blockPosition(), "space_magic", 18, 0.5D, 0.03D);
     }
 
     private void shootUtilityProjectile(Level level, Player player, ItemStack stack) {

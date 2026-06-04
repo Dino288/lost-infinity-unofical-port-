@@ -128,14 +128,23 @@ public final class ModItems {
                 || name.contains("sextant") || name.contains("monitor") || name.contains("hypercron")
                 || name.contains("override_device") || name.contains("relocator") || name.startsWith("map_")
                 || name.endsWith("_map") || name.contains("_token") || name.endsWith("card")
-                || name.contains("_key") || name.contains("geolocation") || name.contains("geocoordinated");
+                || name.contains("_key") || name.contains("geolocation") || name.contains("geocoordinated")
+                || name.contains("battery") || name.contains("cell") || name.contains("capacitor")
+                || name.contains("generator") || name.contains("crystal") || name.contains("orb")
+                || name.contains("heart") || name.contains("seed") || name.contains("sap")
+                || name.contains("container") || name.contains("totem") || name.contains("idol")
+                || name.contains("relic") || name.contains("controller") || name.contains("constructor")
+                || name.contains("remote");
     }
 
     private static int specialUseDurability(String name) {
         return name.contains("device") || name.contains("globe") || name.contains("analyzer") || name.contains("correlator")
                 || name.contains("compass") || name.contains("emitter") || name.contains("chip") || name.contains("disc")
                 || name.contains("synchronizer") || name.contains("sextant") || name.contains("monitor")
-                || name.contains("hypercron") || name.contains("relocator") || name.contains("override_device") ? 256 : 1;
+                || name.contains("hypercron") || name.contains("relocator") || name.contains("override_device")
+                || name.contains("battery") || name.contains("cell") || name.contains("capacitor")
+                || name.contains("generator") || name.contains("controller") || name.contains("constructor")
+                || name.contains("remote") || name.contains("container") ? 256 : 1;
     }
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<? extends Block> block) {
