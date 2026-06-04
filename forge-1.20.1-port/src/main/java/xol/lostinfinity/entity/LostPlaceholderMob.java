@@ -30,14 +30,17 @@ import net.minecraft.world.phys.Vec3;
 import xol.lostinfinity.effect.LostFx;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.registry.ModEffects;
+import xol.lostinfinity.registry.ModEntities;
 
 public class LostPlaceholderMob extends PathfinderMob {
     private static final String FUSE_TAG = "LostFuse";
     private static final String SUMMONED_MINION_TAG = "SummonedMinion";
+    private static final String BOSS_PHASE_TAG = "LostBossPhase";
     private int specialCooldown;
     private int supportCooldown;
     private int ambushCooldown;
     private int fuseTicks = -1;
+    private int bossPhase = 1;
     private boolean summonedMinion;
 
     public LostPlaceholderMob(EntityType<? extends PathfinderMob> type, Level level) {
@@ -109,6 +112,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         super.readAdditionalSaveData(tag);
         this.fuseTicks = tag.getInt(FUSE_TAG);
         this.summonedMinion = tag.getBoolean(SUMMONED_MINION_TAG);
+        this.bossPhase = Math.max(1, tag.getInt(BOSS_PHASE_TAG));
     }
 
     @Override
@@ -116,6 +120,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         super.addAdditionalSaveData(tag);
         tag.putInt(FUSE_TAG, this.fuseTicks);
         tag.putBoolean(SUMMONED_MINION_TAG, this.summonedMinion);
+        tag.putInt(BOSS_PHASE_TAG, this.bossPhase);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -212,6 +217,9 @@ public class LostPlaceholderMob extends PathfinderMob {
                 enrage(target);
                 this.supportCooldown = 160;
             }
+            if (isRecoveredBossEntity()) {
+                tickRecoveredBossBehavior(target);
+            }
         }
         if ((isHealerEntity() || isSummonerEntity()) && this.supportCooldown <= 0) {
             if (isHealerEntity()) {
@@ -290,6 +298,174 @@ public class LostPlaceholderMob extends PathfinderMob {
         this.level().addFreshEntity(minion);
         LostFx.burst(this.level(), minion.blockPosition(), "ancient_spell", 16, 0.6D, 0.04D);
         this.level().playSound(null, minion.blockPosition(), LostMobSounds.ability(mobId()), SoundSource.HOSTILE, 0.7F, 1.2F);
+    }
+
+    private void tickRecoveredBossBehavior(LivingEntity target) {
+        int phase = bossPhaseForHealth();
+        if (phase != this.bossPhase) {
+            this.bossPhase = phase;
+            this.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 90, 1, true, false));
+            this.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 140, phase - 1, true, false));
+            LostFx.burst(this.level(), this.blockPosition(), bossPhaseParticle(), 36, 1.6D, 0.07D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.WITHER_SPAWN, SoundSource.HOSTILE, 0.7F, 0.75F + phase * 0.1F);
+        }
+        switch (mobId()) {
+            case "cthulhu" -> tickCthulhuBoss(target, phase);
+            case "andromeda" -> tickAndromedaBoss(target, phase);
+            case "mushmerra" -> tickMushmerraBoss(target, phase);
+            case "thundyron" -> tickThunderBoss(target, phase);
+            case "cryonus" -> tickCryonusBoss(target, phase);
+            case "ozor" -> tickOzorBoss(target, phase);
+            default -> {
+            }
+        }
+    }
+
+    private void tickCthulhuBoss(LivingEntity target, int phase) {
+        if (this.tickCount % Math.max(28, 60 - phase * 10) == 0) {
+            shootAt(target);
+        }
+        if (this.tickCount % Math.max(75, 130 - phase * 20) == 0) {
+            gravityPulse(target, 8.0D + phase, 3.0F + phase, "blackhole_ring");
+        }
+        if (this.tickCount % Math.max(95, 160 - phase * 20) == 0) {
+            spawnBossMinion(ModEntities.CTHULHU_TENTACLE.get(), target, 0.45F, 6);
+            if (phase >= 2) {
+                spawnBossMinion(ModEntities.CTHULHU_TURRET.get(), target, 0.35F, 3);
+            }
+            if (phase >= 3) {
+                spawnBossMinion(ModEntities.CTHULHU_HEALING_ORB.get(), target, 0.3F, 2);
+            }
+        }
+    }
+
+    private void tickAndromedaBoss(LivingEntity target, int phase) {
+        if (this.tickCount % Math.max(24, 50 - phase * 8) == 0) {
+            shootAt(target);
+        }
+        if (this.tickCount % Math.max(65, 115 - phase * 15) == 0) {
+            gravityPulse(target, 7.0D + phase, 2.0F + phase, "gravity_ring");
+            target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 120, phase - 1));
+        }
+        if (this.tickCount % Math.max(80, 150 - phase * 20) == 0) {
+            evadeTarget(target);
+        }
+    }
+
+    private void tickMushmerraBoss(LivingEntity target, int phase) {
+        if (this.tickCount % Math.max(50, 90 - phase * 12) == 0) {
+            sporePulse(target, 5.0D + phase);
+        }
+        if (this.tickCount % Math.max(95, 155 - phase * 20) == 0) {
+            spawnBossMinion(phase >= 2 ? ModEntities.MUSHMERRA_CLONE.get() : ModEntities.SHROOMITE.get(), target, phase >= 2 ? 0.35F : 0.55F, phase >= 3 ? 6 : 4);
+        }
+        if (phase >= 2 && this.tickCount % 120 == 0 && this.getHealth() < this.getMaxHealth()) {
+            this.heal(4.0F + phase);
+            LostFx.burst(this.level(), this.blockPosition(), "poison_rings", 20, 1.0D, 0.04D);
+        }
+    }
+
+    private void tickThunderBoss(LivingEntity target, int phase) {
+        if (this.tickCount % Math.max(30, 65 - phase * 10) == 0) {
+            shootAt(target);
+            target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, phase - 1));
+        }
+        if (this.tickCount % Math.max(70, 125 - phase * 15) == 0) {
+            stormPulse(target, phase, "electric_explosion_blue");
+        }
+    }
+
+    private void tickCryonusBoss(LivingEntity target, int phase) {
+        if (this.tickCount % Math.max(34, 70 - phase * 10) == 0) {
+            shootAt(target);
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 130, phase));
+        }
+        if (this.tickCount % Math.max(80, 135 - phase * 15) == 0) {
+            stormPulse(target, phase, "snowflake");
+        }
+    }
+
+    private void tickOzorBoss(LivingEntity target, int phase) {
+        if (this.tickCount % Math.max(38, 75 - phase * 10) == 0) {
+            confuseTarget(target);
+        }
+        if (this.tickCount % Math.max(90, 150 - phase * 18) == 0) {
+            spawnBossMinion(ModEntities.OZORDECOY.get(), target, 0.45F, phase >= 3 ? 5 : 3);
+            if (phase >= 2) {
+                evadeTarget(target);
+            }
+        }
+    }
+
+    private void spawnBossMinion(EntityType<? extends LostPlaceholderMob> type, LivingEntity target, float healthScale, int maxNearby) {
+        String family = minionFamily(type);
+        long nearby = this.level().getEntitiesOfClass(LostPlaceholderMob.class, this.getBoundingBox().inflate(24.0D),
+                mob -> mob != this && mob.summonedMinion && mob.mobId().startsWith(family)).size();
+        if (nearby >= maxNearby) {
+            return;
+        }
+        LostPlaceholderMob minion = type.create(this.level());
+        if (minion == null) {
+            return;
+        }
+        Vec3 offset = new Vec3((this.random.nextDouble() - 0.5D) * 8.0D, 0.0D, (this.random.nextDouble() - 0.5D) * 8.0D);
+        if (offset.lengthSqr() < 1.0D) {
+            offset = new Vec3(2.0D, 0.0D, 0.0D);
+        }
+        Vec3 spawn = this.position().add(offset);
+        minion.moveTo(spawn.x, this.getY(), spawn.z, this.random.nextFloat() * 360.0F, 0.0F);
+        minion.summonedMinion = true;
+        minion.bossPhase = this.bossPhase;
+        minion.setHealth(Math.max(4.0F, minion.getMaxHealth() * healthScale));
+        minion.setTarget(target);
+        this.level().addFreshEntity(minion);
+        LostFx.burst(this.level(), minion.blockPosition(), minion.mobId().contains("cthulhu") ? "shadow_blast" : "ancient_spell", 18, 0.7D, 0.04D);
+        this.level().playSound(null, minion.blockPosition(), LostMobSounds.ability(mobId()), SoundSource.HOSTILE, 0.65F, 1.15F);
+    }
+
+    private void gravityPulse(LivingEntity target, double radius, float damage, String particle) {
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(radius),
+                e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+            Vec3 pull = this.position().add(0.0D, this.getBbHeight() * 0.5D, 0.0D).subtract(living.position());
+            if (pull.lengthSqr() > 0.01D) {
+                living.push(pull.normalize().x * 0.65D, 0.25D, pull.normalize().z * 0.65D);
+            }
+            living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 90, 0));
+            if (living == target || living.distanceToSqr(this) < 16.0D) {
+                living.hurt(this.damageSources().mobAttack(this), damage);
+            }
+        }
+        LostFx.burst(this.level(), this.blockPosition(), particle, 34, radius * 0.16D, 0.07D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.BEACON_DEACTIVATE, SoundSource.HOSTILE, 0.75F, 0.7F);
+    }
+
+    private void sporePulse(LivingEntity target, double radius) {
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(radius),
+                e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+            living.addEffect(new MobEffectInstance(MobEffects.POISON, 120, bossPhase - 1));
+            living.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 0));
+            if (living == target) {
+                living.hurt(this.damageSources().mobAttack(this), 2.0F + bossPhase);
+            }
+        }
+        LostFx.burst(this.level(), this.blockPosition(), "plague", 30, radius * 0.14D, 0.05D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.FUNGUS_PLACE, SoundSource.HOSTILE, 0.8F, 0.85F);
+    }
+
+    private void stormPulse(LivingEntity target, int phase, String particle) {
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(6.0D + phase),
+                e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+            living.hurt(this.damageSources().mobAttack(this), 3.0F + phase);
+            if ("snowflake".equals(particle)) {
+                living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 140, phase));
+                living.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 0));
+            } else {
+                living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, phase - 1));
+                living.push(0.0D, 0.45D, 0.0D);
+            }
+        }
+        LostFx.burst(this.level(), target.blockPosition(), particle, 28, 1.0D, 0.07D);
+        this.level().playSound(null, target.blockPosition(), SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.HOSTILE, 0.7F, "snowflake".equals(particle) ? 1.4F : 1.0F);
     }
 
     private void splitMinions() {
@@ -590,6 +766,42 @@ public class LostPlaceholderMob extends PathfinderMob {
         String id = mobId();
         return id.contains("boss") || id.contains("cthulhu") || id.contains("doomsday") || id.contains("andromeda")
                 || id.contains("mushmerra") || id.contains("thundyron") || id.contains("cryonus");
+    }
+
+    private boolean isRecoveredBossEntity() {
+        String id = mobId();
+        return "cthulhu".equals(id) || "andromeda".equals(id) || "mushmerra".equals(id)
+                || "thundyron".equals(id) || "cryonus".equals(id) || "ozor".equals(id);
+    }
+
+    private int bossPhaseForHealth() {
+        float healthRatio = this.getHealth() / Math.max(1.0F, this.getMaxHealth());
+        if (healthRatio <= 0.3F) {
+            return 3;
+        }
+        if (healthRatio <= 0.6F) {
+            return 2;
+        }
+        return 1;
+    }
+
+    private String bossPhaseParticle() {
+        String id = mobId();
+        if ("cthulhu".equals(id)) return "blackhole_ring";
+        if ("andromeda".equals(id)) return "gravity_ring";
+        if ("mushmerra".equals(id)) return "plague";
+        if ("thundyron".equals(id)) return "electric_explosion_blue";
+        if ("cryonus".equals(id)) return "snowflake";
+        if ("ozor".equals(id)) return "space_magic";
+        return "bad_magic";
+    }
+
+    private String minionFamily(EntityType<? extends LostPlaceholderMob> type) {
+        return type.builtInRegistryHolder().key().location().getPath().toLowerCase(Locale.ROOT).split("_")[0];
+    }
+
+    private static boolean isLostInfinityMob(LivingEntity entity) {
+        return entity.getType().builtInRegistryHolder().key().location().getNamespace().equals(LostInfinity.MODID);
     }
 
     private boolean isHeavyEntity() {
