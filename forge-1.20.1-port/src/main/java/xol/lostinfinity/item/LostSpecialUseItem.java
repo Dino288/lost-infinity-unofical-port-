@@ -147,6 +147,19 @@ public class LostSpecialUseItem extends Item {
             player.getCooldowns().addCooldown(this, 180);
             return InteractionResultHolder.success(stack);
         }
+        if (itemName.contains("augment_slide")) {
+            augmentPulse(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 140);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("storage_chip") || itemName.contains("data_chip") || itemName.contains("synchronizer")
+                || itemName.contains("optical_disc") || itemName.endsWith("_disc")) {
+            dataPulse(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 90);
+            return InteractionResultHolder.success(stack);
+        }
         if (itemName.contains("bomb") || itemName.contains("charge") || itemName.contains("quark") || itemName.contains("gluon")
                 || itemName.contains("exothermite") || itemName.contains("emitter")) {
             shootUtilityProjectile(level, player, stack);
@@ -331,6 +344,65 @@ public class LostSpecialUseItem extends Item {
         player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 160, 1, true, false));
         LostFx.play(player.level(), player.blockPosition(), "special_craft", SoundSource.PLAYERS, 0.55F, 1.4F);
         LostFx.burst(player.level(), player.blockPosition(), "murky_mist", 18, 0.65D, 0.04D);
+    }
+
+    private void augmentPulse(Level level, Player player) {
+        if (itemName.contains("heal") || itemName.contains("regenerative")) {
+            player.heal(5.0F);
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 160, 1, true, false));
+        } else if (itemName.contains("dash") || itemName.contains("slide")) {
+            Vec3 dash = player.getLookAngle().normalize().scale(1.8D);
+            player.push(dash.x, 0.15D, dash.z);
+            player.hurtMarked = true;
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120, 1, true, false));
+        } else if (itemName.contains("teleport")) {
+            blink(level, player, 18.0D);
+        } else if (itemName.contains("invisibility")) {
+            player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 240, 0, true, false));
+        } else if (itemName.contains("gravity")) {
+            attract(level, player);
+            return;
+        } else if (itemName.contains("forcefield")) {
+            defensivePulse(level, player);
+            return;
+        } else if (itemName.contains("summon")) {
+            summonHelper(level, player);
+            return;
+        } else {
+            MobEffect effect = itemName.contains("blight") || itemName.contains("plague") ? MobEffects.POISON
+                    : itemName.contains("emp") ? ModEffects.NULLIFIED.get()
+                    : itemName.contains("nightmare") ? ModEffects.TERRIFIED.get()
+                    : itemName.contains("destructive") || itemName.contains("shatter") || itemName.contains("slam")
+                    ? MobEffects.MOVEMENT_SLOWDOWN : MobEffects.WEAKNESS;
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(5.5D), entity -> entity != player)) {
+                entity.addEffect(new MobEffectInstance(effect, 140, itemName.contains("emp") || itemName.contains("plague") ? 1 : 0));
+                if (itemName.contains("hurt") || itemName.contains("destructive") || itemName.contains("shatter")) {
+                    entity.hurt(level.damageSources().playerAttack(player), 4.0F);
+                }
+            }
+        }
+        LostFx.play(level, player.blockPosition(), "generic_ui_5", SoundSource.PLAYERS, 0.6F, 1.25F);
+        LostFx.burst(level, player.blockPosition(), itemName.contains("blight") || itemName.contains("plague") ? "plague" : "small_spark", 18, 0.65D, 0.03D);
+    }
+
+    private void dataPulse(Level level, Player player) {
+        if (itemName.contains("anti_radar")) {
+            player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 180, 0, true, false));
+        } else if (itemName.contains("fresh") || itemName.contains("storage")) {
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 160, 0, true, false));
+        } else if (itemName.contains("warped") || itemName.contains("audio")) {
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(6.0D), entity -> entity != player)) {
+                entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 140, 0));
+                entity.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
+            }
+        } else if (itemName.contains("aligned") || itemName.contains("synchronized") || itemName.contains("synchronizer")) {
+            player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 180, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180, 0, true, false));
+        } else {
+            analyze(level, player);
+        }
+        LostFx.play(level, player.blockPosition(), "scanner", SoundSource.PLAYERS, 0.55F, 1.3F);
+        LostFx.burst(level, player.blockPosition(), "small_spark", 16, 0.45D, 0.03D);
     }
 
     private void shootUtilityProjectile(Level level, Player player, ItemStack stack) {

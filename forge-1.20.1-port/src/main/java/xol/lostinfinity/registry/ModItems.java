@@ -122,12 +122,15 @@ public final class ModItems {
                 || name.contains("rain") || name.contains("storm") || name.contains("thunder") || name.contains("moonshaker")
                 || name.contains("time_trigger") || name.contains("reconstruction") || name.contains("repair")
                 || name.contains("resurgence") || name.contains("rebirth") || name.contains("life_vessel")
-                || name.contains("ball_of_contained") || name.contains("exothermite") || name.contains("plasma_emitter");
+                || name.contains("ball_of_contained") || name.contains("exothermite") || name.contains("plasma_emitter")
+                || name.contains("augment_slide") || name.contains("storage_chip") || name.contains("data_chip")
+                || name.contains("optical_disc") || name.endsWith("_disc") || name.contains("synchronizer");
     }
 
     private static int specialUseDurability(String name) {
         return name.contains("device") || name.contains("globe") || name.contains("analyzer") || name.contains("correlator")
-                || name.contains("compass") || name.contains("emitter") ? 256 : 1;
+                || name.contains("compass") || name.contains("emitter") || name.contains("chip") || name.contains("disc")
+                || name.contains("synchronizer") ? 256 : 1;
     }
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<? extends Block> block) {
