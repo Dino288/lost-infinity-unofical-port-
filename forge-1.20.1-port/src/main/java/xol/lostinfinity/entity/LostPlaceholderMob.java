@@ -659,6 +659,10 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "mushmerra_clone" -> "mushmerra";
             case "giant_rockslug" -> "rockslug";
             case "x_screacher" -> "screacher";
+            case "galaxybeast" -> "galaxybeast_blue";
+            case "galaxysorcerer" -> "galaxysorcerer_blue";
+            case "galaxygladiator" -> "galaxygladiator_blue";
+            case "tentacletrap" -> "tentaclon";
             default -> id;
         };
     }
