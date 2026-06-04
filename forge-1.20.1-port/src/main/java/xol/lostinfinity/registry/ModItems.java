@@ -124,13 +124,18 @@ public final class ModItems {
                 || name.contains("resurgence") || name.contains("rebirth") || name.contains("life_vessel")
                 || name.contains("ball_of_contained") || name.contains("exothermite") || name.contains("plasma_emitter")
                 || name.contains("augment_slide") || name.contains("storage_chip") || name.contains("data_chip")
-                || name.contains("optical_disc") || name.endsWith("_disc") || name.contains("synchronizer");
+                || name.contains("optical_disc") || name.endsWith("_disc") || name.contains("synchronizer")
+                || name.contains("sextant") || name.contains("monitor") || name.contains("hypercron")
+                || name.contains("override_device") || name.contains("relocator") || name.startsWith("map_")
+                || name.endsWith("_map") || name.contains("_token") || name.endsWith("card")
+                || name.contains("_key") || name.contains("geolocation") || name.contains("geocoordinated");
     }
 
     private static int specialUseDurability(String name) {
         return name.contains("device") || name.contains("globe") || name.contains("analyzer") || name.contains("correlator")
                 || name.contains("compass") || name.contains("emitter") || name.contains("chip") || name.contains("disc")
-                || name.contains("synchronizer") ? 256 : 1;
+                || name.contains("synchronizer") || name.contains("sextant") || name.contains("monitor")
+                || name.contains("hypercron") || name.contains("relocator") || name.contains("override_device") ? 256 : 1;
     }
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<? extends Block> block) {

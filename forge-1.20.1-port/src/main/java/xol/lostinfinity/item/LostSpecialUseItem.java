@@ -113,6 +113,26 @@ public class LostSpecialUseItem extends Item {
             player.getCooldowns().addCooldown(this, 40);
             return InteractionResultHolder.success(stack);
         }
+        if (itemName.contains("sextant") || itemName.startsWith("map_") || itemName.endsWith("_map")
+                || itemName.contains("monitor") || itemName.contains("hypercron")) {
+            navigationPulse(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 80);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("relocator") || itemName.contains("geolocation") || itemName.contains("geocoordinated")) {
+            relocatePulse(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 120);
+            return InteractionResultHolder.success(stack);
+        }
+        if (itemName.contains("_token") || itemName.endsWith("card") || itemName.contains("_key")
+                || itemName.contains("override_device")) {
+            progressionPulse(level, player);
+            consumeOrDamage(player, stack, hand, false);
+            player.getCooldowns().addCooldown(this, 100);
+            return InteractionResultHolder.success(stack);
+        }
         if (itemName.contains("attractor") || itemName.contains("vacuum") || itemName.contains("magnet") || itemName.contains("tether")) {
             attract(level, player);
             consumeOrDamage(player, stack, hand, false);
@@ -403,6 +423,50 @@ public class LostSpecialUseItem extends Item {
         }
         LostFx.play(level, player.blockPosition(), "scanner", SoundSource.PLAYERS, 0.55F, 1.3F);
         LostFx.burst(level, player.blockPosition(), "small_spark", 16, 0.45D, 0.03D);
+    }
+
+    private void navigationPulse(Level level, Player player) {
+        analyze(level, player);
+        if (itemName.contains("hypercron") || itemName.contains("timeline")) {
+            player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 220, 1, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 220, 0, true, false));
+            if (level instanceof ServerLevel serverLevel && itemName.contains("hypercron")) {
+                serverLevel.setDayTime((serverLevel.getDayTime() + 1000L) % 24000L);
+            }
+        } else if (itemName.startsWith("map_") || itemName.endsWith("_map")) {
+            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 240, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.LUCK, 240, 0, true, false));
+        } else {
+            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 180, 0, true, false));
+        }
+        LostFx.play(level, player.blockPosition(), itemName.contains("hypercron") ? "magic_weapon_12" : "scanner", SoundSource.PLAYERS, 0.6F, 1.15F);
+        LostFx.burst(level, player.blockPosition(), itemName.contains("hypercron") ? "space_magic" : "small_spark", 20, 0.55D, 0.03D);
+    }
+
+    private void relocatePulse(Level level, Player player) {
+        blink(level, player, itemName.contains("mk3") || itemName.contains("geocoordinated") ? 36.0D : 20.0D);
+        player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0, true, false));
+        LostFx.burst(level, player.blockPosition(), "warp", 22, 0.65D, 0.04D);
+    }
+
+    private void progressionPulse(Level level, Player player) {
+        if (itemName.contains("power") || itemName.contains("override")) {
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(6.0D), entity -> entity != player)) {
+                entity.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 1));
+                entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 140, 0));
+            }
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 160, 0, true, false));
+        } else if (itemName.contains("maze") || itemName.contains("puzzle")) {
+            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 240, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 160, 0, true, false));
+        } else if (itemName.contains("arena") || itemName.contains("token") || itemName.endsWith("card")) {
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 180, 0, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180, 0, true, false));
+        } else {
+            player.addEffect(new MobEffectInstance(MobEffects.LUCK, 180, 0, true, false));
+        }
+        LostFx.play(level, player.blockPosition(), itemName.contains("power") ? "charging_power" : "generic_ui_5", SoundSource.PLAYERS, 0.65F, 1.15F);
+        LostFx.burst(level, player.blockPosition(), itemName.contains("power") ? "electric_explosion_blue" : "spectral", 20, 0.65D, 0.03D);
     }
 
     private void shootUtilityProjectile(Level level, Player player, ItemStack stack) {
