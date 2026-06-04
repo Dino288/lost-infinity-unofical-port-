@@ -2,6 +2,7 @@ package xol.lostinfinity.entity;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -25,6 +26,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import xol.lostinfinity.registry.ModItems;
+import xol.lostinfinity.LostInfinity;
 
 public class LostGalaxyMob extends LostPlaceholderMob {
     public enum Kind {
@@ -360,5 +362,23 @@ public class LostGalaxyMob extends LostPlaceholderMob {
 
     public int getGalaxyColor() {
         return this.galaxyColor;
+    }
+
+    @Override
+    protected ResourceLocation getDefaultLootTable() {
+        String base = this.getType().builtInRegistryHolder().key().location().getPath();
+        if (this.kind == Kind.BEAST || this.kind == Kind.SORCERER || this.kind == Kind.GLADIATOR) {
+            return ResourceLocation.fromNamespaceAndPath(LostInfinity.MODID, base + "_" + colorName());
+        }
+        return super.getDefaultLootTable();
+    }
+
+    private String colorName() {
+        return switch (Math.max(1, this.galaxyColor)) {
+            case 1 -> "blue";
+            case 2 -> "green";
+            case 3 -> "purple";
+            default -> "yellow";
+        };
     }
 }

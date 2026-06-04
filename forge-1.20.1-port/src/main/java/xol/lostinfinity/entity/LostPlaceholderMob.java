@@ -2,6 +2,7 @@ package xol.lostinfinity.entity;
 
 import java.util.Locale;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
@@ -26,6 +27,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import xol.lostinfinity.effect.LostFx;
+import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.registry.ModEffects;
 
 public class LostPlaceholderMob extends PathfinderMob {
@@ -123,6 +125,11 @@ public class LostPlaceholderMob extends PathfinderMob {
                 .add(Attributes.FOLLOW_RANGE, 24.0D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.2D)
                 .add(Attributes.FLYING_SPEED, 0.18D);
+    }
+
+    @Override
+    protected ResourceLocation getDefaultLootTable() {
+        return ResourceLocation.fromNamespaceAndPath(LostInfinity.MODID, mobId());
     }
 
     private void tickSpecialBehavior() {
