@@ -44,7 +44,7 @@ public final class ModBlocks {
             return new SlabBlock(properties);
         }
         if (name.contains("stairs")) {
-            return new StairBlock(Blocks.STONE.defaultBlockState(), properties);
+            return new StairBlock(baseStateFor(name), properties);
         }
         if (name.contains("glass") || name.contains("barrier")) {
             return new GlassBlock(properties);
@@ -62,9 +62,24 @@ public final class ModBlocks {
                 || name.contains("stem") || name.contains("root") || name.contains("coral")) {
             properties = properties.strength(0.4F, 0.4F).sound(SoundType.GRASS).noOcclusion();
         }
+        if (name.contains("vine") || name.contains("weed") || name.contains("flower") || name.contains("bloom")
+                || name.contains("bulb") || name.contains("stem") || name.contains("root") || name.contains("web")
+                || name.contains("tentacle") || name.contains("sap") || name.contains("gel")) {
+            properties = properties.noCollission().noOcclusion();
+        }
+        if (name.contains("web")) {
+            properties = properties.strength(4.0F).sound(SoundType.WOOL);
+        }
+        if (name.contains("sand") || name.contains("mud") || name.contains("clay") || name.contains("slime")
+                || name.contains("gel") || name.contains("goo")) {
+            properties = properties.strength(0.6F, 0.6F).sound(SoundType.GRAVEL);
+        }
         if (name.contains("lamp") || name.contains("light") || name.contains("lantern") || name.contains("glow")
                 || name.contains("lumi") || name.endsWith("_lit") || name.endsWith("_on")) {
             properties = properties.lightLevel(state -> 15);
+        }
+        if (name.contains("spawner") || name.contains("summoner")) {
+            properties = properties.strength(5.0F, 30.0F).sound(SoundType.METAL).lightLevel(state -> 7);
         }
         if (name.contains("metal") || name.contains("steel") || name.contains("machine") || name.contains("battery")
                 || name.contains("forge") || name.contains("console")) {
@@ -118,10 +133,32 @@ public final class ModBlocks {
         if (name.contains("starforge_teleporter")) {
             return "grandmasteroutpost";
         }
+        if (name.contains("murk") && (name.contains("portal") || name.contains("teleporter"))) {
+            return "infinitemurk";
+        }
         if (name.contains("galaxy_portal") || name.contains("trialgate")) {
             return "nonexistence";
         }
         return null;
+    }
+
+    private static net.minecraft.world.level.block.state.BlockState baseStateFor(String name) {
+        if (name.contains("metal") || name.contains("steel") || name.contains("forge")) {
+            return Blocks.IRON_BLOCK.defaultBlockState();
+        }
+        if (name.contains("glass")) {
+            return Blocks.GLASS.defaultBlockState();
+        }
+        if (name.contains("wood") || name.contains("plank")) {
+            return Blocks.OAK_PLANKS.defaultBlockState();
+        }
+        if (name.contains("brick")) {
+            return Blocks.STONE_BRICKS.defaultBlockState();
+        }
+        if (name.contains("sand")) {
+            return Blocks.SANDSTONE.defaultBlockState();
+        }
+        return Blocks.STONE.defaultBlockState();
     }
 
     private static boolean isMachineBlock(String name) {
