@@ -176,6 +176,26 @@ public class LostPlaceholderMob extends PathfinderMob {
                 confuseTarget(target);
                 this.supportCooldown = 140;
             }
+            if (isEvasiveEntity() && this.ambushCooldown <= 0 && this.distanceToSqr(target) < 36.0D) {
+                evadeTarget(target);
+                this.ambushCooldown = 90;
+            }
+            if (isWebbingEntity() && this.specialCooldown <= 0 && this.distanceToSqr(target) < 144.0D) {
+                webTarget(target);
+                this.specialCooldown = 100;
+            }
+            if (isAquaticEntity() && this.specialCooldown <= 0 && this.distanceToSqr(target) < 100.0D) {
+                reefCurrent(target);
+                this.specialCooldown = 80;
+            }
+            if (isLeaperEntity() && this.onGround() && this.ambushCooldown <= 0 && this.distanceToSqr(target) > 9.0D && this.distanceToSqr(target) < 144.0D) {
+                leapAt(target);
+                this.ambushCooldown = 70;
+            }
+            if (isBossEntity() && this.getHealth() < this.getMaxHealth() * 0.5F && this.supportCooldown <= 0) {
+                enrage(target);
+                this.supportCooldown = 160;
+            }
         }
         if ((isHealerEntity() || isSummonerEntity()) && this.supportCooldown <= 0) {
             if (isHealerEntity()) {
@@ -310,6 +330,51 @@ public class LostPlaceholderMob extends PathfinderMob {
         this.level().playSound(null, this.blockPosition(), SoundEvents.ILLUSIONER_CAST_SPELL, SoundSource.HOSTILE, 0.7F, 1.15F);
     }
 
+    private void evadeTarget(LivingEntity target) {
+        Vec3 away = this.position().subtract(target.position()).normalize();
+        if (away.lengthSqr() == 0.0D) {
+            away = randomDrift().normalize();
+        }
+        this.teleportTo(this.getX() + away.x * 4.0D, this.getY() + 0.2D, this.getZ() + away.z * 4.0D);
+        this.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 80, 0, true, false));
+        LostFx.burst(this.level(), this.blockPosition(), "spectral", 18, 0.7D, 0.04D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 0.65F, 1.4F);
+    }
+
+    private void webTarget(LivingEntity target) {
+        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 160, 2));
+        target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 120, 0));
+        Vec3 pull = this.position().subtract(target.position()).normalize().scale(0.45D);
+        target.push(pull.x, 0.1D, pull.z);
+        LostFx.burst(this.level(), target.blockPosition(), "murky_mist", 16, 0.55D, 0.02D);
+        this.level().playSound(null, target.blockPosition(), SoundEvents.WOOL_PLACE, SoundSource.HOSTILE, 0.8F, 0.9F);
+    }
+
+    private void reefCurrent(LivingEntity target) {
+        Vec3 swirl = new Vec3(target.getZ() - this.getZ(), 0.15D, this.getX() - target.getX()).normalize().scale(0.45D);
+        target.push(swirl.x, swirl.y, swirl.z);
+        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0));
+        LostFx.burst(this.level(), target.blockPosition(), "murk", 18, 0.7D, 0.04D);
+        this.level().playSound(null, target.blockPosition(), SoundEvents.BUBBLE_COLUMN_WHIRLPOOL_INSIDE, SoundSource.HOSTILE, 0.7F, 1.1F);
+    }
+
+    private void leapAt(LivingEntity target) {
+        Vec3 delta = target.position().subtract(this.position()).normalize();
+        this.setDeltaMovement(delta.x * 0.75D, 0.55D, delta.z * 0.75D);
+        LostFx.burst(this.level(), this.blockPosition(), isStoneEntity() ? "small_spark" : "supersonic_blue", 10, 0.45D, 0.02D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.RAVAGER_STEP, SoundSource.HOSTILE, 0.7F, 1.25F);
+    }
+
+    private void enrage(LivingEntity target) {
+        this.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 180, 1, true, false));
+        this.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 180, 0, true, false));
+        if (this.random.nextBoolean()) {
+            shootAt(target);
+        }
+        LostFx.burst(this.level(), this.blockPosition(), isStormEntity() ? "electric_explosion_blue" : "bad_magic", 24, 1.1D, 0.05D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.WITHER_AMBIENT, SoundSource.HOSTILE, 0.8F, 0.8F);
+    }
+
     private void collectNearbyItems() {
         for (ItemEntity item : this.level().getEntitiesOfClass(ItemEntity.class, this.getBoundingBox().inflate(5.0D))) {
             Vec3 pull = this.position().add(0.0D, this.getBbHeight() * 0.5D, 0.0D).subtract(item.position());
@@ -351,6 +416,13 @@ public class LostPlaceholderMob extends PathfinderMob {
         }
         if (id.contains("grav") || id.contains("rift") || id.contains("black_hole")) {
             living.push(0.0D, 0.55D, 0.0D);
+        }
+        if (id.contains("leech") || id.contains("vamp") || id.contains("blood")) {
+            living.addEffect(new MobEffectInstance(ModEffects.BLOOD_TOXIN.get(), 120, 0));
+            this.heal(1.5F);
+        }
+        if (id.contains("phase") || id.contains("spectre") || id.contains("ghost")) {
+            living.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 120, 0));
         }
     }
 
@@ -454,6 +526,31 @@ public class LostPlaceholderMob extends PathfinderMob {
         String id = mobId();
         return id.contains("decoy") || id.contains("ghostcopy") || id.contains("shimmer") || id.contains("phaser")
                 || id.contains("illusion") || id.contains("mirror");
+    }
+
+    private boolean isEvasiveEntity() {
+        String id = mobId();
+        return id.contains("phase") || id.contains("spectre") || id.contains("ghost") || id.contains("shimmer")
+                || id.contains("mirror") || id.contains("wisp") || id.contains("phantom");
+    }
+
+    private boolean isWebbingEntity() {
+        String id = mobId();
+        return id.contains("web") || id.contains("weaver") || id.contains("spider") || id.contains("clinger")
+                || id.contains("tether") || id.contains("hanger") || id.contains("tentacle");
+    }
+
+    private boolean isAquaticEntity() {
+        String id = mobId();
+        return id.contains("crab") || id.contains("fish") || id.contains("shark") || id.contains("eel")
+                || id.contains("octo") || id.contains("leviathan") || id.contains("sea") || id.contains("reef")
+                || id.contains("bubble") || id.contains("water");
+    }
+
+    private boolean isLeaperEntity() {
+        String id = mobId();
+        return id.contains("hopper") || id.contains("jumper") || id.contains("chomper") || id.contains("snapper")
+                || id.contains("rib") || id.contains("ravager") || id.contains("spider") || id.contains("crab");
     }
 
     private boolean isCollectorEntity() {
