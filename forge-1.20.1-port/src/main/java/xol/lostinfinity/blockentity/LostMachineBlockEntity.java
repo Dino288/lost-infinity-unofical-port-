@@ -119,6 +119,11 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
             setChanged();
             return;
         }
+        if (isChargerMachine()) {
+            tickChargerMachine(level, pos);
+            setChanged();
+            return;
+        }
         if (isPuzzleMachine()) {
             tickPuzzleMachine(level, pos);
             setChanged();
@@ -148,6 +153,27 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
             progress = 0;
         }
         setChanged();
+    }
+
+    private void tickChargerMachine(Level level, BlockPos pos) {
+        chargeFromFuel();
+        ItemStack target = items.get(INPUT_SLOT);
+        active = false;
+        processTime = machineId.contains("high_powered") || machineId.contains("labyrinth") ? 40 : 80;
+        if (canStoreItemEnergy(target) && energy > 0) {
+            int transfer = Math.min(energy, machineId.contains("high_powered") || machineId.contains("labyrinth") ? 12 : 6);
+            if (chargeItem(target, transfer)) {
+                energy = Math.max(0, energy - effectiveEnergyCost(transfer));
+                progress = (progress + 1) % processTime;
+                active = true;
+                pulseMachineEffect(level, pos);
+            }
+        } else if (items.get(FUEL_SLOT).isEmpty() && isFuel(target) && energy <= ENERGY_CAPACITY - 80) {
+            items.set(FUEL_SLOT, target.copyWithCount(1));
+            target.shrink(1);
+        } else {
+            progress = 0;
+        }
     }
 
     private void generateEnergy() {
@@ -200,6 +226,9 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
                 entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 80, 0));
             }
             energy = Math.max(0, energy - effectiveEnergyCost(10));
+        } else if (machineId.contains("charger")) {
+            LostFx.burst(level, pos, "small_spark", 10, 0.45D, 0.02D);
+            LostFx.play(level, pos, "charging_power", SoundSource.BLOCKS, 0.55F, 1.35F);
         } else if (machineId.contains("beacon") || machineId.contains("tesla")) {
             LostFx.burst(level, pos, machineId.contains("tesla") ? "zap" : "portal_beam", 12, 0.75D, 0.03D);
             LostFx.play(level, pos, machineId.contains("tesla") ? "charging_power" : "nebulous_beacon", SoundSource.BLOCKS, 0.8F, 1.0F);
@@ -235,7 +264,10 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         if (machineId.contains("polymer") || machineId.contains("chem")) return "acid";
         if (machineId.contains("fusion") || machineId.contains("collider")) return "plasma";
         if (machineId.contains("grinder") || machineId.contains("crusher")) return "small_spark";
+        if (machineId.contains("charger")) return "small_spark";
         if (machineId.contains("circuit") || machineId.contains("calibrator")) return "zap";
+        if (machineId.contains("deconstructor")) return "murky_mist";
+        if (machineId.contains("synthesizer")) return "ancient_spell";
         return "space_magic";
     }
 
@@ -244,7 +276,10 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         if (machineId.contains("polymer") || machineId.contains("chem")) return "chemical_mixing";
         if (machineId.contains("fusion") || machineId.contains("collider")) return "manufacture_machine";
         if (machineId.contains("grinder") || machineId.contains("crusher")) return "rock_tumble";
+        if (machineId.contains("charger")) return "charging_power";
         if (machineId.contains("circuit") || machineId.contains("calibrator")) return "minigame_score";
+        if (machineId.contains("deconstructor")) return "rift_create";
+        if (machineId.contains("synthesizer")) return "special_craft";
         return "block_ding";
     }
 
@@ -293,11 +328,23 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
             if (plate != Items.AIR) return plate;
             return item("metal_plate");
         }
+        if (machineId.contains("deconstructor")) {
+            Item ingot = item(inputId.replace("_block", "_ingot"));
+            if (ingot != Items.AIR) return ingot;
+            Item shard = item(inputId.replace("_block", "_shard"));
+            if (shard != Items.AIR) return shard;
+            return item("multiversite");
+        }
         if (machineId.contains("infuser") || machineId.contains("fusion") || machineId.contains("collider")) {
             Item infused = item("infused_" + inputId);
             if (infused != Items.AIR) return infused;
             Item crystal = item(inputId.replace("_dust", "_crystal").replace("_ingot", "_crystal"));
             return crystal != Items.AIR ? crystal : item("multiversite");
+        }
+        if (machineId.contains("synthesizer")) {
+            Item synthesized = item("synthesized_" + inputId);
+            if (synthesized != Items.AIR) return synthesized;
+            return item(inputId + "_sample");
         }
         if (machineId.contains("polymer")) {
             Item polymer = item(inputId.replace("_dust", "_polymer"));
@@ -406,7 +453,9 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         String path = itemPath(stack);
         return path.contains("battery") || path.contains("energy_cell") || path.contains("power_cell")
                 || path.contains("tesla_core") || path.contains("unpowered_cell") || path.contains("mechanicalpowercell")
-                || path.contains("organicpowercell") || (stack.hasTag() && stack.getOrCreateTag().contains(ITEM_ENERGY_TAG));
+                || path.contains("organicpowercell") || path.contains("organic_power_cell") || path.contains("superchargedcell")
+                || path.contains("charge_cell") || path.contains("overcharged_cell") || path.contains("capacitor")
+                || (stack.hasTag() && stack.getOrCreateTag().contains(ITEM_ENERGY_TAG));
     }
 
     private static boolean chargeItem(ItemStack stack, int amount) {
@@ -429,7 +478,8 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
     private static int itemEnergyCapacity(ItemStack stack) {
         String path = itemPath(stack);
         if (path.contains("tesla")) return 500;
-        if (path.contains("power_cell") || path.contains("mechanicalpowercell") || path.contains("organicpowercell")) return 400;
+        if (path.contains("power_cell") || path.contains("mechanicalpowercell") || path.contains("organicpowercell")
+                || path.contains("organic_power_cell") || path.contains("capacitor")) return 400;
         if (path.contains("battery") || path.contains("energy_cell") || path.contains("unpowered_cell")) return 250;
         return 300;
     }
@@ -441,6 +491,10 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
     private boolean isPuzzleMachine() {
         return machineId.contains("game") || machineId.contains("dial") || machineId.contains("sequencer")
                 || machineId.contains("interpreter") || machineId.contains("emitter") || machineId.contains("navigation");
+    }
+
+    private boolean isChargerMachine() {
+        return machineId.contains("charger") || machineId.contains("cell_charger");
     }
 
     private boolean isWeaponMachine() {
