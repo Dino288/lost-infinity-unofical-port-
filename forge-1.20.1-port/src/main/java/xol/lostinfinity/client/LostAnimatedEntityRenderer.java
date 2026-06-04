@@ -56,7 +56,7 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         float height = Math.max(0.6F, entity.getBbHeight());
         float walk = entity.tickCount + partialTick;
         if (isProjectileLike(id)) {
-            renderProjectileRig(poseStack, vertices, packedLight, width, height, walk);
+            renderProjectileRig(poseStack, vertices, packedLight, width, height, walk, id);
         } else if (FISH.contains(id)) {
             renderFishRig(poseStack, vertices, packedLight, width, height, walk, id);
         } else if (SPIDERS.contains(id)) {
@@ -170,13 +170,60 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         poseStack.popPose();
     }
 
-    private void renderProjectileRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk) {
+    private void renderProjectileRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
         poseStack.pushPose();
-        poseStack.mulPose(Axis.YP.rotationDegrees(walk * 18.0F));
-        poseStack.mulPose(Axis.XP.rotationDegrees(walk * 12.0F));
-        float size = Math.max(0.22F, Math.max(width, height) * 0.8F);
-        box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size, size, size);
+        poseStack.mulPose(Axis.YP.rotationDegrees(walk * projectileSpin(id)));
+        poseStack.mulPose(Axis.XP.rotationDegrees(walk * (id.contains("beam") || id.contains("laser") ? 0.0F : 12.0F)));
+        float size = Math.max(0.18F, Math.max(width, height) * 0.8F);
+        if (id.contains("laser") || id.contains("beam") || id.contains("bolt")) {
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 0.42F, size * 0.42F, size * 2.8F);
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 0.72F, size * 0.18F, size * 1.45F);
+        } else if (id.contains("arrow") || id.contains("spear") || id.contains("trident") || id.contains("knife") || id.contains("slicer")) {
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 0.35F, size * 0.35F, size * 2.15F);
+            box(poseStack, vertices, light, 0.0F, 0.15F, size * 0.92F, size * 0.95F, size * 0.12F, size * 0.42F);
+        } else if (id.contains("chain") || id.contains("grip") || id.contains("tether")) {
+            for (int i = 0; i < 4; i++) {
+                float offset = (i - 1.5F) * size * 0.44F;
+                poseStack.pushPose();
+                poseStack.translate(0.0F, 0.15F, offset);
+                poseStack.mulPose(Axis.ZP.rotationDegrees(45.0F + walk * 8.0F));
+                box(poseStack, vertices, light, 0.0F, 0.0F, 0.0F, size * 0.72F, size * 0.12F, size * 0.12F);
+                box(poseStack, vertices, light, 0.0F, 0.0F, 0.0F, size * 0.12F, size * 0.72F, size * 0.12F);
+                poseStack.popPose();
+            }
+        } else if (id.contains("meteor") || id.contains("comet") || id.contains("asteroid")) {
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 1.25F, size * 1.25F, size * 1.25F);
+            box(poseStack, vertices, light, 0.0F, 0.15F, size * 0.85F, size * 0.55F, size * 0.55F, size * 1.6F);
+        } else if (id.contains("portal") || id.contains("rift") || id.contains("whirlpool")) {
+            poseStack.mulPose(Axis.ZP.rotationDegrees(walk * 9.0F));
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 1.4F, size * 0.16F, size * 1.4F);
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 0.16F, size * 1.4F, size * 1.4F);
+        } else if (id.contains("sonic") || id.contains("soundwave") || id.contains("echo")) {
+            for (int i = 0; i < 3; i++) {
+                float ring = size * (0.55F + i * 0.34F);
+                box(poseStack, vertices, light, 0.0F, 0.15F, i * size * 0.24F, ring, size * 0.10F, ring);
+            }
+        } else {
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size, size, size);
+            if (id.contains("orb") || id.contains("star") || id.contains("galaxy") || id.contains("cosmic")) {
+                poseStack.mulPose(Axis.ZP.rotationDegrees(45.0F));
+                box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 1.35F, size * 0.18F, size * 1.35F);
+            }
+        }
         poseStack.popPose();
+    }
+
+    private static float projectileSpin(String id) {
+        if (id.contains("laser") || id.contains("beam")) {
+            return 0.0F;
+        }
+        if (id.contains("portal") || id.contains("rift") || id.contains("orb") || id.contains("star")) {
+            return 30.0F;
+        }
+        if (id.contains("arrow") || id.contains("knife") || id.contains("spear") || id.contains("trident")) {
+            return 7.0F;
+        }
+        return 18.0F;
     }
 
     private void renderBillboard(Entity entity, float partialTick, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
