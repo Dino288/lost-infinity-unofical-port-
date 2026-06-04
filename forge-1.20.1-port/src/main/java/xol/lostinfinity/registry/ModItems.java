@@ -115,6 +115,13 @@ public final class ModItems {
                 || name.contains("bio_energizer") || name.contains("power_pulse") || name.contains("pulse_charge")
                 || name.contains("element_stone") || name.contains("mystery_box") || name.contains("box_of_life")
                 || name.contains("analyzer") || name.contains("correlator") || name.contains("seabound_compass")
+                || name.contains("attractor") || name.contains("vacuum") || name.contains("magnet") || name.contains("tether")
+                || name.contains("forcefield") || name.contains("pylon_protector") || name.contains("beacon_of_light")
+                || name.contains("summon") || name.contains("staff_of_servitude") || name.contains("tentacle_remote")
+                || name.contains("luminousguardian") || name.contains("starsoldier") || name.contains("skycrabcontroller")
+                || name.contains("rain") || name.contains("storm") || name.contains("thunder") || name.contains("moonshaker")
+                || name.contains("time_trigger") || name.contains("reconstruction") || name.contains("repair")
+                || name.contains("resurgence") || name.contains("rebirth") || name.contains("life_vessel")
                 || name.contains("ball_of_contained") || name.contains("exothermite") || name.contains("plasma_emitter");
     }
 
