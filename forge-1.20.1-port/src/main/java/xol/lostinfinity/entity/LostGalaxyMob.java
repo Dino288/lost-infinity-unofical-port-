@@ -3,8 +3,10 @@ package xol.lostinfinity.entity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -158,11 +160,11 @@ public class LostGalaxyMob extends LostPlaceholderMob {
             tickBeast(target);
         } else if (this.kind == Kind.SORCERER && target != null && this.tickCount % 20 == 0) {
             shootAt(target, 8.0F, 0.6F);
-            this.level().playSound(null, this.blockPosition(), SoundEvents.EVOKER_CAST_SPELL, SoundSource.HOSTILE, 1.0F, 1.0F);
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 1.0F, 1.0F);
         } else if (this.kind == Kind.GLADIATOR && target != null && this.tickCount % 60 == 0) {
             this.teleportTo(target.getX(), target.getY(), target.getZ());
             dealPercentDamage(target, 0.05F);
-            this.level().playSound(null, this.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, 1.0F);
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 1.0F, 1.0F);
         } else if (this.kind == Kind.SPIRE) {
             tickSpire(target);
         } else if (this.kind == Kind.GULPER) {
@@ -199,7 +201,7 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         }
         if (target != null && this.distanceToSqr(target) <= 48.0D * 48.0D && this.tickCount % 40 == 0) {
             shootAt(target, 12.0F, 0.75F);
-            this.level().playSound(null, this.blockPosition(), SoundEvents.BLAZE_SHOOT, SoundSource.HOSTILE, 1.0F, 0.7F);
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 1.0F, 0.7F);
         }
     }
 
@@ -224,7 +226,7 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         if (target != null && this.distanceToSqr(target) > 9.0D && this.distanceToSqr(target) <= 48.0D * 48.0D
                 && (this.tickCount + this.laserFireOffset) % 50 == 0) {
             shootAt(target, 14.0F, 1.0F);
-            this.level().playSound(null, this.blockPosition(), SoundEvents.GUARDIAN_ATTACK, SoundSource.HOSTILE, 2.0F, 1.0F);
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 2.0F, 1.0F);
         }
     }
 
@@ -235,12 +237,27 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         }
         if (this.tickCount % 10 == 0 && this.distanceToSqr(target) <= 30.0D * 30.0D) {
             dealPercentDamage(target, 0.05F);
-            this.level().playSound(null, this.blockPosition(), SoundEvents.ENDER_DRAGON_SHOOT, SoundSource.HOSTILE, 0.7F, 0.9F);
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 0.7F, 0.9F);
         }
         if (this.tickCount % 20 == 0 && this.distanceToSqr(target) <= 48.0D * 48.0D) {
             shootAt(target, 10.0F, 1.0F);
-            this.level().playSound(null, this.blockPosition(), SoundEvents.GHAST_SHOOT, SoundSource.HOSTILE, 1.0F, 0.9F);
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 1.0F, 0.9F);
         }
+    }
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return LostMobSounds.ambient(soundId());
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return LostMobSounds.hurt(soundId(), source);
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return LostMobSounds.death(soundId());
     }
 
     private void shootAt(LivingEntity target, float damage, float velocity) {
@@ -379,6 +396,16 @@ public class LostGalaxyMob extends LostPlaceholderMob {
             case 2 -> "green";
             case 3 -> "purple";
             default -> "yellow";
+        };
+    }
+
+    private String soundId() {
+        return switch (this.kind) {
+            case SORCERER -> "nebula_wizard";
+            case BEAST, GLADIATOR -> "galactic_terror";
+            case SPIRE, LASER_SPIRE -> "nebula_giant";
+            case DRAGON -> "dragon";
+            default -> this.getType().builtInRegistryHolder().key().location().getPath();
         };
     }
 }

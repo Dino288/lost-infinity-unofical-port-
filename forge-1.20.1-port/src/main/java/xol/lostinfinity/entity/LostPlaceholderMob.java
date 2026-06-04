@@ -4,6 +4,7 @@ import java.util.Locale;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -132,6 +133,21 @@ public class LostPlaceholderMob extends PathfinderMob {
         return ResourceLocation.fromNamespaceAndPath(LostInfinity.MODID, mobId());
     }
 
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return LostMobSounds.ambient(mobId());
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return LostMobSounds.hurt(mobId(), source);
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return LostMobSounds.death(mobId());
+    }
+
     private void tickSpecialBehavior() {
         if (this.specialCooldown > 0) {
             this.specialCooldown--;
@@ -240,7 +256,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         Vec3 delta = target.getEyePosition().subtract(projectile.position());
         projectile.shoot(delta.x, delta.y, delta.z, projectileVelocity(), 0.2F);
         this.level().addFreshEntity(projectile);
-        this.level().playSound(null, this.blockPosition(), SoundEvents.GHAST_SHOOT, SoundSource.HOSTILE, 0.55F, projectilePitch());
+        this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(mobId()), SoundSource.HOSTILE, 0.65F, projectilePitch());
     }
 
     private void healAllies() {
@@ -273,7 +289,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         minion.setTarget(target);
         this.level().addFreshEntity(minion);
         LostFx.burst(this.level(), minion.blockPosition(), "ancient_spell", 16, 0.6D, 0.04D);
-        this.level().playSound(null, minion.blockPosition(), SoundEvents.EVOKER_CAST_SPELL, SoundSource.HOSTILE, 0.7F, 1.2F);
+        this.level().playSound(null, minion.blockPosition(), LostMobSounds.ability(mobId()), SoundSource.HOSTILE, 0.7F, 1.2F);
     }
 
     private void splitMinions() {
@@ -327,7 +343,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 160, 0));
         target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0));
         LostFx.burst(this.level(), target.blockPosition(), "space_magic", 16, 0.55D, 0.03D);
-        this.level().playSound(null, this.blockPosition(), SoundEvents.ILLUSIONER_CAST_SPELL, SoundSource.HOSTILE, 0.7F, 1.15F);
+        this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(mobId()), SoundSource.HOSTILE, 0.7F, 1.15F);
     }
 
     private void evadeTarget(LivingEntity target) {

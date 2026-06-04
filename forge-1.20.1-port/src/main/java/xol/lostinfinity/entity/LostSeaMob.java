@@ -3,8 +3,10 @@ package xol.lostinfinity.entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -337,8 +339,36 @@ public class LostSeaMob extends LostPlaceholderMob {
         };
     }
 
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return LostMobSounds.ambient(soundId());
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return LostMobSounds.hurt(soundId(), source);
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return LostMobSounds.death(soundId());
+    }
+
     public int getVisualStyle() {
         return this.visualStyle;
+    }
+
+    private String soundId() {
+        return switch (this.kind) {
+            case LONGFIN -> "longfin";
+            case UNDERFIN -> "underfin";
+            case EELSHARK -> "eelshark";
+            case RIBSHARK -> "rib_shark";
+            case CRABULON -> "crabulon";
+            case LEVIATHAN -> "leviathan";
+            case SEA_SERPENT -> "sea_serpent";
+            default -> this.getType().builtInRegistryHolder().key().location().getPath();
+        };
     }
 
     @Override

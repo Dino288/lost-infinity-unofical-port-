@@ -1,7 +1,9 @@
 package xol.lostinfinity.entity;
 
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
@@ -155,7 +157,7 @@ public class LostDeviantMob extends LostPlaceholderMob {
             }
             if (this.tickCount % (this.kind == Kind.TITAN ? 28 : 45) == 0) {
                 shootAt(target, this.kind == Kind.TITAN ? 12.0F : 7.0F, 0.7F);
-                this.level().playSound(null, this.blockPosition(), SoundEvents.GHAST_SHOOT, SoundSource.HOSTILE, 1.0F, 1.1F);
+                this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(this.id), SoundSource.HOSTILE, 1.0F, 1.1F);
             }
         }
     }
@@ -182,7 +184,7 @@ public class LostDeviantMob extends LostPlaceholderMob {
             shootAt(target, 8.0F, 0.65F);
             target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
             target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 120, 0));
-            this.level().playSound(null, this.blockPosition(), SoundEvents.EVOKER_CAST_SPELL, SoundSource.HOSTILE, 1.0F, 1.0F);
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(this.id), SoundSource.HOSTILE, 1.0F, 1.0F);
         }
     }
 
@@ -303,5 +305,20 @@ public class LostDeviantMob extends LostPlaceholderMob {
 
     private boolean isFlyingName() {
         return this.id.contains("ghast") || this.id.contains("vex") || this.id.contains("skyworm") || this.id.contains("bat");
+    }
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return LostMobSounds.ambient(this.id);
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return LostMobSounds.hurt(this.id, source);
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return LostMobSounds.death(this.id);
     }
 }
