@@ -83,7 +83,8 @@ public final class ModItems {
     }
 
     private static boolean isDimensionUtility(String name) {
-        return name.equals("murky_mirror") || name.equals("galaxybeacon") || name.equals("magic_conch") || name.equals("solar_globe");
+        return name.equals("murky_mirror") || name.equals("galaxybeacon") || name.equals("magic_conch") || name.equals("solar_globe")
+                || name.equals("atlas_beacon") || name.equals("beacon_key");
     }
 
     private static boolean isRangedUtility(String name) {

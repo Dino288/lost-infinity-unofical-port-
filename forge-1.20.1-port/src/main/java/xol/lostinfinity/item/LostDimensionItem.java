@@ -47,6 +47,12 @@ public class LostDimensionItem extends Item {
             } else if ("solar_globe".equals(itemName)) {
                 useSolarGlobe(serverPlayer, stack);
                 player.getCooldowns().addCooldown(this, 80);
+            } else if ("atlas_beacon".equals(itemName)) {
+                useAtlasBeacon(serverPlayer, stack);
+                player.getCooldowns().addCooldown(this, 120);
+            } else if ("beacon_key".equals(itemName)) {
+                useBeaconKey(serverPlayer, stack);
+                player.getCooldowns().addCooldown(this, 120);
             }
         }
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
@@ -68,6 +74,10 @@ public class LostDimensionItem extends Item {
         } else if ("solar_globe".equals(itemName)) {
             tooltip.add(Component.literal("Teleports you in and out of the Cartographer's Labyrinth.").withStyle(ChatFormatting.GOLD));
             tooltip.add(Component.literal("Sneak-use to select floor: " + solarFloorName(getSolarFloor(stack))).withStyle(ChatFormatting.AQUA));
+        } else if ("atlas_beacon".equals(itemName)) {
+            tooltip.add(Component.literal("Anchors a route to the Grandmaster Outpost.").withStyle(ChatFormatting.GOLD));
+        } else if ("beacon_key".equals(itemName)) {
+            tooltip.add(Component.literal("Unlocks the Celestial Void.").withStyle(ChatFormatting.GOLD));
         }
     }
 
@@ -116,6 +126,24 @@ public class LostDimensionItem extends Item {
         String dimension = floor == 1 ? "cartographerrealmmid" : floor == 2 ? "cartographerrealmbot" : "cartographerrealmtop";
         double y = floor == 2 ? 36.0D : floor == 1 ? 48.0D : 64.0D;
         teleport(player, dimension, 15.0D, y, 15.0D, false, "space_magic");
+    }
+
+    private static void useAtlasBeacon(ServerPlayer player, ItemStack stack) {
+        if (isInLostDimension(player, "grandmasteroutpost")) {
+            teleportToReturnPosition(player, stack, "portal_beam");
+        } else {
+            rememberReturnPosition(player, stack);
+            teleport(player, "grandmasteroutpost", 0.0D, 76.0D, 0.0D, true, "portal_beam");
+        }
+    }
+
+    private static void useBeaconKey(ServerPlayer player, ItemStack stack) {
+        if (isInLostDimension(player, "celestialvoid")) {
+            teleportToReturnPosition(player, stack, "space_magic");
+        } else {
+            rememberReturnPosition(player, stack);
+            teleport(player, "celestialvoid", 0.0D, 128.0D, 0.0D, false, "space_magic");
+        }
     }
 
     private static boolean isInLostDimension(ServerPlayer player, String dimension) {
