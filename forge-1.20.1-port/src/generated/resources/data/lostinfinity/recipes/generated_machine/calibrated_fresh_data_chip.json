@@ -3,7 +3,7 @@
   "consume_catalyst": false,
   "energy": 90,
   "input": {
-    "item": "lostinfinity:blank_data_chip"
+    "item": "lostinfinity:fresh_data_chip"
   },
   "machine": "calibrator",
   "output": {

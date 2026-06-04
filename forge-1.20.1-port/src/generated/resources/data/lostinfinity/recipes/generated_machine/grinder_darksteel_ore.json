@@ -7,8 +7,8 @@
   },
   "machine": "grinder",
   "output": {
-    "count": 1,
-    "item": "lostinfinity:darksteel_ingot"
+    "count": 2,
+    "item": "lostinfinity:darksteel_shards"
   },
   "time": 120
 }

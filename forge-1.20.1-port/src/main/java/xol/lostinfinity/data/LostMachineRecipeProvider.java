@@ -27,9 +27,9 @@ public class LostMachineRecipeProvider implements DataProvider {
         Path root = output.getOutputFolder(PackOutput.Target.DATA_PACK).resolve(LostInfinity.MODID).resolve("recipes/generated_machine");
         Map<String, JsonObject> recipes = new LinkedHashMap<>();
         addMachine(recipes, "grinder_sunstone_ore", "grinder", "sunstone_ore", null, "", "sunstone", 2, 45, 120, false, "");
-        addMachine(recipes, "grinder_darksteel_ore", "grinder", "darksteel_ore", null, "", "darksteel_ingot", 1, 45, 120, false, "");
+        addMachine(recipes, "grinder_darksteel_ore", "grinder", "darksteel_ore", null, "", "darksteel_shards", 2, 45, 120, false, "");
         addMachine(recipes, "chemistry_volatile_blood", "chemistry", "volatile_blood", "concentrated_acid", "lostinfinity:concentrated_acid", "volatility_solution", 1, 55, 140, true, "");
-        addMachine(recipes, "calibrated_fresh_data_chip", "calibrator", "blank_data_chip", null, "", "fresh_data_chip", 1, 90, 180, false, "{LostInfinityCalibrated:1b}");
+        addMachine(recipes, "calibrated_fresh_data_chip", "calibrator", "fresh_data_chip", null, "", "fresh_data_chip", 1, 90, 180, false, "{LostInfinityCalibrated:1b}");
         return CompletableFuture.allOf(recipes.entrySet().stream()
                 .map(entry -> DataProvider.saveStable(cache, GSON.toJsonTree(entry.getValue()), root.resolve(entry.getKey() + ".json")))
                 .toArray(CompletableFuture[]::new));
