@@ -54,12 +54,20 @@ public final class LostInfinityCommands {
                 .then(clearRiftsCommand())
                 .then(clearFracturesCommand())
                 .then(setDeviantCommand())
-                .then(chargeEssencePossessorCommand()));
+                .then(chargeEssencePossessorCommand())
+                .then(dimensionStatusCommand())
+                .then(whereAmICommand())
+                .then(chargeHeldCommand())
+                .then(fillAmmoCommand()));
 
         dispatcher.register(clearRiftsCommand());
         dispatcher.register(clearFracturesCommand());
         dispatcher.register(setDeviantCommand());
         dispatcher.register(chargeEssencePossessorCommand());
+        dispatcher.register(dimensionStatusCommand());
+        dispatcher.register(whereAmICommand());
+        dispatcher.register(chargeHeldCommand());
+        dispatcher.register(fillAmmoCommand());
     }
 
     private static int teleportToDimension(CommandSourceStack source, String id) throws CommandSyntaxException {
@@ -97,6 +105,34 @@ public final class LostInfinityCommands {
         return Commands.literal("chargeep")
                 .requires(source -> source.hasPermission(2))
                 .executes(context -> chargeEssencePossessor(context.getSource()));
+    }
+
+    private static com.mojang.brigadier.builder.LiteralArgumentBuilder<CommandSourceStack> dimensionStatusCommand() {
+        return Commands.literal("dimensionstatus")
+                .requires(source -> source.hasPermission(2))
+                .executes(context -> dimensionStatus(context.getSource()));
+    }
+
+    private static com.mojang.brigadier.builder.LiteralArgumentBuilder<CommandSourceStack> whereAmICommand() {
+        return Commands.literal("whereami")
+                .requires(source -> source.hasPermission(2))
+                .executes(context -> whereAmI(context.getSource()));
+    }
+
+    private static com.mojang.brigadier.builder.LiteralArgumentBuilder<CommandSourceStack> chargeHeldCommand() {
+        return Commands.literal("chargeheld")
+                .requires(source -> source.hasPermission(2))
+                .executes(context -> chargeHeld(context.getSource(), 1000))
+                .then(Commands.argument("amount", IntegerArgumentType.integer(0, 100000))
+                        .executes(context -> chargeHeld(context.getSource(), IntegerArgumentType.getInteger(context, "amount"))));
+    }
+
+    private static com.mojang.brigadier.builder.LiteralArgumentBuilder<CommandSourceStack> fillAmmoCommand() {
+        return Commands.literal("fillammo")
+                .requires(source -> source.hasPermission(2))
+                .executes(context -> fillAmmo(context.getSource(), 64))
+                .then(Commands.argument("amount", IntegerArgumentType.integer(0, 10000))
+                        .executes(context -> fillAmmo(context.getSource(), IntegerArgumentType.getInteger(context, "amount"))));
     }
 
     private static int clearRifts(CommandSourceStack source, int range) throws CommandSyntaxException {
@@ -174,6 +210,49 @@ public final class LostInfinityCommands {
         return charged;
     }
 
+    private static int dimensionStatus(CommandSourceStack source) {
+        StringBuilder builder = new StringBuilder("Lost Infinity dimensions:");
+        for (String id : DIMENSIONS) {
+            ResourceLocation location = new ResourceLocation(LostInfinity.MODID, id);
+            boolean loaded = source.getServer().getLevel(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.DIMENSION, location)) != null;
+            builder.append("\n").append(location).append(loaded ? " loaded" : " missing");
+        }
+        source.sendSuccess(() -> Component.literal(builder.toString()), false);
+        return DIMENSIONS.length;
+    }
+
+    private static int whereAmI(CommandSourceStack source) throws CommandSyntaxException {
+        ServerPlayer player = source.getPlayerOrException();
+        ResourceLocation dimension = player.level().dimension().location();
+        BlockPos pos = player.blockPosition();
+        source.sendSuccess(() -> Component.literal("Dimension: " + dimension + " @ " + pos.getX() + ", " + pos.getY() + ", " + pos.getZ()), false);
+        return 1;
+    }
+
+    private static int chargeHeld(CommandSourceStack source, int amount) throws CommandSyntaxException {
+        ServerPlayer player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (!isLostInfinityItem(stack)) {
+            source.sendFailure(Component.literal("Hold a Lost Infinity item to charge."));
+            return 0;
+        }
+        stack.getOrCreateTag().putInt("LostEnergy", amount);
+        source.sendSuccess(() -> Component.literal("Held item energy set to " + amount), true);
+        return 1;
+    }
+
+    private static int fillAmmo(CommandSourceStack source, int amount) throws CommandSyntaxException {
+        ServerPlayer player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (!isLostInfinityItem(stack)) {
+            source.sendFailure(Component.literal("Hold a Lost Infinity item to fill ammo."));
+            return 0;
+        }
+        stack.getOrCreateTag().putInt("LostAmmo", amount);
+        source.sendSuccess(() -> Component.literal("Held item ammo set to " + amount), true);
+        return 1;
+    }
+
     private static boolean chargeItem(ItemStack stack) {
         if (stack.isEmpty()) {
             return false;
@@ -184,5 +263,13 @@ public final class LostInfinityCommands {
         }
         stack.getOrCreateTag().putInt("essence", 10);
         return true;
+    }
+
+    private static boolean isLostInfinityItem(ItemStack stack) {
+        if (stack.isEmpty()) {
+            return false;
+        }
+        ResourceLocation itemId = ForgeRegistries.ITEMS.getKey(stack.getItem());
+        return itemId != null && LostInfinity.MODID.equals(itemId.getNamespace());
     }
 }
