@@ -330,7 +330,7 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("gravity")) {
             return "gravity_ring";
         }
-        return "generic_dot_purple";
+        return fallbackParticle(id);
     }
 
     private String burstParticle(String id) {
@@ -375,6 +375,19 @@ public class LostPlaceholderProjectile extends Entity {
         if (id.contains("missile") || id.contains("rocket")) return "missile_explosion";
         if (id.contains("cosmic") || id.contains("galaxy") || id.contains("plasma")) return "cosmic_explosion";
         return "deep_explosion";
+    }
+
+    private static String fallbackParticle(String id) {
+        return switch (Math.floorMod(id.hashCode(), 8)) {
+            case 0 -> "ancient_spell";
+            case 1 -> "space_magic";
+            case 2 -> "small_spark";
+            case 3 -> "spectral";
+            case 4 -> "miasma";
+            case 5 -> "warp";
+            case 6 -> "laser_fizzle";
+            default -> "galaxy_purple";
+        };
     }
 
     private String projectileId() {

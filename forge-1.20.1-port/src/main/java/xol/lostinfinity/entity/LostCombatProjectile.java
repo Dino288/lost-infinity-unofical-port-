@@ -147,7 +147,20 @@ public class LostCombatProjectile extends Snowball {
         if (id.contains("shadow") || id.contains("void") || id.contains("dark")) return "shadow_blast";
         if (id.contains("sonic") || id.contains("sound") || id.contains("echo")) return "supersonic_blue";
         if (id.contains("fire") || id.contains("plasma") || id.contains("exothermite")) return "plasma";
-        return "generic_dot_purple";
+        return fallbackParticle(id);
+    }
+
+    private static String fallbackParticle(String id) {
+        return switch (Math.floorMod(id.hashCode(), 8)) {
+            case 0 -> "ancient_spell";
+            case 1 -> "space_magic";
+            case 2 -> "small_spark";
+            case 3 -> "spectral";
+            case 4 -> "miasma";
+            case 5 -> "warp";
+            case 6 -> "laser_fizzle";
+            default -> "galaxy_purple";
+        };
     }
 
     private String projectileId() {
