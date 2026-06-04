@@ -36,6 +36,8 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
     private static final int INPUT_SLOT = 0;
     private static final int CATALYST_SLOT = 1;
     private static final int FUEL_SLOT = 2;
+    private static final int MODULE_START_SLOT = 3;
+    private static final int MODULE_END_SLOT = 7;
     private static final int OUTPUT_SLOT = 8;
     private static final int ENERGY_CAPACITY = 1000;
     private static final String ITEM_ENERGY_TAG = "LostEnergy";
@@ -139,7 +141,7 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
             return;
         }
         active = true;
-        processTime = recipe.time();
+        processTime = effectiveTime(recipe.time());
         progress++;
         if (progress >= processTime) {
             craft(level, recipe);
@@ -186,25 +188,25 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         if (machineId.contains("shockwave")) {
             LostFx.burst(level, pos, "electric_explosion_blue", 18, 1.0D, 0.05D);
             LostFx.play(level, pos, "electric_bounce", SoundSource.BLOCKS, 0.8F, 0.8F);
-            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, new net.minecraft.world.phys.AABB(pos).inflate(5.0D))) {
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, new net.minecraft.world.phys.AABB(pos).inflate(effectRange(5.0D)))) {
                 entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1));
                 entity.hurt(level.damageSources().magic(), 2.0F);
             }
-            energy = Math.max(0, energy - 20);
+            energy = Math.max(0, energy - effectiveEnergyCost(20));
         } else if (machineId.contains("rainfall")) {
             LostFx.burst(level, pos, "murky_mist", 14, 1.5D, 0.04D);
             LostFx.play(level, pos, "rainfall_generator", SoundSource.BLOCKS, 0.75F, 1.0F);
-            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, new net.minecraft.world.phys.AABB(pos).inflate(6.0D))) {
+            for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, new net.minecraft.world.phys.AABB(pos).inflate(effectRange(6.0D)))) {
                 entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 80, 0));
             }
-            energy = Math.max(0, energy - 10);
+            energy = Math.max(0, energy - effectiveEnergyCost(10));
         } else if (machineId.contains("beacon") || machineId.contains("tesla")) {
             LostFx.burst(level, pos, machineId.contains("tesla") ? "zap" : "portal_beam", 12, 0.75D, 0.03D);
             LostFx.play(level, pos, machineId.contains("tesla") ? "charging_power" : "nebulous_beacon", SoundSource.BLOCKS, 0.8F, 1.0F);
-            for (Player player : level.getEntitiesOfClass(Player.class, new net.minecraft.world.phys.AABB(pos).inflate(8.0D))) {
+            for (Player player : level.getEntitiesOfClass(Player.class, new net.minecraft.world.phys.AABB(pos).inflate(effectRange(8.0D)))) {
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 80, 0, true, false));
             }
-            energy = Math.max(0, energy - 8);
+            energy = Math.max(0, energy - effectiveEnergyCost(8));
         }
     }
 
@@ -215,10 +217,11 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         if (recipe.usesCatalyst() && !catalyst.isEmpty()) {
             catalyst.shrink(1);
         }
-        energy = Math.max(0, energy - recipe.energyCost());
+        energy = Math.max(0, energy - effectiveEnergyCost(recipe.energyCost()));
         LostFx.burst(level, worldPosition, machineParticle(), 16, 0.65D, 0.04D);
         LostFx.play(level, worldPosition, machineSound(), SoundSource.BLOCKS, 0.8F, 0.9F + level.random.nextFloat() * 0.25F);
         ItemStack output = recipe.output().copy();
+        output.grow(Math.min(extraOutput(), output.getMaxStackSize() - output.getCount()));
         ItemStack existing = items.get(OUTPUT_SLOT);
         if (existing.isEmpty()) {
             items.set(OUTPUT_SLOT, output);
@@ -314,9 +317,52 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     private boolean canOutput(ItemStack output) {
+        output = output.copy();
+        output.grow(Math.min(extraOutput(), output.getMaxStackSize() - output.getCount()));
         ItemStack existing = items.get(OUTPUT_SLOT);
         return existing.isEmpty() || (ItemStack.isSameItemSameTags(existing, output)
                 && existing.getCount() + output.getCount() <= existing.getMaxStackSize());
+    }
+
+    private int effectiveTime(int baseTime) {
+        int time = baseTime;
+        int speed = moduleCount("speed") + moduleCount("rapid") + moduleCount("accelerat") + moduleCount("overclock");
+        int precision = moduleCount("precision") + moduleCount("calibrat");
+        time -= speed * 18;
+        time -= precision * 8;
+        return Math.max(20, time);
+    }
+
+    private int effectiveEnergyCost(int baseCost) {
+        int cost = baseCost;
+        int efficient = moduleCount("efficien") + moduleCount("conserv") + moduleCount("stabil");
+        int power = moduleCount("power") + moduleCount("amplifier") + moduleCount("overclock");
+        cost -= efficient * Math.max(1, baseCost / 5);
+        cost += power * Math.max(1, baseCost / 8);
+        return Math.max(1, cost);
+    }
+
+    private int extraOutput() {
+        int bonus = moduleCount("yield") + moduleCount("duplicat") + moduleCount("replicat");
+        if (machineId.contains("duplicator") || machineId.contains("replicator")) {
+            bonus++;
+        }
+        return Math.min(3, bonus);
+    }
+
+    private double effectRange(double baseRange) {
+        return baseRange + moduleCount("range") * 2.0D + moduleCount("amplifier") * 1.0D;
+    }
+
+    private int moduleCount(String token) {
+        int count = 0;
+        for (int slot = MODULE_START_SLOT; slot <= MODULE_END_SLOT; slot++) {
+            String path = itemPath(items.get(slot));
+            if ((path.contains("module") && path.contains(token)) || path.contains(token + "_chip") || path.contains(token + "_upgrade")) {
+                count++;
+            }
+        }
+        return count;
     }
 
     private void chargeFromFuel() {
