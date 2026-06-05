@@ -27,6 +27,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import xol.lostinfinity.effect.LostFx;
+import xol.lostinfinity.registry.ModEntities;
 import xol.lostinfinity.registry.ModItems;
 import xol.lostinfinity.LostInfinity;
 
@@ -48,6 +50,7 @@ public class LostGalaxyMob extends LostPlaceholderMob {
     private static final String PINK_FEED_MAX_TAG = "PinkFeedMax";
     private static final String BLUE_FEED_MAX_TAG = "BlueFeedMax";
     private static final String PURPLE_FEED_MAX_TAG = "PurpleFeedMax";
+    private static final String LASER_SPIRES_SUMMONED_TAG = "LaserSpiresSummoned";
 
     private final Kind kind;
     private int galaxyColor;
@@ -58,6 +61,7 @@ public class LostGalaxyMob extends LostPlaceholderMob {
     private int blueFeedMax;
     private int purpleFeedMax;
     private int laserFireOffset;
+    private boolean laserSpiresSummoned;
 
     public LostGalaxyMob(EntityType<? extends PathfinderMob> type, Level level, Kind kind) {
         super(type, level);
@@ -159,11 +163,11 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         if (this.kind == Kind.BEAST) {
             tickBeast(target);
         } else if (this.kind == Kind.SORCERER && target != null && this.tickCount % 20 == 0) {
-            shootAt(target, 8.0F, 0.6F);
+            shootAt(target, 8.0F, 0.5F);
             this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 1.0F, 1.0F);
         } else if (this.kind == Kind.GLADIATOR && target != null && this.tickCount % 60 == 0) {
             this.teleportTo(target.getX(), target.getY(), target.getZ());
-            dealPercentDamage(target, 0.05F);
+            dealPercentDamage(target, galaxyBitePercent());
             this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 1.0F, 1.0F);
         } else if (this.kind == Kind.SPIRE) {
             tickSpire(target);
@@ -199,6 +203,12 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         if (this.getHealth() < this.getMaxHealth()) {
             this.setHealth(this.getMaxHealth());
         }
+        if (this.tickCount % 15 == 0) {
+            punishFlyingPlayers();
+        }
+        if (!this.laserSpiresSummoned && this.tickCount > 200) {
+            summonLaserSpires();
+        }
         if (target != null && this.distanceToSqr(target) <= 48.0D * 48.0D && this.tickCount % 40 == 0) {
             shootAt(target, 12.0F, 0.75F);
             this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 1.0F, 0.7F);
@@ -223,8 +233,9 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         if (this.getHealth() < this.getMaxHealth()) {
             this.setHealth(this.getMaxHealth());
         }
+        int fireRate = this.getHealth() < this.getMaxHealth() * 0.5F ? 30 : 50;
         if (target != null && this.distanceToSqr(target) > 9.0D && this.distanceToSqr(target) <= 48.0D * 48.0D
-                && (this.tickCount + this.laserFireOffset) % 50 == 0) {
+                && (this.tickCount + this.laserFireOffset) % fireRate == 0) {
             shootAt(target, 14.0F, 1.0F);
             this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 2.0F, 1.0F);
         }
@@ -275,7 +286,7 @@ public class LostGalaxyMob extends LostPlaceholderMob {
     public boolean doHurtTarget(Entity target) {
         boolean hurt = super.doHurtTarget(target);
         if (target instanceof LivingEntity living) {
-            float percent = this.kind == Kind.GULPER ? gulperBitePercent() : this.kind == Kind.BEAST ? 0.05F : 0.08F;
+            float percent = this.kind == Kind.GULPER ? gulperBitePercent() : galaxyBitePercent();
             hurt |= dealPercentDamage(living, percent);
         }
         return hurt;
@@ -299,6 +310,39 @@ public class LostGalaxyMob extends LostPlaceholderMob {
     private boolean dealPercentDamage(LivingEntity target, float percent) {
         float damage = Math.max(1.0F, target.getMaxHealth() * percent);
         return target.hurt(this.damageSources().mobAttack(this), damage);
+    }
+
+    private void punishFlyingPlayers() {
+        for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(48.0D))) {
+            if (player.getAbilities().flying && !player.isCreative() && !player.isSpectator()) {
+                float damage = Math.max(4.0F, player.getMaxHealth() * 0.25F);
+                player.hurt(this.damageSources().mobAttack(this), damage);
+                LostFx.burst(this.level(), player.blockPosition(), "space_magic", 18, 0.75D, 0.05D);
+            }
+        }
+    }
+
+    private void summonLaserSpires() {
+        long existing = this.level().getEntitiesOfClass(LostGalaxyMob.class, this.getBoundingBox().inflate(64.0D),
+                mob -> mob.kind == Kind.LASER_SPIRE && mob.isAlive()).size();
+        if (existing >= 4) {
+            this.laserSpiresSummoned = true;
+            return;
+        }
+
+        double[][] offsets = {{10.0D, 0.0D}, {-10.0D, 0.0D}, {0.0D, 10.0D}, {0.0D, -10.0D}};
+        for (double[] offset : offsets) {
+            Entity entity = ModEntities.LASERSPIRE.get().create(this.level());
+            if (entity instanceof LostGalaxyMob spire) {
+                spire.moveTo(this.getX() + offset[0], this.getY(), this.getZ() + offset[1], this.random.nextFloat() * 360.0F, 0.0F);
+                spire.setTarget(this.getTarget());
+                this.level().addFreshEntity(spire);
+                LostFx.burst(this.level(), spire.blockPosition(), "portal_beam", 20, 0.8D, 0.04D);
+            }
+        }
+        this.laserSpiresSummoned = true;
+        LostFx.burst(this.level(), this.blockPosition(), "space_magic", 36, 1.5D, 0.06D);
+        this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(soundId()), SoundSource.HOSTILE, 2.0F, 0.6F);
     }
 
     private boolean feedGulper(Player player, ItemStack stack) {
@@ -340,6 +384,15 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         return degreeAge > 200 && degreeAge < 340 ? 0.18F : 0.03F;
     }
 
+    private float galaxyBitePercent() {
+        return switch (this.kind) {
+            case BEAST -> 0.20F;
+            case SORCERER, GLADIATOR -> 0.125F;
+            case DRAGON -> 0.05F;
+            default -> 0.08F;
+        };
+    }
+
     @Override
     public boolean isPushable() {
         return this.kind != Kind.SPIRE && this.kind != Kind.LASER_SPIRE && super.isPushable();
@@ -362,6 +415,7 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         tag.putInt(BLUE_FEED_MAX_TAG, this.blueFeedMax);
         tag.putInt(PURPLE_FEED_MAX_TAG, this.purpleFeedMax);
         tag.putInt("LaserFireOffset", this.laserFireOffset);
+        tag.putBoolean(LASER_SPIRES_SUMMONED_TAG, this.laserSpiresSummoned);
     }
 
     @Override
@@ -375,6 +429,7 @@ public class LostGalaxyMob extends LostPlaceholderMob {
         this.blueFeedMax = tag.getInt(BLUE_FEED_MAX_TAG);
         this.purpleFeedMax = tag.getInt(PURPLE_FEED_MAX_TAG);
         this.laserFireOffset = tag.getInt("LaserFireOffset");
+        this.laserSpiresSummoned = tag.getBoolean(LASER_SPIRES_SUMMONED_TAG);
     }
 
     public int getGalaxyColor() {
