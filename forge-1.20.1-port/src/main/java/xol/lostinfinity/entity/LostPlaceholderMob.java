@@ -918,6 +918,13 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickSmallFlyer(LivingEntity target, String id) {
+        if (id.contains("nat")) {
+            Vec3 direct = target.position().subtract(this.position());
+            if (direct.lengthSqr() > 0.5D) {
+                this.getNavigation().moveTo(target, 1.0D);
+                this.setDeltaMovement(this.getDeltaMovement().scale(0.74D).add(direct.normalize().scale(0.22D)));
+            }
+        }
         if (this.tickCount % 30 == 0) {
             Vec3 strafe = new Vec3(target.getZ() - this.getZ(), 0.25D, this.getX() - target.getX()).normalize().scale(0.28D);
             this.setDeltaMovement(this.getDeltaMovement().add(strafe));
@@ -1013,6 +1020,13 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickSimpleRangedMob(LivingEntity target, String id) {
+        if (id.contains("sentry") && this.tickCount % 120 == 0) {
+            this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(id), SoundSource.HOSTILE, 1.0F, 0.8F + this.random.nextFloat() * 0.4F);
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(5.0D))) {
+                player.addEffect(new MobEffectInstance(ModEffects.SHOCKED.get(), 100, 0));
+                LostFx.burst(this.level(), player.blockPosition(), "zap", 10, 0.6D, 0.05D);
+            }
+        }
         if (this.tickCount % (id.contains("giant") ? 70 : 50) == 0 && this.distanceToSqr(target) < 32.0D * 32.0D) {
             shootAt(target);
         }
@@ -1061,10 +1075,15 @@ public class LostPlaceholderMob extends PathfinderMob {
 
     private void tickGloopMother(LivingEntity target) {
         tickStickySlimeMob(target, "gloopmother");
-        if (this.tickCount % 120 == 0) {
-            for (int i = 0; i < 2; i++) {
+        boolean hasNearbyPlayer = !this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(12.0D)).isEmpty();
+        if (hasNearbyPlayer && this.recoveredState == 0 && this.tickCount % 20 == 0) {
+            this.recoveredState = 100;
+        }
+        if (this.recoveredState > 0) {
+            if (this.recoveredState % 20 == 0) {
                 spawnBossMinion(ModEntities.GLOOP.get(), target, 0.4F, 8);
             }
+            this.recoveredState--;
         }
     }
 
@@ -1124,7 +1143,21 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickAspectMob(LivingEntity target) {
-        if (this.tickCount % 45 == 0) {
+        int style = Math.floorMod(this.tickCount / 400, 3);
+        if (style == 0 && this.tickCount % 5 == 0 && this.distanceToSqr(target) < 32.0D * 32.0D) {
+            shootAt(target);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.BLAZE_SHOOT, SoundSource.HOSTILE, 1.0F, 1.0F);
+        } else if (style == 1 && this.tickCount % 30 == 0) {
+            radialProjectiles(20, 0.22D, "ancient_spell");
+            this.level().playSound(null, this.blockPosition(), SoundEvents.BLAZE_SHOOT, SoundSource.HOSTILE, 1.0F, 0.8F);
+        } else if (style == 2 && this.tickCount % 50 <= 20 && this.tickCount % 10 == 0) {
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(18.0D))) {
+                if (!player.isSpectator()) {
+                    shootAt(player);
+                }
+            }
+            this.level().playSound(null, this.blockPosition(), SoundEvents.BLAZE_SHOOT, SoundSource.HOSTILE, 1.2F, 0.7F + this.random.nextFloat() * 0.3F);
+        } else if (this.tickCount % 45 == 0) {
             shootAt(target);
         }
         if (this.tickCount % 120 == 0) {
@@ -1699,6 +1732,19 @@ public class LostPlaceholderMob extends PathfinderMob {
         }
         if (id.contains("phase") || id.contains("spectre") || id.contains("ghost")) {
             living.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 120, 0));
+        }
+        if (id.contains("aspect")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / 4.0F));
+        } else if (id.contains("sentry")) {
+            if (living.hasEffect(ModEffects.SHOCKED.get())) {
+                living.hurt(this.damageSources().mobAttack(this), Math.max(8.0F, living.getMaxHealth() * 0.5F));
+            } else {
+                living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / 2.0F));
+            }
+        } else if (id.equals("nat")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / 3.0F));
+        } else if (id.contains("labwarrior")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / 5.0F));
         }
         if (id.contains("sightwalker")) {
             living.hurt(this.damageSources().mobAttack(this), Math.max(10.0F, living.getMaxHealth()));
