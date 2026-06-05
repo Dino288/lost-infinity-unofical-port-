@@ -869,7 +869,7 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "fungfly", "flutterfyre", "flutterbee", "flapper", "giantflapper", "flurky", "fyreweed", "giantfyreweed" -> tickNatureFlyer(target, id);
             case "mirrorzombie", "reflectal", "spectre", "player_limb", "lost_blade" -> tickMirrorMob(target, id);
             case "hanger", "grappler", "gravhead", "hurler", "eyeslug" -> tickControlMob(target, id);
-            case "chemist", "archeologist", "pearlcollector", "pickleman", "skycrab", "jet_mount" -> tickUtilityCreature(target, id);
+            case "chemist", "archeologist", "pearlcollector", "pickleman", "skycrab", "jet_mount", "feralmerchant" -> tickUtilityCreature(target, id);
             case "nuxuro", "alestria", "vycellia", "duskerqueen", "atlasspire", "atlascrystal", "celestial_statue" -> tickLegacyBossSupport(target, id);
             case "cthulhu_turret", "cthulhu_beam", "cthulhu_tentacle", "cthulhu_tentacle_persist", "cthulhu_cloud", "cthulhu_black_hole", "cthulhu_rift", "cthulhu_healing_orb", "cthulhu_death_fx" -> tickCthulhuHelper(target, id);
             case "mortarcannon", "clustercannon", "coursing", "coursering", "skybooster" -> tickArenaGadget(target, id);
@@ -1052,6 +1052,54 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickGhostMob(LivingEntity target, String id) {
+        if (id.contains("ghostcopy")) {
+            this.setNoGravity(true);
+            this.getNavigation().stop();
+            this.setDeltaMovement(this.getDeltaMovement().scale(0.35D));
+            if (this.tickCount % 3 == 0) {
+                LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 4, 0.25D, 0.01D);
+            }
+            if (this.tickCount >= 12) {
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("risingphantom")) {
+            this.setNoGravity(true);
+            this.getNavigation().stop();
+            this.setDeltaMovement(this.getDeltaMovement().scale(0.45D).add(0.0D, 0.28D, 0.0D));
+            if (this.tickCount % 5 == 0) {
+                for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(0.8D),
+                        e -> e != this && e.isAlive() && !isAlliedTo(e))) {
+                    living.hurt(this.damageSources().mobAttack(this), Math.max(6.0F, living.getMaxHealth() * 1.5F));
+                    living.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 80, 0));
+                    LostFx.burst(this.level(), living.blockPosition(), "soulburst", 12, 0.5D, 0.04D);
+                }
+            }
+            if (this.tickCount >= 80) {
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("multiverseghost")) {
+            this.setNoGravity(true);
+            Vec3 drift = target.getEyePosition().subtract(this.position());
+            if (drift.lengthSqr() > 0.01D) {
+                this.setDeltaMovement(this.getDeltaMovement().scale(1.15D).add(drift.normalize().scale(0.09D)));
+            }
+            if (this.tickCount % 3 == 0) {
+                for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(0.6D),
+                        e -> e != this && e.isAlive() && !isAlliedTo(e))) {
+                    living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() * 0.7F));
+                    LostFx.burst(this.level(), living.blockPosition(), "portal_beam", 10, 0.45D, 0.04D);
+                }
+            }
+            if (this.tickCount >= 30) {
+                LostFx.burst(this.level(), this.blockPosition(), "portal_beam", 18, 0.7D, 0.06D);
+                this.discard();
+            }
+            return;
+        }
         if (this.tickCount % 70 == 0) {
             evadeTarget(target);
         }
@@ -1301,6 +1349,36 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickUtilityMinion(LivingEntity target, String id) {
+        if (id.contains("droid")) {
+            this.fallDistance = -1.0F;
+            if (this.tickCount % 10 == 0) {
+                this.heal(3.0F);
+            }
+            double distance = Math.sqrt(this.distanceToSqr(target));
+            if (this.tickCount % 200 == 0) {
+                if (distance < 30.0D) {
+                    Vec3 dash = target.position().subtract(this.position()).normalize().scale(1.1D);
+                    this.setDeltaMovement(this.getDeltaMovement().add(dash.x, 0.2D, dash.z));
+                } else {
+                    this.teleportTo(target.getX(), target.getY(), target.getZ());
+                    this.level().playSound(null, this.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 0.8F, 1.2F);
+                    LostFx.burst(this.level(), this.blockPosition(), "portal_beam", 16, 0.7D, 0.05D);
+                }
+            }
+            if (distance >= 10.0D && this.tickCount % 3 == 0) {
+                Vec3 pull = this.position().subtract(target.position());
+                if (pull.lengthSqr() > 0.01D) {
+                    Vec3 motion = pull.normalize().scale(0.45D);
+                    target.push(motion.x, 0.35D, motion.z);
+                    target.hurtMarked = true;
+                }
+            }
+            if (this.tickCount % 20 == 0) {
+                shootAt(target);
+                LostFx.burst(this.level(), this.blockPosition(), "small_spark", 10, 0.45D, 0.04D);
+            }
+            return;
+        }
         if (id.contains("guardian") && this.tickCount % 45 == 0) {
             shootAt(target);
             healAllies();
@@ -1632,6 +1710,26 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickUtilityCreature(LivingEntity target, String id) {
+        if (id.contains("feralmerchant")) {
+            int mode = Math.floorMod(this.recoveredState, 3);
+            if (this.tickCount == 1 && this.recoveredState == 0) {
+                mode = this.random.nextInt(3);
+                this.recoveredState = mode;
+            }
+            int period = Math.max(35, 80 - 15 * mode);
+            if (this.tickCount % period == 0) {
+                Vec3 side = new Vec3(target.getZ() - this.getZ(), 0.0D, this.getX() - target.getX());
+                Vec3 offset = side.lengthSqr() > 0.01D ? side.normalize().scale(2.5D) : Vec3.ZERO;
+                this.teleportTo(target.getX() + offset.x, target.getY(), target.getZ() + offset.z);
+                this.level().playSound(null, this.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, 0.75F + mode * 0.2F);
+                LostFx.burst(this.level(), this.blockPosition(), "portal_beam", 18 + mode * 6, 0.75D, 0.05D);
+            }
+            if (this.tickCount % 45 == 0 && this.distanceToSqr(target) < 36.0D) {
+                target.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, target.getMaxHealth() * (0.18F + mode * 0.12F)));
+                target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 80, mode));
+            }
+            return;
+        }
         if (id.contains("skycrab") || id.contains("jet")) {
             tickSmallFlyer(target, id);
             if (this.tickCount % 80 == 0) {
