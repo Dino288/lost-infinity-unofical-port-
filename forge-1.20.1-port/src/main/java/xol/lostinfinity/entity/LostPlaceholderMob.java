@@ -844,6 +844,12 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "labwizard", "labwarrior" -> tickLabyrinthFighter(target, id);
             case "doomsday" -> tickDoomsdayMob(target);
             case "skyre" -> tickSkyreMob(target);
+            case "acidback", "clyster", "crawker", "dusker", "rockpest", "spinovern", "spyker", "screacher" -> tickOldStarforgeMob(target, id);
+            case "crusher", "ravager", "ribrex", "titanopod" -> tickHeavyRusher(target, id);
+            case "droid", "luminousguardian" -> tickUtilityMinion(target, id);
+            case "bomb_drone", "bomberbomb", "tntzombie", "rocket_strapped_explosive", "cosmicbomb", "plasmabomb", "stickybomb", "thunderbomb", "stormbomb" -> tickExplosiveRecoveredMob(target, id);
+            case "rift", "unstablerift", "mark_of_despair", "forbiddenbrand", "sandattack", "tornindividual" -> tickRiftHazard(target, id);
+            case "augmenticon", "globoon", "globro", "glomite", "glochipper", "glangler", "essencedweller", "essenceidol" -> tickEssenceMob(target, id);
             default -> {
             }
         }
@@ -1051,6 +1057,114 @@ public class LostPlaceholderMob extends PathfinderMob {
         if (this.tickCount % 75 == 0) {
             shootAt(target);
             target.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 45, 0));
+        }
+    }
+
+    private void tickOldStarforgeMob(LivingEntity target, String id) {
+        if ((id.contains("dusker") || id.contains("rockpest")) && this.tickCount % 65 == 0) {
+            leapAt(target);
+        }
+        if (id.contains("acid") && this.tickCount % 55 == 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.POISON, 140, 1));
+            LostFx.burst(this.level(), target.blockPosition(), "venom", 16, 0.55D, 0.04D);
+        }
+        if (id.contains("clyster") && this.tickCount % 70 == 0) {
+            pushNearbyPlayers(5.0D, 0.85D, 0.15D, "murky_mist");
+        }
+        if (id.contains("crawker") && this.tickCount % 90 == 0) {
+            ambush(target);
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1));
+        }
+        if ((id.contains("spyker") || id.contains("screacher")) && this.tickCount % 55 == 0) {
+            shootAt(target);
+        }
+        if (id.contains("spinovern") && this.tickCount % 75 == 0) {
+            Vec3 spin = new Vec3(target.getZ() - this.getZ(), 0.25D, this.getX() - target.getX()).normalize().scale(0.7D);
+            target.push(spin.x, spin.y, spin.z);
+            target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 90, 0));
+        }
+    }
+
+    private void tickHeavyRusher(LivingEntity target, String id) {
+        if (this.tickCount % (id.contains("crusher") ? 80 : 55) == 0) {
+            mountedCharge(target);
+        }
+        if (this.tickCount % 90 == 0 && this.distanceToSqr(target) < 49.0D) {
+            target.hurt(this.damageSources().mobAttack(this), id.contains("titan") ? 7.0F : 4.0F);
+            target.addEffect(new MobEffectInstance(id.contains("ravager") ? ModEffects.NULLIFIED.get() : MobEffects.MOVEMENT_SLOWDOWN, 100, 1));
+            LostFx.burst(this.level(), target.blockPosition(), "sweep_attack", 18, 0.8D, 0.05D);
+        }
+    }
+
+    private void tickUtilityMinion(LivingEntity target, String id) {
+        if (id.contains("guardian") && this.tickCount % 45 == 0) {
+            shootAt(target);
+            healAllies();
+        } else if (this.tickCount % 60 == 0) {
+            double distance = Math.sqrt(this.distanceToSqr(target));
+            if (distance > 10.0D) {
+                Vec3 dash = target.position().subtract(this.position()).normalize().scale(0.75D);
+                this.setDeltaMovement(this.getDeltaMovement().add(dash.x, 0.15D, dash.z));
+            } else {
+                shootAt(target);
+            }
+            LostFx.burst(this.level(), this.blockPosition(), "small_spark", 10, 0.45D, 0.04D);
+        }
+    }
+
+    private void tickExplosiveRecoveredMob(LivingEntity target, String id) {
+        if (this.distanceToSqr(target) < (id.contains("bomb") ? 25.0D : 16.0D)) {
+            primeFuse();
+        }
+        if (id.contains("drone") && this.tickCount % 35 == 0) {
+            Vec3 dash = target.position().subtract(this.position()).normalize().scale(0.9D);
+            this.setDeltaMovement(this.getDeltaMovement().add(dash.x, 0.2D, dash.z));
+        }
+        if ((id.contains("thunder") || id.contains("storm")) && this.tickCount % 30 == 0) {
+            target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 70, 0));
+            LostFx.burst(this.level(), target.blockPosition(), "electric_explosion_blue", 10, 0.5D, 0.06D);
+        }
+        if (id.contains("sticky") && this.tickCount % 45 == 0) {
+            target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 120, 1));
+        }
+    }
+
+    private void tickRiftHazard(LivingEntity target, String id) {
+        this.getNavigation().stop();
+        if (this.tickCount % 65 == 0) {
+            Vec3 pull = id.contains("sand") ? target.position().subtract(this.position()) : this.position().subtract(target.position());
+            if (pull.lengthSqr() > 0.01D) {
+                Vec3 motion = pull.normalize().scale(id.contains("sand") ? 0.65D : 0.75D);
+                target.push(motion.x, id.contains("sand") ? 0.05D : 0.25D, motion.z);
+            }
+            target.addEffect(new MobEffectInstance(id.contains("despair") ? ModEffects.TERRIFIED.get() : ModEffects.PHASED.get(), 100, 0));
+            LostFx.burst(this.level(), target.blockPosition(), id.contains("sand") ? "murky_mist" : "gravity_ring", 16, 0.7D, 0.05D);
+        }
+    }
+
+    private void tickEssenceMob(LivingEntity target, String id) {
+        if (id.contains("idol")) {
+            if (this.tickCount % 80 == 0) {
+                healAllies();
+                target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 80, 0));
+            }
+            return;
+        }
+        if (id.contains("augmenticon") && this.tickCount % 100 == 0) {
+            switch (this.random.nextInt(4)) {
+                case 0 -> gravityPulse(target, 6.0D, 3.0F, "gravity_ring");
+                case 1 -> target.addEffect(new MobEffectInstance(ModEffects.SHATTERED.get(), 120, 1));
+                case 2 -> target.addEffect(new MobEffectInstance(ModEffects.PLAGUE.get(), 120, 1));
+                default -> rainProjectilesOver(target, 4, "ancient_spell");
+            }
+        } else if (this.tickCount % 70 == 0) {
+            if (id.contains("glob") || id.contains("glo")) {
+                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1));
+                LostFx.burst(this.level(), target.blockPosition(), "gloop_splash", 14, 0.55D, 0.04D);
+            } else {
+                shootAt(target);
+                target.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 90, 0));
+            }
         }
     }
 
