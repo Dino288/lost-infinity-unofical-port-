@@ -857,6 +857,10 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "hanger", "grappler", "gravhead", "hurler", "eyeslug" -> tickControlMob(target, id);
             case "chemist", "archeologist", "pearlcollector", "pickleman", "skycrab", "jet_mount" -> tickUtilityCreature(target, id);
             case "nuxuro", "alestria", "vycellia", "duskerqueen", "atlasspire", "atlascrystal", "celestial_statue" -> tickLegacyBossSupport(target, id);
+            case "cthulhu_turret", "cthulhu_beam", "cthulhu_tentacle", "cthulhu_tentacle_persist", "cthulhu_cloud", "cthulhu_black_hole", "cthulhu_rift", "cthulhu_healing_orb", "cthulhu_death_fx" -> tickCthulhuHelper(target, id);
+            case "mortarcannon", "clustercannon", "coursing", "coursering", "skybooster" -> tickArenaGadget(target, id);
+            case "particletrojan", "plasmaexplosion", "ionexplosion", "nitroexplosion", "nuclear_explosion" -> tickEffectEntity(target, id);
+            case "shroomite", "aura_of_allegiance", "supply_trader", "infinitystone" -> tickSupportCreature(target, id);
             default -> {
             }
         }
@@ -1300,6 +1304,115 @@ public class LostPlaceholderMob extends PathfinderMob {
                 }
                 default -> {
                 }
+            }
+        }
+    }
+
+    private void tickCthulhuHelper(LivingEntity target, String id) {
+        if (id.contains("healing")) {
+            if (this.tickCount % 50 == 0) {
+                healAllies();
+                this.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 80, 0, true, false));
+            }
+            return;
+        }
+        if (id.contains("black_hole") || id.contains("rift")) {
+            this.getNavigation().stop();
+            if (this.tickCount % 45 == 0) {
+                gravityPulse(target, id.contains("black_hole") ? 8.0D : 5.5D, id.contains("black_hole") ? 4.0F : 2.0F, "blackhole_ring");
+            }
+            return;
+        }
+        if (id.contains("cloud")) {
+            if (this.tickCount % 35 == 0) {
+                Vec3 drift = target.getEyePosition().subtract(this.position()).normalize().scale(0.18D);
+                this.setDeltaMovement(this.getDeltaMovement().scale(0.7D).add(drift));
+                target.addEffect(new MobEffectInstance(MobEffects.WITHER, 70, 0));
+            }
+            return;
+        }
+        if (id.contains("tentacle")) {
+            if (this.tickCount % 55 == 0) {
+                webTarget(target);
+                target.hurt(this.damageSources().mobAttack(this), 4.0F);
+            }
+            return;
+        }
+        if (id.contains("death_fx")) {
+            if (this.tickCount % 20 == 0) {
+                LostFx.burst(this.level(), this.blockPosition(), "plasma_explosion", 24, 1.0D, 0.08D);
+            }
+            return;
+        }
+        if (this.tickCount % (id.contains("turret") ? 35 : 50) == 0) {
+            shootAt(target);
+        }
+    }
+
+    private void tickArenaGadget(LivingEntity target, String id) {
+        this.getNavigation().stop();
+        if (id.contains("cannon") && this.tickCount % (id.contains("mortar") ? 75 : 45) == 0) {
+            if (id.contains("cluster")) {
+                radialProjectiles(6, 0.2D, "small_spark");
+            } else {
+                rainProjectilesOver(target, 3, "plasma");
+            }
+            this.level().playSound(null, this.blockPosition(), SoundEvents.DISPENSER_LAUNCH, SoundSource.HOSTILE, 0.75F, 0.8F);
+        } else if (id.contains("course") && this.tickCount % 40 == 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 0));
+            LostFx.burst(this.level(), target.blockPosition(), "portal_beam", 8, 0.35D, 0.03D);
+        } else if (id.contains("skybooster") && this.tickCount % 50 == 0) {
+            target.push(0.0D, 0.9D, 0.0D);
+            target.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 80, 0));
+            LostFx.burst(this.level(), target.blockPosition(), "supersonic_blue", 12, 0.5D, 0.04D);
+        }
+    }
+
+    private void tickEffectEntity(LivingEntity target, String id) {
+        this.getNavigation().stop();
+        this.setDeltaMovement(Vec3.ZERO);
+        if (this.tickCount % 10 == 0) {
+            String particle = id.contains("ion") ? "electric_explosion_blue" : id.contains("nuclear") ? "plasma_explosion" : "plasma";
+            LostFx.burst(this.level(), this.blockPosition(), particle, 14, 0.75D, 0.08D);
+        }
+        if (this.tickCount % 30 == 0) {
+            for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(id.contains("nuclear") ? 6.0D : 3.5D),
+                    e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+                living.hurt(this.damageSources().mobAttack(this), id.contains("nuclear") ? 6.0F : 3.0F);
+                if (id.contains("ion")) {
+                    living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 70, 0));
+                } else if (id.contains("nitro")) {
+                    living.push(0.0D, 0.65D, 0.0D);
+                }
+            }
+        }
+    }
+
+    private void tickSupportCreature(LivingEntity target, String id) {
+        if (id.contains("aura")) {
+            if (this.tickCount % 45 == 0) {
+                for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(8.0D),
+                        e -> e != this && e.isAlive() && isLostInfinityMob(e))) {
+                    living.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 80, 0, true, false));
+                    living.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 80, 0, true, false));
+                }
+                LostFx.burst(this.level(), this.blockPosition(), "ancient_spell", 14, 0.8D, 0.03D);
+            }
+        } else if (id.contains("shroomite")) {
+            tickStarforgeBiter(target, id);
+            if (this.tickCount % 90 == 0) {
+                sporePulse(target, 3.5D);
+            }
+        } else if (id.contains("supply")) {
+            if (this.tickCount % 80 == 0) {
+                healAllies();
+                collectNearbyItems();
+            }
+        } else if (id.contains("infinitystone")) {
+            this.getNavigation().stop();
+            if (this.tickCount % 60 == 0) {
+                target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 100, 0));
+                LostFx.burst(this.level(), this.blockPosition(), "space_magic", 18, 0.75D, 0.04D);
             }
         }
     }
