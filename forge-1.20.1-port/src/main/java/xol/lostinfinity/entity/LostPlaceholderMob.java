@@ -37,12 +37,14 @@ public class LostPlaceholderMob extends PathfinderMob {
     private static final String FUSE_TAG = "LostFuse";
     private static final String SUMMONED_MINION_TAG = "SummonedMinion";
     private static final String BOSS_PHASE_TAG = "LostBossPhase";
+    private static final String LAST_RECOVERED_HEALTH_TAG = "LastRecoveredHealth";
     private int specialCooldown;
     private int supportCooldown;
     private int ambushCooldown;
     private int fuseTicks = -1;
     private int bossPhase = 1;
     private boolean summonedMinion;
+    private float lastRecoveredHealth = -1.0F;
 
     public LostPlaceholderMob(EntityType<? extends PathfinderMob> type, Level level) {
         super(type, level);
@@ -114,6 +116,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         this.fuseTicks = tag.getInt(FUSE_TAG);
         this.summonedMinion = tag.getBoolean(SUMMONED_MINION_TAG);
         this.bossPhase = Math.max(1, tag.getInt(BOSS_PHASE_TAG));
+        this.lastRecoveredHealth = tag.contains(LAST_RECOVERED_HEALTH_TAG) ? tag.getFloat(LAST_RECOVERED_HEALTH_TAG) : -1.0F;
     }
 
     @Override
@@ -122,6 +125,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         tag.putInt(FUSE_TAG, this.fuseTicks);
         tag.putBoolean(SUMMONED_MINION_TAG, this.summonedMinion);
         tag.putInt(BOSS_PHASE_TAG, this.bossPhase);
+        tag.putFloat(LAST_RECOVERED_HEALTH_TAG, this.lastRecoveredHealth);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -165,6 +169,9 @@ public class LostPlaceholderMob extends PathfinderMob {
             this.ambushCooldown--;
         }
         LivingEntity target = this.getTarget();
+        if (target == null && (mobId().equals("clinger") || mobId().equals("stickler"))) {
+            this.setNoGravity(false);
+        }
         if (target != null && target.isAlive()) {
             if (isStationaryEntity()) {
                 this.getNavigation().stop();
@@ -978,6 +985,14 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickStickySlimeMob(LivingEntity target, String id) {
+        this.fallDistance = -0.5F;
+        if ((id.contains("gloop") || id.contains("strider")) && this.tickCount % 40 < 20 && target.getY() > this.getY()) {
+            this.setDeltaMovement(this.getDeltaMovement().add(0.0D, id.contains("gloop") ? 0.7D : 0.25D, 0.0D));
+        }
+        if (id.contains("strider") && this.onGround()) {
+            Vec3 motion = this.getDeltaMovement();
+            this.setDeltaMovement(motion.x * 1.3D, motion.y, motion.z * 1.3D);
+        }
         if (this.tickCount % 45 == 0 && this.distanceToSqr(target) < 36.0D) {
             target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, id.contains("strider") ? 2 : 1));
             target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 80, 0));
@@ -998,6 +1013,17 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickCycloneMob(LivingEntity target) {
+        if (this.tickCount % 120 < 50) {
+            if (this.tickCount % 120 == 0) {
+                this.level().playSound(null, this.blockPosition(), LostMobSounds.ambient(mobId()), SoundSource.HOSTILE, 2.0F, 1.0F);
+            }
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(12.0D))) {
+                if (!player.isSpectator()) {
+                    player.setDeltaMovement(player.getDeltaMovement().x, 0.85D, player.getDeltaMovement().z);
+                    player.hurtMarked = true;
+                }
+            }
+        }
         if (this.tickCount % 50 == 0) {
             Vec3 swirl = new Vec3(target.getZ() - this.getZ(), 0.35D, this.getX() - target.getX()).normalize().scale(0.9D);
             target.push(swirl.x, swirl.y, swirl.z);
@@ -1008,6 +1034,20 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickClingMob(LivingEntity target, String id) {
+        this.fallDistance = -1.0F;
+        if (this.distanceToSqr(target) < 16.0D) {
+            this.setNoGravity(true);
+            double goalY = target.getBoundingBox().getCenter().y;
+            if (this.getY() < goalY) {
+                this.teleportTo(this.getX(), this.getY() + 0.1D, this.getZ());
+            }
+            if (this.tickCount % 5 == 0) {
+                target.hurt(this.damageSources().mobAttack(this), Math.max(2.0F, target.getMaxHealth() / 8.0F));
+                LostFx.burst(this.level(), target.blockPosition(), "gravity_ring", 8, 0.35D, 0.03D);
+            }
+        } else {
+            this.setNoGravity(false);
+        }
         if (this.tickCount % 55 == 0) {
             Vec3 pull = this.position().subtract(target.position()).normalize().scale(id.contains("stick") ? 0.9D : 0.65D);
             target.push(pull.x, 0.25D, pull.z);
@@ -1182,6 +1222,18 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickVoidFiend(LivingEntity target, String id) {
+        if (id.contains("starfiend")) {
+            double scale = 1.8D + 0.5D * Math.sin(this.tickCount * 0.05D);
+            this.refreshDimensions();
+            if (this.tickCount % 60 == 0) {
+                this.setDeltaMovement(this.getDeltaMovement().add(
+                        (target.getX() - this.getX()) * 0.145D,
+                        1.0D,
+                        (target.getZ() - this.getZ()) * 0.145D));
+                this.hurtMarked = true;
+                LostFx.burst(this.level(), this.blockPosition(), "space_magic", 20, scale * 0.35D, 0.05D);
+            }
+        }
         if (this.tickCount % 65 == 0) {
             shootAt(target);
             target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 110, id.contains("terror") ? 1 : 0));
@@ -1230,6 +1282,26 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickMirrorMob(LivingEntity target, String id) {
+        if (id.contains("mirrorzombie")) {
+            this.fallDistance = -1.0F;
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(6.0D))) {
+                double pushX = Math.signum(player.getX() - this.getX()) * 2.5D;
+                double pushZ = Math.signum(player.getZ() - this.getZ()) * 2.5D;
+                player.push(pushX, 0.5D, pushZ);
+                player.hurtMarked = true;
+            }
+            if (this.lastRecoveredHealth < 0.0F) {
+                this.lastRecoveredHealth = this.getHealth();
+            }
+            if (this.getHealth() < this.lastRecoveredHealth) {
+                for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(20.0D))) {
+                    player.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, player.getMaxHealth() / 3.0F));
+                }
+                LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 35, 1.4D, 0.08D);
+                this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(id), SoundSource.HOSTILE, 3.0F, 1.0F);
+            }
+            this.lastRecoveredHealth = this.getHealth();
+        }
         if (this.tickCount % 75 == 0) {
             evadeTarget(target);
         }
