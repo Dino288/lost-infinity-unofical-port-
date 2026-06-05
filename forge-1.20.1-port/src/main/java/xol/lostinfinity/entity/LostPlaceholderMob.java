@@ -859,8 +859,9 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "nuxuro", "alestria", "vycellia", "duskerqueen", "atlasspire", "atlascrystal", "celestial_statue" -> tickLegacyBossSupport(target, id);
             case "cthulhu_turret", "cthulhu_beam", "cthulhu_tentacle", "cthulhu_tentacle_persist", "cthulhu_cloud", "cthulhu_black_hole", "cthulhu_rift", "cthulhu_healing_orb", "cthulhu_death_fx" -> tickCthulhuHelper(target, id);
             case "mortarcannon", "clustercannon", "coursing", "coursering", "skybooster" -> tickArenaGadget(target, id);
-            case "particletrojan", "plasmaexplosion", "ionexplosion", "nitroexplosion", "nuclear_explosion" -> tickEffectEntity(target, id);
-            case "shroomite", "aura_of_allegiance", "supply_trader", "infinitystone" -> tickSupportCreature(target, id);
+            case "particletrojan", "plasmaexplosion", "plasma_explosion", "ionexplosion", "ion_explosion", "nitroexplosion", "nitro_explosion", "nuclear_explosion" -> tickEffectEntity(target, id);
+            case "shroomite", "aura_of_allegiance", "supply_trader", "infinitystone", "restorationcrystal", "sentrycrystal" -> tickSupportCreature(target, id);
+            case "arenaevent", "puzzlemaster", "ozordecoy", "lostdeviant" -> tickEncounterController(target, id);
             default -> {
             }
         }
@@ -1389,7 +1390,15 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickSupportCreature(LivingEntity target, String id) {
-        if (id.contains("aura")) {
+        if (id.contains("crystal") || id.contains("totem")) {
+            this.getNavigation().stop();
+            this.setDeltaMovement(Vec3.ZERO);
+            if (this.tickCount % 60 == 0) {
+                healAllies();
+                target.addEffect(new MobEffectInstance(id.contains("totem") ? ModEffects.ULTRAHEAVY.get() : ModEffects.NULLIFIED.get(), 80, 0));
+                LostFx.burst(this.level(), this.blockPosition(), id.contains("totem") ? "gravity_ring" : "murky_mist", 14, 0.75D, 0.03D);
+            }
+        } else if (id.contains("aura")) {
             if (this.tickCount % 45 == 0) {
                 for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(8.0D),
                         e -> e != this && e.isAlive() && isLostInfinityMob(e))) {
@@ -1415,6 +1424,51 @@ public class LostPlaceholderMob extends PathfinderMob {
                 LostFx.burst(this.level(), this.blockPosition(), "space_magic", 18, 0.75D, 0.04D);
             }
         }
+    }
+
+    private void tickEncounterController(LivingEntity target, String id) {
+        if (id.contains("arenaevent")) {
+            this.getNavigation().stop();
+            if (this.tickCount % 100 == 0) {
+                for (LostPlaceholderMob ally : this.level().getEntitiesOfClass(LostPlaceholderMob.class, this.getBoundingBox().inflate(28.0D),
+                        mob -> mob != this && mob.getTarget() == null && isLostInfinityMob(mob))) {
+                    ally.setTarget(target);
+                }
+                LostFx.burst(this.level(), this.blockPosition(), "portal_beam", 18, 1.1D, 0.04D);
+            }
+            return;
+        }
+        if (id.contains("puzzle")) {
+            if (this.tickCount % 60 == 0) {
+                shootAt(target);
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 0));
+                target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 90, 0));
+            }
+            if (this.tickCount % 160 == 0) {
+                Vec3 offset = new Vec3((this.random.nextDouble() - 0.5D) * 8.0D, 0.0D, (this.random.nextDouble() - 0.5D) * 8.0D);
+                this.teleportTo(target.getX() + offset.x, target.getY(), target.getZ() + offset.z);
+                LostFx.burst(this.level(), this.blockPosition(), "space_magic", 20, 0.8D, 0.04D);
+            }
+            return;
+        }
+        if (id.contains("ozordecoy")) {
+            if (this.tickCount % 45 == 0) {
+                confuseTarget(target);
+            }
+            if (this.tickCount % 120 == 0) {
+                evadeTarget(target);
+            }
+            return;
+        }
+        if (id.contains("lostdeviant")) {
+            if (this.tickCount % 70 == 0) {
+                target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 100, 0));
+                target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
+                shootAt(target);
+            }
+            return;
+        }
+        tickLegacyBossSupport(target, id);
     }
 
     private void applyThemedHit(LivingEntity living) {
