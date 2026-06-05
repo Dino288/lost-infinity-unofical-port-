@@ -1282,6 +1282,41 @@ public class LostPlaceholderMob extends PathfinderMob {
 
     private void tickRiftHazard(LivingEntity target, String id) {
         this.getNavigation().stop();
+        this.setDeltaMovement(Vec3.ZERO);
+        if (id.equals("rift") && this.tickCount % 10 == 0) {
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(20.0D))) {
+                if (!player.isSpectator()) {
+                    player.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 40, 2));
+                }
+            }
+            LostFx.burst(this.level(), this.blockPosition(), "plasma", 8, 1.1D, 0.02D);
+            return;
+        }
+        if (id.contains("unstablerift")) {
+            if (this.tickCount >= 120) {
+                LostFx.burst(this.level(), this.blockPosition(), "electric_explosion_blue", 36, 2.0D, 0.08D);
+                LostFx.burst(this.level(), this.blockPosition(), "plasma_explosion", 36, 1.6D, 0.08D);
+                for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(20.0D),
+                        e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+                    living.hurt(this.damageSources().mobAttack(this), Math.max(8.0F, living.getMaxHealth()));
+                    living.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 160, 1));
+                }
+                this.level().playSound(null, this.blockPosition(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 1.5F, 0.9F + this.random.nextFloat() * 0.2F);
+                this.discard();
+            } else if (this.tickCount % 12 == 0) {
+                LostFx.burst(this.level(), this.blockPosition(), "plasma", 10, 1.0D, 0.04D);
+            }
+            return;
+        }
+        if (id.contains("despair")) {
+            if (this.tickCount % 10 == 0) {
+                target.addEffect(new MobEffectInstance(ModEffects.ULTRAHEAVY.get(), 80, 2));
+                target.addEffect(new MobEffectInstance(ModEffects.TERRIFIED.get(), 80, 0));
+                target.push(0.0D, -0.9D, 0.0D);
+                LostFx.burst(this.level(), target.blockPosition(), "blackhole_ring", 12, 0.65D, 0.04D);
+            }
+            return;
+        }
         if (this.tickCount % 65 == 0) {
             Vec3 pull = id.contains("sand") ? target.position().subtract(this.position()) : this.position().subtract(target.position());
             if (pull.lengthSqr() > 0.01D) {
@@ -1565,6 +1600,49 @@ public class LostPlaceholderMob extends PathfinderMob {
     private void tickEffectEntity(LivingEntity target, String id) {
         this.getNavigation().stop();
         this.setDeltaMovement(Vec3.ZERO);
+        if (id.contains("ion")) {
+            if (this.tickCount >= 1 && this.recoveredState == 0) {
+                recoveredEffectBlast(id, 24.0D, 2.0F, "electric_explosion_blue");
+                this.recoveredState = 1;
+            }
+            if (this.tickCount >= 20) {
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("nitro")) {
+            if (this.tickCount >= 2 && this.recoveredState == 0) {
+                recoveredEffectBlast(id, 5.0D, 0.35F, "sweep_attack");
+                this.recoveredState = 1;
+                this.level().playSound(null, this.blockPosition(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 1.2F, 1.0F);
+            }
+            if (this.tickCount >= 40) {
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("nuclear")) {
+            if (this.tickCount < 160 && this.tickCount % 10 == 0) {
+                for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(32.0D),
+                        e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+                    Vec3 pull = this.position().subtract(living.position());
+                    if (pull.lengthSqr() > 0.01D) {
+                        Vec3 motion = pull.normalize().scale(0.2D);
+                        living.push(motion.x, motion.y, motion.z);
+                    }
+                }
+                LostFx.burst(this.level(), this.blockPosition(), "gravity_ring", 20, 1.8D, 0.03D);
+            }
+            if (this.tickCount > 160 && this.recoveredState == 0) {
+                recoveredEffectBlast(id, 60.0D, 4.0F, "plasma_explosion");
+                this.recoveredState = 1;
+                this.level().playSound(null, this.blockPosition(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 2.0F, 0.65F);
+            }
+            if (this.tickCount > 200) {
+                this.discard();
+            }
+            return;
+        }
         if (this.tickCount % 10 == 0) {
             String particle = id.contains("ion") ? "electric_explosion_blue" : id.contains("nuclear") ? "plasma_explosion" : "plasma";
             LostFx.burst(this.level(), this.blockPosition(), particle, 14, 0.75D, 0.08D);
@@ -1578,6 +1656,23 @@ public class LostPlaceholderMob extends PathfinderMob {
                 } else if (id.contains("nitro")) {
                     living.push(0.0D, 0.65D, 0.0D);
                 }
+            }
+        }
+    }
+
+    private void recoveredEffectBlast(String id, double range, float damageMultiplier, String particle) {
+        LostFx.burst(this.level(), this.blockPosition(), particle, id.contains("nuclear") ? 64 : 32, Math.max(1.0D, range * 0.08D), 0.1D);
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(range),
+                e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+            double distance = Math.max(1.0D, Math.sqrt(this.distanceToSqr(living)));
+            float damage = Math.max(4.0F, living.getMaxHealth() * damageMultiplier / (float) Math.max(1.0D, distance / 8.0D));
+            living.hurt(this.damageSources().mobAttack(this), damage);
+            if (id.contains("ion")) {
+                living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 1));
+            } else if (id.contains("nitro")) {
+                living.push(0.0D, 0.65D, 0.0D);
+            } else if (id.contains("nuclear")) {
+                living.addEffect(new MobEffectInstance(ModEffects.SHATTERED.get(), 180, 1));
             }
         }
     }
