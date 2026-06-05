@@ -1317,14 +1317,75 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickExplosiveRecoveredMob(LivingEntity target, String id) {
+        this.fallDistance = -1.0F;
         if (id.contains("tntzombie")) {
-            this.fallDistance = -1.0F;
             if (this.tickCount == 300 || (this.tickCount >= 60 && this.distanceToSqr(target) < 9.0D)) {
                 primeFuse();
             }
             if (this.tickCount % 30 == 0) {
                 LostFx.burst(this.level(), this.blockPosition(), "plasma", 8, 0.35D, 0.03D);
             }
+        }
+        if (id.contains("plasmabomb")) {
+            if (this.tickCount >= 20 && this.recoveredState == 0) {
+                recoveredBombBlast(id, 5.0D, 1.0F, "plasma_explosion");
+                this.recoveredState = 1;
+                this.level().playSound(null, this.blockPosition(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 1.5F, 0.8F);
+            }
+            if (this.recoveredState > 0 && this.recoveredState < 4 && this.tickCount % 5 == 0) {
+                this.recoveredState++;
+                Vec3 step = target.position().subtract(this.position());
+                if (step.lengthSqr() > 0.01D) {
+                    Vec3 next = step.normalize().scale(3.0D);
+                    this.teleportTo(this.getX() + next.x, this.getY(), this.getZ() + next.z);
+                    recoveredBombBlast(id, 5.0D, 1.0F, "plasma_explosion");
+                }
+            }
+            if (this.tickCount > 45) {
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("stickybomb")) {
+            if (this.tickCount > 20 && this.recoveredState == 0) {
+                recoveredBombBlast(id, 6.0D, 0.5F, "plasma_explosion");
+                this.recoveredState = 1;
+                this.level().playSound(null, this.blockPosition(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 1.5F, 1.0F);
+                this.discard();
+            } else if (this.tickCount % 10 == 0) {
+                target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 80, 1));
+                LostFx.burst(this.level(), target.blockPosition(), "gravity_ring", 8, 0.35D, 0.03D);
+            }
+            return;
+        }
+        if (id.contains("stormbomb")) {
+            if (this.tickCount >= 3 && this.recoveredState == 0) {
+                recoveredBombBlast(id, 5.0D, 0.5F, "electric_explosion_blue");
+                this.recoveredState = 1;
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("thunderbomb")) {
+            if (this.tickCount % 20 == 0 && this.tickCount < 100) {
+                LostFx.burst(this.level(), this.blockPosition(), "electric_explosion_blue", 10, 0.55D, 0.04D);
+            }
+            if (this.tickCount >= 100 && this.recoveredState == 0) {
+                recoveredBombBlast(id, 3.0D, 0.5F, "electric_explosion_blue");
+                this.recoveredState = 1;
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("bomberbomb")) {
+            if (this.tickCount >= 60 && this.tickCount % 2 == 0) {
+                int size = Math.min(5, (this.tickCount - 60) / 2);
+                recoveredBomberTileBlast(size);
+                if (size >= 5) {
+                    this.discard();
+                }
+            }
+            return;
         }
         if (this.distanceToSqr(target) < (id.contains("bomb") ? 25.0D : 16.0D)) {
             primeFuse();
@@ -1340,6 +1401,31 @@ public class LostPlaceholderMob extends PathfinderMob {
         if (id.contains("sticky") && this.tickCount % 45 == 0) {
             target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 120, 1));
         }
+    }
+
+    private void recoveredBombBlast(String id, double range, float damageMultiplier, String particle) {
+        LostFx.burst(this.level(), this.blockPosition(), particle, 28, Math.max(0.8D, range * 0.22D), 0.08D);
+        for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(range),
+                e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() * damageMultiplier));
+            if (id.contains("storm") || id.contains("thunder")) {
+                living.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
+            } else if (id.contains("sticky")) {
+                living.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 140, 1));
+            }
+        }
+    }
+
+    private void recoveredBomberTileBlast(int size) {
+        double[][] offsets = {{0.0D, 0.0D}, {size, 0.0D}, {-size, 0.0D}, {0.0D, size}, {0.0D, -size}};
+        for (double[] offset : offsets) {
+            Vec3 pos = this.position().add(offset[0], 0.0D, offset[1]);
+            LostFx.burst(this.level(), net.minecraft.core.BlockPos.containing(pos), "plasma_explosion", 10, 0.35D, 0.06D);
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().move(offset[0], 0.0D, offset[1]).inflate(0.75D))) {
+                player.hurt(this.damageSources().mobAttack(this), Math.max(10.0F, player.getMaxHealth()));
+            }
+        }
+        this.level().playSound(null, this.blockPosition(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 0.7F, 1.1F);
     }
 
     private void tickRiftHazard(LivingEntity target, String id) {
