@@ -850,6 +850,13 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "bomb_drone", "bomberbomb", "tntzombie", "rocket_strapped_explosive", "cosmicbomb", "plasmabomb", "stickybomb", "thunderbomb", "stormbomb" -> tickExplosiveRecoveredMob(target, id);
             case "rift", "unstablerift", "mark_of_despair", "forbiddenbrand", "sandattack", "tornindividual" -> tickRiftHazard(target, id);
             case "augmenticon", "globoon", "globro", "glomite", "glochipper", "glangler", "essencedweller", "essenceidol" -> tickEssenceMob(target, id);
+            case "starfiend", "galacticterror", "nightshyre", "wither_skullling" -> tickVoidFiend(target, id);
+            case "bloodhunter", "gnawer", "chomper", "hypnosaur" -> tickPredatorMob(target, id);
+            case "fungfly", "flutterfyre", "flapper", "giantflapper", "flurky", "fyreweed", "giantfyreweed" -> tickNatureFlyer(target, id);
+            case "mirrorzombie", "reflectal", "spectre", "player_limb", "lost_blade" -> tickMirrorMob(target, id);
+            case "hanger", "grappler", "gravhead", "hurler", "eyeslug" -> tickControlMob(target, id);
+            case "chemist", "archeologist", "pearlcollector", "pickleman", "skycrab", "jet_mount" -> tickUtilityCreature(target, id);
+            case "nuxuro", "alestria", "vycellia", "duskerqueen", "atlasspire", "atlascrystal", "celestial_statue" -> tickLegacyBossSupport(target, id);
             default -> {
             }
         }
@@ -1164,6 +1171,135 @@ public class LostPlaceholderMob extends PathfinderMob {
             } else {
                 shootAt(target);
                 target.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 90, 0));
+            }
+        }
+    }
+
+    private void tickVoidFiend(LivingEntity target, String id) {
+        if (this.tickCount % 65 == 0) {
+            shootAt(target);
+            target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 110, id.contains("terror") ? 1 : 0));
+        }
+        if (this.tickCount % 120 == 0) {
+            gravityPulse(target, id.contains("skull") ? 5.0D : 6.5D, id.contains("terror") ? 5.0F : 3.0F, "blackhole_ring");
+        }
+    }
+
+    private void tickPredatorMob(LivingEntity target, String id) {
+        if (this.tickCount % (id.contains("chomper") ? 45 : 70) == 0) {
+            leapAt(target);
+        }
+        if (this.tickCount % 55 == 0 && this.distanceToSqr(target) < 16.0D) {
+            if (id.contains("blood")) {
+                target.addEffect(new MobEffectInstance(ModEffects.BLOOD_TOXIN.get(), 140, 0));
+                this.heal(2.0F);
+            } else if (id.contains("hypno")) {
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 160, 1));
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0));
+            } else {
+                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 90, 0));
+            }
+        }
+    }
+
+    private void tickNatureFlyer(LivingEntity target, String id) {
+        if (this.tickCount % 35 == 0) {
+            Vec3 drift = target.getEyePosition().subtract(this.position()).normalize().scale(id.contains("giant") ? 0.18D : 0.28D);
+            this.setDeltaMovement(this.getDeltaMovement().scale(0.7D).add(drift));
+        }
+        if (this.tickCount % (id.contains("weed") ? 90 : 65) == 0) {
+            if (id.contains("fyre") || id.contains("fire")) {
+                target.setSecondsOnFire(id.contains("giant") ? 8 : 5);
+                LostFx.burst(this.level(), target.blockPosition(), "plasma", 16, 0.6D, 0.05D);
+            } else if (id.contains("fung")) {
+                sporePulse(target, 4.0D);
+            } else {
+                shootAt(target);
+            }
+        }
+    }
+
+    private void tickMirrorMob(LivingEntity target, String id) {
+        if (this.tickCount % 75 == 0) {
+            evadeTarget(target);
+        }
+        if (this.tickCount % 95 == 0) {
+            target.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 110, 0));
+            if (id.contains("blade")) {
+                target.hurt(this.damageSources().mobAttack(this), 5.0F);
+            } else {
+                target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0));
+            }
+        }
+    }
+
+    private void tickControlMob(LivingEntity target, String id) {
+        if (this.tickCount % 70 == 0) {
+            if (id.contains("hurler")) {
+                Vec3 away = target.position().subtract(this.position()).normalize().scale(1.1D);
+                target.push(away.x, 0.45D, away.z);
+                LostFx.burst(this.level(), target.blockPosition(), "supersonic_blue", 14, 0.6D, 0.05D);
+            } else if (id.contains("grav")) {
+                gravityPulse(target, 5.0D, 2.0F, "gravity_ring");
+            } else {
+                webTarget(target);
+            }
+        }
+        if (id.contains("eye") && this.tickCount % 100 == 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0));
+        }
+    }
+
+    private void tickUtilityCreature(LivingEntity target, String id) {
+        if (id.contains("skycrab") || id.contains("jet")) {
+            tickSmallFlyer(target, id);
+            if (this.tickCount % 80 == 0) {
+                mountedCharge(target);
+            }
+            return;
+        }
+        if (id.contains("chemist") && this.tickCount % 70 == 0) {
+            switch (this.random.nextInt(3)) {
+                case 0 -> target.addEffect(new MobEffectInstance(MobEffects.POISON, 120, 1));
+                case 1 -> target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
+                default -> target.addEffect(new MobEffectInstance(ModEffects.SHATTERED.get(), 100, 0));
+            }
+            LostFx.burst(this.level(), target.blockPosition(), "plague", 16, 0.65D, 0.04D);
+        } else if (id.contains("pickle") && this.tickCount % 55 == 0) {
+            leapAt(target);
+            this.heal(1.0F);
+        } else if (id.contains("collector") && this.tickCount % 45 == 0) {
+            collectNearbyItems();
+            target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 60, 0));
+        }
+    }
+
+    private void tickLegacyBossSupport(LivingEntity target, String id) {
+        if (id.contains("crystal") || id.contains("statue") || id.contains("spire")) {
+            this.getNavigation().stop();
+            this.setDeltaMovement(Vec3.ZERO);
+            if (this.tickCount % 65 == 0) {
+                shootAt(target);
+            }
+            if (this.tickCount % 120 == 0) {
+                healAllies();
+            }
+            return;
+        }
+        if (this.tickCount % 80 == 0) {
+            shootAt(target);
+        }
+        if (this.tickCount % 140 == 0) {
+            switch (id) {
+                case "nuxuro" -> gravityPulse(target, 6.0D, 3.0F, "gravity_ring");
+                case "alestria" -> rainProjectilesOver(target, 5, "portal_beam");
+                case "vycellia" -> target.addEffect(new MobEffectInstance(ModEffects.POTION_AFFINITY.get(), 140, 1));
+                case "duskerqueen" -> {
+                    target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 120, 0));
+                    target.addEffect(new MobEffectInstance(ModEffects.TERRIFIED.get(), 120, 0));
+                }
+                default -> {
+                }
             }
         }
     }
