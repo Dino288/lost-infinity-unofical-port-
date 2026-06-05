@@ -940,6 +940,22 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickTetherHunter(LivingEntity target, String id) {
+        if (id.contains("tentacletrap")) {
+            this.getNavigation().stop();
+            this.setDeltaMovement(Vec3.ZERO);
+            if (this.tickCount > 300) {
+                this.discard();
+                return;
+            }
+            target.teleportTo(this.getX(), this.getY(), this.getZ());
+            target.setDeltaMovement(Vec3.ZERO);
+            target.hurtMarked = true;
+            if (this.tickCount % 20 == 0) {
+                target.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, target.getMaxHealth() / 5.0F));
+                LostFx.burst(this.level(), target.blockPosition(), "shadow_blast", 12, 0.45D, 0.04D);
+            }
+            return;
+        }
         if (id.contains("tetherbug")) {
             this.fallDistance = -1.0F;
             if (this.getTarget() == null) {
@@ -1046,6 +1062,52 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickSupportTotemMob(LivingEntity target, String id) {
+        this.getNavigation().stop();
+        this.setDeltaMovement(Vec3.ZERO);
+        if (id.contains("totemmoon")) {
+            int timer = 150 - (this.tickCount % 150);
+            if ((timer >= 40 && timer % 40 == 0) || (timer < 40 && timer % 10 == 0)) {
+                radialProjectiles(16, 0.8D, "plasma");
+                LostFx.burst(this.level(), this.blockPosition(), "plasma", 18, 0.9D, 0.06D);
+                this.level().playSound(null, this.blockPosition(), SoundEvents.DISPENSER_LAUNCH, SoundSource.HOSTILE, 1.0F, 1.0F);
+            }
+            if (this.tickCount > 150) {
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("totemsplitter")) {
+            if (this.tickCount % 4 == 0) {
+                for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(20.0D))) {
+                    if (!player.isSpectator()) {
+                        player.addEffect(new MobEffectInstance(ModEffects.ULTRAHEAVY.get(), 10, 2));
+                        player.addEffect(new MobEffectInstance(ModEffects.INTANGIBLE.get(), 10, 0));
+                        player.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 10, 0));
+                    }
+                }
+            }
+            if (this.tickCount % 40 == 0) {
+                LostFx.burst(this.level(), this.blockPosition(), "gravity_ring", 18, 1.0D, 0.04D);
+                this.level().playSound(null, this.blockPosition(), SoundEvents.BEACON_AMBIENT, SoundSource.HOSTILE, 1.2F, 0.6F + this.random.nextFloat() * 0.3F);
+            }
+            if (this.tickCount > 400) {
+                this.discard();
+            }
+            return;
+        }
+        if (id.contains("totempylon")) {
+            if (this.tickCount % 5 == 0) {
+                for (Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(20.0D),
+                        e -> e instanceof LostCombatProjectile || e.getType().builtInRegistryHolder().key().location().getPath().contains("projectile"))) {
+                    LostFx.burst(this.level(), entity.blockPosition(), "plasma", 10, 0.45D, 0.06D);
+                    entity.discard();
+                }
+            }
+            if (this.tickCount > 200) {
+                this.discard();
+            }
+            return;
+        }
         if (this.tickCount % 90 == 0) {
             healAllies();
             if (id.contains("splitter") || id.contains("lantern")) {
@@ -1590,10 +1652,16 @@ public class LostPlaceholderMob extends PathfinderMob {
         } else if (id.contains("course") && this.tickCount % 40 == 0) {
             target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 0));
             LostFx.burst(this.level(), target.blockPosition(), "portal_beam", 8, 0.35D, 0.03D);
-        } else if (id.contains("skybooster") && this.tickCount % 50 == 0) {
-            target.push(0.0D, 0.9D, 0.0D);
+        } else if (id.contains("skybooster")) {
+            if (this.tickCount % 10 == 0) {
+                this.level().playSound(null, this.blockPosition(), SoundEvents.FIREWORK_ROCKET_LAUNCH, SoundSource.HOSTILE, 1.0F, 0.5F + this.random.nextFloat());
+            }
+            target.push(0.0D, 2.0D, 0.0D);
             target.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 80, 0));
             LostFx.burst(this.level(), target.blockPosition(), "supersonic_blue", 12, 0.5D, 0.04D);
+            if (this.tickCount > 120) {
+                this.discard();
+            }
         }
     }
 
