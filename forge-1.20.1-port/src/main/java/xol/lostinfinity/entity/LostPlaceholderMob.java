@@ -15,6 +15,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.monster.Guardian;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -316,6 +317,10 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "thundyron" -> tickThunderBoss(target, phase);
             case "cryonus" -> tickCryonusBoss(target, phase);
             case "ozor" -> tickOzorBoss(target, phase);
+            case "elara" -> tickElaraBoss(target, phase);
+            case "arash" -> tickArashBoss(target, phase);
+            case "urogo" -> tickUrogoBoss(target, phase);
+            case "velo" -> tickVeloBoss(target, phase);
             default -> {
             }
         }
@@ -397,6 +402,84 @@ public class LostPlaceholderMob extends PathfinderMob {
         }
     }
 
+    private void tickElaraBoss(LivingEntity target, int phase) {
+        if (this.tickCount % 60 == 0) {
+            shootAt(target);
+        }
+        if (this.tickCount % 100 == 0) {
+            pushNearbyPlayers(7.0D, 1.39D, 0.65D, "portal_beam");
+        }
+        if (this.tickCount % 150 == 0) {
+            Vec3 charge = target.position().subtract(this.position()).normalize().scale(0.65D);
+            this.setDeltaMovement(charge.x, 1.0D, charge.z);
+            LostFx.burst(this.level(), this.blockPosition(), "supersonic_blue", 20, 0.8D, 0.04D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.TRIDENT_RIPTIDE_3, SoundSource.HOSTILE, 0.8F, 1.2F);
+        }
+        if (this.tickCount % 120 == 0) {
+            rainProjectilesOver(target, 8 + this.random.nextInt(4), "space_magic");
+        }
+        if (phase >= 2 && this.tickCount % 400 == 0) {
+            spawnGuardians(target, 4 + this.random.nextInt(2));
+        }
+    }
+
+    private void tickArashBoss(LivingEntity target, int phase) {
+        if (this.tickCount % 120 == 0) {
+            this.teleportTo(target.getX(), target.getY(), target.getZ());
+            target.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, target.getMaxHealth() / 4.0F));
+            pushNearbyPlayers(4.0D, 0.59D, 0.35D, "sweep_attack");
+            this.level().playSound(null, this.blockPosition(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.HOSTILE, 0.9F, 0.8F);
+        }
+        if ((this.tickCount + 80) % 100 == 0) {
+            int crystalCount = 1 + (phase >= 2 ? 1 : 0) + (phase >= 3 ? 1 : 0);
+            for (int i = 0; i < crystalCount; i++) {
+                spawnBossMinion(ModEntities.DEVIANTCRYSTAL.get(), target, phase >= 3 ? 0.75F : 0.55F, 6);
+            }
+        }
+    }
+
+    private void tickUrogoBoss(LivingEntity target, int phase) {
+        int interval = phase >= 2 ? 50 : 120;
+        if (this.tickCount % interval != 0) {
+            return;
+        }
+        switch (this.random.nextInt(3)) {
+            case 0 -> {
+                this.teleportTo(target.getX(), target.getY(), target.getZ());
+                target.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, target.getMaxHealth() / 7.0F));
+            }
+            case 1 -> {
+                target.teleportTo(this.getX(), this.getY(), this.getZ());
+                target.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, target.getMaxHealth() / 8.0F));
+            }
+            default -> {
+                this.teleportTo(25.5D, 62.2D, -92.0D);
+                target.teleportTo(25.5D, 62.2D, -88.0D);
+                target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 120, 0));
+            }
+        }
+        target.push(this.getDeltaMovement().x * 7.5D, 0.4D, this.getDeltaMovement().z * 7.0D);
+        LostFx.burst(this.level(), target.blockPosition(), "bad_magic", 22, 0.8D, 0.05D);
+        this.level().playSound(null, target.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 0.8F, 0.65F);
+    }
+
+    private void tickVeloBoss(LivingEntity target, int phase) {
+        if (this.tickCount % 30 == 0) {
+            for (int i = -1; i <= 1; i++) {
+                shootSpreadAt(target, i * 0.45D, 6.0F + phase);
+            }
+            this.level().playSound(null, this.blockPosition(), SoundEvents.EVOKER_CAST_SPELL, SoundSource.HOSTILE, 1.0F, 1.0F);
+        }
+        int roomForm = (phase - 1) % 3;
+        if (roomForm == 2 && this.tickCount % 80 == 0) {
+            radialProjectiles(12, 0.35D, "ancient_spell");
+        } else if (roomForm == 1 && this.tickCount % 60 < 30 && this.tickCount % 2 == 0) {
+            radialProjectiles(1, 0.25D, "space_magic");
+        } else if (roomForm == 0 && this.tickCount % 90 <= 30 && this.tickCount % 10 == 0) {
+            radialProjectiles(10, 0.2D + 0.08D * ((this.tickCount % 90) / 10), "portal_beam");
+        }
+    }
+
     private void spawnBossMinion(EntityType<? extends LostPlaceholderMob> type, LivingEntity target, float healthScale, int maxNearby) {
         String family = minionFamily(type);
         long nearby = this.level().getEntitiesOfClass(LostPlaceholderMob.class, this.getBoundingBox().inflate(24.0D),
@@ -466,6 +549,64 @@ public class LostPlaceholderMob extends PathfinderMob {
         }
         LostFx.burst(this.level(), target.blockPosition(), particle, 28, 1.0D, 0.07D);
         this.level().playSound(null, target.blockPosition(), SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.HOSTILE, 0.7F, "snowflake".equals(particle) ? 1.4F : 1.0F);
+    }
+
+    private void pushNearbyPlayers(double radius, double strength, double yBoost, String particle) {
+        for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(radius), Player::isAlive)) {
+            Vec3 away = player.position().subtract(this.position());
+            if (away.lengthSqr() < 0.01D) {
+                away = randomDrift();
+            }
+            Vec3 push = away.normalize().scale(strength);
+            player.push(push.x, yBoost, push.z);
+        }
+        LostFx.burst(this.level(), this.blockPosition(), particle, 22, radius * 0.12D, 0.05D);
+    }
+
+    private void spawnGuardians(LivingEntity target, int count) {
+        for (int i = 0; i < count; i++) {
+            Guardian guardian = EntityType.GUARDIAN.create(this.level());
+            if (guardian == null) {
+                continue;
+            }
+            guardian.moveTo(this.getX() - 4.0D + this.random.nextDouble() * 8.0D, this.getY() + 2.0D,
+                    this.getZ() - 4.0D + this.random.nextDouble() * 8.0D, this.random.nextFloat() * 360.0F, 0.0F);
+            guardian.setTarget(target);
+            this.level().addFreshEntity(guardian);
+        }
+        LostFx.burst(this.level(), this.blockPosition(), "murk", 30, 1.2D, 0.04D);
+        this.level().playSound(null, this.blockPosition(), SoundEvents.GUARDIAN_AMBIENT, SoundSource.HOSTILE, 0.9F, 0.85F);
+    }
+
+    private void rainProjectilesOver(LivingEntity target, int count, String particle) {
+        for (int i = 0; i < count; i++) {
+            LostCombatProjectile projectile = new LostCombatProjectile(this.level(), this, 6.0F + this.bossPhase);
+            projectile.setPos(target.getX() - 4.0D + this.random.nextDouble() * 8.0D, target.getY() + 12.0D + this.random.nextDouble() * 8.0D,
+                    target.getZ() - 4.0D + this.random.nextDouble() * 8.0D);
+            projectile.shoot(0.0D, -0.35D, 0.0D, 0.75F, 0.1F);
+            this.level().addFreshEntity(projectile);
+        }
+        LostFx.burst(this.level(), target.blockPosition(), particle, 18, 0.9D, 0.04D);
+        this.level().playSound(null, target.blockPosition(), SoundEvents.ILLUSIONER_CAST_SPELL, SoundSource.HOSTILE, 0.8F, 1.15F);
+    }
+
+    private void shootSpreadAt(LivingEntity target, double spread, float damage) {
+        LostCombatProjectile projectile = new LostCombatProjectile(this.level(), this, damage);
+        projectile.setPos(this.getX(), this.getEyeY() - 0.15D, this.getZ());
+        Vec3 delta = target.getEyePosition().subtract(projectile.position()).add(spread, 0.0D, -spread);
+        projectile.shoot(delta.x, delta.y + delta.horizontalDistance() * 0.2D, delta.z, 1.55F, 0.0F);
+        this.level().addFreshEntity(projectile);
+    }
+
+    private void radialProjectiles(int count, double yLift, String particle) {
+        for (int i = 0; i < count; i++) {
+            double angle = (Math.PI * 2.0D * i) / Math.max(1, count);
+            LostCombatProjectile projectile = new LostCombatProjectile(this.level(), this, 5.0F + this.bossPhase);
+            projectile.setPos(this.getX(), this.getEyeY(), this.getZ());
+            projectile.shoot(Math.cos(angle), yLift, Math.sin(angle), 1.25F, 0.0F);
+            this.level().addFreshEntity(projectile);
+        }
+        LostFx.burst(this.level(), this.blockPosition(), particle, Math.max(12, count * 2), 0.9D, 0.04D);
     }
 
     private void splitMinions() {
@@ -771,7 +912,8 @@ public class LostPlaceholderMob extends PathfinderMob {
     private boolean isRecoveredBossEntity() {
         String id = mobId();
         return "cthulhu".equals(id) || "andromeda".equals(id) || "mushmerra".equals(id)
-                || "thundyron".equals(id) || "cryonus".equals(id) || "ozor".equals(id);
+                || "thundyron".equals(id) || "cryonus".equals(id) || "ozor".equals(id)
+                || "elara".equals(id) || "arash".equals(id) || "urogo".equals(id) || "velo".equals(id);
     }
 
     private int bossPhaseForHealth() {
@@ -793,6 +935,9 @@ public class LostPlaceholderMob extends PathfinderMob {
         if ("thundyron".equals(id)) return "electric_explosion_blue";
         if ("cryonus".equals(id)) return "snowflake";
         if ("ozor".equals(id)) return "space_magic";
+        if ("elara".equals(id)) return "portal_beam";
+        if ("arash".equals(id) || "urogo".equals(id)) return "bad_magic";
+        if ("velo".equals(id)) return "ancient_spell";
         return "bad_magic";
     }
 
