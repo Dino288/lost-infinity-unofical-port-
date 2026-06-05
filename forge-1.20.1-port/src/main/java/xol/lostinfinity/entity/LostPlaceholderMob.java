@@ -221,6 +221,7 @@ public class LostPlaceholderMob extends PathfinderMob {
             if (isRecoveredBossEntity()) {
                 tickRecoveredBossBehavior(target);
             }
+            tickRecoveredSimpleMobBehavior(target);
         }
         if ((isHealerEntity() || isSummonerEntity()) && this.supportCooldown <= 0) {
             if (isHealerEntity()) {
@@ -818,6 +819,133 @@ public class LostPlaceholderMob extends PathfinderMob {
         if (delta.lengthSqr() > 4.0D && delta.lengthSqr() < 144.0D) {
             this.setDeltaMovement(delta.normalize().scale(0.95D).add(0.0D, 0.18D, 0.0D));
             this.level().playSound(null, this.blockPosition(), SoundEvents.HORSE_GALLOP, SoundSource.HOSTILE, 0.7F, 1.05F);
+        }
+    }
+
+    private void tickRecoveredSimpleMobBehavior(LivingEntity target) {
+        String id = mobId();
+        switch (id) {
+            case "drippler", "gorger", "doublejaw", "minimite", "grubber" -> tickStarforgeBiter(target, id);
+            case "clusterweed", "blisterweed", "vilebulb" -> tickPlantHazard(target, id);
+            case "wisp", "flashfly", "terrorfly", "scorpwing", "orbiter", "nat" -> tickSmallFlyer(target, id);
+            case "tetherbug", "tentaclon", "tentacletrap", "weaver", "lurcher" -> tickTetherHunter(target, id);
+            case "sightwalker", "leer", "whisper", "caveterror", "screamer", "x_screacher" -> tickFearMob(target, id);
+            case "rockworm", "rockslug", "giant_rockslug" -> tickRockAmbusher(target, id);
+            case "torpedon", "snapper", "doomdog" -> tickChargeMob(target, id);
+            case "sentry", "nebula_wizard", "nebula_giant", "nebula_grunt" -> tickSimpleRangedMob(target, id);
+            case "multiverseghost", "risingphantom", "ghostcopy", "phaser", "shimmer" -> tickGhostMob(target, id);
+            case "tentaclelantern", "totemsplitter", "totemmoon", "totempylon" -> tickSupportTotemMob(target, id);
+            default -> {
+            }
+        }
+    }
+
+    private void tickStarforgeBiter(LivingEntity target, String id) {
+        if (this.tickCount % (id.contains("minimite") ? 55 : 75) == 0) {
+            leapAt(target);
+        }
+        if (this.tickCount % 45 == 0 && this.distanceToSqr(target) < 12.0D) {
+            target.addEffect(new MobEffectInstance(id.contains("grubber") ? MobEffects.HUNGER : MobEffects.MOVEMENT_SLOWDOWN, 80, 0));
+            if (id.contains("gorger") || id.contains("doublejaw")) {
+                this.heal(1.5F);
+            }
+        }
+    }
+
+    private void tickPlantHazard(LivingEntity target, String id) {
+        this.getNavigation().stop();
+        this.setDeltaMovement(Vec3.ZERO);
+        if (this.tickCount % 70 == 0 && this.distanceToSqr(target) < 13.0D * 13.0D) {
+            sporePulse(target, id.contains("blister") ? 4.5D : 3.5D);
+            if (id.contains("blister")) {
+                target.setSecondsOnFire(4);
+            }
+        }
+    }
+
+    private void tickSmallFlyer(LivingEntity target, String id) {
+        if (this.tickCount % 30 == 0) {
+            Vec3 strafe = new Vec3(target.getZ() - this.getZ(), 0.25D, this.getX() - target.getX()).normalize().scale(0.28D);
+            this.setDeltaMovement(this.getDeltaMovement().add(strafe));
+        }
+        if (this.tickCount % (id.contains("flash") ? 55 : 85) == 0) {
+            if (id.contains("flash")) {
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0));
+                LostFx.burst(this.level(), target.blockPosition(), "small_spark", 12, 0.4D, 0.04D);
+            } else {
+                shootAt(target);
+            }
+        }
+    }
+
+    private void tickTetherHunter(LivingEntity target, String id) {
+        if (this.tickCount % 80 == 0) {
+            webTarget(target);
+        }
+        if (this.tickCount % 120 == 0) {
+            Vec3 pull = this.position().subtract(target.position()).normalize().scale(id.contains("tentac") ? 0.8D : 0.55D);
+            target.push(pull.x, 0.15D, pull.z);
+            LostFx.burst(this.level(), target.blockPosition(), "gravity_ring", 12, 0.5D, 0.04D);
+        }
+    }
+
+    private void tickFearMob(LivingEntity target, String id) {
+        if (this.tickCount % 90 == 0) {
+            confuseTarget(target);
+        }
+        if ((id.contains("screamer") || id.contains("screach")) && this.tickCount % 55 == 0) {
+            target.hurt(this.damageSources().mobAttack(this), 3.0F);
+            Vec3 away = target.position().subtract(this.position()).normalize().scale(0.8D);
+            target.push(away.x, 0.25D, away.z);
+            LostFx.burst(this.level(), this.blockPosition(), "supersonic_blue", 20, 0.8D, 0.05D);
+        }
+    }
+
+    private void tickRockAmbusher(LivingEntity target, String id) {
+        if (this.tickCount % (id.contains("giant") ? 80 : 120) == 0) {
+            ambush(target);
+        }
+        if (this.tickCount % 70 == 0 && this.distanceToSqr(target) < 36.0D) {
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, id.contains("giant") ? 2 : 1));
+            LostFx.burst(this.level(), target.blockPosition(), "small_spark", 16, 0.7D, 0.04D);
+        }
+    }
+
+    private void tickChargeMob(LivingEntity target, String id) {
+        if (this.tickCount % (id.contains("torpedon") ? 45 : 70) == 0) {
+            mountedCharge(target);
+        }
+        if (id.contains("doom") && this.tickCount % 100 == 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 0));
+            target.addEffect(new MobEffectInstance(ModEffects.TERRIFIED.get(), 100, 0));
+        }
+    }
+
+    private void tickSimpleRangedMob(LivingEntity target, String id) {
+        if (this.tickCount % (id.contains("giant") ? 70 : 50) == 0 && this.distanceToSqr(target) < 32.0D * 32.0D) {
+            shootAt(target);
+        }
+        if (id.contains("nebula") && this.tickCount % 100 == 0) {
+            target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 90, id.contains("wizard") ? 1 : 0));
+        }
+    }
+
+    private void tickGhostMob(LivingEntity target, String id) {
+        if (this.tickCount % 70 == 0) {
+            evadeTarget(target);
+        }
+        if (this.tickCount % 95 == 0) {
+            target.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 120, 0));
+            target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 50, 0));
+        }
+    }
+
+    private void tickSupportTotemMob(LivingEntity target, String id) {
+        if (this.tickCount % 90 == 0) {
+            healAllies();
+            if (id.contains("splitter") || id.contains("lantern")) {
+                summonMinion(target);
+            }
         }
     }
 
