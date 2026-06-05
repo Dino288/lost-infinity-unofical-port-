@@ -883,6 +883,18 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickStarforgeBiter(LivingEntity target, String id) {
+        if (id.contains("gorger") || id.contains("doublejaw")) {
+            this.fallDistance = -1.0F;
+            this.setNoGravity(true);
+            if (this.tickCount % 80 == 3) {
+                this.recoveredState = 1;
+                this.setDeltaMovement(
+                        (this.random.nextDouble() - 0.5D) * 0.2D,
+                        (this.random.nextDouble() - 0.5D) * 0.2D,
+                        (this.random.nextDouble() - 0.5D) * 0.2D);
+                LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 8, 0.45D, 0.02D);
+            }
+        }
         if (this.tickCount % (id.contains("minimite") ? 55 : 75) == 0) {
             leapAt(target);
         }
@@ -921,6 +933,21 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickTetherHunter(LivingEntity target, String id) {
+        if (id.contains("tetherbug")) {
+            this.fallDistance = -1.0F;
+            if (this.getTarget() == null) {
+                this.setDeltaMovement(this.getDeltaMovement().add(0.0D, 0.2D, 0.0D));
+            }
+            if (this.tickCount % 60 == 0) {
+                shootAt(target);
+                target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 140, 1));
+                Vec3 pull = this.position().subtract(target.position()).normalize().scale(0.8D);
+                target.push(pull.x, 0.25D, pull.z);
+                LostFx.burst(this.level(), target.blockPosition(), "gravity_ring", 18, 0.7D, 0.05D);
+                this.level().playSound(null, this.blockPosition(), LostMobSounds.ability(id), SoundSource.HOSTILE, 1.0F, 1.0F);
+            }
+            return;
+        }
         if (this.tickCount % 80 == 0) {
             webTarget(target);
         }
@@ -944,6 +971,28 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickRockAmbusher(LivingEntity target, String id) {
+        if (id.contains("rockworm")) {
+            if (this.recoveredState == 0 && this.distanceToSqr(target) < 16.0D * 16.0D) {
+                this.recoveredState = 1;
+                LostFx.burst(this.level(), this.blockPosition(), "small_spark", 20, 0.8D, 0.04D);
+                this.level().playSound(null, this.blockPosition(), LostMobSounds.ambient(id), SoundSource.HOSTILE, 1.4F, 0.75F);
+            }
+            if (this.recoveredState == 0) {
+                this.getNavigation().stop();
+                this.setDeltaMovement(Vec3.ZERO);
+                return;
+            }
+            if (this.getTarget() == null) {
+                this.supportCooldown++;
+                if (this.supportCooldown > 200) {
+                    this.recoveredState = 0;
+                    this.supportCooldown = 0;
+                    LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 12, 0.5D, 0.02D);
+                }
+            } else {
+                this.supportCooldown = 0;
+            }
+        }
         if (this.tickCount % (id.contains("giant") ? 80 : 120) == 0) {
             ambush(target);
         }
@@ -1650,6 +1699,24 @@ public class LostPlaceholderMob extends PathfinderMob {
         }
         if (id.contains("phase") || id.contains("spectre") || id.contains("ghost")) {
             living.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 120, 0));
+        }
+        if (id.contains("sightwalker")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(10.0F, living.getMaxHealth()));
+            living.addEffect(new MobEffectInstance(ModEffects.BLIGHTED.get(), 200, 0));
+        } else if (id.contains("tetherbug")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(10.0F, living.getMaxHealth()));
+            living.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 160, 1));
+        } else if (id.contains("doublejaw")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(6.0F, living.getMaxHealth() / 3.0F));
+            living.addEffect(new MobEffectInstance(ModEffects.BLIGHTED.get(), 200, 0));
+        } else if (id.contains("gorger")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(10.0F, living.getMaxHealth()));
+        } else if (id.contains("rockworm")) {
+            this.recoveredState = 1;
+            living.hurt(this.damageSources().mobAttack(this), Math.max(8.0F, living.getMaxHealth() * 0.5F));
+            living.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 200, 0));
+        } else if (id.contains("explosect")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / 3.0F));
         }
         if (id.contains("shroomite")) {
             living.hurt(this.damageSources().mobAttack(this), Math.max(6.0F, living.getMaxHealth() * 0.5F));
