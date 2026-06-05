@@ -38,11 +38,13 @@ public class LostPlaceholderMob extends PathfinderMob {
     private static final String SUMMONED_MINION_TAG = "SummonedMinion";
     private static final String BOSS_PHASE_TAG = "LostBossPhase";
     private static final String LAST_RECOVERED_HEALTH_TAG = "LastRecoveredHealth";
+    private static final String RECOVERED_STATE_TAG = "RecoveredState";
     private int specialCooldown;
     private int supportCooldown;
     private int ambushCooldown;
     private int fuseTicks = -1;
     private int bossPhase = 1;
+    private int recoveredState;
     private boolean summonedMinion;
     private float lastRecoveredHealth = -1.0F;
 
@@ -116,6 +118,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         this.fuseTicks = tag.getInt(FUSE_TAG);
         this.summonedMinion = tag.getBoolean(SUMMONED_MINION_TAG);
         this.bossPhase = Math.max(1, tag.getInt(BOSS_PHASE_TAG));
+        this.recoveredState = tag.getInt(RECOVERED_STATE_TAG);
         this.lastRecoveredHealth = tag.contains(LAST_RECOVERED_HEALTH_TAG) ? tag.getFloat(LAST_RECOVERED_HEALTH_TAG) : -1.0F;
     }
 
@@ -125,6 +128,7 @@ public class LostPlaceholderMob extends PathfinderMob {
         tag.putInt(FUSE_TAG, this.fuseTicks);
         tag.putBoolean(SUMMONED_MINION_TAG, this.summonedMinion);
         tag.putInt(BOSS_PHASE_TAG, this.bossPhase);
+        tag.putInt(RECOVERED_STATE_TAG, this.recoveredState);
         tag.putFloat(LAST_RECOVERED_HEALTH_TAG, this.lastRecoveredHealth);
     }
 
@@ -372,6 +376,9 @@ public class LostPlaceholderMob extends PathfinderMob {
     private void tickMushmerraBoss(LivingEntity target, int phase) {
         if (this.tickCount % Math.max(50, 90 - phase * 12) == 0) {
             sporePulse(target, 5.0D + phase);
+        }
+        if (this.tickCount > 120 && this.tickCount % 100 == 0 && this.random.nextBoolean()) {
+            spawnBossMinion(ModEntities.MUSHMERRA_CLONE.get(), target, 0.35F, phase >= 3 ? 8 : 5);
         }
         if (this.tickCount % Math.max(95, 155 - phase * 20) == 0) {
             spawnBossMinion(phase >= 2 ? ModEntities.MUSHMERRA_CLONE.get() : ModEntities.SHROOMITE.get(), target, phase >= 2 ? 0.35F : 0.55F, phase >= 3 ? 6 : 4);
@@ -1166,6 +1173,15 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickExplosiveRecoveredMob(LivingEntity target, String id) {
+        if (id.contains("tntzombie")) {
+            this.fallDistance = -1.0F;
+            if (this.tickCount == 300 || (this.tickCount >= 60 && this.distanceToSqr(target) < 9.0D)) {
+                primeFuse();
+            }
+            if (this.tickCount % 30 == 0) {
+                LostFx.burst(this.level(), this.blockPosition(), "plasma", 8, 0.35D, 0.03D);
+            }
+        }
         if (this.distanceToSqr(target) < (id.contains("bomb") ? 25.0D : 16.0D)) {
             primeFuse();
         }
@@ -1261,6 +1277,13 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickNatureFlyer(LivingEntity target, String id) {
+        if (id.contains("fungfly")) {
+            Vec3 direct = target.position().subtract(this.position());
+            if (direct.lengthSqr() > 0.5D) {
+                this.getNavigation().moveTo(target, 1.0D);
+                this.setDeltaMovement(this.getDeltaMovement().scale(0.78D).add(direct.normalize().scale(0.18D)));
+            }
+        }
         if (this.tickCount % 35 == 0) {
             Vec3 drift = target.getEyePosition().subtract(this.position()).normalize().scale(id.contains("giant") ? 0.18D : 0.28D);
             this.setDeltaMovement(this.getDeltaMovement().scale(0.7D).add(drift));
@@ -1282,6 +1305,17 @@ public class LostPlaceholderMob extends PathfinderMob {
     }
 
     private void tickMirrorMob(LivingEntity target, String id) {
+        if (id.contains("spectre")) {
+            this.fallDistance = -1.0F;
+            this.setNoGravity(true);
+            if (this.tickCount % 20 == 0 && this.getHealth() > 1.0F) {
+                this.hurt(this.damageSources().magic(), 1.0F);
+            }
+            Vec3 direct = target.position().subtract(this.position());
+            if (direct.lengthSqr() > 0.5D) {
+                this.setDeltaMovement(this.getDeltaMovement().scale(0.76D).add(direct.normalize().scale(0.22D)));
+            }
+        }
         if (id.contains("mirrorzombie")) {
             this.fallDistance = -1.0F;
             for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(6.0D))) {
@@ -1485,6 +1519,7 @@ public class LostPlaceholderMob extends PathfinderMob {
                 LostFx.burst(this.level(), this.blockPosition(), "ancient_spell", 14, 0.8D, 0.03D);
             }
         } else if (id.contains("shroomite")) {
+            tickShroomite(target);
             tickStarforgeBiter(target, id);
             if (this.tickCount % 90 == 0) {
                 sporePulse(target, 3.5D);
@@ -1500,6 +1535,27 @@ public class LostPlaceholderMob extends PathfinderMob {
                 target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 100, 0));
                 LostFx.burst(this.level(), this.blockPosition(), "space_magic", 18, 0.75D, 0.04D);
             }
+        }
+    }
+
+    private void tickShroomite(LivingEntity target) {
+        boolean burrowed = this.recoveredState == 1;
+        double distance = Math.sqrt(this.distanceToSqr(target));
+        if (burrowed && distance < 12.0D) {
+            this.setNoGravity(false);
+            this.setDeltaMovement(this.getDeltaMovement().add(0.0D, 0.65D, 0.0D));
+            this.recoveredState = 0;
+            LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 18, 0.7D, 0.05D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.GRASS_BREAK, SoundSource.HOSTILE, 0.9F, 0.6F);
+        } else if (!burrowed && distance > 30.0D && this.onGround()) {
+            this.setNoGravity(true);
+            this.teleportTo(this.getX(), this.getY() - 0.25D, this.getZ());
+            this.recoveredState = 1;
+            LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 12, 0.45D, 0.02D);
+        }
+        if (this.recoveredState == 1) {
+            this.getNavigation().stop();
+            this.setDeltaMovement(Vec3.ZERO);
         }
     }
 
@@ -1594,6 +1650,27 @@ public class LostPlaceholderMob extends PathfinderMob {
         }
         if (id.contains("phase") || id.contains("spectre") || id.contains("ghost")) {
             living.addEffect(new MobEffectInstance(ModEffects.PHASED.get(), 120, 0));
+        }
+        if (id.contains("shroomite")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(6.0F, living.getMaxHealth() * 0.5F));
+        } else if (id.contains("mushmerra")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(8.0F, living.getMaxHealth() * 0.7F));
+            living.addEffect(new MobEffectInstance(ModEffects.PLAGUE.get(), 140, 1));
+        } else if (id.contains("fungfly")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(10.0F, living.getMaxHealth()));
+        } else if (id.contains("spectre")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / 4.0F));
+            if (this.getHealth() > this.getMaxHealth() * 0.5F) {
+                living.addEffect(new MobEffectInstance(ModEffects.SHATTERED.get(), 160, 0));
+                living.addEffect(new MobEffectInstance(ModEffects.BLIGHTED.get(), 160, 0));
+                living.addEffect(new MobEffectInstance(ModEffects.VULNERABILITY.get(), 160, 0));
+            }
+        } else if (id.contains("pickleman")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(6.0F, living.getMaxHealth() / 2.0F));
+            LostFx.burst(this.level(), living.blockPosition(), "sweep_attack", 12, 0.55D, 0.05D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.PLAYER_ATTACK_STRONG, SoundSource.HOSTILE, 1.0F, 0.8F + this.random.nextFloat() * 0.4F);
+        } else if (id.contains("tntzombie") && this.tickCount >= 60) {
+            primeFuse();
         }
     }
 
