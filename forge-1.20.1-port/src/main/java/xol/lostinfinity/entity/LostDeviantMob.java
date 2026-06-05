@@ -23,6 +23,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import xol.lostinfinity.registry.ModEffects;
+import xol.lostinfinity.registry.ModEntities;
 
 public class LostDeviantMob extends LostPlaceholderMob {
     public enum Kind {
@@ -250,6 +251,37 @@ public class LostDeviantMob extends LostPlaceholderMob {
             tickTurret(target, 15.0F, 1, SoundEvents.GUARDIAN_ATTACK);
             target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 1));
         }
+        if (this.tickCount % 180 == 0) {
+            summonTrialWave(target);
+        }
+    }
+
+    private void summonTrialWave(LivingEntity target) {
+        EntityType<? extends LostPlaceholderMob>[] basic = new EntityType[] {
+                ModEntities.DEVIANTBLAZE.get(), ModEntities.DEVIANTSKELETON.get(), ModEntities.DEVIANTSPIDER.get(),
+                ModEntities.DEVIANTCREEPER.get(), ModEntities.DEVIANTENDERMAN.get(), ModEntities.DEVIANTMAGMACUBE.get(),
+                ModEntities.DEVIANTZOMBIE.get(), ModEntities.DEVIANTSHULKER.get()
+        };
+        EntityType<? extends LostPlaceholderMob>[] heavy = new EntityType[] {
+                ModEntities.TITANBLAZE.get(), ModEntities.TITANSKELETON.get(), ModEntities.TITANSPIDER.get(),
+                ModEntities.TITANCREEPER.get(), ModEntities.TITANENDERMAN.get(), ModEntities.TITANMAGMACUBE.get(),
+                ModEntities.TITANZOMBIE.get(), ModEntities.TITANSHULKER.get()
+        };
+        int count = this.tickCount > 1200 ? 5 : this.tickCount > 600 ? 3 : 2;
+        for (int i = 0; i < count; i++) {
+            EntityType<? extends LostPlaceholderMob> type = this.random.nextFloat() < 0.18F ? heavy[this.random.nextInt(heavy.length)] : basic[this.random.nextInt(basic.length)];
+            LostPlaceholderMob mob = type.create(this.level());
+            if (mob == null) {
+                continue;
+            }
+            double angle = (Math.PI * 2.0D * i) / Math.max(1, count) + this.random.nextDouble() * 0.6D;
+            double radius = 7.0D + this.random.nextDouble() * 5.0D;
+            mob.moveTo(this.getX() + Math.cos(angle) * radius, this.getY(), this.getZ() + Math.sin(angle) * radius,
+                    this.random.nextFloat() * 360.0F, 0.0F);
+            mob.setTarget(target);
+            this.level().addFreshEntity(mob);
+        }
+        this.level().playSound(null, this.blockPosition(), SoundEvents.END_PORTAL_SPAWN, SoundSource.HOSTILE, 0.65F, 1.35F);
     }
 
     private void tickNamedDeviant(LivingEntity target) {

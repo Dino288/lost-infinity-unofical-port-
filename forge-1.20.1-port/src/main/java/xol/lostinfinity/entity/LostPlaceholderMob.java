@@ -852,7 +852,7 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "augmenticon", "globoon", "globro", "glomite", "glochipper", "glangler", "essencedweller", "essenceidol" -> tickEssenceMob(target, id);
             case "starfiend", "galacticterror", "nightshyre", "wither_skullling" -> tickVoidFiend(target, id);
             case "bloodhunter", "gnawer", "chomper", "hypnosaur" -> tickPredatorMob(target, id);
-            case "fungfly", "flutterfyre", "flapper", "giantflapper", "flurky", "fyreweed", "giantfyreweed" -> tickNatureFlyer(target, id);
+            case "fungfly", "flutterfyre", "flutterbee", "flapper", "giantflapper", "flurky", "fyreweed", "giantfyreweed" -> tickNatureFlyer(target, id);
             case "mirrorzombie", "reflectal", "spectre", "player_limb", "lost_blade" -> tickMirrorMob(target, id);
             case "hanger", "grappler", "gravhead", "hurler", "eyeslug" -> tickControlMob(target, id);
             case "chemist", "archeologist", "pearlcollector", "pickleman", "skycrab", "jet_mount" -> tickUtilityCreature(target, id);
@@ -862,6 +862,7 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "particletrojan", "plasmaexplosion", "plasma_explosion", "ionexplosion", "ion_explosion", "nitroexplosion", "nitro_explosion", "nuclear_explosion" -> tickEffectEntity(target, id);
             case "shroomite", "aura_of_allegiance", "supply_trader", "infinitystone", "restorationcrystal", "sentrycrystal" -> tickSupportCreature(target, id);
             case "arenaevent", "puzzlemaster", "ozordecoy", "lostdeviant" -> tickEncounterController(target, id);
+            case "explosect" -> tickExplosect(target);
             default -> {
             }
         }
@@ -1216,6 +1217,10 @@ public class LostPlaceholderMob extends PathfinderMob {
             if (id.contains("fyre") || id.contains("fire")) {
                 target.setSecondsOnFire(id.contains("giant") ? 8 : 5);
                 LostFx.burst(this.level(), target.blockPosition(), "plasma", 16, 0.6D, 0.05D);
+            } else if (id.contains("bee")) {
+                target.addEffect(new MobEffectInstance(MobEffects.POISON, 90, 0));
+                this.heal(1.0F);
+                LostFx.burst(this.level(), target.blockPosition(), "venom", 10, 0.4D, 0.03D);
             } else if (id.contains("fung")) {
                 sporePulse(target, 4.0D);
             } else {
@@ -1469,6 +1474,25 @@ public class LostPlaceholderMob extends PathfinderMob {
             return;
         }
         tickLegacyBossSupport(target, id);
+    }
+
+    private void tickExplosect(LivingEntity target) {
+        this.fallDistance = 0.0F;
+        if (this.distanceToSqr(target) > 4.0D) {
+            Vec3 chase = target.position().subtract(this.position()).normalize().scale(0.12D);
+            this.setDeltaMovement(this.getDeltaMovement().add(chase.x, target.getY() > this.getY() ? 0.1D : 0.0D, chase.z));
+            if (this.tickCount % 20 == 0) {
+                LostFx.burst(this.level(), this.blockPosition(), "plasma", 8, 0.35D, 0.04D);
+            }
+        } else {
+            for (LivingEntity living : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(3.0D),
+                    e -> e != this && e.isAlive() && !isLostInfinityMob(e))) {
+                living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() * 0.5F));
+            }
+            LostFx.burst(this.level(), this.blockPosition(), "plasma_explosion", 36, 1.4D, 0.1D);
+            this.level().explode(this, this.getX(), this.getY(), this.getZ(), 6.0F, Level.ExplosionInteraction.MOB);
+            this.discard();
+        }
     }
 
     private void applyThemedHit(LivingEntity living) {
