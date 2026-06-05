@@ -835,6 +835,15 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "sentry", "nebula_wizard", "nebula_giant", "nebula_grunt" -> tickSimpleRangedMob(target, id);
             case "multiverseghost", "risingphantom", "ghostcopy", "phaser", "shimmer" -> tickGhostMob(target, id);
             case "tentaclelantern", "totemsplitter", "totemmoon", "totempylon" -> tickSupportTotemMob(target, id);
+            case "gloop", "slimestrider", "deviantslimestrider" -> tickStickySlimeMob(target, id);
+            case "gloopmother" -> tickGloopMother(target);
+            case "cyclos" -> tickCycloneMob(target);
+            case "clinger", "stickler" -> tickClingMob(target, id);
+            case "vectosect" -> tickVectosect(target);
+            case "aspect" -> tickAspectMob(target);
+            case "labwizard", "labwarrior" -> tickLabyrinthFighter(target, id);
+            case "doomsday" -> tickDoomsdayMob(target);
+            case "skyre" -> tickSkyreMob(target);
             default -> {
             }
         }
@@ -946,6 +955,102 @@ public class LostPlaceholderMob extends PathfinderMob {
             if (id.contains("splitter") || id.contains("lantern")) {
                 summonMinion(target);
             }
+        }
+    }
+
+    private void tickStickySlimeMob(LivingEntity target, String id) {
+        if (this.tickCount % 45 == 0 && this.distanceToSqr(target) < 36.0D) {
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, id.contains("strider") ? 2 : 1));
+            target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 80, 0));
+            LostFx.burst(this.level(), target.blockPosition(), "gloop_splash", 16, 0.55D, 0.04D);
+        }
+        if (this.tickCount % 90 == 0 && this.getHealth() < this.getMaxHealth() * 0.65F) {
+            splitMinions();
+        }
+    }
+
+    private void tickGloopMother(LivingEntity target) {
+        tickStickySlimeMob(target, "gloopmother");
+        if (this.tickCount % 120 == 0) {
+            for (int i = 0; i < 2; i++) {
+                spawnBossMinion(ModEntities.GLOOP.get(), target, 0.4F, 8);
+            }
+        }
+    }
+
+    private void tickCycloneMob(LivingEntity target) {
+        if (this.tickCount % 50 == 0) {
+            Vec3 swirl = new Vec3(target.getZ() - this.getZ(), 0.35D, this.getX() - target.getX()).normalize().scale(0.9D);
+            target.push(swirl.x, swirl.y, swirl.z);
+            target.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 40, 0));
+            LostFx.burst(this.level(), target.blockPosition(), "supersonic_blue", 18, 0.8D, 0.05D);
+            this.level().playSound(null, target.blockPosition(), SoundEvents.TRIDENT_RIPTIDE_1, SoundSource.HOSTILE, 0.7F, 1.35F);
+        }
+    }
+
+    private void tickClingMob(LivingEntity target, String id) {
+        if (this.tickCount % 55 == 0) {
+            Vec3 pull = this.position().subtract(target.position()).normalize().scale(id.contains("stick") ? 0.9D : 0.65D);
+            target.push(pull.x, 0.25D, pull.z);
+            target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 100, 0));
+            LostFx.burst(this.level(), target.blockPosition(), "gravity_ring", 14, 0.55D, 0.04D);
+        }
+    }
+
+    private void tickVectosect(LivingEntity target) {
+        if (this.tickCount % 35 == 0) {
+            Vec3 direction = target.position().subtract(this.position()).normalize();
+            this.setDeltaMovement(direction.scale(1.1D).add(0.0D, 0.18D, 0.0D));
+            LostFx.burst(this.level(), this.blockPosition(), "small_spark", 10, 0.45D, 0.04D);
+        }
+        if (this.tickCount % 70 == 0 && this.distanceToSqr(target) < 25.0D) {
+            target.addEffect(new MobEffectInstance(ModEffects.SHATTERED.get(), 100, 0));
+        }
+    }
+
+    private void tickAspectMob(LivingEntity target) {
+        if (this.tickCount % 45 == 0) {
+            shootAt(target);
+        }
+        if (this.tickCount % 120 == 0) {
+            switch (this.random.nextInt(4)) {
+                case 0 -> target.setSecondsOnFire(5);
+                case 1 -> target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1));
+                case 2 -> target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 120, 0));
+                default -> target.addEffect(new MobEffectInstance(ModEffects.DIMENSIONAL_TEAR.get(), 100, 0));
+            }
+            LostFx.burst(this.level(), target.blockPosition(), "ancient_spell", 20, 0.7D, 0.05D);
+        }
+    }
+
+    private void tickLabyrinthFighter(LivingEntity target, String id) {
+        if (id.contains("wizard") && this.tickCount % 55 == 0) {
+            shootAt(target);
+            target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 0));
+        } else if (id.contains("warrior") && this.tickCount % 65 == 0) {
+            leapAt(target);
+            target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 80, 0));
+        }
+    }
+
+    private void tickDoomsdayMob(LivingEntity target) {
+        if (this.tickCount % 85 == 0) {
+            gravityPulse(target, 7.0D, 5.0F, "blackhole_ring");
+            target.addEffect(new MobEffectInstance(ModEffects.ULTRAHEAVY.get(), 120, 1));
+        }
+        if (this.tickCount % 140 == 0) {
+            rainProjectilesOver(target, 5 + this.random.nextInt(4), "plasma_explosion");
+        }
+    }
+
+    private void tickSkyreMob(LivingEntity target) {
+        if (this.tickCount % 30 == 0) {
+            Vec3 hover = target.getEyePosition().subtract(this.position()).normalize().scale(0.22D);
+            this.setDeltaMovement(this.getDeltaMovement().scale(0.75D).add(hover));
+        }
+        if (this.tickCount % 75 == 0) {
+            shootAt(target);
+            target.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 45, 0));
         }
     }
 
