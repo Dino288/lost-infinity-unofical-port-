@@ -22,6 +22,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import xol.lostinfinity.effect.LostFx;
 import xol.lostinfinity.registry.ModEffects;
 import xol.lostinfinity.registry.ModEntities;
 
@@ -164,16 +165,29 @@ public class LostDeviantMob extends LostPlaceholderMob {
     }
 
     private void tickCreeper(LivingEntity target) {
-        int period = this.kind == Kind.TITAN ? 90 : 120;
-        if (this.distanceToSqr(target) < (this.kind == Kind.TITAN ? 64.0D : 16.0D) && this.tickCount % period == 0) {
-            this.level().explode(this, this.getX(), this.getY(), this.getZ(), this.kind == Kind.TITAN ? 6.0F : 3.0F, Level.ExplosionInteraction.MOB);
-            if (this.kind != Kind.TITAN) {
-                this.discard();
+        int mutation = mutationLevel();
+        int chargePeriod = this.kind == Kind.TITAN ? 70 : Math.max(40, 100 - 30 * mutation);
+        if (this.tickCount % chargePeriod == 0) {
+            this.level().playSound(null, this.blockPosition(), SoundEvents.CREEPER_PRIMED, SoundSource.HOSTILE, 2.0F, 1.0F);
+            LostFx.burst(this.level(), this.blockPosition(), "electric_explosion_blue", 18 + mutation * 8, 0.7D + mutation * 0.25D, 0.05D);
+        }
+        if (this.tickCount % chargePeriod == 20 && this.distanceToSqr(target) < (this.kind == Kind.TITAN ? 196.0D : 100.0D)) {
+            float radius = this.kind == Kind.TITAN ? 9.0F : 7.0F + 4.0F * mutation;
+            this.level().explode(this, this.getX(), this.getY(), this.getZ(), radius, Level.ExplosionInteraction.MOB);
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(4.0D + 4.0D * mutation))) {
+                player.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, player.getMaxHealth() / 3.0F));
             }
+            LostFx.burst(this.level(), this.blockPosition(), "plasma_explosion", 28 + mutation * 10, 1.2D + mutation * 0.4D, 0.08D);
         }
     }
 
     private void tickEnderman(LivingEntity target) {
+        int mutation = mutationLevel();
+        if (this.tickCount % (120 + 20 * mutation) == 0) {
+            this.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 40 + 20 * mutation, 0, true, false));
+            LostFx.burst(this.level(), this.blockPosition(), "bad_magic", 14 + mutation * 4, 0.8D, 0.04D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.5F, 0.5F + this.random.nextFloat());
+        }
         if ((this.distanceToSqr(target) > 100.0D || this.random.nextInt(120) == 0) && this.tickCount % 40 == 0) {
             this.teleportTo(target.getX() + this.random.nextInt(7) - 3, target.getY(), target.getZ() + this.random.nextInt(7) - 3);
             this.level().playSound(null, this.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, 1.0F);
@@ -190,9 +204,12 @@ public class LostDeviantMob extends LostPlaceholderMob {
     }
 
     private void tickSpider(LivingEntity target) {
-        if (this.distanceToSqr(target) > 9.0D && this.distanceToSqr(target) < 100.0D && this.onGround() && this.tickCount % 45 == 0) {
+        int mutation = mutationLevel();
+        this.fallDistance = -1.0F;
+        if (this.distanceToSqr(target) > 9.0D && this.distanceToSqr(target) < 144.0D && this.onGround() && this.tickCount % 40 == 0) {
             Vec3 delta = target.position().subtract(this.position()).normalize();
-            this.setDeltaMovement(delta.x * 0.55D, 0.45D, delta.z * 0.55D);
+            this.setDeltaMovement(delta.x * 0.145D * 8.0D, 1.0D + mutation * 0.3D, delta.z * 0.145D * 8.0D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.SPIDER_AMBIENT, SoundSource.HOSTILE, 1.0F, 0.8F);
         }
     }
 
@@ -321,8 +338,17 @@ public class LostDeviantMob extends LostPlaceholderMob {
     }
 
     private void applyHitEffects(LivingEntity living) {
+        if (this.kind == Kind.CREEPER || this.id.contains("creeper")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / 8.0F));
+        }
+        if (this.kind == Kind.ENDERMAN || this.id.contains("enderman")) {
+            int divisor = Math.max(2, 8 - 2 * mutationLevel());
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / divisor));
+        }
         if (this.kind == Kind.SPIDER || this.id.contains("spider")) {
             living.addEffect(new MobEffectInstance(MobEffects.POISON, 120, 0));
+            int divisor = Math.max(2, 5 - mutationLevel());
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / divisor));
         }
         if (this.kind == Kind.BLAZE || this.id.contains("blaze") || this.id.contains("magmacube")) {
             living.setSecondsOnFire(this.kind == Kind.TITAN ? 8 : 4);
@@ -333,6 +359,13 @@ public class LostDeviantMob extends LostPlaceholderMob {
         if (this.kind == Kind.TITAN || this.kind == Kind.PRIME) {
             living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 80, 0));
         }
+    }
+
+    private int mutationLevel() {
+        if (this.kind == Kind.TITAN || this.kind == Kind.PRIME) {
+            return 2;
+        }
+        return this.id.contains("super") || this.id.contains("titan") ? 2 : 0;
     }
 
     private boolean isFlyingName() {
