@@ -195,6 +195,22 @@ public class LostDeviantMob extends LostPlaceholderMob {
     }
 
     private void tickCaster(LivingEntity target) {
+        if (this.id.contains("witch")) {
+            int period = Math.max(20, 50 - 15 * mutationLevel());
+            if (this.tickCount % period == 0) {
+                shootAt(target, 9.0F, 0.75F);
+                target.addEffect(new MobEffectInstance(ModEffects.PLAGUE.get(), 120, 0));
+                target.addEffect(new MobEffectInstance(ModEffects.VULNERABILITY.get(), 120, 0));
+                this.level().playSound(null, this.blockPosition(), SoundEvents.WITCH_THROW, SoundSource.HOSTILE, 1.0F, 1.0F);
+            }
+            return;
+        }
+        if (this.id.contains("guardian") || this.id.contains("squid")) {
+            Vec3 delta = target.position().subtract(this.position());
+            if (delta.lengthSqr() > 2.0D) {
+                this.setDeltaMovement(this.getDeltaMovement().scale(0.75D).add(delta.normalize().scale(0.12D)));
+            }
+        }
         if (this.tickCount % 50 == 0) {
             shootAt(target, 8.0F, 0.65F);
             target.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 100, 0));
@@ -222,8 +238,14 @@ public class LostDeviantMob extends LostPlaceholderMob {
     }
 
     private void tickBlaze(LivingEntity target) {
-        if (this.tickCount % 35 == 0) {
-            shootAt(target, this.kind == Kind.TITAN ? 14.0F : 8.0F, 0.8F);
+        int mutation = mutationLevel();
+        int volleyPeriod = this.kind == Kind.TITAN ? 50 : Math.max(50, 80 - 10 * mutation);
+        if (this.tickCount % volleyPeriod <= 20 && this.tickCount % 10 == 0) {
+            for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(30.0D))) {
+                if (!player.isSpectator()) {
+                    shootAt(player, this.kind == Kind.TITAN ? 14.0F : 8.0F, 0.8F);
+                }
+            }
             this.level().playSound(null, this.blockPosition(), SoundEvents.BLAZE_SHOOT, SoundSource.HOSTILE, 1.0F, 1.0F);
         }
         if (this.distanceToSqr(target) < 16.0D) {
@@ -255,6 +277,9 @@ public class LostDeviantMob extends LostPlaceholderMob {
         } else if (this.id.contains("spider")) {
             tickSpider(target);
             tickStomp(target, 8.0F, 80);
+        } else if (this.id.contains("llama")) {
+            tickLlama(target);
+            tickStomp(target, 8.0F, 90);
         } else if (this.id.contains("vex")) {
             tickFlying(target);
         } else {
@@ -307,9 +332,19 @@ public class LostDeviantMob extends LostPlaceholderMob {
                 target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1));
                 shootAt(target, 6.0F, 0.6F);
             }
+        } else if (this.id.contains("llama")) {
+            tickLlama(target);
         } else if (this.id.contains("snowman") && this.tickCount % 40 == 0) {
             target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0));
             shootAt(target, 4.0F, 0.7F);
+        }
+    }
+
+    private void tickLlama(LivingEntity target) {
+        int period = Math.max(10, 20 - mutationLevel() * 3);
+        if (this.tickCount % period == 0) {
+            shootAt(target, this.kind == Kind.TITAN ? 9.0F : 6.0F, 1.25F);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.LLAMA_SPIT, SoundSource.HOSTILE, 1.0F, 1.0F);
         }
     }
 
@@ -352,6 +387,24 @@ public class LostDeviantMob extends LostPlaceholderMob {
         }
         if (this.kind == Kind.BLAZE || this.id.contains("blaze") || this.id.contains("magmacube")) {
             living.setSecondsOnFire(this.kind == Kind.TITAN ? 8 : 4);
+            int divisor = this.kind == Kind.TITAN ? 2 : mutationLevel() > 0 ? 2 : 4;
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / divisor));
+        }
+        if (this.id.contains("golem") || this.id.contains("amalgam") || this.id.contains("bear")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(8.0F, living.getMaxHealth() / 2.0F));
+            living.addEffect(new MobEffectInstance(ModEffects.VULNERABILITY.get(), 200, 1 + mutationLevel()));
+        }
+        if (this.id.contains("llama")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / 6.0F));
+            living.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 80, 0));
+        }
+        if (this.id.contains("guardian")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / Math.max(2, 4 - mutationLevel())));
+            living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1));
+        }
+        if (this.id.contains("witch")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / Math.max(2, 8 - mutationLevel() * 2)));
+            living.addEffect(new MobEffectInstance(ModEffects.VULNERABILITY.get(), 140, mutationLevel()));
         }
         if (this.id.contains("wither")) {
             living.addEffect(new MobEffectInstance(MobEffects.WITHER, 120, 0));
