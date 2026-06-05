@@ -321,6 +321,10 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "arash" -> tickArashBoss(target, phase);
             case "urogo" -> tickUrogoBoss(target, phase);
             case "velo" -> tickVeloBoss(target, phase);
+            case "droidboss" -> tickDroidBoss(target, phase);
+            case "darrio" -> tickDarrioBoss(target, phase);
+            case "barul" -> tickBarulBoss(target, phase);
+            case "rikarus" -> tickRikarusBoss(target, phase);
             default -> {
             }
         }
@@ -477,6 +481,94 @@ public class LostPlaceholderMob extends PathfinderMob {
             radialProjectiles(1, 0.25D, "space_magic");
         } else if (roomForm == 0 && this.tickCount % 90 <= 30 && this.tickCount % 10 == 0) {
             radialProjectiles(10, 0.2D + 0.08D * ((this.tickCount % 90) / 10), "portal_beam");
+        }
+    }
+
+    private void tickDroidBoss(LivingEntity target, int phase) {
+        if (this.tickCount % 90 == 0) {
+            target.hurt(this.damageSources().mobAttack(this), Math.max(3.0F, target.getMaxHealth() / 20.0F));
+            LostFx.burst(this.level(), target.blockPosition(), "small_spark", 18, 0.65D, 0.05D);
+        }
+        if (phase >= 2 && this.tickCount % 220 == 0) {
+            double[][] posts = {
+                    {10.0D, 61.2D, -79.0D}, {10.0D, 61.2D, -87.0D}, {10.0D, 61.2D, -94.0D}, {10.0D, 61.2D, -102.0D},
+                    {41.0D, 61.2D, -79.0D}, {41.0D, 61.2D, -87.0D}, {41.0D, 61.2D, -94.0D}, {41.0D, 61.2D, -102.0D},
+                    {34.0D, 61.2D, -79.0D}, {34.0D, 61.2D, -102.0D}, {17.0D, 61.2D, -79.0D}, {17.0D, 61.2D, -102.0D}
+            };
+            for (int i = 0; i < Math.min(posts.length, 4 + phase * 2); i++) {
+                LostPlaceholderMob droid = ModEntities.DROIDBOSS.get().create(this.level());
+                if (droid == null) {
+                    continue;
+                }
+                double[] pos = posts[(i + this.tickCount / 20) % posts.length];
+                droid.moveTo(pos[0], pos[1], pos[2], this.random.nextFloat() * 360.0F, 0.0F);
+                droid.summonedMinion = true;
+                droid.bossPhase = phase;
+                droid.setHealth(Math.max(4.0F, droid.getMaxHealth() * 0.35F));
+                droid.setTarget(target);
+                this.level().addFreshEntity(droid);
+            }
+            LostFx.burst(this.level(), this.blockPosition(), "electric_explosion_blue", 30, 1.2D, 0.05D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.IRON_GOLEM_REPAIR, SoundSource.HOSTILE, 0.9F, 0.8F);
+        }
+    }
+
+    private void tickDarrioBoss(LivingEntity target, int phase) {
+        this.setDeltaMovement(this.getDeltaMovement().add(0.0D, this.tickCount % 60 < 20 ? 0.025D : 0.0D, 0.0D));
+        if (this.tickCount % 35 == 0) {
+            Vec3 drift = target.position().subtract(this.position()).normalize().scale(0.35D);
+            this.setDeltaMovement(this.getDeltaMovement().add(drift.x, 0.08D, drift.z));
+            pushNearbyPlayers(4.0D + phase, 0.55D + phase * 0.15D, 0.25D, "sweep_attack");
+        }
+        if ((this.tickCount + 1) % 120 == 0) {
+            int crystals = 1 + this.random.nextInt(2) + (phase >= 2 ? 2 : 0) + (phase >= 3 ? 3 : 0);
+            for (int i = 0; i < crystals; i++) {
+                spawnBossMinion(ModEntities.SENTRYCRYSTAL.get(), target, 0.45F, 8);
+            }
+        }
+    }
+
+    private void tickBarulBoss(LivingEntity target, int phase) {
+        if (this.tickCount % 20 == 0) {
+            int cleared = 0;
+            for (Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(10.0D),
+                    e -> e instanceof LostCombatProjectile || e.getType().builtInRegistryHolder().key().location().getPath().contains("projectile"))) {
+                entity.discard();
+                cleared++;
+            }
+            if (cleared > 0) {
+                LostFx.burst(this.level(), this.blockPosition(), "sweep_attack", 10 + cleared * 2, 0.9D, 0.06D);
+                this.level().playSound(null, this.blockPosition(), SoundEvents.ANVIL_LAND, SoundSource.HOSTILE, 0.55F, 0.65F);
+            }
+        }
+        if (this.tickCount % 150 == 70) {
+            Vec3 pull = this.position().subtract(target.position());
+            if (pull.lengthSqr() > 1.0D) {
+                Vec3 dir = pull.normalize();
+                target.push(dir.x * (phase >= 3 ? 1.0D : 0.65D), 0.25D, dir.z * (phase >= 3 ? 1.0D : 0.65D));
+                target.addEffect(new MobEffectInstance(ModEffects.TETHERED.get(), 100, 0));
+            }
+            target.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, target.getMaxHealth() / 12.0F));
+            LostFx.burst(this.level(), target.blockPosition(), "gravity_ring", 26, 1.0D, 0.06D);
+            this.level().playSound(null, target.blockPosition(), SoundEvents.CHAIN_PLACE, SoundSource.HOSTILE, 1.0F, 0.7F);
+        }
+    }
+
+    private void tickRikarusBoss(LivingEntity target, int phase) {
+        this.setDeltaMovement(this.getDeltaMovement().add(0.0D, this.tickCount % 60 < 30 ? 0.025D : 0.0D, 0.0D));
+        if (phase >= 2 && (this.tickCount + 320) % 400 == 0) {
+            int crystals = phase < 3 ? 1 : 3;
+            for (int i = 0; i < crystals; i++) {
+                spawnBossMinion(ModEntities.RESTORATIONCRYSTAL.get(), target, 0.5F, 6);
+            }
+            this.heal(6.0F + phase * 2.0F);
+            LostFx.burst(this.level(), this.blockPosition(), "murky_mist", 28, 1.2D, 0.04D);
+            this.level().playSound(null, this.blockPosition(), SoundEvents.BEACON_ACTIVATE, SoundSource.HOSTILE, 0.8F, 1.1F);
+        }
+        if (this.tickCount % 55 == 0) {
+            Vec3 drift = target.position().subtract(this.position()).normalize().scale(0.28D);
+            this.setDeltaMovement(this.getDeltaMovement().add(drift.x, 0.06D, drift.z));
+            LostFx.burst(this.level(), this.blockPosition(), "dragon_breath", 12, 0.65D, 0.04D);
         }
     }
 
@@ -913,7 +1005,8 @@ public class LostPlaceholderMob extends PathfinderMob {
         String id = mobId();
         return "cthulhu".equals(id) || "andromeda".equals(id) || "mushmerra".equals(id)
                 || "thundyron".equals(id) || "cryonus".equals(id) || "ozor".equals(id)
-                || "elara".equals(id) || "arash".equals(id) || "urogo".equals(id) || "velo".equals(id);
+                || "elara".equals(id) || "arash".equals(id) || "urogo".equals(id) || "velo".equals(id)
+                || "droidboss".equals(id) || "darrio".equals(id) || "barul".equals(id) || "rikarus".equals(id);
     }
 
     private int bossPhaseForHealth() {
