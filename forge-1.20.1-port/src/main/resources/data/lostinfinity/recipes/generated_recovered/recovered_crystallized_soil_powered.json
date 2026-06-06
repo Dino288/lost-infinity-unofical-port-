@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:crystallized_soil"
+    },
+    {
+      "item": "lostinfinity:crystallized_alloy"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:crystallized_soil_powered"
+  }
+}

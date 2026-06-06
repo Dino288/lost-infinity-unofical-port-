@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:avenger"
+    },
+    {
+      "item": "lostinfinity:masterforged_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:avenger_empty"
+  }
+}

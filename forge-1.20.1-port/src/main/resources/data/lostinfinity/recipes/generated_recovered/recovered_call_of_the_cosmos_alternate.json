@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:call_of_the_cosmos"
+    },
+    {
+      "item": "lostinfinity:masterforged_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:call_of_the_cosmos_alternate"
+  }
+}

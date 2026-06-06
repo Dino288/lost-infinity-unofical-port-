@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:cloaking_device"
+    },
+    {
+      "item": "lostinfinity:masterforged_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:cloaking_device_invisible"
+  }
+}

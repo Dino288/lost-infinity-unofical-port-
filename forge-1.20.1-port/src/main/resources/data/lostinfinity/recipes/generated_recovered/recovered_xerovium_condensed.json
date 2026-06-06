@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:xerovium_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:xerovium_condensed"
+  }
+}

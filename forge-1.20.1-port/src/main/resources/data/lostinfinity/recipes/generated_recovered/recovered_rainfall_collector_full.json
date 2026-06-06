@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:rainfall_collector"
+    },
+    {
+      "item": "lostinfinity:masterforged_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:rainfall_collector_full"
+  }
+}

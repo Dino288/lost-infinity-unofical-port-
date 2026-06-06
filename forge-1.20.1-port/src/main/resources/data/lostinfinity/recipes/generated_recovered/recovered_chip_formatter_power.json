@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:chip_formatter"
+    },
+    {
+      "item": "lostinfinity:power_fuel"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:chip_formatter_power"
+  }
+}

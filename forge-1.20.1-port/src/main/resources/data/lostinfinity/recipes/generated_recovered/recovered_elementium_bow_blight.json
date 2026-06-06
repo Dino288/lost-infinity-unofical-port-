@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " MS",
+    "MRS",
+    " MS"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:voidstone"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:elementium_bow_blight"
+  }
+}

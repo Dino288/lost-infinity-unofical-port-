@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "M M",
+    "M M"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:masterforged_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:vampyreon_prime_leggings"
+  }
+}

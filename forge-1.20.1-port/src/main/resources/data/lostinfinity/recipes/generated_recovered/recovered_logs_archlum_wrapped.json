@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:logs_archlum"
+    },
+    {
+      "item": "lostinfinity:masterforged_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:logs_archlum_wrapped"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SMS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "M": {
+      "item": "lostinfinity:olysium_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:olysium_ore"
+  }
+}

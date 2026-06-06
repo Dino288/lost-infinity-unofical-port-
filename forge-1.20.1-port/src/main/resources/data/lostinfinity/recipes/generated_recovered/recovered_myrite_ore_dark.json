@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:myrite_ore"
+    },
+    {
+      "item": "lostinfinity:voidstone"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:myrite_ore_dark"
+  }
+}

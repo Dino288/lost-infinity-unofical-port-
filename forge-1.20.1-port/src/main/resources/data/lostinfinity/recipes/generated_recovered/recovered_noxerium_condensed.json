@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:noxerium_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:noxerium_condensed"
+  }
+}

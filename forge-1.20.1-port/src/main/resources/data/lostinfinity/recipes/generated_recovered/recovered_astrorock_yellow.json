@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:astrorock"
+    },
+    {
+      "item": "lostinfinity:astrallium_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:astrorock_yellow"
+  }
+}

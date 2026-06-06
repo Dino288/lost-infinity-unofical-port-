@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lostinfinity:incadium_ore"
+  },
+  "result": "lostinfinity:incadium_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

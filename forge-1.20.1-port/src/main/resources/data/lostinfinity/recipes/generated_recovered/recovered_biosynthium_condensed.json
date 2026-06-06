@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:biosynthium_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:biosynthium_condensed"
+  }
+}

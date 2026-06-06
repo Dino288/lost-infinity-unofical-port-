@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:emberleaf"
+    },
+    {
+      "item": "lostinfinity:emberium_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:emberleaf_seeds"
+  }
+}

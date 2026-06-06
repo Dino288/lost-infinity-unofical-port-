@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:neosteel"
+    },
+    {
+      "item": "lostinfinity:power_fuel"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:neosteel_power_beam"
+  }
+}

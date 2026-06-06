@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "lostinfinity:neosteel"
+  },
+  "result": "lostinfinity:neosteel_stairs",
+  "count": 1
+}

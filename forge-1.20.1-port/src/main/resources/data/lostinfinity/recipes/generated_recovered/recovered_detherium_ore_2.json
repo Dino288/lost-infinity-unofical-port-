@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "lostinfinity:detherium_ore"
+  },
+  "result": "lostinfinity:detherium_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

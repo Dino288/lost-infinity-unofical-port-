@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:solar_globe"
+    },
+    {
+      "item": "lostinfinity:emberium_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:solar_globe_bottom"
+  }
+}

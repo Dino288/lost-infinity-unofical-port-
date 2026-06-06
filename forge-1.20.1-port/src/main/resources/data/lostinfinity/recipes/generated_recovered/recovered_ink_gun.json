@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " MS",
+    "MRS",
+    " MS"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:masterforged_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:ink_gun"
+  }
+}

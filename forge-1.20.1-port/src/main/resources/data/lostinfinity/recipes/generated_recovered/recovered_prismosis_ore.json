@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SMS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "M": {
+      "item": "lostinfinity:prismosis_shards"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:prismosis_ore"
+  }
+}

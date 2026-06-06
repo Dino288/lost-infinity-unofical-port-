@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "lostinfinity:astrorock"
+  },
+  "result": "lostinfinity:astrorock_stairs",
+  "count": 1
+}

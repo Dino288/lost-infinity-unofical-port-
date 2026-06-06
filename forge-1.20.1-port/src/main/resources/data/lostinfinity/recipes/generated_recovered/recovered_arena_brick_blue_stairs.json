@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "lostinfinity:arena_brick_blue"
+  },
+  "result": "lostinfinity:arena_brick_blue_stairs",
+  "count": 1
+}

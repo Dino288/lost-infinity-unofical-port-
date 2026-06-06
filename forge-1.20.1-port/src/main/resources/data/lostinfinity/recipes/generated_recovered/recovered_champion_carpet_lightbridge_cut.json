@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:champion_carpet_lightbridge"
+    },
+    {
+      "item": "lostinfinity:crystallized_alloy"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:champion_carpet_lightbridge_cut"
+  }
+}

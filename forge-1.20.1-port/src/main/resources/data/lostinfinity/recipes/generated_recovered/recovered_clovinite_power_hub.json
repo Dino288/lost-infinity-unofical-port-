@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:clovinite"
+    },
+    {
+      "item": "lostinfinity:power_fuel"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:clovinite_power_hub"
+  }
+}

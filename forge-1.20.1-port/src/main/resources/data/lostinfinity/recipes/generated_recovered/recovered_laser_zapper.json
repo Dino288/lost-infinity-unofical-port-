@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " MS",
+    "MRS",
+    " MS"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:power_fuel"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:laser_zapper"
+  }
+}

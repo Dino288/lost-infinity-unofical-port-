@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lostinfinity:hivenite_ore"
+  },
+  "result": "lostinfinity:hivenite",
+  "experience": 0.7,
+  "cookingtime": 200
+}

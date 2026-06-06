@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:kylaxium_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:kylaxium_condensed"
+  }
+}

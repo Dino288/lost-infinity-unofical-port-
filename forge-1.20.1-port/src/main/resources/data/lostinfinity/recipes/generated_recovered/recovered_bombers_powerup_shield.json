@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MIM",
+    "MMM",
+    " M "
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:power_fuel"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:bombers_powerup_shield"
+  }
+}

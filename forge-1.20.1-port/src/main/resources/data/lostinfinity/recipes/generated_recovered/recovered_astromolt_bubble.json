@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:astromolt"
+    },
+    {
+      "item": "lostinfinity:astrallium_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:astromolt_bubble"
+  }
+}

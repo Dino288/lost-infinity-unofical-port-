@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:emberslag"
+    },
+    {
+      "item": "lostinfinity:emberium_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:emberslag_deposit"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:ionic_chakram"
+    },
+    {
+      "item": "lostinfinity:power_fuel"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:ionic_chakram_empty"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:blightstocks"
+    },
+    {
+      "item": "lostinfinity:voidstone"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:blightstocks_top"
+  }
+}

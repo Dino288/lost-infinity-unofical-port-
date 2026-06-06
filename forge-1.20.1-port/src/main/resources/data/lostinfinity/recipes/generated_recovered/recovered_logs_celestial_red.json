@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:logs_celestial"
+    },
+    {
+      "item": "lostinfinity:astrallium_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:logs_celestial_red"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:blight_eye"
+    },
+    {
+      "item": "lostinfinity:voidstone"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:blight_eye_empty"
+  }
+}

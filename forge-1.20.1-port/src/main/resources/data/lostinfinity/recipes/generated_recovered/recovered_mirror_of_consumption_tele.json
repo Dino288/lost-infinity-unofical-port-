@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:mirror_of_consumption"
+    },
+    {
+      "item": "lostinfinity:power_fuel"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:mirror_of_consumption_tele"
+  }
+}

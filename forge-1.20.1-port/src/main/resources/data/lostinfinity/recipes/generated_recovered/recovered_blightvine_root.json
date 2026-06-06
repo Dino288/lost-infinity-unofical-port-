@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:blightvine"
+    },
+    {
+      "item": "lostinfinity:voidstone"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:blightvine_root"
+  }
+}

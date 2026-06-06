@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "lostinfinity:vellorium_ingot"
+    }
+  },
+  "result": {
+    "item": "lostinfinity:vellorium_condensed"
+  }
+}

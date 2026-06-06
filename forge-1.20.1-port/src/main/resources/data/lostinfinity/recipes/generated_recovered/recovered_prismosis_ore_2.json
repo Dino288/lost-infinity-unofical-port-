@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "lostinfinity:prismosis_ore"
+  },
+  "result": "lostinfinity:prismosis_shards",
+  "experience": 0.7,
+  "cookingtime": 100
+}

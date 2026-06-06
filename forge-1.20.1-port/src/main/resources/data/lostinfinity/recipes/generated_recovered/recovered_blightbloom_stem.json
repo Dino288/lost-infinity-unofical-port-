@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:blightbloom"
+    },
+    {
+      "item": "lostinfinity:voidstone"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:blightbloom_stem"
+  }
+}

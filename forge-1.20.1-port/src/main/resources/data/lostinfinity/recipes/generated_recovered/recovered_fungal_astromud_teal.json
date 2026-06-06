@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lostinfinity:fungal_astromud"
+    },
+    {
+      "item": "lostinfinity:astrallium_ingot"
+    }
+  ],
+  "result": {
+    "item": "lostinfinity:fungal_astromud_teal"
+  }
+}

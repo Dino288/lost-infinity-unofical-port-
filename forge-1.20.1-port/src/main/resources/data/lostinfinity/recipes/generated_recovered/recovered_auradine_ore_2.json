@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "lostinfinity:auradine_ore"
+  },
+  "result": "lostinfinity:auradine",
+  "experience": 0.7,
+  "cookingtime": 100
+}

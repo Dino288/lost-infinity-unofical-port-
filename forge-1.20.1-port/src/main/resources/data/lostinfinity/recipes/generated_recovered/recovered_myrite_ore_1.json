@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lostinfinity:myrite_ore"
+  },
+  "result": "lostinfinity:myrite",
+  "experience": 0.7,
+  "cookingtime": 200
+}

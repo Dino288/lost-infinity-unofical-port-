@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lostinfinity:exothermite_ore"
+  },
+  "result": "lostinfinity:exothermite",
+  "experience": 0.7,
+  "cookingtime": 200
+}

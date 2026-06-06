@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "lostinfinity:serpentine_ore"
+  },
+  "result": "lostinfinity:serpentine_crystal",
+  "experience": 0.7,
+  "cookingtime": 100
+}
