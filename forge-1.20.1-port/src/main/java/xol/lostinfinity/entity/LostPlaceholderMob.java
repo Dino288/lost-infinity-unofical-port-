@@ -861,6 +861,7 @@ public class LostPlaceholderMob extends PathfinderMob {
             case "acidback", "clyster", "crawker", "dusker", "rockpest", "spinovern", "spyker", "screacher" -> tickOldStarforgeMob(target, id);
             case "crusher", "ravager", "ribrex", "titanopod" -> tickHeavyRusher(target, id);
             case "droid", "luminousguardian" -> tickUtilityMinion(target, id);
+            case "deviantbear", "deviantcow", "deviantchicken", "deviantbat", "deviantblaze", "deviantdimtrader", "deviant_husk" -> tickRecoveredVanillaDeviant(target, id);
             case "bomb_drone", "bomberbomb", "tntzombie", "rocket_strapped_explosive", "cosmicbomb", "plasmabomb", "stickybomb", "thunderbomb", "stormbomb" -> tickExplosiveRecoveredMob(target, id);
             case "rift", "unstablerift", "mark_of_despair", "forbiddenbrand", "sandattack", "tornindividual" -> tickRiftHazard(target, id);
             case "augmenticon", "globoon", "globro", "glomite", "glochipper", "glangler", "essencedweller", "essenceidol" -> tickEssenceMob(target, id);
@@ -1392,6 +1393,94 @@ public class LostPlaceholderMob extends PathfinderMob {
             }
             LostFx.burst(this.level(), this.blockPosition(), "small_spark", 10, 0.45D, 0.04D);
         }
+    }
+
+    private void tickRecoveredVanillaDeviant(LivingEntity target, String id) {
+        if (id.contains("chicken")) {
+            this.fallDistance = -1.0F;
+            if (this.tickCount % 40 == 0) {
+                Vec3 leap = target.position().subtract(this.position());
+                if (leap.lengthSqr() > 0.01D) {
+                    this.setDeltaMovement(this.getDeltaMovement().add(leap.normalize().scale(0.9D)).add(0.0D, 0.8D, 0.0D));
+                    LostFx.burst(this.level(), this.blockPosition(), "sweep_attack", 8, 0.4D, 0.03D);
+                }
+            }
+            return;
+        }
+        if (id.contains("bat")) {
+            this.setNoGravity(true);
+            Vec3 chase = target.getEyePosition().subtract(this.position());
+            if (chase.lengthSqr() > 0.01D) {
+                this.setDeltaMovement(this.getDeltaMovement().scale(0.68D).add(chase.normalize().scale(0.22D)));
+            }
+            if (this.tickCount % 20 == 0) {
+                shootAt(target);
+                LostFx.burst(this.level(), this.blockPosition(), "soulburst", 8, 0.35D, 0.04D);
+            }
+            return;
+        }
+        if (id.contains("blaze")) {
+            this.setNoGravity(true);
+            if (this.tickCount % 80 <= 20 && this.tickCount % 10 == 0) {
+                for (Player player : this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(30.0D), player -> !player.isSpectator())) {
+                    shootAt(player);
+                }
+                this.level().playSound(null, this.blockPosition(), SoundEvents.BLAZE_SHOOT, SoundSource.HOSTILE, 1.3F, 0.7F + this.random.nextFloat() * 0.5F);
+                LostFx.burst(this.level(), this.blockPosition(), "plasma", 12, 0.55D, 0.04D);
+            }
+            return;
+        }
+        if (id.contains("dimtrader")) {
+            eatNearbyProjectiles();
+            int ability = this.tickCount % 100;
+            if (ability < 60 && this.tickCount % 3 == 0) {
+                LostCombatProjectile projectile = new LostCombatProjectile(this.level(), this, 7.5F);
+                projectile.setPos(this.getX(), this.getEyeY(), this.getZ());
+                Vec3 delta = target.getEyePosition().subtract(projectile.position());
+                projectile.shoot(delta.x, delta.y, delta.z, 2.5F, 0.0F);
+                this.level().addFreshEntity(projectile);
+                this.level().playSound(null, this.blockPosition(), SoundEvents.BEACON_DEACTIVATE, SoundSource.HOSTILE, 1.1F, 1.45F);
+            } else if (ability == 95) {
+                Vec3 offset = new Vec3((this.random.nextDouble() - 0.5D) * 24.0D, this.random.nextInt(9) - 4.0D,
+                        (this.random.nextDouble() - 0.5D) * 24.0D);
+                this.teleportTo(this.getX() + offset.x, this.getY() + offset.y, this.getZ() + offset.z);
+                this.level().playSound(null, this.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, 0.85F);
+                LostFx.burst(this.level(), this.blockPosition(), "portal_beam", 24, 1.0D, 0.05D);
+            }
+            return;
+        }
+        if (id.contains("husk")) {
+            if (this.tickCount % 30 == 0) {
+                rainProjectilesOver(target, 3, "sandattack");
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 70, 0));
+                LostFx.burst(this.level(), target.blockPosition(), "murky_mist", 14, 0.7D, 0.05D);
+            }
+            return;
+        }
+        if (id.contains("bear") && this.tickCount % 70 == 0) {
+            mountedCharge(target);
+            LostFx.burst(this.level(), this.blockPosition(), "sweep_attack", 10, 0.55D, 0.04D);
+        } else if (id.contains("cow") && this.tickCount % 90 == 0) {
+            mountedCharge(target);
+            gravityPulse(target, 4.0D, 1.2F, "sweep_attack");
+        }
+    }
+
+    private void eatNearbyProjectiles() {
+        for (Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(10.0D), this::isEatableProjectile)) {
+            LostFx.burst(this.level(), entity.blockPosition(), "sweep_attack", 8, 0.45D, 0.05D);
+            this.level().playSound(null, entity.blockPosition(), SoundEvents.ITEM_BREAK, SoundSource.HOSTILE, 0.7F, 0.6F + this.random.nextFloat() * 0.4F);
+            entity.discard();
+        }
+    }
+
+    private boolean isEatableProjectile(Entity entity) {
+        if (entity instanceof LivingEntity || entity instanceof LostCombatProjectile) {
+            return false;
+        }
+        String path = entity.getType().builtInRegistryHolder().key().location().getPath();
+        return path.contains("arrow") || path.contains("fireball") || path.contains("snowball") || path.contains("trident")
+                || path.contains("projectile") || path.contains("bullet") || path.contains("spit") || path.contains("laser");
     }
 
     private void tickExplosiveRecoveredMob(LivingEntity target, String id) {
@@ -2092,6 +2181,16 @@ public class LostPlaceholderMob extends PathfinderMob {
             living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / 3.0F));
         } else if (id.contains("labwarrior")) {
             living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / 5.0F));
+        } else if (id.contains("deviantcow") || id.contains("deviantbat")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(5.0F, living.getMaxHealth() / 4.0F));
+        } else if (id.contains("deviantbear")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(7.0F, living.getMaxHealth() / 3.0F));
+        } else if (id.contains("deviantchicken")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(4.0F, living.getMaxHealth() / 6.0F));
+        } else if (id.contains("deviantblaze") || id.contains("deviantdimtrader")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(6.0F, living.getMaxHealth() / 4.0F));
+        } else if (id.contains("deviant_husk")) {
+            living.hurt(this.damageSources().mobAttack(this), Math.max(8.0F, living.getMaxHealth() * 0.5F));
         }
         if (id.contains("sightwalker")) {
             living.hurt(this.damageSources().mobAttack(this), Math.max(10.0F, living.getMaxHealth()));
@@ -2154,6 +2253,9 @@ public class LostPlaceholderMob extends PathfinderMob {
 
     private boolean isPassiveEntity() {
         String id = mobId();
+        if (id.equals("feralmerchant") || id.equals("deviantdimtrader")) {
+            return false;
+        }
         return id.contains("merchant") || id.contains("trader") || id.contains("operator") || id.contains("controller")
                 || id.contains("contrader") || id.contains("hologram") || id.contains("market") || id.contains("puzzlemaster")
                 || id.contains("statue") || id.contains("deco") || id.contains("supply") || id.contains("obstacle")
