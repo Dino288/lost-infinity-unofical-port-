@@ -92,6 +92,38 @@ public final class LostFx {
             case "plague" -> send(level, "poison_rings", x, y, z, Math.max(3, count / 4), spread * 0.55D, speed * 0.45D);
             case "blood_drop" -> send(level, "red_skull", x, y, z, Math.max(1, count / 8), spread * 0.25D, speed * 0.35D);
             case "ancient_spell" -> send(level, "gold_star", x, y, z, Math.max(3, count / 4), spread * 0.5D, speed * 0.5D);
+            case "blackhole_ring", "blackhole_portal" -> {
+                send(level, "attract_field", x, y, z, Math.max(4, count / 4), spread * 0.55D, speed * 0.35D);
+                send(level, "dark_fizzle", x, y, z, Math.max(3, count / 5), spread * 0.7D, speed * 0.55D);
+            }
+            case "wormhole_portal", "whirlpool_portal" -> {
+                send(level, "portal_beam", x, y, z, Math.max(3, count / 5), spread * 0.4D, speed * 0.45D);
+                send(level, "warp", x, y, z, Math.max(4, count / 4), spread * 0.55D, speed * 0.7D);
+            }
+            case "web_magic", "queen_web" -> {
+                send(level, "elastic_thread", x, y, z, Math.max(3, count / 4), spread * 0.55D, speed * 0.35D);
+                send(level, "claw_marks", x, y, z, Math.max(1, count / 8), spread * 0.25D, speed * 0.25D);
+            }
+            case "ice_blast", "cryo_beam" -> {
+                send(level, "snow_bubble", x, y, z, Math.max(4, count / 4), spread * 0.55D, speed * 0.35D);
+                send(level, "generic_dot_aqua", x, y, z, Math.max(3, count / 5), spread * 0.5D, speed * 0.45D);
+            }
+            case "supersonic_blue", "supersonic_red" -> {
+                send(level, "repel_field", x, y, z, Math.max(3, count / 5), spread * 0.45D, speed * 0.45D);
+                send(level, "light_fizzle", x, y, z, Math.max(2, count / 6), spread * 0.35D, speed * 0.6D);
+            }
+            case "bad_magic", "nightmare_magic" -> {
+                send(level, "purple_skull", x, y, z, Math.max(1, count / 8), spread * 0.35D, speed * 0.25D);
+                send(level, "corruption_magic", x, y, z, Math.max(4, count / 4), spread * 0.6D, speed * 0.45D);
+            }
+            case "shadow_blast", "dark_magic" -> {
+                send(level, "dark_flash", x, y, z, Math.max(2, count / 6), spread * 0.35D, speed * 0.45D);
+                send(level, "gloom_burst", x, y, z, Math.max(3, count / 5), spread * 0.5D, speed * 0.5D);
+            }
+            case "cosmic_explosion_type1", "galaxy_blue", "galaxy_purple", "galaxy_green", "galaxy_yellow" -> {
+                send(level, "comet_blue", x, y, z, Math.max(2, count / 6), spread * 0.4D, speed * 0.65D);
+                send(level, "basic_star_type2", x, y, z, Math.max(4, count / 4), spread * 0.65D, speed * 0.55D);
+            }
             default -> {
             }
         }
@@ -104,6 +136,14 @@ public final class LostFx {
             send(level, "venom_chain", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
         } else if ("murky_mist".equals(name)) {
             send(level, "large_bubble", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
+        } else if ("space_magic".equals(name) || "cosmic_explosion_type1".equals(name)) {
+            send(level, "basic_star_type3", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
+        } else if ("web_magic".equals(name) || "barul_chain".equals(name)) {
+            send(level, "elastic_thread", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
+        } else if ("ice_blast".equals(name) || "cryo_beam".equals(name)) {
+            send(level, "snow_bubble", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
+        } else if ("shadow_blast".equals(name) || "dark_magic".equals(name)) {
+            send(level, "dark_fizzle", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
         }
     }
 
@@ -124,6 +164,12 @@ public final class LostFx {
             case "blackhole" -> "blackhole_portal";
             case "wormhole" -> "wormhole_portal";
             case "web" -> "web_magic";
+            case "ice", "cryo" -> "ice_blast";
+            case "solar", "celestial" -> "space_magic";
+            case "forbidden", "nightmare" -> "nightmare_magic";
+            case "electric", "tesla" -> "electric_explosion_blue";
+            case "sonic", "echo" -> "supersonic_blue";
+            case "blood" -> "blood_drop";
             default -> name;
         };
     }

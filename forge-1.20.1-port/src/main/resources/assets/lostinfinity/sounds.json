@@ -1,2021 +1,3296 @@
 {
-	"tt_ambient_5":{ "category":"master", "sounds":[ "lostinfinity:tt_ambient_5" ] },
-	"tt_ambient_4":{ "category":"master", "sounds":[ "lostinfinity:tt_ambient_4" ] },
-	"tt_ambient_3":{ "category":"master", "sounds":[ "lostinfinity:tt_ambient_3" ] },
-	"tt_ambient_2":{ "category":"master", "sounds":[ "lostinfinity:tt_ambient_2" ] },
-	"tt_ambient_1":{ "category":"master", "sounds":[ "lostinfinity:tt_ambient_1" ] },
-	"tt_death":{ "category":"master", "sounds":[ "lostinfinity:tt_death" ] },
-	"tt_portal":{ "category":"master", "sounds":[ "lostinfinity:tt_portal" ] },
-	"tt_riseup":{ "category":"master", "sounds":[ "lostinfinity:tt_riseup" ] },
-	"forcefield_hit":{ "category":"master", "sounds":[ "lostinfinity:forcefield_hit" ] },
-	"fast_charge":{ "category":"master", "sounds":[ "lostinfinity:fast_charge" ] },
-	"splat_explode":{ "category":"master", "sounds":[ "lostinfinity:splat_explode" ] },
-	"bomb_tick":{ "category":"master", "sounds":[ "lostinfinity:bomb_tick" ] },
-	"ghostly_clouds":{ "category":"master", "sounds":[ "lostinfinity:ghostly_clouds" ] },
-	"magic_weapon_22":{ "category":"master", "sounds":[ "lostinfinity:magic_weapon_22" ] },
-	"magic_weapon_21":{ "category":"master", "sounds":[ "lostinfinity:magic_weapon_21" ] },
-	"paint_gun":{ "category":"master", "sounds":[ "lostinfinity:paint_gun" ] },
-	"chemical_mix":{ "category":"master", "sounds":[ "lostinfinity:chemical_mix" ] },
-	"water_echo":{ "category":"master", "sounds":[ "lostinfinity:water_echo" ] },
-	"leviathan_death":{ "category":"master", "sounds":[ "lostinfinity:leviathan_death" ] },
-	"leviathan_hurt":{ "category":"master", "sounds":[ "lostinfinity:leviathan_hurt" ] },
-	"leviathan_ambient":{ "category":"master", "sounds":[ "lostinfinity:leviathan_ambient" ] },
-	"rib_shark_death":{ "category":"master", "sounds":[ "lostinfinity:rib_shark_death" ] },
-	"rib_shark_hurt":{ "category":"master", "sounds":[ "lostinfinity:rib_shark_hurt" ] },
-	"rib_shark_ambient":{ "category":"master", "sounds":[ "lostinfinity:rib_shark_ambient" ] },
-	"crabulon_death":{ "category":"master", "sounds":[ "lostinfinity:crabulon_death" ] },
-	"crabulon_hurt":{ "category":"master", "sounds":[ "lostinfinity:crabulon_hurt" ] },
-	"crabulon_ambient":{ "category":"master", "sounds":[ "lostinfinity:crabulon_ambient" ] },
-	"dragon_fire_breath":{ "category":"master", "sounds":[ "lostinfinity:dragon_fire_breath" ] },
-	"dragon_fire_ball":{ "category":"master", "sounds":[ "lostinfinity:dragon_fire_ball" ] },
-	"dragon_death":{ "category":"master", "sounds":[ "lostinfinity:dragon_death" ] },
-	"dragon_hurt":{ "category":"master", "sounds":[ "lostinfinity:dragon_hurt" ] },
-	"dragon_ambient":{ "category":"master", "sounds":[ "lostinfinity:dragon_ambient" ] },
-	"generic_weapon_23":{ "category":"master", "sounds":[ "lostinfinity:generic_weapon_23" ] },
-	"evil_laugh":{ "category":"master", "sounds":[ "lostinfinity:evil_laugh" ] },
-	"clay_build": {
-		"category": "master",
-		"sounds": [ "lostinfinity:clay_build" ]
-	},
-	"sound_bounce": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sound_bounce" ]
-	},
-	"sound_gun": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sound_gun" ]
-	},
-	"entity_possess": {
-		"category": "master",
-		"sounds": [ "lostinfinity:entity_possess" ]
-	},
-	"mind_control": {
-		"category": "master",
-		"sounds": [ "lostinfinity:mind_control" ]
-	},
-	"clay_suck": {
-		"category": "master",
-		"sounds": [ "lostinfinity:clay_suck" ]
-	},
-	"clay_place": {
-		"category": "master",
-		"sounds": [ "lostinfinity:clay_place" ]
-	},
-	"rapid_dodge": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rapid_dodge" ]
-	},
-	"block_ding": {
-		"category": "master",
-		"sounds": [ "lostinfinity:block_ding" ]
-	},
-	"synchronite_switch": {
-		"category": "master",
-		"sounds": [ "lostinfinity:synchronite_switch" ]
-	},
-	"note_type_5": {
-		"category": "master",
-		"sounds": [ "lostinfinity:note_type_5" ]
-	},
-	"note_type_4": {
-		"category": "master",
-		"sounds": [ "lostinfinity:note_type_4" ]
-	},
-	"note_type_3": {
-		"category": "master",
-		"sounds": [ "lostinfinity:note_type_3" ]
-	},
-	"note_type_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:note_type_2" ]
-	},
-	"note_type_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:note_type_1" ]
-	},
-	"space_victory": {
-		"category": "master",
-		"sounds": [ "lostinfinity:space_victory" ]
-	},
-	"nebula_wizard_spell": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_wizard_spell" ]
-	},
-	"nebula_wizard_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_wizard_death" ]
-	},
-	"nebula_wizard_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_wizard_hurt" ]
-	},
-	"nebula_wizard_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_wizard_ambient" ]
-	},
-	"nebula_grunt_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_grunt_hurt" ]
-	},
-	"nebula_grunt_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_grunt_death" ]
-	},
-	"nebula_grunt_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_grunt_ambient" ]
-	},
-	"nebula_giant_shockwave": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_giant_shockwave" ]
-	},
-	"nebula_giant_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_giant_death" ]
-	},
-	"nebula_giant_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_giant_ambient" ]
-	},
-	"nebula_giant_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebula_giant_hurt" ]
-	},
-	"multiversal_blade": {
-		"category": "master",
-		"sounds": [ "lostinfinity:multiversal_blade" ]
-	},
-	"nebulous_beacon": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nebulous_beacon" ]
-	},
-	"water_mud": {
-		"category": "master",
-		"sounds": [ "lostinfinity:water_mud" ]
-	},
-	"water_reveal": {
-		"category": "master",
-		"sounds": [ "lostinfinity:water_reveal" ]
-	},
-	"laser_weapon_11": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_11" ]
-	},
-	"charging_power": {
-		"category": "master",
-		"sounds": [ "lostinfinity:charging_power" ]
-	},
-	"ore_light": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ore_light" ]
-	},
-	"spirit_sword": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spirit_sword" ]
-	},
-	"asteroid_impact": {
-		"category": "master",
-		"sounds": [ "lostinfinity:asteroid_impact" ]
-	},
-	"asteroid_summon": {
-		"category": "master",
-		"sounds": [ "lostinfinity:asteroid_summon" ]
-	},
-	"chemical_mixing": {
-		"category": "master",
-		"sounds": [ "lostinfinity:chemical_mixing" ]
-	},
-	"missile_launch": {
-		"category": "master",
-		"sounds": [ "lostinfinity:missile_launch" ]
-	},
-	"missile_explosion": {
-		"category": "master",
-		"sounds": [ "lostinfinity:missile_explosion" ]
-	},
-	"mind_control_potion": {
-		"category": "master",
-		"sounds": [ "lostinfinity:mind_control_potion" ]
-	},
-	"supersonic_dash": {
-		"category": "master",
-		"sounds": [ "lostinfinity:supersonic_dash" ]
-	},
-	"deep_explosion": {
-		"category": "master",
-		"sounds": [ "lostinfinity:deep_explosion" ]
-	},
-	"impending_doom_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:impending_doom_2" ]
-	},
-	"heart_beat": {
-		"category": "master",
-		"sounds": [ "lostinfinity:heart_beat" ]
-	},
-	"cosmic_explosion": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cosmic_explosion" ]
-	},
-	"laser_weapon_10": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_10" ]
-	},
-	"magic_weapon_20": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_20" ]
-	},
-	"laser_weapon_9": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_9" ]
-	},
-	"laser_weapon_8": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_8" ]
-	},
-	"flask_explode": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flask_explode" ]
-	},
-	"eelshark_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:eelshark_death" ]
-	},
-	"eelshark_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:eelshark_hurt" ]
-	},
-	"eelshark_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:eelshark_ambient" ]
-	},
-	"welding": {
-		"category": "master",
-		"sounds": [ "lostinfinity:welding" ]
-	},
-	"generic_ui_5": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_ui_5" ]
-	},
-	"generic_ui_4": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_ui_4" ]
-	},
-	"generic_weapon_22": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_22" ]
-	},
-	"generic_weapon_21": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_21" ]
-	},
-	"generic_weapon_20": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_20" ]
-	},
-	"generic_weapon_19": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_19" ]
-	},
-	"water_drop": {
-		"category": "master",
-		"sounds": [ "lostinfinity:water_drop" ]
-	},
-	"creature_feed": {
-		"category": "master",
-		"sounds": [ "lostinfinity:creature_feed" ]
-	},
-	"rainfall_generator": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rainfall_generator" ]
-	},
-	"apparition_4": {
-		"category": "master",
-		"sounds": [ "lostinfinity:apparition_4" ]
-	},
-	"apparition_3": {
-		"category": "master",
-		"sounds": [ "lostinfinity:apparition_3" ]
-	},
-	"apparition_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:apparition_2" ]
-	},
-	"apparition_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:apparition_1" ]
-	},
-	"underfin_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:underfin_death" ]
-	},
-	"underfin_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:underfin_ambient" ]
-	},
-	"underfin_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:underfin_hurt" ]
-	},
-	"longfin_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:longfin_death" ]
-	},
-	"longfin_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:longfin_ambient" ]
-	},
-	"longfin_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:longfin_hurt" ]
-	},
-	"doublerang_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doublerang_death" ]
-	},
-	"doublerang_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doublerang_ambient" ]
-	},
-	"doublerang_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doublerang_hurt" ]
-	},
-	"rayfish_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rayfish_death" ]
-	},
-	"rayfish_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rayfish_ambient" ]
-	},
-	"rayfish_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rayfish_hurt" ]
-	},
-	"octobrella_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:octobrella_death" ]
-	},
-	"octobrella_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:octobrella_ambient" ]
-	},
-	"octobrella_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:octobrella_hurt" ]
-	},
-	"fish_eat": {
-		"category": "master",
-		"sounds": [ "lostinfinity:fish_eat" ]
-	},
-	"kalikos_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:kalikos_death" ]
-	},
-	"kalikos_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:kalikos_hurt" ]
-	},
-	"kalikos_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:kalikos_ambient" ]
-	},
-	"rockworm_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockworm_death" ]
-	},
-	"rockworm_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockworm_hurt" ]
-	},
-	"rockworm_sleeping": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockworm_sleeping" ]
-	},
-	"rockworm_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockworm_ambient" ]
-	},
-	"swing_hit": {
-		"category": "master",
-		"sounds": [ "lostinfinity:swing_hit" ]
-	},
-	"generic_ui_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_ui_1" ]
-	},
-	"generic_ui_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_ui_2" ]
-	},
-	"generic_ui_3": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_ui_3" ]
-	},
-	"pickle_portal": {
-		"category": "master",
-		"sounds": [ "lostinfinity:pickle_portal" ]
-	},
-	"rapid_teleport": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rapid_teleport" ]
-	},
-	"cartoon_appear": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cartoon_appear" ]
-	},
-	"crossbow": {
-		"category": "master",
-		"sounds": [ "lostinfinity:crossbow" ]
-	},
-	"knife_gun": {
-		"category": "master",
-		"sounds": [ "lostinfinity:knife_gun" ]
-	},
-	"doomsday_teleport": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doomsday_teleport" ]
-	},
-	"doomsday_spell_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doomsday_spell_2" ]
-	},
-	"doomsday_spell_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doomsday_spell_1" ]
-	},
-	"doomsday_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doomsday_hurt" ]
-	},
-	"doomsday_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doomsday_death" ]
-	},
-	"doomsday_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doomsday_ambient" ]
-	},
-	"skyre_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:skyre_hurt" ]
-	},
-	"skyre_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:skyre_death" ]
-	},
-	"skyre_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:skyre_ambient" ]
-	},
-	"cryonus_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cryonus_hurt" ]
-	},
-	"cryonus_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cryonus_death" ]
-	},
-	"cryonus_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cryonus_ambient" ]
-	},
-	"cryonus_rings": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cryonus_rings" ]
-	},
-	"cryonus_icebeam": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cryonus_icebeam" ]
-	},
-	"whisper_5": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_5" ]
-	},
-	"whisper_4": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_4" ]
-	},
-	"whisper_3": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_3" ]
-	},
-	"whisper_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_2" ]
-	},
-	"whisper_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_1" ]
-	},
-	"slow_transition": {
-		"category": "master",
-		"sounds": [ "lostinfinity:slow_transition" ]
-	},
-	"instant_transition": {
-		"category": "master",
-		"sounds": [ "lostinfinity:instant_transition" ]
-	},
-	"weapon_error": {
-		"category": "master",
-		"sounds": [ "lostinfinity:weapon_error" ]
-	},
-	"rock_tumble": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rock_tumble" ]
-	},
-	"grubber_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:grubber_death" ]
-	},
-	"grubber_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:grubber_hurt" ]
-	},
-	"grubber_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:grubber_ambient" ]
-	},
-	"wisp_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:wisp_death" ]
-	},
-	"wisp_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:wisp_hurt" ]
-	},
-	"wisp_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:wisp_ambient" ]
-	},
-	"scorpwing_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:scorpwing_death" ]
-	},
-	"scorpwing_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:scorpwing_hurt" ]
-	},
-	"scorpwing_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:scorpwing_ambient" ]
-	},
-	"orbiter_attack": {
-		"category": "master",
-		"sounds": [ "lostinfinity:orbiter_attack" ]
-	},
-	"orbiter_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:orbiter_death" ]
-	},
-	"orbiter_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:orbiter_hurt" ]
-	},
-	"orbiter_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:orbiter_ambient" ]
-	},
-	"flashfly_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flashfly_death" ]
-	},
-	"flashfly_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flashfly_hurt" ]
-	},
-	"flashfly_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flashfly_ambient" ]
-	},
-	"blisterweed_attack": {
-		"category": "master",
-		"sounds": [ "lostinfinity:blisterweed_attack" ]
-	},
-	"tetherbug_attack": {
-		"category": "master",
-		"sounds": [ "lostinfinity:tetherbug_attack" ]
-	},
-	"grubber_ambient_sleeping": {
-		"category": "master",
-		"sounds": [ "lostinfinity:grubber_ambient_sleeping" ]
-	},
-	"space_bow": {
-		"category": "master",
-		"sounds": [ "lostinfinity:space_bow" ]
-	},
-	"generic_weapon_18": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_18" ]
-	},
-	"rift_create": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rift_create" ]
-	},
-	"generic_vanish": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_vanish" ]
-	},
-	"generic_boing": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_boing" ]
-	},
-	"cave_terror_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cave_terror_ambient" ]
-	},
-	"cave_terror_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cave_terror_death" ]
-	},
-	"cave_terror_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cave_terror_hurt" ]
-	},
-	"terror_fly_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:terror_fly_ambient" ]
-	},
-	"terror_fly_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:terror_fly_death" ]
-	},
-	"terror_fly_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:terror_fly_hurt" ]
-	},
-	"stickler_ability": {
-		"category": "master",
-		"sounds": [ "lostinfinity:stickler_ability" ]
-	},
-	"whisper_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_ambient" ]
-	},
-	"whisper_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_death" ]
-	},
-	"whisper_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:whisper_hurt" ]
-	},
-	"torpedon_ability": {
-		"category": "master",
-		"sounds": [ "lostinfinity:torpedon_ability" ]
-	},
-	"torpedon_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:torpedon_ambient" ]
-	},
-	"torpedon_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:torpedon_death" ]
-	},
-	"torpedon_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:torpedon_hurt" ]
-	},
-	"lurcher_ability": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lurcher_ability" ]
-	},
-	"lurcher_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lurcher_ambient" ]
-	},
-	"lurcher_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lurcher_death" ]
-	},
-	"lurcher_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lurcher_hurt" ]
-	},
-	"livorax_ability": {
-		"category": "master",
-		"sounds": [ "lostinfinity:livorax_ability" ]
-	},
-	"livorax_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:livorax_ambient" ]
-	},
-	"livorax_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:livorax_death" ]
-	},
-	"livorax_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:livorax_hurt" ]
-	},
-	"sentry_ability": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sentry_ability" ]
-	},
-	"sentry_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sentry_death" ]
-	},
-	"sentry_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sentry_hurt" ]
-	},
-	"sentry_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sentry_ambient" ]
-	},
-	"nat_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nat_ambient" ]
-	},
-	"nat_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nat_death" ]
-	},
-	"nat_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nat_hurt" ]
-	},
-	"mystery_voice_transmission": {
-		"category": "master",
-		"sounds": [ "lostinfinity:mystery_voice_transmission" ]
-	},
-	"gear_machine_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gear_machine_2" ]
-	},
-	"manufacture_machine": {
-		"category": "master",
-		"sounds": [ "lostinfinity:manufacture_machine" ]
-	},
-	"generic_weapon_15": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_15" ]
-	},
-	"generic_weapon_16": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_16" ]
-	},
-	"generic_weapon_17": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_17" ]
-	},
-	"generic_whack": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_whack" ]
-	},
-	"generic_weapon_14": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_14" ]
-	},
-	"generic_slice": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_slice" ]
-	},
-	"light_magic": {
-		"category": "master",
-		"sounds": [ "lostinfinity:light_magic" ]
-	},
-	"generic_weapon_13": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_13" ]
-	},
-	"magic_weapon_19": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_19" ]
-	},
-	"magic_weapon_18": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_18" ]
-	},
-	"magic_weapon_17": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_17" ]
-	},
-	"magic_weapon_16": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_16" ]
-	},
-	"minigame_score": {
-		"category": "master",
-		"sounds": [ "lostinfinity:minigame_score" ]
-	},
-	"magic_weapon_15": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_15" ]
-	},
-	"generic_weapon_12": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_12" ]
-	},
-	"electric_bounce": {
-		"category": "master",
-		"sounds": [ "lostinfinity:electric_bounce" ]
-	},
-	"galactic_terror_screach": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galactic_terror_screach" ]
-	},
-	"galactic_terror_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galactic_terror_death" ]
-	},
-	"galactic_terror_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galactic_terror_hurt" ]
-	},
-	"galactic_terror_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galactic_terror_ambient" ]
-	},
-	"execute_effect_3": {
-		"category": "master",
-		"sounds": [ "lostinfinity:execute_effect_3" ]
-	},
-	"generic_pop": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_pop" ]
-	},
-	"robotic_doom": {
-		"category": "master",
-		"sounds": [ "lostinfinity:robotic_doom" ]
-	},
-	"execute_effect_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:execute_effect_2" ]
-	},
-	"laser_weapon_7": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_7" ]
-	},
-	"generic_weapon_11": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_11" ]
-	},
-	"wind_gust": {
-		"category": "master",
-		"sounds": [ "lostinfinity:wind_gust" ]
-	},
-	"portal_open": {
-		"category": "master",
-		"sounds": [ "lostinfinity:portal_open" ]
-	},
-	"tentaclon_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:tentaclon_death" ]
-	},
-	"tentaclon_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:tentaclon_ambient" ]
-	},
-	"tentaclon_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:tentaclon_hurt" ]
-	},
-	"generic_weapon_10": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_10" ]
-	},
-	"generic_weapon_9": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_9" ]
-	},
-	"infuser": {
-		"category": "master",
-		"sounds": [ "lostinfinity:infuser" ]
-	},
-	"leer_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:leer_death" ]
-	},
-	"leer_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:leer_hurt" ]
-	},
-	"leer_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:leer_ambient" ]
-	},
-	"titanopod_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:titanopod_death" ]
-	},
-	"titanopod_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:titanopod_hurt" ]
-	},
-	"titanopod_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:titanopod_ambient" ]
-	},
-	"crunching": {
-		"category": "master",
-		"sounds": [ "lostinfinity:crunching" ]
-	},
-	"electric_woosh": {
-		"category": "master",
-		"sounds": [ "lostinfinity:electric_woosh" ]
-	},
-	"magic_weapon_14": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_14" ]
-	},
-	"generic_weapon_8": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_8" ]
-	},
-	"laser_weapon_6": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_6" ]
-	},
-	"weaver_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:weaver_death" ]
-	},
-	"weaver_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:weaver_ambient" ]
-	},
-	"weaver_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:weaver_hurt" ]
-	},
-	"sightwalker_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sightwalker_death" ]
-	},
-	"sightwalker_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sightwalker_ambient" ]
-	},
-	"sightwalker_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:sightwalker_hurt" ]
-	},
-	"drippler_fire": {
-		"category": "master",
-		"sounds": [ "lostinfinity:drippler_fire" ]
-	},
-	"darkbind": {
-		"category": "master",
-		"sounds": [ "lostinfinity:darkbind" ]
-	},
-	"bioenergize": {
-		"category": "master",
-		"sounds": [ "lostinfinity:bioenergize" ]
-	},
-	"cluster_fire": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cluster_fire" ]
-	},
-	"doublejaw_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doublejaw_death" ]
-	},
-	"doublejaw_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doublejaw_hurt" ]
-	},
-	"doublejaw_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:doublejaw_ambient" ]
-	},
-	"tetherbug_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:tetherbug_death" ]
-	},
-	"tetherbug_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:tetherbug_hurt" ]
-	},
-	"tetherbug_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:tetherbug_ambient" ]
-	},
-	"drippler_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:drippler_death" ]
-	},
-	"drippler_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:drippler_hurt" ]
-	},
-	"drippler_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:drippler_ambient" ]
-	},
-	"minimite_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:minimite_death" ]
-	},
-	"minimite_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:minimite_hurt" ]
-	},
-	"minimite_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:minimite_ambient" ]
-	},
-	"gorger_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gorger_death" ]
-	},
-	"gorger_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gorger_hurt" ]
-	},
-	"gorger_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gorger_ambient" ]
-	},
-	"crusher_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:crusher_death" ]
-	},
-	"crusher_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:crusher_hurt" ]
-	},
-	"crusher_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:crusher_ambient" ]
-	},
-	"magic_powder": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_powder" ]
-	},
-	"execute_effect": {
-		"category": "master",
-		"sounds": [ "lostinfinity:execute_effect" ]
-	},
-	"shield_block": {
-		"category": "master",
-		"sounds": [ "lostinfinity:shield_block" ]
-	},
-	"electric_shock": {
-		"category": "master",
-		"sounds": [ "lostinfinity:electric_shock" ]
-	},
-	"laser_weapon_5": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_5" ]
-	},
-	"laser_weapon_4": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_4" ]
-	},
-	"generic_weapon_7": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_7" ]
-	},
-	"magic_weapon_13": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_13" ]
-	},
-	"magic_weapon_12": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_12" ]
-	},
-	"ozor_vanish": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ozor_vanish" ]
-	},
-	"ozor_reappear": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ozor_reappear" ]
-	},
-	"ozor_message": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ozor_message" ]
-	},
-	"generic_style3_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_style3_death" ]
-	},
-	"generic_style3_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_style3_hurt" ]
-	},
-	"containment_pass": {
-		"category": "master",
-		"sounds": [ "lostinfinity:containment_pass" ]
-	},
-	"flutterbee_fire": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flutterbee_fire" ]
-	},
-	"flutterbee_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flutterbee_hurt" ]
-	},
-	"flutterbee_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flutterbee_ambient" ]
-	},
-	"flutterbee_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flutterbee_death" ]
-	},
-	"hot_pod": {
-		"category": "master",
-		"sounds": [ "lostinfinity:hot_pod" ]
-	},
-	"magic_weapon_11": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_11" ]
-	},
-	"magic_weapon_9": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_9" ]
-	},
-	"magic_weapon_10": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_10" ]
-	},
-	"arena_challenge": {
-		"category": "master",
-		"sounds": [ "lostinfinity:arena_challenge" ]
-	},
-	"arena_teleport": {
-		"category": "master",
-		"sounds": [ "lostinfinity:arena_teleport" ]
-	},
-	"deviation": {
-		"category": "master",
-		"sounds": [ "lostinfinity:deviation" ]
-	},
-	"droid_summon": {
-		"category": "master",
-		"sounds": [ "lostinfinity:droid_summon" ]
-	},
-	"large_teleport": {
-		"category": "master",
-		"sounds": [ "lostinfinity:large_teleport" ]
-	},
-	"magic_weapon_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_1" ]
-	},
-	"magic_weapon_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_2" ]
-	},
-	"scanner": {
-		"category": "master",
-		"sounds": [ "lostinfinity:scanner" ]
-	},
-	"urogo_hit": {
-		"category": "master",
-		"sounds": [ "lostinfinity:urogo_hit" ]
-	},
-	"urogo_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:urogo_death" ]
-	},
-	"lab_game_begin": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lab_game_begin" ]
-	},
-	"flux_mark": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flux_mark" ]
-	},
-	"lab_creature_hit": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lab_creature_hit" ]
-	},
-	"lab_creature_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lab_creature_death" ]
-	},
-	"aspect_hit": {
-		"category": "master",
-		"sounds": [ "lostinfinity:aspect_hit" ]
-	},
-	"aspect_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:aspect_death" ]
-	},
-	"arena_event": {
-		"category": "master",
-		"sounds": [ "lostinfinity:arena_event" ]
-	},
-	"galaxybeast_hit": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxybeast_hit" ]
-	},
-	"galaxybeast_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxybeast_death" ]
-	},
-	"galaxybeast_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxybeast_ambient" ]
-	},
-	"galaxycreature_hit": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxycreature_hit" ]
-	},
-	"galaxycreature_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxycreature_death" ]
-	},
-	"galaxycreature_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxycreature_ambient" ]
-	},
-	"galaxyfire": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxyfire" ]
-	},
-	"starfiend_hit": {
-		"category": "master",
-		"sounds": [ "lostinfinity:starfiend_hit" ]
-	},
-	"starfiend_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:starfiend_death" ]
-	},
-	"starfiend_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:starfiend_ambient" ]
-	},
-	"spire_difficulty": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spire_difficulty" ]
-	},
-	"spire_target": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spire_target" ]
-	},
-	"supermutation": {
-		"category": "master",
-		"sounds": [ "lostinfinity:supermutation" ]
-	},
-	"lifevessel_bind": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lifevessel_bind" ]
-	},
-	"lifevessel_damage": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lifevessel_damage" ]
-	},
-	"lifevessel_heal": {
-		"category": "master",
-		"sounds": [ "lostinfinity:lifevessel_heal" ]
-	},
-	"mirrorzombie_reflect": {
-		"category": "master",
-		"sounds": [ "lostinfinity:mirrorzombie_reflect" ]
-	},
-	"rikarus_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rikarus_ambient" ]
-	},
-	"rikarus_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rikarus_hurt" ]
-	},
-	"rikarus_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rikarus_death" ]
-	},
-	"rikarus_crystal": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rikarus_crystal" ]
-	},
-	"rikarus_heal": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rikarus_heal" ]
-	},
-	"item_starstorm": {
-		"category": "master",
-		"sounds": [ "lostinfinity:item_starstorm" ]
-	},
-	"item_axiomavorum": {
-		"category": "master",
-		"sounds": [ "lostinfinity:item_axiomavorum" ]
-	},
-	"item_thunderbauble": {
-		"category": "master",
-		"sounds": [ "lostinfinity:item_thunderbauble" ]
-	},
-	"item_ghosthunter": {
-		"category": "master",
-		"sounds": [ "lostinfinity:item_ghosthunter" ]
-	},
-	"item_spaceslinger": {
-		"category": "master",
-		"sounds": [ "lostinfinity:item_spaceslinger" ]
-	},
-	"gravhead_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gravhead_ambient" ]
-	},
-	"gravhead_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gravhead_hurt" ]
-	},
-	"gravhead_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gravhead_death" ]
-	},
-	"rockpest_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockpest_ambient" ]
-	},
-	"rockpest_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockpest_hurt" ]
-	},
-	"rockpest_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockpest_death" ]
-	},
-	"spinovern_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spinovern_ambient" ]
-	},
-	"spinovern_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spinovern_hurt" ]
-	},
-	"spinovern_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spinovern_death" ]
-	},
-	"chomper_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:chomper_ambient" ]
-	},
-	"chomper_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:chomper_hurt" ]
-	},
-	"chomper_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:chomper_death" ]
-	},
-	"ribrex_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ribrex_ambient" ]
-	},
-	"ribrex_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ribrex_hurt" ]
-	},
-	"ribrex_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ribrex_death" ]
-	},
-	"gnawer_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gnawer_ambient" ]
-	},
-	"gnawer_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gnawer_hurt" ]
-	},
-	"gnawer_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gnawer_death" ]
-	},
-	"hypnosaur_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:hypnosaur_ambient" ]
-	},
-	"hypnosaur_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:hypnosaur_hurt" ]
-	},
-	"hypnosaur_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:hypnosaur_death" ]
-	},
-	"screacher_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:screacher_ambient" ]
-	},
-	"eyeslug_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:eyeslug_ambient" ]
-	},
-	"eyeslug_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:eyeslug_hurt" ]
-	},
-	"eyeslug_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:eyeslug_death" ]
-	},
-	"flutterfyre_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flutterfyre_ambient" ]
-	},
-	"screacher_attack": {
-		"category": "master",
-		"sounds": [ "lostinfinity:screacher_attack" ]
-	},
-	"reflectal_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:reflectal_ambient" ]
-	},
-	"reflectal_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:reflectal_hurt" ]
-	},
-	"reflectal_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:reflectal_death" ]
-	},
 	"acidback_ambient": {
 		"category": "master",
-		"sounds": [ "lostinfinity:acidback_ambient" ]
-	},
-	"acidback_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:acidback_hurt" ]
+		"sounds": [
+			"lostinfinity:acidback_ambient"
+		]
 	},
 	"acidback_death": {
 		"category": "master",
-		"sounds": [ "lostinfinity:acidback_death" ]
+		"sounds": [
+			"lostinfinity:acidback_death"
+		]
 	},
-	"clyster_ambient": {
+	"acidback_hurt": {
 		"category": "master",
-		"sounds": [ "lostinfinity:clysterambient" ]
+		"sounds": [
+			"lostinfinity:acidback_hurt"
+		]
 	},
-	"clyster_hurt": {
+	"apparition_1": {
 		"category": "master",
-		"sounds": [ "lostinfinity:clyster_hurt" ]
+		"sounds": [
+			"lostinfinity:apparition_1"
+		]
 	},
-	"clyster_death": {
+	"apparition_2": {
 		"category": "master",
-		"sounds": [ "lostinfinity:clyster_death" ]
+		"sounds": [
+			"lostinfinity:apparition_2"
+		]
 	},
-	"crawker_ambient": {
+	"apparition_3": {
 		"category": "master",
-		"sounds": [ "lostinfinity:crawker_ambient" ]
+		"sounds": [
+			"lostinfinity:apparition_3"
+		]
 	},
-	"crawker_hurt": {
+	"apparition_4": {
 		"category": "master",
-		"sounds": [ "lostinfinity:crawker_hurt" ]
+		"sounds": [
+			"lostinfinity:apparition_4"
+		]
 	},
-	"crawker_death": {
+	"arena_challenge": {
 		"category": "master",
-		"sounds": [ "lostinfinity:crawker_death" ]
+		"sounds": [
+			"lostinfinity:arena_challenge"
+		]
 	},
-	"explosect_ambient": {
+	"arena_event": {
 		"category": "master",
-		"sounds": [ "lostinfinity:explosect_ambient" ]
+		"sounds": [
+			"lostinfinity:arena_event"
+		]
 	},
-	"explosect_hurt": {
+	"arena_teleport": {
 		"category": "master",
-		"sounds": [ "lostinfinity:explosect_hurt" ]
-	},
-	"explosect_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:explosect_death" ]
-	},
-	"flapper_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flapper_ambient" ]
-	},
-	"flapper_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flapper_hurt" ]
-	},
-	"flapper_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flapper_death" ]
-	},
-	"flurky_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flurky_ambient" ]
-	},
-	"flurky_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flurky_hurt" ]
-	},
-	"flurky_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:flurky_death" ]
-	},
-	"grappler_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:grappler_ambient" ]
-	},
-	"grappler_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:grappler_hurt" ]
-	},
-	"grappler_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:grappler_death" ]
-	},
-	"hurler_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:hurler_ambient" ]
-	},
-	"hurler_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:hurler_hurt" ]
-	},
-	"hurler_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:hurler_death" ]
-	},
-	"phaser_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:phaser_ambient" ]
-	},
-	"phaser_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:phaser_hurt" ]
-	},
-	"phaser_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:phaser_death" ]
-	},
-	"shimmer_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:shimmer_ambient" ]
-	},
-	"shimmer_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:shimmer_hurt" ]
-	},
-	"shimmer_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:shimmer_death" ]
-	},
-	"spyker_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spyker_ambient" ]
-	},
-	"spyker_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spyker_hurt" ]
-	},
-	"spyker_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spyker_death" ]
-	},
-	"generic_style1_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_style1_hurt" ]
-	},
-	"generic_style1_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:generic_style1_death" ]
-	},
-	"magic_weapon_3": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_3" ]
-	},
-	"laser_weapon_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_1" ]
-	},
-	"clinger_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:clinger_ambient" ]
-	},
-	"clinger_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:clinger_hurt" ]
-	},
-	"clinger_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:clinger_death" ]
-	},
-	"cyclos_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cyclos_ambient" ]
-	},
-	"cyclos_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cyclos_hurt" ]
-	},
-	"cyclos_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:cyclos_death" ]
-	},
-	"globro_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:globro_ambient" ]
-	},
-	"globro_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:globro_hurt" ]
-	},
-	"globro_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:globro_death" ]
-	},
-	"augmenticon_talk1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:augmenticon_talk1" ]
-	},
-	"augmenticon_talk2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:augmenticon_talk2" ]
-	},
-	"augmenticon_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:augmenticon_hurt" ]
-	},
-	"augmenticon_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:augmenticon_death" ]
-	},
-	"glangler_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glangler_ambient" ]
-	},
-	"glangler_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glangler_hurt" ]
-	},
-	"glangler_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glangler_death" ]
-	},
-	"globoon_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:globoon_ambient" ]
-	},
-	"globoon_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:globoon_hurt" ]
-	},
-	"globoon_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:globoon_death" ]
-	},
-	"essence_dweller_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:essence_dweller_ambient" ]
-	},
-	"essence_dweller_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:essence_dweller_hurt" ]
-	},
-	"essence_dweller_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:essence_dweller_death" ]
-	},
-	"glochipper_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glochipper_ambient" ]
-	},
-	"glochipper_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glochipper_hurt" ]
-	},
-	"glochipper_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glochipper_death" ]
-	},
-	"essence_idol_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:essence_idol_ambient" ]
-	},
-	"essence_idol_restore": {
-		"category": "master",
-		"sounds": [ "lostinfinity:essence_idol_restore" ]
+		"sounds": [
+			"lostinfinity:arena_teleport"
+		]
 	},
 	"armor_activate": {
 		"category": "master",
-		"sounds": [ "lostinfinity:armor_activate" ]
+		"sounds": [
+			"lostinfinity:armor_activate"
+		]
 	},
 	"armor_deactivate": {
 		"category": "master",
-		"sounds": [ "lostinfinity:armor_deactivate" ]
+		"sounds": [
+			"lostinfinity:armor_deactivate"
+		]
 	},
-	"magic_weapon_5": {
+	"aspect_death": {
 		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_5" ]
+		"sounds": [
+			"lostinfinity:aspect_death"
+		]
 	},
-	"generic_weapon_1": {
+	"aspect_hit": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_1" ]
+		"sounds": [
+			"lostinfinity:aspect_hit"
+		]
 	},
-	"generic_weapon_2": {
+	"asteroid_impact": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_2" ]
+		"sounds": [
+			"lostinfinity:asteroid_impact"
+		]
 	},
-	"generic_weapon_3": {
+	"asteroid_summon": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_3" ]
+		"sounds": [
+			"lostinfinity:asteroid_summon"
+		]
 	},
-	"generic_weapon_4": {
+	"augmenticon_death": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_4" ]
+		"sounds": [
+			"lostinfinity:augmenticon_death"
+		]
 	},
-	"game_buzzer": {
+	"augmenticon_hurt": {
 		"category": "master",
-		"sounds": [ "lostinfinity:game_buzzer" ]
+		"sounds": [
+			"lostinfinity:augmenticon_hurt"
+		]
 	},
-	"game_ding": {
+	"augmenticon_talk1": {
 		"category": "master",
-		"sounds": [ "lostinfinity:game_ding" ]
+		"sounds": [
+			"lostinfinity:augmenticon_talk1"
+		]
 	},
-	"deviant_wither_roar": {
+	"augmenticon_talk2": {
 		"category": "master",
-		"sounds": [ "lostinfinity:deviant_wither_roar" ]
-	},
-	"entity_pull": {
-		"category": "master",
-		"sounds": [ "lostinfinity:entity_pull" ]
-	},
-	"entity_push": {
-		"category": "master",
-		"sounds": [ "lostinfinity:entity_push" ]
-	},
-	"galaxy_gulper_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxy_gulper_ambient" ]
-	},
-	"galaxy_gulper_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxy_gulper_hurt" ]
-	},
-	"galaxy_gulper_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:galaxy_gulper_death" ]
-	},
-	"laser_weapon_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_2" ]
+		"sounds": [
+			"lostinfinity:augmenticon_talk2"
+		]
 	},
 	"big_warp": {
 		"category": "master",
-		"sounds": [ "lostinfinity:big_warp" ]
+		"sounds": [
+			"lostinfinity:big_warp"
+		]
 	},
-	"dash": {
+	"bioenergize": {
 		"category": "master",
-		"sounds": [ "lostinfinity:dash" ]
+		"sounds": [
+			"lostinfinity:bioenergize"
+		]
 	},
-	"security_clear": {
+	"blisterweed_attack": {
 		"category": "master",
-		"sounds": [ "lostinfinity:security_clear" ]
+		"sounds": [
+			"lostinfinity:blisterweed_attack"
+		]
 	},
-	"ground_slam": {
+	"block_ding": {
 		"category": "master",
-		"sounds": [ "lostinfinity:ground_slam" ]
+		"sounds": [
+			"lostinfinity:block_ding"
+		]
 	},
-	"generic_explosion": {
+	"bomb_tick": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_explosion" ]
+		"sounds": [
+			"lostinfinity:bomb_tick"
+		]
 	},
-	"generic_charge": {
+	"cartoon_appear": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_charge" ]
+		"sounds": [
+			"lostinfinity:cartoon_appear"
+		]
 	},
-	"special_craft": {
+	"cave_terror_ambient": {
 		"category": "master",
-		"sounds": [ "lostinfinity:special_craft" ]
+		"sounds": [
+			"lostinfinity:cave_terror_ambient"
+		]
 	},
-	"cinematic_warning": {
+	"cave_terror_death": {
 		"category": "master",
-		"sounds": [ "lostinfinity:cinematic_warning" ]
+		"sounds": [
+			"lostinfinity:cave_terror_death"
+		]
 	},
-	"impending_doom": {
+	"cave_terror_hurt": {
 		"category": "master",
-		"sounds": [ "lostinfinity:impending_doom" ]
+		"sounds": [
+			"lostinfinity:cave_terror_hurt"
+		]
 	},
-	"laser_weapon_3": {
+	"charging_power": {
 		"category": "master",
-		"sounds": [ "lostinfinity:laser_weapon_3" ]
+		"sounds": [
+			"lostinfinity:charging_power"
+		]
 	},
-	"generic_weapon_5": {
+	"chemical_mix": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_5" ]
+		"sounds": [
+			"lostinfinity:chemical_mix"
+		]
 	},
-	"generic_weapon_6": {
+	"chemical_mixing": {
 		"category": "master",
-		"sounds": [ "lostinfinity:generic_weapon_6" ]
-	},
-	"goo_explode": {
-		"category": "master",
-		"sounds": [ "lostinfinity:goo_explode" ]
-	},
-	"vectosect_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:vectosect_ambient" ]
-	},
-	"vectosect_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:vectosect_hurt" ]
-	},
-	"vectosect_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:vectosect_death" ]
-	},
-	"ravager_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ravager_ambient" ]
-	},
-	"ravager_ambient_alternate": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ravager_ambient_alternate" ]
-	},
-	"ravager_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ravager_hurt" ]
-	},
-	"ravager_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:ravager_death" ]
-	},
-	"stickler_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:stickler_ambient" ]
-	},
-	"stickler_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:stickler_hurt" ]
-	},
-	"stickler_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:stickler_death" ]
-	},
-	"nightshyre_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nightshyre_ambient" ]
-	},
-	"nightshyre_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nightshyre_hurt" ]
-	},
-	"nightshyre_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nightshyre_death" ]
-	},
-	"nightshyre_darken": {
-		"category": "master",
-		"sounds": [ "lostinfinity:nightshyre_darken" ]
-	},
-	"glow_bomb": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glow_bomb" ]
-	},
-	"feral_merchant_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:feral_merchant_ambient" ]
-	},
-	"feral_merchant_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:feral_merchant_hurt" ]
-	},
-	"feral_merchant_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:feral_merchant_death" ]
-	},
-	"magic_weapon_6": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_6" ]
-	},
-	"magic_weapon_7": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_7" ]
-	},
-	"magic_weapon_8": {
-		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_8" ]
-	},
-	"maze_build": {
-		"category": "master",
-		"sounds": [ "lostinfinity:maze_build" ]
-	},
-	"machine_craft": {
-		"category": "master",
-		"sounds": [ "lostinfinity:machine_craft" ]
-	},
-	"spider_unleash": {
-		"category": "master",
-		"sounds": [ "lostinfinity:spider_unleash" ]
-	},
-	"rampage_1": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rampage_1" ]
-	},
-	"rampage_2": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rampage_2" ]
-	},
-	"rampage_3": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rampage_3" ]
-	},
-	"rampage_4": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rampage_4" ]
-	},
-	"rampage_5": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rampage_5" ]
-	},
-	"gear_machine": {
-		"category": "master",
-		"sounds": [ "lostinfinity:gear_machine" ]
-	},
-	"syringe_use": {
-		"category": "master",
-		"sounds": [ "lostinfinity:syringe_use" ]
-	},
-	"glomite_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glomite_ambient" ]
-	},
-	"glomite_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glomite_hurt" ]
-	},
-	"glomite_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glomite_death" ]
-	},
-	"minigame_powerup": {
-		"category": "master",
-		"sounds": [ "lostinfinity:minigame_powerup" ]
-	},
-	"minigame_announcement": {
-		"category": "master",
-		"sounds": [ "lostinfinity:minigame_announcement" ]
-	},
-	"minigame_teleport": {
-		"category": "master",
-		"sounds": [ "lostinfinity:minigame_teleport" ]
-	},
-	"glomite_teleport": {
-		"category": "master",
-		"sounds": [ "lostinfinity:glomite_teleport" ]
-	},
-	"skycrab_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:skycrab_ambient" ]
-	},
-	"skycrab_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:skycrab_hurt" ]
-	},
-	"skycrab_target": {
-		"category": "master",
-		"sounds": [ "lostinfinity:skycrab_target" ]
-	},
-	"skycrab_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:skycrab_death" ]
-	},
-	"rockslug_ambient": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockslug_ambient" ]
-	},
-	"rockslug_hurt": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockslug_hurt" ]
-	},
-	"rockslug_hurl": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockslug_hurl" ]
-	},
-	"rockslug_death": {
-		"category": "master",
-		"sounds": [ "lostinfinity:rockslug_death" ]
+		"sounds": [
+			"lostinfinity:chemical_mixing"
+		]
 	},
 	"chip_format": {
 		"category": "master",
-		"sounds": [ "lostinfinity:chip_format" ]
+		"sounds": [
+			"lostinfinity:chip_format"
+		]
+	},
+	"chomper_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:chomper_ambient"
+		]
+	},
+	"chomper_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:chomper_death"
+		]
+	},
+	"chomper_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:chomper_hurt"
+		]
+	},
+	"cinematic_warning": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cinematic_warning"
+		]
+	},
+	"clay_build": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clay_build"
+		]
+	},
+	"clay_place": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clay_place"
+		]
+	},
+	"clay_suck": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clay_suck"
+		]
+	},
+	"clinger_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clinger_ambient"
+		]
+	},
+	"clinger_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clinger_death"
+		]
+	},
+	"clinger_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clinger_hurt"
+		]
+	},
+	"cluster_fire": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cluster_fire"
+		]
+	},
+	"clyster_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clyster_ambient"
+		]
+	},
+	"clyster_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clyster_death"
+		]
+	},
+	"clyster_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clyster_hit"
+		]
+	},
+	"clyster_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:clyster_hit"
+		]
+	},
+	"containment_pass": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:containment_pass"
+		]
+	},
+	"cosmic_explosion": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cosmic_explosion"
+		]
+	},
+	"crabulon_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crabulon_ambient"
+		]
+	},
+	"crabulon_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crabulon_death"
+		]
+	},
+	"crabulon_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crabulon_hurt"
+		]
+	},
+	"crawker_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crawker_ambient"
+		]
+	},
+	"crawker_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crawker_death"
+		]
+	},
+	"crawker_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crawker_hit"
+		]
+	},
+	"crawker_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crawker_hit"
+		]
+	},
+	"creature_feed": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:creature_feed"
+		]
+	},
+	"crossbow": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crossbow"
+		]
+	},
+	"crunching": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crunching"
+		]
+	},
+	"crusher_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crusher_ambient"
+		]
+	},
+	"crusher_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crusher_death"
+		]
+	},
+	"crusher_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:crusher_hurt"
+		]
+	},
+	"cryonus_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cryonus_ambient"
+		]
+	},
+	"cryonus_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cryonus_death"
+		]
+	},
+	"cryonus_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cryonus_hurt"
+		]
+	},
+	"cryonus_icebeam": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cryonus_icebeam"
+		]
+	},
+	"cryonus_rings": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cryonus_rings"
+		]
+	},
+	"cyclos_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cyclos_ambient"
+		]
+	},
+	"cyclos_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cyclos_death"
+		]
+	},
+	"cyclos_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:cyclos_hurt"
+		]
+	},
+	"darkbind": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:darkbind"
+		]
+	},
+	"dash": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:dash"
+		]
+	},
+	"deep_explosion": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:deep_explosion"
+		]
+	},
+	"deviant_wither_roar": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:deviant_wither_roar"
+		]
+	},
+	"deviation": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:deviation"
+		]
+	},
+	"doomsday_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doomsday_ambient"
+		]
+	},
+	"doomsday_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doomsday_death"
+		]
+	},
+	"doomsday_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doomsday_hurt"
+		]
+	},
+	"doomsday_spell_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doomsday_spell_1"
+		]
+	},
+	"doomsday_spell_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doomsday_spell_2"
+		]
+	},
+	"doomsday_teleport": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doomsday_teleport"
+		]
+	},
+	"doublejaw_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doublejaw_ambient"
+		]
+	},
+	"doublejaw_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doublejaw_death"
+		]
+	},
+	"doublejaw_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doublejaw_hurt"
+		]
+	},
+	"doublerang_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doublerang_ambient"
+		]
+	},
+	"doublerang_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doublerang_death"
+		]
+	},
+	"doublerang_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:doublerang_hurt"
+		]
+	},
+	"dragon_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:dragon_ambient"
+		]
+	},
+	"dragon_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:dragon_death"
+		]
+	},
+	"dragon_fire_ball": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:dragon_fire_ball"
+		]
+	},
+	"dragon_fire_breath": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:dragon_fire_breath"
+		]
+	},
+	"dragon_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:dragon_hurt"
+		]
+	},
+	"drippler_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:drippler_ambient"
+		]
+	},
+	"drippler_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:drippler_death"
+		]
+	},
+	"drippler_fire": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:drippler_fire"
+		]
+	},
+	"drippler_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:drippler_hurt"
+		]
+	},
+	"droid_summon": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:droid_summon"
+		]
+	},
+	"eelshark_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:eelshark_ambient"
+		]
+	},
+	"eelshark_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:eelshark_death"
+		]
+	},
+	"eelshark_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:eelshark_hurt"
+		]
+	},
+	"electric_bounce": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:electric_bounce"
+		]
+	},
+	"electric_shock": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:electric_shock"
+		]
+	},
+	"electric_woosh": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:electric_woosh"
+		]
 	},
 	"energy_pulse": {
 		"category": "master",
-		"sounds": [ "lostinfinity:energy_pulse" ]
+		"sounds": [
+			"lostinfinity:energy_pulse"
+		]
+	},
+	"entity_possess": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:entity_possess"
+		]
+	},
+	"entity_pull": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:entity_pull"
+		]
+	},
+	"entity_push": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:entity_push"
+		]
+	},
+	"essence_dweller_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:essence_dweller_ambient"
+		]
+	},
+	"essence_dweller_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:essence_dweller_death"
+		]
+	},
+	"essence_dweller_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:essence_dweller_hurt"
+		]
+	},
+	"essence_idol_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:essence_idol_ambient"
+		]
+	},
+	"essence_idol_restore": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:essence_idol_restore"
+		]
+	},
+	"evil_laugh": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:evil_laugh"
+		]
+	},
+	"execute_effect": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:execute_effect"
+		]
+	},
+	"execute_effect_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:execute_effect_2"
+		]
+	},
+	"execute_effect_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:execute_effect_3"
+		]
+	},
+	"explosect_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:explosect_ambient"
+		]
+	},
+	"explosect_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:explosect_death"
+		]
+	},
+	"explosect_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:explosect_hurt"
+		]
+	},
+	"eyeslug_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:eyeslug_ambient"
+		]
+	},
+	"eyeslug_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:eyeslug_death"
+		]
+	},
+	"eyeslug_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:eyeslug_hurt"
+		]
+	},
+	"fast_charge": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:fast_charge"
+		]
+	},
+	"feral_merchant_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:feral_merchant_ambient"
+		]
+	},
+	"feral_merchant_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:feral_merchant_death"
+		]
+	},
+	"feral_merchant_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:feral_merchant_hurt"
+		]
+	},
+	"fish_eat": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:fish_eat"
+		]
+	},
+	"flapper_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flapper_ambient"
+		]
+	},
+	"flapper_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flapper_death"
+		]
+	},
+	"flapper_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flapper_hit"
+		]
+	},
+	"flapper_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flapper_hit"
+		]
+	},
+	"flash_fly_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flash_fly_ambient"
+		]
+	},
+	"flash_fly_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flash_fly_death"
+		]
+	},
+	"flash_fly_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flash_fly_hurt"
+		]
+	},
+	"flashfly_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flash_fly_ambient"
+		]
+	},
+	"flashfly_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flash_fly_death"
+		]
+	},
+	"flashfly_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flash_fly_hurt"
+		]
+	},
+	"flask_explode": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flask_explode"
+		]
+	},
+	"flurky_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flurky_ambient"
+		]
+	},
+	"flurky_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flurky_death"
+		]
+	},
+	"flurky_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flurky_hit"
+		]
+	},
+	"flurky_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flurky_hit"
+		]
+	},
+	"flutterbee_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flutterbee_ambient"
+		]
+	},
+	"flutterbee_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flutterbee_death"
+		]
+	},
+	"flutterbee_fire": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flutterbee_fire"
+		]
+	},
+	"flutterbee_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flutterbee_hurt"
+		]
+	},
+	"flutterfyre_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flutterfyre_ambient"
+		]
+	},
+	"flux_mark": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:flux_mark"
+		]
+	},
+	"forcefield_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:forcefield_hit"
+		]
+	},
+	"galactic_terror_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galactic_terror_ambient"
+		]
+	},
+	"galactic_terror_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galactic_terror_death"
+		]
+	},
+	"galactic_terror_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galactic_terror_hurt"
+		]
+	},
+	"galactic_terror_screach": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galactic_terror_screach"
+		]
+	},
+	"galaxy_gulper_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxy_gulper_ambient"
+		]
+	},
+	"galaxy_gulper_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxy_gulper_death"
+		]
+	},
+	"galaxy_gulper_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxy_gulper_hurt"
+		]
+	},
+	"galaxybeast_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxybeast_ambient"
+		]
+	},
+	"galaxybeast_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxybeast_death"
+		]
+	},
+	"galaxybeast_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxybeast_hit"
+		]
+	},
+	"galaxycreature_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxycreature_ambient"
+		]
+	},
+	"galaxycreature_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxycreature_death"
+		]
+	},
+	"galaxycreature_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxycreature_hit"
+		]
+	},
+	"galaxyfire": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:galaxyfire"
+		]
+	},
+	"game_buzzer": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:game_buzzer"
+		]
+	},
+	"game_ding": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:game_ding"
+		]
+	},
+	"gear_machine": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gear_machine"
+		]
+	},
+	"gear_machine_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gear_machine_2"
+		]
+	},
+	"generic_boing": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_boing"
+		]
+	},
+	"generic_charge": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_charge"
+		]
+	},
+	"generic_explosion": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_explosion"
+		]
+	},
+	"generic_pop": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_pop"
+		]
+	},
+	"generic_slice": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_slice"
+		]
+	},
+	"generic_style1_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_style2_death"
+		]
+	},
+	"generic_style1_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_style1_hurt"
+		]
+	},
+	"generic_style2_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_style2_death"
+		]
+	},
+	"generic_style3_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_style3_death"
+		]
+	},
+	"generic_style3_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_style3_hurt"
+		]
+	},
+	"generic_ui_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_ui_1"
+		]
+	},
+	"generic_ui_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_ui_2"
+		]
+	},
+	"generic_ui_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_ui_3"
+		]
+	},
+	"generic_ui_4": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_ui_4"
+		]
+	},
+	"generic_ui_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_ui_5"
+		]
+	},
+	"generic_vanish": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_vanish"
+		]
+	},
+	"generic_weapon_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_1"
+		]
+	},
+	"generic_weapon_10": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_10"
+		]
+	},
+	"generic_weapon_11": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_11"
+		]
+	},
+	"generic_weapon_12": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_12"
+		]
+	},
+	"generic_weapon_13": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_13"
+		]
+	},
+	"generic_weapon_14": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_14"
+		]
+	},
+	"generic_weapon_15": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_15"
+		]
+	},
+	"generic_weapon_16": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_16"
+		]
+	},
+	"generic_weapon_17": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_17"
+		]
+	},
+	"generic_weapon_18": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_18"
+		]
+	},
+	"generic_weapon_19": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_19"
+		]
+	},
+	"generic_weapon_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_2"
+		]
+	},
+	"generic_weapon_20": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_20"
+		]
+	},
+	"generic_weapon_21": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_21"
+		]
+	},
+	"generic_weapon_22": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_22"
+		]
+	},
+	"generic_weapon_23": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_23"
+		]
+	},
+	"generic_weapon_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_3"
+		]
+	},
+	"generic_weapon_4": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_4"
+		]
+	},
+	"generic_weapon_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_5"
+		]
+	},
+	"generic_weapon_6": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_6"
+		]
+	},
+	"generic_weapon_7": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_7"
+		]
+	},
+	"generic_weapon_8": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_8"
+		]
+	},
+	"generic_weapon_9": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_weapon_9"
+		]
+	},
+	"generic_whack": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:generic_whack"
+		]
+	},
+	"ghostly_clouds": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ghostly_clouds"
+		]
+	},
+	"glanger_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glanger_death"
+		]
+	},
+	"glangler_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glangler_ambient"
+		]
+	},
+	"glangler_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glanger_death"
+		]
+	},
+	"glangler_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glangler_hurt"
+		]
+	},
+	"globoon_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:globoon_ambient"
+		]
+	},
+	"globoon_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:globoon_death"
+		]
+	},
+	"globoon_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:globoon_hurt"
+		]
+	},
+	"globro_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:globro_ambient"
+		]
+	},
+	"globro_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:globro_death"
+		]
+	},
+	"globro_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:globro_hurt"
+		]
+	},
+	"glochipper_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glochipper_ambient"
+		]
+	},
+	"glochipper_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glochipper_death"
+		]
+	},
+	"glochipper_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glochipper_hurt"
+		]
+	},
+	"glomite_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glomite_ambient"
+		]
+	},
+	"glomite_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glomite_death"
+		]
+	},
+	"glomite_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glomite_hurt"
+		]
+	},
+	"glomite_teleport": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glomite_teleport"
+		]
+	},
+	"glow_bomb": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:glow_bomb"
+		]
+	},
+	"gnawer_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gnawer_ambient"
+		]
+	},
+	"gnawer_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gnawer_death"
+		]
+	},
+	"gnawer_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gnawer_hurt"
+		]
+	},
+	"goo_explode": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:goo_explode"
+		]
+	},
+	"gorger_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gorger_ambient"
+		]
+	},
+	"gorger_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gorger_death"
+		]
+	},
+	"gorger_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gorger_hurt"
+		]
+	},
+	"grappler_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:grappler_ambient"
+		]
+	},
+	"grappler_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:grappler_death"
+		]
+	},
+	"grappler_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:grappler_hit"
+		]
+	},
+	"grappler_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:grappler_hit"
+		]
+	},
+	"gravhead_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gravhead_ambient"
+		]
+	},
+	"gravhead_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gravhead_death"
+		]
+	},
+	"gravhead_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gravhead_hurt"
+		]
+	},
+	"ground_slam": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ground_slam"
+		]
+	},
+	"grubber_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:grubber_ambient"
+		]
+	},
+	"grubber_ambient_sleeping": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gruber_ambient_sleeping"
+		]
+	},
+	"grubber_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:grubber_death"
+		]
+	},
+	"grubber_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:grubber_hurt"
+		]
+	},
+	"gruber_ambient_sleeping": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:gruber_ambient_sleeping"
+		]
+	},
+	"heart_beat": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:heart_beat"
+		]
+	},
+	"hot_pod": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hot_pod"
+		]
+	},
+	"hurler_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hurler_ambient"
+		]
+	},
+	"hurler_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hurler_death"
+		]
+	},
+	"hurler_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hurler_hit"
+		]
+	},
+	"hurler_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hurler_hit"
+		]
+	},
+	"hypnosaur_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hypnosaur_ambient"
+		]
+	},
+	"hypnosaur_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hypnosaur_death"
+		]
+	},
+	"hypnosaur_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:hypnosaur_hurt"
+		]
+	},
+	"impending_doom": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:impending_doom"
+		]
+	},
+	"impending_doom_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:impending_doom_2"
+		]
+	},
+	"infuser": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:infuser"
+		]
+	},
+	"instant_transition": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:instant_transition"
+		]
+	},
+	"item_axiomavorum": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:item_axiomavorum"
+		]
+	},
+	"item_ghosthunter": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:item_ghosthunter"
+		]
+	},
+	"item_spaceslinger": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:item_spaceslinger"
+		]
+	},
+	"item_starstorm": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:item_starstorm"
+		]
+	},
+	"item_thunderbauble": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:item_thunderbauble"
+		]
+	},
+	"kalikos_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:kalikos_ambient"
+		]
+	},
+	"kalikos_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:kalikos_death"
+		]
+	},
+	"kalikos_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:kalikos_hurt"
+		]
+	},
+	"knife_gun": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:knife_gun"
+		]
+	},
+	"lab_creature_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lab_creature_death"
+		]
+	},
+	"lab_creature_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lab_creature_hit"
+		]
+	},
+	"lab_game_begin": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lab_game_begin"
+		]
+	},
+	"large_teleport": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:large_teleport"
+		]
+	},
+	"laser_weapon_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_1"
+		]
+	},
+	"laser_weapon_10": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_10"
+		]
+	},
+	"laser_weapon_11": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_11"
+		]
+	},
+	"laser_weapon_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_2"
+		]
+	},
+	"laser_weapon_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_3"
+		]
+	},
+	"laser_weapon_4": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_4"
+		]
+	},
+	"laser_weapon_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_5"
+		]
+	},
+	"laser_weapon_6": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_6"
+		]
+	},
+	"laser_weapon_7": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_7"
+		]
+	},
+	"laser_weapon_8": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_8"
+		]
+	},
+	"laser_weapon_9": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:laser_weapon_9"
+		]
+	},
+	"leaviathan_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:leaviathan_hurt"
+		]
+	},
+	"leer_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:leer_ambient"
+		]
+	},
+	"leer_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:leer_death"
+		]
+	},
+	"leer_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:leer_hurt"
+		]
+	},
+	"leviathan_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:leviathan_ambient"
+		]
+	},
+	"leviathan_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:leviathan_death"
+		]
+	},
+	"leviathan_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:leaviathan_hurt"
+		]
+	},
+	"lifevessel_bind": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lifevessel_bind"
+		]
+	},
+	"lifevessel_damage": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lifevessel_damage"
+		]
+	},
+	"lifevessel_heal": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lifevessel_heal"
+		]
+	},
+	"light_magic": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:light_magic"
+		]
+	},
+	"livorax_ability": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:livorax_ability"
+		]
+	},
+	"livorax_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:livorax_ambient"
+		]
+	},
+	"livorax_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:livorax_death"
+		]
+	},
+	"livorax_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:livorax_hurt"
+		]
+	},
+	"longfin_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:longfin_ambient"
+		]
+	},
+	"longfin_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:longfin_death"
+		]
+	},
+	"longfin_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:longfin_hurt"
+		]
+	},
+	"lurcher_ability": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lurcher_ability"
+		]
+	},
+	"lurcher_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lurcher_ambient"
+		]
+	},
+	"lurcher_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lurcher_death"
+		]
+	},
+	"lurcher_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:lurcher_hurt"
+		]
+	},
+	"machine_craft": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:machine_craft"
+		]
+	},
+	"magic_powder": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_powder"
+		]
+	},
+	"magic_weapon_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_1"
+		]
+	},
+	"magic_weapon_10": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_10"
+		]
+	},
+	"magic_weapon_11": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_11"
+		]
+	},
+	"magic_weapon_12": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_12"
+		]
+	},
+	"magic_weapon_13": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_13"
+		]
+	},
+	"magic_weapon_14": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_14"
+		]
+	},
+	"magic_weapon_15": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_15"
+		]
+	},
+	"magic_weapon_16": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_16"
+		]
+	},
+	"magic_weapon_17": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_17"
+		]
+	},
+	"magic_weapon_18": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_18"
+		]
+	},
+	"magic_weapon_19": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_19"
+		]
+	},
+	"magic_weapon_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_2"
+		]
+	},
+	"magic_weapon_20": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_20"
+		]
+	},
+	"magic_weapon_21": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_21"
+		]
+	},
+	"magic_weapon_22": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_22"
+		]
+	},
+	"magic_weapon_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_3"
+		]
 	},
 	"magic_weapon_4": {
 		"category": "master",
-		"sounds": [ "lostinfinity:magic_weapon_4" ]
+		"sounds": [
+			"lostinfinity:magic_weapon_4"
+		]
+	},
+	"magic_weapon_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_5"
+		]
+	},
+	"magic_weapon_6": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_6"
+		]
+	},
+	"magic_weapon_7": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_7"
+		]
+	},
+	"magic_weapon_8": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_8"
+		]
+	},
+	"magic_weapon_9": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:magic_weapon_9"
+		]
+	},
+	"manufacture_machine": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:manufacture_machine"
+		]
+	},
+	"maze_build": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:maze_build"
+		]
+	},
+	"mind_control": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:mind_control"
+		]
+	},
+	"mind_control_potion": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:mind_control_potion"
+		]
+	},
+	"minigame_announcement": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:minigame_announcement"
+		]
+	},
+	"minigame_powerup": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:minigame_powerup"
+		]
+	},
+	"minigame_score": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:minigame_score"
+		]
+	},
+	"minigame_teleport": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:minigame_teleport"
+		]
+	},
+	"minimite_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:minimite_ambient"
+		]
+	},
+	"minimite_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:minimite_death"
+		]
+	},
+	"minimite_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:minimite_hurt"
+		]
+	},
+	"mirrorzombie_reflect": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:mirrorzombie_reflect"
+		]
+	},
+	"missile_explosion": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:missile_explosion"
+		]
+	},
+	"missile_launch": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:missile_launch"
+		]
+	},
+	"multiversal_blade": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:multiversal_blade"
+		]
+	},
+	"mystery_voice_transmission": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:mystery_voice_transmission"
+		]
+	},
+	"nat_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nat_ambient"
+		]
+	},
+	"nat_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nat_death"
+		]
+	},
+	"nat_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nat_hurt"
+		]
+	},
+	"nebula_giant_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_giant_ambient"
+		]
+	},
+	"nebula_giant_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_giant_death"
+		]
+	},
+	"nebula_giant_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_giant_hurt"
+		]
+	},
+	"nebula_giant_shockwave": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_giant_shockwave"
+		]
+	},
+	"nebula_grunt_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_grunt_ambient"
+		]
+	},
+	"nebula_grunt_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_grunt_death"
+		]
+	},
+	"nebula_grunt_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_grunt_hurt"
+		]
+	},
+	"nebula_wizard_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_wizard_ambient"
+		]
+	},
+	"nebula_wizard_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_wizard_death"
+		]
+	},
+	"nebula_wizard_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_wizard_hurt"
+		]
+	},
+	"nebula_wizard_spell": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebula_wizard_spell"
+		]
+	},
+	"nebulous_beacon": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nebulous_beacon"
+		]
+	},
+	"nightshyre_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nightshyre_ambient"
+		]
+	},
+	"nightshyre_darken": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nightshyre_darken"
+		]
+	},
+	"nightshyre_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nightshyre_death"
+		]
+	},
+	"nightshyre_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:nightshyre_hurt"
+		]
+	},
+	"note_type_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:note_type_1"
+		]
+	},
+	"note_type_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:note_type_2"
+		]
+	},
+	"note_type_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:note_type_3"
+		]
+	},
+	"note_type_4": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:note_type_4"
+		]
+	},
+	"note_type_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:note_type_5"
+		]
+	},
+	"octobrella_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:octobrella_ambient"
+		]
+	},
+	"octobrella_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:octobrella_death"
+		]
+	},
+	"octobrella_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:octobrella_hit"
+		]
+	},
+	"octobrella_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:octobrella_hit"
+		]
+	},
+	"orbiter_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:orbiter_ambient"
+		]
+	},
+	"orbiter_attack": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:orbiter_attack"
+		]
+	},
+	"orbiter_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:orbiter_death"
+		]
+	},
+	"orbiter_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:orbiter_hurt"
+		]
+	},
+	"ore_light": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ore_light"
+		]
+	},
+	"ozor_message": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ozor_message"
+		]
+	},
+	"ozor_reappear": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ozor_reappear"
+		]
+	},
+	"ozor_vanish": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ozor_vanish"
+		]
+	},
+	"paint_gun": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:paint_gun"
+		]
+	},
+	"phaser_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:phaser_ambient"
+		]
+	},
+	"phaser_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:phaser_death"
+		]
+	},
+	"phaser_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:phaser_hit"
+		]
+	},
+	"phaser_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:phaser_hit"
+		]
+	},
+	"pickle_portal": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:pickle_portal"
+		]
+	},
+	"portal_open": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:portal_open"
+		]
+	},
+	"rainfall_generator": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rainfall_generator"
+		]
+	},
+	"rampage_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rampage_1"
+		]
+	},
+	"rampage_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rampage_2"
+		]
+	},
+	"rampage_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rampage_3"
+		]
+	},
+	"rampage_4": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rampage_4"
+		]
+	},
+	"rampage_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rampage_5"
+		]
+	},
+	"rapid_dodge": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rapid_dodge"
+		]
+	},
+	"rapid_teleport": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rapid_teleport"
+		]
+	},
+	"ravager_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ravager_ambient"
+		]
+	},
+	"ravager_ambient_alternate": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ravager_ambient_alternate"
+		]
+	},
+	"ravager_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ravager_death"
+		]
+	},
+	"ravager_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ravager_hurt"
+		]
+	},
+	"rayfish_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rayfish_ambient"
+		]
+	},
+	"rayfish_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rayfish_death"
+		]
+	},
+	"rayfish_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rayfish_hit"
+		]
+	},
+	"rayfish_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rayfish_hit"
+		]
+	},
+	"reflectal_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:reflectal_ambient"
+		]
+	},
+	"reflectal_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:reflectal_death"
+		]
+	},
+	"reflectal_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:reflectal_hit"
+		]
+	},
+	"reflectal_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:reflectal_hit"
+		]
+	},
+	"rib_shark_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rib_shark_ambient"
+		]
+	},
+	"rib_shark_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rib_shark_death"
+		]
+	},
+	"rib_shark_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rib_shark_hurt"
+		]
+	},
+	"ribrex_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ribrex_ambient"
+		]
+	},
+	"ribrex_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ribrex_death"
+		]
+	},
+	"ribrex_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:ribrex_hurt"
+		]
 	},
 	"riff_1": {
 		"category": "master",
-		"sounds": [ "lostinfinity:riff_1" ]
+		"sounds": [
+			"lostinfinity:riff_1"
+		]
 	},
 	"riff_2": {
 		"category": "master",
-		"sounds": [ "lostinfinity:riff_2" ]
+		"sounds": [
+			"lostinfinity:riff_2"
+		]
 	},
 	"riff_3": {
 		"category": "master",
-		"sounds": [ "lostinfinity:riff_3" ]
+		"sounds": [
+			"lostinfinity:riff_3"
+		]
 	},
 	"riff_4": {
 		"category": "master",
-		"sounds": [ "lostinfinity:riff_4" ]
+		"sounds": [
+			"lostinfinity:riff_4"
+		]
 	},
 	"riff_5": {
 		"category": "master",
-		"sounds": [ "lostinfinity:riff_5" ]
+		"sounds": [
+			"lostinfinity:riff_5"
+		]
+	},
+	"rift_create": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rift_create"
+		]
+	},
+	"rikarus_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rikarus_ambient"
+		]
+	},
+	"rikarus_crystal": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rikarus_crystal"
+		]
+	},
+	"rikarus_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rikarus_death"
+		]
+	},
+	"rikarus_heal": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rikarus_heal"
+		]
+	},
+	"rikarus_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rikarus_hurt"
+		]
+	},
+	"robotic_doom": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:robotic_doom"
+		]
+	},
+	"rock_tumble": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rock_tumble"
+		]
+	},
+	"rockpest_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockpest_ambient"
+		]
+	},
+	"rockpest_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockpest_death"
+		]
+	},
+	"rockpest_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockpest_hurt"
+		]
+	},
+	"rockslug_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockslug_ambient"
+		]
+	},
+	"rockslug_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockslug_death"
+		]
+	},
+	"rockslug_hurl": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockslug_hurl"
+		]
+	},
+	"rockslug_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockslug_hurt"
+		]
+	},
+	"rockworm_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockworm_ambient"
+		]
+	},
+	"rockworm_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockworm_death"
+		]
+	},
+	"rockworm_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockworm_hurt"
+		]
+	},
+	"rockworm_sleeping": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:rockworm_sleeping"
+		]
+	},
+	"scanner": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:scanner"
+		]
+	},
+	"scorpwing_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:scorpwing_ambient"
+		]
+	},
+	"scorpwing_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:scorpwing_death"
+		]
+	},
+	"scorpwing_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:scorpwing_hurt"
+		]
+	},
+	"screacher_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:screacher_ambient"
+		]
+	},
+	"screacher_attack": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:screacher_attack"
+		]
+	},
+	"security_clear": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:security_clear"
+		]
+	},
+	"sentry_ability": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sentry_ability"
+		]
+	},
+	"sentry_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sentry_ambient"
+		]
+	},
+	"sentry_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sentry_death"
+		]
+	},
+	"sentry_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sentry_hurt"
+		]
+	},
+	"shield_block": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:shield_block"
+		]
+	},
+	"shimmer_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:shimmer_ambient"
+		]
+	},
+	"shimmer_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:shimmer_death"
+		]
+	},
+	"shimmer_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:shimmer_hit"
+		]
+	},
+	"shimmer_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:shimmer_hit"
+		]
+	},
+	"sightwalker_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sightwalker_ambient"
+		]
+	},
+	"sightwalker_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sightwalker_death"
+		]
+	},
+	"sightwalker_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sightwalker_hurt"
+		]
+	},
+	"skycrab_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:skycrab_ambient"
+		]
+	},
+	"skycrab_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:skycrab_death"
+		]
+	},
+	"skycrab_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:skycrab_hurt"
+		]
+	},
+	"skycrab_target": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:skycrab_target"
+		]
+	},
+	"skyre_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:skyre_ambient"
+		]
+	},
+	"skyre_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:skyre_death"
+		]
+	},
+	"skyre_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:skyre_hurt"
+		]
+	},
+	"slow_transition": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:slow_transition"
+		]
+	},
+	"sound_bounce": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sound_bounce"
+		]
+	},
+	"sound_gun": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:sound_gun"
+		]
+	},
+	"space_bow": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:space_bow"
+		]
+	},
+	"space_victory": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:space_victory"
+		]
+	},
+	"special_craft": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:special_craft"
+		]
+	},
+	"spider_unleash": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spider_unleash"
+		]
+	},
+	"spinovern_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spinovern_ambient"
+		]
+	},
+	"spinovern_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spinovern_death"
+		]
+	},
+	"spinovern_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spinovern_hurt"
+		]
+	},
+	"spire_difficulty": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spire_difficulty"
+		]
+	},
+	"spire_target": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spire_target"
+		]
+	},
+	"spirit_sword": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spirit_sword"
+		]
+	},
+	"splat_explode": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:splat_explode"
+		]
+	},
+	"spyker_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spyker_ambient"
+		]
+	},
+	"spyker_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spyker_death"
+		]
+	},
+	"spyker_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spyker_hit"
+		]
+	},
+	"spyker_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:spyker_hit"
+		]
+	},
+	"starfiend_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:starfiend_ambient"
+		]
+	},
+	"starfiend_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:starfiend_death"
+		]
+	},
+	"starfiend_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:starfiend_hit"
+		]
+	},
+	"stickler_ability": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:stickler_ability"
+		]
+	},
+	"stickler_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:stickler_ambient"
+		]
+	},
+	"stickler_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:stickler_death"
+		]
+	},
+	"stickler_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:stickler_hurt"
+		]
+	},
+	"supermutation": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:supermutation"
+		]
+	},
+	"supersonic_dash": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:supersonic_dash"
+		]
+	},
+	"swing_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:swing_hit"
+		]
+	},
+	"synchronite_switch": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:synchronite_switch"
+		]
+	},
+	"syringe_use": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:syringe_use"
+		]
+	},
+	"tentaclon_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tentaclon_ambient"
+		]
+	},
+	"tentaclon_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tentaclon_death"
+		]
+	},
+	"tentaclon_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tentaclon_hurt"
+		]
+	},
+	"terror_fly_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:terror_fly_ambient"
+		]
+	},
+	"terror_fly_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:terror_fly_death"
+		]
+	},
+	"terror_fly_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:terror_fly_hurt"
+		]
+	},
+	"tetherbug_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tetherbug_ambient"
+		]
+	},
+	"tetherbug_attack": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tetherbug_attack"
+		]
+	},
+	"tetherbug_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tetherbug_death"
+		]
+	},
+	"tetherbug_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tetherbug_hurt"
+		]
+	},
+	"titanopod_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:titanopod_ambient"
+		]
+	},
+	"titanopod_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:titanopod_death"
+		]
+	},
+	"titanopod_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:titanopod_hurt"
+		]
+	},
+	"torpedon_ability": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:torpedon_ability"
+		]
+	},
+	"torpedon_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:torpedon_ambient"
+		]
+	},
+	"torpedon_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:torpedon_death"
+		]
+	},
+	"torpedon_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:torpedon_hurt"
+		]
+	},
+	"tt_ambient_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_ambient_1"
+		]
+	},
+	"tt_ambient_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_ambient_2"
+		]
+	},
+	"tt_ambient_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_ambient_3"
+		]
+	},
+	"tt_ambient_4": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_ambient_4"
+		]
+	},
+	"tt_ambient_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_ambient_5"
+		]
+	},
+	"tt_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_death"
+		]
+	},
+	"tt_portal": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_portal"
+		]
+	},
+	"tt_riseup": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:tt_riseup"
+		]
+	},
+	"underfin_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:underfin_ambient"
+		]
+	},
+	"underfin_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:underfin_death"
+		]
+	},
+	"underfin_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:underfin_hurt"
+		]
+	},
+	"urogo_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:urogo_death"
+		]
+	},
+	"urogo_hit": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:urogo_hit"
+		]
+	},
+	"vectosect_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:vectosect_ambient"
+		]
+	},
+	"vectosect_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:vectosect_death"
+		]
+	},
+	"vectosect_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:vectosect_hurt"
+		]
+	},
+	"water_drop": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:water_drop"
+		]
+	},
+	"water_echo": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:water_echo"
+		]
+	},
+	"water_mud": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:water_mud"
+		]
+	},
+	"water_reveal": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:water_reveal"
+		]
+	},
+	"weapon_error": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:weapon_error"
+		]
+	},
+	"weaver_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:weaver_ambient"
+		]
+	},
+	"weaver_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:weaver_death"
+		]
+	},
+	"weaver_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:weaver_hurt"
+		]
+	},
+	"welding": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:welding"
+		]
+	},
+	"whisper_1": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_1"
+		]
+	},
+	"whisper_2": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_2"
+		]
+	},
+	"whisper_3": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_3"
+		]
+	},
+	"whisper_4": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_4"
+		]
+	},
+	"whisper_5": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_5"
+		]
+	},
+	"whisper_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_ambient"
+		]
+	},
+	"whisper_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_death"
+		]
+	},
+	"whisper_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:whisper_hurt"
+		]
+	},
+	"wind_gust": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:wind_gust"
+		]
+	},
+	"wisp_ambient": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:wisp_ambient"
+		]
+	},
+	"wisp_death": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:wisp_death"
+		]
+	},
+	"wisp_hurt": {
+		"category": "master",
+		"sounds": [
+			"lostinfinity:wisp_hurt"
+		]
 	}
-
 }
