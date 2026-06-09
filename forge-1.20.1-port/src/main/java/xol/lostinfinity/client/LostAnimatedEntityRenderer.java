@@ -30,6 +30,9 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
     private static final Set<String> SLIMES = Set.of(
             "deviantslime", "deviantmagmacube", "titanmagmacube", "slimestrider", "deviantslimestrider",
             "gloop", "gloopmother", "glomite");
+    private static final Set<String> PLANTS = Set.of(
+            "clusterweed", "blisterweed", "vilebulb", "fyreweed", "giantfyreweed", "shroomite", "mushmerra",
+            "mushmerra_clone", "fungfly", "flutterbee", "flutterfyre", "flurky");
     private static final Set<String> QUADRUPEDS = Set.of(
             "deviantbear", "deviantcow", "deviantsheep", "devianthorse", "deviantpig", "deviantwolf",
             "deviant_wolf", "deviantocelote", "deviantmooshroom", "deviantllama", "titanllama", "doomdog",
@@ -52,7 +55,8 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
             return;
         }
 
-        VertexConsumer vertices = buffer.getBuffer(RenderType.entityCutoutNoCull(getTextureLocation(entity)));
+        ResourceLocation texture = getTextureLocation(entity);
+        VertexConsumer vertices = buffer.getBuffer(baseRenderType(id, texture));
         poseStack.pushPose();
         poseStack.mulPose(Axis.YP.rotationDegrees(180.0F - yaw));
         float width = Math.max(0.4F, entity.getBbWidth());
@@ -72,6 +76,10 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
             renderSpiderRig(poseStack, vertices, packedLight, width, height, walk);
         } else if (FLYERS.contains(id) || id.contains("fly") || id.contains("wing")) {
             renderFlyingRig(poseStack, vertices, packedLight, width, height, walk, id);
+        } else if (PLANTS.contains(id) || id.contains("weed") || id.contains("bulb") || id.contains("plant")) {
+            renderPlantRig(poseStack, vertices, packedLight, width, height, walk, id);
+        } else if (id.contains("droid") || id.contains("machine") || id.contains("cannon")) {
+            renderMechanicalRig(poseStack, vertices, packedLight, width, height, walk, id);
         } else if (CRYSTALS.contains(id) || id.contains("spire") || id.contains("crystal") || id.contains("totem")) {
             renderCrystalRig(poseStack, vertices, packedLight, width, height, walk);
         } else if (SLIMES.contains(id) || id.contains("slime") || id.contains("gloop")) {
@@ -81,8 +89,17 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         } else {
             renderHumanoidRig(poseStack, vertices, packedLight, width, height, walk, id);
         }
+        renderRecoveredDetails(poseStack, vertices, packedLight, width, height, walk, id);
+        if (hasGlowPass(id)) {
+            VertexConsumer glow = buffer.getBuffer(RenderType.eyes(texture));
+            renderGlowPass(poseStack, glow, width, height, walk, id);
+        }
         poseStack.popPose();
         super.render(entity, yaw, partialTick, poseStack, buffer, packedLight);
+    }
+
+    private static RenderType baseRenderType(String id, ResourceLocation texture) {
+        return isTranslucentEntity(id) ? RenderType.entityTranslucent(texture) : RenderType.entityCutoutNoCull(texture);
     }
 
     private void renderHumanoidRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
@@ -167,6 +184,44 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         box(poseStack, vertices, light, 0.0F, 0.55F, 0.0F, 0.55F, 1.1F, 0.55F);
         box(poseStack, vertices, light, 0.0F, 1.35F, 0.0F, 0.9F, 0.45F, 0.9F);
         box(poseStack, vertices, light, 0.0F, 1.9F, 0.0F, 0.45F, 0.75F, 0.45F);
+        poseStack.popPose();
+    }
+
+    private void renderPlantRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
+        float scale = Math.max(width / 1.2F, height / 1.8F);
+        float sway = Mth.sin(walk * 0.18F) * 7.0F;
+        poseStack.pushPose();
+        poseStack.scale(scale, scale, scale);
+        limb(poseStack, vertices, light, 0.0F, 0.72F, 0.0F, sway, 0.26F, 1.1F, 0.26F);
+        box(poseStack, vertices, light, 0.0F, 1.38F, 0.0F, id.contains("giant") || id.contains("mush") ? 1.35F : 0.85F, 0.48F, 0.85F);
+        for (int i = 0; i < 4; i++) {
+            poseStack.pushPose();
+            poseStack.mulPose(Axis.YP.rotationDegrees(i * 90.0F + sway));
+            wing(poseStack, vertices, light, 0.38F, 0.95F, 0.0F, 18.0F + Mth.sin(walk * 0.22F + i) * 8.0F);
+            poseStack.popPose();
+        }
+        if (id.contains("bulb") || id.contains("fyre")) {
+            box(poseStack, vertices, light, 0.0F, 1.72F, 0.0F, 0.62F, 0.62F, 0.62F);
+        }
+        poseStack.popPose();
+    }
+
+    private void renderMechanicalRig(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
+        float scale = Math.max(width / 1.4F, height / 1.6F);
+        poseStack.pushPose();
+        poseStack.scale(scale, scale, scale);
+        box(poseStack, vertices, light, 0.0F, 1.0F, 0.0F, 1.0F, 0.9F, 0.9F);
+        box(poseStack, vertices, light, 0.0F, 1.62F, -0.08F, 0.7F, 0.45F, 0.7F);
+        box(poseStack, vertices, light, 0.0F, 1.17F, -0.7F, 0.42F, 0.32F, 0.85F);
+        for (int i = 0; i < 4; i++) {
+            poseStack.pushPose();
+            poseStack.mulPose(Axis.YP.rotationDegrees(walk * 5.0F + i * 90.0F));
+            box(poseStack, vertices, light, 0.0F, 0.85F, 0.72F, 0.24F, 0.24F, 0.58F);
+            poseStack.popPose();
+        }
+        if (id.contains("boss") || id.contains("cannon")) {
+            box(poseStack, vertices, light, 0.0F, 1.95F, 0.0F, 1.1F, 0.22F, 1.1F);
+        }
         poseStack.popPose();
     }
 
@@ -307,6 +362,49 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
         poseStack.popPose();
     }
 
+    private void renderRecoveredDetails(PoseStack poseStack, VertexConsumer vertices, int light, float width, float height, float walk, String id) {
+        if (id.contains("merchant") || id.contains("trader")) {
+            float scale = Math.max(width / 0.9F, height / 2.0F);
+            poseStack.pushPose();
+            poseStack.scale(scale, scale, scale);
+            box(poseStack, vertices, light, 0.0F, 2.42F, 0.0F, 0.9F, 0.12F, 0.9F);
+            box(poseStack, vertices, light, 0.0F, 1.18F, -0.38F, 0.82F, 0.18F, 0.18F);
+            poseStack.popPose();
+        }
+        if (id.contains("ghost") || id.contains("phantom") || id.contains("spectre") || id.contains("shimmer")) {
+            float scale = Math.max(width / 1.0F, height / 1.8F);
+            poseStack.pushPose();
+            poseStack.mulPose(Axis.YP.rotationDegrees(walk * 3.0F));
+            poseStack.scale(scale, scale, scale);
+            box(poseStack, vertices, light, 0.0F, 1.1F, 0.0F, 1.05F, 0.08F, 1.05F);
+            box(poseStack, vertices, light, 0.0F, 1.1F, 0.0F, 0.08F, 1.05F, 1.05F);
+            poseStack.popPose();
+        }
+        if (id.contains("rift") || id.contains("black_hole") || id.contains("portal")) {
+            poseStack.pushPose();
+            poseStack.mulPose(Axis.YP.rotationDegrees(walk * 8.0F));
+            box(poseStack, vertices, light, 0.0F, height * 0.55F, 0.0F, width * 1.35F, 0.1F, width * 1.35F);
+            poseStack.mulPose(Axis.ZP.rotationDegrees(90.0F));
+            box(poseStack, vertices, light, 0.0F, height * 0.55F, 0.0F, width * 1.1F, 0.1F, width * 1.1F);
+            poseStack.popPose();
+        }
+    }
+
+    private void renderGlowPass(PoseStack poseStack, VertexConsumer vertices, float width, float height, float walk, String id) {
+        int light = 0xF000F0;
+        poseStack.pushPose();
+        poseStack.mulPose(Axis.YP.rotationDegrees(walk * (id.contains("laser") || id.contains("beam") ? 0.0F : 3.0F)));
+        if (isProjectileLike(id)) {
+            float size = Math.max(0.22F, Math.max(width, height));
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 1.25F, size * 0.18F, size * 1.25F);
+            box(poseStack, vertices, light, 0.0F, 0.15F, 0.0F, size * 0.18F, size * 1.25F, size * 1.25F);
+        } else {
+            box(poseStack, vertices, light, 0.0F, height * 0.62F, 0.0F, width * 1.1F, 0.12F, width * 1.1F);
+            box(poseStack, vertices, light, 0.0F, height * 0.62F, 0.0F, 0.12F, height * 0.85F, width * 1.1F);
+        }
+        poseStack.popPose();
+    }
+
     private static float projectileSpin(String id) {
         if (id.contains("laser") || id.contains("beam")) {
             return 0.0F;
@@ -371,6 +469,17 @@ public class LostAnimatedEntityRenderer extends EntityRenderer<Entity> {
                 || id.contains("fireball") || id.contains("skull") || id.contains("missile") || id.contains("chakram")
                 || id.contains("trident") || id.contains("chain") || id.contains("spear") || id.contains("knife")
                 || id.contains("comet") || id.contains("asteroid") || id.contains("rift") || id.contains("portal");
+    }
+
+    private static boolean isTranslucentEntity(String id) {
+        return id.contains("ghost") || id.contains("phantom") || id.contains("spectre") || id.contains("shimmer")
+                || id.contains("rift") || id.contains("black_hole") || id.contains("death_fx") || id.contains("cloud");
+    }
+
+    private static boolean hasGlowPass(String id) {
+        return isProjectileLike(id) || isTranslucentEntity(id) || id.contains("galaxy") || id.contains("nebula")
+                || id.contains("crystal") || id.contains("spire") || id.contains("totem") || id.contains("laser")
+                || id.contains("droid") || id.contains("cthulhu") || id.contains("celestial");
     }
 
     private static void box(PoseStack poseStack, VertexConsumer vertices, int light, float cx, float cy, float cz, float sx, float sy, float sz) {
