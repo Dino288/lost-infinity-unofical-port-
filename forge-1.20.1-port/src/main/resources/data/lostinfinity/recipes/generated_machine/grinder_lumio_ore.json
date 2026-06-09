@@ -1,14 +1,14 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "grinder",
-    "input":  {
-                  "item":  "lostinfinity:lumio_ore"
-              },
-    "consume_catalyst":  false,
-    "energy":  45,
-    "time":  110,
-    "output":  {
-                   "item":  "lostinfinity:luminessence",
-                   "count":  2
-               }
+  "type": "lostinfinity:machine",
+  "consume_catalyst": false,
+  "energy": 45,
+  "input": {
+    "item": "lostinfinity:lumio_ore"
+  },
+  "machine": "grinder",
+  "output": {
+    "count": 2,
+    "item": "lostinfinity:luminessence"
+  },
+  "time": 110
 }

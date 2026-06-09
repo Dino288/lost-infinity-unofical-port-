@@ -1,14 +1,14 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "grinder",
-    "input":  {
-                  "item":  "lostinfinity:ionite_ore"
-              },
-    "consume_catalyst":  false,
-    "energy":  50,
-    "time":  120,
-    "output":  {
-                   "item":  "lostinfinity:ionite",
-                   "count":  2
-               }
+  "type": "lostinfinity:machine",
+  "consume_catalyst": false,
+  "energy": 50,
+  "input": {
+    "item": "lostinfinity:ionite_ore"
+  },
+  "machine": "grinder",
+  "output": {
+    "count": 2,
+    "item": "lostinfinity:ionite"
+  },
+  "time": 120
 }

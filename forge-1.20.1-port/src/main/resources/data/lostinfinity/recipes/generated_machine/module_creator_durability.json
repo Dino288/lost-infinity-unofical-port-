@@ -1,17 +1,23 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "module",
-    "input":  {
-                  "item":  "lostinfinity:module_container"
-              },
-    "consume_catalyst":  true,
-    "energy":  75,
-    "time":  150,
-    "output":  {
-                   "item":  "lostinfinity:module_durability",
-                   "count":  1
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:crystal_plating"
-                 }
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:crystallized_alloy"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:supermutated_pelt"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:durable_husk"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_durability"
+  },
+  "time": 150
 }

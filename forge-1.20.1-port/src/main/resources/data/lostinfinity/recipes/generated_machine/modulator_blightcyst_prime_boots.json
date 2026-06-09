@@ -1,0 +1,32 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:module_biocalibration"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 180,
+  "extras": [
+    {
+      "item": "lostinfinity:module_transmitting"
+    },
+    {
+      "item": "lostinfinity:kyvorium_condensed"
+    },
+    {
+      "item": "lostinfinity:kyvorium_condensed"
+    },
+    {
+      "item": "lostinfinity:kyvorium_condensed"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:blightcyst_boots"
+  },
+  "machine": "modulator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:blightcyst_prime_boots"
+  },
+  "time": 300
+}

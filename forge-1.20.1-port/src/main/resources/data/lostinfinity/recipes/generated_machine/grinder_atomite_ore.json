@@ -1,14 +1,14 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "grinder",
-    "input":  {
-                  "item":  "lostinfinity:atomite_ore"
-              },
-    "consume_catalyst":  false,
-    "energy":  45,
-    "time":  110,
-    "output":  {
-                   "item":  "lostinfinity:atomite_fragments",
-                   "count":  3
-               }
+  "type": "lostinfinity:machine",
+  "consume_catalyst": false,
+  "energy": 45,
+  "input": {
+    "item": "lostinfinity:atomite_ore"
+  },
+  "machine": "grinder",
+  "output": {
+    "count": 3,
+    "item": "lostinfinity:atomite_fragments"
+  },
+  "time": 110
 }

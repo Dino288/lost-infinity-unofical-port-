@@ -1,0 +1,23 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:jar_of_syrup"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:lifestrain_enigma"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:lifeboundemerald"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_restoration"
+  },
+  "time": 150
+}

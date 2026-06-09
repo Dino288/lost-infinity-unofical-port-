@@ -1,18 +1,18 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "formatter",
-    "input":  {
-                  "item":  "lostinfinity:fresh_data_chip"
-              },
-    "consume_catalyst":  true,
-    "energy":  80,
-    "time":  160,
-    "output":  {
-                   "item":  "lostinfinity:basic_storage_chip",
-                   "count":  1,
-                   "nbt":  "{LostFormatted:1b}"
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:datadrive"
-                 }
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:datadrive"
+  },
+  "consume_catalyst": true,
+  "energy": 80,
+  "input": {
+    "item": "lostinfinity:fresh_data_chip"
+  },
+  "machine": "formatter",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:basic_storage_chip",
+    "nbt": "{LostFormatted:1b}"
+  },
+  "time": 160
 }

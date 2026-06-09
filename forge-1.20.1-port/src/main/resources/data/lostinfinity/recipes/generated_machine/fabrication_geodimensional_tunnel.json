@@ -1,17 +1,17 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "fabrication",
-    "input":  {
-                  "item":  "lostinfinity:dimensionalizer_blueprint"
-              },
-    "consume_catalyst":  true,
-    "energy":  180,
-    "time":  320,
-    "output":  {
-                   "item":  "lostinfinity:geodimensional_tunnel",
-                   "count":  1
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:dimensional_polymer"
-                 }
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:dimensional_polymer"
+  },
+  "consume_catalyst": true,
+  "energy": 180,
+  "input": {
+    "item": "lostinfinity:dimensionalizer_blueprint"
+  },
+  "machine": "fabrication",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:geodimensional_tunnel"
+  },
+  "time": 320
 }

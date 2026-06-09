@@ -1,14 +1,14 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "grinder",
-    "input":  {
-                  "item":  "lostinfinity:incadium_ore"
-              },
-    "consume_catalyst":  false,
-    "energy":  55,
-    "time":  130,
-    "output":  {
-                   "item":  "lostinfinity:incadium_ingot",
-                   "count":  2
-               }
+  "type": "lostinfinity:machine",
+  "consume_catalyst": false,
+  "energy": 55,
+  "input": {
+    "item": "lostinfinity:incadium_ore"
+  },
+  "machine": "grinder",
+  "output": {
+    "count": 2,
+    "item": "lostinfinity:incadium_ingot"
+  },
+  "time": 130
 }

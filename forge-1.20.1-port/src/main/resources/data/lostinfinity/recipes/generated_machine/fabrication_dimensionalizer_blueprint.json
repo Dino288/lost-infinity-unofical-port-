@@ -1,17 +1,17 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "fabrication",
-    "input":  {
-                  "item":  "lostinfinity:dimensional_capacitor"
-              },
-    "consume_catalyst":  true,
-    "energy":  150,
-    "time":  260,
-    "output":  {
-                   "item":  "lostinfinity:dimensionalizer_blueprint",
-                   "count":  1
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:synchronizer"
-                 }
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:synchronizer"
+  },
+  "consume_catalyst": true,
+  "energy": 150,
+  "input": {
+    "item": "lostinfinity:dimensional_capacitor"
+  },
+  "machine": "fabrication",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:dimensionalizer_blueprint"
+  },
+  "time": 260
 }

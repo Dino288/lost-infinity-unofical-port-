@@ -1,18 +1,18 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "chemistry",
-    "input":  {
-                  "item":  "lostinfinity:dimensional_capacitor"
-              },
-    "consume_catalyst":  true,
-    "energy":  120,
-    "time":  220,
-    "output":  {
-                   "item":  "lostinfinity:dimensional_polymer",
-                   "count":  1
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:nanofluoric_acid"
-                 },
-    "fluid":  "lostinfinity:nanofluoric_acid"
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:nanofluoric_acid"
+  },
+  "consume_catalyst": true,
+  "energy": 120,
+  "fluid": "lostinfinity:nanofluoric_acid",
+  "input": {
+    "item": "lostinfinity:dimensional_capacitor"
+  },
+  "machine": "chemistry",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:dimensional_polymer"
+  },
+  "time": 220
 }

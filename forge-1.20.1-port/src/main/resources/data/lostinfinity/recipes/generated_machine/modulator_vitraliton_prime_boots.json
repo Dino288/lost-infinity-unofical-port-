@@ -1,0 +1,32 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:module_restoration"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 180,
+  "extras": [
+    {
+      "item": "lostinfinity:module_conversion"
+    },
+    {
+      "item": "lostinfinity:polarium_condensed"
+    },
+    {
+      "item": "lostinfinity:polarium_condensed"
+    },
+    {
+      "item": "lostinfinity:polarium_condensed"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:vitraliton_boots"
+  },
+  "machine": "modulator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:vitraliton_prime_boots"
+  },
+  "time": 300
+}

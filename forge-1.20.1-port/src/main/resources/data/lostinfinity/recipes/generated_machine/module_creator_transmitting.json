@@ -1,0 +1,23 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:reconfigured_matter"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:advanced_signal_receiver"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:murky_clay"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_transmitting"
+  },
+  "time": 150
+}

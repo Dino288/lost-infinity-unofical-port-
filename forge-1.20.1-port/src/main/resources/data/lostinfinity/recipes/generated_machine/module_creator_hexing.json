@@ -1,0 +1,23 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:ghostly_husk"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:cursedemerald"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:crystal_of_curses"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_hexing"
+  },
+  "time": 150
+}

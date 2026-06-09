@@ -1,17 +1,23 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "module",
-    "input":  {
-                  "item":  "lostinfinity:module_container"
-              },
-    "consume_catalyst":  true,
-    "energy":  75,
-    "time":  150,
-    "output":  {
-                   "item":  "lostinfinity:module_range",
-                   "count":  1
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:georedirection_orb"
-                 }
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:geocoordinated_orb"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:nanofluoric_acid"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:advanced_signal_receiver"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_range"
+  },
+  "time": 150
 }

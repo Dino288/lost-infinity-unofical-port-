@@ -1,0 +1,23 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:supermutated_wing"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:superstimulant"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:supermutated_batwing"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_acceleration"
+  },
+  "time": 150
+}

@@ -17,28 +17,35 @@ import net.minecraft.world.level.Level;
 import xol.lostinfinity.registry.ModRecipeTypes;
 
 import java.util.Locale;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LostMachineRecipe implements Recipe<Container> {
     private final ResourceLocation id;
     private final String machine;
     private final Ingredient input;
     private final Ingredient catalyst;
+    private final List<Ingredient> extras;
     private final ItemStack output;
     private final int energy;
     private final int time;
     private final boolean consumeCatalyst;
+    private final boolean consumeExtras;
     private final String fluid;
 
     public LostMachineRecipe(ResourceLocation id, String machine, Ingredient input, Ingredient catalyst, ItemStack output,
-                             int energy, int time, boolean consumeCatalyst, String fluid) {
+                             int energy, int time, boolean consumeCatalyst, boolean consumeExtras, String fluid,
+                             List<Ingredient> extras) {
         this.id = id;
         this.machine = machine.toLowerCase(Locale.ROOT);
         this.input = input;
         this.catalyst = catalyst;
+        this.extras = List.copyOf(extras);
         this.output = output;
         this.energy = Math.max(0, energy);
         this.time = Math.max(1, time);
         this.consumeCatalyst = consumeCatalyst;
+        this.consumeExtras = consumeExtras;
         this.fluid = fluid;
     }
 
@@ -47,7 +54,35 @@ public class LostMachineRecipe implements Recipe<Container> {
         if (container.getContainerSize() < 1 || !input.test(container.getItem(0))) {
             return false;
         }
-        return catalyst.isEmpty() || container.getContainerSize() > 1 && catalyst.test(container.getItem(1));
+        if (!catalyst.isEmpty() && (container.getContainerSize() <= 1 || !catalyst.test(container.getItem(1)))) {
+            return false;
+        }
+        return extrasMatch(container);
+    }
+
+    private boolean extrasMatch(Container container) {
+        if (extras.isEmpty()) {
+            return true;
+        }
+        if (container.getContainerSize() <= 3) {
+            return false;
+        }
+        boolean[] used = new boolean[container.getContainerSize()];
+        for (Ingredient extra : extras) {
+            boolean matched = false;
+            int end = Math.min(container.getContainerSize(), 8);
+            for (int slot = 3; slot < end; slot++) {
+                if (!used[slot] && extra.test(container.getItem(slot))) {
+                    used[slot] = true;
+                    matched = true;
+                    break;
+                }
+            }
+            if (!matched) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean matchesMachine(String machineId) {
@@ -84,6 +119,14 @@ public class LostMachineRecipe implements Recipe<Container> {
 
     public boolean consumeCatalyst() {
         return consumeCatalyst;
+    }
+
+    public boolean consumeExtras() {
+        return consumeExtras;
+    }
+
+    public List<Ingredient> extras() {
+        return extras;
     }
 
     public String fluid() {
@@ -123,8 +166,13 @@ public class LostMachineRecipe implements Recipe<Container> {
             int energy = GsonHelper.getAsInt(json, "energy", 35);
             int time = GsonHelper.getAsInt(json, "time", 120);
             boolean consumeCatalyst = GsonHelper.getAsBoolean(json, "consume_catalyst", !catalyst.isEmpty());
+            List<Ingredient> extras = new ArrayList<>();
+            if (json.has("extras")) {
+                json.getAsJsonArray("extras").forEach(element -> extras.add(Ingredient.fromJson(element)));
+            }
+            boolean consumeExtras = GsonHelper.getAsBoolean(json, "consume_extras", !extras.isEmpty());
             String fluid = GsonHelper.getAsString(json, "fluid", "");
-            return new LostMachineRecipe(id, machine, input, catalyst, output, energy, time, consumeCatalyst, fluid);
+            return new LostMachineRecipe(id, machine, input, catalyst, output, energy, time, consumeCatalyst, consumeExtras, fluid, extras);
         }
 
         @Override
@@ -137,8 +185,14 @@ public class LostMachineRecipe implements Recipe<Container> {
             int energy = buffer.readVarInt();
             int time = buffer.readVarInt();
             boolean consumeCatalyst = buffer.readBoolean();
+            boolean consumeExtras = buffer.readBoolean();
             String fluid = buffer.readUtf();
-            return new LostMachineRecipe(id, machine, input, catalyst, output, energy, time, consumeCatalyst, fluid);
+            List<Ingredient> extras = new ArrayList<>();
+            int extraCount = buffer.readVarInt();
+            for (int index = 0; index < extraCount; index++) {
+                extras.add(Ingredient.fromNetwork(buffer));
+            }
+            return new LostMachineRecipe(id, machine, input, catalyst, output, energy, time, consumeCatalyst, consumeExtras, fluid, extras);
         }
 
         @Override
@@ -153,7 +207,10 @@ public class LostMachineRecipe implements Recipe<Container> {
             buffer.writeVarInt(recipe.energy);
             buffer.writeVarInt(recipe.time);
             buffer.writeBoolean(recipe.consumeCatalyst);
+            buffer.writeBoolean(recipe.consumeExtras);
             buffer.writeUtf(recipe.fluid);
+            buffer.writeVarInt(recipe.extras.size());
+            recipe.extras.forEach(extra -> extra.toNetwork(buffer));
         }
     }
 }

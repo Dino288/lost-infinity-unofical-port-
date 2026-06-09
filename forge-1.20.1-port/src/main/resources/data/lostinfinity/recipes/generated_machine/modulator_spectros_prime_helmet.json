@@ -1,0 +1,32 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:module_hexing"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 180,
+  "extras": [
+    {
+      "item": "lostinfinity:module_weight"
+    },
+    {
+      "item": "lostinfinity:etherium_condensed"
+    },
+    {
+      "item": "lostinfinity:etherium_condensed"
+    },
+    {
+      "item": "lostinfinity:etherium_condensed"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:spectros_helmet"
+  },
+  "machine": "modulator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:spectros_prime_helmet"
+  },
+  "time": 300
+}

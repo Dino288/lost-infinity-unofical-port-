@@ -1,17 +1,23 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "module",
-    "input":  {
-                  "item":  "lostinfinity:module_container"
-              },
-    "consume_catalyst":  true,
-    "energy":  75,
-    "time":  150,
-    "output":  {
-                   "item":  "lostinfinity:module_power",
-                   "count":  1
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:power_fuel"
-                 }
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:overcharged_cell"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:power_clamp"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:power_control_disc"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_power"
+  },
+  "time": 150
 }

@@ -1,0 +1,32 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:module_range"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 180,
+  "extras": [
+    {
+      "item": "lostinfinity:module_power"
+    },
+    {
+      "item": "lostinfinity:malicium_condensed"
+    },
+    {
+      "item": "lostinfinity:malicium_condensed"
+    },
+    {
+      "item": "lostinfinity:malicium_condensed"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:vampyreon_helmet"
+  },
+  "machine": "modulator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:vampyreon_prime_helmet"
+  },
+  "time": 300
+}

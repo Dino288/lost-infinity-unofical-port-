@@ -1,14 +1,14 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "grinder",
-    "input":  {
-                  "item":  "lostinfinity:serpentine_ore"
-              },
-    "consume_catalyst":  false,
-    "energy":  50,
-    "time":  120,
-    "output":  {
-                   "item":  "lostinfinity:serpentine_crystal",
-                   "count":  2
-               }
+  "type": "lostinfinity:machine",
+  "consume_catalyst": false,
+  "energy": 50,
+  "input": {
+    "item": "lostinfinity:serpentine_ore"
+  },
+  "machine": "grinder",
+  "output": {
+    "count": 2,
+    "item": "lostinfinity:serpentine_crystal"
+  },
+  "time": 120
 }

@@ -18,6 +18,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -31,6 +32,8 @@ import xol.lostinfinity.registry.ModBlockEntities;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.recipe.LostMachineRecipe;
 import xol.lostinfinity.registry.ModRecipeTypes;
+
+import java.util.List;
 
 public class LostMachineBlockEntity extends BlockEntity implements MenuProvider, Container {
     private static final int INPUT_SLOT = 0;
@@ -262,6 +265,9 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         if (recipe.usesCatalyst() && !catalyst.isEmpty()) {
             catalyst.shrink(1);
         }
+        if (recipe.consumeExtras()) {
+            consumeExtraIngredients(recipe.extraIngredients());
+        }
         energy = Math.max(0, energy - effectiveEnergyCost(recipe.energyCost()));
         LostFx.burst(level, worldPosition, machineParticle(), 16, 0.65D, 0.04D);
         LostFx.play(level, worldPosition, machineSound(), SoundSource.BLOCKS, 0.8F, 0.9F + level.random.nextFloat() * 0.25F);
@@ -320,15 +326,28 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         int cost = machineId.contains("compression") || machineId.contains("fusion") || machineId.contains("collider") ? 80 : 35;
         int count = machineId.contains("grinder") || machineId.contains("crusher") ? 2 : 1;
         boolean usesCatalyst = machineId.contains("infuser") || machineId.contains("polymer") || machineId.contains("fusion");
-        return new MachineRecipe(new ItemStack(output, count), time, cost, usesCatalyst);
+        return new MachineRecipe(new ItemStack(output, count), time, cost, usesCatalyst, false, List.of());
     }
 
     private MachineRecipe datapackRecipe(Level level) {
         return level.getRecipeManager().getAllRecipesFor(ModRecipeTypes.MACHINE).stream()
                 .filter(recipe -> recipe.matchesMachine(machineId) && recipe.matches(this, level))
                 .findFirst()
-                .map(recipe -> new MachineRecipe(recipe.output(), recipe.time(), recipe.energy(), recipe.consumeCatalyst()))
+                .map(recipe -> new MachineRecipe(recipe.output(), recipe.time(), recipe.energy(), recipe.consumeCatalyst(),
+                        recipe.consumeExtras(), recipe.extras()))
                 .orElse(null);
+    }
+
+    private void consumeExtraIngredients(List<Ingredient> extras) {
+        for (Ingredient extra : extras) {
+            for (int slot = MODULE_START_SLOT; slot <= MODULE_END_SLOT; slot++) {
+                ItemStack stack = items.get(slot);
+                if (extra.test(stack)) {
+                    stack.shrink(1);
+                    break;
+                }
+            }
+        }
     }
 
     private Item inferOutput(String inputId) {
@@ -696,6 +715,7 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         setChanged();
     }
 
-    private record MachineRecipe(ItemStack output, int time, int energyCost, boolean usesCatalyst) {
+    private record MachineRecipe(ItemStack output, int time, int energyCost, boolean usesCatalyst,
+                                 boolean consumeExtras, List<Ingredient> extraIngredients) {
     }
 }

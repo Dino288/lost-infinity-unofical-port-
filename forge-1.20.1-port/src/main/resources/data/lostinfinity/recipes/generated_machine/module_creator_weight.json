@@ -1,0 +1,23 @@
+{
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:weightless_gem"
+  },
+  "consume_catalyst": true,
+  "consume_extras": true,
+  "energy": 75,
+  "extras": [
+    {
+      "item": "lostinfinity:gravity_core"
+    }
+  ],
+  "input": {
+    "item": "lostinfinity:ultralight_dust"
+  },
+  "machine": "module_creator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:module_weight"
+  },
+  "time": 150
+}

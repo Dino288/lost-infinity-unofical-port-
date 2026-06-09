@@ -1,18 +1,18 @@
 {
-    "type":  "lostinfinity:machine",
-    "machine":  "calibrator",
-    "input":  {
-                  "item":  "lostinfinity:synchronite_ore"
-              },
-    "consume_catalyst":  false,
-    "energy":  140,
-    "time":  240,
-    "output":  {
-                   "item":  "lostinfinity:fused_synchronite",
-                   "count":  1,
-                   "nbt":  "{LostStability:100}"
-               },
-    "catalyst":  {
-                     "item":  "lostinfinity:advanced_synchronizer"
-                 }
+  "type": "lostinfinity:machine",
+  "catalyst": {
+    "item": "lostinfinity:advanced_synchronizer"
+  },
+  "consume_catalyst": false,
+  "energy": 140,
+  "input": {
+    "item": "lostinfinity:synchronite_ore"
+  },
+  "machine": "calibrator",
+  "output": {
+    "count": 1,
+    "item": "lostinfinity:fused_synchronite",
+    "nbt": "{LostStability:100}"
+  },
+  "time": 240
 }
