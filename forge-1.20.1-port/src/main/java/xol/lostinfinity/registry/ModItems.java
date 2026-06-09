@@ -16,6 +16,7 @@ import xol.lostinfinity.item.LostArmorItem;
 import xol.lostinfinity.item.LostAxeItem;
 import xol.lostinfinity.item.LostCatenationPouchItem;
 import xol.lostinfinity.item.LostDimensionItem;
+import xol.lostinfinity.item.LostFossilFinderItem;
 import xol.lostinfinity.item.LostHoeItem;
 import xol.lostinfinity.item.LostPickaxeItem;
 import xol.lostinfinity.item.LostRangedItem;
@@ -40,6 +41,9 @@ public final class ModItems {
         Item.Properties properties = new Item.Properties();
         if (isCatenationPouch(name)) {
             return new LostCatenationPouchItem(name, properties);
+        }
+        if (name.equals("fossil_finder")) {
+            return new LostFossilFinderItem(properties);
         }
         if (isDimensionUtility(name)) {
             return new LostDimensionItem(name, properties);
