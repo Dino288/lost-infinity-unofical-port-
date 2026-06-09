@@ -1,0 +1,28 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "chemistry_table",
+  "input": {
+    "item": "lostinfinity:radioactive_isotopes"
+  },
+  "input_count": 3,
+  "catalyst": {
+    "item": "lostinfinity:polyamplification_solution"
+  },
+  "catalyst_count": 3,
+  "consume_catalyst": true,
+  "extras": [
+    {
+      "ingredient": {
+        "item": "lostinfinity:solarum_vial"
+      },
+      "count": 3
+    }
+  ],
+  "consume_extras": true,
+  "energy": 160,
+  "time": 260,
+  "output": {
+    "item": "lostinfinity:radiochronic_isotope",
+    "count": 1
+  }
+}

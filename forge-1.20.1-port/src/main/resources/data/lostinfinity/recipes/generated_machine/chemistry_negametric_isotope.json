@@ -1,0 +1,28 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "chemistry_table",
+  "input": {
+    "item": "lostinfinity:chrome_alum_vial"
+  },
+  "input_count": 2,
+  "catalyst": {
+    "item": "lostinfinity:gigacharge_solutions"
+  },
+  "catalyst_count": 4,
+  "consume_catalyst": true,
+  "extras": [
+    {
+      "ingredient": {
+        "item": "lostinfinity:negative_magnecronite"
+      },
+      "count": 3
+    }
+  ],
+  "consume_extras": true,
+  "energy": 180,
+  "time": 280,
+  "output": {
+    "item": "lostinfinity:negametric_isotope",
+    "count": 1
+  }
+}

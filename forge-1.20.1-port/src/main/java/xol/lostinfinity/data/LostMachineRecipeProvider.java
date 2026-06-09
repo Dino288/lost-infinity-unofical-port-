@@ -72,6 +72,12 @@ public class LostMachineRecipeProvider implements DataProvider {
     }
 
     private static void addChemistry(Map<String, JsonObject> recipes) {
+        addMachineWithCountedExtras(recipes, "chemistry_radiochronic_isotope", "chemistry_table",
+                "radioactive_isotopes", 3, "polyamplification_solution", 3, "", "radiochronic_isotope",
+                1, 160, 260, true, "", new CountedExtra("solarum_vial", 3));
+        addMachineWithCountedExtras(recipes, "chemistry_negametric_isotope", "chemistry_table",
+                "chrome_alum_vial", 2, "gigacharge_solutions", 4, "", "negametric_isotope",
+                1, 180, 280, true, "", new CountedExtra("negative_magnecronite", 3));
         addMachine(recipes, "chemistry_volatile_blood", "chemistry", "volatile_blood", "concentrated_acid", "lostinfinity:concentrated_acid", "volatility_solution", 1, 55, 140, true, "");
         addMachine(recipes, "chemistry_dimensional_polymer", "chemistry", "dimensional_capacitor", "nanofluoric_acid", "lostinfinity:nanofluoric_acid", "dimensional_polymer", 1, 120, 220, true, "");
         addMachine(recipes, "chemistry_bioreactive_solution", "chemistry", "toxic_spore_sample", "acidblood_solution", "lostinfinity:concentrated_acid", "bioreactive_solution", 1, 80, 180, true, "");
@@ -170,9 +176,55 @@ public class LostMachineRecipeProvider implements DataProvider {
         addMachineWithInputCount(recipes, id, machine, input, 1, catalyst, fluid, output, count, energy, time, consumeCatalyst, nbt, extras);
     }
 
+    private static void addMachineWithCountedExtras(Map<String, JsonObject> recipes, String id, String machine, String input,
+                                                    int inputCount, String catalyst, int catalystCount, String fluid,
+                                                    String output, int count, int energy, int time, boolean consumeCatalyst,
+                                                    String nbt, CountedExtra... extras) {
+        JsonObject recipe = machineBase(machine, input, inputCount, catalyst, fluid, consumeCatalyst);
+        if (catalyst != null && catalystCount > 1) {
+            recipe.addProperty("catalyst_count", catalystCount);
+        }
+        if (extras.length > 0) {
+            JsonArray extrasJson = new JsonArray();
+            for (CountedExtra extra : extras) {
+                JsonObject counted = new JsonObject();
+                JsonObject ingredient = new JsonObject();
+                ingredient.addProperty("item", LostInfinity.MODID + ":" + extra.item());
+                counted.add("ingredient", ingredient);
+                counted.addProperty("count", extra.count());
+                extrasJson.add(counted);
+            }
+            recipe.add("extras", extrasJson);
+            recipe.addProperty("consume_extras", true);
+        }
+        addOutput(recipe, output, count, nbt);
+        recipe.addProperty("energy", energy);
+        recipe.addProperty("time", time);
+        recipes.put(id, recipe);
+    }
+
     private static void addMachineWithInputCount(Map<String, JsonObject> recipes, String id, String machine, String input, int inputCount,
                                                  String catalyst, String fluid, String output, int count, int energy, int time,
                                                  boolean consumeCatalyst, String nbt, String... extras) {
+        JsonObject recipe = machineBase(machine, input, inputCount, catalyst, fluid, consumeCatalyst);
+        if (extras.length > 0) {
+            JsonArray extrasJson = new JsonArray();
+            for (String extra : extras) {
+                JsonObject extraJson = new JsonObject();
+                extraJson.addProperty("item", LostInfinity.MODID + ":" + extra);
+                extrasJson.add(extraJson);
+            }
+            recipe.add("extras", extrasJson);
+            recipe.addProperty("consume_extras", true);
+        }
+        recipe.addProperty("energy", energy);
+        recipe.addProperty("time", time);
+        addOutput(recipe, output, count, nbt);
+        recipes.put(id, recipe);
+    }
+
+    private static JsonObject machineBase(String machine, String input, int inputCount, String catalyst, String fluid,
+                                          boolean consumeCatalyst) {
         JsonObject recipe = new JsonObject();
         recipe.addProperty("type", LostInfinity.MODID + ":machine");
         recipe.addProperty("machine", machine);
@@ -191,18 +243,10 @@ public class LostMachineRecipeProvider implements DataProvider {
             recipe.addProperty("fluid", fluid);
         }
         recipe.addProperty("consume_catalyst", consumeCatalyst);
-        if (extras.length > 0) {
-            JsonArray extrasJson = new JsonArray();
-            for (String extra : extras) {
-                JsonObject extraJson = new JsonObject();
-                extraJson.addProperty("item", LostInfinity.MODID + ":" + extra);
-                extrasJson.add(extraJson);
-            }
-            recipe.add("extras", extrasJson);
-            recipe.addProperty("consume_extras", true);
-        }
-        recipe.addProperty("energy", energy);
-        recipe.addProperty("time", time);
+        return recipe;
+    }
+
+    private static void addOutput(JsonObject recipe, String output, int count, String nbt) {
         JsonObject outputJson = new JsonObject();
         outputJson.addProperty("item", LostInfinity.MODID + ":" + output);
         outputJson.addProperty("count", count);
@@ -210,7 +254,9 @@ public class LostMachineRecipeProvider implements DataProvider {
             outputJson.addProperty("nbt", nbt);
         }
         recipe.add("output", outputJson);
-        recipes.put(id, recipe);
+    }
+
+    private record CountedExtra(String item, int count) {
     }
 
     @Override
