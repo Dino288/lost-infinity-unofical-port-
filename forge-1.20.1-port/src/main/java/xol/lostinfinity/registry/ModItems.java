@@ -14,6 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.item.LostArmorItem;
 import xol.lostinfinity.item.LostAxeItem;
+import xol.lostinfinity.item.LostCatenationPouchItem;
 import xol.lostinfinity.item.LostDimensionItem;
 import xol.lostinfinity.item.LostHoeItem;
 import xol.lostinfinity.item.LostPickaxeItem;
@@ -37,6 +38,9 @@ public final class ModItems {
 
     private static Item createItem(String name) {
         Item.Properties properties = new Item.Properties();
+        if (isCatenationPouch(name)) {
+            return new LostCatenationPouchItem(name, properties);
+        }
         if (isDimensionUtility(name)) {
             return new LostDimensionItem(name, properties);
         }
@@ -103,6 +107,11 @@ public final class ModItems {
     private static boolean isDimensionUtility(String name) {
         return name.equals("murky_mirror") || name.equals("galaxybeacon") || name.equals("magic_conch") || name.equals("solar_globe")
                 || name.equals("atlas_beacon") || name.equals("beacon_key");
+    }
+
+    private static boolean isCatenationPouch(String name) {
+        return name.equals("colixium_catenation_pouch") || name.equals("phoroxium_catenation_pouch")
+                || name.equals("laraxium_catenation_pouch");
     }
 
     private static boolean isRangedUtility(String name) {
