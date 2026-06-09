@@ -1,0 +1,15 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "compressiontable",
+  "input": {
+    "item": "lostinfinity:incadium_ingot"
+  },
+  "input_count": 25,
+  "consume_catalyst": false,
+  "energy": 120,
+  "time": 500,
+  "output": {
+    "item": "lostinfinity:incadium_condensed",
+    "count": 1
+  }
+}

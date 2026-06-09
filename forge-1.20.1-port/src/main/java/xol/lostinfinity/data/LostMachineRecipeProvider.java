@@ -30,6 +30,7 @@ public class LostMachineRecipeProvider implements DataProvider {
         addChemistry(recipes);
         addCalibration(recipes);
         addFabrication(recipes);
+        addCompression(recipes);
         addCharging(recipes);
         return CompletableFuture.allOf(recipes.entrySet().stream()
                 .map(entry -> DataProvider.saveStable(cache, GSON.toJsonTree(entry.getValue()), root.resolve(entry.getKey() + ".json")))
@@ -133,20 +134,54 @@ public class LostMachineRecipeProvider implements DataProvider {
         addMachine(recipes, "charger_advanced_synchronizer", "charger", "synchronizer", "dimensional_capacitor", "", "advanced_synchronizer", 1, 120, 220, false, "{LostEnergy:1500}");
     }
 
+    private static void addCompression(Map<String, JsonObject> recipes) {
+        addCompressionRecipe(recipes, "astrallium");
+        addCompressionRecipe(recipes, "crystonium");
+        addCompressionRecipe(recipes, "detherium");
+        addCompressionRecipe(recipes, "emberium");
+        addCompressionRecipe(recipes, "hextorium");
+        addCompressionRecipe(recipes, "incadium");
+        addCompressionRecipe(recipes, "kylaxium");
+        addCompressionRecipe(recipes, "noxerium");
+        addCompressionRecipe(recipes, "olysium");
+        addCompressionRecipe(recipes, "vellorium");
+        addCompressionRecipe(recipes, "xerovium");
+        addCompressionRecipe(recipes, "phytrosium");
+        addCompressionRecipe(recipes, "kyvorium");
+        addCompressionRecipe(recipes, "biosynthium");
+        addCompressionRecipe(recipes, "malicium");
+        addCompressionRecipe(recipes, "etherium");
+        addCompressionRecipe(recipes, "polarium");
+    }
+
+    private static void addCompressionRecipe(Map<String, JsonObject> recipes, String material) {
+        addMachineWithInputCount(recipes, "compressiontable_" + material + "_condensed", "compressiontable",
+                material + "_ingot", 25, null, "", material + "_condensed", 1, 120, 500, false, "");
+    }
+
     private static void addMachine(Map<String, JsonObject> recipes, String id, String machine, String input, String catalyst,
                                    String fluid, String output, int count, int energy, int time, boolean consumeCatalyst, String nbt) {
-        addMachineWithExtras(recipes, id, machine, input, catalyst, fluid, output, count, energy, time, consumeCatalyst, nbt);
+        addMachineWithInputCount(recipes, id, machine, input, 1, catalyst, fluid, output, count, energy, time, consumeCatalyst, nbt);
     }
 
     private static void addMachineWithExtras(Map<String, JsonObject> recipes, String id, String machine, String input, String catalyst,
                                              String fluid, String output, int count, int energy, int time, boolean consumeCatalyst,
                                              String nbt, String... extras) {
+        addMachineWithInputCount(recipes, id, machine, input, 1, catalyst, fluid, output, count, energy, time, consumeCatalyst, nbt, extras);
+    }
+
+    private static void addMachineWithInputCount(Map<String, JsonObject> recipes, String id, String machine, String input, int inputCount,
+                                                 String catalyst, String fluid, String output, int count, int energy, int time,
+                                                 boolean consumeCatalyst, String nbt, String... extras) {
         JsonObject recipe = new JsonObject();
         recipe.addProperty("type", LostInfinity.MODID + ":machine");
         recipe.addProperty("machine", machine);
         JsonObject inputJson = new JsonObject();
         inputJson.addProperty("item", LostInfinity.MODID + ":" + input);
         recipe.add("input", inputJson);
+        if (inputCount > 1) {
+            recipe.addProperty("input_count", inputCount);
+        }
         if (catalyst != null) {
             JsonObject catalystJson = new JsonObject();
             catalystJson.addProperty("item", LostInfinity.MODID + ":" + catalyst);

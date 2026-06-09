@@ -261,7 +261,7 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
     private void craft(Level level, MachineRecipe recipe) {
         ItemStack input = items.get(INPUT_SLOT);
         ItemStack catalyst = items.get(CATALYST_SLOT);
-        input.shrink(1);
+        input.shrink(recipe.inputCount());
         if (recipe.usesCatalyst() && !catalyst.isEmpty()) {
             catalyst.shrink(1);
         }
@@ -326,15 +326,15 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         int cost = machineId.contains("compression") || machineId.contains("fusion") || machineId.contains("collider") ? 80 : 35;
         int count = machineId.contains("grinder") || machineId.contains("crusher") ? 2 : 1;
         boolean usesCatalyst = machineId.contains("infuser") || machineId.contains("polymer") || machineId.contains("fusion");
-        return new MachineRecipe(new ItemStack(output, count), time, cost, usesCatalyst, false, List.of());
+        return new MachineRecipe(new ItemStack(output, count), 1, time, cost, usesCatalyst, false, List.of());
     }
 
     private MachineRecipe datapackRecipe(Level level) {
         return level.getRecipeManager().getAllRecipesFor(ModRecipeTypes.MACHINE).stream()
                 .filter(recipe -> recipe.matchesMachine(machineId) && recipe.matches(this, level))
                 .findFirst()
-                .map(recipe -> new MachineRecipe(recipe.output(), recipe.time(), recipe.energy(), recipe.consumeCatalyst(),
-                        recipe.consumeExtras(), recipe.extras()))
+                .map(recipe -> new MachineRecipe(recipe.output(), recipe.inputCount(), recipe.time(), recipe.energy(),
+                        recipe.consumeCatalyst(), recipe.consumeExtras(), recipe.extras()))
                 .orElse(null);
     }
 
@@ -715,7 +715,7 @@ public class LostMachineBlockEntity extends BlockEntity implements MenuProvider,
         setChanged();
     }
 
-    private record MachineRecipe(ItemStack output, int time, int energyCost, boolean usesCatalyst,
+    private record MachineRecipe(ItemStack output, int inputCount, int time, int energyCost, boolean usesCatalyst,
                                  boolean consumeExtras, List<Ingredient> extraIngredients) {
     }
 }
