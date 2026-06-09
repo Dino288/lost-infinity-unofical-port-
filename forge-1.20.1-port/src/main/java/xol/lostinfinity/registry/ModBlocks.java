@@ -17,6 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.block.LostDimensionPortalBlock;
 import xol.lostinfinity.block.LostMachineBlock;
+import xol.lostinfinity.block.MetaMaterializerBlock;
 
 public final class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, LostInfinity.MODID);
@@ -36,6 +37,9 @@ public final class ModBlocks {
         String targetDimension = targetDimensionFor(name);
         if (targetDimension != null) {
             return new LostDimensionPortalBlock(properties.noOcclusion().lightLevel(state -> 11), targetDimension);
+        }
+        if (name.equals("meta_materializer")) {
+            return new MetaMaterializerBlock(properties.strength(5.0F, 18.0F).sound(SoundType.METAL));
         }
         if (isMachineBlock(name)) {
             return new LostMachineBlock(properties, name);
