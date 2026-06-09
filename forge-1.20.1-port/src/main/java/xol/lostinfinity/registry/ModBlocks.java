@@ -15,6 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xol.lostinfinity.LostInfinity;
+import xol.lostinfinity.block.FossilCombinerBlock;
 import xol.lostinfinity.block.LostDimensionPortalBlock;
 import xol.lostinfinity.block.LostMachineBlock;
 import xol.lostinfinity.block.MetaMaterializerBlock;
@@ -40,6 +41,9 @@ public final class ModBlocks {
         }
         if (name.equals("meta_materializer")) {
             return new MetaMaterializerBlock(properties.strength(5.0F, 18.0F).sound(SoundType.METAL));
+        }
+        if (name.equals("fossil_combiner")) {
+            return new FossilCombinerBlock(properties.strength(4.0F, 12.0F).sound(SoundType.METAL));
         }
         if (isMachineBlock(name)) {
             return new LostMachineBlock(properties, name);
