@@ -1,0 +1,17 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "fusion_table",
+  "input": {
+    "item": "lostinfinity:ionite_bar"
+  },
+  "catalyst": {
+    "item": "lostinfinity:inverse_magnecronite"
+  },
+  "consume_catalyst": true,
+  "energy": 140,
+  "time": 220,
+  "output": {
+    "item": "lostinfinity:polyionite",
+    "count": 1
+  }
+}

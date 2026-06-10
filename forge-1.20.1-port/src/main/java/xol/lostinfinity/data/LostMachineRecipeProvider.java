@@ -30,6 +30,7 @@ public class LostMachineRecipeProvider implements DataProvider {
         addChemistry(recipes);
         addCalibration(recipes);
         addFabrication(recipes);
+        addFusion(recipes);
         addCompression(recipes);
         addCharging(recipes);
         return CompletableFuture.allOf(recipes.entrySet().stream()
@@ -138,6 +139,14 @@ public class LostMachineRecipeProvider implements DataProvider {
     private static void addCharging(Map<String, JsonObject> recipes) {
         addMachine(recipes, "charger_unpowered_cell", "charger", "unpowered_cell", "power_fuel", "", "superchargedcell", 1, 90, 180, true, "{LostEnergy:1000}");
         addMachine(recipes, "charger_advanced_synchronizer", "charger", "synchronizer", "dimensional_capacitor", "", "advanced_synchronizer", 1, 120, 220, false, "{LostEnergy:1500}");
+        addMachineWithCountedExtras(recipes, "pickchargingtable_head_collector", "pickchargingtable",
+                "power_drive", 10, "power_drive", 10, "", "head_collector", 1, 160, 260, true, "",
+                new CountedExtra("power_drive", 10), new CountedExtra("power_drive", 10));
+    }
+
+    private static void addFusion(Map<String, JsonObject> recipes) {
+        addMachine(recipes, "fusion_table_polyionite", "fusion_table", "ionite_bar", "inverse_magnecronite",
+                "", "polyionite", 1, 140, 220, true, "");
     }
 
     private static void addCompression(Map<String, JsonObject> recipes) {
