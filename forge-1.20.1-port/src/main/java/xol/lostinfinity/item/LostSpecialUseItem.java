@@ -25,9 +25,12 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 import xol.lostinfinity.entity.LostCombatProjectile;
 import xol.lostinfinity.effect.LostFx;
+import xol.lostinfinity.LostInfinity;
 import xol.lostinfinity.registry.ModEffects;
 
 public class LostSpecialUseItem extends Item {
@@ -287,11 +290,22 @@ public class LostSpecialUseItem extends Item {
     }
 
     private static void dropReward(Level level, Player player, boolean strong) {
-        ItemStack reward = new ItemStack(strong ? net.minecraft.world.item.Items.GOLDEN_APPLE : net.minecraft.world.item.Items.EMERALD);
+        ItemStack reward = strong ? new ItemStack(net.minecraft.world.item.Items.GOLDEN_APPLE) : mysteryBoxReward(level);
         ItemEntity item = new ItemEntity(level, player.getX(), player.getY() + 0.5D, player.getZ(), reward);
         level.addFreshEntity(item);
         LostFx.play(level, player.blockPosition(), "special_craft", SoundSource.PLAYERS, 0.7F, 1.2F);
         LostFx.burst(level, player.blockPosition(), "golden_magic", 18, 0.5D, 0.03D);
+    }
+
+    private static ItemStack mysteryBoxReward(Level level) {
+        String[] zirconia = {
+                "zirconia_aubergine", "zirconia_celadon", "zirconia_cerulean", "zirconia_citrine",
+                "zirconia_crimson", "zirconia_ivory", "zirconia_malachite", "zirconia_midnight",
+                "zirconia_musky", "zirconia_mythic", "zirconia_oyster", "zirconia_rosewood"
+        };
+        String id = zirconia[level.random.nextInt(zirconia.length)];
+        Item item = ForgeRegistries.ITEMS.getValue(ResourceLocation.fromNamespaceAndPath(LostInfinity.MODID, id));
+        return new ItemStack(item == null ? net.minecraft.world.item.Items.EMERALD : item);
     }
 
     private void analyze(Level level, Player player) {

@@ -30,6 +30,7 @@ public class LostMachineRecipeProvider implements DataProvider {
         addChemistry(recipes);
         addCalibration(recipes);
         addFabrication(recipes);
+        addAugmentor(recipes);
         addFusion(recipes);
         addCompression(recipes);
         addCharging(recipes);
@@ -98,6 +99,15 @@ public class LostMachineRecipeProvider implements DataProvider {
         addRecoveredModulatorRecipes(recipes);
         addMachine(recipes, "fabrication_dimensionalizer_blueprint", "fabrication", "dimensional_capacitor", "synchronizer", "", "dimensionalizer_blueprint", 1, 150, 260, true, "");
         addMachine(recipes, "fabrication_geodimensional_tunnel", "fabrication", "dimensionalizer_blueprint", "dimensional_polymer", "", "geodimensional_tunnel", 1, 180, 320, true, "");
+    }
+
+    private static void addAugmentor(Map<String, JsonObject> recipes) {
+        String[] slides = {"dash", "slam", "invisibility", "forcefield", "teleport", "heal", "hurt", "summon", "blight", "plague",
+                "emp", "shatter", "tether", "unleash", "gravity", "nightmares", "explosive", "trailing", "destructive", "regenerative"};
+        for (int index = 0; index < slides.length; index++) {
+            addMachine(recipes, "augmentor_" + slides[index], "augmentor", "augment_slide_" + slides[index],
+                    "augmenticon_box", "", "augmenticon_box", 1, 70, 120, true, "{LostAugments:[" + index + "]}");
+        }
     }
 
     private static void addRecoveredModuleRecipes(Map<String, JsonObject> recipes) {

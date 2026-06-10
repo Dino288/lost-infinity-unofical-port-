@@ -7,6 +7,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import xol.lostinfinity.network.LostNetwork;
+import xol.lostinfinity.recipe.LostBrewingRecipes;
 import xol.lostinfinity.registry.ModBlocks;
 import xol.lostinfinity.registry.ModBlockEntities;
 import xol.lostinfinity.registry.ModCreativeTabs;
@@ -43,6 +44,9 @@ public final class LostInfinity {
     }
 
     private static void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(ModSpawnPlacements::registerAll);
+        event.enqueueWork(() -> {
+            ModSpawnPlacements.registerAll();
+            LostBrewingRecipes.registerAll();
+        });
     }
 }

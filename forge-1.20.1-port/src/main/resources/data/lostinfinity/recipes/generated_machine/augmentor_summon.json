@@ -1,0 +1,1 @@
+{"type":"lostinfinity:machine","machine":"augmentor","input":{"item":"lostinfinity:augment_slide_summon"},"catalyst":{"item":"lostinfinity:augmenticon_box"},"consume_catalyst":true,"energy":70,"time":120,"output":{"item":"lostinfinity:augmenticon_box","count":1,"nbt":"{LostAugments:[7]}"}}
