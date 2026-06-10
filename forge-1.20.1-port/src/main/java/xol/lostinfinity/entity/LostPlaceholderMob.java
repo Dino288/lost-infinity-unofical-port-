@@ -14,6 +14,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Guardian;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -110,6 +112,14 @@ public class LostPlaceholderMob extends PathfinderMob {
             }
         }
         return hurt;
+    }
+
+    @Override
+    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+        if (!this.level().isClientSide() && LostTradeRecipes.tryTrade(mobId(), player, hand)) {
+            return InteractionResult.SUCCESS;
+        }
+        return super.mobInteract(player, hand);
     }
 
     @Override
