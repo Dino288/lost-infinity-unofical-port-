@@ -1,0 +1,1 @@
+{"type":"lostinfinity:machine","machine":"pickchargingtable","input":{"item":"lostinfinity:reactive_crystal_detherium"},"input_count":10,"catalyst":{"item":"lostinfinity:forge_fire_pickaxe"},"consume_catalyst":false,"energy":120,"time":220,"output":{"item":"lostinfinity:forge_fire_pickaxe","count":1,"nbt":"{detherium:250}"}}

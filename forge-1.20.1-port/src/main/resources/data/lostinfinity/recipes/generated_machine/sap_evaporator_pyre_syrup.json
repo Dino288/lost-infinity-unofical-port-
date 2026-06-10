@@ -1,0 +1,17 @@
+{
+  "type": "lostinfinity:machine",
+  "machine": "sap_evaporator",
+  "input": {
+    "item": "lostinfinity:pyre_log"
+  },
+  "catalyst": {
+    "item": "lostinfinity:jar_of_sap"
+  },
+  "consume_catalyst": true,
+  "energy": 35,
+  "time": 120,
+  "output": {
+    "item": "lostinfinity:jar_of_syrup",
+    "count": 1
+  }
+}

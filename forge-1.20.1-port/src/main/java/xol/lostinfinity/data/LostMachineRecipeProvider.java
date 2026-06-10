@@ -85,6 +85,7 @@ public class LostMachineRecipeProvider implements DataProvider {
         addMachine(recipes, "chemistry_bioreactive_solution", "chemistry", "toxic_spore_sample", "acidblood_solution", "lostinfinity:concentrated_acid", "bioreactive_solution", 1, 80, 180, true, "");
         addMachine(recipes, "nicronium_infuser_infused_nicronium", "nicronium_infuser", "nicronium", null, "", "infused_nicronium", 1, 90, 180, false, "");
         addMachine(recipes, "sap_evaporator_jar_of_syrup", "sap_evaporator", "jar_of_sap", null, "", "jar_of_syrup", 1, 35, 120, false, "");
+        addMachine(recipes, "sap_evaporator_pyre_syrup", "sap_evaporator", "pyre_log", "jar_of_sap", "", "jar_of_syrup", 1, 35, 120, true, "");
         addMachine(recipes, "sap_evaporator_jar_of_sap", "sap", "sunderwood_sap", null, "", "jar_of_sap", 1, 35, 120, false, "");
     }
 
@@ -152,6 +153,17 @@ public class LostMachineRecipeProvider implements DataProvider {
         addMachineWithCountedExtras(recipes, "pickchargingtable_head_collector", "pickchargingtable",
                 "power_drive", 10, "power_drive", 10, "", "head_collector", 1, 160, 260, true, "",
                 new CountedExtra("power_drive", 10), new CountedExtra("power_drive", 10));
+        addPickChargingRecipes(recipes);
+    }
+
+    private static void addPickChargingRecipes(Map<String, JsonObject> recipes) {
+        String[] materials = {"emberium", "hextorium", "crystonium", "astrallium", "kylaxium", "vellorium",
+                "incadium", "noxerium", "olysium", "detherium", "phytrosium", "xerovium"};
+        for (String material : materials) {
+            addMachineWithInputCount(recipes, "pickchargingtable_forge_fire_pickaxe_" + material, "pickchargingtable",
+                    "reactive_crystal_" + material, 10, "forge_fire_pickaxe", "", "forge_fire_pickaxe", 1,
+                    120, 220, false, "{" + material + ":250}");
+        }
     }
 
     private static void addFusion(Map<String, JsonObject> recipes) {
