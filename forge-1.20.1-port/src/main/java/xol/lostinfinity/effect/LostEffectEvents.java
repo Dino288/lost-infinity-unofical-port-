@@ -37,6 +37,7 @@ public final class LostEffectEvents {
         tickDamageEffects(entity);
         tickSpreadEffects(entity);
         tickUtilityEffects(entity);
+        tickVisualEffects(entity);
     }
 
     @SubscribeEvent
@@ -56,6 +57,10 @@ public final class LostEffectEvents {
             player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 40, 0, true, false));
             LostFx.trail(player.level(), player, "spectral", 2);
         }
+        if (has(player, ModEffects.DISTORTION.get()) && player.tickCount % 35 == 0) {
+            LostFx.trail(player.level(), player, "nightmare_magic", 5);
+            LostFx.play(player.level(), player.blockPosition(), "rift_create", SoundSource.PLAYERS, 0.22F, 1.6F);
+        }
         if (has(player, ModEffects.TETHERED.get())) {
             player.setDeltaMovement(player.getDeltaMovement().multiply(0.45D, 0.55D, 0.45D));
         }
@@ -69,9 +74,12 @@ public final class LostEffectEvents {
 
         if (has(target, ModEffects.PROTECTED.get())) {
             amount *= 0.55F;
+            LostFx.burst(target.level(), target.blockPosition(), "power_field", 8, 0.35D, 0.02D);
+            LostFx.play(target.level(), target.blockPosition(), "shield_block", SoundSource.NEUTRAL, 0.35F, 1.15F);
         }
         if (has(target, ModEffects.IRONHEART.get())) {
             amount = Math.min(amount, Math.max(4.0F, target.getMaxHealth() * 0.25F));
+            LostFx.burst(target.level(), target.blockPosition(), "nicronium_ring", 6, 0.3D, 0.02D);
         }
         if (has(target, ModEffects.VULNERABILITY.get())) {
             amount *= 1.25F + amplifier(target, ModEffects.VULNERABILITY.get()) * 0.15F;
@@ -82,6 +90,7 @@ public final class LostEffectEvents {
         }
         if (has(target, ModEffects.OTHERWORLDLY.get()) && !isLostDamage(event.getSource())) {
             amount *= 0.35F;
+            LostFx.trail(target.level(), target, "dark_fizzle", 4);
         }
         if (has(target, ModEffects.POTION_AFFINITY.get())) {
             amount *= Math.max(0.35F, 1.0F - 0.08F * (amplifier(target, ModEffects.POTION_AFFINITY.get()) + 1));
@@ -106,9 +115,13 @@ public final class LostEffectEvents {
             }
             if (has(attacker, ModEffects.ACIDIC.get())) {
                 target.addEffect(new MobEffectInstance(MobEffects.POISON, 80, amplifier(attacker, ModEffects.ACIDIC.get()), true, false));
+                target.addEffect(new MobEffectInstance(ModEffects.VULNERABILITY.get(), 80, 0, true, false));
+                LostFx.burst(target.level(), target.blockPosition(), "acid", 10, 0.35D, 0.04D);
             }
             if (has(attacker, ModEffects.TRANSFUSION.get())) {
                 attacker.heal(Math.min(6.0F, amount * (0.08F + 0.04F * (amplifier(attacker, ModEffects.TRANSFUSION.get()) + 1))));
+                LostFx.trail(attacker.level(), attacker, "blood_drop", 4);
+                LostFx.play(attacker.level(), attacker.blockPosition(), "bioenergize", SoundSource.NEUTRAL, 0.25F, 1.2F);
             }
             if (has(attacker, ModEffects.FEARED.get()) && has(target, ModEffects.TERRIFIED.get()) && target.getRandom().nextBoolean()) {
                 amount *= 1.75F;
@@ -157,17 +170,31 @@ public final class LostEffectEvents {
         }
         if (has(entity, ModEffects.NITROUS.get()) && entity.tickCount % 20 == 0) {
             entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, Math.min(4, amplifier(entity, ModEffects.NITROUS.get()) + 1), true, false));
+            LostFx.trail(entity.level(), entity, "supersonic_blue", 5);
         }
         if (has(entity, ModEffects.ADRENALINE.get()) && entity.tickCount % 20 == 0) {
             entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 60, Math.min(3, amplifier(entity, ModEffects.ADRENALINE.get())), true, false));
+        }
+        if (has(entity, ModEffects.SUPERSONIC.get()) && entity.tickCount % 10 == 0) {
+            entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, Math.min(5, amplifier(entity, ModEffects.SUPERSONIC.get()) + 2), true, false));
+            LostFx.trail(entity.level(), entity, "supersonic_red", 6);
+            if (entity.tickCount % 40 == 0) {
+                LostFx.play(entity.level(), entity.blockPosition(), "sound_bounce", SoundSource.NEUTRAL, 0.25F, 1.55F);
+            }
         }
         if (has(entity, ModEffects.GRAVITATIONAL.get())) {
             int level = amplifier(entity, ModEffects.GRAVITATIONAL.get());
             entity.setDeltaMovement(entity.getDeltaMovement().add(0.0D, 0.035D * (level + 1), 0.0D));
             entity.fallDistance = 0.0F;
+            if (entity.tickCount % 20 == 0) {
+                LostFx.burst(entity.level(), entity.blockPosition(), "gravity_ring", 8, 0.55D + level * 0.15D, 0.02D);
+            }
         }
         if (has(entity, ModEffects.ULTRAHEAVY.get())) {
             entity.setDeltaMovement(entity.getDeltaMovement().multiply(0.72D, 0.55D, 0.72D));
+            if (entity.tickCount % 25 == 0) {
+                LostFx.burst(entity.level(), entity.blockPosition(), "repel_field", 5, 0.25D, 0.01D);
+            }
         }
     }
 
@@ -175,6 +202,12 @@ public final class LostEffectEvents {
         if (has(entity, ModEffects.PLAGUE.get()) && entity.tickCount % 40 == 0) {
             entity.hurt(entity.damageSources().magic(), 1.0F + amplifier(entity, ModEffects.PLAGUE.get()));
             LostFx.trail(entity.level(), entity, "plague", 6);
+        }
+        if (has(entity, ModEffects.SHOCKED.get()) && entity.tickCount % 25 == 0) {
+            entity.hurt(entity.damageSources().magic(), 0.75F + amplifier(entity, ModEffects.SHOCKED.get()) * 0.5F);
+            entity.addEffect(new MobEffectInstance(ModEffects.NULLIFIED.get(), 40, 0, true, false));
+            LostFx.burst(entity.level(), entity.blockPosition(), "electric_explosion_blue", 12, 0.4D, 0.05D);
+            LostFx.play(entity.level(), entity.blockPosition(), "electric_bounce", SoundSource.NEUTRAL, 0.35F, 1.4F);
         }
         if (has(entity, ModEffects.BLOOD_TOXIN.get()) && entity.tickCount % 30 == 0) {
             entity.hurt(entity.damageSources().magic(), 1.0F + amplifier(entity, ModEffects.BLOOD_TOXIN.get()) * 0.5F);
@@ -194,6 +227,10 @@ public final class LostEffectEvents {
         if (has(entity, ModEffects.BLIGHTED.get()) && entity.tickCount % 50 == 0) {
             entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 80, Math.min(2, amplifier(entity, ModEffects.BLIGHTED.get())), true, false));
             LostFx.trail(entity.level(), entity, "blight_spell_green", 4);
+        }
+        if (has(entity, ModEffects.PLANESPLIT.get()) && entity.tickCount % 45 == 0) {
+            entity.hurt(entity.damageSources().magic(), 0.5F + amplifier(entity, ModEffects.PLANESPLIT.get()) * 0.35F);
+            LostFx.burst(entity.level(), entity.blockPosition(), "portal_beam", 10, 0.45D, 0.03D);
         }
     }
 
@@ -217,6 +254,7 @@ public final class LostEffectEvents {
                     nearby.addEffect(new MobEffectInstance(ModEffects.PLAGUE.get(), 100, Math.max(0, level - 1), true, false));
                 }
             }
+            LostFx.play(entity.level(), entity.blockPosition(), "water_echo", SoundSource.NEUTRAL, 0.25F, 0.65F);
         }
     }
 
@@ -224,12 +262,14 @@ public final class LostEffectEvents {
         if (has(entity, ModEffects.RACING_HEART.get()) && entity.tickCount % 20 == 0) {
             int duration = entity.getEffect(ModEffects.RACING_HEART.get()).getDuration();
             entity.addEffect(new MobEffectInstance(ModEffects.ADRENALINE.get(), Math.min(200, duration), 0, true, false));
+            LostFx.play(entity.level(), entity.blockPosition(), "heart_beat", SoundSource.NEUTRAL, 0.18F, 1.0F + amplifier(entity, ModEffects.RACING_HEART.get()) * 0.08F);
         }
         if (has(entity, ModEffects.UNLEASHING.get()) && entity.tickCount % 40 == 0) {
             MobEffectInstance active = entity.getEffect(ModEffects.UNLEASHING.get());
             if (active != null && active.getDuration() > 45) {
                 entity.addEffect(new MobEffectInstance(ModEffects.UNLEASHING.get(), active.getDuration(), Math.min(9, active.getAmplifier() + 1), true, false));
                 LostFx.trail(entity.level(), entity, "space_magic", 4);
+                LostFx.play(entity.level(), entity.blockPosition(), "charging_power", SoundSource.NEUTRAL, 0.25F, 1.0F + active.getAmplifier() * 0.04F);
             }
         }
         if (has(entity, ModEffects.INTANGIBLE.get())) {
@@ -238,6 +278,31 @@ public final class LostEffectEvents {
                 offhand.hurtAndBreak(1, entity, living -> {
                 });
             }
+            if (entity.tickCount % 20 == 0) {
+                entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 0, true, false));
+                LostFx.trail(entity.level(), entity, "spectral", 3);
+            }
+        }
+        if (has(entity, ModEffects.PHASED.get()) && entity.tickCount % 20 == 0) {
+            entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 40, 0, true, false));
+            entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 0, true, false));
+            LostFx.trail(entity.level(), entity, "warp", 4);
+        }
+        if (has(entity, ModEffects.ARMORED.get()) && entity.tickCount % 40 == 0) {
+            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, Math.min(2, amplifier(entity, ModEffects.ARMORED.get())), true, false));
+            LostFx.trail(entity.level(), entity, "nicronium_ring", 2);
+        }
+        if (has(entity, ModEffects.CHARGING.get()) && entity.tickCount % 20 == 0) {
+            entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0, true, false));
+            LostFx.burst(entity.level(), entity.blockPosition(), "power_pulse", 8, 0.45D, 0.03D);
+            LostFx.play(entity.level(), entity.blockPosition(), "charging_power", SoundSource.NEUTRAL, 0.25F, 1.25F);
+        }
+        if (has(entity, ModEffects.NULLIFIED.get()) && entity.tickCount % 40 == 0) {
+            entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 60, Math.min(2, amplifier(entity, ModEffects.NULLIFIED.get())), true, false));
+            LostFx.trail(entity.level(), entity, "power_loss", 4);
+        }
+        if (has(entity, ModEffects.POTION_AFFINITY.get()) && entity.tickCount % 60 == 0) {
+            LostFx.trail(entity.level(), entity, "crystal_magic", 3);
         }
         if (has(entity, ModEffects.TERRIFIED.get()) && entity instanceof Mob mob && entity.tickCount % 20 == 0) {
             for (LivingEntity nearby : entity.level().getEntitiesOfClass(LivingEntity.class, entity.getBoundingBox().inflate(6.0D))) {
@@ -246,6 +311,32 @@ public final class LostEffectEvents {
                     break;
                 }
             }
+        }
+        if (has(entity, ModEffects.FEARED.get()) && entity.tickCount % 45 == 0) {
+            LostFx.burst(entity.level(), entity.blockPosition(), "explosion_fear", 8, 0.45D, 0.03D);
+        }
+    }
+
+    private static void tickVisualEffects(LivingEntity entity) {
+        if (has(entity, ModEffects.VULNERABILITY.get()) && entity.tickCount % 35 == 0) {
+            LostFx.trail(entity.level(), entity, "red_skull", 2);
+        }
+        if (has(entity, ModEffects.SHATTERED.get()) && entity.tickCount % 30 == 0) {
+            LostFx.burst(entity.level(), entity.blockPosition(), "snow_bubble", 6, 0.25D, 0.02D);
+            LostFx.play(entity.level(), entity.blockPosition(), "rock_tumble", SoundSource.NEUTRAL, 0.18F, 1.6F);
+        }
+        if (has(entity, ModEffects.ACIDIC.get()) && entity.tickCount % 30 == 0) {
+            LostFx.trail(entity.level(), entity, "acid", 4);
+        }
+        if (has(entity, ModEffects.OTHERWORLDLY.get()) && entity.tickCount % 35 == 0) {
+            LostFx.trail(entity.level(), entity, "blackhole_ring", 3);
+        }
+        if (has(entity, ModEffects.SUPERCHARGED.get()) && entity.tickCount % 20 == 0) {
+            LostFx.burst(entity.level(), entity.blockPosition(), "tesla_ring_blue", 10, 0.5D, 0.04D);
+            LostFx.play(entity.level(), entity.blockPosition(), "charging_power", SoundSource.NEUTRAL, 0.2F, 1.45F);
+        }
+        if (has(entity, ModEffects.SPONTANEOUS_COMBUSTION.get()) && entity.tickCount % 10 == 0) {
+            LostFx.trail(entity.level(), entity, "flame_medium", 5);
         }
     }
 

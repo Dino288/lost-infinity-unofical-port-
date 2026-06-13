@@ -92,6 +92,19 @@ public final class LostFx {
             case "plague" -> send(level, "poison_rings", x, y, z, Math.max(3, count / 4), spread * 0.55D, speed * 0.45D);
             case "blood_drop" -> send(level, "red_skull", x, y, z, Math.max(1, count / 8), spread * 0.25D, speed * 0.35D);
             case "ancient_spell" -> send(level, "gold_star", x, y, z, Math.max(3, count / 4), spread * 0.5D, speed * 0.5D);
+            case "power_field", "power_field_blue" -> {
+                send(level, "repel_field", x, y, z, Math.max(3, count / 4), spread * 0.45D, speed * 0.35D);
+                send(level, "light_flash", x, y, z, Math.max(2, count / 5), spread * 0.25D, speed * 0.25D);
+            }
+            case "power_pulse" -> {
+                send(level, "power_field_blue", x, y, z, Math.max(4, count / 3), spread * 0.5D, speed * 0.45D);
+                send(level, "electric_explosion_blue", x, y, z, Math.max(2, count / 6), spread * 0.35D, speed * 0.65D);
+            }
+            case "power_loss" -> {
+                send(level, "generic_dot_black", x, y, z, Math.max(4, count / 3), spread * 0.55D, speed * 0.35D);
+                send(level, "dark_fizzle", x, y, z, Math.max(2, count / 5), spread * 0.45D, speed * 0.5D);
+            }
+            case "nicronium_ring" -> send(level, "power_field", x, y, z, Math.max(3, count / 4), spread * 0.45D, speed * 0.35D);
             case "blackhole_ring", "blackhole_portal" -> {
                 send(level, "attract_field", x, y, z, Math.max(4, count / 4), spread * 0.55D, speed * 0.35D);
                 send(level, "dark_fizzle", x, y, z, Math.max(3, count / 5), spread * 0.7D, speed * 0.55D);
@@ -115,6 +128,10 @@ public final class LostFx {
             case "bad_magic", "nightmare_magic" -> {
                 send(level, "purple_skull", x, y, z, Math.max(1, count / 8), spread * 0.35D, speed * 0.25D);
                 send(level, "corruption_magic", x, y, z, Math.max(4, count / 4), spread * 0.6D, speed * 0.45D);
+            }
+            case "explosion_fear" -> {
+                send(level, "purple_skull", x, y, z, Math.max(2, count / 5), spread * 0.45D, speed * 0.35D);
+                send(level, "bad_magic", x, y, z, Math.max(3, count / 4), spread * 0.55D, speed * 0.45D);
             }
             case "shadow_blast", "dark_magic" -> {
                 send(level, "dark_flash", x, y, z, Math.max(2, count / 6), spread * 0.35D, speed * 0.45D);
@@ -144,6 +161,10 @@ public final class LostFx {
             send(level, "snow_bubble", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
         } else if ("shadow_blast".equals(name) || "dark_magic".equals(name)) {
             send(level, "dark_fizzle", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
+        } else if ("power_loss".equals(name) || "nightmare_magic".equals(name)) {
+            send(level, "dark_fizzle", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
+        } else if ("power_pulse".equals(name) || "nicronium_ring".equals(name)) {
+            send(level, "power_field", entity.getX(), entity.getY() + entity.getBbHeight() * 0.5D, entity.getZ(), Math.max(1, count / 2), 0.08D, 0.01D);
         }
     }
 
@@ -170,6 +191,10 @@ public final class LostFx {
             case "electric", "tesla" -> "electric_explosion_blue";
             case "sonic", "echo" -> "supersonic_blue";
             case "blood" -> "blood_drop";
+            case "shield" -> "power_field";
+            case "charge" -> "power_pulse";
+            case "nullify" -> "power_loss";
+            case "fear" -> "explosion_fear";
             default -> name;
         };
     }
